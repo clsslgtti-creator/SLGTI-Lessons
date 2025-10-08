@@ -43,7 +43,7 @@
       {
         "id": "d_2",
         "img": "assets/img/dialogue_2.jpeg",
-        "text_a": "Where are Mr and Mrs Liyanage?",
+        "text_a": "Where are Mr and Mrs Smith?",
         "text_b": "They are 'in' the dining room.",
         "audio_a": "assets/audio/dialogue_2_a.mp3",
         "audio_b": "assets/audio/dialogue_2_b.mp3",

@@ -262,10 +262,6 @@ const buildModelDialogueSlide = (
       showTexts: Boolean(dialogue.text_a || dialogue.text_b),
       classes: ['dialogue-card--model'],
     });
-    // const title = document.createElement('h3');
-    // title.className = 'dialogue-card__title';
-    // title.textContent = `Dialogue ${index + 1}`;
-    // card.prepend(title);
     content.appendChild(card);
     return {
       card,
@@ -1162,7 +1158,7 @@ const buildSpeakingSlide = (
         }
 
         const answerDuration = await audioManager.getDuration(dialogue.audio_b);
-        const waitMs = Math.max(1000, Math.round(answerDuration * 1500));
+        const waitMs = Math.max(1000, Math.round(answerDuration * 2000));
         await delay(waitMs, { signal });
         if (signal.aborted) {
           break;
