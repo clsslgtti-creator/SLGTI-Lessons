@@ -148,7 +148,7 @@ body {
 
 .warmup-card {
   position: relative;
-  width: clamp(120px, 18vw, 160px);
+  width: clamp(120px, 18vw, 150px);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow-sm);
@@ -211,7 +211,7 @@ body {
 .warmup-dropzones {
   display: grid;
   gap: clamp(0.75rem, 2vw, 1.25rem);
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
 }
 
 .warmup-dropzone {
@@ -220,7 +220,7 @@ body {
   border: 2px dashed rgba(99, 102, 241, 0.35);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.85);
-  padding: clamp(0.75rem, 2vw, 1.25rem);
+  padding: clamp(0.50rem, 1vw, 0.25rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -238,6 +238,7 @@ body {
 
 .warmup-dropzone__label.is-hidden {
   opacity: 0;
+  display: none;
 }
 
 .warmup-dropzone__body {
