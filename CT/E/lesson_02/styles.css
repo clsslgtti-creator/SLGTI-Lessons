@@ -97,6 +97,42 @@ body {
   font-size: clamp(1.5rem, 3.5vw, 2.1rem);
 }
 
+.activity-focus {
+  margin: 0 0 clamp(0.9rem, 2.5vw, 1.4rem);
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.activity-focus__label {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-muted);
+}
+
+.activity-instructions {
+  margin: 0 0 clamp(1rem, 2.5vw, 1.6rem);
+  color: var(--color-muted);
+  font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+  line-height: 1.45;
+  padding-left: 0;
+}
+
+.activity-instructions li {
+  margin: 0.25rem 0 0.25rem 1.1rem;
+  list-style: disc;
+}
+
+.dialogue-text__emphasis {
+  color: #1f6feb;
+  font-weight: 700;
+}
+
 .slide__instruction {
   margin: 0 0 clamp(1.2rem, 3vw, 1.8rem);
   color: var(--color-muted);
@@ -297,6 +333,8 @@ body {
 }
 
 .slide--model .dialogue-card--model::before,
+.slide--reading .dialogue-card--reading::before,
+.slide--listen-repeat .dialogue-card--listen-repeat::before,
 .slide--listening .dialogue-card--listening::before,
 .slide--speaking .dialogue-card--speaking::before {
   content: "";
@@ -309,6 +347,8 @@ body {
 }
 
 .slide--model .dialogue-card--model.is-active::before,
+.slide--reading .dialogue-card--reading.is-active::before,
+.slide--listen-repeat .dialogue-card--listen-repeat.is-active::before,
 .slide--listening .dialogue-card--listening.is-active::before,
 .slide--speaking .dialogue-card--speaking.is-active::before {
   border-color: rgba(31, 111, 235, 0.4);

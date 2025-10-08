@@ -3,85 +3,87 @@
     "lesson_no": 2,
     "level": "Elementary",
     "section": "Construction Technology",
-    "reference": "SBS 2 Page 11",
-    "focus": "Where/verb ‘to be’/ preposition in",
-    "prepared_by": "Colombo Language School",
-    "teacher": "Shanthi"
+    "prepared_by": "Colombo Language School"
   },
-  "example_dialogues": [
-    {
-      "id": "e_1",
-      "img": "assets/img/example_1.png",
-      "text_a": "",
-      "text_b": "",
-      "audio_a": "assets/audio/example_1_a.mp3",
-      "audio_b": ""
-    }
-  ],
-  "dialogues": [
-    {
-      "id": "d_1",
-      "img": "assets/img/dialogue_1.jpeg",
-      "text_a": "Where are you?",
-      "text_b": "I am in the bathroom.",
-      "audio_a": "assets/audio/dialogue_1_a.mp3",
-      "audio_b": "assets/audio/dialogue_1_b.mp3"
+  "activity_1": {
+    "type": "PRONUNCIATION"
+  },
+  "activity_2": {
+    "type": "SBS",
+    "focus": "Where /verb ‘to be’/ preposition 'in'",
+    "reference": "SBS 2 Page 11",
+    "instructions": {
+      "example": "Listen to the model dialogue.\nமாதிரி உரையாடலை கேளுங்கள்.\nආදර්ශ සංවාදය අසා බලන්න.",
+      "activity_1_a": "Listen.\nகேளுங்கள்.\nඅසන්න.",
+      "activity_1_b": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nඅසන්න සහ නැවත කියන්න.",
+      "activity_1_c": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nඑකකින් එක කියවන්න.",
+      "activity_1_d": "Listen to each question, use the pause to answer, then compare your response with the model answer.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியில் பதிலளியுங்கள், பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.\nසෑම ප්‍රශ්නයක්ම අසා, නතරවීම භාවිතා කර පිළිතුරු දෙන්න, පසුව ඔබගේ පිළිතුර ආදර්ශ පිළිතුර සමඟ තරග කරන්න."
     },
-    {
-      "id": "d_2",
-      "img": "assets/img/dialogue_2.jpeg",
-      "text_a": "Where are Mr and Mrs Liyanage?",
-      "text_b": "They are in the dining room.",
-      "audio_a": "assets/audio/dialogue_2_a.mp3",
-      "audio_b": "assets/audio/dialogue_2_b.mp3"
-    },
-    {
-      "id": "d_3",
-      "img": "assets/img/dialogue_3.jpeg",
-      "text_a": "Where is the power drill?",
-      "text_b": "It is in the tool cabinet.",
-      "audio_a": "assets/audio/dialogue_3_a.mp3",
-      "audio_b": "assets/audio/dialogue_3_b.mp3"
-    },
-    {
-      "id": "d_4",
-      "img": "assets/img/dialogue_4.jpeg",
-      "text_a": "Where are the steel ladders?",
-      "text_b": "They are in the store room.",
-      "audio_a": "assets/audio/dialogue_4_a.mp3",
-      "audio_b": "assets/audio/dialogue_4_b.mp3"
-    },
-    {
-      "id": "d_5",
-      "img": "assets/img/dialogue_5.jpeg",
-      "text_a": "Where is the gravel pile?",
-      "text_b": "It is in the open yard.",
-      "audio_a": "assets/audio/dialogue_5_a.mp3",
-      "audio_b": "assets/audio/dialogue_5_b.mp3"
-    },
-    {
-      "id": "d_6",
-      "img": "assets/img/dialogue_6.jpeg",
-      "text_a": "Where are the wooden planks?",
-      "text_b": "They are in the cutting zone.",
-      "audio_a": "assets/audio/dialogue_6_a.mp3",
-      "audio_b": "assets/audio/dialogue_6_b.mp3"
-    },
-    {
-      "id": "d_7",
-      "img": "assets/img/dialogue_7.jpeg",
-      "text_a": "Where is the paint roller?",
-      "text_b": "It is in the paint room.",
-      "audio_a": "assets/audio/dialogue_7_a.mp3",
-      "audio_b": "assets/audio/dialogue_7_b.mp3"
-    },
-    {
-      "id": "d_8",
-      "img": "assets/img/dialogue_8.jpeg",
-      "text_a": "Where are the tile boxes?",
-      "text_b": "They are in the corner.",
-      "audio_a": "assets/audio/dialogue_8_a.mp3",
-      "audio_b": "assets/audio/dialogue_8_b.mp3"
-    }
-  ]
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/example_1.png",
+        "text_a": "",
+        "text_b": "",
+        "audio_a": "assets/audio/example_1_a.mp3",
+        "audio_b": ""
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/dialogue_1.jpeg",
+        "text_a": "Where are you?",
+        "text_b": "I am 'in' the bathroom.",
+        "audio_a": "assets/audio/dialogue_1_a.mp3",
+        "audio_b": "assets/audio/dialogue_1_b.mp3"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/dialogue_2.jpeg",
+        "text_a": "Where are Mr and Mrs Liyanage?",
+        "text_b": "They are 'in' the dining room.",
+        "audio_a": "assets/audio/dialogue_2_a.mp3",
+        "audio_b": "assets/audio/dialogue_2_b.mp3"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/dialogue_3.jpeg",
+        "text_a": "Where is the power drill?",
+        "text_b": "It is 'in' the tool cabinet.",
+        "audio_a": "assets/audio/dialogue_3_a.mp3",
+        "audio_b": "assets/audio/dialogue_3_b.mp3"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/dialogue_4.jpeg",
+        "text_a": "Where are the steel ladders?",
+        "text_b": "They are 'in' the store room.",
+        "audio_a": "assets/audio/dialogue_4_a.mp3",
+        "audio_b": "assets/audio/dialogue_4_b.mp3"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/dialogue_5.jpeg",
+        "text_a": "Where is the gravel pile?",
+        "text_b": "It is 'in' the open yard.",
+        "audio_a": "assets/audio/dialogue_5_a.mp3",
+        "audio_b": "assets/audio/dialogue_5_b.mp3"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/dialogue_6.jpeg",
+        "text_a": "Where are the tile boxes?",
+        "text_b": "They are 'in' the corner.",
+        "audio_a": "assets/audio/dialogue_6_a.mp3",
+        "audio_b": "assets/audio/dialogue_6_b.mp3"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "GRAMMAR"
+  },
+  "activity_4": {
+    "type": "GAME"
+  }
 }
