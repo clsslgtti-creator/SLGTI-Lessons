@@ -270,12 +270,16 @@ const buildModelDialogueSlide = (
   });
 
   let sequenceAbort = null;
+  let autoTriggered = false;
 
   const runSequence = async () => {
     if (!dialogueCards.length) {
       status.textContent = 'No audio available.';
       return;
     }
+
+    autoTriggered = true;
+    slide._autoTriggered = true;
 
     sequenceAbort?.abort();
     sequenceAbort = new AbortController();
@@ -312,15 +316,32 @@ const buildModelDialogueSlide = (
     }
   };
 
+  const triggerAutoPlay = () => {
+    if (autoTriggered) {
+      return;
+    }
+    runSequence();
+  };
+
   playBtn.addEventListener('click', runSequence);
+
+  const autoPlay = {
+    button: playBtn,
+    trigger: triggerAutoPlay,
+    status,
+  };
 
   return {
     id: activityNumber ? `activity-${activityNumber}-model` : 'activity-model',
     element: slide,
+    autoPlay,
     onLeave: () => {
       sequenceAbort?.abort();
       sequenceAbort = null;
       audioManager.stopAll();
+      autoTriggered = false;
+      slide._autoTriggered = false;
+      slide._instructionComplete = false;
     },
   };
 };
@@ -626,6 +647,7 @@ const buildListeningSlide = (
   });
 
   let sequenceAbort = null;
+  let autoTriggered = false;
 
   const delay = (ms, { signal } = {}) =>
     new Promise((resolve) => {
@@ -702,19 +724,43 @@ const buildListeningSlide = (
     }
   };
 
-  playBtn.addEventListener('click', runSequence);
+  const startSequence = () => {
+    autoTriggered = true;
+    slide._autoTriggered = true;
+    runSequence();
+  };
+
+  const triggerAutoPlay = () => {
+    if (autoTriggered) {
+      return;
+    }
+    startSequence();
+  };
+
+  playBtn.addEventListener('click', startSequence);
+
+  const autoPlay = {
+    button: playBtn,
+    trigger: triggerAutoPlay,
+    status,
+  };
 
   const suffixSegment = subActivityLetter ? `-${subActivityLetter}` : '';
 
   return {
     id: activityNumber ? `activity-${activityNumber}${suffixSegment}-listening` : 'activity-listening',
     element: slide,
+    autoPlay,
     onLeave: () => {
       sequenceAbort?.abort();
       sequenceAbort = null;
       audioManager.stopAll();
       items.forEach((item) => item.card.classList.remove('is-active'));
       status.textContent = '';
+      playBtn.disabled = false;
+      slide._autoTriggered = false;
+      slide._instructionComplete = false;
+      autoTriggered = false;
     },
   };
 };
@@ -764,6 +810,7 @@ const buildListenAndRepeatSlide = (
   });
 
   let sequenceAbort = null;
+  let autoTriggered = false;
   const basePauseMs = Number.isFinite(repeatPauseMs) ? Math.max(500, repeatPauseMs) : 1500;
 
   const delay = (ms, { signal } = {}) =>
@@ -853,7 +900,26 @@ const buildListenAndRepeatSlide = (
     }
   };
 
-  startBtn.addEventListener('click', runSequence);
+  const startSequence = () => {
+    autoTriggered = true;
+    slide._autoTriggered = true;
+    runSequence();
+  };
+
+  const triggerAutoPlay = () => {
+    if (autoTriggered) {
+      return;
+    }
+    startSequence();
+  };
+
+  startBtn.addEventListener('click', startSequence);
+
+  const autoPlay = {
+    button: startBtn,
+    trigger: triggerAutoPlay,
+    status,
+  };
 
   const onLeave = () => {
     sequenceAbort?.abort();
@@ -862,6 +928,9 @@ const buildListenAndRepeatSlide = (
     resetCards();
     startBtn.disabled = false;
     status.textContent = '';
+    autoTriggered = false;
+    slide._autoTriggered = false;
+    slide._instructionComplete = false;
   };
 
   const suffixSegment = subActivityLetter ? `-${subActivityLetter}` : '';
@@ -871,6 +940,7 @@ const buildListenAndRepeatSlide = (
       ? `activity-${activityNumber}${suffixSegment}-listen-repeat`
       : 'activity-listen-repeat',
     element: slide,
+    autoPlay,
     onLeave,
   };
 };
@@ -923,6 +993,7 @@ const buildReadingSlide = (
   });
 
   let sequenceAbort = null;
+  let autoTriggered = false;
 
   const delay = (ms, { signal } = {}) =>
     new Promise((resolve) => {
@@ -1006,13 +1077,33 @@ const buildReadingSlide = (
     }
   };
 
-  playBtn.addEventListener('click', runSequence);
+  const startSequence = () => {
+    autoTriggered = true;
+    slide._autoTriggered = true;
+    runSequence();
+  };
+
+  const triggerAutoPlay = () => {
+    if (autoTriggered) {
+      return;
+    }
+    startSequence();
+  };
+
+  playBtn.addEventListener('click', startSequence);
+
+  const autoPlay = {
+    button: playBtn,
+    trigger: triggerAutoPlay,
+    status,
+  };
 
   const suffixSegment = subActivityLetter ? `-${subActivityLetter}` : '';
 
   return {
     id: activityNumber ? `activity-${activityNumber}${suffixSegment}-reading` : 'activity-reading',
     element: slide,
+    autoPlay,
     onEnter: () => {
       slide.classList.add('is-animated');
     },
@@ -1024,6 +1115,9 @@ const buildReadingSlide = (
       items.forEach(({ card }) => card.classList.remove('is-active'));
       playBtn.disabled = false;
       status.textContent = '';
+      autoTriggered = false;
+      slide._autoTriggered = false;
+      slide._instructionComplete = false;
     },
   };
 };
@@ -1090,6 +1184,7 @@ const buildSpeakingSlide = (
   });
 
   let sequenceAbort = null;
+  let autoTriggered = false;
 
   const delay = (ms, { signal } = {}) =>
     new Promise((resolve) => {
@@ -1200,7 +1295,26 @@ const buildSpeakingSlide = (
     }
   };
 
-  startBtn.addEventListener('click', runSpeakingPractice);
+  const startPractice = () => {
+    autoTriggered = true;
+    slide._autoTriggered = true;
+    runSpeakingPractice();
+  };
+
+  const triggerAutoPlay = () => {
+    if (autoTriggered) {
+      return;
+    }
+    startPractice();
+  };
+
+  startBtn.addEventListener('click', startPractice);
+
+  const autoPlay = {
+    button: startBtn,
+    trigger: triggerAutoPlay,
+    status,
+  };
 
   const onLeave = () => {
     sequenceAbort?.abort();
@@ -1209,6 +1323,9 @@ const buildSpeakingSlide = (
     resetCards();
     startBtn.disabled = false;
     status.textContent = '';
+    autoTriggered = false;
+    slide._autoTriggered = false;
+    slide._instructionComplete = false;
   };
 
   const suffixSegment = subActivityLetter ? `-${subActivityLetter}` : '';
@@ -1216,6 +1333,7 @@ const buildSpeakingSlide = (
   return {
     id: activityNumber ? `activity-${activityNumber}${suffixSegment}-speaking` : 'activity-speaking',
     element: slide,
+    autoPlay,
     onLeave,
   };
 };
@@ -1274,6 +1392,9 @@ export const buildSbsSlides = (activityData = {}, context = {}) => {
     buildSpeakingSlide(dialogues, speakingContext),
   ];
 };
+
+
+
 
 
 

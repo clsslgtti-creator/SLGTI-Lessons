@@ -10,29 +10,57 @@ const activityBuilders = {
   SBS: buildSbsSlides,
 };
 
-const normalizeInstructionContent = (input, { allowObject = false } = {}) => {
-  if (!input) {
-    return [];
-  }
+const extractInstructionEntries = (input, { allowObject = false } = {}) => {
+  const entries = [];
 
-  if (Array.isArray(input)) {
-    return input
-      .map((item) => (typeof item === 'string' ? item.trim() : ''))
-      .filter((item) => item.length > 0);
-  }
+  const pushEntry = (textValue, audioValue) => {
+    const text = typeof textValue === 'string' ? textValue.trim() : '';
+    const audio = typeof audioValue === 'string' ? audioValue.trim() : '';
+    if (!text && !audio) {
+      return;
+    }
+    entries.push({
+      text,
+      audio: audio || null,
+    });
+  };
 
-  if (typeof input === 'string') {
-    const trimmed = input.trim();
-    return trimmed ? [trimmed] : [];
-  }
+  const process = (value, allowNested) => {
+    if (!value) {
+      return;
+    }
 
-  if (allowObject && typeof input === 'object') {
-    return Object.values(input)
-      .flatMap((value) => normalizeInstructionContent(value, { allowObject: true }))
-      .filter((item) => item.length > 0);
-  }
+    if (Array.isArray(value)) {
+      value.forEach((item) => process(item, allowNested));
+      return;
+    }
 
-  return [];
+    if (typeof value === 'string') {
+      pushEntry(value, null);
+      return;
+    }
+
+    if (typeof value === 'object') {
+      const hasText = typeof value.text === 'string';
+      const hasAudio = typeof value.audio === 'string';
+
+      if (hasText || hasAudio) {
+        pushEntry(hasText ? value.text : '', hasAudio ? value.audio : null);
+      }
+
+      if (allowNested) {
+        Object.entries(value).forEach(([key, nested]) => {
+          if (key === 'text' || key === 'audio') {
+            return;
+          }
+          process(nested, true);
+        });
+      }
+    }
+  };
+
+  process(input, allowObject);
+  return entries;
 };
 
 const createFocusElement = (focusText) => {
@@ -54,8 +82,8 @@ const createFocusElement = (focusText) => {
   return focusEl;
 };
 
-const createInstructionsElement = (instructions, { allowObject = false } = {}) => {
-  const normalized = normalizeInstructionContent(instructions, { allowObject });
+const createInstructionsElement = (texts) => {
+  const normalized = Array.isArray(texts) ? texts.filter((text) => typeof text === 'string' && text.trim().length) : [];
   if (!normalized.length) {
     return null;
   }
@@ -88,23 +116,37 @@ const createInstructionResolver = (instructions, activityNumber) => {
   if (instructions === null || instructions === undefined) {
     return {
       isGeneral: false,
-      resolve: () => [],
+      resolve: () => ({ texts: [], audio: null }),
     };
   }
 
-  const generalValue = normalizeInstructionContent(instructions, { allowObject: true });
-  const isGeneral = Array.isArray(instructions) || typeof instructions === 'string';
-  if (isGeneral) {
+  const generalEntries = extractInstructionEntries(instructions, { allowObject: true });
+
+  const isSimpleGeneral =
+    Array.isArray(instructions) ||
+    typeof instructions === 'string' ||
+    (typeof instructions === 'object' && instructions && !Array.isArray(instructions) && ('text' in instructions || 'audio' in instructions));
+
+  const formatEntries = (entries) => {
+    const texts = entries.map((entry) => entry.text).filter(Boolean);
+    const audio = entries.find((entry) => entry.audio)?.audio ?? null;
+    return {
+      texts,
+      audio,
+    };
+  };
+
+  if (isSimpleGeneral) {
     return {
       isGeneral: true,
-      resolve: () => generalValue,
+      resolve: () => formatEntries(generalEntries),
     };
   }
 
   if (typeof instructions !== 'object') {
     return {
       isGeneral: false,
-      resolve: () => [],
+      resolve: () => ({ texts: [], audio: null }),
     };
   }
 
@@ -114,11 +156,11 @@ const createInstructionResolver = (instructions, activityNumber) => {
     if (!normalizedKey) {
       return;
     }
-    const normalizedValue = normalizeInstructionContent(value, { allowObject: true });
-    if (!normalizedValue.length) {
+    const entryList = extractInstructionEntries(value, { allowObject: true });
+    if (!entryList.length) {
       return;
     }
-    map.set(normalizedKey, normalizedValue);
+    map.set(normalizedKey, entryList);
   });
 
   const fallbackValues = Array.from(map.values());
@@ -188,18 +230,18 @@ const createInstructionResolver = (instructions, activityNumber) => {
     for (const candidate of candidates) {
       const normalizedCandidate = normalizeInstructionKey(candidate);
       if (normalizedCandidate && map.has(normalizedCandidate)) {
-        return map.get(normalizedCandidate);
+        return formatEntries(map.get(normalizedCandidate));
       }
     }
 
     for (const fallback of generalKeys) {
       const normalizedFallback = normalizeInstructionKey(fallback);
       if (normalizedFallback && map.has(normalizedFallback)) {
-        return map.get(normalizedFallback);
+        return formatEntries(map.get(normalizedFallback));
       }
     }
 
-    return fallbackDefault;
+    return formatEntries(fallbackDefault);
   };
 
   return {
@@ -208,8 +250,8 @@ const createInstructionResolver = (instructions, activityNumber) => {
   };
 };
 
-const applyInstructionsToSlide = (slideElement, instructions) => {
-  const normalized = normalizeInstructionContent(instructions);
+const applyInstructionsToSlide = (slideElement, texts) => {
+  const normalized = Array.isArray(texts) ? texts.filter((text) => typeof text === 'string' && text.trim().length) : [];
   if (!normalized.length) {
     return;
   }
@@ -246,6 +288,252 @@ const applyInstructionsToSlide = (slideElement, instructions) => {
   }
 
   anchor?.insertAdjacentElement('afterend', list);
+};
+
+let instructionPlayback = null;
+
+const cleanupInstructionController = (controller, { preserveContent = false } = {}) => {
+  if (!controller) {
+    return;
+  }
+
+  const { audio, countdownInterval, cleanupHandlers, onEnded, indicator, restoreButton } = controller;
+
+  if (audio) {
+    audio.pause();
+    audio.currentTime = 0;
+    if (onEnded) {
+      audio.removeEventListener('ended', onEnded);
+      audio.removeEventListener('error', onEnded);
+    }
+  }
+
+  if (countdownInterval) {
+    window.clearInterval(countdownInterval);
+  }
+
+  cleanupHandlers?.forEach((handler) => {
+    try {
+      handler();
+    } catch {
+      /* ignore */
+    }
+  });
+
+  restoreButton?.();
+  indicator?.cleanup?.({ preserveContent });
+};
+
+const stopInstructionPlayback = ({ preserveContent = false } = {}) => {
+  if (!instructionPlayback) {
+    return;
+  }
+
+  const controller = instructionPlayback;
+  instructionPlayback = null;
+  cleanupInstructionController(controller, { preserveContent });
+};
+
+const createInstructionIndicator = (slideObj) => {
+  const statusEl =
+    slideObj.autoPlay?.status ?? slideObj.element.querySelector('.playback-status') ?? null;
+
+  if (statusEl) {
+    const previousText = statusEl.textContent;
+    statusEl.classList.add('playback-status--instruction');
+    return {
+      element: statusEl,
+      update: (text) => {
+        statusEl.textContent = text;
+      },
+      cleanup: ({ preserveContent = false } = {}) => {
+        statusEl.classList.remove('playback-status--instruction');
+        if (!preserveContent) {
+          statusEl.textContent = previousText;
+        }
+      },
+    };
+  }
+
+  const banner = document.createElement('div');
+  banner.className = 'instruction-overlay';
+  slideObj.element.prepend(banner);
+  window.requestAnimationFrame(() => banner.classList.add('is-visible'));
+  return {
+    element: banner,
+    update: (text) => {
+      banner.textContent = text;
+    },
+    cleanup: () => {
+      banner.remove();
+    },
+  };
+};
+
+const startInstructionCountdown = (controller) => {
+  if (!instructionPlayback || instructionPlayback !== controller) {
+    return;
+  }
+
+  const { slide: slideObj, indicator } = controller;
+
+  if (!slideObj.autoPlay?.trigger || slideObj._autoTriggered) {
+    slideObj._instructionComplete = true;
+    const activeController = instructionPlayback;
+    instructionPlayback = null;
+    cleanupInstructionController(activeController);
+    return;
+  }
+
+  controller.restoreButton?.();
+
+  let remaining = 5;
+  indicator?.update(`Starts in ${remaining}s`);
+
+  controller.countdownInterval = window.setInterval(() => {
+    if (!instructionPlayback || instructionPlayback !== controller) {
+      window.clearInterval(controller.countdownInterval);
+      return;
+    }
+
+    remaining -= 1;
+    if (remaining > 0) {
+      indicator?.update(`Starts in ${remaining}s`);
+      return;
+    }
+
+    window.clearInterval(controller.countdownInterval);
+    controller.countdownInterval = null;
+    indicator?.update('Starting...');
+
+    const activeController = instructionPlayback;
+    instructionPlayback = null;
+    cleanupInstructionController(activeController, { preserveContent: true });
+
+    if (slideObj.autoPlay && !slideObj._autoTriggered) {
+      slideObj._autoTriggered = true;
+      slideObj.autoPlay.trigger?.();
+    }
+
+    slideObj._instructionComplete = true;
+  }, 1000);
+};
+
+const handleInstructionForSlide = (slideObj) => {
+  if (!slideObj || slideObj._instructionComplete) {
+    return;
+  }
+
+  const audioUrl = slideObj.instructionAudio;
+  const hasAutoPlay = Boolean(slideObj.autoPlay?.trigger);
+
+  if (!audioUrl && !hasAutoPlay) {
+    slideObj._instructionComplete = true;
+    return;
+  }
+
+  stopInstructionPlayback();
+
+  const indicator = createInstructionIndicator(slideObj);
+  indicator?.update(audioUrl ? 'Instruction playing...' : 'Starts in 5s');
+
+  const controller = {
+    slide: slideObj,
+    audio: null,
+    countdownInterval: null,
+    cleanupHandlers: [],
+    onEnded: null,
+    indicator,
+    restoreButton: null,
+  };
+
+  const { button } = slideObj.autoPlay || {};
+  if (button && typeof button.disabled === 'boolean') {
+    controller.button = button;
+    controller.buttonWasDisabled = button.disabled;
+    controller.buttonLocked = true;
+    button.disabled = true;
+    controller.restoreButton = () => {
+      if (!controller.buttonLocked) {
+        return;
+      }
+      controller.buttonLocked = false;
+      controller.button.disabled = controller.buttonWasDisabled ?? false;
+    };
+  }
+
+  const setInstructionComplete = () => {
+    slideObj._instructionComplete = true;
+    slideObj._autoTriggered = true;
+    stopInstructionPlayback({ preserveContent: true });
+  };
+
+  const attachManualHandler = () => {
+    const { button } = slideObj.autoPlay || {};
+    if (!button || typeof button.addEventListener !== 'function') {
+      return;
+    }
+    const manualHandler = () => {
+      if (instructionPlayback?.slide !== slideObj) {
+        return;
+      }
+      setInstructionComplete();
+    };
+    button.addEventListener('click', manualHandler);
+    controller.cleanupHandlers.push(() => button.removeEventListener('click', manualHandler));
+  };
+
+  if (hasAutoPlay) {
+    attachManualHandler();
+  }
+
+  const beginCountdown = () => {
+    if (!instructionPlayback || instructionPlayback.slide !== slideObj) {
+      return;
+    }
+    startInstructionCountdown(controller);
+  };
+
+  if (!audioUrl) {
+    instructionPlayback = controller;
+    beginCountdown();
+    return;
+  }
+
+  const audio = new Audio(audioUrl);
+  controller.audio = audio;
+
+  const onEnded = () => {
+    if (!instructionPlayback || instructionPlayback.slide !== slideObj) {
+      return;
+    }
+
+    audio.removeEventListener('ended', onEnded);
+    audio.removeEventListener('error', onEnded);
+
+    if (!hasAutoPlay) {
+      const activeController = instructionPlayback;
+      instructionPlayback = null;
+      cleanupInstructionController(activeController);
+      slideObj._instructionComplete = true;
+      return;
+    }
+
+    beginCountdown();
+  };
+
+  controller.onEnded = onEnded;
+  audio.addEventListener('ended', onEnded, { once: false });
+  audio.addEventListener('error', onEnded, { once: false });
+
+  instructionPlayback = controller;
+
+  const playPromise = audio.play();
+  if (playPromise?.catch) {
+    playPromise.catch(() => {
+      onEnded();
+    });
+  }
 };
 
 const parseActivitySlideId = (slideId) => {
@@ -337,7 +625,8 @@ const createUnsupportedActivitySlide = (
     slide.firstElementChild.insertAdjacentElement('afterend', focusEl);
   }
 
-  const instructionsEl = createInstructionsElement(activityInstructions, { allowObject: true });
+  const instructionEntries = extractInstructionEntries(activityInstructions, { allowObject: true });
+  const instructionsEl = createInstructionsElement(instructionEntries.map((entry) => entry.text).filter(Boolean));
   if (instructionsEl) {
     const anchor = focusEl ?? slide.querySelector('h2');
     anchor?.insertAdjacentElement('afterend', instructionsEl);
@@ -378,6 +667,8 @@ const showSlide = (nextIndex) => {
     return;
   }
 
+  stopInstructionPlayback();
+
   nextIndex = Math.max(0, Math.min(slides.length - 1, nextIndex));
   if (nextIndex === currentSlideIndex && slides[nextIndex].element.classList.contains('is-active')) {
     return;
@@ -393,6 +684,7 @@ const showSlide = (nextIndex) => {
   const nextSlide = slides[currentSlideIndex];
   nextSlide.element.classList.add('is-active');
   nextSlide.onEnter?.();
+  handleInstructionForSlide(nextSlide);
   nextSlide.element.scrollTop = 0;
   nextSlide.element.querySelectorAll('.dialogue-grid').forEach((grid) => {
     if (typeof grid.scrollTo === 'function') {
@@ -505,10 +797,13 @@ const buildLessonSlides = (lessonData) => {
         role: slideRoleInfo?.role,
         letter: slideRoleInfo?.letter,
       });
+      if (resolvedInstructions.audio) {
+        slideObj.instructionAudio = resolvedInstructions.audio;
+      }
       const shouldInsertInstructions =
-        resolvedInstructions.length && (!instructionsAreGeneral || index === 0);
+        resolvedInstructions.texts.length && (!instructionsAreGeneral || index === 0);
       if (shouldInsertInstructions) {
-        applyInstructionsToSlide(slideObj.element, resolvedInstructions);
+        applyInstructionsToSlide(slideObj.element, resolvedInstructions.texts);
       }
       lessonSlides.push(slideObj);
       slidesContainer.appendChild(slideObj.element);
