@@ -206,6 +206,12 @@ const createDialogueCard = (dialogue, options = {}) => {
   return wrapper;
 };
 
+const normalizeKeyword = (value) => {
+  return typeof value === "string" && value.trim().length
+    ? value.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-")
+    : "";
+};
+
 const maybeInsertFocus = (slide, focusText, includeFocus) => {
   if (!includeFocus) {
     return;
@@ -256,10 +262,10 @@ const buildModelDialogueSlide = (
       showTexts: Boolean(dialogue.text_a || dialogue.text_b),
       classes: ['dialogue-card--model'],
     });
-    const title = document.createElement('h3');
-    title.className = 'dialogue-card__title';
-    title.textContent = `Dialogue ${index + 1}`;
-    card.prepend(title);
+    // const title = document.createElement('h3');
+    // title.className = 'dialogue-card__title';
+    // title.textContent = `Dialogue ${index + 1}`;
+    // card.prepend(title);
     content.appendChild(card);
     return {
       card,
@@ -319,6 +325,259 @@ const buildModelDialogueSlide = (
       sequenceAbort?.abort();
       sequenceAbort = null;
       audioManager.stopAll();
+    },
+  };
+};
+
+const buildWarmupSlide = (
+  dialogues,
+  {
+    activityLabel = 'Activity',
+    subActivitySuffix = '',
+    subActivityLetter = '',
+    activityNumber = null,
+    activityFocus = '',
+    includeFocus = false,
+  } = {},
+) => {
+  const usableDialogues = (Array.isArray(dialogues) ? dialogues : [])
+    .map((dialogue, index) => {
+      const keyword = typeof dialogue.keyword === 'string' ? dialogue.keyword.trim() : '';
+      const normalizedKeyword = normalizeKeyword(keyword);
+      return {
+        index,
+        dialogue,
+        keyword,
+        normalizedKeyword,
+      };
+    })
+    .filter((item) => item.keyword && item.normalizedKeyword && item.dialogue.img);
+
+  const slide = document.createElement('section');
+  slide.className = 'slide slide--warmup';
+  slide.innerHTML = `
+    <h2>${activityLabel}${subActivitySuffix} - Warm Up</h2>
+    <p class="slide__instruction">Match each picture with the correct place.</p>
+  `;
+
+  maybeInsertFocus(slide, activityFocus, includeFocus);
+
+  const layout = document.createElement('div');
+  layout.className = 'warmup-layout';
+  slide.appendChild(layout);
+
+  const gallery = document.createElement('div');
+  gallery.className = 'warmup-gallery';
+  layout.appendChild(gallery);
+
+  const dropzonesWrapper = document.createElement('div');
+  dropzonesWrapper.className = 'warmup-dropzones';
+  layout.appendChild(dropzonesWrapper);
+
+  const keywordSet = new Set();
+
+  const shuffle = (array) => {
+    for (let i = array.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+
+  const shuffledDialogues = shuffle([...usableDialogues]);
+  const cardItems = [];
+
+  shuffledDialogues.forEach((item) => {
+    const { dialogue, keyword, normalizedKeyword } = item;
+
+    if (keywordSet.has(normalizedKeyword)) {
+      return;
+    }
+    keywordSet.add(normalizedKeyword);
+
+    const card = document.createElement('div');
+    card.className = 'warmup-card';
+    card.dataset.keyword = normalizedKeyword;
+
+    const imgWrapper = document.createElement('div');
+    imgWrapper.className = 'warmup-card__media';
+    const img = document.createElement('img');
+    img.src = dialogue.img;
+    img.alt = keyword ? `Location: ${keyword}` : `Warm up image`;
+    img.loading = 'lazy';
+    imgWrapper.appendChild(img);
+    card.appendChild(imgWrapper);
+
+    const caption = document.createElement('span');
+    caption.className = 'warmup-card__caption';
+    caption.textContent = '';
+    card.appendChild(caption);
+    card.dataset.label = keyword;
+
+    gallery.appendChild(card);
+    cardItems.push({ keyword, normalizedKeyword });
+  });
+
+  const dropzoneItems = shuffle([...cardItems]);
+
+  dropzoneItems.forEach(({ keyword, normalizedKeyword }) => {
+    const dropzone = document.createElement('div');
+    dropzone.className = 'warmup-dropzone';
+    dropzone.dataset.keyword = normalizedKeyword;
+
+    const label = document.createElement('span');
+    label.className = 'warmup-dropzone__label';
+    label.textContent = keyword;
+    dropzone.appendChild(label);
+
+    const body = document.createElement('div');
+    body.className = 'warmup-dropzone__body';
+    dropzone.appendChild(body);
+
+    dropzonesWrapper.appendChild(dropzone);
+  });
+
+  const cards = Array.from(gallery.querySelectorAll('.warmup-card'));
+  const dropzones = Array.from(dropzonesWrapper.querySelectorAll('.warmup-dropzone'));
+
+  if (!cards.length || !dropzones.length) {
+    const emptyState = document.createElement('p');
+    emptyState.className = 'empty-state';
+    emptyState.textContent = 'Warm up activity will appear here once content is available.';
+    layout.appendChild(emptyState);
+
+    const suffixSegment = subActivityLetter ? `-${subActivityLetter}` : '';
+
+    return {
+      id: activityNumber ? `activity-${activityNumber}${suffixSegment}-warmup` : 'activity-warmup',
+      element: slide,
+      onEnter: () => {},
+      onLeave: () => {},
+    };
+  }
+
+  const resetWarmup = () => {
+    const $ = window.jQuery;
+    if (!$) {
+      return;
+    }
+
+    cards.forEach((card) => {
+      const $card = $(card);
+      $card.removeClass('is-correct is-incorrect is-active');
+      $card.css({ top: '', left: '', position: 'relative' });
+      $card.find('.warmup-card__caption').text('').removeClass('is-visible');
+      gallery.appendChild(card);
+      if ($card.data('uiDraggable')) {
+        $card.draggable('enable');
+        $card.draggable('option', 'revert', 'invalid');
+      }
+    });
+
+    dropzones.forEach((zone) => {
+      const $zone = $(zone);
+      $zone.removeClass('is-correct is-incorrect is-hover');
+      $zone.find('.warmup-dropzone__label').removeClass('is-hidden');
+      $zone.find('.warmup-dropzone__body').empty();
+      $zone.data('complete', false);
+      if ($zone.data('uiDroppable')) {
+        $zone.droppable('enable');
+      }
+    });
+  };
+
+  let initialized = false;
+
+  const setupInteractions = () => {
+    const $ = window.jQuery;
+    if (!$ || !$.fn?.draggable || !$.fn?.droppable) {
+      console.warn('jQuery UI is required for the warm up activity.');
+      return;
+    }
+
+    const $cards = $(cards);
+    const $dropzones = $(dropzones);
+
+    $cards.draggable({
+      revert: 'invalid',
+      containment: slide,
+      zIndex: 100,
+      start(_, ui) {
+        $(this).removeClass('is-incorrect');
+        $(this).addClass('is-active');
+      },
+      stop() {
+        $(this).removeClass('is-active');
+      },
+    });
+
+    $dropzones.droppable({
+      accept: '.warmup-card',
+      tolerance: 'intersect',
+      over() {
+        $(this).addClass('is-hover');
+      },
+      out() {
+        $(this).removeClass('is-hover');
+      },
+      drop(event, ui) {
+        const $zone = $(this);
+        const $card = ui.draggable;
+        const expected = $zone.data('keyword');
+        const actual = $card.data('keyword');
+
+        $zone.removeClass('is-hover');
+
+        if ($zone.data('complete')) {
+          $card.draggable('option', 'revert', true);
+          window.setTimeout(() => $card.draggable('option', 'revert', 'invalid'), 0);
+          return;
+        }
+
+        if (expected === actual) {
+          $zone.data('complete', true);
+          $zone.addClass('is-correct');
+          $zone.find('.warmup-dropzone__label').addClass('is-hidden');
+
+          $card.addClass('is-correct');
+          $card.draggable('disable');
+          $card.removeClass('is-active');
+          $card.css({ top: '', left: '', position: 'relative' });
+          $card.appendTo($zone.find('.warmup-dropzone__body'));
+          const baseLabel = $card.data('label');
+          if (baseLabel) {
+            $card.find('.warmup-card__caption').text(baseLabel).addClass('is-visible');
+          }
+
+          $zone.droppable('disable');
+        } else {
+          $card.addClass('is-incorrect');
+          $zone.addClass('is-incorrect');
+          $card.draggable('option', 'revert', true);
+          window.setTimeout(() => {
+            $card.draggable('option', 'revert', 'invalid');
+            $card.removeClass('is-incorrect');
+            $zone.removeClass('is-incorrect');
+          }, 600);
+        }
+      },
+    });
+
+    initialized = true;
+  };
+
+  const suffixSegment = subActivityLetter ? `-${subActivityLetter}` : '';
+
+  return {
+    id: activityNumber ? `activity-${activityNumber}${suffixSegment}-warmup` : 'activity-warmup',
+    element: slide,
+    onEnter: () => {
+      if (!initialized) {
+        setupInteractions();
+      }
+    },
+    onLeave: () => {
+      resetWarmup();
     },
   };
 };
@@ -921,6 +1180,14 @@ const buildSpeakingSlide = (
 
         await delay(400, { signal });
         card.classList.remove('is-active');
+        if (signal.aborted) {
+          break;
+        }
+
+        await delay(3000, { signal });
+        if (signal.aborted) {
+          break;
+        }
       }
 
       if (!signal.aborted) {
@@ -979,7 +1246,8 @@ export const buildSbsSlides = (activityData = {}, context = {}) => {
     includeFocus: Boolean(activityFocus),
   };
 
-  const listeningContext = createSubActivityContext(baseContext, 'a');
+  const warmupContext = createSubActivityContext(baseContext, 'a');
+  const listeningContext = createSubActivityContext(baseContext, 'b');
 
   const parsePauseValue = (value) => {
     const parsed = Number(value);
@@ -990,11 +1258,11 @@ export const buildSbsSlides = (activityData = {}, context = {}) => {
     parsePauseValue(activityData.listen_repeat_pause_ms) ?? parsePauseValue(activityData.repeat_pause_ms);
 
   const listenRepeatContext = {
-    ...createSubActivityContext(baseContext, 'b'),
+    ...createSubActivityContext(baseContext, 'c'),
     repeatPauseMs: configuredPause !== null ? Math.max(500, configuredPause) : 1500,
   };
-  const readingContext = createSubActivityContext(baseContext, 'c');
-  const speakingContext = createSubActivityContext(baseContext, 'd');
+  const readingContext = createSubActivityContext(baseContext, 'd');
+  const speakingContext = createSubActivityContext(baseContext, 'e');
 
   const dialogues = Array.isArray(activityData.dialogues) ? activityData.dialogues : [];
   const exampleDialogues = Array.isArray(activityData.example_dialogues)
@@ -1003,10 +1271,22 @@ export const buildSbsSlides = (activityData = {}, context = {}) => {
 
   return [
     buildModelDialogueSlide(exampleDialogues, modelContext),
+    buildWarmupSlide(dialogues, warmupContext),
     buildListeningSlide(dialogues, listeningContext),
     buildListenAndRepeatSlide(dialogues, listenRepeatContext),
     buildReadingSlide(dialogues, readingContext),
     buildSpeakingSlide(dialogues, speakingContext),
   ];
 };
+
+
+
+
+
+
+
+
+
+
+
 

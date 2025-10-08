@@ -160,6 +160,9 @@ const createInstructionResolver = (instructions, activityNumber) => {
           'introduction',
         );
         break;
+      case 'warmup':
+        addCandidates('warmup', 'warm-up', 'matching', 'match');
+        break;
       case 'listen-repeat':
         addCandidates(
           'listenrepeat',
@@ -182,7 +185,6 @@ const createInstructionResolver = (instructions, activityNumber) => {
       default:
         break;
     }
-
     for (const candidate of candidates) {
       const normalizedCandidate = normalizeInstructionKey(candidate);
       if (normalizedCandidate && map.has(normalizedCandidate)) {
@@ -252,13 +254,14 @@ const parseActivitySlideId = (slideId) => {
   }
   const normalized = slideId.toLowerCase();
   const letterMap = {
-    listening: 'a',
-    'listen-repeat': 'b',
-    reading: 'c',
-    speaking: 'd',
+    warmup: 'a',
+    listening: 'b',
+    'listen-repeat': 'c',
+    reading: 'd',
+    speaking: 'e',
   };
   const detailedMatch =
-    /^activity-(\d+)(?:-([a-z]))?-(model|listening|listen-repeat|reading|speaking)$/.exec(normalized);
+    /^activity-(\d+)(?:-([a-z]))?-(model|warmup|listening|listen-repeat|reading|speaking)$/.exec(normalized);
   if (detailedMatch) {
     const [, activityNumber, letter, role] = detailedMatch;
     return {
@@ -268,7 +271,7 @@ const parseActivitySlideId = (slideId) => {
     };
   }
 
-  const simpleMatch = /^activity-(model|listening|listen-repeat|reading|speaking)$/.exec(normalized);
+  const simpleMatch = /^activity-(model|warmup|listening|listen-repeat|reading|speaking)$/.exec(normalized);
   if (simpleMatch) {
     const [, role] = simpleMatch;
     return {
@@ -547,3 +550,6 @@ const init = async () => {
 };
 
 init();
+
+
+
