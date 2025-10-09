@@ -1,10 +1,10 @@
-import { buildSbsSlides } from './lib/sbs.js';
+import { buildSbsSlides } from "./lib/sbs.js";
 
-const slidesContainer = document.getElementById('slides');
-const progressIndicator = document.getElementById('progressIndicator');
-const prevBtn = document.getElementById('prevSlide');
-const nextBtn = document.getElementById('nextSlide');
-const lessonMetaEl = document.getElementById('lessonMeta');
+const slidesContainer = document.getElementById("slides");
+const progressIndicator = document.getElementById("progressIndicator");
+const prevBtn = document.getElementById("prevSlide");
+const nextBtn = document.getElementById("nextSlide");
+const lessonMetaEl = document.getElementById("lessonMeta");
 
 const activityBuilders = {
   SBS: buildSbsSlides,
@@ -14,8 +14,8 @@ const extractInstructionEntries = (input, { allowObject = false } = {}) => {
   const entries = [];
 
   const pushEntry = (textValue, audioValue) => {
-    const text = typeof textValue === 'string' ? textValue.trim() : '';
-    const audio = typeof audioValue === 'string' ? audioValue.trim() : '';
+    const text = typeof textValue === "string" ? textValue.trim() : "";
+    const audio = typeof audioValue === "string" ? audioValue.trim() : "";
     if (!text && !audio) {
       return;
     }
@@ -35,22 +35,22 @@ const extractInstructionEntries = (input, { allowObject = false } = {}) => {
       return;
     }
 
-    if (typeof value === 'string') {
+    if (typeof value === "string") {
       pushEntry(value, null);
       return;
     }
 
-    if (typeof value === 'object') {
-      const hasText = typeof value.text === 'string';
-      const hasAudio = typeof value.audio === 'string';
+    if (typeof value === "object") {
+      const hasText = typeof value.text === "string";
+      const hasAudio = typeof value.audio === "string";
 
       if (hasText || hasAudio) {
-        pushEntry(hasText ? value.text : '', hasAudio ? value.audio : null);
+        pushEntry(hasText ? value.text : "", hasAudio ? value.audio : null);
       }
 
       if (allowNested) {
         Object.entries(value).forEach(([key, nested]) => {
-          if (key === 'text' || key === 'audio') {
+          if (key === "text" || key === "audio") {
             return;
           }
           process(nested, true);
@@ -64,17 +64,17 @@ const extractInstructionEntries = (input, { allowObject = false } = {}) => {
 };
 
 const createFocusElement = (focusText) => {
-  const trimmed = typeof focusText === 'string' ? focusText.trim() : '';
+  const trimmed = typeof focusText === "string" ? focusText.trim() : "";
   if (!trimmed) {
     return null;
   }
 
-  const focusEl = document.createElement('p');
-  focusEl.className = 'activity-focus';
+  const focusEl = document.createElement("p");
+  focusEl.className = "activity-focus";
 
-  const label = document.createElement('span');
-  label.className = 'activity-focus__label';
-  label.textContent = 'Focus';
+  const label = document.createElement("span");
+  label.className = "activity-focus__label";
+  label.textContent = "Focus";
 
   focusEl.appendChild(label);
   focusEl.append(`: ${trimmed}`);
@@ -83,22 +83,24 @@ const createFocusElement = (focusText) => {
 };
 
 const createInstructionsElement = (texts) => {
-  const normalized = Array.isArray(texts) ? texts.filter((text) => typeof text === 'string' && text.trim().length) : [];
+  const normalized = Array.isArray(texts)
+    ? texts.filter((text) => typeof text === "string" && text.trim().length)
+    : [];
   if (!normalized.length) {
     return null;
   }
 
   if (normalized.length === 1) {
-    const paragraph = document.createElement('p');
-    paragraph.className = 'activity-instructions';
+    const paragraph = document.createElement("p");
+    paragraph.className = "activity-instructions";
     paragraph.textContent = normalized[0];
     return paragraph;
   }
 
-  const list = document.createElement('ul');
-  list.className = 'activity-instructions';
+  const list = document.createElement("ul");
+  list.className = "activity-instructions";
   normalized.forEach((item) => {
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.textContent = item;
     list.appendChild(li);
   });
@@ -106,10 +108,13 @@ const createInstructionsElement = (texts) => {
 };
 
 const normalizeInstructionKey = (key) => {
-  if (typeof key !== 'string' && typeof key !== 'number') {
-    return '';
+  if (typeof key !== "string" && typeof key !== "number") {
+    return "";
   }
-  return key.toString().toLowerCase().replace(/[^a-z0-9]+/g, '');
+  return key
+    .toString()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "");
 };
 
 const createInstructionResolver = (instructions, activityNumber) => {
@@ -120,12 +125,17 @@ const createInstructionResolver = (instructions, activityNumber) => {
     };
   }
 
-  const generalEntries = extractInstructionEntries(instructions, { allowObject: true });
+  const generalEntries = extractInstructionEntries(instructions, {
+    allowObject: true,
+  });
 
   const isSimpleGeneral =
     Array.isArray(instructions) ||
-    typeof instructions === 'string' ||
-    (typeof instructions === 'object' && instructions && !Array.isArray(instructions) && ('text' in instructions || 'audio' in instructions));
+    typeof instructions === "string" ||
+    (typeof instructions === "object" &&
+      instructions &&
+      !Array.isArray(instructions) &&
+      ("text" in instructions || "audio" in instructions));
 
   const formatEntries = (entries) => {
     const texts = entries.map((entry) => entry.text).filter(Boolean);
@@ -143,7 +153,7 @@ const createInstructionResolver = (instructions, activityNumber) => {
     };
   }
 
-  if (typeof instructions !== 'object') {
+  if (typeof instructions !== "object") {
     return {
       isGeneral: false,
       resolve: () => ({ texts: [], audio: null }),
@@ -165,7 +175,7 @@ const createInstructionResolver = (instructions, activityNumber) => {
 
   const fallbackValues = Array.from(map.values());
   const fallbackDefault = fallbackValues.length ? fallbackValues[0] : [];
-  const generalKeys = ['default', 'general', 'all', 'common'];
+  const generalKeys = ["default", "general", "all", "common"];
 
   const resolve = ({ role, letter }) => {
     const candidates = [];
@@ -181,48 +191,48 @@ const createInstructionResolver = (instructions, activityNumber) => {
 
     if (letter) {
       addCandidates(
-        number ? `activity_${number}_${letter}` : '',
-        number ? `activity${number}${letter}` : '',
-        number && number !== '1' ? `activity_1_${letter}` : '',
-        number && number !== '1' ? `activity1${letter}` : '',
+        number ? `activity_${number}_${letter}` : "",
+        number ? `activity${number}${letter}` : "",
+        number && number !== "1" ? `activity_1_${letter}` : "",
+        number && number !== "1" ? `activity1${letter}` : "",
         `activity_${letter}`,
-        `activity${letter}`,
+        `activity${letter}`
       );
     }
 
     switch (role) {
-      case 'model':
+      case "model":
         addCandidates(
-          number ? `activity_${number}_model` : '',
-          number ? `activity${number}model` : '',
-          number ? `activity_${number}_example` : '',
-          number ? `activity${number}example` : '',
-          'model',
-          'example',
-          'introduction',
+          number ? `activity_${number}_model` : "",
+          number ? `activity${number}model` : "",
+          number ? `activity_${number}_example` : "",
+          number ? `activity${number}example` : "",
+          "model",
+          "example",
+          "introduction"
         );
         break;
-      case 'warmup':
-        addCandidates('warmup', 'warm-up', 'matching', 'match');
+      case "pre-listening":
+        addCandidates("pre-listening", "prelistening", "matching", "match");
         break;
-      case 'listen-repeat':
+      case "listen-repeat":
         addCandidates(
-          'listenrepeat',
-          'listenandrepeat',
-          'listen_and_repeat',
-          'listen-repeat',
-          'listen&repeat',
-          'repeat',
+          "listenrepeat",
+          "listenandrepeat",
+          "listen_and_repeat",
+          "listen-repeat",
+          "listen&repeat",
+          "repeat"
         );
         break;
-      case 'listening':
-        addCandidates('listening', 'listen');
+      case "listening":
+        addCandidates("listening", "listen");
         break;
-      case 'reading':
-        addCandidates('reading', 'read', 'readalong');
+      case "reading":
+        addCandidates("reading", "read", "readalong");
         break;
-      case 'speaking':
-        addCandidates('speaking', 'speak', 'speakingpractice');
+      case "speaking":
+        addCandidates("speaking", "speak", "speakingpractice");
         break;
       default:
         break;
@@ -251,33 +261,37 @@ const createInstructionResolver = (instructions, activityNumber) => {
 };
 
 const applyInstructionsToSlide = (slideElement, texts) => {
-  const normalized = Array.isArray(texts) ? texts.filter((text) => typeof text === 'string' && text.trim().length) : [];
+  const normalized = Array.isArray(texts)
+    ? texts.filter((text) => typeof text === "string" && text.trim().length)
+    : [];
   if (!normalized.length) {
     return;
   }
 
   const anchor =
-    slideElement.querySelector('.activity-focus') ?? slideElement.querySelector('h2') ?? slideElement.firstElementChild;
-  const existing = slideElement.querySelector('.slide__instruction');
+    slideElement.querySelector(".activity-focus") ??
+    slideElement.querySelector("h2") ??
+    slideElement.firstElementChild;
+  const existing = slideElement.querySelector(".slide__instruction");
 
   if (normalized.length === 1) {
     const text = normalized[0];
     if (existing) {
       existing.textContent = text;
-      existing.classList.add('activity-instructions');
+      existing.classList.add("activity-instructions");
     } else {
-      const paragraph = document.createElement('p');
-      paragraph.className = 'activity-instructions';
+      const paragraph = document.createElement("p");
+      paragraph.className = "activity-instructions";
       paragraph.textContent = text;
-      anchor?.insertAdjacentElement('afterend', paragraph);
+      anchor?.insertAdjacentElement("afterend", paragraph);
     }
     return;
   }
 
-  const list = document.createElement('ul');
-  list.className = 'activity-instructions';
+  const list = document.createElement("ul");
+  list.className = "activity-instructions";
   normalized.forEach((item) => {
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.textContent = item;
     list.appendChild(li);
   });
@@ -287,24 +301,34 @@ const applyInstructionsToSlide = (slideElement, texts) => {
     return;
   }
 
-  anchor?.insertAdjacentElement('afterend', list);
+  anchor?.insertAdjacentElement("afterend", list);
 };
 
 let instructionPlayback = null;
 
-const cleanupInstructionController = (controller, { preserveContent = false } = {}) => {
+const cleanupInstructionController = (
+  controller,
+  { preserveContent = false } = {}
+) => {
   if (!controller) {
     return;
   }
 
-  const { audio, countdownInterval, cleanupHandlers, onEnded, indicator, restoreButton } = controller;
+  const {
+    audio,
+    countdownInterval,
+    cleanupHandlers,
+    onEnded,
+    indicator,
+    restoreButton,
+  } = controller;
 
   if (audio) {
     audio.pause();
     audio.currentTime = 0;
     if (onEnded) {
-      audio.removeEventListener('ended', onEnded);
-      audio.removeEventListener('error', onEnded);
+      audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("error", onEnded);
     }
   }
 
@@ -336,18 +360,20 @@ const stopInstructionPlayback = ({ preserveContent = false } = {}) => {
 
 const createInstructionIndicator = (slideObj) => {
   const statusEl =
-    slideObj.autoPlay?.status ?? slideObj.element.querySelector('.playback-status') ?? null;
+    slideObj.autoPlay?.status ??
+    slideObj.element.querySelector(".playback-status") ??
+    null;
 
   if (statusEl) {
     const previousText = statusEl.textContent;
-    statusEl.classList.add('playback-status--instruction');
+    statusEl.classList.add("playback-status--instruction");
     return {
       element: statusEl,
       update: (text) => {
         statusEl.textContent = text;
       },
       cleanup: ({ preserveContent = false } = {}) => {
-        statusEl.classList.remove('playback-status--instruction');
+        statusEl.classList.remove("playback-status--instruction");
         if (!preserveContent) {
           statusEl.textContent = previousText;
         }
@@ -355,10 +381,10 @@ const createInstructionIndicator = (slideObj) => {
     };
   }
 
-  const banner = document.createElement('div');
-  banner.className = 'instruction-overlay';
+  const banner = document.createElement("div");
+  banner.className = "instruction-overlay";
   slideObj.element.prepend(banner);
-  window.requestAnimationFrame(() => banner.classList.add('is-visible'));
+  window.requestAnimationFrame(() => banner.classList.add("is-visible"));
   return {
     element: banner,
     update: (text) => {
@@ -404,7 +430,7 @@ const startInstructionCountdown = (controller) => {
 
     window.clearInterval(controller.countdownInterval);
     controller.countdownInterval = null;
-    indicator?.update('Starting...');
+    indicator?.update("Starting...");
 
     const activeController = instructionPlayback;
     instructionPlayback = null;
@@ -435,7 +461,7 @@ const handleInstructionForSlide = (slideObj) => {
   stopInstructionPlayback();
 
   const indicator = createInstructionIndicator(slideObj);
-  indicator?.update(audioUrl ? 'Instruction playing...' : 'Starts in 5s');
+  indicator?.update(audioUrl ? "Instruction playing..." : "Starts in 5s");
 
   const controller = {
     slide: slideObj,
@@ -448,7 +474,7 @@ const handleInstructionForSlide = (slideObj) => {
   };
 
   const { button } = slideObj.autoPlay || {};
-  if (button && typeof button.disabled === 'boolean') {
+  if (button && typeof button.disabled === "boolean") {
     controller.button = button;
     controller.buttonWasDisabled = button.disabled;
     controller.buttonLocked = true;
@@ -470,7 +496,7 @@ const handleInstructionForSlide = (slideObj) => {
 
   const attachManualHandler = () => {
     const { button } = slideObj.autoPlay || {};
-    if (!button || typeof button.addEventListener !== 'function') {
+    if (!button || typeof button.addEventListener !== "function") {
       return;
     }
     const manualHandler = () => {
@@ -479,8 +505,10 @@ const handleInstructionForSlide = (slideObj) => {
       }
       setInstructionComplete();
     };
-    button.addEventListener('click', manualHandler);
-    controller.cleanupHandlers.push(() => button.removeEventListener('click', manualHandler));
+    button.addEventListener("click", manualHandler);
+    controller.cleanupHandlers.push(() =>
+      button.removeEventListener("click", manualHandler)
+    );
   };
 
   if (hasAutoPlay) {
@@ -508,8 +536,8 @@ const handleInstructionForSlide = (slideObj) => {
       return;
     }
 
-    audio.removeEventListener('ended', onEnded);
-    audio.removeEventListener('error', onEnded);
+    audio.removeEventListener("ended", onEnded);
+    audio.removeEventListener("error", onEnded);
 
     if (!hasAutoPlay) {
       const activeController = instructionPlayback;
@@ -523,8 +551,8 @@ const handleInstructionForSlide = (slideObj) => {
   };
 
   controller.onEnded = onEnded;
-  audio.addEventListener('ended', onEnded, { once: false });
-  audio.addEventListener('error', onEnded, { once: false });
+  audio.addEventListener("ended", onEnded, { once: false });
+  audio.addEventListener("error", onEnded, { once: false });
 
   instructionPlayback = controller;
 
@@ -537,35 +565,40 @@ const handleInstructionForSlide = (slideObj) => {
 };
 
 const parseActivitySlideId = (slideId) => {
-  if (typeof slideId !== 'string') {
+  if (typeof slideId !== "string") {
     return null;
   }
   const normalized = slideId.toLowerCase();
   const letterMap = {
-    warmup: 'a',
-    listening: 'b',
-    'listen-repeat': 'c',
-    reading: 'd',
-    speaking: 'e',
+    "pre-listening": "a",
+    listening: "b",
+    "listen-repeat": "c",
+    reading: "d",
+    speaking: "e",
   };
   const detailedMatch =
-    /^activity-(\d+)(?:-([a-z]))?-(model|warmup|listening|listen-repeat|reading|speaking)$/.exec(normalized);
+    /^activity-(\d+)(?:-([a-z]))?-(model|pre-listening|listening|listen-repeat|reading|speaking)$/.exec(
+      normalized
+    );
   if (detailedMatch) {
     const [, activityNumber, letter, role] = detailedMatch;
     return {
       activityNumber,
       role,
-      letter: letter || letterMap[role] || '',
+      letter: letter || letterMap[role] || "",
     };
   }
 
-  const simpleMatch = /^activity-(model|warmup|listening|listen-repeat|reading|speaking)$/.exec(normalized);
+  const simpleMatch =
+    /^activity-(model|pre-listening|listening|listen-repeat|reading|speaking)$/.exec(
+      normalized
+    );
   if (simpleMatch) {
     const [, role] = simpleMatch;
     return {
       activityNumber: null,
       role,
-      letter: letterMap[role] || '',
+      letter: letterMap[role] || "",
     };
   }
   return null;
@@ -585,18 +618,22 @@ const renderLessonMeta = (meta) => {
     meta?.level ? `${meta.level} level` : null,
   ].filter(Boolean);
 
-  const joinedMeta = parts.length ? parts.join(' &middot; ') : '';
+  const joinedMeta = parts.length ? parts.join(" &middot; ") : "";
 
   lessonMetaEl.innerHTML = `
-    <h1 class="lesson-title">Lesson ${meta?.lesson_no ?? ''}</h1>
-    ${meta?.focus ? `<p class="lesson-focus">${meta.focus}</p>` : ''}
-    ${joinedMeta ? `<p class="lesson-meta">${joinedMeta}</p>` : ''}
-    ${meta?.prepared_by ? `<p class="lesson-author">Prepared by ${meta.prepared_by}</p>` : ''}
+    <h1 class="lesson-title">Lesson ${meta?.lesson_no ?? ""}</h1>
+    ${meta?.focus ? `<p class="lesson-focus">${meta.focus}</p>` : ""}
+    ${joinedMeta ? `<p class="lesson-meta">${joinedMeta}</p>` : ""}
+    ${
+      meta?.prepared_by
+        ? `<p class="lesson-author">Prepared by ${meta.prepared_by}</p>`
+        : ""
+    }
   `;
 };
 
 const extractActivityNumber = (activityKey) => {
-  const match = /activity_(\d+)/i.exec(activityKey ?? '');
+  const match = /activity_(\d+)/i.exec(activityKey ?? "");
   if (!match) {
     return null;
   }
@@ -609,12 +646,16 @@ const createUnsupportedActivitySlide = (
   activityType,
   activityNumber,
   activityFocus,
-  activityInstructions,
+  activityInstructions
 ) => {
-  const headingPrefix = activityNumber ? `Activity ${activityNumber}` : 'Activity';
-  const heading = activityType ? `${headingPrefix} (${activityType})` : headingPrefix;
-  const slide = document.createElement('section');
-  slide.className = 'slide slide--unsupported';
+  const headingPrefix = activityNumber
+    ? `Activity ${activityNumber}`
+    : "Activity";
+  const heading = activityType
+    ? `${headingPrefix} (${activityType})`
+    : headingPrefix;
+  const slide = document.createElement("section");
+  slide.className = "slide slide--unsupported";
   slide.innerHTML = `
     <h2>${heading} Not Available</h2>
     <p class="slide__instruction">This activity type is not supported yet. Please check back soon.</p>
@@ -622,14 +663,18 @@ const createUnsupportedActivitySlide = (
 
   const focusEl = createFocusElement(activityFocus);
   if (focusEl && slide.firstElementChild) {
-    slide.firstElementChild.insertAdjacentElement('afterend', focusEl);
+    slide.firstElementChild.insertAdjacentElement("afterend", focusEl);
   }
 
-  const instructionEntries = extractInstructionEntries(activityInstructions, { allowObject: true });
-  const instructionsEl = createInstructionsElement(instructionEntries.map((entry) => entry.text).filter(Boolean));
+  const instructionEntries = extractInstructionEntries(activityInstructions, {
+    allowObject: true,
+  });
+  const instructionsEl = createInstructionsElement(
+    instructionEntries.map((entry) => entry.text).filter(Boolean)
+  );
   if (instructionsEl) {
-    const anchor = focusEl ?? slide.querySelector('h2');
-    anchor?.insertAdjacentElement('afterend', instructionsEl);
+    const anchor = focusEl ?? slide.querySelector("h2");
+    anchor?.insertAdjacentElement("afterend", instructionsEl);
   }
 
   return {
@@ -641,11 +686,16 @@ const createUnsupportedActivitySlide = (
 
 const collectActivityEntries = (lessonData = {}) =>
   Object.entries(lessonData)
-    .filter(([key, value]) => key.startsWith('activity_') && value && typeof value === 'object')
+    .filter(
+      ([key, value]) =>
+        key.startsWith("activity_") && value && typeof value === "object"
+    )
     .map(([key, value]) => {
-      const rawType = typeof value.type === 'string' ? value.type.trim() : '';
+      const rawType = typeof value.type === "string" ? value.type.trim() : "";
       const focus =
-        typeof value.focus === 'string' && value.focus.trim().length ? value.focus.trim() : '';
+        typeof value.focus === "string" && value.focus.trim().length
+          ? value.focus.trim()
+          : "";
       const instructions = value.instructions ?? null;
       return {
         key,
@@ -670,32 +720,37 @@ const showSlide = (nextIndex) => {
   stopInstructionPlayback();
 
   nextIndex = Math.max(0, Math.min(slides.length - 1, nextIndex));
-  if (nextIndex === currentSlideIndex && slides[nextIndex].element.classList.contains('is-active')) {
+  if (
+    nextIndex === currentSlideIndex &&
+    slides[nextIndex].element.classList.contains("is-active")
+  ) {
     return;
   }
 
   const currentSlide = slides[currentSlideIndex];
   if (currentSlide) {
-    currentSlide.element.classList.remove('is-active');
+    currentSlide.element.classList.remove("is-active");
     currentSlide.onLeave?.();
   }
 
   currentSlideIndex = nextIndex;
   const nextSlide = slides[currentSlideIndex];
-  nextSlide.element.classList.add('is-active');
+  nextSlide.element.classList.add("is-active");
   nextSlide.onEnter?.();
   handleInstructionForSlide(nextSlide);
   nextSlide.element.scrollTop = 0;
-  nextSlide.element.querySelectorAll('.dialogue-grid').forEach((grid) => {
-    if (typeof grid.scrollTo === 'function') {
-      grid.scrollTo({ top: 0, behavior: 'auto' });
+  nextSlide.element.querySelectorAll(".dialogue-grid").forEach((grid) => {
+    if (typeof grid.scrollTo === "function") {
+      grid.scrollTo({ top: 0, behavior: "auto" });
       return;
     }
     grid.scrollTop = 0;
   });
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
-  progressIndicator.textContent = `Slide ${currentSlideIndex + 1} of ${slides.length}`;
+  progressIndicator.textContent = `Slide ${currentSlideIndex + 1} of ${
+    slides.length
+  }`;
   prevBtn.disabled = currentSlideIndex === 0;
   nextBtn.disabled = currentSlideIndex === slides.length - 1;
 };
@@ -705,14 +760,14 @@ const attachNavigation = () => {
     return;
   }
 
-  prevBtn.addEventListener('click', () => showSlide(currentSlideIndex - 1));
-  nextBtn.addEventListener('click', () => showSlide(currentSlideIndex + 1));
+  prevBtn.addEventListener("click", () => showSlide(currentSlideIndex - 1));
+  nextBtn.addEventListener("click", () => showSlide(currentSlideIndex + 1));
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowRight') {
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
       showSlide(currentSlideIndex + 1);
     }
-    if (event.key === 'ArrowLeft') {
+    if (event.key === "ArrowLeft") {
       showSlide(currentSlideIndex - 1);
     }
   });
@@ -721,97 +776,108 @@ const attachNavigation = () => {
 };
 
 const buildLessonSlides = (lessonData) => {
-  slidesContainer.innerHTML = '';
+  slidesContainer.innerHTML = "";
 
   const activityEntries = collectActivityEntries(lessonData);
   if (!activityEntries.length) {
-    slidesContainer.innerHTML = '<p class="empty-state">No activities defined for this lesson yet.</p>';
+    slidesContainer.innerHTML =
+      '<p class="empty-state">No activities defined for this lesson yet.</p>';
     return [];
   }
 
   const lessonSlides = [];
 
-  activityEntries.forEach(({ key, type, normalizedType, data, focus, instructions }) => {
-    const activityNumber = extractActivityNumber(key);
-    const context = {
-      key,
-      type,
-      normalizedType,
-      activityNumber,
-      focus,
-      instructions,
-    };
-    const { resolve: resolveInstructions, isGeneral: instructionsAreGeneral } = createInstructionResolver(
-      instructions,
-      activityNumber,
-    );
-    const handler = activityBuilders[normalizedType];
-    const producedSlides = handler ? handler(data, context) : null;
-    const slideObjects = (Array.isArray(producedSlides) ? producedSlides : []).filter(
-      (item) => item && item.element instanceof HTMLElement,
-    );
+  activityEntries.forEach(
+    ({ key, type, normalizedType, data, focus, instructions }) => {
+      const activityNumber = extractActivityNumber(key);
+      const context = {
+        key,
+        type,
+        normalizedType,
+        activityNumber,
+        focus,
+        instructions,
+      };
+      const {
+        resolve: resolveInstructions,
+        isGeneral: instructionsAreGeneral,
+      } = createInstructionResolver(instructions, activityNumber);
+      const handler = activityBuilders[normalizedType];
+      const producedSlides = handler ? handler(data, context) : null;
+      const slideObjects = (
+        Array.isArray(producedSlides) ? producedSlides : []
+      ).filter((item) => item && item.element instanceof HTMLElement);
 
-    const finalSlides = slideObjects.length
-      ? slideObjects
-      : [
-          createUnsupportedActivitySlide(
-            key,
-            type || normalizedType,
-            activityNumber,
-            focus,
-            instructions,
-          ),
-        ];
+      const finalSlides = slideObjects.length
+        ? slideObjects
+        : [
+            createUnsupportedActivitySlide(
+              key,
+              type || normalizedType,
+              activityNumber,
+              focus,
+              instructions
+            ),
+          ];
 
-    finalSlides.forEach((slideObj, index) => {
-      slideObj.element.dataset.activityKey = key;
-      slideObj.element.dataset.activityType = normalizedType || 'UNKNOWN';
-      slideObj.element.dataset.activitySlideIndex = String(index);
-      if (activityNumber) {
-        slideObj.element.dataset.activityNumber = activityNumber;
-      }
-      if (focus) {
-        slideObj.element.dataset.activityFocus = focus;
-      }
-      if (instructions !== undefined) {
-        try {
-          slideObj.element.dataset.activityInstructions = JSON.stringify(instructions);
-        } catch {
-          // ignore serialization errors
+      finalSlides.forEach((slideObj, index) => {
+        slideObj.element.dataset.activityKey = key;
+        slideObj.element.dataset.activityType = normalizedType || "UNKNOWN";
+        slideObj.element.dataset.activitySlideIndex = String(index);
+        if (activityNumber) {
+          slideObj.element.dataset.activityNumber = activityNumber;
         }
-      }
-      if (slideObj.id && !slideObj.element.id) {
-        slideObj.element.id = slideObj.id;
-      }
-      if (focus && index === 0) {
-        if (!slideObj.element.querySelector('.activity-focus')) {
-          const fallbackFocusEl = createFocusElement(focus);
-          if (fallbackFocusEl) {
-            const heading = slideObj.element.querySelector('h2');
-            heading?.insertAdjacentElement('afterend', fallbackFocusEl);
+        if (focus) {
+          slideObj.element.dataset.activityFocus = focus;
+        }
+        if (instructions !== undefined) {
+          try {
+            slideObj.element.dataset.activityInstructions =
+              JSON.stringify(instructions);
+          } catch {
+            // ignore serialization errors
           }
         }
-      }
-      const slideRoleInfo = parseActivitySlideId(slideObj.id ?? slideObj.element.id ?? '');
-      const resolvedInstructions = resolveInstructions({
-        role: slideRoleInfo?.role,
-        letter: slideRoleInfo?.letter,
+        if (slideObj.id && !slideObj.element.id) {
+          slideObj.element.id = slideObj.id;
+        }
+        if (focus && index === 0) {
+          if (!slideObj.element.querySelector(".activity-focus")) {
+            const fallbackFocusEl = createFocusElement(focus);
+            if (fallbackFocusEl) {
+              const heading = slideObj.element.querySelector("h2");
+              heading?.insertAdjacentElement("afterend", fallbackFocusEl);
+            }
+          }
+        }
+        const slideRoleInfo = parseActivitySlideId(
+          slideObj.id ?? slideObj.element.id ?? ""
+        );
+        const resolvedInstructions = resolveInstructions({
+          role: slideRoleInfo?.role,
+          letter: slideRoleInfo?.letter,
+        });
+        if (resolvedInstructions.audio) {
+          slideObj.instructionAudio = resolvedInstructions.audio;
+        }
+        const shouldInsertInstructions =
+          resolvedInstructions.texts.length &&
+          (!instructionsAreGeneral || index === 0);
+        if (shouldInsertInstructions) {
+          applyInstructionsToSlide(
+            slideObj.element,
+            resolvedInstructions.texts
+          );
+        }
+        lessonSlides.push(slideObj);
+        slidesContainer.appendChild(slideObj.element);
       });
-      if (resolvedInstructions.audio) {
-        slideObj.instructionAudio = resolvedInstructions.audio;
-      }
-      const shouldInsertInstructions =
-        resolvedInstructions.texts.length && (!instructionsAreGeneral || index === 0);
-      if (shouldInsertInstructions) {
-        applyInstructionsToSlide(slideObj.element, resolvedInstructions.texts);
-      }
-      lessonSlides.push(slideObj);
-      slidesContainer.appendChild(slideObj.element);
-    });
-  });
+    }
+  );
 
   if (!lessonSlides.length) {
-    slidesContainer.innerHTML = '<p class="empty-state">No compatible activities available yet.</p>';
+    slidesContainer.innerHTML =
+      '<p class="empty-state">No compatible activities available yet.</p>';
   }
 
   return lessonSlides;
@@ -819,7 +885,7 @@ const buildLessonSlides = (lessonData) => {
 
 const init = async () => {
   try {
-    const data = await fetchJson('content.json');
+    const data = await fetchJson("content.json");
     renderLessonMeta(data.meta ?? {});
 
     slides = buildLessonSlides(data);
@@ -829,7 +895,7 @@ const init = async () => {
     if (slides.length) {
       showSlide(0);
     } else {
-      progressIndicator.textContent = 'No activities available yet.';
+      progressIndicator.textContent = "No activities available yet.";
       prevBtn.disabled = true;
       nextBtn.disabled = true;
     }
@@ -838,13 +904,10 @@ const init = async () => {
     slides = [];
     currentSlideIndex = 0;
     slidesContainer.innerHTML = `<p class="error">Unable to load the lesson content. Please try reloading.</p>`;
-    progressIndicator.textContent = '';
+    progressIndicator.textContent = "";
     prevBtn.disabled = true;
     nextBtn.disabled = true;
   }
 };
 
 init();
-
-
-

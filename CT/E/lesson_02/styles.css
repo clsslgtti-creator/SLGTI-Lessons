@@ -133,20 +133,20 @@ body {
   font-weight: 700;
 }
 
-.slide--warmup .warmup-layout {
+.slide--pre-listening .pre-listening-layout {
   display: flex;
   flex-direction: column;
   gap: clamp(1.25rem, 3vw, 2rem);
 }
 
-.warmup-gallery {
+.pre-listening-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: clamp(0.75rem, 2vw, 1.25rem);
 }
 
-.warmup-card {
+.pre-listening-card {
   position: relative;
   width: clamp(120px, 18vw, 150px);
   border-radius: var(--radius-md);
@@ -163,7 +163,7 @@ body {
   transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
-.warmup-card__media {
+.pre-listening-card__media {
   width: 100%;
   aspect-ratio: 1 / 1;
   display: flex;
@@ -171,14 +171,14 @@ body {
   justify-content: center;
 }
 
-.warmup-card img {
+.pre-listening-card img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   border-radius: var(--radius-sm);
 }
 
-.warmup-card__caption {
+.pre-listening-card__caption {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-muted);
@@ -188,33 +188,33 @@ body {
   transition: opacity var(--transition-fast);
 }
 
-.warmup-card__caption.is-visible {
+.pre-listening-card__caption.is-visible {
   opacity: 1;
   visibility: visible;
 }
 
-.warmup-card.is-correct {
+.pre-listening-card.is-correct {
   border-color: rgba(34, 197, 94, 0.85);
   cursor: default;
 }
 
-.warmup-card.is-active {
+.pre-listening-card.is-active {
   border-color: rgba(31, 111, 235, 0.35);
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
 }
 
-.warmup-card.is-incorrect {
+.pre-listening-card.is-incorrect {
   border-color: rgba(239, 68, 68, 0.85);
 }
 
-.warmup-dropzones {
+.pre-listening-dropzones {
   display: grid;
   gap: clamp(0.75rem, 2vw, 1.25rem);
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
 }
 
-.warmup-dropzone {
+.pre-listening-dropzone {
   position: relative;
   min-height: clamp(100px, 14vw, 140px);
   border: 2px dashed rgba(99, 102, 241, 0.35);
@@ -229,19 +229,19 @@ body {
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
 }
 
-.warmup-dropzone__label {
+.pre-listening-dropzone__label {
   font-weight: 600;
   color: var(--color-muted);
   text-align: center;
   transition: opacity var(--transition-fast);
 }
 
-.warmup-dropzone__label.is-hidden {
+.pre-listening-dropzone__label.is-hidden {
   opacity: 0;
   display: none;
 }
 
-.warmup-dropzone__body {
+.pre-listening-dropzone__body {
   width: 100%;
   aspect-ratio: 1 / 1;
   display: flex;
@@ -249,22 +249,22 @@ body {
   justify-content: center;
 }
 
-.warmup-dropzone.is-hover {
+.pre-listening-dropzone.is-hover {
   border-color: rgba(59, 130, 246, 0.8);
   box-shadow: 0 12px 20px rgba(29, 78, 216, 0.15);
 }
 
-.warmup-dropzone.is-correct {
+.pre-listening-dropzone.is-correct {
   border-color: rgba(34, 197, 94, 0.85);
   background: rgba(34, 197, 94, 0.1);
 }
 
-.warmup-dropzone.is-incorrect {
+.pre-listening-dropzone.is-incorrect {
   border-color: rgba(239, 68, 68, 0.85);
   background: rgba(239, 68, 68, 0.12);
 }
 
-.warmup-dropzone .warmup-card {
+.pre-listening-dropzone .pre-listening-card {
   position: relative;
   width: 100%;
   margin: 0;
@@ -274,7 +274,7 @@ body {
   border-width: 2px;
 }
 
-.warmup-dropzone .warmup-card img {
+.pre-listening-dropzone .pre-listening-card img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -486,7 +486,7 @@ body {
 }
 
 .slide--model .dialogue-card--model::before,
-.slide--warmup .warmup-card::before,
+.slide--pre-listening .pre-listening-card::before,
 .slide--reading .dialogue-card--reading::before,
 .slide--listen-repeat .dialogue-card--listen-repeat::before,
 .slide--listening .dialogue-card--listening::before,
@@ -501,7 +501,7 @@ body {
 }
 
 .slide--model .dialogue-card--model.is-active::before,
-.slide--warmup .warmup-card.is-active::before,
+.slide--pre-listening .pre-listening-card.is-active::before,
 .slide--reading .dialogue-card--reading.is-active::before,
 .slide--listen-repeat .dialogue-card--listen-repeat.is-active::before,
 .slide--listening .dialogue-card--listening.is-active::before,

@@ -10,7 +10,7 @@
   },
   "activity_2": {
     "type": "SBS",
-    "focus": "Where /verb ‘to be’/ preposition in",
+    "focus": "Where /verb ‘to be’/ preposition ‘in’",
     "reference": "SBS 2 Page 11",
     "instructions": {
       "example": {
@@ -18,33 +18,49 @@
         "audio": "assets/audio/instruction_example.mp3"
       },
       "activity_1_a": {
-        "text": "Match the places with pictures.\nஇடங்களைப் படங்களுடன் பொருத்துங்கள்.\nස්ථාන රූපයන්ට ගැළපන්න.",
+        "text": "Match the words with the pictures.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.\nපදයන් පින්තූර සමග ගැලපන්න.",
         "audio": "assets/audio/instruction_activity_a.mp3"
       },
       "activity_1_b": {
-        "text": "Listen.\nகேளுங்கள்.\nඅසන්න.",
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
         "audio": "assets/audio/instruction_activity_b.mp3"
       },
       "activity_1_c": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nඅසන්න සහ නැවත කියන්න.",
+        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
         "audio": "assets/audio/instruction_activity_c.mp3"
       },
       "activity_1_d": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nඑකකින් එක කියවන්න.",
+        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
         "audio": "assets/audio/instruction_activity_d.mp3"
       },
       "activity_1_e": {
-        "text": "Listen to each question, use the pause to answer, then compare your response with the model answer.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியில் பதிலளியுங்கள், பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.\nසෑම ප්‍රශ්නයක්ම අසා, නතරවීම භාවිතා කර පිළිතුරු දෙන්න, පසුව ඔබගේ පිළිතුර ආදර්ශ පිළිතුර සමඟ තරග කරන්න.",
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.",
         "audio": "assets/audio/instruction_activity_e.mp3"
       }
     },
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/example_1.png",
+        "img": "assets/img/example_1.jpg",
         "text_a": "",
         "text_b": "",
         "audio_a": "assets/audio/example_1_a.mp3",
+        "audio_b": ""
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/example_2.jpg",
+        "text_a": "",
+        "text_b": "",
+        "audio_a": "assets/audio/example_2_a.mp3",
+        "audio_b": ""
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/example_3.jpg",
+        "text_a": "",
+        "text_b": "",
+        "audio_a": "assets/audio/example_3_a.mp3",
         "audio_b": ""
       }
     ],
@@ -53,7 +69,7 @@
         "id": "d_1",
         "img": "assets/img/dialogue_1.jpeg",
         "text_a": "Where are you?",
-        "text_b": "I am 'in' the bathroom.",
+        "text_b": "I am in the bathroom.",
         "audio_a": "assets/audio/dialogue_1_a.mp3",
         "audio_b": "assets/audio/dialogue_1_b.mp3",
         "keyword": "Bathroom"
@@ -62,7 +78,7 @@
         "id": "d_2",
         "img": "assets/img/dialogue_2.jpeg",
         "text_a": "Where are Mr and Mrs Smith?",
-        "text_b": "They are 'in' the dining room.",
+        "text_b": "They are in the dining room.",
         "audio_a": "assets/audio/dialogue_2_a.mp3",
         "audio_b": "assets/audio/dialogue_2_b.mp3",
         "keyword": "Dining Room"
@@ -71,7 +87,7 @@
         "id": "d_3",
         "img": "assets/img/dialogue_3.jpeg",
         "text_a": "Where is the power drill?",
-        "text_b": "It is 'in' the tool cabinet.",
+        "text_b": "It is in the tool cabinet.",
         "audio_a": "assets/audio/dialogue_3_a.mp3",
         "audio_b": "assets/audio/dialogue_3_b.mp3",
         "keyword": "Tool Cabinet"
@@ -80,16 +96,16 @@
         "id": "d_4",
         "img": "assets/img/dialogue_4.jpeg",
         "text_a": "Where are the steel ladders?",
-        "text_b": "They are 'in' the store room.",
+        "text_b": "They are in the storeroom.",
         "audio_a": "assets/audio/dialogue_4_a.mp3",
         "audio_b": "assets/audio/dialogue_4_b.mp3",
-        "keyword": "Store Room"
+        "keyword": "Storeroom"
       },
       {
         "id": "d_5",
         "img": "assets/img/dialogue_5.jpeg",
         "text_a": "Where is the gravel pile?",
-        "text_b": "It is 'in' the open yard.",
+        "text_b": "It is in the open yard.",
         "audio_a": "assets/audio/dialogue_5_a.mp3",
         "audio_b": "assets/audio/dialogue_5_b.mp3",
         "keyword": "Open Yard"
@@ -98,7 +114,7 @@
         "id": "d_6",
         "img": "assets/img/dialogue_6.jpeg",
         "text_a": "Where are the tile boxes?",
-        "text_b": "They are 'in' the corner.",
+        "text_b": "They are in the corner.",
         "audio_a": "assets/audio/dialogue_6_a.mp3",
         "audio_b": "assets/audio/dialogue_6_b.mp3",
         "keyword": "Corner"

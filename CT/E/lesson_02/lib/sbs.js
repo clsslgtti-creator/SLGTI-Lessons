@@ -346,7 +346,7 @@ const buildModelDialogueSlide = (
   };
 };
 
-const buildWarmupSlide = (
+const buildPreListeningSlide = (
   dialogues,
   {
     activityLabel = 'Activity',
@@ -371,24 +371,24 @@ const buildWarmupSlide = (
     .filter((item) => item.keyword && item.normalizedKeyword && item.dialogue.img);
 
   const slide = document.createElement('section');
-  slide.className = 'slide slide--warmup';
+  slide.className = 'slide slide--pre-listening';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Warm Up</h2>
+    <h2>${activityLabel}${subActivitySuffix} - Pre-Listening</h2>
     <p class="slide__instruction">Match each picture with the correct place.</p>
   `;
 
   maybeInsertFocus(slide, activityFocus, includeFocus);
 
   const layout = document.createElement('div');
-  layout.className = 'warmup-layout';
+  layout.className = 'pre-listening-layout';
   slide.appendChild(layout);
 
   const gallery = document.createElement('div');
-  gallery.className = 'warmup-gallery';
+  gallery.className = 'pre-listening-gallery';
   layout.appendChild(gallery);
 
   const dropzonesWrapper = document.createElement('div');
-  dropzonesWrapper.className = 'warmup-dropzones';
+  dropzonesWrapper.className = 'pre-listening-dropzones';
   layout.appendChild(dropzonesWrapper);
 
   const keywordSet = new Set();
@@ -413,20 +413,20 @@ const buildWarmupSlide = (
     keywordSet.add(normalizedKeyword);
 
     const card = document.createElement('div');
-    card.className = 'warmup-card';
+    card.className = 'pre-listening-card';
     card.dataset.keyword = normalizedKeyword;
 
     const imgWrapper = document.createElement('div');
-    imgWrapper.className = 'warmup-card__media';
+    imgWrapper.className = 'pre-listening-card__media';
     const img = document.createElement('img');
     img.src = dialogue.img;
-    img.alt = keyword ? `Location: ${keyword}` : `Warm up image`;
+    img.alt = keyword ? `Location: ${keyword}` : `Pre-Listening image`;
     img.loading = 'lazy';
     imgWrapper.appendChild(img);
     card.appendChild(imgWrapper);
 
     const caption = document.createElement('span');
-    caption.className = 'warmup-card__caption';
+    caption.className = 'pre-listening-card__caption';
     caption.textContent = '';
     card.appendChild(caption);
     card.dataset.label = keyword;
@@ -439,41 +439,41 @@ const buildWarmupSlide = (
 
   dropzoneItems.forEach(({ keyword, normalizedKeyword }) => {
     const dropzone = document.createElement('div');
-    dropzone.className = 'warmup-dropzone';
+    dropzone.className = 'pre-listening-dropzone';
     dropzone.dataset.keyword = normalizedKeyword;
 
     const label = document.createElement('span');
-    label.className = 'warmup-dropzone__label';
+    label.className = 'pre-listening-dropzone__label';
     label.textContent = keyword;
     dropzone.appendChild(label);
 
     const body = document.createElement('div');
-    body.className = 'warmup-dropzone__body';
+    body.className = 'pre-listening-dropzone__body';
     dropzone.appendChild(body);
 
     dropzonesWrapper.appendChild(dropzone);
   });
 
-  const cards = Array.from(gallery.querySelectorAll('.warmup-card'));
-  const dropzones = Array.from(dropzonesWrapper.querySelectorAll('.warmup-dropzone'));
+  const cards = Array.from(gallery.querySelectorAll('.pre-listening-card'));
+  const dropzones = Array.from(dropzonesWrapper.querySelectorAll('.pre-listening-dropzone'));
 
   if (!cards.length || !dropzones.length) {
     const emptyState = document.createElement('p');
     emptyState.className = 'empty-state';
-    emptyState.textContent = 'Warm up activity will appear here once content is available.';
+    emptyState.textContent = 'Pre-Listening activity will appear here once content is available.';
     layout.appendChild(emptyState);
 
     const suffixSegment = subActivityLetter ? `-${subActivityLetter}` : '';
 
     return {
-      id: activityNumber ? `activity-${activityNumber}${suffixSegment}-warmup` : 'activity-warmup',
+      id: activityNumber ? `activity-${activityNumber}${suffixSegment}-pre-listening` : 'activity-pre-listening',
       element: slide,
       onEnter: () => {},
       onLeave: () => {},
     };
   }
 
-  const resetWarmup = () => {
+  const resetPreListening = () => {
     const $ = window.jQuery;
     if (!$) {
       return;
@@ -483,7 +483,7 @@ const buildWarmupSlide = (
       const $card = $(card);
       $card.removeClass('is-correct is-incorrect is-active');
       $card.css({ top: '', left: '', position: 'relative' });
-      $card.find('.warmup-card__caption').text('').removeClass('is-visible');
+      $card.find('.pre-listening-card__caption').text('').removeClass('is-visible');
       gallery.appendChild(card);
       if ($card.data('uiDraggable')) {
         $card.draggable('enable');
@@ -494,8 +494,8 @@ const buildWarmupSlide = (
     dropzones.forEach((zone) => {
       const $zone = $(zone);
       $zone.removeClass('is-correct is-incorrect is-hover');
-      $zone.find('.warmup-dropzone__label').removeClass('is-hidden');
-      $zone.find('.warmup-dropzone__body').empty();
+      $zone.find('.pre-listening-dropzone__label').removeClass('is-hidden');
+      $zone.find('.pre-listening-dropzone__body').empty();
       $zone.data('complete', false);
       if ($zone.data('uiDroppable')) {
         $zone.droppable('enable');
@@ -508,7 +508,7 @@ const buildWarmupSlide = (
   const setupInteractions = () => {
     const $ = window.jQuery;
     if (!$ || !$.fn?.draggable || !$.fn?.droppable) {
-      console.warn('jQuery UI is required for the warm up activity.');
+      console.warn('jQuery UI is required for the Pre-Listening activity.');
       return;
     }
 
@@ -529,7 +529,7 @@ const buildWarmupSlide = (
     });
 
     $dropzones.droppable({
-      accept: '.warmup-card',
+      accept: '.pre-listening-card',
       tolerance: 'intersect',
       over() {
         $(this).addClass('is-hover');
@@ -554,16 +554,16 @@ const buildWarmupSlide = (
         if (expected === actual) {
           $zone.data('complete', true);
           $zone.addClass('is-correct');
-          $zone.find('.warmup-dropzone__label').addClass('is-hidden');
+          $zone.find('.pre-listening-dropzone__label').addClass('is-hidden');
 
           $card.addClass('is-correct');
           $card.draggable('disable');
           $card.removeClass('is-active');
           $card.css({ top: '', left: '', position: 'relative' });
-          $card.appendTo($zone.find('.warmup-dropzone__body'));
+          $card.appendTo($zone.find('.pre-listening-dropzone__body'));
           const baseLabel = $card.data('label');
           if (baseLabel) {
-            $card.find('.warmup-card__caption').text(baseLabel).addClass('is-visible');
+            $card.find('.pre-listening-card__caption').text(baseLabel).addClass('is-visible');
           }
 
           $zone.droppable('disable');
@@ -586,7 +586,7 @@ const buildWarmupSlide = (
   const suffixSegment = subActivityLetter ? `-${subActivityLetter}` : '';
 
   return {
-    id: activityNumber ? `activity-${activityNumber}${suffixSegment}-warmup` : 'activity-warmup',
+    id: activityNumber ? `activity-${activityNumber}${suffixSegment}-pre-listening` : 'activity-pre-listening',
     element: slide,
     onEnter: () => {
       if (!initialized) {
@@ -594,7 +594,7 @@ const buildWarmupSlide = (
       }
     },
     onLeave: () => {
-      resetWarmup();
+      resetPreListening();
     },
   };
 };
@@ -1360,7 +1360,7 @@ export const buildSbsSlides = (activityData = {}, context = {}) => {
     includeFocus: Boolean(activityFocus),
   };
 
-  const warmupContext = createSubActivityContext(baseContext, 'a');
+  const preListeningContext = createSubActivityContext(baseContext, 'a');
   const listeningContext = createSubActivityContext(baseContext, 'b');
 
   const parsePauseValue = (value) => {
@@ -1385,7 +1385,7 @@ export const buildSbsSlides = (activityData = {}, context = {}) => {
 
   return [
     buildModelDialogueSlide(exampleDialogues, modelContext),
-    buildWarmupSlide(dialogues, warmupContext),
+    buildPreListeningSlide(dialogues, preListeningContext),
     buildListeningSlide(dialogues, listeningContext),
     buildListenAndRepeatSlide(dialogues, listenRepeatContext),
     buildReadingSlide(dialogues, readingContext),
