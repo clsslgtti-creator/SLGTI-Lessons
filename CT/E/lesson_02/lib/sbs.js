@@ -825,7 +825,7 @@ const buildListenAndRepeatSlide = (
     subActivitySuffix = '',
     subActivityLetter = '',
     activityNumber = null,
-    repeatPauseMs = 2000,
+    repeatPauseMs = 1500,
   } = {},
 ) => {
   const slide = document.createElement('section');
@@ -939,7 +939,7 @@ const buildListenAndRepeatSlide = (
           }
 
           const duration = await audioManager.getDuration(url);
-          const pauseMs = Math.max(basePauseMs, Math.round(duration * 1000));
+          const pauseMs = Math.max(basePauseMs, Math.round(duration * 2000));
           await delay(pauseMs, { signal });
           if (signal.aborted) {
             break;
@@ -1124,6 +1124,13 @@ const buildReadingSlide = (
           if (signal.aborted) {
             break;
           }
+
+          const duration = await audioManager.getDuration(url);
+          const pauseMs = Math.max(1500, Math.round(duration * 1000));
+          await delay(pauseMs, { signal });
+          if (signal.aborted) {
+            break;
+          }
         }
 
         if (signal.aborted) {
@@ -1132,7 +1139,7 @@ const buildReadingSlide = (
           break;
         }
 
-        await delay(3000, { signal });
+        await delay(1500, { signal });
         if (signal.aborted) {
           item.card.classList.remove('is-active');
           clearSegmentHighlights(item.segments);
