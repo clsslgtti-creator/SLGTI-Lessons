@@ -400,6 +400,8 @@ body {
   border-radius: var(--radius-sm);
   font-size: 1rem;
   line-height: 1.35;
+  position: relative;
+  transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .dialogue-card__line--question {
@@ -411,6 +413,19 @@ body {
 .dialogue-card__line--answer {
   background: rgba(31, 41, 51, 0.04);
   color: var(--color-text);
+}
+
+.dialogue-card__line.is-playing {
+  box-shadow: 0 0 0 2px rgba(235, 31, 31, 0.28), 0 10px 18px rgba(15, 23, 42, 0.12);
+  transform: translateY(-2px);
+}
+
+.dialogue-card__line--question.is-playing {
+  background: rgba(31, 111, 235, 0.2);
+}
+
+.dialogue-card__line--answer.is-playing {
+  background: rgba(31, 41, 51, 0.12);
 }
 
 .dialogue-card__line.is-hidden {

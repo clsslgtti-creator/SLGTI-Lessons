@@ -206,6 +206,26 @@ const createDialogueCard = (dialogue, options = {}) => {
   return wrapper;
 };
 
+const createDialogueSegments = (dialogue, card) => {
+  if (!card) {
+    return [];
+  }
+
+  const questionEl = card.querySelector('.dialogue-card__line--question');
+  const answerEl = card.querySelector('.dialogue-card__line--answer');
+
+  return [
+    dialogue.audio_a ? { url: dialogue.audio_a, element: questionEl } : null,
+    dialogue.audio_b ? { url: dialogue.audio_b, element: answerEl } : null,
+  ].filter(Boolean);
+};
+
+const clearSegmentHighlights = (segments = []) => {
+  segments.forEach(({ element }) => {
+    element?.classList.remove('is-playing');
+  });
+};
+
 const normalizeKeyword = (value) => {
   return typeof value === "string" && value.trim().length
     ? value.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-")
@@ -265,7 +285,7 @@ const buildModelDialogueSlide = (
     content.appendChild(card);
     return {
       card,
-      audios: [dialogue.audio_a, dialogue.audio_b].filter(Boolean),
+      segments: createDialogueSegments(dialogue, card),
     };
   });
 
@@ -283,6 +303,7 @@ const buildModelDialogueSlide = (
 
     sequenceAbort?.abort();
     sequenceAbort = new AbortController();
+    const { signal } = sequenceAbort;
     playBtn.disabled = true;
     status.textContent = 'Playing...';
 
@@ -290,19 +311,31 @@ const buildModelDialogueSlide = (
       for (const item of dialogueCards) {
         item.card.classList.add('is-active');
         smoothScrollIntoView(item.card);
-        for (const url of item.audios) {
-          await audioManager.play(url, { signal: sequenceAbort.signal });
-          if (sequenceAbort.signal.aborted) {
+        for (const segment of item.segments) {
+          const { url, element } = segment;
+          if (!url) {
+            continue;
+          }
+
+          element?.classList.add('is-playing');
+          try {
+            await audioManager.play(url, { signal });
+          } finally {
+            element?.classList.remove('is-playing');
+          }
+
+          if (signal.aborted) {
             break;
           }
         }
         item.card.classList.remove('is-active');
-        if (sequenceAbort.signal.aborted) {
+        clearSegmentHighlights(item.segments);
+        if (signal.aborted) {
           break;
         }
       }
 
-      if (!sequenceAbort.signal.aborted) {
+      if (!signal.aborted) {
         status.textContent = 'Playback complete.';
       } else {
         status.textContent = 'Playback stopped.';
@@ -342,6 +375,10 @@ const buildModelDialogueSlide = (
       autoTriggered = false;
       slide._autoTriggered = false;
       slide._instructionComplete = false;
+      dialogueCards.forEach(({ card, segments }) => {
+        card.classList.remove('is-active');
+        clearSegmentHighlights(segments);
+      });
     },
   };
 };
@@ -642,7 +679,7 @@ const buildListeningSlide = (
     list.appendChild(card);
     return {
       card,
-      audios: [dialogue.audio_a, dialogue.audio_b].filter(Boolean),
+      segments: createDialogueSegments(dialogue, card),
     };
   });
 
@@ -686,6 +723,7 @@ const buildListeningSlide = (
 
     sequenceAbort?.abort();
     sequenceAbort = new AbortController();
+    const { signal } = sequenceAbort;
     playBtn.disabled = true;
     status.textContent = 'Playing...';
 
@@ -693,24 +731,36 @@ const buildListeningSlide = (
       for (const item of items) {
         item.card.classList.add('is-active');
         smoothScrollIntoView(item.card);
-        for (const url of item.audios) {
-          await audioManager.play(url, { signal: sequenceAbort.signal });
-          if (sequenceAbort.signal.aborted) {
+        for (const segment of item.segments) {
+          const { url, element } = segment;
+          if (!url) {
+            continue;
+          }
+
+          element?.classList.add('is-playing');
+          try {
+            await audioManager.play(url, { signal });
+          } finally {
+            element?.classList.remove('is-playing');
+          }
+
+          if (signal.aborted) {
             break;
           }
 
-          await delay(2000, { signal: sequenceAbort.signal });
-          if (sequenceAbort.signal.aborted) {
+          await delay(2000, { signal });
+          if (signal.aborted) {
             break;
           }
         }
+        clearSegmentHighlights(item.segments);
         item.card.classList.remove('is-active');
-        if (sequenceAbort.signal.aborted) {
+        if (signal.aborted) {
           break;
         }
       }
 
-      if (!sequenceAbort.signal.aborted) {
+      if (!signal.aborted) {
         status.textContent = 'Playback complete.';
       } else {
         status.textContent = 'Playback stopped.';
@@ -755,7 +805,10 @@ const buildListeningSlide = (
       sequenceAbort?.abort();
       sequenceAbort = null;
       audioManager.stopAll();
-      items.forEach((item) => item.card.classList.remove('is-active'));
+      items.forEach((item) => {
+        item.card.classList.remove('is-active');
+        clearSegmentHighlights(item.segments);
+      });
       status.textContent = '';
       playBtn.disabled = false;
       slide._autoTriggered = false;
@@ -805,7 +858,7 @@ const buildListenAndRepeatSlide = (
     list.appendChild(card);
     return {
       card,
-      audios: [dialogue.audio_a, dialogue.audio_b].filter(Boolean),
+      segments: createDialogueSegments(dialogue, card),
     };
   });
 
@@ -843,8 +896,9 @@ const buildListenAndRepeatSlide = (
     });
 
   const resetCards = () => {
-    items.forEach(({ card }) => {
+    items.forEach(({ card, segments }) => {
       card.classList.remove('is-active');
+      clearSegmentHighlights(segments);
     });
   };
 
@@ -867,8 +921,19 @@ const buildListenAndRepeatSlide = (
         item.card.classList.add('is-active');
         smoothScrollIntoView(item.card);
 
-        for (const url of item.audios) {
-          await audioManager.play(url, { signal });
+        for (const segment of item.segments) {
+          const { url, element } = segment;
+          if (!url) {
+            continue;
+          }
+
+          element?.classList.add('is-playing');
+          try {
+            await audioManager.play(url, { signal });
+          } finally {
+            element?.classList.remove('is-playing');
+          }
+
           if (signal.aborted) {
             break;
           }
@@ -882,13 +947,14 @@ const buildListenAndRepeatSlide = (
         }
 
         item.card.classList.remove('is-active');
+        clearSegmentHighlights(item.segments);
 
         if (signal.aborted) {
           break;
         }
       }
 
-      status.textContent = sequenceAbort.signal.aborted
+      status.textContent = signal.aborted
         ? 'Playback stopped.'
         : 'Great work! Listen & repeat complete.';
     } catch (error) {
@@ -988,7 +1054,7 @@ const buildReadingSlide = (
     grid.appendChild(card);
     return {
       card,
-      audios: [dialogue.audio_a, dialogue.audio_b].filter(Boolean),
+      segments: createDialogueSegments(dialogue, card),
     };
   });
 
@@ -1042,8 +1108,19 @@ const buildReadingSlide = (
         item.card.classList.add('is-active');
         smoothScrollIntoView(item.card);
 
-        for (const url of item.audios) {
-          await audioManager.play(url, { signal });
+        for (const segment of item.segments) {
+          const { url, element } = segment;
+          if (!url) {
+            continue;
+          }
+
+          element?.classList.add('is-playing');
+          try {
+            await audioManager.play(url, { signal });
+          } finally {
+            element?.classList.remove('is-playing');
+          }
+
           if (signal.aborted) {
             break;
           }
@@ -1051,16 +1128,19 @@ const buildReadingSlide = (
 
         if (signal.aborted) {
           item.card.classList.remove('is-active');
+          clearSegmentHighlights(item.segments);
           break;
         }
 
         await delay(3000, { signal });
         if (signal.aborted) {
           item.card.classList.remove('is-active');
+          clearSegmentHighlights(item.segments);
           break;
         }
 
         item.card.classList.remove('is-active');
+        clearSegmentHighlights(item.segments);
 
         if (signal.aborted) {
           break;
@@ -1112,7 +1192,10 @@ const buildReadingSlide = (
       sequenceAbort = null;
       audioManager.stopAll();
       slide.classList.remove('is-animated');
-      items.forEach(({ card }) => card.classList.remove('is-active'));
+      items.forEach(({ card, segments }) => {
+        card.classList.remove('is-active');
+        clearSegmentHighlights(segments);
+      });
       playBtn.disabled = false;
       status.textContent = '';
       autoTriggered = false;
@@ -1173,13 +1256,17 @@ const buildSpeakingSlide = (
 
     cardsWrapper.appendChild(card);
 
+    const questionEl = card.querySelector('.dialogue-card__line--question');
     const answerEl = card.querySelector('.dialogue-card__line--answer');
+    const segments = createDialogueSegments(dialogue, card);
 
     return {
       dialogue,
       card,
+      questionEl,
       answerEl,
       prompt,
+      segments,
     };
   });
 
@@ -1216,11 +1303,12 @@ const buildSpeakingSlide = (
     });
 
   const resetCards = () => {
-    cards.forEach(({ card, answerEl }) => {
+    cards.forEach(({ card, answerEl, segments }) => {
       card.classList.remove('is-active', 'show-answer');
       if (answerEl) {
         answerEl.classList.add('is-hidden');
       }
+      clearSegmentHighlights(segments);
     });
   };
 
@@ -1240,15 +1328,23 @@ const buildSpeakingSlide = (
 
     try {
       for (const item of cards) {
-        const { dialogue, card, answerEl } = item;
+        const { dialogue, card, answerEl, questionEl, segments } = item;
         card.classList.add('is-active');
         smoothScrollIntoView(card);
         if (answerEl) {
           answerEl.classList.add('is-hidden');
         }
 
-        await audioManager.play(dialogue.audio_a, { signal });
+        if (questionEl) {
+          questionEl.classList.add('is-playing');
+        }
+        try {
+          await audioManager.play(dialogue.audio_a, { signal });
+        } finally {
+          questionEl?.classList.remove('is-playing');
+        }
         if (signal.aborted) {
+          clearSegmentHighlights(segments);
           break;
         }
 
@@ -1256,6 +1352,7 @@ const buildSpeakingSlide = (
         const waitMs = Math.max(1000, Math.round(answerDuration * 2000));
         await delay(waitMs, { signal });
         if (signal.aborted) {
+          clearSegmentHighlights(segments);
           break;
         }
 
@@ -1264,13 +1361,22 @@ const buildSpeakingSlide = (
           card.classList.add('show-answer');
         }
 
-        await audioManager.play(dialogue.audio_b, { signal });
+        if (answerEl) {
+          answerEl.classList.add('is-playing');
+        }
+        try {
+          await audioManager.play(dialogue.audio_b, { signal });
+        } finally {
+          answerEl?.classList.remove('is-playing');
+        }
         if (signal.aborted) {
+          clearSegmentHighlights(segments);
           break;
         }
 
         await delay(400, { signal });
         card.classList.remove('is-active');
+        clearSegmentHighlights(segments);
         if (signal.aborted) {
           break;
         }
