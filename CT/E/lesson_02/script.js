@@ -1,4 +1,5 @@
 import { buildSbsSlides } from "./lib/sbs.js";
+// import { buildPronunciationSlides } from "./lib/pronunciation.js";
 
 const slidesContainer = document.getElementById("slides");
 const progressIndicator = document.getElementById("progressIndicator");
@@ -194,6 +195,7 @@ const markLessonComplete = (index, totalSlides) => {
 
 const activityBuilders = {
   SBS: buildSbsSlides,
+  // PRONUNCIATION: buildPronunciationSlides,
 };
 
 const extractInstructionEntries = (input, { allowObject = false } = {}) => {
