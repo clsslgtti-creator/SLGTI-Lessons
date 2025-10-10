@@ -16,16 +16,16 @@
     <imsmd:lom>
       <imsmd:general>
         <imsmd:title>
-          <imsmd:langstring xml:lang="en">Lesson 02 - English Activities</imsmd:langstring>
+          <imsmd:langstring xml:lang="en">Lesson 02</imsmd:langstring>
         </imsmd:title>
       </imsmd:general>
     </imsmd:lom>
   </metadata>
   <organizations default="ORG-LESSON-02">
     <organization identifier="ORG-LESSON-02" structure="hierarchical">
-      <title>Lesson 02 - English Activities</title>
+      <title>Lesson 02</title>
       <item identifier="ITEM-LESSON-02" identifierref="RES-LESSON-02" isvisible="true">
-        <title>Lesson 02 - English Activities</title>
+        <title>Lesson 02</title>
       </item>
     </organization>
   </organizations>
