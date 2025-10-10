@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": 1,
     "level": "Elementary",
-    "section": "Automobile Technology",
+    "section": "Electrical Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -87,56 +87,56 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Where are the jacks?",
-        "text_b": "They are on the jack stand.",
+        "text_a": "Where are the insulated pliers?",
+        "text_b": "They are on the wooden bench.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Jack Stand"
+        "keyword": "Wooden Bench"
       },
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.jpeg",
-        "text_a": "Where is the engine?",
-        "text_b": "It is on the brown pallet.",
+        "text_a": "Where is the digital multimeter?",
+        "text_b": "It is on the black desk.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Brown Pallet"
+        "keyword": "Black Desk"
       },
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Where is the car manual?",
-        "text_b": "It is on the wooden desk.",
+        "text_a": "Where are the copper wires?",
+        "text_b": "They are on the plastic box.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Wooden Desk"
+        "keyword": "Plastic Box"
       },
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": "Where are the tools?",
-        "text_b": "They are on the silver chest.",
+        "text_a": "Where are the new fuses?",
+        "text_b": "They are on the bottom shelf.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Silver Chest"
+        "keyword": "Bottom Shelf"
       },
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.jpeg",
-        "text_a": "Where are the drills?",
-        "text_b": "They are on the top shelf.",
+        "text_a": "Where is the soldering iron?",
+        "text_b": "It is on the tool cart.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Top Shelf"
+        "keyword": "Tool Cart"
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.jpeg",
-        "text_a": "Where are the battery chargers?",
-        "text_b": "They are on the wall-mounted cabinet.",
+        "text_a": "Where is the large transformer?",
+        "text_b": "It is on the concrete floor.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Wall-mounted Cabinet"
+        "keyword": "Concrete Floor"
       }
     ]
   },
