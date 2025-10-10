@@ -6,6 +6,192 @@ const prevBtn = document.getElementById("prevSlide");
 const nextBtn = document.getElementById("nextSlide");
 const lessonMetaEl = document.getElementById("lessonMeta");
 
+// SCORM integration helpers keep track of the LMS lifecycle and resume data.
+const scormState = {
+  api: null,
+  attemptedInit: false,
+  connected: false,
+  resumeIndex: 0,
+  completionRecorded: false,
+  lastSavedIndex: null,
+  lastSavedTotal: null,
+  exitRegistered: false,
+  quitting: false,
+};
+
+const safeParseIndex = (value) => {
+  if (typeof value === "number" && Number.isFinite(value)) {
+    const normalized = Math.max(0, Math.floor(value));
+    return normalized;
+  }
+  if (typeof value === "string" && value.trim().length) {
+    const parsed = Number.parseInt(value, 10);
+    if (!Number.isNaN(parsed) && parsed >= 0) {
+      return parsed;
+    }
+  }
+  return null;
+};
+
+const readSuspendPayload = (raw) => {
+  if (typeof raw !== "string" || !raw.trim().length) {
+    return {};
+  }
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return {};
+  }
+};
+
+const commitAndExitScorm = () => {
+  if (!scormState.connected || scormState.quitting || !scormState.api) {
+    return;
+  }
+  scormState.quitting = true;
+  try {
+    scormState.api.save();
+  } catch {}
+  try {
+    scormState.api.quit();
+  } catch {}
+};
+
+const ensureScormConnection = () => {
+  if (scormState.attemptedInit) {
+    return scormState.connected;
+  }
+  scormState.attemptedInit = true;
+
+  const scorm = window?.pipwerks?.SCORM;
+  if (!scorm) {
+    return false;
+  }
+
+  scorm.version = "1.2";
+  if (!scorm.init()) {
+    return false;
+  }
+
+  scormState.api = scorm;
+  scormState.connected = true;
+
+  try {
+    const status = scorm.get("cmi.core.lesson_status");
+    if (status === "completed" || status === "passed") {
+      scormState.completionRecorded = true;
+    } else if (!status || status === "not attempted" || status === "unknown") {
+      scorm.set("cmi.core.lesson_status", "incomplete");
+    }
+
+    const fromLocation = safeParseIndex(scorm.get("cmi.core.lesson_location"));
+    const suspendPayload = readSuspendPayload(scorm.get("cmi.suspend_data"));
+    const fromSuspend = safeParseIndex(suspendPayload.currentSlide);
+    if (typeof suspendPayload.totalSlides === "number") {
+      scormState.lastSavedTotal = suspendPayload.totalSlides;
+    }
+    const resumeCandidate = fromLocation ?? fromSuspend ?? 0;
+    scormState.resumeIndex =
+      typeof resumeCandidate === "number" && resumeCandidate >= 0
+        ? resumeCandidate
+        : 0;
+  } catch (error) {
+    console.warn("[SCORM] Unable to read initial state.", error);
+    scormState.resumeIndex = 0;
+  }
+
+  if (!scormState.exitRegistered) {
+    const handleExit = () => commitAndExitScorm();
+    window.addEventListener("beforeunload", handleExit, { capture: false });
+    window.addEventListener("unload", handleExit, { capture: false });
+    window.addEventListener("pagehide", handleExit, { capture: false });
+    scormState.exitRegistered = true;
+  }
+
+  return true;
+};
+
+const getResumeSlideIndex = (totalSlides) => {
+  if (!scormState.connected || !Number.isInteger(totalSlides) || totalSlides <= 0) {
+    return 0;
+  }
+  const upperBound = totalSlides - 1;
+  const requested = scormState.resumeIndex;
+  if (!Number.isInteger(requested)) {
+    return 0;
+  }
+  return Math.max(0, Math.min(upperBound, requested));
+};
+
+const persistScormProgress = (index, totalSlides) => {
+  if (!ensureScormConnection() || !scormState.api) {
+    return;
+  }
+  if (!Number.isInteger(index) || index < 0) {
+    return;
+  }
+
+  const normalizedTotal =
+    Number.isInteger(totalSlides) && totalSlides > 0 ? totalSlides : null;
+  if (
+    scormState.lastSavedIndex === index &&
+    scormState.lastSavedTotal === normalizedTotal &&
+    !scormState.completionRecorded
+  ) {
+    // Skip redundant writes during navigation when nothing changed.
+    return;
+  }
+
+  scormState.lastSavedIndex = index;
+  scormState.resumeIndex = index;
+  scormState.lastSavedTotal = normalizedTotal;
+
+  const payload = {
+    currentSlide: index,
+    totalSlides: normalizedTotal,
+    completed: scormState.completionRecorded,
+    timestamp: new Date().toISOString(),
+  };
+
+  try {
+    scormState.api.set("cmi.core.lesson_location", String(index));
+    scormState.api.set("cmi.suspend_data", JSON.stringify(payload));
+    if (!scormState.completionRecorded) {
+      scormState.api.set("cmi.core.exit", "suspend");
+      scormState.api.set("cmi.core.lesson_status", "incomplete");
+    }
+    scormState.api.save();
+  } catch (error) {
+    console.error("[SCORM] Unable to record learner progress.", error);
+  }
+};
+
+const markLessonComplete = (index, totalSlides) => {
+  if (!ensureScormConnection() || !scormState.api || scormState.completionRecorded) {
+    return;
+  }
+
+  scormState.completionRecorded = true;
+  scormState.resumeIndex = index;
+
+  const payload = {
+    currentSlide: index,
+    totalSlides,
+    completed: true,
+    timestamp: new Date().toISOString(),
+  };
+
+  try {
+    scormState.api.set("cmi.core.lesson_status", "completed");
+    scormState.api.set("cmi.core.exit", "normal");
+    scormState.api.set("cmi.core.lesson_location", String(index));
+    scormState.api.set("cmi.suspend_data", JSON.stringify(payload));
+    scormState.api.save();
+  } catch (error) {
+    console.error("[SCORM] Unable to persist completion.", error);
+  }
+};
+
 const activityBuilders = {
   SBS: buildSbsSlides,
 };
@@ -753,6 +939,11 @@ const showSlide = (nextIndex) => {
   }`;
   prevBtn.disabled = currentSlideIndex === 0;
   nextBtn.disabled = currentSlideIndex === slides.length - 1;
+
+  persistScormProgress(currentSlideIndex, slides.length);
+  if (currentSlideIndex === slides.length - 1) {
+    markLessonComplete(currentSlideIndex, slides.length);
+  }
 };
 
 const attachNavigation = () => {
@@ -889,11 +1080,15 @@ const init = async () => {
     renderLessonMeta(data.meta ?? {});
 
     slides = buildLessonSlides(data);
-    currentSlideIndex = 0;
+    const scormReady = ensureScormConnection();
+    const resumeIndex = scormReady
+      ? getResumeSlideIndex(slides.length)
+      : 0;
+    currentSlideIndex = resumeIndex;
     attachNavigation();
 
     if (slides.length) {
-      showSlide(0);
+      showSlide(resumeIndex);
     } else {
       progressIndicator.textContent = "No activities available yet.";
       prevBtn.disabled = true;
