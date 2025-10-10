@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest
+  identifier="MANIFEST-CT-E-LESSON-02"
+  version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+    http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+    http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd"
+>
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <imsmd:lom>
+      <imsmd:general>
+        <imsmd:title>
+          <imsmd:langstring xml:lang="en">Lesson 02</imsmd:langstring>
+        </imsmd:title>
+      </imsmd:general>
+    </imsmd:lom>
+  </metadata>
+  <organizations default="ORG-LESSON-02">
+    <organization identifier="ORG-LESSON-02" structure="hierarchical">
+      <title>Lesson 02</title>
+      <item identifier="ITEM-LESSON-02" identifierref="RES-LESSON-02" isvisible="true">
+        <title>Lesson 02</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-LESSON-02" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html" />
+      <file href="script.js" />
+      <file href="styles.css" />
+      <file href="content.json" />
+      <file href="lib/jquery-3.7.1.min.js" />
+      <file href="lib/jquery-ui.min.js" />
+      <file href="lib/jquery.ui.touch-punch.min.js" />
+      <file href="lib/pipwerks-scorm.js" />
+      <file href="lib/sbs.js" />
+      <file href="assets/audio/dialogue_1_a.mp3" />
+      <file href="assets/audio/dialogue_1_b.mp3" />
+      <file href="assets/audio/dialogue_2_a.mp3" />
+      <file href="assets/audio/dialogue_2_b.mp3" />
+      <file href="assets/audio/dialogue_3_a.mp3" />
+      <file href="assets/audio/dialogue_3_b.mp3" />
+      <file href="assets/audio/dialogue_4_a.mp3" />
+      <file href="assets/audio/dialogue_4_b.mp3" />
+      <file href="assets/audio/dialogue_5_a.mp3" />
+      <file href="assets/audio/dialogue_5_b.mp3" />
+      <file href="assets/audio/dialogue_6_a.mp3" />
+      <file href="assets/audio/dialogue_6_b.mp3" />
+      <file href="assets/audio/example_1_a.mp3" />
+      <file href="assets/audio/example_2_a.mp3" />
+      <file href="assets/audio/example_3_a.mp3" />
+      <file href="assets/audio/instruction_activity_a.mp3" />
+      <file href="assets/audio/instruction_activity_b.mp3" />
+      <file href="assets/audio/instruction_activity_c.mp3" />
+      <file href="assets/audio/instruction_activity_d.mp3" />
+      <file href="assets/audio/instruction_activity_e.mp3" />
+      <file href="assets/audio/instruction_example.mp3" />
+      <file href="assets/img/dialogue_1.jpeg" />
+      <file href="assets/img/dialogue_2.jpeg" />
+      <file href="assets/img/dialogue_3.jpeg" />
+      <file href="assets/img/dialogue_4.jpeg" />
+      <file href="assets/img/dialogue_5.jpeg" />
+      <file href="assets/img/dialogue_6.jpeg" />
+      <file href="assets/img/example_1.jpg" />
+      <file href="assets/img/example_1.png" />
+      <file href="assets/img/example_2.jpg" />
+      <file href="assets/img/example_3.jpg" />
+    </resource>
+  </resources>
+</manifest>

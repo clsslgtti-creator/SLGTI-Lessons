@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "lesson_no": 1,
+    "level": "Elementary",
+    "section": "Construction Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Long /iː/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen and repeat the words.\nசொற்களை கேட்டு மீண்டும் சொல்லுங்கள்.\nවචන අසන්න සහ නැවත කියන්න.",
+        "audio": "assets/audio/a_1_i_a.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat the sentences.\nவாக்கியங்களை கேட்டு மீண்டும் சொல்லுங்கள்.\nවාක්‍ය අසන්න සහ නැවත කියන්න.",
+        "audio": "assets/audio/a_1_i_b.mp3"
+      }
+    },
+    "content": [
+      {
+        "id" : "p_1",
+        "word_text": "b'ea'm",
+        "word_audio": "",
+        "sentence_text": "The b'ea'm is strong enough for the roof.",
+        "sentence_audio": ""
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS",
+    "focus": "Verb ‘to be’ and preposition ‘on’",  
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nமாதிரி உரையாடலை கேளுங்கள்.\nආදර්ශ සංවාදය අසා බලන්න.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the words with the pictures.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.\nපදයන් පින්තූර සමග ගැලපන්න.",
+        "audio": "assets/audio/a_2_i_a.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.jpg",
+        "text_a": "",
+        "text_b": "",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": ""
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.jpg",
+        "text_a": "",
+        "text_b": "",
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": ""
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_3.jpg",
+        "text_a": "",
+        "text_b": "",
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": ""
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "Where is the metal hammer?",
+        "text_b": "It is on the scaffold.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "Scaffold"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.jpeg",
+        "text_a": "Where are the cement bags?",
+        "text_b": "They are in the old workshed.",
+        "audio_a": "assets/audio/a_2_d_2_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_b.mp3",
+        "keyword": "Old Workshed"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "Where are the stainless steel drills?",
+        "text_b": "They are on the top shelf.",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_b.mp3",
+        "keyword": "Top Shelf"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.jpeg",
+        "text_a": "Where is the portable toolbox?",
+        "text_b": "It is on the carpeted floor.",
+        "audio_a": "assets/audio/a_2_d_4_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_b.mp3",
+        "keyword": "Carpeted Floor"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.jpeg",
+        "text_a": "Where are the architect’s blueprints?",
+        "text_b": "They are on the manager’s desk.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_b.mp3",
+        "keyword": "Manager’s Desk"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.jpeg",
+        "text_a": "Where are the glazed bricks?",
+        "text_b": "They are on the wooden pallet.",
+        "audio_a": "assets/audio/a_2_d_6_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_b.mp3",
+        "keyword": "Wooden Pallet"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "GRAMMAR"
+  },
+  "activity_4": {
+    "type": "GAME"
+  }
+}
