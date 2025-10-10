@@ -40,37 +40,7 @@
       <file href="lib/jquery.ui.touch-punch.min.js" />
       <file href="lib/pipwerks-scorm.js" />
       <file href="lib/sbs.js" />
-      <file href="assets/audio/dialogue_1_a.mp3" />
-      <file href="assets/audio/dialogue_1_b.mp3" />
-      <file href="assets/audio/dialogue_2_a.mp3" />
-      <file href="assets/audio/dialogue_2_b.mp3" />
-      <file href="assets/audio/dialogue_3_a.mp3" />
-      <file href="assets/audio/dialogue_3_b.mp3" />
-      <file href="assets/audio/dialogue_4_a.mp3" />
-      <file href="assets/audio/dialogue_4_b.mp3" />
-      <file href="assets/audio/dialogue_5_a.mp3" />
-      <file href="assets/audio/dialogue_5_b.mp3" />
-      <file href="assets/audio/dialogue_6_a.mp3" />
-      <file href="assets/audio/dialogue_6_b.mp3" />
-      <file href="assets/audio/example_1_a.mp3" />
-      <file href="assets/audio/example_2_a.mp3" />
-      <file href="assets/audio/example_3_a.mp3" />
-      <file href="assets/audio/instruction_activity_a.mp3" />
-      <file href="assets/audio/instruction_activity_b.mp3" />
-      <file href="assets/audio/instruction_activity_c.mp3" />
-      <file href="assets/audio/instruction_activity_d.mp3" />
-      <file href="assets/audio/instruction_activity_e.mp3" />
-      <file href="assets/audio/instruction_example.mp3" />
-      <file href="assets/img/dialogue_1.jpeg" />
-      <file href="assets/img/dialogue_2.jpeg" />
-      <file href="assets/img/dialogue_3.jpeg" />
-      <file href="assets/img/dialogue_4.jpeg" />
-      <file href="assets/img/dialogue_5.jpeg" />
-      <file href="assets/img/dialogue_6.jpeg" />
-      <file href="assets/img/example_1.jpg" />
-      <file href="assets/img/example_1.png" />
-      <file href="assets/img/example_2.jpg" />
-      <file href="assets/img/example_3.jpg" />
+      <file href="lib/pronunciation.js" />
     </resource>
   </resources>
 </manifest>
