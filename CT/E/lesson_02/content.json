@@ -8,6 +8,7 @@
   "activity_1": {
     "type": "PRONUNCIATION",
     "focus": "Long /iː/",
+    "image" : "assets/img/a_1_p.jpeg",
     "instructions": {
       "activity_1_a": {
         "text": "Listen and repeat the words.\nசொற்களை கேட்டு மீண்டும் சொல்லுங்கள்.\nවචන අසන්න සහ නැවත කියන්න.",
