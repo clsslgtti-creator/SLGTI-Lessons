@@ -64,7 +64,7 @@
         "text_a": "",
         "text_b": "",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
-        "audio_b": ""
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
       },
       {
         "id": "e_2",
@@ -72,7 +72,7 @@
         "text_a": "",
         "text_b": "",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
-        "audio_b": ""
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
       },
       {
         "id": "e_3",
@@ -80,7 +80,7 @@
         "text_a": "",
         "text_b": "",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
-        "audio_b": ""
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
       }
     ],
     "dialogues": [
