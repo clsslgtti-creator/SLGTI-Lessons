@@ -11,12 +11,28 @@
     "image" : "assets/img/a_1_p.jpeg",
     "instructions": {
       "activity_1_a": {
-        "text": "Listen and repeat the words.\nசொற்களை கேட்டு மீண்டும் சொல்லுங்கள்.\nවචන අසන්න සහ නැවත කියන්න.",
-        "audio": "assets/audio/a_1_i_a.mp3"
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_1_b": {
-        "text": "Listen and repeat the sentences.\nவாக்கியங்களை கேட்டு மீண்டும் சொல்லுங்கள்.\nවාක්‍ය අසන්න සහ නැවත කියන්න.",
-        "audio": "assets/audio/a_1_i_b.mp3"
+        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_e": {
+        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_f": {
+        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+        "audio": "assets/audio/a_2_i_d.mp3"
       }
     },
     "content": [
