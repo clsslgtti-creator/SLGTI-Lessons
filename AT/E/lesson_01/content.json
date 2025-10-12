@@ -8,29 +8,67 @@
   "activity_1": {
     "type": "PRONUNCIATION",
     "focus": "Long /iː/",
+    "image": "assets/img/a_1_p.jpeg",
     "instructions": {
       "activity_1_a": {
-        "text": "Listen and repeat the words.\nசொற்களை கேட்டு மீண்டும் சொல்லுங்கள்.\nවචන අසන්න සහ නැවත කියන්න.",
-        "audio": "assets/audio/a_1_i_a.mp3"
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_1_b": {
-        "text": "Listen and repeat the sentences.\nவாக்கியங்களை கேட்டு மீண்டும் சொல்லுங்கள்.\nවාක්‍ය අසන්න සහ නැවත කියන්න.",
-        "audio": "assets/audio/a_1_i_b.mp3"
+        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_e": {
+        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_f": {
+        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+        "audio": "assets/audio/a_2_i_d.mp3"
       }
     },
     "content": [
       {
-        "id" : "p_1",
+        "id": "p_1",
         "word_text": "b'ea'm",
-        "word_audio": "",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "The b'ea'm is strong enough for the roof.",
-        "sentence_audio": ""
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3"
+      },
+      {
+        "id": "p_2",
+        "word_text": "st'ee'l",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "Workers are cutting st'ee'l in the yard.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3"
+      },
+      {
+        "id": "p_3",
+        "word_text": "c'ei'ling",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "The c'ei'ling is in the new classroom.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3"
+      },
+      {
+        "id": "p_4",
+        "word_text": "k'ey'",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "The mason has the k'ey' for the store.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3"
       }
     ]
   },
   "activity_2": {
     "type": "SBS",
-    "focus": "Verb ‘to be’ and preposition ‘on’",  
+    "focus": "Verb ‘to be’ and preposition ‘on’",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nமாதிரி உரையாடலை கேளுங்கள்.\nආදර්ශ සංවාදය අසා බලන්න.",
