@@ -1,4 +1,5 @@
 import { buildSbsSlides } from "./lib/sbs.js";
+import { buildPronunciationSlides } from "./lib/pronunciation.js";
 
 const slidesContainer = document.getElementById("slides");
 const progressIndicator = document.getElementById("progressIndicator");
@@ -194,6 +195,7 @@ const markLessonComplete = (index, totalSlides) => {
 
 const activityBuilders = {
   SBS: buildSbsSlides,
+  PRONUNCIATION: buildPronunciationSlides,
 };
 
 const extractInstructionEntries = (input, { allowObject = false } = {}) => {
@@ -761,11 +763,18 @@ const parseActivitySlideId = (slideId) => {
     "listen-repeat": "c",
     reading: "d",
     speaking: "e",
+    "words-listen": "a",
+    "words-repeat": "b",
+    "words-read": "c",
+    "sentences-listen": "d",
+    "sentences-repeat": "e",
+    "sentences-read": "f",
   };
-  const detailedMatch =
-    /^activity-(\d+)(?:-([a-z]))?-(model|pre-listening|listening|listen-repeat|reading|speaking)$/.exec(
-      normalized
-    );
+  const rolePattern =
+    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read)";
+  const detailedMatch = new RegExp(
+    `^activity-(\\d+)(?:-([a-z]))?-${rolePattern}$`
+  ).exec(normalized);
   if (detailedMatch) {
     const [, activityNumber, letter, role] = detailedMatch;
     return {
@@ -775,10 +784,7 @@ const parseActivitySlideId = (slideId) => {
     };
   }
 
-  const simpleMatch =
-    /^activity-(model|pre-listening|listening|listen-repeat|reading|speaking)$/.exec(
-      normalized
-    );
+  const simpleMatch = new RegExp(`^activity-${rolePattern}$`).exec(normalized);
   if (simpleMatch) {
     const [, role] = simpleMatch;
     return {

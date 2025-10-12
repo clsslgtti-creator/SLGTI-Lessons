@@ -1,15 +1,144 @@
-const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-
-const DEFAULT_REPEAT_PAUSE = 2000;
-const LISTENING_GAP_MS = 600;
-const READ_GAP_MS = 800;
-
 const smoothScrollIntoView = (element) => {
   if (!element) {
     return;
   }
   element.scrollIntoView({ behavior: "smooth", block: "center" });
 };
+
+const audioManager = (() => {
+  const cache = new Map();
+  const active = new Set();
+
+  const ensureEntry = (url) => {
+    if (!url) {
+      return null;
+    }
+
+    if (!cache.has(url)) {
+      const audioEl = new Audio(url);
+      audioEl.preload = "auto";
+
+      const metaPromise = new Promise((resolve) => {
+        const resolveWithDuration = () => {
+          cleanup();
+          resolve(Number.isFinite(audioEl.duration) ? audioEl.duration : 0);
+        };
+
+        const resolveWithZero = () => {
+          cleanup();
+          resolve(0);
+        };
+
+        const cleanup = () => {
+          audioEl.removeEventListener("loadedmetadata", resolveWithDuration);
+          audioEl.removeEventListener("error", resolveWithZero);
+        };
+
+        audioEl.addEventListener("loadedmetadata", resolveWithDuration);
+        audioEl.addEventListener("error", resolveWithZero);
+      });
+
+      cache.set(url, { audio: audioEl, metaPromise });
+      audioEl.load();
+    }
+
+    return cache.get(url);
+  };
+
+  const play = (url, { signal } = {}) => {
+    const entry = ensureEntry(url);
+    if (!entry) {
+      return Promise.resolve();
+    }
+
+    const { audio, metaPromise } = entry;
+    audio.currentTime = 0;
+
+    const playPromise = new Promise((resolve, reject) => {
+      const handleEnded = () => {
+        cleanup();
+        resolve();
+      };
+
+      const handleError = () => {
+        cleanup();
+        reject(new Error(`Unable to play audio: ${url}`));
+      };
+
+      const handleAbort = () => {
+        cleanup();
+        audio.pause();
+        audio.currentTime = 0;
+        resolve();
+      };
+
+      const cleanup = () => {
+        audio.removeEventListener("ended", handleEnded);
+        audio.removeEventListener("error", handleError);
+        if (signal) {
+          signal.removeEventListener("abort", handleAbort);
+        }
+        active.delete(audio);
+      };
+
+      if (signal) {
+        if (signal.aborted) {
+          handleAbort();
+          return;
+        }
+        signal.addEventListener("abort", handleAbort, { once: true });
+      }
+
+      active.add(audio);
+
+      audio.addEventListener("ended", handleEnded, { once: true });
+      audio.addEventListener("error", handleError, { once: true });
+
+      metaPromise
+        .then(() => audio.play())
+        .catch(() => audio.play())
+        .catch((err) => {
+          cleanup();
+          reject(err);
+        });
+    });
+
+    return playPromise;
+  };
+
+  const stopAll = () => {
+    active.forEach((audio) => {
+      audio.pause();
+      audio.currentTime = 0;
+    });
+    active.clear();
+  };
+
+  const getDuration = async (url) => {
+    const entry = ensureEntry(url);
+    if (!entry) {
+      return 0;
+    }
+
+    try {
+      const duration = await entry.metaPromise;
+      return Number.isFinite(duration) ? duration : 0;
+    } catch {
+      return 0;
+    }
+  };
+
+  return {
+    play,
+    stopAll,
+    getDuration,
+  };
+})();
+
+const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+const DEFAULT_REPEAT_PAUSE_MS = 2000;
+const MIN_LISTEN_GAP_MS = 2000;
+const MIN_READ_GAP_MS = 2000;
 
 const maybeInsertFocus = (slide, focusText, includeFocus) => {
   if (!includeFocus) {
@@ -21,12 +150,16 @@ const maybeInsertFocus = (slide, focusText, includeFocus) => {
     return;
   }
 
-  const focusEl = document.createElement('p');
-  focusEl.className = 'activity-focus';
-  focusEl.append(`${trimmed}`);
+  const focusEl = document.createElement("p");
+  focusEl.className = "activity-focus";
+  focusEl.innerHTML = trimmed;
 
-  const heading = slide.querySelector('h2');
-  heading?.insertAdjacentElement('afterend', focusEl);
+  const heading = slide.querySelector("h2");
+  if (heading) {
+    heading.insertAdjacentElement("afterend", focusEl);
+  } else {
+    slide.prepend(focusEl);
+  }
 };
 
 const createStatus = () => {
@@ -45,91 +178,30 @@ const waitMs = (duration, { signal } = {}) =>
 
     let timeoutId = null;
 
-    const clear = () => {
+    const cleanup = () => {
       if (timeoutId !== null) {
         window.clearTimeout(timeoutId);
         timeoutId = null;
       }
-      signal?.removeEventListener("abort", cancel);
+      signal?.removeEventListener("abort", onAbort);
     };
 
-    const cancel = () => {
-      clear();
+    const onAbort = () => {
+      cleanup();
       resolve();
     };
 
     if (signal?.aborted) {
-      cancel();
+      onAbort();
       return;
     }
 
-    signal?.addEventListener("abort", cancel, { once: true });
+    signal?.addEventListener("abort", onAbort, { once: true });
     timeoutId = window.setTimeout(() => {
-      clear();
+      cleanup();
       resolve();
     }, duration);
   });
-
-const playAudioOnce = (url, { signal } = {}) =>
-  new Promise((resolve, reject) => {
-    if (!url) {
-      resolve();
-      return;
-    }
-
-    const audio = new Audio(url);
-    audio.preload = "auto";
-    audio.currentTime = 0;
-
-    const cleanup = () => {
-      audio.removeEventListener("ended", handleEnded);
-      audio.removeEventListener("error", handleError);
-      if (signal) {
-        signal.removeEventListener("abort", handleAbort);
-      }
-    };
-
-    const handleEnded = () => {
-      cleanup();
-      resolve();
-    };
-
-    const handleError = () => {
-      cleanup();
-      reject(new Error(`Unable to play audio: ${url}`));
-    };
-
-    const handleAbort = () => {
-      cleanup();
-      audio.pause();
-      resolve();
-    };
-
-    if (signal) {
-      if (signal.aborted) {
-        handleAbort();
-        return;
-      }
-      signal.addEventListener("abort", handleAbort, { once: true });
-    }
-
-    audio.addEventListener("ended", handleEnded, { once: true });
-    audio.addEventListener("error", handleError, { once: true });
-
-    audio.play().catch((error) => {
-      cleanup();
-      reject(error);
-    });
-  });
-
-const highlightItem = (item, active) => {
-  if (!item) {
-    return;
-  }
-  const isActive = Boolean(active);
-  item.card.classList.toggle("is-active", isActive);
-  item.line.classList.toggle("is-playing", isActive);
-};
 
 const escapeHtml = (text) => {
   if (typeof text !== "string") {
@@ -183,18 +255,29 @@ const createLayout = (imageUrl) => {
   content.className = "pronunciation-content";
 
   layout.append(visual, content);
-
   return { layout, content };
 };
 
-const getPauseDuration = (activityData) => {
-  const pauseValue = Number(
-    activityData?.repeat_pause_ms ?? activityData?.listen_repeat_pause_ms
-  );
-  if (!Number.isFinite(pauseValue)) {
-    return DEFAULT_REPEAT_PAUSE;
+const getRepeatPauseMs = (activityData) => {
+  const raw =
+    activityData?.repeat_pause_ms ?? activityData?.listen_repeat_pause_ms;
+  const parsed = Number(raw);
+  if (!Number.isFinite(parsed)) {
+    return DEFAULT_REPEAT_PAUSE_MS;
   }
-  return clamp(pauseValue, 800, 4000);
+  return clamp(parsed, 800, 4000);
+};
+
+const computeGapMs = (mode, durationSeconds, repeatPauseMs) => {
+  const durationMs = Number.isFinite(durationSeconds)
+    ? Math.max(0, durationSeconds * 3000)
+    : 0;
+
+  const minGap = mode === "read" ? MIN_READ_GAP_MS : MIN_LISTEN_GAP_MS;
+  const multiplier = mode === "read" ? 0.75 : 0.5;
+  const scaled = Math.round(durationMs * multiplier);
+
+  return Math.max(minGap, scaled);
 };
 
 const createPronunciationSlide = ({
@@ -226,7 +309,7 @@ const createPronunciationSlide = ({
       : "dialogue-card--reading";
 
   const slide = document.createElement("section");
-  slide.className = `slide ${slideRoleClass}`;
+  slide.className = `slide slide--pronunciation ${slideRoleClass}`;
   slide.innerHTML = `<h2>${activityLabel}${titleSuffix}</h2>`;
 
   if (mode === "read") {
@@ -251,13 +334,13 @@ const createPronunciationSlide = ({
   const playBtn = document.createElement("button");
   playBtn.type = "button";
   playBtn.className = "primary-btn";
-  const buttonLabelSubject = type === "sentence" ? "Sentences" : "Words";
+  const buttonSubject = type === "sentence" ? "Sentences" : "Words";
   playBtn.textContent =
     mode === "listen"
-      ? `Play ${buttonLabelSubject}`
+      ? `Play ${buttonSubject}  ▶`
       : mode === "listen-repeat"
-      ? `Play & Repeat ${buttonLabelSubject}`
-      : `Play & Read ${buttonLabelSubject}`;
+      ? `Start Listen & Repeat  ▶`
+      : `Play Read Along  ▶`;
   controls.appendChild(playBtn);
 
   const status = createStatus();
@@ -276,7 +359,8 @@ const createPronunciationSlide = ({
   const audioKey = type === "sentence" ? "sentence_audio" : "word_audio";
 
   (Array.isArray(entries) ? entries : []).forEach((entry, index) => {
-    const rawText = typeof entry?.[textKey] === "string" ? entry[textKey] : "";
+    const rawText =
+      typeof entry?.[textKey] === "string" ? entry[textKey].trim() : "";
     const audioUrl =
       typeof entry?.[audioKey] === "string" ? entry[audioKey].trim() : "";
 
@@ -307,17 +391,21 @@ const createPronunciationSlide = ({
   });
 
   if (!items.length) {
-    const emptyState = document.createElement("p");
-    emptyState.className = "empty-state";
-    emptyState.textContent = "Audio will be added soon.";
-    content.appendChild(emptyState);
+    const empty = document.createElement("p");
+    empty.className = "empty-state";
+    empty.textContent = "Audio will be added soon.";
+    content.appendChild(empty);
   }
 
   let abortController = null;
   let activeItem = null;
 
   const resetActiveItem = () => {
-    highlightItem(activeItem, false);
+    if (!activeItem) {
+      return;
+    }
+    activeItem.card.classList.remove("is-active");
+    activeItem.line.classList.remove("is-playing");
     activeItem = null;
   };
 
@@ -326,30 +414,39 @@ const createPronunciationSlide = ({
       return;
     }
 
-    smoothScrollIntoView(item.card);
-
     resetActiveItem();
     activeItem = item;
-    highlightItem(item, true);
+
+    item.card.classList.add("is-active");
+    item.line.classList.add("is-playing");
+    smoothScrollIntoView(item.card);
     status.textContent = "Playing...";
 
     try {
-      await playAudioOnce(item.audioUrl, { signal });
+      await audioManager.play(item.audioUrl, { signal });
       if (signal?.aborted) {
         return;
       }
 
+      const durationSeconds = await audioManager.getDuration(item.audioUrl);
+      const gapMs = computeGapMs(mode, durationSeconds, repeatPauseMs);
+
       if (mode === "listen-repeat") {
         status.textContent = "Your turn...";
-        await waitMs(repeatPauseMs, { signal });
-      } else if (mode === "listen") {
-        await waitMs(LISTENING_GAP_MS, { signal });
-      } else if (mode === "read") {
-        await waitMs(READ_GAP_MS, { signal });
+      } else if (gapMs > 0) {
+        status.textContent = "Next up...";
       }
+
+      if (gapMs > 0) {
+        await waitMs(gapMs, { signal });
+      }
+    } catch (error) {
+      console.error(error);
+      status.textContent = "Unable to play audio.";
     } finally {
       if (!signal?.aborted) {
-        highlightItem(item, false);
+        item.card.classList.remove("is-active");
+        item.line.classList.remove("is-playing");
         if (activeItem === item) {
           activeItem = null;
         }
@@ -366,7 +463,6 @@ const createPronunciationSlide = ({
     abortController?.abort();
     abortController = new AbortController();
     const { signal } = abortController;
-    slide._autoTriggered = true;
 
     playBtn.disabled = true;
     status.textContent = "Starting...";
@@ -379,24 +475,20 @@ const createPronunciationSlide = ({
         }
       }
 
-      if (!signal.aborted) {
-        status.textContent = "Playback complete.";
-      } else {
-        status.textContent = "Playback stopped.";
-      }
-    } catch (error) {
-      console.error(error);
-      status.textContent = "Unable to play audio.";
+      status.textContent = signal.aborted
+        ? "Playback stopped."
+        : "Playback complete.";
     } finally {
       playBtn.disabled = false;
       abortController = null;
       resetActiveItem();
+      if (signal.aborted) {
+        status.textContent = "Playback stopped.";
+      }
     }
   };
 
-  playBtn.addEventListener("click", () => {
-    runSequence();
-  });
+  playBtn.addEventListener("click", runSequence);
 
   const autoPlay = {
     button: playBtn,
@@ -404,6 +496,7 @@ const createPronunciationSlide = ({
       if (slide._autoTriggered) {
         return;
       }
+      slide._autoTriggered = true;
       runSequence();
     },
     status,
@@ -419,6 +512,7 @@ const createPronunciationSlide = ({
   const onLeave = () => {
     abortController?.abort();
     abortController = null;
+    audioManager.stopAll();
     resetActiveItem();
     status.textContent = "";
     playBtn.disabled = false;
@@ -446,13 +540,13 @@ export const buildPronunciationSlides = (activityData = {}, context = {}) => {
     : [];
   const imageUrl =
     typeof activityData?.image === "string" ? activityData.image : "";
-  const repeatPauseMs = getPauseDuration(activityData);
+  const repeatPauseMs = getRepeatPauseMs(activityData);
 
   const slides = [
     {
       role: "words-listen",
       letter: "a",
-      titleSuffix: "a - Listening",
+      titleSuffix: "a - Listen",
       type: "word",
       mode: "listen",
     },

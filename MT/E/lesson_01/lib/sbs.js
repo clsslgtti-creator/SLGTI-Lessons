@@ -267,7 +267,7 @@ const buildModelDialogueSlide = (
   controls.className = 'slide__controls';
   const playBtn = document.createElement('button');
   playBtn.className = 'primary-btn';
-  playBtn.textContent = 'Play Model Dialogue';
+  playBtn.textContent = 'Play Model Dialogue ▶';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(playBtn, status);
@@ -660,7 +660,7 @@ const buildListeningSlide = (
   controls.className = 'slide__controls';
   const playBtn = document.createElement('button');
   playBtn.className = 'primary-btn';
-  playBtn.textContent = 'Play All Dialogues';
+  playBtn.textContent = 'Play All Dialogues ▶';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(playBtn, status);
@@ -728,15 +728,19 @@ const buildListeningSlide = (
     status.textContent = 'Playing...';
 
     try {
-      for (const item of items) {
+      for (let itemIndex = 0; itemIndex < items.length; itemIndex += 1) {
+        const item = items[itemIndex];
         item.card.classList.add('is-active');
         smoothScrollIntoView(item.card);
-        for (const segment of item.segments) {
-          const { url, element } = segment;
+        const { segments } = item;
+
+        for (let segIndex = 0; segIndex < segments.length; segIndex += 1) {
+          const { url, element } = segments[segIndex];
           if (!url) {
             continue;
           }
 
+          status.textContent = 'Playing...';
           element?.classList.add('is-playing');
           try {
             await audioManager.play(url, { signal });
@@ -748,9 +752,17 @@ const buildListeningSlide = (
             break;
           }
 
-          await delay(2000, { signal });
-          if (signal.aborted) {
-            break;
+          const duration = await audioManager.getDuration(url);
+          const gapMs = Math.max(1500, Math.round(duration * 2000));
+          const hasMoreSegments = segIndex < segments.length - 1;
+          const hasMoreItems = itemIndex < items.length - 1;
+
+          if ((hasMoreSegments || hasMoreItems) && gapMs > 0) {
+            status.textContent = 'Next up...';
+            await delay(gapMs, { signal });
+            if (signal.aborted) {
+              break;
+            }
           }
         }
         clearSegmentHighlights(item.segments);
@@ -839,7 +851,7 @@ const buildListenAndRepeatSlide = (
   controls.className = 'slide__controls';
   const startBtn = document.createElement('button');
   startBtn.className = 'primary-btn';
-  startBtn.textContent = 'Start Listen & Repeat';
+  startBtn.textContent = 'Start Listen & Repeat ▶';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(startBtn, status);
@@ -917,16 +929,20 @@ const buildListenAndRepeatSlide = (
     status.textContent = 'Playing...';
 
     try {
-      for (const item of items) {
+      for (let itemIndex = 0; itemIndex < items.length; itemIndex += 1) {
+        const item = items[itemIndex];
         item.card.classList.add('is-active');
         smoothScrollIntoView(item.card);
 
-        for (const segment of item.segments) {
-          const { url, element } = segment;
+        const { segments } = item;
+
+        for (let segIndex = 0; segIndex < segments.length; segIndex += 1) {
+          const { url, element } = segments[segIndex];
           if (!url) {
             continue;
           }
 
+          status.textContent = 'Playing...';
           element?.classList.add('is-playing');
           try {
             await audioManager.play(url, { signal });
@@ -940,9 +956,18 @@ const buildListenAndRepeatSlide = (
 
           const duration = await audioManager.getDuration(url);
           const pauseMs = Math.max(basePauseMs, Math.round(duration * 2000));
-          await delay(pauseMs, { signal });
-          if (signal.aborted) {
-            break;
+          if (pauseMs > 0) {
+            status.textContent = 'Your turn...';
+            await delay(pauseMs, { signal });
+            if (signal.aborted) {
+              break;
+            }
+          }
+
+          const hasMoreSegments = segIndex < segments.length - 1;
+          const hasMoreItems = itemIndex < items.length - 1;
+          if ((hasMoreSegments || hasMoreItems) && !signal.aborted) {
+            status.textContent = 'Next up...';
           }
         }
 
@@ -1035,7 +1060,7 @@ const buildReadingSlide = (
   controls.className = 'slide__controls';
   const playBtn = document.createElement('button');
   playBtn.className = 'primary-btn';
-  playBtn.textContent = 'Play Read Along';
+  playBtn.textContent = 'Play Read Along ▶';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(playBtn, status);
@@ -1126,7 +1151,7 @@ const buildReadingSlide = (
           }
 
           const duration = await audioManager.getDuration(url);
-          const pauseMs = Math.max(1500, Math.round(duration * 1000));
+          const pauseMs = Math.max(1500, Math.round(duration * 2000));
           await delay(pauseMs, { signal });
           if (signal.aborted) {
             break;
@@ -1236,7 +1261,7 @@ const buildSpeakingSlide = (
   controls.className = 'slide__controls';
   const startBtn = document.createElement('button');
   startBtn.className = 'primary-btn';
-  startBtn.textContent = 'Start Speaking Practice';
+  startBtn.textContent = 'Start Speaking Practice ▶';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(startBtn, status);
@@ -1334,7 +1359,8 @@ const buildSpeakingSlide = (
     status.textContent = 'Playing...';
 
     try {
-      for (const item of cards) {
+      for (let index = 0; index < cards.length; index += 1) {
+        const item = cards[index];
         const { dialogue, card, answerEl, questionEl, segments } = item;
         card.classList.add('is-active');
         smoothScrollIntoView(card);
@@ -1356,7 +1382,8 @@ const buildSpeakingSlide = (
         }
 
         const answerDuration = await audioManager.getDuration(dialogue.audio_b);
-        const waitMs = Math.max(1000, Math.round(answerDuration * 2000));
+        const waitMs = Math.max(1000, Math.round(answerDuration * 3000));
+        status.textContent = 'Your turn...';
         await delay(waitMs, { signal });
         if (signal.aborted) {
           clearSegmentHighlights(segments);
@@ -1379,6 +1406,11 @@ const buildSpeakingSlide = (
         if (signal.aborted) {
           clearSegmentHighlights(segments);
           break;
+        }
+
+        const hasMoreCards = index < cards.length - 1;
+        if (hasMoreCards) {
+          status.textContent = 'Next up...';
         }
 
         await delay(400, { signal });
