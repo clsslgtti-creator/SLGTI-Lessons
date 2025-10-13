@@ -179,7 +179,88 @@
     ]
   },
   "activity_3": {
-    "type": "GRAMMAR"
+    "type": "GAME-1",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural. ",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      }
+    },
+    "options": ["Singular", "Plural"],
+    "examples": [
+      {
+        "id": "e_1",
+        "sentence": "He is at the site.",
+        "answer": "Singular"
+      },
+      {
+        "id": "e_2",
+        "sentence": "Her parents are technicians.",
+        "answer": "Plural"
+      }
+    ],
+    "content": [
+      {
+        "id": "g_1",
+        "sentence": "Meena is in Kandy today.",
+        "audio" : "assets/audio/a_2_i_b.mp3",
+        "answer": "Singular"
+      },
+      {
+        "id": "g_2",
+        "sentence": "Are they at home today?",
+        "audio" : "assets/audio/a_2_i_b.mp3",
+        "answer": "Plural"
+      },
+      {
+        "id": "g_3",
+        "sentence": "My parents are at the head office.",
+        "audio" : "assets/audio/a_2_i_b.mp3",
+        "answer": "Plural"
+      },
+      {
+        "id": "g_4",
+        "sentence": "My teacher and I are at the factory.",
+        "audio" : "assets/audio/a_2_i_b.mp3",
+        "answer": "Plural"
+      },
+      {
+        "id": "g_5",
+        "sentence": "Some men are still in the storeroom.",
+        "audio" : "assets/audio/a_2_i_b.mp3",
+        "answer": "Plural"
+      },
+      {
+        "id": "g_6",
+        "sentence": "It is on the kitchen counter.",
+        "audio" : "assets/audio/a_2_i_b.mp3",
+        "answer": "Singular"
+      },
+      {
+        "id": "g_7",
+        "sentence": "The clients are happy with your product. ",
+        "audio" : "assets/audio/a_2_i_b.mp3",
+        "answer": "Plural"
+      },
+      {
+        "id": "g_8",
+        "sentence": "Many sick trainees are absent today.",
+        "audio" : "assets/audio/a_2_i_b.mp3",
+        "answer": "Plural"
+      },
+      {
+        "id": "g_9",
+        "sentence": "Is the weather very nice today?",
+        "audio" : "assets/audio/a_2_i_b.mp3",
+        "answer": "Singular"
+      },
+      {
+        "id": "g_10",
+        "sentence": "Are all the knives in the steel cabinet?",
+        "audio" : "assets/audio/a_2_i_b.mp3",
+        "answer": "Plural"
+      }
+    ]
   },
   "activity_4": {
     "type": "GAME"

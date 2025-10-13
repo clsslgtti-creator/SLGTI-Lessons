@@ -334,13 +334,9 @@ const createPronunciationSlide = ({
   const playBtn = document.createElement("button");
   playBtn.type = "button";
   playBtn.className = "primary-btn";
-  const buttonSubject = type === "sentence" ? "Sentences" : "Words";
-  playBtn.textContent =
-    mode === "listen"
-      ? `Play ${buttonSubject}  ▶`
-      : mode === "listen-repeat"
-      ? `Start Listen & Repeat  ▶`
-      : `Play Read Along  ▶`;
+
+  playBtn.textContent = "Play ▶"
+
   controls.appendChild(playBtn);
 
   const status = createStatus();
@@ -546,42 +542,42 @@ export const buildPronunciationSlides = (activityData = {}, context = {}) => {
     {
       role: "words-listen",
       letter: "a",
-      titleSuffix: "a - Listen",
+      titleSuffix: "a",
       type: "word",
       mode: "listen",
     },
     {
       role: "words-repeat",
       letter: "b",
-      titleSuffix: "b - Listen & Repeat",
+      titleSuffix: "b",
       type: "word",
       mode: "listen-repeat",
     },
     {
       role: "words-read",
       letter: "c",
-      titleSuffix: "c - Read Along",
+      titleSuffix: "c",
       type: "word",
       mode: "read",
     },
     {
       role: "sentences-listen",
       letter: "d",
-      titleSuffix: "d - Listen",
+      titleSuffix: "d",
       type: "sentence",
       mode: "listen",
     },
     {
       role: "sentences-repeat",
       letter: "e",
-      titleSuffix: "e - Listen & Repeat",
+      titleSuffix: "e",
       type: "sentence",
       mode: "listen-repeat",
     },
     {
       role: "sentences-read",
       letter: "f",
-      titleSuffix: "f - Read Along",
+      titleSuffix: "f",
       type: "sentence",
       mode: "read",
     },

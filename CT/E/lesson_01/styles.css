@@ -283,8 +283,9 @@ body {
 
 .slide__instruction {
   margin: 0 0 clamp(1.2rem, 3vw, 1.8rem);
-  color: var(--color-muted);
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--color-text);
+  font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+  font-weight: bold;
 }
 
 .slide__controls {
