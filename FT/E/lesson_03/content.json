@@ -193,9 +193,9 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpg",
+        "img": "assets/img/a_2_d_6.jpeg",
         "text_a": "What are they doing?",
-        "text_b": "They are cooking a spicy polos  curry in a pot.",
+        "text_b": "They are cooking a spicy polos curry in a pot.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
         "keyword": "Cooking"
