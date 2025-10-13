@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": 3,
     "level": "Elementary",
-    "section": " Construction Technology",
+    "section": "Automobile Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -149,56 +149,56 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "What are you doing?",
-        "text_b": "I am breaking the old concrete wall.",
+        "text_a": "What is the mechanic doing?",
+        "text_b": "He is opening the fuel cap.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Breaking"
+        "keyword": "Opening"
       },
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.jpeg",
-        "text_a": "What is the foreman doing?",
-        "text_b": "He is bending the long steel rods.",
+        "text_a": "What are you doing?",
+        "text_b": "I am checking the battery light.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Bending"
+        "keyword": "Checking"
       },
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "What is the electric drill doing now?",
-        "text_b": "It is cutting a pipe.",
+        "text_a": "What is the chief technician doing?",
+        "text_b": " He is replacing the fan belt.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Cutting"
+        "keyword": "Replacing"
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": " What are the workmen doing?",
-        "text_b": "They are unloading bricks from the truck. ",
+        "img": "assets/img/a_2_d_4.png",
+        "text_a": "What is the safety inspector doing?",
+        "text_b": "He is reading the fuel gauge.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Unloading"
+        "keyword": "Reading"
       },
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.jpeg",
-        "text_a": " What is she wearing?",
-        "text_b": " She is wearing a yellow helmet with the company logo. ",
+        "text_a": "What are you and the technician doing?",
+        "text_b": "We are repairing the clutch pedal.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Wearing"
+        "keyword": "Repairing"
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpeg",
-        "text_a": "What are you and your assistant doing?",
-        "text_b": "We are spreading the mortar on the ground.",
+        "img": "assets/img/a_2_d_6.jpg",
+        "text_a": "What are they doing?",
+        "text_b": "They are testing the wheel alignment.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Spreading"
+        "keyword": "Testing"
       }
     ]
   },
