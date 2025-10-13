@@ -7,7 +7,7 @@
   },
   "activity_1": {
     "type": "PRONUNCIATION",
-    "focus": "Long /iː/",
+    "focus": "Short /ɪ/",
     "image": "assets/img/a_1_p.jpeg",
     "instructions": {
       "activity_1_a": {
@@ -38,30 +38,30 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "b'ea'm",
+        "word_text": "eng'i'ne",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The b'ea'm is strong enough for the roof.",
+        "sentence_text": "The eng'i'ne is hot.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3"
       },
       {
         "id": "p_2",
-        "word_text": "st'ee'l",
+        "word_text": "p'i'ston",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Workers are cutting st'ee'l in the yard.",
+        "sentence_text": "Check the p'i'ston rings.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3"
       },
       {
         "id": "p_3",
-        "word_text": "c'ei'ling",
+        "word_text": "gearsh'i'ft",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "The c'ei'ling is in the new classroom.",
+        "sentence_text": "Move the gearsh'i'ft carefully.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3"
       },
       {
         "id": "p_4",
-        "word_text": "k'ey'",
+        "word_text": "cl'i'p",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "The mason has the k'ey' for the store.",
+        "sentence_text": "Use a cl'i'p for the wire.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3"
       }
     ]
