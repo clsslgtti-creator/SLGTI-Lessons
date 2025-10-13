@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": 3,
     "level": "Elementary",
-    "section": "Food Technology",
+    "section": "Mechanical Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -149,35 +149,35 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "What is your sister doing?",
-        "text_b": "She is cutting the ripe mangoes for juice.",
+        "text_a": "What is the mechanic doing?",
+        "text_b": " He is adjusting a loose screw.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Cutting"
+        "keyword": "Adjusting"
       },
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.jpeg",
         "text_a": "What are you doing?",
-        "text_b": "I am kneading the  bread dough on the table.",
+        "text_b": " I am tightening a bolt.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Kneading"
+        "keyword": "Tightening"
       },
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "What is the chef doing?",
-        "text_b": "He is mixing rice flour to make pittu. ",
+        "text_a": "What is the CAD machine doing now?",
+        "text_b": "It is designing an apartment block.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Mixing"
+        "keyword": "Designing"
       },
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.png",
-        "text_a": "What are you and your mother doing? ",
-        "text_b": "We are cleaning the coconut scraper.",
+        "text_a": "What is the mechanic doing?",
+        "text_b": " He is cleaning the carburetor.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "keyword": "Cleaning"
@@ -185,20 +185,20 @@
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.jpeg",
-        "text_a": "What is the air fryer doing now?",
-        "text_b": "It is frying the sliced brinjal quickly.",
+        "text_a": "What is she doing?",
+        "text_b": "She is changing a car tire.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Frying"
+        "keyword": "Changing"
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.jpg",
-        "text_a": "What are they doing?",
-        "text_b": "They are cooking a spicy polos  curry in a pot.",
+        "text_a": " What is he doing?",
+        "text_b": "He is welding the steel frame.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Cooking"
+        "keyword": "Welding"
       }
     ]
   },
