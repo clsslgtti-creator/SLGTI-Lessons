@@ -175,7 +175,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.png",
+        "img": "assets/img/a_2_d_4.jpeg",
         "text_a": "What is the safety inspector doing?",
         "text_b": " He is reading the fuel gauge. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
@@ -193,7 +193,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpg",
+        "img": "assets/img/a_2_d_6.jpeg",
         "text_a": " What are they doing?",
         "text_b": "They are testing the wheel alignment.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
