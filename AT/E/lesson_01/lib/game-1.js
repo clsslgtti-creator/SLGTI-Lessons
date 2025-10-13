@@ -5,9 +5,7 @@ const sanitizeOptions = (rawOptions = []) => {
     return [];
   }
   const trimmed = rawOptions
-    .map((option) =>
-      typeof option === "string" ? option.trim() : ""
-    )
+    .map((option) => (typeof option === "string" ? option.trim() : ""))
     .filter((option) => option.length);
   if (trimmed.length >= 2) {
     return trimmed.slice(0, 2);
@@ -77,9 +75,12 @@ const normalizeQuestions = (rawQuestions = [], options) => {
 };
 
 const DEFAULT_FEEDBACK_ASSETS = {
-  correct: "assets/audio/game/correct.mp3",
-  incorrect: "assets/audio/game/incorrect.mp3",
-  timeout: "assets/audio/game/timeout.mp3",
+  correctAudio: "assets/audio/game/correct.mp3",
+  incorrectAudio: "assets/audio/game/incorrect.mp3",
+  timeoutAudio: "assets/audio/game/timeout.mp3",
+  correctImg: "assets/img/game/correct.png",
+  incorrectImg: "assets/img/game/incorrect.png",
+  timeoutImg: "assets/img/game/timeout.png",
 };
 
 const createFeedbackPlayer = () => {
@@ -94,10 +95,7 @@ const createFeedbackPlayer = () => {
     oscillator.type = "sine";
     oscillator.frequency.value = frequency;
     gainNode.gain.setValueAtTime(0.0001, context.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(
-      0.1,
-      context.currentTime + 0.02
-    );
+    gainNode.gain.exponentialRampToValueAtTime(0.1, context.currentTime + 0.02);
     gainNode.gain.exponentialRampToValueAtTime(
       0.0001,
       context.currentTime + durationMs / 1000
@@ -116,6 +114,53 @@ const createFeedbackPlayer = () => {
   };
 };
 
+const createRoundedPanel = (
+  scene,
+  width,
+  height,
+  radius = 24,
+  initialStyle = {}
+) => {
+  const graphics = scene.add.graphics();
+  const state = {
+    fillColor: 0xffffff,
+    fillAlpha: 1,
+    strokeColor: 0x000000,
+    strokeAlpha: 0,
+    lineWidth: 0,
+    ...initialStyle,
+  };
+
+  const redraw = (style = {}) => {
+    Object.assign(state, style);
+    graphics.clear();
+    if (state.lineWidth > 0) {
+      graphics.lineStyle(state.lineWidth, state.strokeColor, state.strokeAlpha);
+    } else {
+      graphics.lineStyle();
+    }
+    graphics.fillStyle(state.fillColor, state.fillAlpha);
+    graphics.fillRoundedRect(-width / 2, -height / 2, width, height, radius);
+    if (state.lineWidth > 0) {
+      graphics.strokeRoundedRect(
+        -width / 2,
+        -height / 2,
+        width,
+        height,
+        radius
+      );
+    }
+  };
+
+  redraw();
+
+  return {
+    graphics,
+    update: redraw,
+    getStyle: () => ({ ...state }),
+  };
+};
+
 const createGameScene = (config) => {
   const {
     options,
@@ -131,13 +176,27 @@ const createGameScene = (config) => {
   class GameScene extends Phaser.Scene {
     constructor() {
       super("GameOneScene");
+      this.resetState();
+      this.runState = "idle";
+      this.shouldAutoStart = false;
+      this.startButton = null;
+      this.fullscreenButton = null;
+    }
+
+    init(data = {}) {
+      this.resetState();
+      this.runState = "idle";
+      this.shouldAutoStart = Boolean(data.autoStart);
+    }
+
+    resetState() {
       this.examples = examples;
       this.questions = questions;
       this.options = options;
       this.feedbackAssets = feedbackAssets;
       this.exampleIndex = -1;
       this.questionIndex = -1;
-      this.countdownShown = false;
+      this.countdownShown = !examples.length;
       this.awaitingAnswer = false;
       this.score = 0;
       this.totalQuestions = questions.length;
@@ -146,101 +205,214 @@ const createGameScene = (config) => {
       this.activeSentenceSound = null;
       this.gameOver = false;
       this.didNotifyReady = false;
+      this.summaryDisplayed = false;
     }
 
     preload() {
       this.load.once("complete", () => {
-        statusElement.textContent = "";
-        statusElement.classList.remove("is-visible");
-        statusElement.classList.remove("is-error");
-        statusElement.classList.remove("is-transparent");
+        if (!this.shouldAutoStart) {
+          statusElement.textContent = "Press Start to play.";
+          statusElement.classList.add("is-visible");
+          statusElement.classList.remove("is-error");
+          statusElement.classList.remove("is-transparent");
+        } else {
+          statusElement.textContent = "";
+          statusElement.classList.remove("is-visible");
+          statusElement.classList.remove("is-error");
+          statusElement.classList.remove("is-transparent");
+        }
       });
       this.load.on("loaderror", (file) => {
-        if (file.key === "feedback-correct") {
-          this.feedbackAssets.correct = null;
-        }
-        if (file.key === "feedback-incorrect") {
-          this.feedbackAssets.incorrect = null;
-        }
-        if (file.key === "feedback-timeout") {
-          this.feedbackAssets.timeout = null;
-        }
+        console.error("error loading :", file);
       });
+
       this.questions.forEach((item) => {
         if (item.audioKey && item.audio) {
           this.load.audio(item.audioKey, item.audio);
         }
       });
-      if (this.feedbackAssets.correct) {
-        this.load.audio("feedback-correct", this.feedbackAssets.correct);
+      if (this.feedbackAssets.correctAudio) {
+        this.load.audio(
+          "feedback-correct-audio",
+          this.feedbackAssets.correctAudio
+        );
       }
-      if (this.feedbackAssets.incorrect) {
-        this.load.audio("feedback-incorrect", this.feedbackAssets.incorrect);
+      if (this.feedbackAssets.incorrectAudio) {
+        this.load.audio(
+          "feedback-incorrect-audio",
+          this.feedbackAssets.incorrectAudio
+        );
       }
-      if (this.feedbackAssets.timeout) {
-        this.load.audio("feedback-timeout", this.feedbackAssets.timeout);
+      if (this.feedbackAssets.timeoutAudio) {
+        this.load.audio(
+          "feedback-timeout-audio",
+          this.feedbackAssets.timeoutAudio
+        );
       }
+      if (this.feedbackAssets.correctImg) {
+        this.load.image("feedback-correct-img", this.feedbackAssets.correctImg);
+      }
+      if (this.feedbackAssets.incorrectImg) {
+        this.load.image(
+          "feedback-incorrect-img",
+          this.feedbackAssets.incorrectImg
+        );
+      }
+      if (this.feedbackAssets.timeoutImg) {
+        this.load.image("feedback-timeout-img", this.feedbackAssets.timeoutImg);
+      }
+
+      this.load.image("timer-img", "assets/img/game/timer.png");
+      this.load.image("bg-img", "assets/img/game/bg.jpg");
     }
 
     create() {
       const { width, height } = this.sys.game.canvas;
       this.cameras.main.setBackgroundColor("#eef2f9");
+      this.events.once(Phaser.Scenes.Events.SHUTDOWN, this.shutdown, this);
+      this.events.once(Phaser.Scenes.Events.DESTROY, this.shutdown, this);
 
-      const bg = this.add.rectangle(
-        width / 2,
-        height / 2,
-        width * 0.9,
-        height * 0.9,
-        0xffffff,
-        0.95
-      );
-      bg.setStrokeStyle(6, 0x1f6feb, 0.15);
-      bg.setShadow(0, 20, 0x0f172a, 0.15, 0, 0, true);
+      const bg = this.add.image(0, 0, "bg-img").setOrigin(0, 0);
+      bg.displayWidth = this.sys.game.config.width;
+      bg.displayHeight = this.sys.game.config.height;
 
-      this.topBar = this.add.rectangle(
-        width / 2,
-        90,
-        width * 0.8,
-        120,
+      const accentLeft = this.add.circle(
+        width * 0.18,
+        height * 0.82,
+        clamp(width * 0.16, 120, 180),
         0x1f6feb,
         0.08
       );
-      this.topBar.setStrokeStyle(3, 0x1f6feb, 0.3);
-      this.topBar.setOrigin(0.5);
+      accentLeft.setBlendMode(Phaser.BlendModes.SCREEN);
+      accentLeft.setDepth(0.5);
+
+      const accentRight = this.add.circle(
+        width * 0.82,
+        height * 0.26,
+        clamp(width * 0.18, 130, 210),
+        0xf0ab00,
+        0.08
+      );
+      accentRight.setBlendMode(Phaser.BlendModes.SCREEN);
+      accentRight.setDepth(0.5);
+
+      const accentStripe = this.add.rectangle(
+        width / 2,
+        height - clamp(height * 0.12, 120, 160),
+        width * 0.86,
+        12,
+        0x1f6feb,
+        0.06
+      );
+      accentStripe.setDepth(1);
+
+      const topBar = createRoundedPanel(this, width * 0.82, 120, 28);
+      topBar.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.85,
+        strokeColor: 0x93c5fd,
+        strokeAlpha: 0.18,
+        lineWidth: 2,
+      });
+      topBar.graphics.setPosition(width / 2, 90);
+      topBar.graphics.setDepth(2);
 
       this.phaseText = this.add
-        .text(width / 2, 50, "Examples", {
+        .text(width / 2, 52, "Examples", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: "32px",
-          color: "#1f2933",
+          fontSize: "34px",
+          color: "#0f172a",
           fontStyle: "bold",
+          letterSpacing: 0.6,
         })
         .setOrigin(0.5, 0);
+      this.phaseText.setDepth(3);
 
-      this.scoreText = this.add
-        .text(width - 140, 50, `Score: 0/${this.totalQuestions}`, {
-          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: "28px",
-          color: "#1f2933",
-        })
-        .setOrigin(1, 0);
-
+      const badgeHeight = clamp(height * 0.1, 58, 68);
+      const timerBadgeWidth = clamp(width * 0.22, 200, 240);
+      this.timerPanel = createRoundedPanel(
+        this,
+        timerBadgeWidth,
+        badgeHeight,
+        26
+      );
+      this.timerPanelBaseStyle = {
+        fillColor: 0x1f6feb,
+        fillAlpha: 0.12,
+        strokeColor: 0x1f6feb,
+        strokeAlpha: 0.24,
+        lineWidth: 2,
+      };
+      this.timerPanelActiveStyle = {
+        fillColor: 0x1f6feb,
+        fillAlpha: 0.18,
+        strokeColor: 0x1d4ed8,
+        strokeAlpha: 0.42,
+        lineWidth: 2,
+      };
+      this.timerPanel.update(this.timerPanelBaseStyle);
       this.timerText = this.add
-        .text(140, 50, "", {
+        .text(0, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: "28px",
-          color: "#1f2933",
+          fontSize: "26px",
+          color: "#1d4ed8",
         })
-        .setOrigin(0, 0);
+        .setOrigin(0.5);
+      this.timerBadge = this.add.container(timerBadgeWidth / 2 + 90, 108, [
+        this.timerPanel.graphics,
+        this.timerText,
+      ]);
+      this.timerBadge.setDepth(3);
+
+      const scoreBadgeWidth = clamp(width * 0.22, 220, 260);
+      this.scorePanel = createRoundedPanel(
+        this,
+        scoreBadgeWidth,
+        badgeHeight,
+        26
+      );
+      this.scorePanelStyle = {
+        fillColor: 0x1f6feb,
+        fillAlpha: 0.12,
+        strokeColor: 0x1f6feb,
+        strokeAlpha: 0.24,
+        lineWidth: 2,
+      };
+      this.scorePanel.update(this.scorePanelStyle);
+      this.scoreText = this.add
+        .text(0, 0, `Score: 0/${this.totalQuestions}`, {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: "26px",
+          color: "#1d4ed8",
+        })
+        .setOrigin(0.5);
+      this.scoreBadge = this.add.container(
+        width - scoreBadgeWidth / 2 - 90,
+        108,
+        [this.scorePanel.graphics, this.scoreText]
+      );
+      this.scoreBadge.setDepth(3);
+      this.updateScore();
+      this.updateTimerText("");
 
       const sentenceCardWidth = clamp(width * 0.78, 640, 980);
       const sentenceCardHeight = clamp(height * 0.32, 180, 240);
-
       this.sentenceCardWidth = sentenceCardWidth;
       this.sentenceCardHeight = sentenceCardHeight;
-      const sentenceBg = this.add
-        .rectangle(0, 0, sentenceCardWidth, sentenceCardHeight, 0xffffff, 0.95)
-        .setStrokeStyle(4, 0x1f6feb, 0.28);
+      const sentencePanel = createRoundedPanel(
+        this,
+        sentenceCardWidth,
+        sentenceCardHeight,
+        32
+      );
+      sentencePanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.98,
+        strokeColor: 0x93c5fd,
+        strokeAlpha: 0.32,
+        lineWidth: 4,
+      });
+      this.sentencePanel = sentencePanel;
 
       this.sentenceText = this.add
         .text(0, 0, "", {
@@ -253,20 +425,47 @@ const createGameScene = (config) => {
         .setOrigin(0.5);
 
       this.sentenceCard = this.add.container(-sentenceCardWidth, height / 2, [
-        sentenceBg,
+        sentencePanel.graphics,
         this.sentenceText,
       ]);
 
-      this.feedbackGroup = this.add.container(width / 2, height / 2 + sentenceCardHeight / 2 + 80);
+      this.feedbackBackdrop = this.add.rectangle(
+        width / 2,
+        height / 2,
+        width,
+        height,
+        0x0f172a,
+        0.3
+      );
+      this.feedbackBackdrop.setAlpha(0);
+      this.feedbackBackdrop.setDepth(8);
+      this.feedbackBackdrop.setVisible(false);
+
+      this.feedbackGroup = this.add.container(
+        width / 2,
+        height / 2 + sentenceCardHeight / 2
+      );
       this.feedbackGroup.setAlpha(0);
+      this.feedbackGroup.setDepth(9);
 
-      this.feedbackBubble = this.add
-        .rectangle(0, 0, clamp(width * 0.42, 260, 420), 120, 0xffffff, 0.98)
-        .setStrokeStyle(3, 0x1f2933, 0.15);
+      const feedbackPanel = createRoundedPanel(
+        this,
+        clamp(width * 0.42, 260, 420),
+        120,
+        28
+      );
+      feedbackPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.98,
+        strokeColor: 0x1f2933,
+        strokeAlpha: 0.15,
+        lineWidth: 3,
+      });
+      this.feedbackPanel = feedbackPanel;
 
-      this.feedbackIcon = this.add.graphics();
+      this.feedbackIcon = this.add.image(-120, 0, "");
       this.feedbackLabel = this.add
-        .text(0, 0, "", {
+        .text(20, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: clamp(width * 0.026, 22, 30),
           color: "#1f2933",
@@ -274,10 +473,21 @@ const createGameScene = (config) => {
         })
         .setOrigin(0.5);
 
-      this.feedbackGroup.add([this.feedbackBubble, this.feedbackIcon, this.feedbackLabel]);
+      this.feedbackGroup.add([
+        feedbackPanel.graphics,
+        this.feedbackIcon,
+        this.feedbackLabel,
+      ]);
 
       this.countdownOverlay = this.add.container(width / 2, height / 2);
-      const overlayBg = this.add.rectangle(0, 0, width * 0.6, height * 0.6, 0x000000, 0.55);
+      const overlayBg = this.add.rectangle(
+        0,
+        0,
+        width * 0.6,
+        height * 0.6,
+        0x000000,
+        0.55
+      );
       overlayBg.setOrigin(0.5);
       this.countdownText = this.add
         .text(0, 0, "", {
@@ -290,17 +500,34 @@ const createGameScene = (config) => {
       this.countdownOverlay.add([overlayBg, this.countdownText]);
       this.countdownOverlay.setAlpha(0);
 
+      this.summaryBackdrop = this.add.rectangle(
+        width / 2,
+        height / 2,
+        width,
+        height,
+        0x0f172a,
+        0.45
+      );
+      this.summaryBackdrop.setVisible(false);
+      this.summaryBackdrop.setAlpha(0);
+      this.summaryBackdrop.setDepth(18);
+
       this.summaryOverlay = this.add.container(width / 2, height / 2);
-      const summaryBg = this.add.rectangle(
-        0,
-        0,
+      this.summaryOverlay.setDepth(19);
+      const summaryPanel = createRoundedPanel(
+        this,
         clamp(width * 0.68, 520, 760),
         clamp(height * 0.6, 420, 520),
-        0xffffff,
-        0.97
+        36
       );
-      summaryBg.setStrokeStyle(4, 0x1f6feb, 0.3);
-      summaryBg.setShadow(0, 20, 0x0f172a, 0.18, 12, 18, true);
+      summaryPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.98,
+        strokeColor: 0x93c5fd,
+        strokeAlpha: 0.28,
+        lineWidth: 4,
+      });
+      this.summaryPanel = summaryPanel;
 
       this.summaryTitle = this.add
         .text(0, -120, "Great Job!", {
@@ -323,42 +550,315 @@ const createGameScene = (config) => {
 
       const replayWidth = clamp(width * 0.26, 240, 320);
       const replayHeight = 86;
-      const replayButtonBg = this.add
-        .rectangle(0, 120, replayWidth, replayHeight, 0x1f6feb, 1)
-        .setStrokeStyle(0);
-      replayButtonBg.setInteractive({ useHandCursor: true });
+      const replayContainer = this.add.container(0, 120);
+      const replayPanel = createRoundedPanel(
+        this,
+        replayWidth,
+        replayHeight,
+        replayHeight / 2
+      );
+      replayPanel.update({
+        fillColor: 0x1f6feb,
+        fillAlpha: 1,
+        strokeColor: 0x1748ad,
+        strokeAlpha: 0.9,
+        lineWidth: 0,
+      });
       const replayLabel = this.add
-        .text(0, 120, "Replay", {
+        .text(0, 0, "Replay", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: clamp(width * 0.028, 22, 28),
           color: "#ffffff",
           fontStyle: "bold",
         })
         .setOrigin(0.5);
-
-      replayButtonBg.on("pointerover", () => {
-        replayButtonBg.setFillStyle(0x1748ad, 1);
+      replayContainer.add([replayPanel.graphics, replayLabel]);
+      replayContainer.setSize(replayWidth, replayHeight);
+      replayContainer.setInteractive();
+      replayContainer.on("pointerover", () => {
+        this.input.setDefaultCursor("pointer");
+        replayPanel.update({
+          fillColor: 0x1748ad,
+          fillAlpha: 1,
+          strokeColor: 0x0f2d75,
+          strokeAlpha: 0.9,
+          lineWidth: 0,
+        });
       });
-      replayButtonBg.on("pointerout", () => {
-        replayButtonBg.setFillStyle(0x1f6feb, 1);
+      replayContainer.on("pointerout", () => {
+        this.input.setDefaultCursor("default");
+        replayPanel.update({
+          fillColor: 0x1f6feb,
+          fillAlpha: 1,
+          strokeColor: 0x1748ad,
+          strokeAlpha: 0.9,
+          lineWidth: 0,
+        });
       });
-      replayButtonBg.on("pointerdown", () => {
-        this.restartGame();
+      replayContainer.on("pointerdown", () => {
+        this.restartGame(true);
       });
+      this.replayButton = replayContainer;
+      this.replayPanel = replayPanel;
       this.summaryOverlay.add([
-        summaryBg,
+        summaryPanel.graphics,
         this.summaryTitle,
         this.summaryBody,
-        replayButtonBg,
-        replayLabel,
+        replayContainer,
       ]);
       this.summaryOverlay.setAlpha(0);
       this.summaryOverlay.setVisible(false);
 
-      this.optionButtons = this.createOptionButtons(width, height, this.options);
+      this.optionButtons = this.createOptionButtons(
+        width,
+        height,
+        this.options
+      );
       this.enableOptionButtons(false);
-      this.advance();
 
+      this.createCenterStartButton(width, height);
+      this.createBottomBar(width, height);
+      this.prepareIdleState();
+
+      if (this.shouldAutoStart) {
+        this.handleStartPressed(true);
+      }
+    }
+
+    createCenterStartButton(width, height) {
+      const buttonWidth = clamp(width * 0.3, 240, 360);
+      const buttonHeight = clamp(height * 0.14, 100, 140);
+
+      this.startButton = this.createBarButton(
+        "Start",
+        buttonWidth,
+        buttonHeight,
+        {
+          onClick: () => this.handleStartPressed(false),
+          baseColor: 0x1f6feb,
+        }
+      );
+      this.startButton.container.setPosition(width / 2, height / 2);
+      this.startButton.container.setDepth(12);
+    }
+
+    createBottomBar(width, height) {
+      const barWidth = clamp(width * 0.88, 760, width - 40);
+      const barHeight = clamp(height * 0.12, 80, 96);
+      const barPanel = createRoundedPanel(this, barWidth, barHeight, 28);
+      barPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.92,
+        strokeColor: 0x93c5fd,
+        strokeAlpha: 0.3,
+        lineWidth: 3,
+      });
+
+      const barContainer = this.add.container(
+        width / 2,
+        height - barHeight / 2 - 24,
+        [barPanel.graphics]
+      );
+      barContainer.setDepth(6);
+
+      const fsWidth = clamp(barWidth * 0.24, 200, 240);
+      this.fullscreenButton = this.createBarButton(
+        "Enter Fullscreen",
+        fsWidth,
+        barHeight - 20,
+        {
+          onClick: () => this.handleFullscreenToggle(),
+          baseColor: 0x0f172a,
+        }
+      );
+      this.fullscreenButton.container.setPosition(
+        barWidth / 2 - fsWidth / 2 - 30,
+        0
+      );
+      barContainer.add(this.fullscreenButton.container);
+
+      this.scale.on("enterfullscreen", this.updateFullscreenLabel, this);
+      this.scale.on("leavefullscreen", this.updateFullscreenLabel, this);
+      this.updateFullscreenLabel();
+    }
+
+    createBarButton(label, width, height, { onClick, baseColor }) {
+      const baseColorObj = Phaser.Display.Color.IntegerToColor(baseColor);
+      const hoverColor = Phaser.Display.Color.GetColor(
+        Math.min(baseColorObj.red + 25, 255),
+        Math.min(baseColorObj.green + 25, 255),
+        Math.min(baseColorObj.blue + 25, 255)
+      );
+
+      const styles = {
+        base: {
+          fillColor: baseColor,
+          fillAlpha: 1,
+          strokeColor: baseColor,
+          strokeAlpha: 0.9,
+          lineWidth: 0,
+        },
+        hover: {
+          fillColor: hoverColor,
+          fillAlpha: 1,
+          strokeColor: baseColor,
+          strokeAlpha: 0.9,
+          lineWidth: 0,
+        },
+        disabled: {
+          fillColor: 0xa1a1aa,
+          fillAlpha: 1,
+          strokeColor: 0x71717a,
+          strokeAlpha: 0.8,
+          lineWidth: 0,
+        },
+      };
+
+      const panel = createRoundedPanel(this, width, height, height / 2);
+      panel.update(styles.base);
+
+      const text = this.add
+        .text(0, 0, label, {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: clamp(width * 0.09, 20, 28),
+          color: "#ffffff",
+          fontStyle: "bold",
+        })
+        .setOrigin(0.5);
+
+      const container = this.add.container(0, 0, [panel.graphics, text]);
+      container.setSize(width, height);
+      container.setDepth(7);
+      container.setInteractive({ useHandCursor: true });
+      container.on("pointerover", () => {
+        if (container.input?.enabled) {
+          panel.update(styles.hover);
+        }
+      });
+      container.on("pointerout", () => {
+        if (container.input?.enabled) {
+          panel.update(styles.base);
+        }
+      });
+      container.on("pointerdown", () => {
+        if (container.input?.enabled && typeof onClick === "function") {
+          this.playFeedbackSound("correct");
+          onClick();
+        }
+      });
+
+      return { container, background: panel, text, styles };
+    }
+
+    setStartButtonState(label, disabled = false, visible = true) {
+      if (!this.startButton) {
+        return;
+      }
+      this.startButton.text.setText(label);
+      this.startButton.container.setVisible(visible);
+      if (disabled) {
+        this.startButton.container.disableInteractive();
+        this.startButton.background.update(this.startButton.styles.disabled);
+      } else {
+        this.startButton.container.setInteractive({ useHandCursor: true });
+        this.startButton.background.update(this.startButton.styles.base);
+      }
+    }
+
+    updateFullscreenLabel() {
+      if (!this.fullscreenButton) {
+        return;
+      }
+      const isFullscreen = this.scale.isFullscreen;
+      this.fullscreenButton.text.setText(
+        isFullscreen ? "Exit Fullscreen" : "Enter Fullscreen"
+      );
+      this.fullscreenButton.background.update(
+        isFullscreen
+          ? this.fullscreenButton.styles.hover
+          : this.fullscreenButton.styles.base
+      );
+    }
+
+    handleFullscreenToggle() {
+      if (this.scale.isFullscreen) {
+        this.scale.stopFullscreen();
+      } else {
+        this.scale.startFullscreen();
+      }
+    }
+
+    handleStartPressed(autoStart) {
+      if (this.runState === "loading") {
+        return;
+      }
+      if (this.runState === "running" && !autoStart) {
+        this.restartGame(true);
+        return;
+      }
+
+      this.runState = "loading";
+      this.setStartButtonState("Loading...", true, true);
+      this.enableOptionButtons(false);
+      this.stopSentenceAudio();
+      this.timerEvent?.remove();
+      this.timerEvent = null;
+      this.hideFeedback();
+      this.countdownOverlay.setVisible(false);
+      this.countdownOverlay.setAlpha(0);
+      this.summaryBackdrop.setVisible(false);
+      this.summaryBackdrop.setAlpha(0);
+      this.summaryOverlay.setVisible(false);
+      this.summaryOverlay.setAlpha(0);
+      this.sentenceCard.setAlpha(0);
+      this.sentenceCard.x = -this.sys.game.canvas.width;
+
+      if (statusElement) {
+        statusElement.textContent = "Preparing game...";
+        statusElement.classList.remove("is-error");
+        statusElement.classList.remove("is-transparent");
+        statusElement.classList.add("is-visible");
+      }
+
+      this.resetState();
+      this.score = 0;
+      this.updateScore();
+      this.updateTimerText("");
+
+      this.time.delayedCall(120, () => {
+        this.runState = "running";
+        this.setStartButtonState("Restart", false, false);
+        this.advance();
+      });
+    }
+
+    prepareIdleState() {
+      this.runState = "idle";
+      this.setStartButtonState("Start", false, true);
+      this.enableOptionButtons(false);
+      this.stopSentenceAudio();
+      this.timerEvent?.remove();
+      this.timerEvent = null;
+      this.updateTimerText("");
+      this.hideFeedback();
+      this.summaryBackdrop.setVisible(false);
+      this.summaryBackdrop.setAlpha(0);
+      this.summaryOverlay.setVisible(false);
+      this.summaryOverlay.setAlpha(0);
+      this.countdownOverlay.setVisible(false);
+      this.countdownOverlay.setAlpha(0);
+      this.sentenceCard.setAlpha(0);
+      this.phaseText.setText("Ready to start?");
+      this.phaseText.setColor("#0f172a");
+      this.score = 0;
+      this.updateScore();
+
+      if (statusElement) {
+        statusElement.textContent = "Press Start to play.";
+        statusElement.classList.remove("is-error");
+        statusElement.classList.remove("is-transparent");
+        statusElement.classList.add("is-visible");
+      }
     }
 
     createOptionButtons(width, height, options) {
@@ -369,66 +869,146 @@ const createGameScene = (config) => {
       const baseY = height - clamp(height * 0.18, 140, 180);
 
       options.forEach((label, index) => {
-        const container = this.add.container(
-          width / 2 + (index === 0 ? -horizontalSpacing : horizontalSpacing),
-          baseY
+        const xPos =
+          width / 2 + (index === 0 ? -horizontalSpacing : horizontalSpacing);
+        const container = this.add.container(xPos, baseY);
+        container.setDepth(1);
+
+        const background = createRoundedPanel(
+          this,
+          buttonWidth,
+          buttonHeight,
+          28
         );
-        const bg = this.add
-          .rectangle(0, 0, buttonWidth, buttonHeight, 0xffffff, 0.96)
-          .setStrokeStyle(4, 0x1f6feb, 0.6);
+        const styles = {
+          base: {
+            fillColor: 0xffffff,
+            fillAlpha: 0.98,
+            strokeColor: 0x1f6feb,
+            strokeAlpha: 0.6,
+            lineWidth: 4,
+          },
+          hover: {
+            fillColor: 0xf2f7ff,
+            fillAlpha: 0.92,
+            strokeColor: 0x1748ad,
+            strokeAlpha: 0.92,
+            lineWidth: 4,
+          },
+          disabled: {
+            fillColor: 0xe2e8f0,
+            fillAlpha: 0.9,
+            strokeColor: 0x94a3b8,
+            strokeAlpha: 0.45,
+            lineWidth: 3,
+          },
+        };
+        background.update(styles.base);
 
         const text = this.add
           .text(0, 0, label, {
             fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
             fontSize: clamp(width * 0.03, 26, 32),
-            color: "#1f2933",
+            color: "#111827",
             align: "center",
             wordWrap: { width: buttonWidth - 40 },
           })
           .setOrigin(0.5);
 
-        container.add([bg, text]);
+        container.add([background.graphics, text]);
         container.setSize(buttonWidth, buttonHeight);
-        container.setInteractive(
-          new Phaser.Geom.Rectangle(-buttonWidth / 2, -buttonHeight / 2, buttonWidth, buttonHeight),
-          Phaser.Geom.Rectangle.Contains
-        );
 
         container.on("pointerover", () => {
-          if (!this.awaitingAnswer) {
+          if (!this.awaitingAnswer || this.gameOver) {
             return;
           }
-          bg.setFillStyle(0x1f6feb, 0.12);
+          this.input.setDefaultCursor("pointer");
+          background.update(styles.hover);
+          text.setColor("#0b1120");
+          this.tweens.add({
+            targets: container,
+            scale: 1.04,
+            duration: 140,
+            ease: "Sine.easeOut",
+          });
         });
+
         container.on("pointerout", () => {
-          bg.setFillStyle(0xffffff, 0.96);
+          this.input.setDefaultCursor("default");
+          if (!this.awaitingAnswer || this.gameOver) {
+            return;
+          }
+          background.update(styles.base);
+          text.setColor("#111827");
+          this.tweens.add({
+            targets: container,
+            scale: 1,
+            duration: 120,
+            ease: "Sine.easeOut",
+          });
         });
+
         container.on("pointerdown", () => {
           if (!this.awaitingAnswer || this.gameOver) {
             return;
           }
+          this.tweens.add({
+            targets: container,
+            scale: 0.97,
+            duration: 90,
+            yoyo: true,
+            ease: "Sine.easeInOut",
+          });
           this.handleAnswer(label);
         });
 
-        buttons.push({ container, background: bg, label: text, value: label });
+        buttons.push({
+          container,
+          background,
+          text,
+          value: label,
+          styles,
+        });
       });
 
       return buttons;
     }
 
     enableOptionButtons(enabled) {
-    this.optionButtons.forEach((button) => {
-      button.container.disableInteractive();
-      if (enabled) {
-        button.container.setInteractive();
+      if (!enabled) {
+        this.input.setDefaultCursor("default");
       }
-      button.background.setFillStyle(0xffffff, enabled ? 0.96 : 0.5);
-      button.background.setStrokeStyle(4, 0x1f6feb, enabled ? 0.6 : 0.25);
-    });
-  }
+      this.optionButtons.forEach((button) => {
+        if (enabled) {
+          button.container.setInteractive();
+        } else {
+          button.container.disableInteractive();
+        }
+        button.container.setScale(1);
+        button.background.update(
+          enabled ? button.styles.base : button.styles.disabled
+        );
+        button.text.setColor(enabled ? "#111827" : "#475569");
+      });
+    }
 
     updateScore() {
       this.scoreText.setText(`Score: ${this.score}/${this.totalQuestions}`);
+      const ratio =
+        this.totalQuestions > 0 ? this.score / this.totalQuestions : 0;
+      if (ratio >= 0.75) {
+        this.scorePanel.update({
+          fillColor: 0xecfdf5,
+          fillAlpha: 1,
+          strokeColor: 0x16a34a,
+          strokeAlpha: 0.55,
+          lineWidth: 3,
+        });
+        this.scoreText.setColor("#0f766e");
+      } else {
+        this.scorePanel.update(this.scorePanelStyle);
+        this.scoreText.setColor("#1d4ed8");
+      }
     }
 
     advance() {
@@ -441,7 +1021,10 @@ const createGameScene = (config) => {
       this.hideFeedback();
       this.updateTimerText("");
 
-      if (this.examples.length && this.exampleIndex < this.examples.length - 1) {
+      if (
+        this.examples.length &&
+        this.exampleIndex < this.examples.length - 1
+      ) {
         this.exampleIndex += 1;
         const current = this.examples[this.exampleIndex];
         this.showRound(current, true);
@@ -496,6 +1079,7 @@ const createGameScene = (config) => {
           ? `Example ${this.exampleIndex + 1} of ${this.examples.length}`
           : `Question ${this.questionIndex + 1} of ${this.questions.length}`
       );
+      this.phaseText.setColor(isExample ? "#0f172a" : "#1d4ed8");
 
       this.tweens.add({
         targets: this.sentenceCard,
@@ -518,7 +1102,8 @@ const createGameScene = (config) => {
     playSentenceAudio(entry) {
       this.stopSentenceAudio();
       if (entry.audioKey) {
-        const sound = this.sound.get(entry.audioKey) ?? this.sound.add(entry.audioKey);
+        const sound =
+          this.sound.get(entry.audioKey) ?? this.sound.add(entry.audioKey);
         if (sound) {
           sound.play();
           this.activeSentenceSound = sound;
@@ -542,7 +1127,7 @@ const createGameScene = (config) => {
       }
 
       this.time.delayedCall(800, () => {
-        this.showFeedback("correct", "Example");
+        this.showFeedback("correct", "Correct");
       });
 
       this.time.delayedCall(1600, () => {
@@ -551,7 +1136,7 @@ const createGameScene = (config) => {
     }
 
     startResponseTimer() {
-      const durationMs = 3000;
+      const durationMs = 10000;
       const tickInterval = 100;
       let remaining = durationMs;
       this.updateTimerText(`Time: ${(remaining / 1000).toFixed(1)}s`);
@@ -576,6 +1161,15 @@ const createGameScene = (config) => {
 
     updateTimerText(text) {
       this.timerText.setText(text);
+      if (this.timerPanel) {
+        if (text) {
+          this.timerPanel.update(this.timerPanelActiveStyle);
+          this.timerText.setColor("#1d4ed8");
+        } else {
+          this.timerPanel.update(this.timerPanelBaseStyle);
+          this.timerText.setColor("#1f2937");
+        }
+      }
     }
 
     handleAnswer(selected) {
@@ -584,14 +1178,14 @@ const createGameScene = (config) => {
       }
       this.awaitingAnswer = false;
       this.enableOptionButtons(false);
+      this.stopSentenceAudio();
       this.timerEvent?.remove();
       this.timerEvent = null;
       this.updateTimerText("");
 
       const current = this.questions[this.questionIndex];
       const isCorrect =
-        current &&
-        selected.toLowerCase() === current.answer.toLowerCase();
+        current && selected.toLowerCase() === current.answer.toLowerCase();
       if (isCorrect) {
         this.score += 1;
         this.updateScore();
@@ -599,20 +1193,24 @@ const createGameScene = (config) => {
         this.showFeedback("correct", "Correct!");
       } else {
         this.playFeedbackSound("incorrect");
-        this.showFeedback(
-          "incorrect",
-          `Incorrect — Answer: ${current?.answer ?? ""}`
-        );
+        this.showFeedback("incorrect", "Incorrect");
       }
 
       const targetButton = this.optionButtons.find(
         (btn) => btn.value.toLowerCase() === selected.toLowerCase()
       );
       if (targetButton) {
-        this.pulseButton(
-          targetButton,
-          isCorrect ? 0x16a34a : 0xdc2626
+        this.pulseButton(targetButton, isCorrect ? 0x16a34a : 0xdc2626);
+      }
+      if (!isCorrect && current) {
+        const correctButton = this.optionButtons.find(
+          (btn) => btn.value.toLowerCase() === current.answer.toLowerCase()
         );
+        if (correctButton && correctButton !== targetButton) {
+          this.time.delayedCall(240, () => {
+            this.pulseButton(correctButton, 0x16a34a);
+          });
+        }
       }
 
       this.time.delayedCall(1500, () => {
@@ -626,14 +1224,18 @@ const createGameScene = (config) => {
       }
       this.awaitingAnswer = false;
       this.enableOptionButtons(false);
+      this.stopSentenceAudio();
       this.playFeedbackSound("timeout");
       const current = this.questions[this.questionIndex];
-      this.showFeedback(
-        "timeout",
-        current
-          ? `Time's up — Answer: ${current.answer}`
-          : "Time's up!"
-      );
+      this.showFeedback("timeout", "Time's up!");
+      if (current) {
+        const correctButton = this.optionButtons.find(
+          (btn) => btn.value.toLowerCase() === current.answer.toLowerCase()
+        );
+        if (correctButton) {
+          this.pulseButton(correctButton, 0xf97316);
+        }
+      }
       this.time.delayedCall(1400, () => {
         this.slideOutCurrent(() => this.advance());
       });
@@ -641,9 +1243,9 @@ const createGameScene = (config) => {
 
     playFeedbackSound(type) {
       const keyMap = {
-        correct: "feedback-correct",
-        incorrect: "feedback-incorrect",
-        timeout: "feedback-timeout",
+        correct: "feedback-correct-audio",
+        incorrect: "feedback-incorrect-audio",
+        timeout: "feedback-timeout-audio",
       };
       const key = keyMap[type];
       if (key && this.sound.get(key)) {
@@ -667,36 +1269,37 @@ const createGameScene = (config) => {
         timeout: 0xf97316,
       };
       const borderColor = colorMap[kind] ?? 0x1f2933;
-      this.feedbackBubble.setStrokeStyle(3, borderColor, 0.35);
-      this.feedbackLabel.setColor("#1f2933");
+      this.feedbackPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.98,
+        strokeColor: borderColor,
+        strokeAlpha: 0.35,
+        lineWidth: 3,
+      });
+      this.feedbackBackdrop.setVisible(true);
+      this.tweens.killTweensOf(this.feedbackBackdrop);
+      this.tweens.add({
+        targets: this.feedbackBackdrop,
+        alpha: 1,
+        duration: 200,
+        ease: "Sine.easeOut",
+      });
+      let labelColor = "#1f2933";
       this.feedbackLabel.setText(message);
-      this.feedbackIcon.clear();
       if (kind === "correct") {
-        this.feedbackIcon.lineStyle(10, 0x16a34a, 1);
-        this.feedbackIcon.beginPath();
-        this.feedbackIcon.moveTo(-50, 0);
-        this.feedbackIcon.lineTo(-20, 32);
-        this.feedbackIcon.lineTo(36, -28);
-        this.feedbackIcon.strokePath();
+        this.feedbackIcon.setTexture("feedback-correct-img");
+        this.feedbackIcon.setVisible(true);
+        labelColor = "#065f46";
       } else if (kind === "incorrect") {
-        this.feedbackIcon.lineStyle(10, 0xdc2626, 1);
-        this.feedbackIcon.beginPath();
-        this.feedbackIcon.moveTo(-36, -28);
-        this.feedbackIcon.lineTo(36, 28);
-        this.feedbackIcon.moveTo(36, -28);
-        this.feedbackIcon.lineTo(-36, 28);
-        this.feedbackIcon.strokePath();
+        this.feedbackIcon.setTexture("feedback-incorrect-img");
+        this.feedbackIcon.setVisible(true);
+        labelColor = "#7f1d1d";
       } else if (kind === "timeout") {
-        this.feedbackIcon.lineStyle(10, 0xf97316, 1);
-        this.feedbackIcon.beginPath();
-        this.feedbackIcon.moveTo(-40, -24);
-        this.feedbackIcon.lineTo(-40, 24);
-        this.feedbackIcon.moveTo(-10, -24);
-        this.feedbackIcon.lineTo(-10, 24);
-        this.feedbackIcon.moveTo(34, 0);
-        this.feedbackIcon.arc(4, 0, 38, Phaser.Math.DegToRad(-90), Phaser.Math.DegToRad(180), false);
-        this.feedbackIcon.strokePath();
+        this.feedbackIcon.setTexture("feedback-timeout-img");
+        this.feedbackIcon.setVisible(true);
+        labelColor = "#b45309";
       }
+      this.feedbackLabel.setColor(labelColor);
       this.tweens.add({
         targets: this.feedbackGroup,
         alpha: 1,
@@ -709,12 +1312,53 @@ const createGameScene = (config) => {
     hideFeedback() {
       this.feedbackGroup.setAlpha(0);
       this.feedbackGroup.setScale(1);
-      this.feedbackIcon.clear();
+      this.feedbackIcon.setVisible(false);
+      this.feedbackPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.98,
+        strokeColor: 0x1f2933,
+        strokeAlpha: 0.15,
+        lineWidth: 3,
+      });
+      this.feedbackLabel.setColor("#1f2933");
+      if (this.feedbackBackdrop.visible) {
+        this.tweens.killTweensOf(this.feedbackBackdrop);
+        this.tweens.add({
+          targets: this.feedbackBackdrop,
+          alpha: 0,
+          duration: 200,
+          ease: "Sine.easeInOut",
+          onComplete: () => {
+            this.feedbackBackdrop.setVisible(false);
+          },
+        });
+      }
     }
 
     pulseButton(button, color) {
-      button.background.setStrokeStyle(4, color, 0.7);
-      button.background.setFillStyle(0xffffff, 0.96);
+      button.background.update({
+        fillColor:
+          color === 0x16a34a
+            ? 0xecfdf5
+            : color === 0xdc2626
+            ? 0xfef2f2
+            : color === 0xf97316
+            ? 0xfffbeb
+            : 0xffffff,
+        fillAlpha: 1,
+        strokeColor: color,
+        strokeAlpha: 0.9,
+        lineWidth: 4,
+      });
+      if (color === 0x16a34a) {
+        button.text.setColor("#065f46");
+      } else if (color === 0xdc2626) {
+        button.text.setColor("#7f1d1d");
+      } else if (color === 0xf97316) {
+        button.text.setColor("#b45309");
+      } else {
+        button.text.setColor("#0b1120");
+      }
       this.tweens.add({
         targets: button.container,
         scale: { from: 1, to: 1.06 },
@@ -741,6 +1385,13 @@ const createGameScene = (config) => {
     }
 
     showCountdown(onComplete) {
+      if (statusElement) {
+        statusElement.textContent = "Get ready...";
+        statusElement.classList.remove("is-transparent");
+        statusElement.classList.add("is-visible");
+      }
+      this.summaryBackdrop.setVisible(false);
+      this.summaryBackdrop.setAlpha(0);
       this.countdownOverlay.setAlpha(1);
       this.countdownOverlay.setVisible(true);
       let value = 3;
@@ -778,11 +1429,31 @@ const createGameScene = (config) => {
 
     finishGame() {
       this.gameOver = true;
+      this.runState = "finished";
+      this.setStartButtonState("Restart", false);
       this.enableOptionButtons(false);
       this.stopSentenceAudio();
       this.timerEvent?.remove();
       this.timerEvent = null;
       this.updateTimerText("");
+      this.hideFeedback();
+      if (statusElement) {
+        statusElement.textContent =
+          "All sentences complete! Tap replay to try again.";
+        statusElement.classList.remove("is-transparent");
+        statusElement.classList.add("is-visible");
+      }
+      this.summaryBackdrop.setVisible(false);
+      this.summaryBackdrop.setAlpha(0);
+      this.summaryBackdrop.setVisible(true);
+      this.summaryBackdrop.setAlpha(0);
+      this.tweens.killTweensOf(this.summaryBackdrop);
+      this.tweens.add({
+        targets: this.summaryBackdrop,
+        alpha: 1,
+        duration: 260,
+        ease: "Sine.easeOut",
+      });
       this.tweens.add({
         targets: this.sentenceCard,
         alpha: 0,
@@ -800,13 +1471,26 @@ const createGameScene = (config) => {
           ? Math.round((this.score / this.totalQuestions) * 100)
           : 0;
       this.summaryTitle.setText(
-        percentage === 100 ? "Outstanding!" : percentage >= 60 ? "Great Job!" : "Keep Practicing!"
+        percentage === 100
+          ? "Outstanding!"
+          : percentage >= 60
+          ? "Great Job!"
+          : "Keep Practicing!"
       );
 
       this.summaryBody.setText(
         `You answered ${this.score} out of ${this.totalQuestions} sentences correctly.\nYour score: ${percentage}%`
       );
+      this.summaryBackdrop.setVisible(true);
+      this.summaryOverlay.setDepth(19);
       this.summaryOverlay.setVisible(true);
+      this.tweens.killTweensOf(this.summaryBackdrop);
+      this.tweens.add({
+        targets: this.summaryBackdrop,
+        alpha: 1,
+        duration: 280,
+        ease: "Sine.easeOut",
+      });
       this.tweens.add({
         targets: this.summaryOverlay,
         alpha: 1,
@@ -816,16 +1500,27 @@ const createGameScene = (config) => {
       });
     }
 
-    restartGame() {
+    restartGame(autoStart = false) {
       this.sound.stopAll();
-      this.scene.restart();
+      if (statusElement) {
+        statusElement.textContent = "Preparing game...";
+        statusElement.classList.remove("is-error");
+        statusElement.classList.remove("is-transparent");
+        statusElement.classList.add("is-visible");
+      }
+      this.summaryBackdrop.setVisible(false);
+      this.summaryBackdrop.setAlpha(0);
+      this.scene.restart({ autoStart });
     }
 
     shutdown() {
       this.sound.stopAll();
+      this.stopSentenceAudio();
       this.timerEvent?.remove();
       this.timerEvent = null;
-      this.events.removeAllListeners();
+      this.input?.setDefaultCursor?.("default");
+      this.scale.off("enterfullscreen", this.updateFullscreenLabel, this);
+      this.scale.off("leavefullscreen", this.updateFullscreenLabel, this);
     }
   }
 
@@ -857,7 +1552,7 @@ export const buildGame1Slides = (activityData = {}, context = {}) => {
 
   const status = document.createElement("div");
   status.className = "game1-status is-visible";
-  status.textContent = "Loading game…";
+  status.textContent = "Loading game...";
 
   wrapper.append(stage, status);
   slide.appendChild(wrapper);
@@ -872,7 +1567,9 @@ export const buildGame1Slides = (activityData = {}, context = {}) => {
     status.textContent = "The game content is not ready yet.";
     return [
       {
-        id: activityNumber ? `activity-${activityNumber}-game1` : "activity-game1",
+        id: activityNumber
+          ? `activity-${activityNumber}-game1`
+          : "activity-game1",
         element: slide,
         onEnter: () => {},
         onLeave: () => {},
@@ -887,7 +1584,8 @@ export const buildGame1Slides = (activityData = {}, context = {}) => {
   const startGame = () => {
     const PhaserLib = getPhaser();
     if (!PhaserLib) {
-      status.textContent = "Phaser library is missing. Please reload the lesson.";
+      status.textContent =
+        "Phaser library is missing. Please reload the lesson.";
       status.classList.add("is-error");
       return;
     }
@@ -898,7 +1596,7 @@ export const buildGame1Slides = (activityData = {}, context = {}) => {
       stage.innerHTML = "";
     }
 
-    status.textContent = "Preparing game…";
+    status.textContent = "Loading game...";
     status.classList.remove("is-error");
     status.classList.remove("is-transparent");
     status.classList.add("is-visible");
@@ -911,13 +1609,17 @@ export const buildGame1Slides = (activityData = {}, context = {}) => {
       statusElement: status,
       onRoundUpdate: (info) => {
         if (info.mode === "examples") {
-          status.textContent = `Example ${info.exampleIndex + 1} of ${info.exampleTotal}`;
+          status.textContent = `Example ${info.exampleIndex + 1} of ${
+            info.exampleTotal
+          } - Watch and listen`;
+          status.classList.remove("is-transparent");
         } else if (info.mode === "questions") {
-          status.textContent = `Question ${info.questionIndex + 1} of ${info.questionTotal}`;
-        }
-        if (info.mode) {
+          status.textContent = `Question ${info.questionIndex + 1} of ${
+            info.questionTotal
+          } - Score ${info.score}/${info.total}`;
           status.classList.add("is-transparent");
         }
+        status.classList.add("is-visible");
       },
     });
 
@@ -936,6 +1638,9 @@ export const buildGame1Slides = (activityData = {}, context = {}) => {
   };
 
   const destroyGame = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
     if (gameInstance) {
       gameInstance.destroy(true);
       gameInstance = null;
@@ -949,7 +1654,9 @@ export const buildGame1Slides = (activityData = {}, context = {}) => {
 
   return [
     {
-      id: activityNumber ? `activity-${activityNumber}-game1` : "activity-game1",
+      id: activityNumber
+        ? `activity-${activityNumber}-game1`
+        : "activity-game1",
       element: slide,
       onEnter: startGame,
       onLeave: destroyGame,
