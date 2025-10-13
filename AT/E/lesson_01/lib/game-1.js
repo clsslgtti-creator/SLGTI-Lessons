@@ -181,6 +181,8 @@ const createGameScene = (config) => {
       this.shouldAutoStart = false;
       this.startButton = null;
       this.fullscreenButton = null;
+      this.baseCanvasStyle = null;
+      this.baseParentStyle = null;
     }
 
     init(data = {}) {
@@ -271,6 +273,7 @@ const createGameScene = (config) => {
       this.cameras.main.setBackgroundColor("#eef2f9");
       this.events.once(Phaser.Scenes.Events.SHUTDOWN, this.shutdown, this);
       this.events.once(Phaser.Scenes.Events.DESTROY, this.shutdown, this);
+      this.gameUiElements = [];
 
       const bg = this.add.image(0, 0, "bg-img").setOrigin(0, 0);
       bg.displayWidth = this.sys.game.config.width;
@@ -285,6 +288,7 @@ const createGameScene = (config) => {
       );
       accentLeft.setBlendMode(Phaser.BlendModes.SCREEN);
       accentLeft.setDepth(0.5);
+      this.gameUiElements.push(accentLeft);
 
       const accentRight = this.add.circle(
         width * 0.82,
@@ -295,6 +299,7 @@ const createGameScene = (config) => {
       );
       accentRight.setBlendMode(Phaser.BlendModes.SCREEN);
       accentRight.setDepth(0.5);
+      this.gameUiElements.push(accentRight);
 
       const accentStripe = this.add.rectangle(
         width / 2,
@@ -305,6 +310,7 @@ const createGameScene = (config) => {
         0.06
       );
       accentStripe.setDepth(1);
+      this.gameUiElements.push(accentStripe);
 
       const topBar = createRoundedPanel(this, width * 0.82, 120, 28);
       topBar.update({
@@ -316,6 +322,7 @@ const createGameScene = (config) => {
       });
       topBar.graphics.setPosition(width / 2, 90);
       topBar.graphics.setDepth(2);
+      this.gameUiElements.push(topBar.graphics);
 
       this.phaseText = this.add
         .text(width / 2, 52, "Examples", {
@@ -327,6 +334,7 @@ const createGameScene = (config) => {
         })
         .setOrigin(0.5, 0);
       this.phaseText.setDepth(3);
+      this.gameUiElements.push(this.phaseText);
 
       const badgeHeight = clamp(height * 0.1, 58, 68);
       const timerBadgeWidth = clamp(width * 0.22, 200, 240);
@@ -363,6 +371,7 @@ const createGameScene = (config) => {
         this.timerText,
       ]);
       this.timerBadge.setDepth(3);
+      this.gameUiElements.push(this.timerBadge);
 
       const scoreBadgeWidth = clamp(width * 0.22, 220, 260);
       this.scorePanel = createRoundedPanel(
@@ -392,6 +401,7 @@ const createGameScene = (config) => {
         [this.scorePanel.graphics, this.scoreText]
       );
       this.scoreBadge.setDepth(3);
+      this.gameUiElements.push(this.scoreBadge);
       this.updateScore();
       this.updateTimerText("");
 
@@ -428,6 +438,7 @@ const createGameScene = (config) => {
         sentencePanel.graphics,
         this.sentenceText,
       ]);
+      this.gameUiElements.push(this.sentenceCard);
 
       this.feedbackBackdrop = this.add.rectangle(
         width / 2,
@@ -643,36 +654,38 @@ const createGameScene = (config) => {
     }
 
     createBottomBar(width, height) {
-      const barWidth = clamp(width * 0.88, 760, width - 40);
-      const barHeight = clamp(height * 0.12, 80, 96);
-      const barPanel = createRoundedPanel(this, barWidth, barHeight, 28);
+      const barWidth = width;
+      const barHeight = 40;
+      const barPanel = createRoundedPanel(this, barWidth, barHeight, 0);
       barPanel.update({
         fillColor: 0xffffff,
-        fillAlpha: 0.92,
+        fillAlpha: 0.6,
         strokeColor: 0x93c5fd,
-        strokeAlpha: 0.3,
+        strokeAlpha: 0,
         lineWidth: 3,
       });
 
-      const barContainer = this.add.container(
-        width / 2,
-        height - barHeight / 2 - 24,
-        [barPanel.graphics]
-      );
+      const barContainer = this.add.container(width / 2, height - 20, [
+        barPanel.graphics,
+      ]);
       barContainer.setDepth(6);
+      this.bottomBar = barContainer;
+      if (Array.isArray(this.gameUiElements)) {
+        this.gameUiElements.push(barContainer);
+      }
 
-      const fsWidth = clamp(barWidth * 0.24, 200, 240);
+      const fsWidth = 180;
       this.fullscreenButton = this.createBarButton(
         "Enter Fullscreen",
         fsWidth,
-        barHeight - 20,
+        barHeight - 10,
         {
           onClick: () => this.handleFullscreenToggle(),
           baseColor: 0x0f172a,
         }
       );
       this.fullscreenButton.container.setPosition(
-        barWidth / 2 - fsWidth / 2 - 30,
+        barWidth / 2 - fsWidth / 2 - 10,
         0
       );
       barContainer.add(this.fullscreenButton.container);
@@ -680,6 +693,17 @@ const createGameScene = (config) => {
       this.scale.on("enterfullscreen", this.updateFullscreenLabel, this);
       this.scale.on("leavefullscreen", this.updateFullscreenLabel, this);
       this.updateFullscreenLabel();
+    }
+
+    setGameUiVisible(isVisible) {
+      if (!Array.isArray(this.gameUiElements)) {
+        return;
+      }
+      this.gameUiElements.forEach((item) => {
+        if (item?.setVisible) {
+          item.setVisible(isVisible);
+        }
+      });
     }
 
     createBarButton(label, width, height, { onClick, baseColor }) {
@@ -783,9 +807,11 @@ const createGameScene = (config) => {
     handleFullscreenToggle() {
       if (this.scale.isFullscreen) {
         this.scale.stopFullscreen();
-      } else {
-        this.scale.startFullscreen();
+        return;
       }
+
+      const target = this.scale.parent || this.game.canvas;
+      this.scale.startFullscreen({ target, navigationUI: "hide" });
     }
 
     handleStartPressed(autoStart) {
@@ -828,6 +854,7 @@ const createGameScene = (config) => {
       this.time.delayedCall(120, () => {
         this.runState = "running";
         this.setStartButtonState("Restart", false, false);
+        this.setGameUiVisible(true);
         this.advance();
       });
     }
@@ -835,6 +862,7 @@ const createGameScene = (config) => {
     prepareIdleState() {
       this.runState = "idle";
       this.setStartButtonState("Start", false, true);
+      this.setGameUiVisible(false);
       this.enableOptionButtons(false);
       this.stopSentenceAudio();
       this.timerEvent?.remove();
@@ -873,6 +901,9 @@ const createGameScene = (config) => {
           width / 2 + (index === 0 ? -horizontalSpacing : horizontalSpacing);
         const container = this.add.container(xPos, baseY);
         container.setDepth(1);
+        if (Array.isArray(this.gameUiElements)) {
+          this.gameUiElements.push(container);
+        }
 
         const background = createRoundedPanel(
           this,
@@ -1521,6 +1552,38 @@ const createGameScene = (config) => {
       this.input?.setDefaultCursor?.("default");
       this.scale.off("enterfullscreen", this.updateFullscreenLabel, this);
       this.scale.off("leavefullscreen", this.updateFullscreenLabel, this);
+      this.setGameUiVisible(false);
+      const canvas = this.game?.canvas;
+      if (canvas) {
+        if (this.baseCanvasStyle) {
+          Object.assign(canvas.style, this.baseCanvasStyle);
+        } else {
+          canvas.style.width = "";
+          canvas.style.height = "";
+          canvas.style.maxWidth = "";
+          canvas.style.maxHeight = "";
+          canvas.style.margin = "";
+          canvas.style.display = "";
+        }
+      }
+      if (this.scale.parent) {
+        if (this.baseParentStyle) {
+          Object.assign(this.scale.parent.style, this.baseParentStyle);
+        } else {
+          this.scale.parent.style.width = "";
+          this.scale.parent.style.height = "";
+          this.scale.parent.style.maxWidth = "";
+          this.scale.parent.style.maxHeight = "";
+          this.scale.parent.style.margin = "";
+        }
+      }
+      if (this.baseDimensions) {
+        this.scale.resize(
+          this.baseDimensions.width,
+          this.baseDimensions.height
+        );
+      }
+      this.scale.refresh();
     }
   }
 
@@ -1632,9 +1695,14 @@ export const buildGame1Slides = (activityData = {}, context = {}) => {
         autoCenter: PhaserLib.Scale.CENTER_BOTH,
         width: 1280,
         height: 720,
+        fullscreenTarget: stage,
+        expandParent: true,
       },
       scene: GameScene,
     });
+    if (gameInstance?.scale) {
+      gameInstance.scale.fullscreenTarget = stage;
+    }
   };
 
   const destroyGame = () => {

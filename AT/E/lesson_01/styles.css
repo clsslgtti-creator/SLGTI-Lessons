@@ -614,6 +614,27 @@ body {
   position: relative;
 }
 
+.game1-stage:fullscreen,
+.game1-stage:-webkit-full-screen,
+.game1-stage:-moz-full-screen,
+.game1-stage:-ms-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.game1-stage:fullscreen canvas,
+.game1-stage:-webkit-full-screen canvas,
+.game1-stage:-moz-full-screen canvas,
+.game1-stage:-ms-fullscreen canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+
 .game1-stage canvas {
   display: block;
   width: 100% !important;
