@@ -603,7 +603,7 @@ const startInstructionCountdown = (controller) => {
 
   controller.restoreButton?.();
 
-  let remaining = 5;
+  let remaining = 3;
   indicator?.update(`Starts in ${remaining}s`);
 
   controller.countdownInterval = window.setInterval(() => {
@@ -651,7 +651,7 @@ const handleInstructionForSlide = (slideObj) => {
   stopInstructionPlayback();
 
   const indicator = createInstructionIndicator(slideObj);
-  indicator?.update(audioUrl ? "Instruction playing..." : "Starts in 5s");
+  indicator?.update(audioUrl ? "Instruction playing..." : "Starts in 3s");
 
   const controller = {
     slide: slideObj,

@@ -139,7 +139,7 @@ const buildModelDialogueSlide = (
   controls.className = 'slide__controls';
   const playBtn = document.createElement('button');
   playBtn.className = 'primary-btn';
-  playBtn.textContent = 'Play Model Dialogue ▶';
+  playBtn.textContent = 'Start';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(playBtn, status);
@@ -282,7 +282,7 @@ const buildPreListeningSlide = (
   const slide = document.createElement('section');
   slide.className = 'slide slide--pre-listening';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Pre-Listening</h2>
+    <h2>${activityLabel}${subActivitySuffix}</h2>
     <p class="slide__instruction">Match each picture with the correct place.</p>
   `;
 
@@ -522,7 +522,7 @@ const buildListeningSlide = (
   const slide = document.createElement('section');
   slide.className = 'slide slide--listening';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Listening</h2>
+    <h2>${activityLabel}${subActivitySuffix}</h2>
     <p class="slide__instruction">Listen to each dialogue from the lesson. They will play one after another.</p>
   `;
 
@@ -532,7 +532,7 @@ const buildListeningSlide = (
   controls.className = 'slide__controls';
   const playBtn = document.createElement('button');
   playBtn.className = 'primary-btn';
-  playBtn.textContent = 'Play All Dialogues ▶';
+  playBtn.textContent = 'Start';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(playBtn, status);
@@ -715,7 +715,7 @@ const buildListenAndRepeatSlide = (
   const slide = document.createElement('section');
   slide.className = 'slide slide--listen-repeat';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Listen &amp; Repeat</h2>
+    <h2>${activityLabel}${subActivitySuffix}</h2>
     <p class="slide__instruction">Listen to each sentence and use the pause to repeat it aloud.</p>
   `;
 
@@ -723,7 +723,7 @@ const buildListenAndRepeatSlide = (
   controls.className = 'slide__controls';
   const startBtn = document.createElement('button');
   startBtn.className = 'primary-btn';
-  startBtn.textContent = 'Start Listen & Repeat ▶';
+  startBtn.textContent = 'Start';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(startBtn, status);
@@ -924,7 +924,7 @@ const buildReadingSlide = (
   const slide = document.createElement('section');
   slide.className = 'slide slide--reading';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Reading</h2>
+    <h2>${activityLabel}${subActivitySuffix}</h2>
     <p class="slide__instruction">Read along with the audio. Each dialogue plays automatically.</p>
   `;
 
@@ -934,7 +934,7 @@ const buildReadingSlide = (
   controls.className = 'slide__controls';
   const playBtn = document.createElement('button');
   playBtn.className = 'primary-btn';
-  playBtn.textContent = 'Play Read Along ▶';
+  playBtn.textContent = 'Start';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(playBtn, status);
@@ -1125,7 +1125,7 @@ const buildSpeakingSlide = (
   const slide = document.createElement('section');
   slide.className = 'slide slide--speaking';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Speaking</h2>
+    <h2>${activityLabel}${subActivitySuffix}</h2>
     <p class="slide__instruction">Listen to each question, use the pause to answer, then compare your response with the model answer.</p>
   `;
 
@@ -1135,7 +1135,7 @@ const buildSpeakingSlide = (
   controls.className = 'slide__controls';
   const startBtn = document.createElement('button');
   startBtn.className = 'primary-btn';
-  startBtn.textContent = 'Start Speaking Practice ▶';
+  startBtn.textContent = 'Start';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(startBtn, status);

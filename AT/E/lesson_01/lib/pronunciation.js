@@ -119,7 +119,6 @@ const createPronunciationSlide = ({
   includeFocus,
   role,
   letter,
-  titleSuffix,
   type,
   mode,
   repeatPauseMs,
@@ -140,7 +139,8 @@ const createPronunciationSlide = ({
 
   const slide = document.createElement("section");
   slide.className = `slide slide--pronunciation ${slideRoleClass}`;
-  slide.innerHTML = `<h2>${activityLabel}${titleSuffix}</h2>`;
+  const headingLabel = letter ? `${activityLabel}${letter}` : activityLabel;
+  slide.innerHTML = `<h2>${headingLabel}</h2>`;
 
   if (mode === "read") {
     slide.classList.add("is-animated");
@@ -153,10 +153,10 @@ const createPronunciationSlide = ({
   const subjectLabel = type === "sentence" ? "the sentences" : "the words";
   description.textContent =
     mode === "listen"
-      ? `Press Play to listen to ${subjectLabel}.`
+      ? `Press Start to listen to ${subjectLabel}.`
       : mode === "listen-repeat"
-      ? `Press Play to listen, then use the pause to repeat ${subjectLabel}.`
-      : `Press Play and read along with ${subjectLabel}.`;
+      ? `Press Start to listen, then use the pause to repeat ${subjectLabel}.`
+      : `Press Start and read along with ${subjectLabel}.`;
   slide.appendChild(description);
 
   const controls = document.createElement("div");
@@ -164,13 +164,7 @@ const createPronunciationSlide = ({
   const playBtn = document.createElement("button");
   playBtn.type = "button";
   playBtn.className = "primary-btn";
-  const buttonSubject = type === "sentence" ? "Sentences" : "Words";
-  playBtn.textContent =
-    mode === "listen"
-      ? `Play ${buttonSubject}  ▶`
-      : mode === "listen-repeat"
-      ? `Start Listen & Repeat  ▶`
-      : `Play Read Along  ▶`;
+  playBtn.textContent = "Start";
   controls.appendChild(playBtn);
 
   const status = createStatus();
@@ -391,35 +385,30 @@ export const buildPronunciationSlides = (activityData = {}, context = {}) => {
     {
       role: "words-listen",
       letter: "a",
-      titleSuffix: "a - Listen",
       type: "word",
       mode: "listen",
     },
     {
       role: "words-repeat",
       letter: "b",
-      titleSuffix: "b - Listen & Repeat",
       type: "word",
       mode: "listen-repeat",
     },
     {
       role: "sentences-listen",
       letter: "c",
-      titleSuffix: "c - Listen",
       type: "sentence",
       mode: "listen",
     },
     {
       role: "sentences-repeat",
       letter: "d",
-      titleSuffix: "d - Listen & Repeat",
       type: "sentence",
       mode: "listen-repeat",
     },
     {
       role: "sentences-read",
       letter: "e",
-      titleSuffix: "e - Read Along",
       type: "sentence",
       mode: "read",
     },
