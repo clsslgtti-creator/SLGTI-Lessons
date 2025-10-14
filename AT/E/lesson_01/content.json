@@ -8,29 +8,24 @@
   "activity_1": {
     "type": "PRONUNCIATION",
     "focus": "Short /ɪ/",
-    "image": "assets/img/a_1_p.jpeg",
     "instructions": {
       "activity_1_a": {
         "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_1_b": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වචන නැවත කියන්න.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
       "activity_1_c": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
-        "audio": "assets/audio/a_2_i_d.mp3"
-      },
-      "activity_1_d": {
         "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_1_e": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+      "activity_1_d": {
+        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වචන නැවත කියන්න.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
-      "activity_1_f": {
+      "activity_1_e": {
         "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
         "audio": "assets/audio/a_2_i_d.mp3"
       }
@@ -41,28 +36,32 @@
         "word_text": "eng'i'ne",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "The eng'i'ne is hot.",
-        "sentence_audio": "assets/audio/a_1_p_1_b.mp3"
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p.jpeg"
       },
       {
         "id": "p_2",
         "word_text": "p'i'ston",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
         "sentence_text": "Check the p'i'ston rings.",
-        "sentence_audio": "assets/audio/a_1_p_2_b.mp3"
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p.jpeg"
       },
       {
         "id": "p_3",
         "word_text": "gearsh'i'ft",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "Move the gearsh'i'ft carefully.",
-        "sentence_audio": "assets/audio/a_1_p_3_b.mp3"
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p.jpeg"
       },
       {
         "id": "p_4",
         "word_text": "cl'i'p",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "Use a cl'i'p for the wire.",
-        "sentence_audio": "assets/audio/a_1_p_4_b.mp3"
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p.jpeg"
       }
     ]
   },

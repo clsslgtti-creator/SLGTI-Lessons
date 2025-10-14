@@ -1,139 +1,11 @@
+import { audioManager, computeSegmentGapMs, getBetweenItemGapMs } from './audio-manager.js';
+
 const smoothScrollIntoView = (element) => {
   if (!element) {
     return;
   }
   element.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
-
-const audioManager = (() => {
-  const cache = new Map();
-  const active = new Set();
-
-  const ensureEntry = (url) => {
-    if (!url) {
-      return null;
-    }
-
-    if (!cache.has(url)) {
-      const audioEl = new Audio(url);
-      audioEl.preload = 'auto';
-
-      const metaPromise = new Promise((resolve) => {
-        const resolveWithDuration = () => {
-          cleanup();
-          resolve(Number.isFinite(audioEl.duration) ? audioEl.duration : 0);
-        };
-
-        const resolveWithZero = () => {
-          cleanup();
-          resolve(0);
-        };
-
-        const cleanup = () => {
-          audioEl.removeEventListener('loadedmetadata', resolveWithDuration);
-          audioEl.removeEventListener('error', resolveWithZero);
-        };
-
-        audioEl.addEventListener('loadedmetadata', resolveWithDuration);
-        audioEl.addEventListener('error', resolveWithZero);
-      });
-
-      cache.set(url, { audio: audioEl, metaPromise });
-      audioEl.load();
-    }
-
-    return cache.get(url);
-  };
-
-  const play = (url, { signal } = {}) => {
-    const entry = ensureEntry(url);
-    if (!entry) {
-      return Promise.resolve();
-    }
-
-    const { audio, metaPromise } = entry;
-    audio.currentTime = 0;
-
-    const playPromise = new Promise((resolve, reject) => {
-      const handleEnded = () => {
-        cleanup();
-        resolve();
-      };
-
-      const handleError = () => {
-        cleanup();
-        reject(new Error(`Unable to play audio: ${url}`));
-      };
-
-      const handleAbort = () => {
-        cleanup();
-        audio.pause();
-        audio.currentTime = 0;
-        resolve();
-      };
-
-      const cleanup = () => {
-        audio.removeEventListener('ended', handleEnded);
-        audio.removeEventListener('error', handleError);
-        if (signal) {
-          signal.removeEventListener('abort', handleAbort);
-        }
-        active.delete(audio);
-      };
-
-      if (signal) {
-        if (signal.aborted) {
-          handleAbort();
-          return;
-        }
-        signal.addEventListener('abort', handleAbort, { once: true });
-      }
-
-      active.add(audio);
-
-      audio.addEventListener('ended', handleEnded, { once: true });
-      audio.addEventListener('error', handleError, { once: true });
-
-      metaPromise
-        .then(() => audio.play())
-        .catch(() => audio.play())
-        .catch((err) => {
-          cleanup();
-          reject(err);
-        });
-    });
-
-    return playPromise;
-  };
-
-  const stopAll = () => {
-    active.forEach((audio) => {
-      audio.pause();
-      audio.currentTime = 0;
-    });
-    active.clear();
-  };
-
-  const getDuration = async (url) => {
-    const entry = ensureEntry(url);
-    if (!entry) {
-      return 0;
-    }
-
-    try {
-      const duration = await entry.metaPromise;
-      return Number.isFinite(duration) ? duration : 0;
-    } catch {
-      return 0;
-    }
-  };
-
-  return {
-    play,
-    stopAll,
-    getDuration,
-  };
-})();
 
 const renderEmphasizedText = (element, text) => {
   const normalized = typeof text === 'string' ? text : '';
@@ -753,7 +625,7 @@ const buildListeningSlide = (
           }
 
           const duration = await audioManager.getDuration(url);
-          const gapMs = Math.max(1500, Math.round(duration * 2000));
+          const gapMs = computeSegmentGapMs('listen', duration);
           const hasMoreSegments = segIndex < segments.length - 1;
           const hasMoreItems = itemIndex < items.length - 1;
 
@@ -955,7 +827,9 @@ const buildListenAndRepeatSlide = (
           }
 
           const duration = await audioManager.getDuration(url);
-          const pauseMs = Math.max(basePauseMs, Math.round(duration * 2000));
+          const pauseMs = computeSegmentGapMs('listen-repeat', duration, {
+            repeatPauseMs: basePauseMs,
+          });
           if (pauseMs > 0) {
             status.textContent = 'Your turn...';
             await delay(pauseMs, { signal });
@@ -1151,7 +1025,7 @@ const buildReadingSlide = (
           }
 
           const duration = await audioManager.getDuration(url);
-          const pauseMs = Math.max(1500, Math.round(duration * 2000));
+          const pauseMs = computeSegmentGapMs('read', duration);
           await delay(pauseMs, { signal });
           if (signal.aborted) {
             break;
@@ -1164,7 +1038,7 @@ const buildReadingSlide = (
           break;
         }
 
-        await delay(1500, { signal });
+        await delay(getBetweenItemGapMs('read'), { signal });
         if (signal.aborted) {
           item.card.classList.remove('is-active');
           clearSegmentHighlights(item.segments);

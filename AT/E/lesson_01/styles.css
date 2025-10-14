@@ -524,38 +524,6 @@ body {
   border-color: rgba(31, 111, 235, 0.4);
 }
 
-.pronunciation-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  align-items: start;
-}
-
-.pronunciation-visual {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, rgba(31, 111, 235, 0.08), rgba(240, 171, 0, 0.08));
-  border-radius: var(--radius-md);
-  padding: clamp(1rem, 3vw, 1.75rem);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-}
-
-.pronunciation-visual img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: var(--radius-sm);
-}
-
-.pronunciation-visual__placeholder {
-  font-weight: 600;
-  color: var(--color-muted);
-  text-align: center;
-}
-
 .pronunciation-content {
   display: flex;
   flex-direction: column;
@@ -563,8 +531,8 @@ body {
 }
 
 .dialogue-grid--pronunciation {
-  grid-template-columns: 1fr;
-  gap: clamp(1rem, 2vw, 1.4rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
 .dialogue-card--pronunciation .dialogue-card__line {
@@ -577,14 +545,6 @@ body {
 }
 
 @media (max-width: 1024px) {
-.pronunciation-layout {
-  grid-template-columns: 1fr;
-}
-
-.pronunciation-visual {
-  order: -1;
-}
-
 .game-slide {
   display: flex;
   flex-direction: column;
