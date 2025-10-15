@@ -178,6 +178,21 @@ const createRoundedPanel = (
   };
 };
 
+const createButtonShadow = (scene, width, height, radius, offset = 6) => {
+  const shadow = scene.add.graphics();
+  shadow.fillStyle(0x000000, 1);
+  shadow.fillRoundedRect(
+    -width / 2 + offset,
+    -height / 2 + offset,
+    width,
+    height,
+    radius
+  );
+  shadow.setAlpha(0.5);
+  shadow.setDepth(0); // behind the button
+  return shadow;
+};
+
 const createGameScene = (config) => {
   const {
     options,
@@ -349,7 +364,7 @@ const createGameScene = (config) => {
       this.gameUiElements.push(topBar.graphics);
 
       this.phaseText = this.add
-        .text(width / 2, 52, "Examples", {
+        .text(width / 2, 70, "Examples", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "34px",
           color: "#0f172a",
@@ -361,13 +376,14 @@ const createGameScene = (config) => {
       this.gameUiElements.push(this.phaseText);
 
       const badgeHeight = clamp(height * 0.1, 58, 68);
-      const timerBadgeWidth = clamp(width * 0.22, 200, 240);
+      const timerBadgeWidth = clamp(width * 0.2, 160, 200);
       this.timerPanel = createRoundedPanel(
         this,
         timerBadgeWidth,
         badgeHeight,
-        26
+        20
       );
+      this.timerPanel.graphics.setPosition(50, -16);
       this.timerPanelBaseStyle = {
         fillColor: 0x1f6feb,
         fillAlpha: 0.12,
@@ -384,7 +400,7 @@ const createGameScene = (config) => {
       };
       this.timerPanel.update(this.timerPanelBaseStyle);
       this.timerText = this.add
-        .text(0, 0, "", {
+        .text(50, -16, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "26px",
           color: "#1d4ed8",
@@ -397,13 +413,14 @@ const createGameScene = (config) => {
       this.timerBadge.setDepth(3);
       this.gameUiElements.push(this.timerBadge);
 
-      const scoreBadgeWidth = clamp(width * 0.22, 220, 260);
+      const scoreBadgeWidth = clamp(width * 0.2, 160, 200);
       this.scorePanel = createRoundedPanel(
         this,
         scoreBadgeWidth,
         badgeHeight,
-        26
+        20
       );
+      this.scorePanel.graphics.setPosition(-50, -16);
       this.scorePanelStyle = {
         fillColor: 0x1f6feb,
         fillAlpha: 0.12,
@@ -413,7 +430,7 @@ const createGameScene = (config) => {
       };
       this.scorePanel.update(this.scorePanelStyle);
       this.scoreText = this.add
-        .text(0, 0, `Score: 0/${this.totalQuestions}`, {
+        .text(-50, -16, `Score: 0/${this.totalQuestions}`, {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "26px",
           color: "#1d4ed8",
@@ -585,8 +602,8 @@ const createGameScene = (config) => {
 
       const replayWidth = clamp(width * 0.26, 240, 320);
       const replayHeight = 86;
-      const buttonRowY = clamp(height * 0.26, 160, 210);
-      const buttonOffset = clamp(width * 0.22, 180, 260);
+      const buttonRowY = clamp(height * 0.22, 90, 150);
+      const buttonOffset = clamp(width * 0.22, 120, 180);
 
       const replayContainer = this.add.container(-buttonOffset, buttonRowY);
       const replayPanel = createRoundedPanel(
@@ -1064,7 +1081,7 @@ const createGameScene = (config) => {
 
       this.time.delayedCall(120, () => {
         this.runState = "running";
-        this.setStartButtonState("Restart", false, false);
+        this.setStartButtonState("Start", false, false);
         this.setGameUiVisible(true);
         this.advance();
       });
@@ -1124,14 +1141,14 @@ const createGameScene = (config) => {
         );
         const styles = {
           base: {
-            fillColor: 0xffffff,
+            fillColor: 0x1f6feb,
             fillAlpha: 0.98,
             strokeColor: 0x1f6feb,
             strokeAlpha: 0.6,
             lineWidth: 4,
           },
           hover: {
-            fillColor: 0xf2f7ff,
+            fillColor: 0x1748ad,
             fillAlpha: 0.92,
             strokeColor: 0x1748ad,
             strokeAlpha: 0.92,
@@ -1151,8 +1168,9 @@ const createGameScene = (config) => {
           .text(0, 0, label, {
             fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
             fontSize: clamp(width * 0.03, 26, 32),
-            color: "#111827",
+            color: "#fff",
             align: "center",
+            fontStyle: "bold",
             wordWrap: { width: buttonWidth - 40 },
           })
           .setOrigin(0.5);
@@ -1160,13 +1178,16 @@ const createGameScene = (config) => {
         container.add([background.graphics, text]);
         container.setSize(buttonWidth, buttonHeight);
 
+        const shadow = createButtonShadow(this, buttonWidth, buttonHeight, 28);
+        container.addAt(shadow, 0); // behind background
+
         container.on("pointerover", () => {
           if (!this.awaitingAnswer || this.gameOver) {
             return;
           }
           this.input.setDefaultCursor("pointer");
           background.update(styles.hover);
-          text.setColor("#0b1120");
+          text.setColor("#fff");
           this.tweens.add({
             targets: container,
             scale: 1.04,
@@ -1181,7 +1202,7 @@ const createGameScene = (config) => {
             return;
           }
           background.update(styles.base);
-          text.setColor("#111827");
+          text.setColor("#fff");
           this.tweens.add({
             targets: container,
             scale: 1,
@@ -1230,7 +1251,7 @@ const createGameScene = (config) => {
         button.background.update(
           enabled ? button.styles.base : button.styles.disabled
         );
-        button.text.setColor(enabled ? "#111827" : "#475569");
+        button.text.setColor(enabled ? "#fff" : "#475569");
       });
     }
 
@@ -1579,28 +1600,14 @@ const createGameScene = (config) => {
 
     pulseButton(button, color) {
       button.background.update({
-        fillColor:
-          color === 0x16a34a
-            ? 0xecfdf5
-            : color === 0xdc2626
-            ? 0xfef2f2
-            : color === 0xf97316
-            ? 0xfffbeb
-            : 0xffffff,
+        fillColor: color,
         fillAlpha: 1,
         strokeColor: color,
         strokeAlpha: 0.9,
         lineWidth: 4,
       });
-      if (color === 0x16a34a) {
-        button.text.setColor("#065f46");
-      } else if (color === 0xdc2626) {
-        button.text.setColor("#7f1d1d");
-      } else if (color === 0xf97316) {
-        button.text.setColor("#b45309");
-      } else {
-        button.text.setColor("#0b1120");
-      }
+
+      button.text.setColor("#fff");
       this.tweens.add({
         targets: button.container,
         scale: { from: 1, to: 1.06 },
@@ -1672,7 +1679,6 @@ const createGameScene = (config) => {
     finishGame() {
       this.gameOver = true;
       this.runState = "finished";
-      this.setStartButtonState("Restart", false);
       this.enableOptionButtons(false);
       this.stopSentenceAudio();
       this.timerEvent?.remove();
