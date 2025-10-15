@@ -41,6 +41,23 @@ const normalizeExamples = (rawExamples = [], options) => {
     .filter(Boolean);
 };
 
+const isMobileDevice = () => {
+  if (typeof navigator === "undefined") {
+    return false;
+  }
+  const ua = (navigator.userAgent || "").toLowerCase();
+  const hasTouch =
+    (typeof window !== "undefined" && "ontouchstart" in window) ||
+    navigator.maxTouchPoints > 1 ||
+    navigator.msMaxTouchPoints > 1;
+  return (
+    hasTouch &&
+    /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile/i.test(
+      ua
+    )
+  );
+};
+
 const normalizeQuestions = (rawQuestions = [], options) => {
   if (!Array.isArray(rawQuestions)) {
     return [];
@@ -183,6 +200,8 @@ const createGameScene = (config) => {
       this.fullscreenButton = null;
       this.baseCanvasStyle = null;
       this.baseParentStyle = null;
+      this.backgroundImage = null;
+      this.orientationLocked = false;
     }
 
     init(data = {}) {
@@ -208,6 +227,7 @@ const createGameScene = (config) => {
       this.gameOver = false;
       this.didNotifyReady = false;
       this.summaryDisplayed = false;
+      this.orientationLocked = false;
     }
 
     preload() {
@@ -275,9 +295,10 @@ const createGameScene = (config) => {
       this.events.once(Phaser.Scenes.Events.DESTROY, this.shutdown, this);
       this.gameUiElements = [];
 
-      const bg = this.add.image(0, 0, "bg-img").setOrigin(0, 0);
-      bg.displayWidth = this.sys.game.config.width;
-      bg.displayHeight = this.sys.game.config.height;
+      this.backgroundImage = this.add.image(0, 0, "bg-img").setOrigin(0, 0);
+      this.backgroundImage.setDepth(-1);
+      this.backgroundImage.setScrollFactor(0);
+      this.updateBackgroundSize();
 
       const accentLeft = this.add.circle(
         width * 0.18,
@@ -630,6 +651,7 @@ const createGameScene = (config) => {
       this.createCenterStartButton(width, height);
       this.createBottomBar(width, height);
       this.prepareIdleState();
+      this.scale.on("resize", this.handleResize, this);
 
       if (this.shouldAutoStart) {
         this.handleStartPressed(true);
@@ -690,9 +712,113 @@ const createGameScene = (config) => {
       );
       barContainer.add(this.fullscreenButton.container);
 
-      this.scale.on("enterfullscreen", this.updateFullscreenLabel, this);
-      this.scale.on("leavefullscreen", this.updateFullscreenLabel, this);
+      this.scale.on("enterfullscreen", this.handleEnterFullscreen, this);
+      this.scale.on("leavefullscreen", this.handleLeaveFullscreen, this);
       this.updateFullscreenLabel();
+    }
+
+    updateBackgroundSize(width, height) {
+      if (!this.backgroundImage) {
+        return;
+      }
+      const targetWidth =
+        width ??
+        this.scale.gameSize?.width ??
+        this.sys.game.config.width ??
+        this.backgroundImage.width;
+      const targetHeight =
+        height ??
+        this.scale.gameSize?.height ??
+        this.sys.game.config.height ??
+        this.backgroundImage.height;
+      this.backgroundImage.setDisplaySize(targetWidth, targetHeight);
+    }
+
+    handleResize(gameSize) {
+      const nextWidth =
+        gameSize?.width ??
+        this.scale.gameSize?.width ??
+        this.sys.game.config.width;
+      const nextHeight =
+        gameSize?.height ??
+        this.scale.gameSize?.height ??
+        this.sys.game.config.height;
+      this.updateBackgroundSize(nextWidth, nextHeight);
+    }
+
+    async lockLandscapeOrientation() {
+      if (!isMobileDevice() || typeof window === "undefined") {
+        return;
+      }
+      const screenRef = window.screen;
+      if (!screenRef) {
+        return;
+      }
+      const orientation = screenRef.orientation;
+      if (orientation?.lock) {
+        try {
+          await orientation.lock("landscape");
+          this.orientationLocked = true;
+          return;
+        } catch (error) {
+          this.orientationLocked = false;
+        }
+      }
+      const legacyLock =
+        screenRef.lockOrientation ||
+        screenRef.mozLockOrientation ||
+        screenRef.msLockOrientation;
+      if (legacyLock) {
+        try {
+          legacyLock.call(screenRef, "landscape");
+          this.orientationLocked = true;
+        } catch (error) {
+          this.orientationLocked = false;
+        }
+      }
+    }
+
+    unlockOrientation() {
+      if (!this.orientationLocked && !isMobileDevice()) {
+        return;
+      }
+      if (typeof window === "undefined") {
+        return;
+      }
+      const screenRef = window.screen;
+      if (!screenRef) {
+        return;
+      }
+      const orientation = screenRef.orientation;
+      if (orientation?.unlock) {
+        try {
+          orientation.unlock();
+        } catch (error) {
+          // ignore
+        }
+      }
+      const legacyUnlock =
+        screenRef.unlockOrientation ||
+        screenRef.mozUnlockOrientation ||
+        screenRef.msUnlockOrientation;
+      if (legacyUnlock) {
+        try {
+          legacyUnlock.call(screenRef);
+        } catch (error) {
+          // ignore
+        }
+      }
+      this.orientationLocked = false;
+    }
+
+    handleEnterFullscreen() {
+      this.updateFullscreenLabel();
+      this.lockLandscapeOrientation();
+    }
+
+    handleLeaveFullscreen() {
+      this.updateFullscreenLabel();
+      this.unlockOrientation();
     }
 
     setGameUiVisible(isVisible) {
@@ -1550,8 +1676,11 @@ const createGameScene = (config) => {
       this.timerEvent?.remove();
       this.timerEvent = null;
       this.input?.setDefaultCursor?.("default");
-      this.scale.off("enterfullscreen", this.updateFullscreenLabel, this);
-      this.scale.off("leavefullscreen", this.updateFullscreenLabel, this);
+      this.scale.off("enterfullscreen", this.handleEnterFullscreen, this);
+      this.scale.off("leavefullscreen", this.handleLeaveFullscreen, this);
+      this.scale.off("resize", this.handleResize, this);
+      this.unlockOrientation();
+      this.backgroundImage = null;
       this.setGameUiVisible(false);
       const canvas = this.game?.canvas;
       if (canvas) {
