@@ -313,10 +313,16 @@ const createGameScene = (config) => {
       this.events.once(Phaser.Scenes.Events.DESTROY, this.shutdown, this);
       this.gameUiElements = [];
 
-      this.backgroundImage = this.add.image(0, 0, "bg-img").setOrigin(0, 0);
-      this.backgroundImage.setDepth(-1);
+      const baseWidth =
+        this.scale.gameSize?.width ?? this.sys.game.config.width ?? width;
+      const baseHeight =
+        this.scale.gameSize?.height ?? this.sys.game.config.height ?? height;
+      this.backgroundImage = this.add
+        .image(baseWidth / 2, baseHeight / 2, "bg-img")
+        .setOrigin(0.5);
+      this.backgroundImage.setDepth(0);
       this.backgroundImage.setScrollFactor(0);
-      this.updateBackgroundSize();
+      this.updateBackgroundSize(baseWidth, baseHeight);
 
       const accentLeft = this.add.circle(
         width * 0.18,
@@ -818,6 +824,7 @@ const createGameScene = (config) => {
         this.sys.game.config.height ??
         this.backgroundImage.height;
       this.backgroundImage.setDisplaySize(targetWidth, targetHeight);
+      this.backgroundImage.setPosition(targetWidth / 2, targetHeight / 2);
     }
 
     handleResize(gameSize) {
