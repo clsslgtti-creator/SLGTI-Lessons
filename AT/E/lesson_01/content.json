@@ -268,7 +268,7 @@
     "instructions": {
       "activity_4_a": {
         "text": "You will hear each recording twice. Listen and mark the numbers you hear.\nඔබට සෑම ශ්‍රව්‍යයක්ම දෙවරක් අසන්නට ලැබෙනු ඇත. අසා ඔබට ඇසුණු අංක සලකුණු කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
-        "audio": "assets/audio/a_3_i_a.mp3"
+        "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_4_b": {
         "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
@@ -280,7 +280,7 @@
       },
       "activity_4_d": {
         "text": "Listen and type the correct number.\nඅසන්න සහ නිවැරදි අංකය ටයිප් කරන්න.\nகேட்டு சரியான எண்ணைத் தட்டச்சு செய்யுங்கள்.",
-        "audio": "assets/audio/a_3_i_a.mp3"
+        "audio": "assets/audio/a_4_i_d.mp3"
       }
     },
     "content": {
