@@ -202,6 +202,9 @@ const createGameScene = (config) => {
       this.baseParentStyle = null;
       this.backgroundImage = null;
       this.orientationLocked = false;
+      this.scaleListenersAttached = false;
+      this.exitButton = null;
+      this.exitPanel = null;
     }
 
     init(data = {}) {
@@ -582,7 +585,10 @@ const createGameScene = (config) => {
 
       const replayWidth = clamp(width * 0.26, 240, 320);
       const replayHeight = 86;
-      const replayContainer = this.add.container(0, 120);
+      const buttonRowY = clamp(height * 0.26, 160, 210);
+      const buttonOffset = clamp(width * 0.22, 180, 260);
+
+      const replayContainer = this.add.container(-buttonOffset, buttonRowY);
       const replayPanel = createRoundedPanel(
         this,
         replayWidth,
@@ -606,7 +612,7 @@ const createGameScene = (config) => {
         .setOrigin(0.5);
       replayContainer.add([replayPanel.graphics, replayLabel]);
       replayContainer.setSize(replayWidth, replayHeight);
-      replayContainer.setInteractive();
+      replayContainer.setInteractive({ useHandCursor: true });
       replayContainer.on("pointerover", () => {
         this.input.setDefaultCursor("pointer");
         replayPanel.update({
@@ -632,11 +638,65 @@ const createGameScene = (config) => {
       });
       this.replayButton = replayContainer;
       this.replayPanel = replayPanel;
+
+      const exitContainer = this.add.container(buttonOffset, buttonRowY);
+      const exitPanel = createRoundedPanel(
+        this,
+        replayWidth,
+        replayHeight,
+        replayHeight / 2
+      );
+      exitPanel.update({
+        fillColor: 0x334155,
+        fillAlpha: 1,
+        strokeColor: 0x1f2937,
+        strokeAlpha: 0.9,
+        lineWidth: 0,
+      });
+      const exitLabel = this.add
+        .text(0, 0, "Exit", {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: clamp(width * 0.028, 22, 28),
+          color: "#ffffff",
+          fontStyle: "bold",
+        })
+        .setOrigin(0.5);
+      exitContainer.add([exitPanel.graphics, exitLabel]);
+      exitContainer.setSize(replayWidth, replayHeight);
+      exitContainer.setInteractive({ useHandCursor: true });
+      exitContainer.on("pointerover", () => {
+        this.input.setDefaultCursor("pointer");
+        exitPanel.update({
+          fillColor: 0x1e293b,
+          fillAlpha: 1,
+          strokeColor: 0x0f172a,
+          strokeAlpha: 0.9,
+          lineWidth: 0,
+        });
+      });
+      exitContainer.on("pointerout", () => {
+        this.input.setDefaultCursor("default");
+        exitPanel.update({
+          fillColor: 0x334155,
+          fillAlpha: 1,
+          strokeColor: 0x1f2937,
+          strokeAlpha: 0.9,
+          lineWidth: 0,
+        });
+      });
+      exitContainer.on("pointerdown", () => {
+        this.input.setDefaultCursor("default");
+        this.exitToIdleState();
+      });
+      this.exitButton = exitContainer;
+      this.exitPanel = exitPanel;
+
       this.summaryOverlay.add([
         summaryPanel.graphics,
         this.summaryTitle,
         this.summaryBody,
         replayContainer,
+        exitContainer,
       ]);
       this.summaryOverlay.setAlpha(0);
       this.summaryOverlay.setVisible(false);
@@ -649,7 +709,8 @@ const createGameScene = (config) => {
       this.enableOptionButtons(false);
 
       this.createCenterStartButton(width, height);
-      this.createBottomBar(width, height);
+      // this.createBottomBar(width, height);
+      this.attachScaleListeners();
       this.prepareIdleState();
       this.scale.on("resize", this.handleResize, this);
 
@@ -712,9 +773,17 @@ const createGameScene = (config) => {
       );
       barContainer.add(this.fullscreenButton.container);
 
+      this.attachScaleListeners();
+      this.updateFullscreenLabel();
+    }
+
+    attachScaleListeners() {
+      if (this.scaleListenersAttached) {
+        return;
+      }
       this.scale.on("enterfullscreen", this.handleEnterFullscreen, this);
       this.scale.on("leavefullscreen", this.handleLeaveFullscreen, this);
-      this.updateFullscreenLabel();
+      this.scaleListenersAttached = true;
     }
 
     updateBackgroundSize(width, height) {
@@ -940,6 +1009,18 @@ const createGameScene = (config) => {
       this.scale.startFullscreen({ target, navigationUI: "hide" });
     }
 
+    requestFullscreen() {
+      if (this.scale.isFullscreen) {
+        return;
+      }
+      const target = this.scale.parent || this.game.canvas;
+      try {
+        this.scale.startFullscreen({ target, navigationUI: "hide" });
+      } catch (error) {
+        // Ignore fullscreen initiation errors (user gesture requirements, etc.)
+      }
+    }
+
     handleStartPressed(autoStart) {
       if (this.runState === "loading") {
         return;
@@ -947,6 +1028,10 @@ const createGameScene = (config) => {
       if (this.runState === "running" && !autoStart) {
         this.restartGame(true);
         return;
+      }
+
+      if (!autoStart) {
+        this.requestFullscreen();
       }
 
       this.runState = "loading";
@@ -1596,7 +1681,7 @@ const createGameScene = (config) => {
       this.hideFeedback();
       if (statusElement) {
         statusElement.textContent =
-          "All sentences complete! Tap replay to try again.";
+          "All sentences complete! Tap Replay to try again or Exit to finish.";
         statusElement.classList.remove("is-transparent");
         statusElement.classList.add("is-visible");
       }
@@ -1670,6 +1755,25 @@ const createGameScene = (config) => {
       this.scene.restart({ autoStart });
     }
 
+    exitToIdleState() {
+      this.sound.stopAll();
+      this.stopSentenceAudio();
+      this.timerEvent?.remove();
+      this.timerEvent = null;
+      this.summaryBackdrop.setVisible(false);
+      this.summaryBackdrop.setAlpha(0);
+      this.summaryOverlay.setVisible(false);
+      this.summaryOverlay.setAlpha(0);
+      this.shouldAutoStart = false;
+      this.resetState();
+      this.prepareIdleState();
+      if (this.scale.isFullscreen) {
+        this.scale.stopFullscreen();
+      } else {
+        this.unlockOrientation();
+      }
+    }
+
     shutdown() {
       this.sound.stopAll();
       this.stopSentenceAudio();
@@ -1679,6 +1783,7 @@ const createGameScene = (config) => {
       this.scale.off("enterfullscreen", this.handleEnterFullscreen, this);
       this.scale.off("leavefullscreen", this.handleLeaveFullscreen, this);
       this.scale.off("resize", this.handleResize, this);
+      this.scaleListenersAttached = false;
       this.unlockOrientation();
       this.backgroundImage = null;
       this.setGameUiVisible(false);
