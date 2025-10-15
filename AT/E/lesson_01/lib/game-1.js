@@ -1392,16 +1392,16 @@ const createGameScene = (config) => {
       const targetButton = this.optionButtons.find(
         (btn) => btn.value.toLowerCase() === entry.answer.toLowerCase()
       );
-      if (targetButton) {
-        this.pulseButton(targetButton, 0x16a34a);
-      }
-
-      this.time.delayedCall(800, () => {
-        this.showFeedback("correct", "Correct");
-      });
-
-      this.time.delayedCall(1600, () => {
-        this.slideOutCurrent(() => this.advance());
+      this.time.delayedCall(1500, () => {
+        if (targetButton) {
+          this.pulseButton(targetButton, 0x16a34a);
+        }
+        this.time.delayedCall(800, () => {
+          this.showFeedback("correct", "Correct");
+        });
+        this.time.delayedCall(1600, () => {
+          this.slideOutCurrent(() => this.advance());
+        });
       });
     }
 

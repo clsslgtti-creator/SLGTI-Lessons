@@ -815,24 +815,14 @@ const fetchJson = async (path) => {
 };
 
 const renderLessonMeta = (meta) => {
-  const parts = [
-    meta?.section ? meta.section : null,
-    meta?.level ? `${meta.level} level` : null,
-  ].filter(Boolean);
-
-  const joinedMeta = parts.length ? parts.join(" &middot; ") : "";
-
   lessonMetaEl.innerHTML = `
   <div class="_meta">
-    <div>
+    <div class="lesson-title-container">
       <h1 class="lesson-title">Lesson ${meta?.lesson_no ?? ""}</h1>
-      ${joinedMeta ? `<p class="lesson-meta">${joinedMeta}</p>` : ""}
+      ${meta?.section ? `<p class="lesson-meta">${meta?.section}</p>` : ""}
+      ${meta?.level ? `<p class="lesson-meta">${meta?.level} Level</p>` : ""}
     </div>
-    ${
-      meta?.prepared_by
-        ? `<p class="lesson-author">Developed by <br> <img src="assets/img/logo.jpg" /></p>`
-        : ""
-    }
+    <img class="lesson-logo" src="assets/img/logo.png" />
     </div
   `;
 };
