@@ -114,7 +114,11 @@ const ensureScormConnection = () => {
 };
 
 const getResumeSlideIndex = (totalSlides) => {
-  if (!scormState.connected || !Number.isInteger(totalSlides) || totalSlides <= 0) {
+  if (
+    !scormState.connected ||
+    !Number.isInteger(totalSlides) ||
+    totalSlides <= 0
+  ) {
     return 0;
   }
   const upperBound = totalSlides - 1;
@@ -169,7 +173,11 @@ const persistScormProgress = (index, totalSlides) => {
 };
 
 const markLessonComplete = (index, totalSlides) => {
-  if (!ensureScormConnection() || !scormState.api || scormState.completionRecorded) {
+  if (
+    !ensureScormConnection() ||
+    !scormState.api ||
+    scormState.completionRecorded
+  ) {
     return;
   }
 
@@ -815,14 +823,17 @@ const renderLessonMeta = (meta) => {
   const joinedMeta = parts.length ? parts.join(" &middot; ") : "";
 
   lessonMetaEl.innerHTML = `
-    <h1 class="lesson-title">Lesson ${meta?.lesson_no ?? ""}</h1>
-    ${meta?.focus ? `<p class="lesson-focus">${meta.focus}</p>` : ""}
-    ${joinedMeta ? `<p class="lesson-meta">${joinedMeta}</p>` : ""}
+  <div class="_meta">
+    <div>
+      <h1 class="lesson-title">Lesson ${meta?.lesson_no ?? ""}</h1>
+      ${joinedMeta ? `<p class="lesson-meta">${joinedMeta}</p>` : ""}
+    </div>
     ${
       meta?.prepared_by
-        ? `<p class="lesson-author">Prepared by ${meta.prepared_by}</p>`
+        ? `<p class="lesson-author">Developed by <br> <img src="assets/img/logo.jpg" /></p>`
         : ""
     }
+    </div
   `;
 };
 
@@ -1089,9 +1100,7 @@ const init = async () => {
 
     slides = buildLessonSlides(data);
     const scormReady = ensureScormConnection();
-    const resumeIndex = scormReady
-      ? getResumeSlideIndex(slides.length)
-      : 0;
+    const resumeIndex = scormReady ? getResumeSlideIndex(slides.length) : 0;
     currentSlideIndex = resumeIndex;
     attachNavigation();
 

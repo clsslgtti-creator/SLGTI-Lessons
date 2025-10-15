@@ -63,11 +63,21 @@ body {
   color: var(--color-primary);
 }
 
+._meta{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
 .lesson-meta,
 .lesson-author {
   margin: 0.15rem 0;
   color: var(--color-muted);
   font-size: 0.95rem;
+}
+
+.lesson-author img {
+  width: 200px;
 }
 
 .slides {
@@ -285,6 +295,7 @@ body {
   margin: 0 0 clamp(1.2rem, 3vw, 1.8rem);
   color: #111;
   font-size: clamp(1.1rem, 2.8vw, 1.35rem);
+  font-weight: bold;
 }
 
 .slide__controls {
