@@ -561,11 +561,14 @@ body {
 }
 
 @media (max-width: 1024px) {
-.game-slide {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1rem, 2.5vw, 1.8rem);
-}
+  .slide.game-slide.is-active {
+    display: flex;
+  }
+
+  .game-slide {
+    flex-direction: column;
+    gap: clamp(1rem, 2.5vw, 1.8rem);
+  }
 
 .game1-shell {
   display: flex;

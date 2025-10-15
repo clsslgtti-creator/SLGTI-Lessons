@@ -743,8 +743,8 @@ const createGameScene = (config) => {
     }
 
     createCenterStartButton(width, height) {
-      const buttonWidth = clamp(width * 0.3, 240, 360);
-      const buttonHeight = clamp(height * 0.14, 100, 140);
+      const buttonWidth = clamp(width * 0.4, 480, 520);
+      const buttonHeight = clamp(height * 0.28, 200, 280);
 
       this.startButton = this.createBarButton(
         "Start",
@@ -757,6 +757,14 @@ const createGameScene = (config) => {
       );
       this.startButton.container.setPosition(width / 2, height / 2);
       this.startButton.container.setDepth(12);
+      this.tweens.add({
+        targets: this.startButton.container,
+        scale: 1.04,
+        duration: 500,
+        ease: "Sine.linear",
+        repeat: -1,
+        yoyo: true,
+      });
     }
 
     createBottomBar(width, height) {
@@ -963,7 +971,7 @@ const createGameScene = (config) => {
       const text = this.add
         .text(0, 0, label, {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.09, 20, 28),
+          fontSize: clamp(width * 0.3, 72, 100),
           color: "#ffffff",
           fontStyle: "bold",
         })
@@ -1376,6 +1384,7 @@ const createGameScene = (config) => {
           this.sound.get(entry.audioKey) ?? this.sound.add(entry.audioKey);
         if (sound) {
           sound.play();
+          sound.setVolume(1); 
           this.activeSentenceSound = sound;
         }
       }
@@ -1520,6 +1529,7 @@ const createGameScene = (config) => {
       const key = keyMap[type];
       if (key && this.sound.get(key)) {
         this.sound.play(key);
+        this.sound.setVolume(1); 
         return;
       }
 

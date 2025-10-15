@@ -10,23 +10,23 @@
     "focus": "Short /ɪ/",
     "instructions": {
       "activity_1_a": {
-        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_1_b": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වචන නැවත කියන්න.",
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
       "activity_1_c": {
-        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_1_d": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වචන නැවත කියන්න.",
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
       "activity_1_e": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       }
     },
@@ -70,11 +70,11 @@
     "focus": "Verb ‘to be’ and preposition ‘on’",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogue.\nமாதிரி உரையாடலை கேளுங்கள்.\nආදර්ශ සංවාදය අසා බලන්න.",
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදය අසා බලන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {
-        "text": "Match the words with the pictures.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.\nපදයන් පින්තූර සමග ගැලපන්න.",
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_2_i_a.mp3"
       },
       "activity_2_b": {
@@ -82,15 +82,15 @@
         "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_2_c": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
       "activity_2_d": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       },
       "activity_2_e": {
-        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.",
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
         "audio": "assets/audio/a_2_i_e.mp3"
       }
     },
@@ -181,7 +181,7 @@
     "type": "GAME-1",
     "instructions": {
       "activity_1_a": {
-        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural. ",
+        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම විෂය ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
         "audio": "assets/audio/a_3_i_a.mp3"
       }
     },
@@ -190,13 +190,13 @@
       {
         "id": "e_1",
         "sentence": "He is at the site.",
-        "audio" : "assets/audio/a_3_ex_1.mp3",
+        "audio": "assets/audio/a_3_ex_1.mp3",
         "answer": "Singular"
       },
       {
         "id": "e_2",
         "sentence": "Her parents are technicians.",
-        "audio" : "assets/audio/a_3_ex_2.mp3",
+        "audio": "assets/audio/a_3_ex_2.mp3",
         "answer": "Plural"
       }
     ],
@@ -204,61 +204,61 @@
       {
         "id": "g_1",
         "sentence": "Meena is in Kandy today.",
-        "audio" : "assets/audio/a_3_g_1.mp3",
+        "audio": "assets/audio/a_3_g_1.mp3",
         "answer": "Singular"
       },
       {
         "id": "g_2",
         "sentence": "Are they at home today?",
-        "audio" : "assets/audio/a_3_g_2.mp3",
+        "audio": "assets/audio/a_3_g_2.mp3",
         "answer": "Plural"
       },
       {
         "id": "g_3",
         "sentence": "My parents are at the head office.",
-        "audio" : "assets/audio/a_3_g_3.mp3",
+        "audio": "assets/audio/a_3_g_3.mp3",
         "answer": "Plural"
       },
       {
         "id": "g_4",
         "sentence": "My teacher and I are at the factory.",
-        "audio" : "assets/audio/a_3_g_4.mp3",
+        "audio": "assets/audio/a_3_g_4.mp3",
         "answer": "Plural"
       },
       {
         "id": "g_5",
         "sentence": "Some men are still in the storeroom.",
-        "audio" : "assets/audio/a_3_g_5.mp3",
+        "audio": "assets/audio/a_3_g_5.mp3",
         "answer": "Plural"
       },
       {
         "id": "g_6",
         "sentence": "It is on the kitchen counter.",
-        "audio" : "assets/audio/a_3_g_6.mp3",
+        "audio": "assets/audio/a_3_g_6.mp3",
         "answer": "Singular"
       },
       {
         "id": "g_7",
         "sentence": "The clients are happy with your product.",
-        "audio" : "assets/audio/a_3_g_7.mp3",
+        "audio": "assets/audio/a_3_g_7.mp3",
         "answer": "Plural"
       },
       {
         "id": "g_8",
         "sentence": "Many sick trainees are absent today.",
-        "audio" : "assets/audio/a_3_g_8.mp3",
+        "audio": "assets/audio/a_3_g_8.mp3",
         "answer": "Plural"
       },
       {
         "id": "g_9",
         "sentence": "Is the weather very nice today?",
-        "audio" : "assets/audio/a_3_g_9.mp3",
+        "audio": "assets/audio/a_3_g_9.mp3",
         "answer": "Singular"
       },
       {
         "id": "g_10",
         "sentence": "Are all the knives in the steel cabinet?",
-        "audio" : "assets/audio/a_3_g_10.mp3",
+        "audio": "assets/audio/a_3_g_10.mp3",
         "answer": "Plural"
       }
     ]
