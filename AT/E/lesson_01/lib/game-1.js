@@ -92,9 +92,9 @@ const normalizeQuestions = (rawQuestions = [], options) => {
 };
 
 const DEFAULT_FEEDBACK_ASSETS = {
-  correctAudio: "assets/audio/game/correct.mp3",
-  incorrectAudio: "assets/audio/game/incorrect.mp3",
-  timeoutAudio: "assets/audio/game/timeout.mp3",
+  correctAudio: "assets/audio/game/correct.wav",
+  incorrectAudio: "assets/audio/game/incorrect.wav",
+  timeoutAudio: "assets/audio/game/timeout.wav",
   correctImg: "assets/img/game/correct.png",
   incorrectImg: "assets/img/game/incorrect.png",
   timeoutImg: "assets/img/game/timeout.png",
@@ -307,6 +307,9 @@ const createGameScene = (config) => {
     }
 
     create() {
+      this.sound.add('feedback-correct-audio')
+      this.sound.add('feedback-incorrect-audio')
+      this.sound.add('feedback-timeout-audio')  
       const { width, height } = this.sys.game.canvas;
       this.cameras.main.setBackgroundColor("#eef2f9");
       this.events.once(Phaser.Scenes.Events.SHUTDOWN, this.shutdown, this);
@@ -410,6 +413,7 @@ const createGameScene = (config) => {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "26px",
           color: "#1d4ed8",
+          fontStyle: "bold",
         })
         .setOrigin(0.5);
       this.timerBadge = this.add.container(timerBadgeWidth / 2 + 90, 108, [
@@ -440,6 +444,7 @@ const createGameScene = (config) => {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "26px",
           color: "#1d4ed8",
+          fontStyle: "bold",
         })
         .setOrigin(0.5);
       this.scoreBadge = this.add.container(
@@ -450,7 +455,7 @@ const createGameScene = (config) => {
       this.scoreBadge.setDepth(3);
       this.gameUiElements.push(this.scoreBadge);
       this.updateScore();
-      this.updateTimerText("");
+      this.updateTimerText("Time: 10.0s");
 
       const sentenceCardWidth = clamp(width * 0.78, 640, 980);
       const sentenceCardHeight = clamp(height * 0.32, 180, 240);
@@ -521,7 +526,7 @@ const createGameScene = (config) => {
       });
       this.feedbackPanel = feedbackPanel;
 
-      this.feedbackIcon = this.add.image(-120, 0, "");
+      this.feedbackIcon = this.add.image(-120, 0, "").setScale(0.8);
       this.feedbackLabel = this.add
         .text(20, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
@@ -993,7 +998,7 @@ const createGameScene = (config) => {
       });
       container.on("pointerdown", () => {
         if (container.input?.enabled && typeof onClick === "function") {
-          this.playFeedbackSound("correct");
+           feedbackPlayer.playTone(640, 240);
           onClick();
         }
       });
@@ -1092,7 +1097,7 @@ const createGameScene = (config) => {
       this.resetState();
       this.score = 0;
       this.updateScore();
-      this.updateTimerText("");
+      this.updateTimerText("Time: 10.0s");
 
       this.time.delayedCall(120, () => {
         this.runState = "running";
@@ -1110,7 +1115,7 @@ const createGameScene = (config) => {
       this.stopSentenceAudio();
       this.timerEvent?.remove();
       this.timerEvent = null;
-      this.updateTimerText("");
+      this.updateTimerText("Time: 10.0s");
       this.hideFeedback();
       this.summaryBackdrop.setVisible(false);
       this.summaryBackdrop.setAlpha(0);
@@ -1297,7 +1302,7 @@ const createGameScene = (config) => {
       this.enableOptionButtons(false);
       this.stopSentenceAudio();
       this.hideFeedback();
-      this.updateTimerText("");
+      this.updateTimerText("Time: 10.0s");
 
       if (
         this.examples.length &&
@@ -1429,7 +1434,7 @@ const createGameScene = (config) => {
           if (remaining <= 0) {
             this.timerEvent?.remove();
             this.timerEvent = null;
-            this.updateTimerText("");
+            this.updateTimerText("Time: 10.0s");
             this.handleTimeout();
             return;
           }
@@ -1460,7 +1465,7 @@ const createGameScene = (config) => {
       this.stopSentenceAudio();
       this.timerEvent?.remove();
       this.timerEvent = null;
-      this.updateTimerText("");
+      this.updateTimerText("Time: 10.0s");
 
       const current = this.questions[this.questionIndex];
       const isCorrect =
@@ -1527,6 +1532,7 @@ const createGameScene = (config) => {
         timeout: "feedback-timeout-audio",
       };
       const key = keyMap[type];
+      console.log(this.sound.get(key));
       if (key && this.sound.get(key)) {
         this.sound.play(key);
         this.sound.setVolume(1); 
@@ -1670,10 +1676,10 @@ const createGameScene = (config) => {
           value -= 1;
           if (value > 0) {
             this.countdownText.setText(String(value));
-            this.playFeedbackSound("timeout");
+            feedbackPlayer.playTone(320, 400);
           } else if (value === 0) {
             this.countdownText.setText("Start!");
-            this.playFeedbackSound("correct");
+             feedbackPlayer.playTone(640, 240);
           } else {
             event.remove();
             this.tweens.add({
@@ -1700,7 +1706,7 @@ const createGameScene = (config) => {
       this.stopSentenceAudio();
       this.timerEvent?.remove();
       this.timerEvent = null;
-      this.updateTimerText("");
+      this.updateTimerText("Time: 10.0s");
       this.hideFeedback();
       if (statusElement) {
         statusElement.textContent =
