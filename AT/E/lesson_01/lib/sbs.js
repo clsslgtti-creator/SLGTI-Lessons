@@ -1256,7 +1256,7 @@ const buildSpeakingSlide = (
         }
 
         const answerDuration = await audioManager.getDuration(dialogue.audio_b);
-        const waitMs = Math.max(1000, Math.round(answerDuration * 3000));
+        const waitMs = Math.max(1000, Math.round(answerDuration * 1500));
         status.textContent = 'Your turn...';
         await delay(waitMs, { signal });
         if (signal.aborted) {

@@ -215,7 +215,7 @@ const createPronunciationSlide = ({
     textsWrapper.className = "dialogue-card__texts";
 
     const line = document.createElement("p");
-    line.className = "dialogue-card__line";
+    line.className = "dialogue-card__line dialogue-card__line--answer";
     line.innerHTML = formatPronunciationText(rawText);
 
     textsWrapper.appendChild(line);

@@ -169,7 +169,7 @@ body {
   box-shadow: var(--shadow-sm);
   touch-action: none;
   border: 2px solid transparent;
-  padding: 0.5rem;
+  padding: 0.2rem;
   cursor: grab;
   display: flex;
   flex-direction: column;
@@ -394,17 +394,6 @@ body {
   padding: 0.5rem;
 }
 
-.dialogue-card--model .dialogue-card__image {
-  aspect-ratio: auto;
-  width: 100%;
-  height: auto;
-  align-self: stretch;
-  object-fit: contain;
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-}
-
 .dialogue-card__texts {
   display: grid;
   gap: 0.5rem;
@@ -547,13 +536,13 @@ body {
 }
 
 .dialogue-grid--pronunciation {
-  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
   gap: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
-.dialogue-card--pronunciation .dialogue-card__line {
+/* .dialogue-card--pronunciation .dialogue-card__line {
   font-size: clamp(1.05rem, 2.6vw, 1.3rem);
-}
+} */
 
 .pronunciation-focus {
   color: #d62828;
