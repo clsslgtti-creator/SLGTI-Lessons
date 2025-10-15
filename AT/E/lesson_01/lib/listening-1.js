@@ -3,6 +3,7 @@ import {
   computeSegmentGapMs,
   getBetweenItemGapMs,
 } from "./audio-manager.js";
+import { showCompletionModal } from "./completion-modal.js";
 
 const smoothScrollIntoView = (element) => {
   if (!element) {
@@ -104,7 +105,8 @@ const buildMcqSlide = (questions = [], context = {}) => {
     .filter(Boolean);
 
   const slide = document.createElement("section");
-  slide.className = "slide listening-slide listening-slide--mcq";
+  slide.className =
+    "slide slide--listening listening-slide listening-slide--mcq";
   buildHeading(slide, `${activityLabel}${subActivitySuffix}`);
   ensureInstructionAnchor(slide);
 
@@ -124,7 +126,7 @@ const buildMcqSlide = (questions = [], context = {}) => {
 
   const entries = sanitizedQuestions.map((question, index) => {
     const card = document.createElement("article");
-    card.className = "dialogue-card listening-mcq-card";
+    card.className = "dialogue-card dialogue-card--listening";
 
     const title = document.createElement("h3");
     title.className = "dialogue-card__title";
@@ -328,12 +330,10 @@ const buildMcqSlide = (questions = [], context = {}) => {
     audioManager.stopAll();
     entries.forEach(resetEntryState);
     startBtn.disabled = true;
-    status.textContent = "Starting in 3s...";
+    status.textContent = "";
 
     let score = 0;
     try {
-      await waitMs(3000, { signal });
-
       for (let index = 0; index < entries.length; index += 1) {
         const entry = entries[index];
         entry.card.classList.add("is-active");
@@ -383,6 +383,10 @@ const buildMcqSlide = (questions = [], context = {}) => {
         status.textContent = "Practice stopped.";
       } else {
         status.textContent = `Practice complete. Score ${score}/${entries.length}.`;
+        showCompletionModal({
+          title: "Great Work!",
+          message: "You completed all of the listening questions.",
+        });
       }
       startBtn.disabled = false;
       runController = null;
@@ -472,7 +476,8 @@ const buildListenRepeatSlide = (
     .filter(Boolean);
 
   const slide = document.createElement("section");
-  slide.className = "slide listening-slide listening-slide--repeat";
+  slide.className =
+    "slide slide--listen-repeat listening-slide listening-slide--repeat";
   buildHeading(slide, `${activityLabel}${subActivitySuffix}`);
   ensureInstructionAnchor(slide);
 
@@ -561,10 +566,9 @@ const buildListenRepeatSlide = (
     sequenceAbort = new AbortController();
     const { signal } = sequenceAbort;
 
-    status.textContent = "Starting in 3s...";
+    status.textContent = "";
     startBtn.disabled = true;
     try {
-      await waitMs(3000, { signal });
       for (let index = 0; index < entries.length; index += 1) {
         const entry = entries[index];
         entry.card.classList.add("is-active");
@@ -702,9 +706,11 @@ const buildReadAlongSlide = (groups = [], context = {}) => {
     .filter(Boolean);
 
   const slide = document.createElement("section");
-  slide.className = "slide listening-slide listening-slide--read";
+  slide.className =
+    "slide slide--reading listening-slide listening-slide--read";
   buildHeading(slide, `${activityLabel}${subActivitySuffix}`);
   ensureInstructionAnchor(slide);
+  slide.classList.add("is-animated");
 
   const controls = document.createElement("div");
   controls.className = "slide__controls";
@@ -722,7 +728,7 @@ const buildReadAlongSlide = (groups = [], context = {}) => {
 
   const entries = sanitizedGroups.map((group, index) => {
     const card = document.createElement("article");
-    card.className = "dialogue-card listening-read-card";
+    card.className = "dialogue-card dialogue-card--reading listening-read-card";
 
     const title = document.createElement("h3");
     title.className = "dialogue-card__title";
@@ -778,10 +784,9 @@ const buildReadAlongSlide = (groups = [], context = {}) => {
     sequenceAbort = new AbortController();
     const { signal } = sequenceAbort;
 
-    status.textContent = "Starting in 3s...";
+    status.textContent = "";
     startBtn.disabled = true;
     try {
-      await waitMs(3000, { signal });
       for (let index = 0; index < entries.length; index += 1) {
         const entry = entries[index];
         entry.card.classList.add("is-active");
@@ -908,7 +913,8 @@ const buildTypingSlide = (items = [], context = {}) => {
     .filter(Boolean);
 
   const slide = document.createElement("section");
-  slide.className = "slide listening-slide listening-slide--typing";
+  slide.className =
+    "slide slide--speaking listening-slide listening-slide--typing";
   buildHeading(slide, `${activityLabel}${subActivitySuffix}`);
   ensureInstructionAnchor(slide);
 
@@ -916,13 +922,15 @@ const buildTypingSlide = (items = [], context = {}) => {
   list.className = "listening-typing-grid";
   slide.appendChild(list);
 
-  const status = createStatus();
-  status.textContent = "Instruction will play first.";
-  slide.appendChild(status);
+  const instructionEl = slide.querySelector(".slide__instruction");
+  if (instructionEl) {
+    instructionEl.textContent = "";
+  }
 
   const entries = sanitizedItems.map((item, index) => {
     const card = document.createElement("article");
-    card.className = "listening-typing-card";
+    card.className =
+      "dialogue-card dialogue-card--speaking listening-typing-card";
 
     const header = document.createElement("header");
     header.className = "listening-typing-header";
@@ -970,9 +978,12 @@ const buildTypingSlide = (items = [], context = {}) => {
       playBtn,
       input,
       checkBtn,
-      feedback,
-    };
-  });
+    feedback,
+  };
+});
+
+  const completedAttempts = new Set();
+  let completionShown = false;
 
   const enableControls = () => {
     entries.forEach(({ playBtn, input, checkBtn }) => {
@@ -980,7 +991,9 @@ const buildTypingSlide = (items = [], context = {}) => {
       input.disabled = false;
       checkBtn.disabled = false;
     });
-    status.textContent = "Play each audio and type the number you hear.";
+    if (instructionEl) {
+      instructionEl.textContent = "Play each audio and type the number you hear.";
+    }
   };
 
   const disableControls = () => {
@@ -989,15 +1002,41 @@ const buildTypingSlide = (items = [], context = {}) => {
       input.disabled = true;
       checkBtn.disabled = true;
     });
-    status.textContent = "Instruction will play first.";
+    if (instructionEl) {
+      instructionEl.textContent = "";
+    }
   };
 
   entries.forEach((entry) => {
+    entry.input.addEventListener("input", () => {
+      if (!entry.input.disabled) {
+        entry.input.value = entry.input.value.replace(/[^0-9,.\s]/g, "");
+      }
+    });
+
+    entry.input.addEventListener("keydown", (event) => {
+      if (
+        entry.input.disabled &&
+        !["Tab", "Shift", "ArrowLeft", "ArrowRight"].includes(event.key)
+      ) {
+        event.preventDefault();
+      }
+    });
+
     entry.playBtn.addEventListener("click", () => {
+      if (entry.playBtn.disabled) {
+        return;
+      }
       audioManager.stopAll();
+      entry.card.classList.add("is-playing");
+      entry.playBtn.disabled = true;
       audioManager
         .play(entry.item.audio)
-        .catch((error) => console.error(error));
+        .catch((error) => console.error(error))
+        .finally(() => {
+          entry.card.classList.remove("is-playing");
+          entry.playBtn.disabled = false;
+        });
     });
 
     entry.checkBtn.addEventListener("click", () => {
@@ -1023,6 +1062,17 @@ const buildTypingSlide = (items = [], context = {}) => {
         entry.feedback.classList.remove("is-correct");
         entry.feedback.classList.add("is-incorrect");
       }
+      completedAttempts.add(entry.item.id);
+      if (
+        !completionShown &&
+        completedAttempts.size === entries.length
+      ) {
+        completionShown = true;
+        showCompletionModal({
+          title: "Great Work!",
+          message: "You completed all of the questions.",
+        });
+      }
     });
   });
 
@@ -1038,17 +1088,24 @@ const buildTypingSlide = (items = [], context = {}) => {
       enableControls();
       slide._autoTriggered = true;
     },
-    status,
   };
 
   const onLeave = () => {
     audioManager.stopAll();
-    entries.forEach(({ input, feedback }) => {
+    entries.forEach(({ input, feedback, card, playBtn, checkBtn }) => {
       input.value = "";
       feedback.textContent = "";
       feedback.className = "listening-typing-feedback";
+      card.classList.remove("is-playing");
+      playBtn.disabled = true;
+      checkBtn.disabled = true;
     });
+    completedAttempts.clear();
+    completionShown = false;
     disableControls();
+    if (instructionEl) {
+      instructionEl.textContent = "";
+    }
     slide._autoTriggered = false;
   };
 

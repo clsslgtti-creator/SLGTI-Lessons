@@ -1,4 +1,5 @@
 import { audioManager, computeSegmentGapMs, getBetweenItemGapMs } from './audio-manager.js';
+import { showCompletionModal } from './completion-modal.js';
 
 const smoothScrollIntoView = (element) => {
   if (!element) {
@@ -476,6 +477,14 @@ const buildPreListeningSlide = (
           }
 
           $zone.droppable('disable');
+
+          const allComplete = dropzones.every((zone) => $(zone).data('complete'));
+          if (allComplete) {
+            showCompletionModal({
+              title: 'Great Work!',
+              message: 'You matched all of the pictures correctly.',
+            });
+          }
         } else {
           $card.addClass('is-incorrect');
           $zone.addClass('is-incorrect');
@@ -1302,6 +1311,10 @@ const buildSpeakingSlide = (
 
       if (!signal.aborted) {
         status.textContent = 'Great work! Practice complete.';
+        showCompletionModal({
+          title: 'Great Work!',
+          message: 'You completed the speaking practice.',
+        });
       } else {
         status.textContent = 'Practice stopped.';
       }
