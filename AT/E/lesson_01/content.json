@@ -264,6 +264,268 @@
     ]
   },
   "activity_4": {
-    "type": "GAME"
+    "type": "LISTENING-1",
+    "instructions": {
+      "activity_4_a": {
+        "text": "You will hear each recording twice. Listen and mark the numbers you hear.\nඔබට සෑම ශ්‍රව්‍යයක්ම දෙවරක් අසන්නට ලැබෙනු ඇත. අසා ඔබට ඇසුණු අංක සලකුණු කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "audio": "assets/audio/a_3_i_a.mp3"
+      },
+      "activity_4_b": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_4_c": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_4_d": {
+        "text": "Listen and type the correct number.\nඅසන්න සහ නිවැරදි අංකය ටයිප් කරන්න.\nகேட்டு சரியான எண்ணைத் தட்டச்சு செய்யுங்கள்.",
+        "audio": "assets/audio/a_3_i_a.mp3"
+      }
+    },
+    "content": {
+      "activity_4_a": [
+        {
+          "id": "l_4_1",
+          "question_audio": "assets/audio/a_4_l_1.mp3",
+          "answer": "430",
+          "options": ["430", "413"]
+        },
+        {
+          "id": "l_4_2",
+          "question_audio": "assets/audio/a_4_l_2.mp3",
+          "answer": "230",
+          "options": ["230", "213"]
+        },
+        {
+          "id": "l_4_3",
+          "question_audio": "assets/audio/a_4_l_3.mp3",
+          "answer": "150",
+          "options": ["150", "115"]
+        },
+        {
+          "id": "l_4_4",
+          "question_audio": "assets/audio/a_4_l_4.mp3",
+          "answer": "388",
+          "options": ["368", "388"]
+        },
+        {
+          "id": "l_4_5",
+          "question_audio": "assets/audio/a_4_l_5.mp3",
+          "answer": "817",
+          "options": ["870", "817"]
+        },
+        {
+          "id": "l_4_6",
+          "question_audio": "assets/audio/a_4_l_6.mp3",
+          "answer": "1440",
+          "options": ["1414", "1440"]
+        },
+        {
+          "id": "l_4_7",
+          "question_audio": "assets/audio/a_4_l_7.mp3",
+          "answer": "2013",
+          "options": ["2030", "2013"]
+        },
+        {
+          "id": "l_4_8",
+          "question_audio": "assets/audio/a_4_l_8.mp3",
+          "answer": "25,700",
+          "options": ["25,500", "25,700"]
+        }
+      ],
+      "activity_4_b": [
+        {
+          "id": "r_4_1",
+          "text_a": "One hundred and fifty",
+          "text_b": "One hundred and fifteen",
+          "audio_a": "assets/audio/a_4_r_1_a.mp3",
+          "audio_b": "assets/audio/a_4_r_1_b.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text_a": "Three hundred and sixty-eight",
+          "text_b": "Three hundred and eighty-eight",
+          "audio_a": "assets/audio/a_4_r_2_a.mp3",
+          "audio_b": "assets/audio/a_4_r_2_b.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text_a": "Eight hundred and seventy",
+          "text_b": "Eight hundred and seventeen",
+          "audio_a": "assets/audio/a_4_r_3_a.mp3",
+          "audio_b": "assets/audio/a_4_r_3_b.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text_a": "One thousand four hundred and sixteen",
+          "text_b": "One thousand four hundred and sixty",
+          "audio_a": "assets/audio/a_4_r_4_a.mp3",
+          "audio_b": "assets/audio/a_4_r_4_b.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text_a": "Two thousand and thirty",
+          "text_b": "Two thousand and thirteen",
+          "audio_a": "assets/audio/a_4_r_5_a.mp3",
+          "audio_b": "assets/audio/a_4_r_5_b.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text_a": "Twenty-five thousand five hundred",
+          "text_b": "Twenty-five thousand seven hundred",
+          "audio_a": "assets/audio/a_4_r_6_a.mp3",
+          "audio_b": "assets/audio/a_4_r_6_b.mp3"
+        }
+      ],
+      "activity_4_c": [
+        {
+          "id": "a_4_1",
+          "text_a": "105 — one hundred and five",
+          "text_b": "107 — one hundred and seven",
+          "text_c": "109 — one hundred and nine",
+          "audio_a": "assets/audio/a_4_a_1_a.mp3",
+          "audio_b": "assets/audio/a_4_a_1_b.mp3",
+          "audio_c": "assets/audio/a_4_a_1_c.mp3"
+        },
+        {
+          "id": "a_4_2",
+          "text_a": "362 — three hundred and sixty-two",
+          "text_b": "364 — three hundred and sixty-four",
+          "text_c": "368 — three hundred and sixty-eight",
+          "audio_a": "assets/audio/a_4_a_2_a.mp3",
+          "audio_b": "assets/audio/a_4_a_2_b.mp3",
+          "audio_c": "assets/audio/a_4_a_2_c.mp3"
+        },
+        {
+          "id": "a_4_3",
+          "text_a": "1,402 — one thousand four hundred and two",
+          "text_b": "1,406 — one thousand four hundred and six",
+          "text_c": "1,409 — one thousand four hundred and nine",
+          "audio_a": "assets/audio/a_4_a_3_a.mp3",
+          "audio_b": "assets/audio/a_4_a_3_b.mp3",
+          "audio_c": "assets/audio/a_4_a_3_c.mp3"
+        },
+        {
+          "id": "a_4_4",
+          "text_a": "4,501 — four thousand five hundred and one",
+          "text_b": "4,601 — four thousand six hundred and one",
+          "text_c": "4,701 — four thousand seven hundred and one",
+          "audio_a": "assets/audio/a_4_a_4_a.mp3",
+          "audio_b": "assets/audio/a_4_a_4_b.mp3",
+          "audio_c": "assets/audio/a_4_a_4_c.mp3"
+        },
+        {
+          "id": "a_4_5",
+          "text_a": "9,312 — nine thousand three hundred and twelve",
+          "text_b": "9,315 — nine thousand three hundred and fifteen",
+          "text_c": "9,317 — nine thousand three hundred and seventeen",
+          "audio_a": "assets/audio/a_4_a_5_a.mp3",
+          "audio_b": "assets/audio/a_4_a_5_b.mp3",
+          "audio_c": "assets/audio/a_4_a_5_c.mp3"
+        },
+        {
+          "id": "a_4_6",
+          "text_a": "25,001 — twenty-five thousand and one",
+          "text_b": "27,001— twenty-seven thousand and one",
+          "text_c": "29,001 — twenty-nine thousand and one",
+          "audio_a": "assets/audio/a_4_a_6_a.mp3",
+          "audio_b": "assets/audio/a_4_a_6_b.mp3",
+          "audio_c": "assets/audio/a_4_a_6_c.mp3"
+        }
+      ],
+      "activity_4_d": [
+        {
+          "id": "a_4_w_1",
+          "question_audio": "assets/audio/a_4_w_1.mp3",
+          "answer": "108"
+        },
+        {
+          "id": "a_4_w_2",
+          "question_audio": "assets/audio/a_4_w_2.mp3",
+          "answer": "110"
+        },
+        {
+          "id": "a_4_w_3",
+          "question_audio": "assets/audio/a_4_w_3.mp3",
+          "answer": "112"
+        },
+        {
+          "id": "a_4_w_4",
+          "question_audio": "assets/audio/a_4_w_4.mp3",
+          "answer": "365"
+        },
+        {
+          "id": "a_4_w_5",
+          "question_audio": "assets/audio/a_4_w_5.mp3",
+          "answer": "367"
+        },
+        {
+          "id": "a_4_w_6",
+          "question_audio": "assets/audio/a_4_w_6.mp3",
+          "answer": "371"
+        },
+        {
+          "id": "a_4_w_7",
+          "question_audio": "assets/audio/a_4_w_7.mp3",
+          "answer": "1405"
+        },
+        {
+          "id": "a_4_w_8",
+          "question_audio": "assets/audio/a_4_w_8.mp3",
+          "answer": "1409"
+        },
+        {
+          "id": "a_4_w_9",
+          "question_audio": "assets/audio/a_4_w_9.mp3",
+          "answer": "1412"
+        },
+        {
+          "id": "a_4_w_10",
+          "question_audio": "assets/audio/a_4_w_10.mp3",
+          "answer": "4503"
+        },
+        {
+          "id": "a_4_w_11",
+          "question_audio": "assets/audio/a_4_w_11.mp3",
+          "answer": "4603"
+        },
+        {
+          "id": "a_4_w_12",
+          "question_audio": "assets/audio/a_4_w_12.mp3",
+          "answer": "4703"
+        },
+        {
+          "id": "a_4_w_13",
+          "question_audio": "assets/audio/a_4_w_13.mp3",
+          "answer": "9315"
+        },
+        {
+          "id": "a_4_w_14",
+          "question_audio": "assets/audio/a_4_w_14.mp3",
+          "answer": "9318"
+        },
+        {
+          "id": "a_4_w_15",
+          "question_audio": "assets/audio/a_4_w_15.mp3",
+          "answer": "9320"
+        },
+        {
+          "id": "a_4_w_16",
+          "question_audio": "assets/audio/a_4_w_16.mp3",
+          "answer": "25003"
+        },
+        {
+          "id": "a_4_w_17",
+          "question_audio": "assets/audio/a_4_w_17.mp3",
+          "answer": "27003"
+        },
+        {
+          "id": "a_4_w_18",
+          "question_audio": "assets/audio/a_4_w_18.mp3",
+          "answer": "29003"
+        }
+      ]
+    }
   }
 }
