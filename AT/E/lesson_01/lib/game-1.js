@@ -1870,7 +1870,13 @@ export const buildGame1Slides = (activityData = {}, context = {}) => {
   const stageId = `game1-stage-${Math.random().toString(36).slice(2, 8)}`;
   stage.id = stageId;
 
-  const status = document.createElement("div");
+  const instruction = document.createElement("p");
+  instruction.className = "slide__instruction";
+  instruction.textContent =
+    "Press Start to play. Listen to each sentence and choose the correct answer before time runs out.";
+  slide.appendChild(instruction);
+
+  const status = document.createElement("p");
   status.className = "game1-status is-visible";
   status.textContent = "Loading game...";
 

@@ -299,8 +299,8 @@ body {
 .slide__instruction {
   margin: 0 0 clamp(1.2rem, 3vw, 1.8rem);
   color: #111;
-  font-size: clamp(1.1rem, 2.8vw, 1.35rem);
-  font-weight: bold;
+  font-size: clamp(1.1rem, 2.4vw, 1.25rem);
+  font-weight: 600;
 }
 
 .slide__controls {

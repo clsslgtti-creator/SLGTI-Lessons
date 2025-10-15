@@ -37,7 +37,7 @@
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "The eng'i'ne is hot.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p.jpeg"
+        "image": "assets/img/a_1_p_1.jpeg"
       },
       {
         "id": "p_2",
@@ -45,7 +45,7 @@
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
         "sentence_text": "Check the p'i'ston rings.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p.jpeg"
+        "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "Move the gearsh'i'ft carefully.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p.jpeg"
+        "image": "assets/img/a_1_p_3.jpeg"
       },
       {
         "id": "p_4",
@@ -61,7 +61,7 @@
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "Use a cl'i'p for the wire.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p.jpeg"
+        "image": "assets/img/a_1_p_4.jpeg"
       }
     ]
   },
@@ -97,25 +97,25 @@
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/a_2_ex_1.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "Where is the steel ruler?",
+        "text_b": "It is on the shelf.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
         "audio_b": "assets/audio/a_2_ex_1_b.mp3"
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_2.jpeg",
+        "text_a": "Where is the workshop key?",
+        "text_b": "It is on the wall.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
         "audio_b": "assets/audio/a_2_ex_2_b.mp3"
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_3.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_3.jpeg",
+        "text_a": "Where are the plastic files?",
+        "text_b": "They are on the desk.",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
         "audio_b": "assets/audio/a_2_ex_3_b.mp3"
       }
