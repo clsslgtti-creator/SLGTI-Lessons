@@ -27,15 +27,23 @@ const normalizeExamples = (rawExamples = [], options) => {
       if (!sentence.length) {
         return null;
       }
+      const audio =
+        typeof item?.audio === "string" && item.audio.trim().length
+          ? item.audio.trim()
+          : null;
       const answerCandidate =
         typeof item?.answer === "string" ? item.answer.trim() : "";
       const answer = options.includes(answerCandidate)
         ? answerCandidate
         : options[0];
+      const identifier = item?.id ?? `example_${index + 1}`;
+      const audioKey = audio ? `example_sentence_${identifier}` : null;
       return {
-        id: item?.id ?? `example_${index + 1}`,
+        id: identifier,
         sentence,
         answer,
+        audio,
+        audioKey,
       };
     })
     .filter(Boolean);
@@ -242,6 +250,8 @@ const createGameScene = (config) => {
       this.timerEvent = null;
       this.answerDeadline = 0;
       this.activeSentenceSound = null;
+      this.activeSentenceSoundCompleteHandler = null;
+      this.activeSentenceSoundToken = 0;
       this.gameOver = false;
       this.didNotifyReady = false;
       this.summaryDisplayed = false;
@@ -266,7 +276,7 @@ const createGameScene = (config) => {
         console.error("error loading :", file);
       });
 
-      this.questions.forEach((item) => {
+      [...this.examples, ...this.questions].forEach((item) => {
         if (item.audioKey && item.audio) {
           this.load.audio(item.audioKey, item.audio);
         }
@@ -1365,58 +1375,129 @@ const createGameScene = (config) => {
       );
       this.phaseText.setColor(isExample ? "#0f172a" : "#1d4ed8");
 
+      this.enableOptionButtons(false);
+      this.awaitingAnswer = false;
+      this.updateTimerText("");
+
       this.tweens.add({
         targets: this.sentenceCard,
         x: targetX,
         duration: 600,
         ease: "Cubic.easeOut",
         onComplete: () => {
-          this.playSentenceAudio(entry);
-          if (isExample) {
-            this.handleExample(entry);
-          } else {
+          const afterAudio = () => {
+            if (isExample) {
+              this.handleExample(entry);
+              return;
+            }
+            if (this.gameOver) {
+              return;
+            }
             this.awaitingAnswer = true;
             this.enableOptionButtons(true);
             this.startResponseTimer();
-          }
+          };
+
+          this.playSentenceAudio(entry, { onComplete: afterAudio });
         },
       });
     }
 
-    playSentenceAudio(entry) {
-      this.stopSentenceAudio();
-      if (entry.audioKey) {
+    playSentenceAudio(entry, options = {}) {
+      const { onComplete } = options || {};
+      this.stopSentenceAudio({ mutateToken: false });
+      this.activeSentenceSoundToken += 1;
+      const token = this.activeSentenceSoundToken;
+
+      if (entry?.audioKey) {
         const sound =
           this.sound.get(entry.audioKey) ?? this.sound.add(entry.audioKey);
         if (sound) {
-          sound.play();
-          sound.setVolume(1); 
           this.activeSentenceSound = sound;
+          if (typeof onComplete === "function") {
+            this.activeSentenceSoundCompleteHandler = () => {
+              if (
+                this.activeSentenceSound === sound &&
+                token === this.activeSentenceSoundToken
+              ) {
+                this.activeSentenceSoundCompleteHandler = null;
+                onComplete();
+              }
+            };
+            sound.once(
+              Phaser.Sound.Events.COMPLETE,
+              this.activeSentenceSoundCompleteHandler
+            );
+          } else {
+            this.activeSentenceSoundCompleteHandler = null;
+          }
+          sound.setVolume(1);
+          sound.play();
+          return;
         }
+      }
+
+      this.activeSentenceSound = null;
+      this.activeSentenceSoundCompleteHandler = null;
+
+      if (typeof onComplete === "function") {
+        this.time.delayedCall(150, () => {
+          if (token === this.activeSentenceSoundToken) {
+            onComplete();
+          }
+        });
       }
     }
 
-    stopSentenceAudio() {
-      if (this.activeSentenceSound && this.activeSentenceSound.isPlaying) {
-        this.activeSentenceSound.stop();
+    stopSentenceAudio(options = {}) {
+      const { mutateToken = true } = options || {};
+      if (this.activeSentenceSound) {
+        if (this.activeSentenceSoundCompleteHandler) {
+          this.activeSentenceSound.off(
+            Phaser.Sound.Events.COMPLETE,
+            this.activeSentenceSoundCompleteHandler
+          );
+        }
+        if (this.activeSentenceSound.isPlaying) {
+          this.activeSentenceSound.stop();
+        }
       }
       this.activeSentenceSound = null;
+      this.activeSentenceSoundCompleteHandler = null;
+      if (mutateToken) {
+        this.activeSentenceSoundToken += 1;
+      }
     }
 
     handleExample(entry) {
       const targetButton = this.optionButtons.find(
         (btn) => btn.value.toLowerCase() === entry.answer.toLowerCase()
       );
-      this.time.delayedCall(1500, () => {
+      const highlightDelay = 500;
+      const feedbackDelay = highlightDelay + 800;
+      const advanceDelay = feedbackDelay + 900;
+
+      this.time.delayedCall(highlightDelay, () => {
+        if (this.gameOver) {
+          return;
+        }
         if (targetButton) {
           this.pulseButton(targetButton, 0x16a34a);
         }
-        this.time.delayedCall(800, () => {
-          this.showFeedback("correct", "Correct");
-        });
-        this.time.delayedCall(1600, () => {
-          this.slideOutCurrent(() => this.advance());
-        });
+      });
+
+      this.time.delayedCall(feedbackDelay, () => {
+        if (this.gameOver) {
+          return;
+        }
+        this.showFeedback("correct", "Correct");
+      });
+
+      this.time.delayedCall(advanceDelay, () => {
+        if (this.gameOver) {
+          return;
+        }
+        this.slideOutCurrent(() => this.advance());
       });
     }
 

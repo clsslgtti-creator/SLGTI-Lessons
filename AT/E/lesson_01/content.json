@@ -22,7 +22,7 @@
         "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_1_d": {
-        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
       "activity_1_e": {
@@ -70,7 +70,7 @@
     "focus": "Verb ‘to be’ and preposition ‘on’",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදය අසා බලන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {
@@ -124,11 +124,11 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Where are the jacks?",
-        "text_b": "They are on the jack stand.",
+        "text_a": "Where is the car?",
+        "text_b": "It is on the jack stand.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Jack Stand"
+        "keyword": "jack stand"
       },
       {
         "id": "d_2",
@@ -137,7 +137,7 @@
         "text_b": "It is on the brown pallet.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Brown Pallet"
+        "keyword": "brown pallet"
       },
       {
         "id": "d_3",
@@ -146,7 +146,7 @@
         "text_b": "It is on the wooden desk.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Wooden Desk"
+        "keyword": "wooden desk"
       },
       {
         "id": "d_4",
@@ -155,7 +155,7 @@
         "text_b": "They are on the silver chest.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Silver Chest"
+        "keyword": "silver chest"
       },
       {
         "id": "d_5",
@@ -164,7 +164,7 @@
         "text_b": "They are on the top shelf.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Top Shelf"
+        "keyword": "top shelf"
       },
       {
         "id": "d_6",
@@ -173,7 +173,7 @@
         "text_b": "They are on the wall-mounted cabinet.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Wall-mounted Cabinet"
+        "keyword": "wall-mounted cabinet"
       }
     ]
   },
@@ -181,7 +181,7 @@
     "type": "GAME-1",
     "instructions": {
       "activity_1_a": {
-        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම විෂය ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
+        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
         "audio": "assets/audio/a_3_i_a.mp3"
       }
     },
@@ -267,7 +267,7 @@
     "type": "LISTENING-1",
     "instructions": {
       "activity_4_a": {
-        "text": "You will hear each recording twice. Listen and mark the numbers you hear.\nඔබට සෑම ශ්‍රව්‍යයක්ම දෙවරක් අසන්නට ලැබෙනු ඇත. අසා ඔබට ඇසුණු අංක සලකුණු කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "text": "You will hear each recording twice. Listen and mark the numbers you hear.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. සවන් දී ඔබට ඇසෙන අංක සලකුණු කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_4_b": {
@@ -337,43 +337,43 @@
       "activity_4_b": [
         {
           "id": "r_4_1",
-          "text_a": "One hundred and fifty",
-          "text_b": "One hundred and fifteen",
+          "text_a": "150 — One hundred and fifty",
+          "text_b": "115 — One hundred and fifteen",
           "audio_a": "assets/audio/a_4_r_1_a.mp3",
           "audio_b": "assets/audio/a_4_r_1_b.mp3"
         },
         {
           "id": "r_4_2",
-          "text_a": "Three hundred and sixty-eight",
-          "text_b": "Three hundred and eighty-eight",
+          "text_a": "368 — Three hundred and sixty-eight",
+          "text_b": "388 — Three hundred and eighty-eight",
           "audio_a": "assets/audio/a_4_r_2_a.mp3",
           "audio_b": "assets/audio/a_4_r_2_b.mp3"
         },
         {
           "id": "r_4_3",
-          "text_a": "Eight hundred and seventy",
-          "text_b": "Eight hundred and seventeen",
+          "text_a": "870 — Eight hundred and seventy",
+          "text_b": "817 — Eight hundred and seventeen",
           "audio_a": "assets/audio/a_4_r_3_a.mp3",
           "audio_b": "assets/audio/a_4_r_3_b.mp3"
         },
         {
           "id": "r_4_4",
-          "text_a": "One thousand four hundred and sixteen",
-          "text_b": "One thousand four hundred and sixty",
+          "text_a": "1416 — One thousand four hundred and sixteen",
+          "text_b": "1460 — One thousand four hundred and sixty",
           "audio_a": "assets/audio/a_4_r_4_a.mp3",
           "audio_b": "assets/audio/a_4_r_4_b.mp3"
         },
         {
           "id": "r_4_5",
-          "text_a": "Two thousand and thirty",
-          "text_b": "Two thousand and thirteen",
+          "text_a": "2030 — Two thousand and thirty",
+          "text_b": "2013 — Two thousand and thirteen",
           "audio_a": "assets/audio/a_4_r_5_a.mp3",
           "audio_b": "assets/audio/a_4_r_5_b.mp3"
         },
         {
           "id": "r_4_6",
-          "text_a": "Twenty-five thousand five hundred",
-          "text_b": "Twenty-five thousand seven hundred",
+          "text_a": "25500 — Twenty-five thousand five hundred",
+          "text_b": "25700 — Twenty-five thousand seven hundred",
           "audio_a": "assets/audio/a_4_r_6_a.mp3",
           "audio_b": "assets/audio/a_4_r_6_b.mp3"
         }
