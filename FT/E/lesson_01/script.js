@@ -1,5 +1,7 @@
 import { buildSbsSlides } from "./lib/sbs.js";
 import { buildPronunciationSlides } from "./lib/pronunciation.js";
+import { buildGame1Slides } from "./lib/game-1.js";
+import { buildListeningOneSlides } from "./lib/listening-1.js";
 
 const slidesContainer = document.getElementById("slides");
 const progressIndicator = document.getElementById("progressIndicator");
@@ -113,7 +115,11 @@ const ensureScormConnection = () => {
 };
 
 const getResumeSlideIndex = (totalSlides) => {
-  if (!scormState.connected || !Number.isInteger(totalSlides) || totalSlides <= 0) {
+  if (
+    !scormState.connected ||
+    !Number.isInteger(totalSlides) ||
+    totalSlides <= 0
+  ) {
     return 0;
   }
   const upperBound = totalSlides - 1;
@@ -168,7 +174,11 @@ const persistScormProgress = (index, totalSlides) => {
 };
 
 const markLessonComplete = (index, totalSlides) => {
-  if (!ensureScormConnection() || !scormState.api || scormState.completionRecorded) {
+  if (
+    !ensureScormConnection() ||
+    !scormState.api ||
+    scormState.completionRecorded
+  ) {
     return;
   }
 
@@ -196,6 +206,8 @@ const markLessonComplete = (index, totalSlides) => {
 const activityBuilders = {
   SBS: buildSbsSlides,
   PRONUNCIATION: buildPronunciationSlides,
+  "GAME-1": buildGame1Slides,
+  "LISTENING-1": buildListeningOneSlides,
 };
 
 const extractInstructionEntries = (input, { allowObject = false } = {}) => {
@@ -601,7 +613,7 @@ const startInstructionCountdown = (controller) => {
 
   controller.restoreButton?.();
 
-  let remaining = 5;
+  let remaining = 3;
   indicator?.update(`Starts in ${remaining}s`);
 
   controller.countdownInterval = window.setInterval(() => {
@@ -649,7 +661,7 @@ const handleInstructionForSlide = (slideObj) => {
   stopInstructionPlayback();
 
   const indicator = createInstructionIndicator(slideObj);
-  indicator?.update(audioUrl ? "Instruction playing..." : "Starts in 5s");
+  indicator?.update(audioUrl ? "Instruction playing..." : "Starts in 3s");
 
   const controller = {
     slide: slideObj,
@@ -769,9 +781,13 @@ const parseActivitySlideId = (slideId) => {
     "sentences-listen": "d",
     "sentences-repeat": "e",
     "sentences-read": "f",
+    "listening1-mcq": "a",
+    "listening1-repeat": "b",
+    "listening1-read": "c",
+    "listening1-type": "d",
   };
   const rolePattern =
-    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read)";
+    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read|listening1-mcq|listening1-repeat|listening1-read|listening1-type)";
   const detailedMatch = new RegExp(
     `^activity-(\\d+)(?:-([a-z]))?-${rolePattern}$`
   ).exec(normalized);
@@ -805,22 +821,15 @@ const fetchJson = async (path) => {
 };
 
 const renderLessonMeta = (meta) => {
-  const parts = [
-    meta?.section ? meta.section : null,
-    meta?.level ? `${meta.level} level` : null,
-  ].filter(Boolean);
-
-  const joinedMeta = parts.length ? parts.join(" &middot; ") : "";
-
   lessonMetaEl.innerHTML = `
-    <h1 class="lesson-title">Lesson ${meta?.lesson_no ?? ""}</h1>
-    ${meta?.focus ? `<p class="lesson-focus">${meta.focus}</p>` : ""}
-    ${joinedMeta ? `<p class="lesson-meta">${joinedMeta}</p>` : ""}
-    ${
-      meta?.prepared_by
-        ? `<p class="lesson-author">Prepared by ${meta.prepared_by}</p>`
-        : ""
-    }
+  <div class="_meta">
+    <div class="lesson-title-container">
+      <h1 class="lesson-title">Lesson ${meta?.lesson_no ?? ""}</h1>
+      ${meta?.section ? `<p class="lesson-meta">${meta?.section}</p>` : ""}
+      ${meta?.level ? `<p class="lesson-meta">${meta?.level} Level</p>` : ""}
+    </div>
+    <img class="lesson-logo" src="assets/img/logo.png" />
+    </div
   `;
 };
 
@@ -1087,9 +1096,7 @@ const init = async () => {
 
     slides = buildLessonSlides(data);
     const scormReady = ensureScormConnection();
-    const resumeIndex = scormReady
-      ? getResumeSlideIndex(slides.length)
-      : 0;
+    const resumeIndex = scormReady ? getResumeSlideIndex(slides.length) : 0;
     currentSlideIndex = resumeIndex;
     attachNavigation();
 
