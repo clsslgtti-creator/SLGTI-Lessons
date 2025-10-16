@@ -128,7 +128,7 @@
         "text_b": "They are on the wooden bench.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Wooden Bench"
+        "keyword": "wooden bench"
       },
       {
         "id": "d_2",
@@ -137,7 +137,7 @@
         "text_b": "It is on the black desk.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Black Desk"
+        "keyword": "black desk"
       },
       {
         "id": "d_3",
@@ -146,7 +146,7 @@
         "text_b": "They are on the plastic box.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Plastic Box"
+        "keyword": "plastic box"
       },
       {
         "id": "d_4",
@@ -155,7 +155,7 @@
         "text_b": "They are on the bottom shelf.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Bottom Shelf"
+        "keyword": "bottom shelf"
       },
       {
         "id": "d_5",
@@ -164,7 +164,7 @@
         "text_b": "It is on the tool cart.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Tool Cart"
+        "keyword": "tool cart"
       },
       {
         "id": "d_6",
@@ -173,7 +173,7 @@
         "text_b": "It is on the concrete floor.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Concrete Floor"
+        "keyword": "concrete floor"
       }
     ]
   },

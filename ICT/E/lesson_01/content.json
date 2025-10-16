@@ -128,7 +128,7 @@
         "text_b": "They are on the computer desk.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Computer Desk"
+        "keyword": "computer desk"
       },
       {
         "id": "d_2",
@@ -137,7 +137,7 @@
         "text_b": "It is on the server rack.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Server Rack"
+        "keyword": "server rack"
       },
       {
         "id": "d_3",
@@ -146,7 +146,7 @@
         "text_b": "They are on the top shelf.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Top Shelf"
+        "keyword": "top shelf"
       },
       {
         "id": "d_4",
@@ -155,7 +155,7 @@
         "text_b": "They are on the steel cabinet.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Steel Cabinet"
+        "keyword": "steel cabinet"
       },
       {
         "id": "d_5",
@@ -164,7 +164,7 @@
         "text_b": "It is on the office table.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Office Table"
+        "keyword": "office table"
       },
       {
         "id": "d_6",
@@ -173,7 +173,7 @@
         "text_b": "It is on the ceiling mount. ",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Ceiling Mount"
+        "keyword": "ceiling mount"
       }
     ]
   },

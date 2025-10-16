@@ -128,7 +128,7 @@
         "text_b": "They are on the wooden table.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Wooden Table"
+        "keyword": "wooden table"
       },
       {
         "id": "d_2",
@@ -137,7 +137,7 @@
         "text_b": "They are on the blue wall.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Blue Wall"
+        "keyword": "blue wall"
       },
       {
         "id": "d_3",
@@ -146,7 +146,7 @@
         "text_b": "It is on the kitchen counter.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Kitchen Counter"
+        "keyword": "kitchen counter"
       },
       {
         "id": "d_4",
@@ -155,7 +155,7 @@
         "text_b": "It is on the middle shelf",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Middle Shelf"
+        "keyword": "middle shelf"
       },
       {
         "id": "d_5",
@@ -164,7 +164,7 @@
         "text_b": " It is on the oilpaper.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Oil Paper"
+        "keyword": "oil paper"
       },
       {
         "id": "d_6",
@@ -173,7 +173,7 @@
         "text_b": "They are on the electric oven.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Electric Oven"
+        "keyword": "electric oven"
       }
     ]
   },
