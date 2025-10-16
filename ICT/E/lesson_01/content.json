@@ -37,7 +37,7 @@
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "Save it on the d'i'sk.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "The w'i'ndow is open.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpeg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
@@ -61,7 +61,7 @@
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "Cl'i'ck the button twice.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpeg"
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
