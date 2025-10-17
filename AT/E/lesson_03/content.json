@@ -194,7 +194,7 @@
       },
       "activity_c": {
         "text": "Match the times with the clocks.\nවේලාවන් ඔරලෝසු සමඟ ගැළපන්න.\nநேரங்களை மணிக்கடிகாரங்களுடன் பொருத்துங்கள்.",
-        "audio": "assets/audio/a_2_i_d.mp3"
+        "audio": "assets/audio/a_3_i_c.mp3"
       }
     },
     "content": {
@@ -295,33 +295,33 @@
       "activity_c": [
         {
           "id": "d_1",
-          "img": "assets/img/a_2_d_1.jpeg",
+          "img": "assets/img/a_2_c_1.png",
           "keyword": "It’s half past eight."
         },
         {
           "id": "d_2",
-          "img": "assets/img/a_2_d_2.jpeg",
-          "keyword": "It’s half past eight."
+          "img": "assets/img/a_2_c_2.png",
+          "keyword": "It’s twenty minutes past twelve."
         },
         {
           "id": "d_3",
-          "img": "assets/img/a_2_d_3.jpeg",
-          "keyword": "It’s half past eight."
+          "img": "assets/img/a_2_c_3.png",
+          "keyword": "It’s a quarter to three."
         },
         {
           "id": "d_4",
-          "img": "assets/img/a_2_d_4.jpeg",
-          "keyword": "It’s half past eight."
+          "img": "assets/img/a_2_c_4.png",
+          "keyword": "It’s ten past six."
         },
         {
           "id": "d_5",
-          "img": "assets/img/a_2_d_5.jpeg",
-          "keyword": "It’s half past eight."
+          "img": "assets/img/a_2_c_5.png",
+          "keyword": "It’s five to seven."
         },
         {
           "id": "d_6",
-          "img": "assets/img/a_2_d_6.jpeg",
-          "keyword": "It’s half past eight."
+          "img": "assets/img/a_2_c_6.png",
+          "keyword": "It’s twenty-five to nine."
         }
       ]
     }
