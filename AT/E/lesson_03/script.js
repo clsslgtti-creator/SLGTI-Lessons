@@ -2,6 +2,7 @@ import { buildSbsSlides } from "./lib/sbs.js";
 import { buildPronunciationSlides } from "./lib/pronunciation.js";
 import { buildGame1Slides } from "./lib/game-1.js";
 import { buildListeningOneSlides } from "./lib/listening-1.js";
+import { buildActivityTwoSlides } from "./lib/activity-2.js";
 
 const slidesContainer = document.getElementById("slides");
 const progressIndicator = document.getElementById("progressIndicator");
@@ -208,6 +209,7 @@ const activityBuilders = {
   PRONUNCIATION: buildPronunciationSlides,
   "GAME-1": buildGame1Slides,
   "LISTENING-1": buildListeningOneSlides,
+  "ACTIVITY-2": buildActivityTwoSlides,
 };
 
 const extractInstructionEntries = (input, { allowObject = false } = {}) => {
@@ -785,9 +787,12 @@ const parseActivitySlideId = (slideId) => {
     "listening1-repeat": "b",
     "listening1-read": "c",
     "listening1-type": "d",
+    "activity2-listen": "a",
+    "activity2-repeat": "b",
+    "activity2-match": "c",
   };
   const rolePattern =
-    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read|listening1-mcq|listening1-repeat|listening1-read|listening1-type)";
+    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read|listening1-mcq|listening1-repeat|listening1-read|listening1-type|activity2-listen|activity2-repeat|activity2-match)";
   const detailedMatch = new RegExp(
     `^activity-(\\d+)(?:-([a-z]))?-${rolePattern}$`
   ).exec(normalized);

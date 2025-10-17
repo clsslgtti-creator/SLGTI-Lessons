@@ -9,23 +9,23 @@
     "type": "PRONUNCIATION",
     "focus": "Short /æ/",
     "instructions": {
-      "activity_1_a": {
+      "activity_a": {
         "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_1_b": {
+      "activity_b": {
         "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
-      "activity_1_c": {
+      "activity_c": {
         "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_1_d": {
+      "activity_d": {
         "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
-      "activity_1_e": {
+      "activity_e": {
         "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       }
@@ -69,23 +69,23 @@
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
-      "activity_2_a": {
+      "activity_a": {
         "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_2_i_a.mp3"
       },
-      "activity_2_b": {
+      "activity_b": {
         "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_2_c": {
+      "activity_c": {
         "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
-      "activity_2_d": {
+      "activity_d": {
         "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       },
-      "activity_2_e": {
+      "activity_e": {
         "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
         "audio": "assets/audio/a_2_i_e.mp3"
       }
@@ -182,135 +182,117 @@
     ]
   },
   "activity_3": {
-    "type": "ACTICITY-2",
+    "type": "ACTIVITY-2",
     "instructions": {
-      "activity_3_a": {
+      "activity_a": {
         "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_3_b": {
+      "activity_b": {
         "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
-      "activity_3_c": {
-        "text": "Match the times with the clocks.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+      "activity_c": {
+        "text": "Match the times with the clocks.\nවේලාවන් ඔරලෝසු සමඟ ගැළපන්න.\nநேரங்களை மணிக்கடிகாரங்களுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       }
     },
     "content": {
-      "activity_3_a": [
+      "activity_a": [
         {
-          "id": "a_3_1",
-          "text_a": "105 — one hundred and five",
-          "text_b": "107 — one hundred and seven",
-          "text_c": "109 — one hundred and nine",
-          "audio_a": "assets/audio/a_3_a_1_a.mp3",
-          "audio_b": "assets/audio/a_3_a_1_b.mp3",
-          "audio_c": "assets/audio/a_3_a_1_c.mp3"
+          "id": "a_3_a_1",
+          "text_a": "It is ten past four. ( 4:10)",
+          "text_b": "It is ten past six. (6:10)",
+          "text_c": "It is ten past ten. (10:10)",
+          "audio_a": "assets/audio/a_3_t_1_a.mp3",
+          "audio_b": "assets/audio/a_3_t_1_b.mp3",
+          "audio_c": "assets/audio/a_3_t_1_c.mp3"
         },
         {
-          "id": "a_3_2",
-          "text_a": "362 — three hundred and sixty-two",
-          "text_b": "364 — three hundred and sixty-four",
-          "text_c": "368 — three hundred and sixty-eight",
-          "audio_a": "assets/audio/a_3_a_2_a.mp3",
-          "audio_b": "assets/audio/a_3_a_2_b.mp3",
-          "audio_c": "assets/audio/a_3_a_2_c.mp3"
+          "id": "a_3_a_2",
+          "text_a": "It is quarter past four. ( 4:15)",
+          "text_b": "It is quarter past six. (6:15)",
+          "text_c": "It is quarter past ten. (10:15)",
+          "audio_a": "assets/audio/a_3_t_2_a.mp3",
+          "audio_b": "assets/audio/a_3_t_2_b.mp3",
+          "audio_c": "assets/audio/a_3_t_2_c.mp3"
         },
         {
-          "id": "a_3_3",
-          "text_a": "1,402 — one thousand four hundred and two",
-          "text_b": "1,406 — one thousand four hundred and six",
-          "text_c": "1,409 — one thousand four hundred and nine",
-          "audio_a": "assets/audio/a_3_a_3_a.mp3",
-          "audio_b": "assets/audio/a_3_a_3_b.mp3",
-          "audio_c": "assets/audio/a_3_a_3_c.mp3"
+          "id": "a_3_a_3",
+          "text_a": "It is half past four. (4:30)",
+          "text_b": "It is half past six. (6:30)",
+          "text_c": "It is half past ten. (10:30)",
+          "audio_a": "assets/audio/a_3_t_3_a.mp3",
+          "audio_b": "assets/audio/a_3_t_3_b.mp3",
+          "audio_c": "assets/audio/a_3_t_3_c.mp3"
         },
         {
-          "id": "a_3_4",
-          "text_a": "4,501 — four thousand five hundred and one",
-          "text_b": "4,601 — four thousand six hundred and one",
-          "text_c": "4,701 — four thousand seven hundred and one",
-          "audio_a": "assets/audio/a_3_a_4_a.mp3",
-          "audio_b": "assets/audio/a_3_a_4_b.mp3",
-          "audio_c": "assets/audio/a_3_a_4_c.mp3"
+          "id": "a_3_a_4",
+          "text_a": "It is twenty-five to five. (4:35)",
+          "text_b": "It is twenty-five to seven. (6:35)",
+          "text_c": "It is twenty-five to eleven. (10:35)",
+          "audio_a": "assets/audio/a_3_t_4_a.mp3",
+          "audio_b": "assets/audio/a_3_t_4_b.mp3",
+          "audio_c": "assets/audio/a_3_t_4_c.mp3"
         },
         {
-          "id": "a_3_5",
-          "text_a": "9,312 — nine thousand three hundred and twelve",
-          "text_b": "9,315 — nine thousand three hundred and fifteen",
-          "text_c": "9,317 — nine thousand three hundred and seventeen",
-          "audio_a": "assets/audio/a_3_a_5_a.mp3",
-          "audio_b": "assets/audio/a_3_a_5_b.mp3",
-          "audio_c": "assets/audio/a_3_a_5_c.mp3"
-        },
-        {
-          "id": "a_3_6",
-          "text_a": "25,001 — twenty-five thousand and one",
-          "text_b": "27,001— twenty-seven thousand and one",
-          "text_c": "29,001 — twenty-nine thousand and one",
-          "audio_a": "assets/audio/a_3_a_6_a.mp3",
-          "audio_b": "assets/audio/a_3_a_6_b.mp3",
-          "audio_c": "assets/audio/a_3_a_6_c.mp3"
+          "id": "a_3_a_5",
+          "text_a": "It is quarter to five. (4:45)",
+          "text_b": "It is quarter to seven. (6:45)",
+          "text_c": "It is quarter to eleven. (10:45)",
+          "audio_a": "assets/audio/a_3_t_5_a.mp3",
+          "audio_b": "assets/audio/a_3_t_5_b.mp3",
+          "audio_c": "assets/audio/a_3_t_5_c.mp3"
         }
       ],
-      "activity_3_b": [
+      "activity_b": [
         {
-          "id": "a_3_1",
-          "text_a": "105 — one hundred and five",
-          "text_b": "107 — one hundred and seven",
-          "text_c": "109 — one hundred and nine",
-          "audio_a": "assets/audio/a_3_a_1_a.mp3",
-          "audio_b": "assets/audio/a_3_a_1_b.mp3",
-          "audio_c": "assets/audio/a_3_a_1_c.mp3"
+          "id": "a_3_b_1",
+          "text_a": "It is ten past four. ( 4:10)",
+          "text_b": "It is ten past six. (6:10)",
+          "text_c": "It is ten past ten. (10:10)",
+          "audio_a": "assets/audio/a_3_t_1_a.mp3",
+          "audio_b": "assets/audio/a_3_t_1_b.mp3",
+          "audio_c": "assets/audio/a_3_t_1_c.mp3"
         },
         {
-          "id": "a_3_2",
-          "text_a": "362 — three hundred and sixty-two",
-          "text_b": "364 — three hundred and sixty-four",
-          "text_c": "368 — three hundred and sixty-eight",
-          "audio_a": "assets/audio/a_3_a_2_a.mp3",
-          "audio_b": "assets/audio/a_3_a_2_b.mp3",
-          "audio_c": "assets/audio/a_3_a_2_c.mp3"
+          "id": "a_3_b_2",
+          "text_a": "It is quarter past four. ( 4:15)",
+          "text_b": "It is quarter past six. (6:15)",
+          "text_c": "It is quarter past ten. (10:15)",
+          "audio_a": "assets/audio/a_3_t_2_a.mp3",
+          "audio_b": "assets/audio/a_3_t_2_b.mp3",
+          "audio_c": "assets/audio/a_3_t_2_c.mp3"
         },
         {
-          "id": "a_3_3",
-          "text_a": "1,402 — one thousand four hundred and two",
-          "text_b": "1,406 — one thousand four hundred and six",
-          "text_c": "1,409 — one thousand four hundred and nine",
-          "audio_a": "assets/audio/a_3_a_3_a.mp3",
-          "audio_b": "assets/audio/a_3_a_3_b.mp3",
-          "audio_c": "assets/audio/a_3_a_3_c.mp3"
+          "id": "a_3_b_3",
+          "text_a": "It is half past four. (4:30)",
+          "text_b": "It is half past six. (6:30)",
+          "text_c": "It is half past ten. (10:30)",
+          "audio_a": "assets/audio/a_3_t_3_a.mp3",
+          "audio_b": "assets/audio/a_3_t_3_b.mp3",
+          "audio_c": "assets/audio/a_3_t_3_c.mp3"
         },
         {
-          "id": "a_3_4",
-          "text_a": "4,501 — four thousand five hundred and one",
-          "text_b": "4,601 — four thousand six hundred and one",
-          "text_c": "4,701 — four thousand seven hundred and one",
-          "audio_a": "assets/audio/a_3_a_4_a.mp3",
-          "audio_b": "assets/audio/a_3_a_4_b.mp3",
-          "audio_c": "assets/audio/a_3_a_4_c.mp3"
+          "id": "a_3_b_4",
+          "text_a": "It is twenty-five to five. (4:35)",
+          "text_b": "It is twenty-five to seven. (6:35)",
+          "text_c": "It is twenty-five to eleven. (10:35)",
+          "audio_a": "assets/audio/a_3_t_4_a.mp3",
+          "audio_b": "assets/audio/a_3_t_4_b.mp3",
+          "audio_c": "assets/audio/a_3_t_4_c.mp3"
         },
         {
-          "id": "a_3_5",
-          "text_a": "9,312 — nine thousand three hundred and twelve",
-          "text_b": "9,315 — nine thousand three hundred and fifteen",
-          "text_c": "9,317 — nine thousand three hundred and seventeen",
-          "audio_a": "assets/audio/a_3_a_5_a.mp3",
-          "audio_b": "assets/audio/a_3_a_5_b.mp3",
-          "audio_c": "assets/audio/a_3_a_5_c.mp3"
-        },
-        {
-          "id": "a_3_6",
-          "text_a": "25,001 — twenty-five thousand and one",
-          "text_b": "27,001— twenty-seven thousand and one",
-          "text_c": "29,001 — twenty-nine thousand and one",
-          "audio_a": "assets/audio/a_3_a_6_a.mp3",
-          "audio_b": "assets/audio/a_3_a_6_b.mp3",
-          "audio_c": "assets/audio/a_3_a_6_c.mp3"
+          "id": "a_3_b_5",
+          "text_a": "It is quarter to five. (4:45)",
+          "text_b": "It is quarter to seven. (6:45)",
+          "text_c": "It is quarter to eleven. (10:45)",
+          "audio_a": "assets/audio/a_3_t_5_a.mp3",
+          "audio_b": "assets/audio/a_3_t_5_b.mp3",
+          "audio_c": "assets/audio/a_3_t_5_c.mp3"
         }
       ],
-      "activity_3_c": [
+      "activity_c": [
         {
           "id": "d_1",
           "img": "assets/img/a_2_d_1.jpeg",
@@ -344,7 +326,7 @@
       ]
     }
   },
-  "activity_5": {
+  "activity_4": {
     "type": "GAME"
   }
 }
