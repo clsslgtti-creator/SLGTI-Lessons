@@ -331,6 +331,227 @@
     }
   },
   "activity_4": {
-    "type": "LISTENING-2"
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. සවන් දී ඔබට ඇසෙන අංක සලකුණු කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What is Mr. Silva doing in the workshop?",
+            "answer": "He is repairing a faulty alternator.",
+            "options": [
+              "He is repairing a faulty alternator.",
+              "He is cleaning greasy tools.",
+              "He is installing a new battery."
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": "Who is installing a new battery?",
+            "answer": "Amal.",
+            "options": ["Nimal.", "Amal.", "Ravi."]
+          },
+          {
+            "id": "l_4_3",
+            "question": "Where are the trainees cleaning the greasy tools?",
+            "answer": "Near the workbench.",
+            "options": [
+              "Near the diagnostic machine.",
+              "Near the workbench.",
+              "Near the instructor’s desk."
+            ]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What are the instructors doing?",
+            "answer": "They are watching and giving advice.",
+            "options": [
+              "They are calibrating meters.",
+              "They are repairing the alternator.",
+              "They are watching and giving advice."
+            ]
+          },
+          {
+            "id": "l_4_5",
+            "question": "What are Nimal and Ravi doing in the corner of the workshop?",
+            "answer": "They are calibrating meters.",
+            "options": [
+              "They are calibrating meters.",
+              "They are installing a battery.",
+              "They are cleaning the tools."
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "The new batch of trainees are in the automobile workshop today.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "It is five past nine.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "The manager has just started the training.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "The mechanics are working hard.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "He is checking the wires carefully.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_18",
+          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "Their overalls are dirty and oily.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "A new trainee is helping him by reading the car manual for details.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        },
+        {
+          "id": "n_4_13",
+          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "audio": "assets/audio/a_4_n_13.mp3"
+        },
+        {
+          "id": "n_4_14",
+          "text": "Everyone is busy, and the workshop is full of activity.",
+          "audio": "assets/audio/a_4_n_14.mp3"
+        },
+        {
+          "id": "n_4_15",
+          "text": "Everyone understands why safety instructions are so important.",
+          "audio": "assets/audio/a_4_n_15.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "r_4_1",
+          "text": "The new batch of trainees are in the automobile workshop today.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "It is five past nine.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "The manager has just started the training.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "The mechanics are working hard.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "He is checking the wires carefully.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_18",
+          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "Their overalls are dirty and oily.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "r_4_11",
+          "text": "A new trainee is helping him by reading the car manual for details.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "r_4_12",
+          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        },
+        {
+          "id": "r_4_13",
+          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "audio": "assets/audio/a_4_n_13.mp3"
+        },
+        {
+          "id": "r_4_14",
+          "text": "Everyone is busy, and the workshop is full of activity.",
+          "audio": "assets/audio/a_4_n_14.mp3"
+        },
+        {
+          "id": "r_4_15",
+          "text": "Everyone understands why safety instructions are so important.",
+          "audio": "assets/audio/a_4_n_15.mp3"
+        }
+      ]
+    }
   }
 }
