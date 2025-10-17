@@ -7,31 +7,26 @@
   },
   "activity_1": {
     "type": "PRONUNCIATION",
-    "focus": "Short /ɪ/",
-    "image": "assets/img/a_1_p.jpeg",
+    "focus": "Short /æ/",
     "instructions": {
       "activity_1_a": {
-        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_1_b": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
       "activity_1_c": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
-        "audio": "assets/audio/a_2_i_d.mp3"
-      },
-      "activity_1_d": {
-        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_1_e": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
-      "activity_1_f": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       }
     },
@@ -71,11 +66,11 @@
     "focus": "Present Continuous Tense",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogue.\nமாதிரி உரையாடலை கேளுங்கள்.\nආදර්ශ සංවාදය අසා බලන්න.",
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {
-        "text": "Match the words with the pictures.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.\nපදයන් පින්තූර සමග ගැලපන්න.",
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_2_i_a.mp3"
       },
       "activity_2_b": {
@@ -83,66 +78,50 @@
         "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_2_c": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
       "activity_2_d": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       },
       "activity_2_e": {
-        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.",
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
         "audio": "assets/audio/a_2_i_e.mp3"
       }
     },
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/a_2_ex_1.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "What are you doing?",
+        "text_b": "I am cleaning my workstation.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
         "audio_b": "assets/audio/a_2_ex_1_b.mp3"
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_2.jpeg",
+        "text_a": "What are Mary and Ravi doing?",
+        "text_b": "They are talking.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
         "audio_b": "assets/audio/a_2_ex_2_b.mp3"
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_3.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_3.png",
+        "text_a": "What is Amita doing?",
+        "text_b": "She is sleeping.",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
         "audio_b": "assets/audio/a_2_ex_3_b.mp3"
       },
       {
-        "id": "e_4",
-        "img": "assets/img/a_2_ex_4.jpg",
-        "text_a": "",
-        "text_b": "",
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_4.jpeg",
+        "text_a": "What is John doing?",
+        "text_b": "He is arranging the tools.",
         "audio_a": "assets/audio/a_2_ex_4_a.mp3",
         "audio_b": "assets/audio/a_2_ex_4_b.mp3"
-      },
-      {
-        "id": "e_5",
-        "img": "assets/img/a_2_ex_5.jpg",
-        "text_a": "",
-        "text_b": "",
-        "audio_a": "assets/audio/a_2_ex_5_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_5_b.mp3"
-      },
-      {
-        "id": "e_6",
-        "img": "assets/img/a_2_ex_6.jpg",
-        "text_a": "",
-        "text_b": "",
-        "audio_a": "assets/audio/a_2_ex_6_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_6_b.mp3"
       }
     ],
     "dialogues": [
