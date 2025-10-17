@@ -33,31 +33,35 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "f'i'tting",
+        "word_text": "brake p'a'd",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The pipe f'i'tting is loose.",
-        "sentence_audio": "assets/audio/a_1_p_1_b.mp3"
+        "sentence_text": "The brake p'a'd is new.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.jpeg"
       },
       {
         "id": "p_2",
-        "word_text": "dr'i'll",
+        "word_text": "j'a'ck",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Use the dr'i'll on the plate.",
-        "sentence_audio": "assets/audio/a_1_p_2_b.mp3"
+        "sentence_text": "Raise the car with the j'a'ck.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "sp'i'ndle",
+        "word_text": "f'a'n",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "The sp'i'ndle is turning fast.",
-        "sentence_audio": "assets/audio/a_1_p_3_b.mp3"
+        "sentence_text": "The f'a'n is running fast.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.jpeg"
       },
       {
         "id": "p_4",
-        "word_text": "b'i'll",
+        "word_text": "c'a'n",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "B'i'll the client fairly.",
-        "sentence_audio": "assets/audio/a_1_p_4_b.mp3"
+        "sentence_text": "Remove the c'a'n from the floor.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.jpeg"
       }
     ]
   },
@@ -132,7 +136,7 @@
         "text_b": "He is opening the fuel cap.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Opening"
+        "keyword": "opening"
       },
       {
         "id": "d_2",
@@ -141,7 +145,7 @@
         "text_b": "I am checking the battery light.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Checking"
+        "keyword": "checking"
       },
       {
         "id": "d_3",
@@ -150,7 +154,7 @@
         "text_b": "He is replacing the fan belt.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Replacing"
+        "keyword": "replacing"
       },
       {
         "id": "d_4",
@@ -159,7 +163,7 @@
         "text_b": " He is reading the fuel gauge. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Reading"
+        "keyword": "reading"
       },
       {
         "id": "d_5",
@@ -168,7 +172,7 @@
         "text_b": "We are repairing the clutch pedal. ",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Repairing"
+        "keyword": "repairing"
       },
       {
         "id": "d_6",
@@ -177,7 +181,7 @@
         "text_b": "They are testing the wheel alignment.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Testing"
+        "keyword": "testing"
       }
     ]
   },
@@ -327,6 +331,6 @@
     }
   },
   "activity_4": {
-    "type": "GAME"
+    "type": "LISTENING-2"
   }
 }
