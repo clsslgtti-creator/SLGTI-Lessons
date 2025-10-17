@@ -1,4 +1,4 @@
-{ 
+{
   "meta": {
     "lesson_no": 3,
     "level": "Elementary",
@@ -182,39 +182,169 @@
     ]
   },
   "activity_3": {
-    "type": "GRAMMAR"
+    "type": "ACTICITY-2",
+    "instructions": {
+      "activity_3_a": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_3_b": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_3_c": {
+        "text": "Match the times with the clocks.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_3_a": [
+        {
+          "id": "a_3_1",
+          "text_a": "105 — one hundred and five",
+          "text_b": "107 — one hundred and seven",
+          "text_c": "109 — one hundred and nine",
+          "audio_a": "assets/audio/a_3_a_1_a.mp3",
+          "audio_b": "assets/audio/a_3_a_1_b.mp3",
+          "audio_c": "assets/audio/a_3_a_1_c.mp3"
+        },
+        {
+          "id": "a_3_2",
+          "text_a": "362 — three hundred and sixty-two",
+          "text_b": "364 — three hundred and sixty-four",
+          "text_c": "368 — three hundred and sixty-eight",
+          "audio_a": "assets/audio/a_3_a_2_a.mp3",
+          "audio_b": "assets/audio/a_3_a_2_b.mp3",
+          "audio_c": "assets/audio/a_3_a_2_c.mp3"
+        },
+        {
+          "id": "a_3_3",
+          "text_a": "1,402 — one thousand four hundred and two",
+          "text_b": "1,406 — one thousand four hundred and six",
+          "text_c": "1,409 — one thousand four hundred and nine",
+          "audio_a": "assets/audio/a_3_a_3_a.mp3",
+          "audio_b": "assets/audio/a_3_a_3_b.mp3",
+          "audio_c": "assets/audio/a_3_a_3_c.mp3"
+        },
+        {
+          "id": "a_3_4",
+          "text_a": "4,501 — four thousand five hundred and one",
+          "text_b": "4,601 — four thousand six hundred and one",
+          "text_c": "4,701 — four thousand seven hundred and one",
+          "audio_a": "assets/audio/a_3_a_4_a.mp3",
+          "audio_b": "assets/audio/a_3_a_4_b.mp3",
+          "audio_c": "assets/audio/a_3_a_4_c.mp3"
+        },
+        {
+          "id": "a_3_5",
+          "text_a": "9,312 — nine thousand three hundred and twelve",
+          "text_b": "9,315 — nine thousand three hundred and fifteen",
+          "text_c": "9,317 — nine thousand three hundred and seventeen",
+          "audio_a": "assets/audio/a_3_a_5_a.mp3",
+          "audio_b": "assets/audio/a_3_a_5_b.mp3",
+          "audio_c": "assets/audio/a_3_a_5_c.mp3"
+        },
+        {
+          "id": "a_3_6",
+          "text_a": "25,001 — twenty-five thousand and one",
+          "text_b": "27,001— twenty-seven thousand and one",
+          "text_c": "29,001 — twenty-nine thousand and one",
+          "audio_a": "assets/audio/a_3_a_6_a.mp3",
+          "audio_b": "assets/audio/a_3_a_6_b.mp3",
+          "audio_c": "assets/audio/a_3_a_6_c.mp3"
+        }
+      ],
+      "activity_3_b": [
+        {
+          "id": "a_3_1",
+          "text_a": "105 — one hundred and five",
+          "text_b": "107 — one hundred and seven",
+          "text_c": "109 — one hundred and nine",
+          "audio_a": "assets/audio/a_3_a_1_a.mp3",
+          "audio_b": "assets/audio/a_3_a_1_b.mp3",
+          "audio_c": "assets/audio/a_3_a_1_c.mp3"
+        },
+        {
+          "id": "a_3_2",
+          "text_a": "362 — three hundred and sixty-two",
+          "text_b": "364 — three hundred and sixty-four",
+          "text_c": "368 — three hundred and sixty-eight",
+          "audio_a": "assets/audio/a_3_a_2_a.mp3",
+          "audio_b": "assets/audio/a_3_a_2_b.mp3",
+          "audio_c": "assets/audio/a_3_a_2_c.mp3"
+        },
+        {
+          "id": "a_3_3",
+          "text_a": "1,402 — one thousand four hundred and two",
+          "text_b": "1,406 — one thousand four hundred and six",
+          "text_c": "1,409 — one thousand four hundred and nine",
+          "audio_a": "assets/audio/a_3_a_3_a.mp3",
+          "audio_b": "assets/audio/a_3_a_3_b.mp3",
+          "audio_c": "assets/audio/a_3_a_3_c.mp3"
+        },
+        {
+          "id": "a_3_4",
+          "text_a": "4,501 — four thousand five hundred and one",
+          "text_b": "4,601 — four thousand six hundred and one",
+          "text_c": "4,701 — four thousand seven hundred and one",
+          "audio_a": "assets/audio/a_3_a_4_a.mp3",
+          "audio_b": "assets/audio/a_3_a_4_b.mp3",
+          "audio_c": "assets/audio/a_3_a_4_c.mp3"
+        },
+        {
+          "id": "a_3_5",
+          "text_a": "9,312 — nine thousand three hundred and twelve",
+          "text_b": "9,315 — nine thousand three hundred and fifteen",
+          "text_c": "9,317 — nine thousand three hundred and seventeen",
+          "audio_a": "assets/audio/a_3_a_5_a.mp3",
+          "audio_b": "assets/audio/a_3_a_5_b.mp3",
+          "audio_c": "assets/audio/a_3_a_5_c.mp3"
+        },
+        {
+          "id": "a_3_6",
+          "text_a": "25,001 — twenty-five thousand and one",
+          "text_b": "27,001— twenty-seven thousand and one",
+          "text_c": "29,001 — twenty-nine thousand and one",
+          "audio_a": "assets/audio/a_3_a_6_a.mp3",
+          "audio_b": "assets/audio/a_3_a_6_b.mp3",
+          "audio_c": "assets/audio/a_3_a_6_c.mp3"
+        }
+      ],
+      "activity_3_c": [
+        {
+          "id": "d_1",
+          "img": "assets/img/a_2_d_1.jpeg",
+          "keyword": "It’s half past eight."
+        },
+        {
+          "id": "d_2",
+          "img": "assets/img/a_2_d_2.jpeg",
+          "keyword": "It’s half past eight."
+        },
+        {
+          "id": "d_3",
+          "img": "assets/img/a_2_d_3.jpeg",
+          "keyword": "It’s half past eight."
+        },
+        {
+          "id": "d_4",
+          "img": "assets/img/a_2_d_4.jpeg",
+          "keyword": "It’s half past eight."
+        },
+        {
+          "id": "d_5",
+          "img": "assets/img/a_2_d_5.jpeg",
+          "keyword": "It’s half past eight."
+        },
+        {
+          "id": "d_6",
+          "img": "assets/img/a_2_d_6.jpeg",
+          "keyword": "It’s half past eight."
+        }
+      ]
+    }
   },
-  "activity_4": {
+  "activity_5": {
     "type": "GAME"
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
