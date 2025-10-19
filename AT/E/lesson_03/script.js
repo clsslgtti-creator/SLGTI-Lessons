@@ -1,8 +1,9 @@
 import { buildSbsSlides } from "./lib/sbs.js";
 import { buildPronunciationSlides } from "./lib/pronunciation.js";
 import { buildGame1Slides } from "./lib/game-1.js";
-import { buildListeningOneSlides } from "./lib/listening-1.js";
 import { buildActivityTwoSlides } from "./lib/activity-2.js";
+import { buildListeningOneSlides } from "./lib/listening-1.js";
+import { buildListeningTwoSlides } from "./lib/listening-2.js";
 
 const slidesContainer = document.getElementById("slides");
 const progressIndicator = document.getElementById("progressIndicator");
@@ -209,6 +210,7 @@ const activityBuilders = {
   PRONUNCIATION: buildPronunciationSlides,
   "GAME-1": buildGame1Slides,
   "LISTENING-1": buildListeningOneSlides,
+  "LISTENING-2": buildListeningTwoSlides,
   "ACTIVITY-2": buildActivityTwoSlides,
 };
 
