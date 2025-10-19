@@ -194,7 +194,7 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
   const playBtn = document.createElement("button");
   playBtn.type = "button";
   playBtn.className = "primary-btn";
-  playBtn.textContent = "Play audio";
+  playBtn.textContent = "Start";
   const status = createStatus();
   controls.append(playBtn, status);
   slide.appendChild(controls);
@@ -261,6 +261,8 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
   let playbackCount = 0;
   let playbackController = null;
   let secondPlaybackTimer = null;
+  let secondPlaybackCountdownInterval = null;
+  let secondPlaybackRemaining = 0;
   let autoTriggered = false;
   let completionShown = false;
 
@@ -276,7 +278,7 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
       return;
     }
     playBtn.disabled = false;
-    playBtn.textContent = playbackCount === 0 ? "Play audio" : "Play again";
+    playBtn.textContent = "Start";
   };
 
   updateButtonState();
@@ -286,19 +288,40 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
       window.clearTimeout(secondPlaybackTimer);
       secondPlaybackTimer = null;
     }
+    if (secondPlaybackCountdownInterval !== null) {
+      window.clearInterval(secondPlaybackCountdownInterval);
+      secondPlaybackCountdownInterval = null;
+    }
+    secondPlaybackRemaining = 0;
   };
 
   const scheduleSecondPlayback = () => {
-    if (playbackCount >= 1 && playbackCount < 2) {
-      clearPlaybackTimers();
-      status.textContent =
-        "Second playback starts in 60s. Click play to listen sooner.";
-      secondPlaybackTimer = window.setTimeout(() => {
-        secondPlaybackTimer = null;
-        beginPlayback();
-      }, 60000);
-      playBtn.disabled = false;
+    if (playbackCount < 1 || playbackCount >= 2) {
+      return;
     }
+    clearPlaybackTimers();
+
+    secondPlaybackRemaining = 60;
+    const updateStatus = () => {
+      status.textContent = `Second playback starts in ${secondPlaybackRemaining}s. Click play to listen sooner.`;
+    };
+
+    updateStatus();
+    playBtn.disabled = false;
+
+    secondPlaybackTimer = window.setTimeout(() => {
+      clearPlaybackTimers();
+      beginPlayback();
+    }, secondPlaybackRemaining * 1000);
+
+    secondPlaybackCountdownInterval = window.setInterval(() => {
+      secondPlaybackRemaining -= 1;
+      if (secondPlaybackRemaining <= 0) {
+        clearPlaybackTimers();
+        return;
+      }
+      updateStatus();
+    }, 1000);
   };
 
   const beginPlayback = async () => {
@@ -489,6 +512,13 @@ const createSequencedTextSlide = (
   ensureInstructionAnchor(slide);
   maybeInsertFocus(slide, activityFocus, includeFocus);
 
+  const instructionEl = slide.querySelector(".slide__instruction");
+  if (instructionEl) {
+    instructionEl.textContent = isRepeatMode
+      ? "Listen and repeat each sentence."
+      : "Listen to each sentence.";
+  }
+
   const controls = document.createElement("div");
   controls.className = "slide__controls";
   const startBtn = document.createElement("button");
@@ -674,9 +704,9 @@ const createSequencedTextSlide = (
   return {
     id: activityNumber
       ? `activity-${activityNumber}${suffixSegment}-${
-          isRepeatMode ? "listen-repeat" : "listen"
+          isRepeatMode ? "listen-repeat" : "listening"
         }`
-      : `listening2-${isRepeatMode ? "listen-repeat" : "listen"}`,
+      : `listening2-${isRepeatMode ? "listen-repeat" : "listening"}`,
     element: slide,
     autoPlay: {
       button: startBtn,

@@ -136,7 +136,7 @@
         "text_b": "He is opening the fuel cap.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "opening"
+        "keyword": "fuel cap"
       },
       {
         "id": "d_2",
@@ -145,7 +145,7 @@
         "text_b": "I am checking the battery light.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "checking"
+        "keyword": "battery light"
       },
       {
         "id": "d_3",
@@ -154,7 +154,7 @@
         "text_b": "He is replacing the fan belt.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "replacing"
+        "keyword": "fan belt"
       },
       {
         "id": "d_4",
@@ -163,7 +163,7 @@
         "text_b": " He is reading the fuel gauge. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "reading"
+        "keyword": "fuel gauge"
       },
       {
         "id": "d_5",
@@ -172,7 +172,7 @@
         "text_b": "We are repairing the clutch pedal. ",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "repairing"
+        "keyword": "clutch pedal"
       },
       {
         "id": "d_6",
@@ -181,7 +181,7 @@
         "text_b": "They are testing the wheel alignment.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "testing"
+        "keyword": "wheel alignment"
       }
     ]
   },
