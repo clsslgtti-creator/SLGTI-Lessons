@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "f'i'tting",
+        "word_text": "'a'pp",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The pipe f'i'tting is loose.",
+        "sentence_text": "He is opening the 'a'pp now.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.jpeg"
       },
       {
         "id": "p_2",
-        "word_text": "dr'i'll",
+        "word_text": "sc'a'nner",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Use the dr'i'll on the plate.",
+        "sentence_text": "Use the sc'a'nner for the file.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
-        "word_text": "sp'i'ndle",
+        "word_text": "t'a'blet",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "The sp'i'ndle is turning fast.",
+        "sentence_text": "The t'a'blet is on the desk.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.jpeg"
       },
       {
         "id": "p_4",
-        "word_text": "b'i'll",
+        "word_text": "b'a'ckup",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "B'i'll the client fairly.",
+        "sentence_text": "They are b'a'cking up the data.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.jpeg"
       }
