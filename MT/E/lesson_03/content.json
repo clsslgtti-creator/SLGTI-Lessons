@@ -133,7 +133,7 @@
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
         "text_a": "What is the mechanic doing?",
-        "text_b": " He is adjusting a loose screw.",
+        "text_b": "He is adjusting a loose screw.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
         "keyword": "loose screw"
