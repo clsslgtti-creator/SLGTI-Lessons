@@ -33,35 +33,35 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "f'i'tting",
+        "word_text": "s'a'nd",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The pipe f'i'tting is loose.",
+        "sentence_text": "Carry the s'a'nd in the bag.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "dr'i'll",
+        "word_text": "l'a'dder",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Use the dr'i'll on the plate.",
+        "sentence_text": "He is climbing  the l'a'dder now.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
-        "word_text": "sp'i'ndle",
+        "word_text": "p'a'nel",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "The sp'i'ndle is turning fast.",
+        "sentence_text": "The wall has a new p'a'nel.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.jpeg"
       },
       {
         "id": "p_4",
-        "word_text": "b'i'll",
+        "word_text": "br'a'nd",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "B'i'll the client fairly.",
+        "sentence_text": "Which br'a'nd of paint are you using?",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpeg"
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
@@ -467,78 +467,63 @@
       "activity_c": [
         {
           "id": "r_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "The workers are busy at the construction site today.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "r_4_2",
-          "text": "It is five past nine.",
+          "text": "It is ten to nine. The project deadline is approaching.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "r_4_3",
-          "text": "The manager has just started the training.",
+          "text": "Two masons are laying bricks for the new wall.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "r_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "Another mason is helping them by mixing cement in a large metal tray. ",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "r_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "It is mid-April, and it is very hot.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "r_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "Everyone is sweating.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "r_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "The carpenters are cutting wooden planks near the scaffolding. ",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "r_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "id": "r_4_8",
+          "text": "They are near a huge tree, so there is some shade for them.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "r_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "Nearby, the site engineer is checking the concrete blocks and writing notes.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "r_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "Near the gate, two helpers are using a forklift to transport granite slabs to the store.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
           "id": "r_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
+          "text": "Everyone is working together, and the site is full of noise.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "r_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "text": "All are wearing the correct safety equipment, including yellow helmets, as instructed by the management.",
           "audio": "assets/audio/a_4_n_12.mp3"
-        },
-        {
-          "id": "r_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
-          "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "r_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "r_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ]
     }

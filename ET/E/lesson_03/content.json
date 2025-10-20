@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "f'i'tting",
+        "word_text": "cable cl'a'mp",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The pipe f'i'tting is loose.",
+        "sentence_text": "Tighten the cable cl'a'mp.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.jpeg"
       },
       {
         "id": "p_2",
-        "word_text": "dr'i'll",
+        "word_text": "l'a'mp",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Use the dr'i'll on the plate.",
+        "sentence_text": "The l'a'mp is on the table.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
-        "word_text": "sp'i'ndle",
+        "word_text": "battery p'a'ck",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "The sp'i'ndle is turning fast.",
+        "sentence_text": "Replace the battery p'a'ck.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.jpeg"
       },
       {
         "id": "p_4",
-        "word_text": "b'i'll",
+        "word_text": "ad'a'pter",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "B'i'll the client fairly.",
+        "sentence_text": "He is checking the ad'a'pter plug.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.jpeg"
       }
@@ -401,155 +401,115 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "It is ten to nine.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "It is five past nine.",
+          "text": "In the electrical lab, the trainees are practicing today.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The manager has just started the training.",
+          "text": "The safety inspector showed them all the safety equipment and explained the importance of wearing it at all times. ",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "Sunil is rewinding a motor carefully.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "At another table, Priya is having some difficulty in repairing a faulty alternator.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "Two students are calibrating digital meters near the window.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "The technical instructor is installing a transformer and explaining the steps to the class.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "n_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "id": "n_4_8",
+          "text": "At the back, two assistants are checking burnt wires and replacing them. ",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "A group of trainees are studying the control panel and trying to figure out which wire goes to which section of the lab.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "The lab is full of tools, machines, and activity.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
+          "text": "There is a lot to learn in handling all the equipment correctly.",
           "audio": "assets/audio/a_4_n_11.mp3"
-        },
-        {
-          "id": "n_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
-          "audio": "assets/audio/a_4_n_12.mp3"
-        },
-        {
-          "id": "n_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
-          "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "n_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "n_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "r_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "It is ten to nine.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "r_4_2",
-          "text": "It is five past nine.",
+          "text": "In the electrical lab, the trainees are practicing today.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "r_4_3",
-          "text": "The manager has just started the training.",
+          "text": "The safety inspector showed them all the safety equipment and explained the importance of wearing it at all times. ",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "r_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "Sunil is rewinding a motor carefully.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "r_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "At another table, Priya is having some difficulty in repairing a faulty alternator.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "r_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "Two students are calibrating digital meters near the window.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "r_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "The technical instructor is installing a transformer and explaining the steps to the class.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "r_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "id": "r_4_8",
+          "text": "At the back, two assistants are checking burnt wires and replacing them. ",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "r_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "A group of trainees are studying the control panel and trying to figure out which wire goes to which section of the lab.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "r_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "The lab is full of tools, machines, and activity.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
           "id": "r_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
+          "text": "There is a lot to learn in handling all the equipment correctly.",
           "audio": "assets/audio/a_4_n_11.mp3"
-        },
-        {
-          "id": "r_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
-          "audio": "assets/audio/a_4_n_12.mp3"
-        },
-        {
-          "id": "r_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
-          "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "r_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "r_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ]
     }
