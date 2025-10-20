@@ -1,3 +1,5 @@
+import { audioManager, computeSegmentGapMs } from "./audio-manager.js";
+
 const smoothScrollIntoView = (element) => {
   if (!element) {
     return;
@@ -5,140 +7,8 @@ const smoothScrollIntoView = (element) => {
   element.scrollIntoView({ behavior: "smooth", block: "center" });
 };
 
-const audioManager = (() => {
-  const cache = new Map();
-  const active = new Set();
-
-  const ensureEntry = (url) => {
-    if (!url) {
-      return null;
-    }
-
-    if (!cache.has(url)) {
-      const audioEl = new Audio(url);
-      audioEl.preload = "auto";
-
-      const metaPromise = new Promise((resolve) => {
-        const resolveWithDuration = () => {
-          cleanup();
-          resolve(Number.isFinite(audioEl.duration) ? audioEl.duration : 0);
-        };
-
-        const resolveWithZero = () => {
-          cleanup();
-          resolve(0);
-        };
-
-        const cleanup = () => {
-          audioEl.removeEventListener("loadedmetadata", resolveWithDuration);
-          audioEl.removeEventListener("error", resolveWithZero);
-        };
-
-        audioEl.addEventListener("loadedmetadata", resolveWithDuration);
-        audioEl.addEventListener("error", resolveWithZero);
-      });
-
-      cache.set(url, { audio: audioEl, metaPromise });
-      audioEl.load();
-    }
-
-    return cache.get(url);
-  };
-
-  const play = (url, { signal } = {}) => {
-    const entry = ensureEntry(url);
-    if (!entry) {
-      return Promise.resolve();
-    }
-
-    const { audio, metaPromise } = entry;
-    audio.currentTime = 0;
-
-    const playPromise = new Promise((resolve, reject) => {
-      const handleEnded = () => {
-        cleanup();
-        resolve();
-      };
-
-      const handleError = () => {
-        cleanup();
-        reject(new Error(`Unable to play audio: ${url}`));
-      };
-
-      const handleAbort = () => {
-        cleanup();
-        audio.pause();
-        audio.currentTime = 0;
-        resolve();
-      };
-
-      const cleanup = () => {
-        audio.removeEventListener("ended", handleEnded);
-        audio.removeEventListener("error", handleError);
-        if (signal) {
-          signal.removeEventListener("abort", handleAbort);
-        }
-        active.delete(audio);
-      };
-
-      if (signal) {
-        if (signal.aborted) {
-          handleAbort();
-          return;
-        }
-        signal.addEventListener("abort", handleAbort, { once: true });
-      }
-
-      active.add(audio);
-
-      audio.addEventListener("ended", handleEnded, { once: true });
-      audio.addEventListener("error", handleError, { once: true });
-
-      metaPromise
-        .then(() => audio.play())
-        .catch(() => audio.play())
-        .catch((err) => {
-          cleanup();
-          reject(err);
-        });
-    });
-
-    return playPromise;
-  };
-
-  const stopAll = () => {
-    active.forEach((audio) => {
-      audio.pause();
-      audio.currentTime = 0;
-    });
-    active.clear();
-  };
-
-  const getDuration = async (url) => {
-    const entry = ensureEntry(url);
-    if (!entry) {
-      return 0;
-    }
-
-    try {
-      const duration = await entry.metaPromise;
-      return Number.isFinite(duration) ? duration : 0;
-    } catch {
-      return 0;
-    }
-  };
-
-  return {
-    play,
-    stopAll,
-    getDuration,
-  };
-})();
-
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 const DEFAULT_REPEAT_PAUSE_MS = 2000;
-const MIN_LISTEN_GAP_MS = 2000;
-const MIN_READ_GAP_MS = 2000;
 
 const maybeInsertFocus = (slide, focusText, includeFocus) => {
   if (!includeFocus) {
@@ -231,33 +101,6 @@ const formatPronunciationText = (text) => {
   );
 };
 
-const createLayout = (imageUrl) => {
-  const layout = document.createElement("div");
-  layout.className = "pronunciation-layout";
-
-  const visual = document.createElement("div");
-  visual.className = "pronunciation-visual";
-
-  if (typeof imageUrl === "string" && imageUrl.trim().length) {
-    const img = document.createElement("img");
-    img.src = imageUrl;
-    img.alt = "";
-    img.loading = "lazy";
-    visual.appendChild(img);
-  } else {
-    const placeholder = document.createElement("div");
-    placeholder.className = "pronunciation-visual__placeholder";
-    placeholder.textContent = "Image coming soon.";
-    visual.appendChild(placeholder);
-  }
-
-  const content = document.createElement("div");
-  content.className = "pronunciation-content";
-
-  layout.append(visual, content);
-  return { layout, content };
-};
-
 const getRepeatPauseMs = (activityData) => {
   const raw =
     activityData?.repeat_pause_ms ?? activityData?.listen_repeat_pause_ms;
@@ -268,28 +111,14 @@ const getRepeatPauseMs = (activityData) => {
   return clamp(parsed, 800, 4000);
 };
 
-const computeGapMs = (mode, durationSeconds, repeatPauseMs) => {
-  const durationMs = Number.isFinite(durationSeconds)
-    ? Math.max(0, durationSeconds * 3000)
-    : 0;
-
-  const minGap = mode === "read" ? MIN_READ_GAP_MS : MIN_LISTEN_GAP_MS;
-  const multiplier = mode === "read" ? 0.75 : 0.5;
-  const scaled = Math.round(durationMs * multiplier);
-
-  return Math.max(minGap, scaled);
-};
-
 const createPronunciationSlide = ({
   entries,
   activityLabel,
   activityNumber,
   activityFocus,
   includeFocus,
-  imageUrl,
   role,
   letter,
-  titleSuffix,
   type,
   mode,
   repeatPauseMs,
@@ -310,7 +139,8 @@ const createPronunciationSlide = ({
 
   const slide = document.createElement("section");
   slide.className = `slide slide--pronunciation ${slideRoleClass}`;
-  slide.innerHTML = `<h2>${activityLabel}${titleSuffix}</h2>`;
+  const headingLabel = letter ? `${activityLabel}${letter}` : activityLabel;
+  slide.innerHTML = `<h2>${headingLabel}</h2>`;
 
   if (mode === "read") {
     slide.classList.add("is-animated");
@@ -323,10 +153,10 @@ const createPronunciationSlide = ({
   const subjectLabel = type === "sentence" ? "the sentences" : "the words";
   description.textContent =
     mode === "listen"
-      ? `Press Play to listen to ${subjectLabel}.`
+      ? `Press Start to listen to ${subjectLabel}.`
       : mode === "listen-repeat"
-      ? `Press Play to listen, then use the pause to repeat ${subjectLabel}.`
-      : `Press Play and read along with ${subjectLabel}.`;
+      ? `Press Start to listen, then use the pause to repeat ${subjectLabel}.`
+      : `Press Start and read along with ${subjectLabel}.`;
   slide.appendChild(description);
 
   const controls = document.createElement("div");
@@ -334,21 +164,16 @@ const createPronunciationSlide = ({
   const playBtn = document.createElement("button");
   playBtn.type = "button";
   playBtn.className = "primary-btn";
-  const buttonSubject = type === "sentence" ? "Sentences" : "Words";
-  playBtn.textContent =
-    mode === "listen"
-      ? `Play ${buttonSubject}  ▶`
-      : mode === "listen-repeat"
-      ? `Start Listen & Repeat  ▶`
-      : `Play Read Along  ▶`;
+  playBtn.textContent = "Start";
   controls.appendChild(playBtn);
 
   const status = createStatus();
   controls.appendChild(status);
   slide.appendChild(controls);
 
-  const { layout, content } = createLayout(imageUrl);
-  slide.appendChild(layout);
+  const content = document.createElement("div");
+  content.className = "pronunciation-content";
+  slide.appendChild(content);
 
   const list = document.createElement("div");
   list.className = "dialogue-grid dialogue-grid--pronunciation";
@@ -372,11 +197,25 @@ const createPronunciationSlide = ({
     card.className = `dialogue-card ${cardRoleClass} dialogue-card--pronunciation`;
     card.dataset.entryIndex = String(index);
 
+    const imageUrl =
+      typeof entry?.image === "string" ? entry.image.trim() : "";
+    if (imageUrl) {
+      const img = document.createElement("img");
+      img.className = "dialogue-card__image";
+      img.loading = "lazy";
+      img.src = imageUrl;
+      img.alt =
+        type === "sentence"
+          ? `Illustration for sentence ${index + 1}`
+          : `Illustration for word ${rawText.replace(/<[^>]*>/g, "")}`;
+      card.appendChild(img);
+    }
+
     const textsWrapper = document.createElement("div");
     textsWrapper.className = "dialogue-card__texts";
 
     const line = document.createElement("p");
-    line.className = "dialogue-card__line";
+    line.className = "dialogue-card__line dialogue-card__line--answer";
     line.innerHTML = formatPronunciationText(rawText);
 
     textsWrapper.appendChild(line);
@@ -399,6 +238,34 @@ const createPronunciationSlide = ({
 
   let abortController = null;
   let activeItem = null;
+  let pauseRequested = false;
+
+  const playbackState = {
+    mode: "idle",
+    index: 0,
+  };
+
+  const updateButtonLabel = () => {
+    if (playbackState.mode === "playing") {
+      playBtn.textContent = "Pause";
+      return;
+    }
+    if (playbackState.mode === "paused") {
+      playBtn.textContent = "Resume";
+      return;
+    }
+    playBtn.textContent = "Start";
+  };
+
+  const setPlaybackMode = (mode, { index } = {}) => {
+    playbackState.mode = mode;
+    if (Number.isInteger(index)) {
+      playbackState.index = Math.max(0, index);
+    }
+    updateButtonLabel();
+  };
+
+  updateButtonLabel();
 
   const resetActiveItem = () => {
     if (!activeItem) {
@@ -429,7 +296,9 @@ const createPronunciationSlide = ({
       }
 
       const durationSeconds = await audioManager.getDuration(item.audioUrl);
-      const gapMs = computeGapMs(mode, durationSeconds, repeatPauseMs);
+      const gapMs = computeSegmentGapMs(mode, durationSeconds, {
+        repeatPauseMs: mode === "listen-repeat" ? repeatPauseMs : null,
+      });
 
       if (mode === "listen-repeat") {
         status.textContent = "Your turn...";
@@ -454,50 +323,95 @@ const createPronunciationSlide = ({
     }
   };
 
-  const runSequence = async () => {
+  const resetState = ({ clearStatus = true } = {}) => {
+    slide._autoTriggered = false;
+    pauseRequested = false;
+    setPlaybackMode("idle", { index: 0 });
+    resetActiveItem();
+    if (clearStatus) {
+      status.textContent = "";
+    }
+  };
+
+  const runSequence = async (fromIndex = 0) => {
     if (!items.length) {
       status.textContent = "No audio available.";
+      resetState({ clearStatus: false });
       return;
     }
 
+    pauseRequested = false;
     abortController?.abort();
     abortController = new AbortController();
     const { signal } = abortController;
 
-    playBtn.disabled = true;
-    status.textContent = "Starting...";
+    setPlaybackMode("playing", { index: fromIndex });
+    status.textContent = fromIndex === 0 ? "Starting..." : "Resuming...";
+
+    let completed = false;
 
     try {
-      for (const item of items) {
-        await playEntry(item, { signal });
+      for (let index = fromIndex; index < items.length; index += 1) {
+        playbackState.index = index;
+        await playEntry(items[index], { signal });
         if (signal.aborted) {
           break;
         }
       }
 
-      status.textContent = signal.aborted
-        ? "Playback stopped."
-        : "Playback complete.";
+      if (!signal.aborted) {
+        completed = true;
+      }
     } finally {
-      playBtn.disabled = false;
+      const aborted = abortController?.signal?.aborted ?? false;
       abortController = null;
       resetActiveItem();
-      if (signal.aborted) {
-        status.textContent = "Playback stopped.";
+
+      if (aborted && pauseRequested) {
+        slide._autoTriggered = false;
+        setPlaybackMode("paused", { index: playbackState.index });
+        status.textContent = "Paused.";
+      } else {
+        const finalStatus = completed
+          ? "Playback complete."
+          : "Playback stopped.";
+        resetState({ clearStatus: false });
+        status.textContent = finalStatus;
       }
+
+      pauseRequested = false;
     }
   };
 
-  playBtn.addEventListener("click", runSequence);
+  playBtn.addEventListener("click", () => {
+    if (playbackState.mode === "playing") {
+      pauseRequested = true;
+      abortController?.abort();
+      return;
+    }
+
+    if (playbackState.mode === "paused") {
+      slide._autoTriggered = true;
+      runSequence(playbackState.index);
+      return;
+    }
+
+    slide._autoTriggered = true;
+    runSequence(0);
+  });
 
   const autoPlay = {
     button: playBtn,
     trigger: () => {
-      if (slide._autoTriggered) {
+      if (
+        slide._autoTriggered ||
+        playbackState.mode === "playing" ||
+        playbackState.mode === "paused"
+      ) {
         return;
       }
       slide._autoTriggered = true;
-      runSequence();
+      runSequence(0);
     },
     status,
   };
@@ -513,10 +427,7 @@ const createPronunciationSlide = ({
     abortController?.abort();
     abortController = null;
     audioManager.stopAll();
-    resetActiveItem();
-    status.textContent = "";
-    playBtn.disabled = false;
-    slide._autoTriggered = false;
+    resetState();
     slide._instructionComplete = false;
   };
 
@@ -538,50 +449,36 @@ export const buildPronunciationSlides = (activityData = {}, context = {}) => {
   const entries = Array.isArray(activityData?.content)
     ? activityData.content
     : [];
-  const imageUrl =
-    typeof activityData?.image === "string" ? activityData.image : "";
   const repeatPauseMs = getRepeatPauseMs(activityData);
 
   const slides = [
     {
       role: "words-listen",
       letter: "a",
-      titleSuffix: "a - Listen",
       type: "word",
       mode: "listen",
     },
     {
       role: "words-repeat",
       letter: "b",
-      titleSuffix: "b - Listen & Repeat",
       type: "word",
       mode: "listen-repeat",
     },
     {
-      role: "words-read",
-      letter: "c",
-      titleSuffix: "c - Read Along",
-      type: "word",
-      mode: "read",
-    },
-    {
       role: "sentences-listen",
-      letter: "d",
-      titleSuffix: "d - Listen",
+      letter: "c",
       type: "sentence",
       mode: "listen",
     },
     {
       role: "sentences-repeat",
-      letter: "e",
-      titleSuffix: "e - Listen & Repeat",
+      letter: "d",
       type: "sentence",
       mode: "listen-repeat",
     },
     {
       role: "sentences-read",
-      letter: "f",
-      titleSuffix: "f - Read Along",
+      letter: "e",
       type: "sentence",
       mode: "read",
     },
@@ -594,7 +491,6 @@ export const buildPronunciationSlides = (activityData = {}, context = {}) => {
       activityNumber,
       activityFocus,
       includeFocus,
-      imageUrl,
       repeatPauseMs,
       ...config,
     })

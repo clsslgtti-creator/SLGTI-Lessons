@@ -164,72 +164,176 @@ const buildModelDialogueSlide = (
 
   let sequenceAbort = null;
   let autoTriggered = false;
+  let pauseRequested = false;
 
-  const runSequence = async () => {
+  const playbackState = {
+    mode: 'idle',
+    itemIndex: 0,
+    segmentIndex: 0,
+  };
+
+  const updateButtonLabel = () => {
+    if (playbackState.mode === 'playing') {
+      playBtn.textContent = 'Pause';
+      return;
+    }
+    if (playbackState.mode === 'paused') {
+      playBtn.textContent = 'Resume';
+      return;
+    }
+    playBtn.textContent = 'Start';
+  };
+
+  const setPlaybackMode = (mode, { itemIndex, segmentIndex } = {}) => {
+    playbackState.mode = mode;
+    if (Number.isInteger(itemIndex)) {
+      playbackState.itemIndex = Math.max(0, itemIndex);
+    }
+    if (Number.isInteger(segmentIndex)) {
+      playbackState.segmentIndex = Math.max(0, segmentIndex);
+    }
+    updateButtonLabel();
+  };
+
+  const resetCards = () => {
+    dialogueCards.forEach(({ card, segments }) => {
+      card.classList.remove('is-active');
+      clearSegmentHighlights(segments);
+    });
+  };
+
+  const resetState = ({ clearStatus = true } = {}) => {
+    autoTriggered = false;
+    slide._autoTriggered = false;
+    pauseRequested = false;
+    setPlaybackMode('idle', { itemIndex: 0, segmentIndex: 0 });
+    resetCards();
+    if (clearStatus) {
+      status.textContent = '';
+    }
+  };
+
+  updateButtonLabel();
+
+  const runSequence = async ({ itemIndex = 0, segmentIndex = 0 } = {}) => {
     if (!dialogueCards.length) {
       status.textContent = 'No audio available.';
+      resetState({ clearStatus: false });
       return;
     }
 
-    autoTriggered = true;
-    slide._autoTriggered = true;
-
+    pauseRequested = false;
     sequenceAbort?.abort();
     sequenceAbort = new AbortController();
     const { signal } = sequenceAbort;
-    playBtn.disabled = true;
-    status.textContent = 'Playing...';
+
+    setPlaybackMode('playing', { itemIndex, segmentIndex });
+    slide._autoTriggered = true;
+    autoTriggered = true;
+    status.textContent = itemIndex === 0 && segmentIndex === 0
+      ? 'Starting...'
+      : 'Resuming...';
+
+    let completed = false;
 
     try {
-      for (const item of dialogueCards) {
+      for (let i = itemIndex; i < dialogueCards.length; i += 1) {
+        playbackState.itemIndex = i;
+        const item = dialogueCards[i];
         item.card.classList.add('is-active');
         smoothScrollIntoView(item.card);
-        for (const segment of item.segments) {
-          const { url, element } = segment;
+
+        const startingSegment = i === itemIndex ? segmentIndex : 0;
+        for (let segIndex = startingSegment; segIndex < item.segments.length; segIndex += 1) {
+          playbackState.segmentIndex = segIndex;
+          const { url, element } = item.segments[segIndex];
           if (!url) {
             continue;
           }
 
+          status.textContent = 'Playing...';
           element?.classList.add('is-playing');
           try {
             await audioManager.play(url, { signal });
-          } finally {
-            element?.classList.remove('is-playing');
+          } catch (error) {
+            if (!signal.aborted) {
+              console.error(error);
+              status.textContent = 'Unable to play audio.';
+            }
           }
+          element?.classList.remove('is-playing');
 
           if (signal.aborted) {
             break;
           }
+
+          playbackState.segmentIndex = segIndex + 1;
         }
+
         item.card.classList.remove('is-active');
         clearSegmentHighlights(item.segments);
+
         if (signal.aborted) {
           break;
         }
+
+        playbackState.segmentIndex = 0;
+        playbackState.itemIndex = i + 1;
       }
 
-      if (!signal.aborted) {
-        status.textContent = 'Playback complete.';
-      } else {
-        status.textContent = 'Playback stopped.';
+      if (!sequenceAbort?.signal?.aborted) {
+        completed = true;
       }
-    } catch (error) {
-      status.textContent = 'Unable to play audio.';
-      console.error(error);
     } finally {
+      const aborted = sequenceAbort?.signal?.aborted ?? false;
       sequenceAbort = null;
-      playBtn.disabled = false;
+
+      if (aborted && pauseRequested) {
+        autoTriggered = false;
+        slide._autoTriggered = false;
+        setPlaybackMode('paused', {
+          itemIndex: playbackState.itemIndex,
+          segmentIndex: playbackState.segmentIndex,
+        });
+        status.textContent = 'Paused.';
+      } else {
+        const finalStatus = completed ? 'Playback complete.' : 'Playback stopped.';
+        resetState({ clearStatus: false });
+        status.textContent = finalStatus;
+      }
+
+      pauseRequested = false;
     }
   };
 
   const triggerAutoPlay = () => {
-    if (autoTriggered) {
+    if (
+      autoTriggered ||
+      playbackState.mode === 'playing' ||
+      playbackState.mode === 'paused'
+    ) {
       return;
     }
-    runSequence();
+    runSequence({ itemIndex: 0, segmentIndex: 0 });
   };
 
-  playBtn.addEventListener('click', runSequence);
+  playBtn.addEventListener('click', () => {
+    if (playbackState.mode === 'playing') {
+      pauseRequested = true;
+      sequenceAbort?.abort();
+      return;
+    }
+
+    if (playbackState.mode === 'paused') {
+      runSequence({
+        itemIndex: playbackState.itemIndex,
+        segmentIndex: playbackState.segmentIndex,
+      });
+      return;
+    }
+
+    runSequence({ itemIndex: 0, segmentIndex: 0 });
+  });
 
   const autoPlay = {
     button: playBtn,
@@ -245,13 +349,8 @@ const buildModelDialogueSlide = (
       sequenceAbort?.abort();
       sequenceAbort = null;
       audioManager.stopAll();
-      autoTriggered = false;
-      slide._autoTriggered = false;
+      resetState();
       slide._instructionComplete = false;
-      dialogueCards.forEach(({ card, segments }) => {
-        card.classList.remove('is-active');
-        clearSegmentHighlights(segments);
-      });
     },
   };
 };

@@ -27,15 +27,23 @@ const normalizeExamples = (rawExamples = [], options) => {
       if (!sentence.length) {
         return null;
       }
+      const audio =
+        typeof item?.audio === "string" && item.audio.trim().length
+          ? item.audio.trim()
+          : null;
       const answerCandidate =
         typeof item?.answer === "string" ? item.answer.trim() : "";
       const answer = options.includes(answerCandidate)
         ? answerCandidate
         : options[0];
+      const identifier = item?.id ?? `example_${index + 1}`;
+      const audioKey = audio ? `example_sentence_${identifier}` : null;
       return {
-        id: item?.id ?? `example_${index + 1}`,
+        id: identifier,
         sentence,
         answer,
+        audio,
+        audioKey,
       };
     })
     .filter(Boolean);
@@ -220,10 +228,6 @@ const createGameScene = (config) => {
       this.scaleListenersAttached = false;
       this.exitButton = null;
       this.exitPanel = null;
-      this.isProgrammaticFullscreenExit = false;
-      this.pendingStartEvent = null;
-      this.pendingTimers = new Set();
-      this.countdownEvent = null;
     }
 
     init(data = {}) {
@@ -246,14 +250,12 @@ const createGameScene = (config) => {
       this.timerEvent = null;
       this.answerDeadline = 0;
       this.activeSentenceSound = null;
+      this.activeSentenceSoundCompleteHandler = null;
+      this.activeSentenceSoundToken = 0;
       this.gameOver = false;
       this.didNotifyReady = false;
       this.summaryDisplayed = false;
       this.orientationLocked = false;
-      this.isProgrammaticFullscreenExit = false;
-      this.clearPendingStartEvent();
-      this.clearPendingTimers();
-      this.clearCountdownEvent();
     }
 
     preload() {
@@ -274,7 +276,7 @@ const createGameScene = (config) => {
         console.error("error loading :", file);
       });
 
-      this.questions.forEach((item) => {
+      [...this.examples, ...this.questions].forEach((item) => {
         if (item.audioKey && item.audio) {
           this.load.audio(item.audioKey, item.audio);
         }
@@ -315,6 +317,7 @@ const createGameScene = (config) => {
     }
 
     create() {
+      this.input.on('pointerdown', this.requestFullscreen, this);
       this.sound.add('feedback-correct-audio')
       this.sound.add('feedback-incorrect-audio')
       this.sound.add('feedback-timeout-audio')  
@@ -670,7 +673,6 @@ const createGameScene = (config) => {
         });
       });
       replayContainer.on("pointerdown", () => {
-        this.ensureFullscreenForInteraction();
         this.restartGame(true);
       });
       this.replayButton = replayContainer;
@@ -760,11 +762,15 @@ const createGameScene = (config) => {
       const buttonWidth = clamp(width * 0.4, 480, 520);
       const buttonHeight = clamp(height * 0.28, 200, 280);
 
-      this.startButton = this.createBarButton("Start", buttonWidth, buttonHeight, {
-        onClick: () => this.handleStartPressed(false),
-        baseColor: 0x1f6feb,
-        enforceFullscreen: true,
-      });
+      this.startButton = this.createBarButton(
+        "Start",
+        buttonWidth,
+        buttonHeight,
+        {
+          onClick: () => this.handleStartPressed(false),
+          baseColor: 0x1f6feb,
+        }
+      );
       this.startButton.container.setPosition(width / 2, height / 2);
       this.startButton.container.setDepth(12);
       this.tweens.add({
@@ -825,59 +831,6 @@ const createGameScene = (config) => {
       this.scale.on("enterfullscreen", this.handleEnterFullscreen, this);
       this.scale.on("leavefullscreen", this.handleLeaveFullscreen, this);
       this.scaleListenersAttached = true;
-    }
-
-    ensureFullscreenForInteraction() {
-      if (this.scale.isFullscreen) {
-        return;
-      }
-      this.requestFullscreen();
-    }
-
-    clearPendingStartEvent() {
-      if (this.pendingStartEvent) {
-        this.pendingStartEvent.remove();
-        this.pendingStartEvent = null;
-      }
-    }
-
-    scheduleDelayedCall(delay, callback) {
-      if (typeof callback !== "function") {
-        return null;
-      }
-      let event = null;
-      event = this.time.delayedCall(
-        delay,
-        () => {
-          this.pendingTimers.delete(event);
-          callback();
-        },
-        null,
-        this
-      );
-      this.pendingTimers.add(event);
-      return event;
-    }
-
-    clearPendingTimers() {
-      if (!this.pendingTimers?.size) {
-        return;
-      }
-      this.pendingTimers.forEach((event) => {
-        event?.remove();
-      });
-      this.pendingTimers.clear();
-    }
-
-    clearCountdownEvent() {
-      if (this.countdownEvent) {
-        this.countdownEvent.remove();
-        this.countdownEvent = null;
-      }
-      if (this.countdownOverlay) {
-        this.countdownOverlay.setVisible(false);
-        this.countdownOverlay.setAlpha(0);
-      }
     }
 
     updateBackgroundSize(width, height) {
@@ -976,7 +929,6 @@ const createGameScene = (config) => {
     }
 
     handleEnterFullscreen() {
-      this.isProgrammaticFullscreenExit = false;
       this.updateFullscreenLabel();
       this.lockLandscapeOrientation();
     }
@@ -984,13 +936,6 @@ const createGameScene = (config) => {
     handleLeaveFullscreen() {
       this.updateFullscreenLabel();
       this.unlockOrientation();
-      if (this.isProgrammaticFullscreenExit) {
-        this.isProgrammaticFullscreenExit = false;
-        return;
-      }
-      if (this.runState !== "idle") {
-        this.exitToIdleState();
-      }
     }
 
     setGameUiVisible(isVisible) {
@@ -1004,7 +949,7 @@ const createGameScene = (config) => {
       });
     }
 
-    createBarButton(label, width, height, { onClick, baseColor, enforceFullscreen = false }) {
+    createBarButton(label, width, height, { onClick, baseColor }) {
       const baseColorObj = Phaser.Display.Color.IntegerToColor(baseColor);
       const hoverColor = Phaser.Display.Color.GetColor(
         Math.min(baseColorObj.red + 25, 255),
@@ -1063,14 +1008,8 @@ const createGameScene = (config) => {
         }
       });
       container.on("pointerdown", () => {
-        if (!container.input?.enabled) {
-          return;
-        }
-        if (enforceFullscreen) {
-          this.ensureFullscreenForInteraction();
-        }
-        if (typeof onClick === "function") {
-          this.playFeedbackSound("correct");
+        if (container.input?.enabled && typeof onClick === "function") {
+           feedbackPlayer.playTone(640, 240);
           onClick();
         }
       });
@@ -1139,9 +1078,9 @@ const createGameScene = (config) => {
         return;
       }
 
-      if (!autoStart) {
-        this.ensureFullscreenForInteraction();
-      }
+      // if (!autoStart) {
+      //   this.requestFullscreen();
+      // }
 
       this.runState = "loading";
       this.setStartButtonState("Loading...", true, true);
@@ -1171,12 +1110,11 @@ const createGameScene = (config) => {
       this.updateScore();
       this.updateTimerText("Time: 10.0s");
 
-      this.pendingStartEvent = this.scheduleDelayedCall(120, () => {
+      this.time.delayedCall(120, () => {
         this.runState = "running";
         this.setStartButtonState("Start", false, false);
         this.setGameUiVisible(true);
         this.advance();
-        this.pendingStartEvent = null;
       });
     }
 
@@ -1188,10 +1126,6 @@ const createGameScene = (config) => {
       this.stopSentenceAudio();
       this.timerEvent?.remove();
       this.timerEvent = null;
-      this.clearPendingStartEvent();
-      this.clearPendingTimers();
-      this.clearCountdownEvent();
-      this.tweens?.killAll();
       this.updateTimerText("Time: 10.0s");
       this.hideFeedback();
       this.summaryBackdrop.setVisible(false);
@@ -1309,7 +1243,6 @@ const createGameScene = (config) => {
         });
 
         container.on("pointerdown", () => {
-          this.ensureFullscreenForInteraction();
           if (!this.awaitingAnswer || this.gameOver) {
             return;
           }
@@ -1442,58 +1375,129 @@ const createGameScene = (config) => {
       );
       this.phaseText.setColor(isExample ? "#0f172a" : "#1d4ed8");
 
+      this.enableOptionButtons(false);
+      this.awaitingAnswer = false;
+      this.updateTimerText("");
+
       this.tweens.add({
         targets: this.sentenceCard,
         x: targetX,
         duration: 600,
         ease: "Cubic.easeOut",
         onComplete: () => {
-          this.playSentenceAudio(entry);
-          if (isExample) {
-            this.handleExample(entry);
-          } else {
+          const afterAudio = () => {
+            if (isExample) {
+              this.handleExample(entry);
+              return;
+            }
+            if (this.gameOver) {
+              return;
+            }
             this.awaitingAnswer = true;
             this.enableOptionButtons(true);
             this.startResponseTimer();
-          }
+          };
+
+          this.playSentenceAudio(entry, { onComplete: afterAudio });
         },
       });
     }
 
-    playSentenceAudio(entry) {
-      this.stopSentenceAudio();
-      if (entry.audioKey) {
+    playSentenceAudio(entry, options = {}) {
+      const { onComplete } = options || {};
+      this.stopSentenceAudio({ mutateToken: false });
+      this.activeSentenceSoundToken += 1;
+      const token = this.activeSentenceSoundToken;
+
+      if (entry?.audioKey) {
         const sound =
           this.sound.get(entry.audioKey) ?? this.sound.add(entry.audioKey);
         if (sound) {
-          sound.play();
-          sound.setVolume(1); 
           this.activeSentenceSound = sound;
+          if (typeof onComplete === "function") {
+            this.activeSentenceSoundCompleteHandler = () => {
+              if (
+                this.activeSentenceSound === sound &&
+                token === this.activeSentenceSoundToken
+              ) {
+                this.activeSentenceSoundCompleteHandler = null;
+                onComplete();
+              }
+            };
+            sound.once(
+              Phaser.Sound.Events.COMPLETE,
+              this.activeSentenceSoundCompleteHandler
+            );
+          } else {
+            this.activeSentenceSoundCompleteHandler = null;
+          }
+          sound.setVolume(1);
+          sound.play();
+          return;
         }
+      }
+
+      this.activeSentenceSound = null;
+      this.activeSentenceSoundCompleteHandler = null;
+
+      if (typeof onComplete === "function") {
+        this.time.delayedCall(150, () => {
+          if (token === this.activeSentenceSoundToken) {
+            onComplete();
+          }
+        });
       }
     }
 
-    stopSentenceAudio() {
-      if (this.activeSentenceSound && this.activeSentenceSound.isPlaying) {
-        this.activeSentenceSound.stop();
+    stopSentenceAudio(options = {}) {
+      const { mutateToken = true } = options || {};
+      if (this.activeSentenceSound) {
+        if (this.activeSentenceSoundCompleteHandler) {
+          this.activeSentenceSound.off(
+            Phaser.Sound.Events.COMPLETE,
+            this.activeSentenceSoundCompleteHandler
+          );
+        }
+        if (this.activeSentenceSound.isPlaying) {
+          this.activeSentenceSound.stop();
+        }
       }
       this.activeSentenceSound = null;
+      this.activeSentenceSoundCompleteHandler = null;
+      if (mutateToken) {
+        this.activeSentenceSoundToken += 1;
+      }
     }
 
     handleExample(entry) {
       const targetButton = this.optionButtons.find(
         (btn) => btn.value.toLowerCase() === entry.answer.toLowerCase()
       );
-      this.scheduleDelayedCall(1500, () => {
+      const highlightDelay = 500;
+      const feedbackDelay = highlightDelay + 800;
+      const advanceDelay = feedbackDelay + 900;
+
+      this.time.delayedCall(highlightDelay, () => {
+        if (this.gameOver) {
+          return;
+        }
         if (targetButton) {
           this.pulseButton(targetButton, 0x16a34a);
         }
-        this.scheduleDelayedCall(800, () => {
-          this.showFeedback("correct", "Correct");
-        });
-        this.scheduleDelayedCall(1600, () => {
-          this.slideOutCurrent(() => this.advance());
-        });
+      });
+
+      this.time.delayedCall(feedbackDelay, () => {
+        if (this.gameOver) {
+          return;
+        }
+        this.showFeedback("correct", "Correct");
+      });
+
+      this.time.delayedCall(advanceDelay, () => {
+        if (this.gameOver) {
+          return;
+        }
+        this.slideOutCurrent(() => this.advance());
       });
     }
 
@@ -1569,13 +1573,13 @@ const createGameScene = (config) => {
           (btn) => btn.value.toLowerCase() === current.answer.toLowerCase()
         );
         if (correctButton && correctButton !== targetButton) {
-          this.scheduleDelayedCall(240, () => {
+          this.time.delayedCall(240, () => {
             this.pulseButton(correctButton, 0x16a34a);
           });
         }
       }
 
-      this.scheduleDelayedCall(1500, () => {
+      this.time.delayedCall(1500, () => {
         this.slideOutCurrent(() => this.advance());
       });
     }
@@ -1598,7 +1602,7 @@ const createGameScene = (config) => {
           this.pulseButton(correctButton, 0xf97316);
         }
       }
-      this.scheduleDelayedCall(1400, () => {
+      this.time.delayedCall(1400, () => {
         this.slideOutCurrent(() => this.advance());
       });
     }
@@ -1747,8 +1751,7 @@ const createGameScene = (config) => {
       let value = 3;
       this.countdownText.setText(String(value));
 
-      this.clearCountdownEvent();
-      this.countdownEvent = this.time.addEvent({
+      const event = this.time.addEvent({
         delay: 1000,
         repeat: 3,
         callback: () => {
@@ -1760,8 +1763,7 @@ const createGameScene = (config) => {
             this.countdownText.setText("Start!");
              feedbackPlayer.playTone(640, 240);
           } else {
-            this.countdownEvent?.remove();
-            this.countdownEvent = null;
+            event.remove();
             this.tweens.add({
               targets: this.countdownOverlay,
               alpha: 0,
@@ -1811,7 +1813,7 @@ const createGameScene = (config) => {
         duration: 300,
         ease: "Sine.easeInOut",
       });
-      this.scheduleDelayedCall(400, () => {
+      this.time.delayedCall(400, () => {
         this.showSummary();
       });
     }
@@ -1861,9 +1863,6 @@ const createGameScene = (config) => {
       }
       this.summaryBackdrop.setVisible(false);
       this.summaryBackdrop.setAlpha(0);
-      this.clearPendingStartEvent();
-      this.clearPendingTimers();
-      this.clearCountdownEvent();
       this.scene.restart({ autoStart });
     }
 
@@ -1872,10 +1871,6 @@ const createGameScene = (config) => {
       this.stopSentenceAudio();
       this.timerEvent?.remove();
       this.timerEvent = null;
-      this.clearPendingStartEvent();
-      this.clearPendingTimers();
-      this.clearCountdownEvent();
-      this.tweens?.killAll();
       this.summaryBackdrop.setVisible(false);
       this.summaryBackdrop.setAlpha(0);
       this.summaryOverlay.setVisible(false);
@@ -1884,7 +1879,6 @@ const createGameScene = (config) => {
       this.resetState();
       this.prepareIdleState();
       if (this.scale.isFullscreen) {
-        this.isProgrammaticFullscreenExit = true;
         this.scale.stopFullscreen();
       } else {
         this.unlockOrientation();
@@ -1896,10 +1890,6 @@ const createGameScene = (config) => {
       this.stopSentenceAudio();
       this.timerEvent?.remove();
       this.timerEvent = null;
-      this.clearPendingStartEvent();
-      this.clearPendingTimers();
-      this.clearCountdownEvent();
-      this.tweens?.killAll();
       this.input?.setDefaultCursor?.("default");
       this.scale.off("enterfullscreen", this.handleEnterFullscreen, this);
       this.scale.off("leavefullscreen", this.handleLeaveFullscreen, this);

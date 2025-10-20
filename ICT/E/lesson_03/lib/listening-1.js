@@ -547,6 +547,32 @@ const buildListenRepeatSlide = (
 
   let sequenceAbort = null;
   let autoTriggered = false;
+  let pauseRequested = false;
+
+  const playbackState = {
+    mode: "idle",
+    resumeIndex: 0,
+  };
+
+  const updateButtonLabel = () => {
+    if (playbackState.mode === "playing") {
+      startBtn.textContent = "Pause";
+      return;
+    }
+    if (playbackState.mode === "paused") {
+      startBtn.textContent = "Resume";
+      return;
+    }
+    startBtn.textContent = "Start";
+  };
+
+  const setPlaybackMode = (mode, { resumeIndex } = {}) => {
+    playbackState.mode = mode;
+    if (Number.isInteger(resumeIndex)) {
+      playbackState.resumeIndex = Math.max(0, resumeIndex);
+    }
+    updateButtonLabel();
+  };
 
   const clearHighlights = (entry) => {
     entry.card.classList.remove("is-active");
@@ -555,21 +581,41 @@ const buildListenRepeatSlide = (
     });
   };
 
-  const runSequence = async () => {
+  const resetAll = () => {
+    entries.forEach(clearHighlights);
+  };
+
+  const resetPlaybackState = () => {
+    setPlaybackMode("idle", { resumeIndex: 0 });
+    autoTriggered = false;
+    slide._autoTriggered = false;
+    startBtn.disabled = false;
+  };
+
+  updateButtonLabel();
+
+  const runSequence = async (fromIndex = 0) => {
     if (!entries.length) {
       status.textContent = "No audio available.";
-      startBtn.disabled = false;
+      resetPlaybackState();
       return;
     }
+
+    pauseRequested = false;
 
     sequenceAbort?.abort();
     sequenceAbort = new AbortController();
     const { signal } = sequenceAbort;
 
-    status.textContent = "";
-    startBtn.disabled = true;
+    resetAll();
+    setPlaybackMode("playing", { resumeIndex: fromIndex });
+    status.textContent = fromIndex === 0 ? "Starting..." : "Resuming...";
+
+    let completed = false;
+
     try {
-      for (let index = 0; index < entries.length; index += 1) {
+      for (let index = fromIndex; index < entries.length; index += 1) {
+        playbackState.resumeIndex = index;
         const entry = entries[index];
         entry.card.classList.add("is-active");
         smoothScrollIntoView(entry.card);
@@ -584,7 +630,10 @@ const buildListenRepeatSlide = (
           try {
             await audioManager.play(audio, { signal });
           } catch (error) {
-            console.error(error);
+            if (!signal.aborted) {
+              console.error(error);
+              status.textContent = "Unable to play audio.";
+            }
           } finally {
             element?.classList.remove("is-playing");
           }
@@ -603,46 +652,80 @@ const buildListenRepeatSlide = (
               : "Next line...";
           await waitMs(gapMs, { signal });
           status.textContent = "Listening...";
+
+          if (signal.aborted) {
+            break;
+          }
         }
 
+        playbackState.resumeIndex = index + 1;
         clearHighlights(entry);
+
         if (signal.aborted) {
           break;
         }
       }
 
       if (!signal.aborted) {
+        completed = true;
         status.textContent = "Practice complete.";
-      } else {
-        status.textContent = "Practice stopped.";
       }
     } catch (error) {
-      if (!signal.aborted) {
+      if (!sequenceAbort?.signal?.aborted) {
         console.error(error);
         status.textContent = "Unable to play audio.";
       }
     } finally {
-      startBtn.disabled = false;
+      const aborted = sequenceAbort?.signal?.aborted ?? false;
       sequenceAbort = null;
-      autoTriggered = false;
-      slide._autoTriggered = false;
+
+      if (aborted && pauseRequested) {
+        setPlaybackMode("paused", { resumeIndex: playbackState.resumeIndex });
+        status.textContent = "Paused.";
+      } else if (completed) {
+        resetPlaybackState();
+        resetAll();
+      } else if (aborted) {
+        status.textContent = "Practice stopped.";
+        resetPlaybackState();
+        resetAll();
+      } else {
+        resetPlaybackState();
+      }
+
+      pauseRequested = false;
     }
   };
 
-  const startPractice = () => {
+  const startPractice = (fromIndex = 0) => {
     autoTriggered = true;
     slide._autoTriggered = true;
-    runSequence();
+    runSequence(fromIndex);
   };
 
   const triggerAutoPlay = () => {
-    if (autoTriggered) {
+    if (
+      autoTriggered ||
+      playbackState.mode === "playing" ||
+      playbackState.mode === "paused"
+    ) {
       return;
     }
     startPractice();
   };
 
-  startBtn.addEventListener("click", startPractice);
+  startBtn.addEventListener("click", () => {
+    if (playbackState.mode === "playing") {
+      pauseRequested = true;
+      sequenceAbort?.abort();
+      return;
+    }
+    if (playbackState.mode === "paused") {
+      startPractice(playbackState.resumeIndex);
+      return;
+    }
+    startPractice();
+  });
 
   const autoPlay = {
     button: startBtn,
@@ -651,14 +734,13 @@ const buildListenRepeatSlide = (
   };
 
   const onLeave = () => {
+    pauseRequested = false;
     sequenceAbort?.abort();
     sequenceAbort = null;
     audioManager.stopAll();
-    entries.forEach(clearHighlights);
-    startBtn.disabled = false;
+    resetAll();
+    resetPlaybackState();
     status.textContent = "";
-    autoTriggered = false;
-    slide._autoTriggered = false;
   };
 
   const suffixSegment = context.subActivityLetter

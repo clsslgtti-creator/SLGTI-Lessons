@@ -1,5 +1,9 @@
 import { buildSbsSlides } from "./lib/sbs.js";
 import { buildPronunciationSlides } from "./lib/pronunciation.js";
+import { buildGame1Slides } from "./lib/game-1.js";
+import { buildActivityTwoSlides } from "./lib/activity-2.js";
+import { buildListeningOneSlides } from "./lib/listening-1.js";
+import { buildListeningTwoSlides } from "./lib/listening-2.js";
 
 const slidesContainer = document.getElementById("slides");
 const progressIndicator = document.getElementById("progressIndicator");
@@ -113,7 +117,11 @@ const ensureScormConnection = () => {
 };
 
 const getResumeSlideIndex = (totalSlides) => {
-  if (!scormState.connected || !Number.isInteger(totalSlides) || totalSlides <= 0) {
+  if (
+    !scormState.connected ||
+    !Number.isInteger(totalSlides) ||
+    totalSlides <= 0
+  ) {
     return 0;
   }
   const upperBound = totalSlides - 1;
@@ -168,7 +176,11 @@ const persistScormProgress = (index, totalSlides) => {
 };
 
 const markLessonComplete = (index, totalSlides) => {
-  if (!ensureScormConnection() || !scormState.api || scormState.completionRecorded) {
+  if (
+    !ensureScormConnection() ||
+    !scormState.api ||
+    scormState.completionRecorded
+  ) {
     return;
   }
 
@@ -196,6 +208,10 @@ const markLessonComplete = (index, totalSlides) => {
 const activityBuilders = {
   SBS: buildSbsSlides,
   PRONUNCIATION: buildPronunciationSlides,
+  "GAME-1": buildGame1Slides,
+  "LISTENING-1": buildListeningOneSlides,
+  "LISTENING-2": buildListeningTwoSlides,
+  "ACTIVITY-2": buildActivityTwoSlides,
 };
 
 const extractInstructionEntries = (input, { allowObject = false } = {}) => {
@@ -492,6 +508,7 @@ const applyInstructionsToSlide = (slideElement, texts) => {
   anchor?.insertAdjacentElement("afterend", list);
 };
 
+const INITIAL_INSTRUCTION_DELAY_SECONDS = 5;
 let instructionPlayback = null;
 
 const cleanupInstructionController = (
@@ -505,6 +522,7 @@ const cleanupInstructionController = (
   const {
     audio,
     countdownInterval,
+    initialCountdownInterval,
     cleanupHandlers,
     onEnded,
     indicator,
@@ -524,6 +542,10 @@ const cleanupInstructionController = (
     window.clearInterval(countdownInterval);
   }
 
+  if (initialCountdownInterval) {
+    window.clearInterval(initialCountdownInterval);
+  }
+
   cleanupHandlers?.forEach((handler) => {
     try {
       handler();
@@ -532,7 +554,7 @@ const cleanupInstructionController = (
     }
   });
 
-  restoreButton?.();
+  restoreButton?.({ restoreText: true });
   indicator?.cleanup?.({ preserveContent });
 };
 
@@ -599,9 +621,9 @@ const startInstructionCountdown = (controller) => {
     return;
   }
 
-  controller.restoreButton?.();
+  controller.restoreButton?.({ restoreText: true });
 
-  let remaining = 5;
+  let remaining = 3;
   indicator?.update(`Starts in ${remaining}s`);
 
   controller.countdownInterval = window.setInterval(() => {
@@ -649,30 +671,34 @@ const handleInstructionForSlide = (slideObj) => {
   stopInstructionPlayback();
 
   const indicator = createInstructionIndicator(slideObj);
-  indicator?.update(audioUrl ? "Instruction playing..." : "Starts in 5s");
 
   const controller = {
     slide: slideObj,
     audio: null,
     countdownInterval: null,
+    initialCountdownInterval: null,
     cleanupHandlers: [],
     onEnded: null,
     indicator,
-    restoreButton: null,
+    restoreButton: () => {},
   };
 
   const { button } = slideObj.autoPlay || {};
   if (button && typeof button.disabled === "boolean") {
     controller.button = button;
     controller.buttonWasDisabled = button.disabled;
+    controller.buttonOriginalText = button.textContent;
     controller.buttonLocked = true;
     button.disabled = true;
-    controller.restoreButton = () => {
+    controller.restoreButton = ({ restoreText = true } = {}) => {
       if (!controller.buttonLocked) {
         return;
       }
       controller.buttonLocked = false;
       controller.button.disabled = controller.buttonWasDisabled ?? false;
+      if (restoreText && controller.buttonOriginalText !== undefined) {
+        controller.button.textContent = controller.buttonOriginalText;
+      }
     };
   }
 
@@ -682,11 +708,7 @@ const handleInstructionForSlide = (slideObj) => {
     stopInstructionPlayback({ preserveContent: true });
   };
 
-  const attachManualHandler = () => {
-    const { button } = slideObj.autoPlay || {};
-    if (!button || typeof button.addEventListener !== "function") {
-      return;
-    }
+  if (hasAutoPlay && button && typeof button.addEventListener === "function") {
     const manualHandler = () => {
       if (instructionPlayback?.slide !== slideObj) {
         return;
@@ -697,59 +719,99 @@ const handleInstructionForSlide = (slideObj) => {
     controller.cleanupHandlers.push(() =>
       button.removeEventListener("click", manualHandler)
     );
-  };
-
-  if (hasAutoPlay) {
-    attachManualHandler();
   }
 
-  const beginCountdown = () => {
+  let audio = null;
+  if (audioUrl) {
+    audio = new Audio(audioUrl);
+    controller.audio = audio;
+  }
+
+  const handleInstructionCompletedWithoutAuto = () => {
+    if (instructionPlayback?.slide !== slideObj) {
+      return;
+    }
+    const activeController = instructionPlayback;
+    instructionPlayback = null;
+    cleanupInstructionController(activeController);
+    slideObj._instructionComplete = true;
+  };
+
+  const beginAutoPlaybackCountdown = () => {
     if (!instructionPlayback || instructionPlayback.slide !== slideObj) {
       return;
     }
+    indicator?.update("Starts in 3s");
     startInstructionCountdown(controller);
   };
 
-  if (!audioUrl) {
-    instructionPlayback = controller;
-    beginCountdown();
-    return;
+  if (audio) {
+    const onEnded = () => {
+      if (!instructionPlayback || instructionPlayback.slide !== slideObj) {
+        return;
+      }
+
+      audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("error", onEnded);
+
+      if (!hasAutoPlay) {
+        handleInstructionCompletedWithoutAuto();
+        return;
+      }
+
+      beginAutoPlaybackCountdown();
+    };
+
+    controller.onEnded = onEnded;
+    audio.addEventListener("ended", onEnded, { once: false });
+    audio.addEventListener("error", onEnded, { once: false });
   }
 
-  const audio = new Audio(audioUrl);
-  controller.audio = audio;
-
-  const onEnded = () => {
-    if (!instructionPlayback || instructionPlayback.slide !== slideObj) {
+  const startInstruction = () => {
+    if (!instructionPlayback || instructionPlayback !== controller) {
       return;
     }
 
-    audio.removeEventListener("ended", onEnded);
-    audio.removeEventListener("error", onEnded);
-
-    if (!hasAutoPlay) {
-      const activeController = instructionPlayback;
-      instructionPlayback = null;
-      cleanupInstructionController(activeController);
-      slideObj._instructionComplete = true;
+    if (audio) {
+      indicator?.update("Instruction playing...");
+      const playPromise = audio.play();
+      if (playPromise?.catch) {
+        playPromise.catch(() => {
+          controller.onEnded?.();
+        });
+      }
       return;
     }
 
-    beginCountdown();
+    indicator?.update("Starts in 3s");
+    beginAutoPlaybackCountdown();
   };
 
-  controller.onEnded = onEnded;
-  audio.addEventListener("ended", onEnded, { once: false });
-  audio.addEventListener("error", onEnded, { once: false });
+  const beginInitialCountdown = () => {
+    let remaining = INITIAL_INSTRUCTION_DELAY_SECONDS;
+    indicator?.update(`Instruction starts in ${remaining}s`);
+
+    controller.initialCountdownInterval = window.setInterval(() => {
+      if (!instructionPlayback || instructionPlayback !== controller) {
+        window.clearInterval(controller.initialCountdownInterval);
+        controller.initialCountdownInterval = null;
+        return;
+      }
+
+      remaining -= 1;
+      if (remaining > 0) {
+        indicator?.update(`Instruction starts in ${remaining}s`);
+        return;
+      }
+
+      window.clearInterval(controller.initialCountdownInterval);
+      controller.initialCountdownInterval = null;
+      startInstruction();
+    }, 1000);
+  };
 
   instructionPlayback = controller;
-
-  const playPromise = audio.play();
-  if (playPromise?.catch) {
-    playPromise.catch(() => {
-      onEnded();
-    });
-  }
+  beginInitialCountdown();
 };
 
 const parseActivitySlideId = (slideId) => {
@@ -769,9 +831,16 @@ const parseActivitySlideId = (slideId) => {
     "sentences-listen": "d",
     "sentences-repeat": "e",
     "sentences-read": "f",
+    "listening1-mcq": "a",
+    "listening1-repeat": "b",
+    "listening1-read": "c",
+    "listening1-type": "d",
+    "activity2-listen": "a",
+    "activity2-repeat": "b",
+    "activity2-match": "c",
   };
   const rolePattern =
-    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read)";
+    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read|listening1-mcq|listening1-repeat|listening1-read|listening1-type|activity2-listen|activity2-repeat|activity2-match)";
   const detailedMatch = new RegExp(
     `^activity-(\\d+)(?:-([a-z]))?-${rolePattern}$`
   ).exec(normalized);
@@ -805,22 +874,15 @@ const fetchJson = async (path) => {
 };
 
 const renderLessonMeta = (meta) => {
-  const parts = [
-    meta?.section ? meta.section : null,
-    meta?.level ? `${meta.level} level` : null,
-  ].filter(Boolean);
-
-  const joinedMeta = parts.length ? parts.join(" &middot; ") : "";
-
   lessonMetaEl.innerHTML = `
-    <h1 class="lesson-title">Lesson ${meta?.lesson_no ?? ""}</h1>
-    ${meta?.focus ? `<p class="lesson-focus">${meta.focus}</p>` : ""}
-    ${joinedMeta ? `<p class="lesson-meta">${joinedMeta}</p>` : ""}
-    ${
-      meta?.prepared_by
-        ? `<p class="lesson-author">Prepared by ${meta.prepared_by}</p>`
-        : ""
-    }
+  <div class="_meta">
+    <div class="lesson-title-container">
+      <h1 class="lesson-title">Lesson ${meta?.lesson_no ?? ""}</h1>
+      ${meta?.section ? `<p class="lesson-meta">${meta?.section}</p>` : ""}
+      ${meta?.level ? `<p class="lesson-meta">${meta?.level} Level</p>` : ""}
+    </div>
+    <img class="lesson-logo" src="assets/img/logo.png" />
+    </div
   `;
 };
 
@@ -938,7 +1000,8 @@ const showSlide = (nextIndex) => {
     }
     grid.scrollTop = 0;
   });
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // window.scrollTo({ top: 0, behavior: "smooth" });
+  nextSlide.element.scrollIntoView({ behavior: "smooth", block: "start" });
 
   progressIndicator.textContent = `Slide ${currentSlideIndex + 1} of ${
     slides.length
@@ -1087,9 +1150,7 @@ const init = async () => {
 
     slides = buildLessonSlides(data);
     const scormReady = ensureScormConnection();
-    const resumeIndex = scormReady
-      ? getResumeSlideIndex(slides.length)
-      : 0;
+    const resumeIndex = scormReady ? getResumeSlideIndex(slides.length) : 0;
     currentSlideIndex = resumeIndex;
     attachNavigation();
 

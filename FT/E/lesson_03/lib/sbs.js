@@ -1,139 +1,12 @@
+import { audioManager, computeSegmentGapMs, getBetweenItemGapMs } from './audio-manager.js';
+import { showCompletionModal } from './completion-modal.js';
+
 const smoothScrollIntoView = (element) => {
   if (!element) {
     return;
   }
   element.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
-
-const audioManager = (() => {
-  const cache = new Map();
-  const active = new Set();
-
-  const ensureEntry = (url) => {
-    if (!url) {
-      return null;
-    }
-
-    if (!cache.has(url)) {
-      const audioEl = new Audio(url);
-      audioEl.preload = 'auto';
-
-      const metaPromise = new Promise((resolve) => {
-        const resolveWithDuration = () => {
-          cleanup();
-          resolve(Number.isFinite(audioEl.duration) ? audioEl.duration : 0);
-        };
-
-        const resolveWithZero = () => {
-          cleanup();
-          resolve(0);
-        };
-
-        const cleanup = () => {
-          audioEl.removeEventListener('loadedmetadata', resolveWithDuration);
-          audioEl.removeEventListener('error', resolveWithZero);
-        };
-
-        audioEl.addEventListener('loadedmetadata', resolveWithDuration);
-        audioEl.addEventListener('error', resolveWithZero);
-      });
-
-      cache.set(url, { audio: audioEl, metaPromise });
-      audioEl.load();
-    }
-
-    return cache.get(url);
-  };
-
-  const play = (url, { signal } = {}) => {
-    const entry = ensureEntry(url);
-    if (!entry) {
-      return Promise.resolve();
-    }
-
-    const { audio, metaPromise } = entry;
-    audio.currentTime = 0;
-
-    const playPromise = new Promise((resolve, reject) => {
-      const handleEnded = () => {
-        cleanup();
-        resolve();
-      };
-
-      const handleError = () => {
-        cleanup();
-        reject(new Error(`Unable to play audio: ${url}`));
-      };
-
-      const handleAbort = () => {
-        cleanup();
-        audio.pause();
-        audio.currentTime = 0;
-        resolve();
-      };
-
-      const cleanup = () => {
-        audio.removeEventListener('ended', handleEnded);
-        audio.removeEventListener('error', handleError);
-        if (signal) {
-          signal.removeEventListener('abort', handleAbort);
-        }
-        active.delete(audio);
-      };
-
-      if (signal) {
-        if (signal.aborted) {
-          handleAbort();
-          return;
-        }
-        signal.addEventListener('abort', handleAbort, { once: true });
-      }
-
-      active.add(audio);
-
-      audio.addEventListener('ended', handleEnded, { once: true });
-      audio.addEventListener('error', handleError, { once: true });
-
-      metaPromise
-        .then(() => audio.play())
-        .catch(() => audio.play())
-        .catch((err) => {
-          cleanup();
-          reject(err);
-        });
-    });
-
-    return playPromise;
-  };
-
-  const stopAll = () => {
-    active.forEach((audio) => {
-      audio.pause();
-      audio.currentTime = 0;
-    });
-    active.clear();
-  };
-
-  const getDuration = async (url) => {
-    const entry = ensureEntry(url);
-    if (!entry) {
-      return 0;
-    }
-
-    try {
-      const duration = await entry.metaPromise;
-      return Number.isFinite(duration) ? duration : 0;
-    } catch {
-      return 0;
-    }
-  };
-
-  return {
-    play,
-    stopAll,
-    getDuration,
-  };
-})();
 
 const renderEmphasizedText = (element, text) => {
   const normalized = typeof text === 'string' ? text : '';
@@ -267,7 +140,7 @@ const buildModelDialogueSlide = (
   controls.className = 'slide__controls';
   const playBtn = document.createElement('button');
   playBtn.className = 'primary-btn';
-  playBtn.textContent = 'Play Model Dialogue ▶';
+  playBtn.textContent = 'Start';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(playBtn, status);
@@ -291,72 +164,176 @@ const buildModelDialogueSlide = (
 
   let sequenceAbort = null;
   let autoTriggered = false;
+  let pauseRequested = false;
 
-  const runSequence = async () => {
+  const playbackState = {
+    mode: 'idle',
+    itemIndex: 0,
+    segmentIndex: 0,
+  };
+
+  const updateButtonLabel = () => {
+    if (playbackState.mode === 'playing') {
+      playBtn.textContent = 'Pause';
+      return;
+    }
+    if (playbackState.mode === 'paused') {
+      playBtn.textContent = 'Resume';
+      return;
+    }
+    playBtn.textContent = 'Start';
+  };
+
+  const setPlaybackMode = (mode, { itemIndex, segmentIndex } = {}) => {
+    playbackState.mode = mode;
+    if (Number.isInteger(itemIndex)) {
+      playbackState.itemIndex = Math.max(0, itemIndex);
+    }
+    if (Number.isInteger(segmentIndex)) {
+      playbackState.segmentIndex = Math.max(0, segmentIndex);
+    }
+    updateButtonLabel();
+  };
+
+  const resetCards = () => {
+    dialogueCards.forEach(({ card, segments }) => {
+      card.classList.remove('is-active');
+      clearSegmentHighlights(segments);
+    });
+  };
+
+  const resetState = ({ clearStatus = true } = {}) => {
+    autoTriggered = false;
+    slide._autoTriggered = false;
+    pauseRequested = false;
+    setPlaybackMode('idle', { itemIndex: 0, segmentIndex: 0 });
+    resetCards();
+    if (clearStatus) {
+      status.textContent = '';
+    }
+  };
+
+  updateButtonLabel();
+
+  const runSequence = async ({ itemIndex = 0, segmentIndex = 0 } = {}) => {
     if (!dialogueCards.length) {
       status.textContent = 'No audio available.';
+      resetState({ clearStatus: false });
       return;
     }
 
-    autoTriggered = true;
-    slide._autoTriggered = true;
-
+    pauseRequested = false;
     sequenceAbort?.abort();
     sequenceAbort = new AbortController();
     const { signal } = sequenceAbort;
-    playBtn.disabled = true;
-    status.textContent = 'Playing...';
+
+    setPlaybackMode('playing', { itemIndex, segmentIndex });
+    slide._autoTriggered = true;
+    autoTriggered = true;
+    status.textContent = itemIndex === 0 && segmentIndex === 0
+      ? 'Starting...'
+      : 'Resuming...';
+
+    let completed = false;
 
     try {
-      for (const item of dialogueCards) {
+      for (let i = itemIndex; i < dialogueCards.length; i += 1) {
+        playbackState.itemIndex = i;
+        const item = dialogueCards[i];
         item.card.classList.add('is-active');
         smoothScrollIntoView(item.card);
-        for (const segment of item.segments) {
-          const { url, element } = segment;
+
+        const startingSegment = i === itemIndex ? segmentIndex : 0;
+        for (let segIndex = startingSegment; segIndex < item.segments.length; segIndex += 1) {
+          playbackState.segmentIndex = segIndex;
+          const { url, element } = item.segments[segIndex];
           if (!url) {
             continue;
           }
 
+          status.textContent = 'Playing...';
           element?.classList.add('is-playing');
           try {
             await audioManager.play(url, { signal });
-          } finally {
-            element?.classList.remove('is-playing');
+          } catch (error) {
+            if (!signal.aborted) {
+              console.error(error);
+              status.textContent = 'Unable to play audio.';
+            }
           }
+          element?.classList.remove('is-playing');
 
           if (signal.aborted) {
             break;
           }
+
+          playbackState.segmentIndex = segIndex + 1;
         }
+
         item.card.classList.remove('is-active');
         clearSegmentHighlights(item.segments);
+
         if (signal.aborted) {
           break;
         }
+
+        playbackState.segmentIndex = 0;
+        playbackState.itemIndex = i + 1;
       }
 
-      if (!signal.aborted) {
-        status.textContent = 'Playback complete.';
-      } else {
-        status.textContent = 'Playback stopped.';
+      if (!sequenceAbort?.signal?.aborted) {
+        completed = true;
       }
-    } catch (error) {
-      status.textContent = 'Unable to play audio.';
-      console.error(error);
     } finally {
+      const aborted = sequenceAbort?.signal?.aborted ?? false;
       sequenceAbort = null;
-      playBtn.disabled = false;
+
+      if (aborted && pauseRequested) {
+        autoTriggered = false;
+        slide._autoTriggered = false;
+        setPlaybackMode('paused', {
+          itemIndex: playbackState.itemIndex,
+          segmentIndex: playbackState.segmentIndex,
+        });
+        status.textContent = 'Paused.';
+      } else {
+        const finalStatus = completed ? 'Playback complete.' : 'Playback stopped.';
+        resetState({ clearStatus: false });
+        status.textContent = finalStatus;
+      }
+
+      pauseRequested = false;
     }
   };
 
   const triggerAutoPlay = () => {
-    if (autoTriggered) {
+    if (
+      autoTriggered ||
+      playbackState.mode === 'playing' ||
+      playbackState.mode === 'paused'
+    ) {
       return;
     }
-    runSequence();
+    runSequence({ itemIndex: 0, segmentIndex: 0 });
   };
 
-  playBtn.addEventListener('click', runSequence);
+  playBtn.addEventListener('click', () => {
+    if (playbackState.mode === 'playing') {
+      pauseRequested = true;
+      sequenceAbort?.abort();
+      return;
+    }
+
+    if (playbackState.mode === 'paused') {
+      runSequence({
+        itemIndex: playbackState.itemIndex,
+        segmentIndex: playbackState.segmentIndex,
+      });
+      return;
+    }
+
+    runSequence({ itemIndex: 0, segmentIndex: 0 });
+  });
 
   const autoPlay = {
     button: playBtn,
@@ -372,13 +349,8 @@ const buildModelDialogueSlide = (
       sequenceAbort?.abort();
       sequenceAbort = null;
       audioManager.stopAll();
-      autoTriggered = false;
-      slide._autoTriggered = false;
+      resetState();
       slide._instructionComplete = false;
-      dialogueCards.forEach(({ card, segments }) => {
-        card.classList.remove('is-active');
-        clearSegmentHighlights(segments);
-      });
     },
   };
 };
@@ -410,7 +382,7 @@ const buildPreListeningSlide = (
   const slide = document.createElement('section');
   slide.className = 'slide slide--pre-listening';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Pre-Listening</h2>
+    <h2>${activityLabel}${subActivitySuffix}</h2>
     <p class="slide__instruction">Match each picture with the correct place.</p>
   `;
 
@@ -604,6 +576,14 @@ const buildPreListeningSlide = (
           }
 
           $zone.droppable('disable');
+
+          const allComplete = dropzones.every((zone) => $(zone).data('complete'));
+          if (allComplete) {
+            showCompletionModal({
+              title: 'Great Work!',
+              message: 'You matched all of the pictures correctly.',
+            });
+          }
         } else {
           $card.addClass('is-incorrect');
           $zone.addClass('is-incorrect');
@@ -650,7 +630,7 @@ const buildListeningSlide = (
   const slide = document.createElement('section');
   slide.className = 'slide slide--listening';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Listening</h2>
+    <h2>${activityLabel}${subActivitySuffix}</h2>
     <p class="slide__instruction">Listen to each dialogue from the lesson. They will play one after another.</p>
   `;
 
@@ -660,7 +640,7 @@ const buildListeningSlide = (
   controls.className = 'slide__controls';
   const playBtn = document.createElement('button');
   playBtn.className = 'primary-btn';
-  playBtn.textContent = 'Play All Dialogues ▶';
+  playBtn.textContent = 'Start';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(playBtn, status);
@@ -753,7 +733,7 @@ const buildListeningSlide = (
           }
 
           const duration = await audioManager.getDuration(url);
-          const gapMs = Math.max(1500, Math.round(duration * 2000));
+          const gapMs = computeSegmentGapMs('listen', duration);
           const hasMoreSegments = segIndex < segments.length - 1;
           const hasMoreItems = itemIndex < items.length - 1;
 
@@ -843,7 +823,7 @@ const buildListenAndRepeatSlide = (
   const slide = document.createElement('section');
   slide.className = 'slide slide--listen-repeat';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Listen &amp; Repeat</h2>
+    <h2>${activityLabel}${subActivitySuffix}</h2>
     <p class="slide__instruction">Listen to each sentence and use the pause to repeat it aloud.</p>
   `;
 
@@ -851,7 +831,7 @@ const buildListenAndRepeatSlide = (
   controls.className = 'slide__controls';
   const startBtn = document.createElement('button');
   startBtn.className = 'primary-btn';
-  startBtn.textContent = 'Start Listen & Repeat ▶';
+  startBtn.textContent = 'Start';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(startBtn, status);
@@ -955,7 +935,9 @@ const buildListenAndRepeatSlide = (
           }
 
           const duration = await audioManager.getDuration(url);
-          const pauseMs = Math.max(basePauseMs, Math.round(duration * 2000));
+          const pauseMs = computeSegmentGapMs('listen-repeat', duration, {
+            repeatPauseMs: basePauseMs,
+          });
           if (pauseMs > 0) {
             status.textContent = 'Your turn...';
             await delay(pauseMs, { signal });
@@ -1050,7 +1032,7 @@ const buildReadingSlide = (
   const slide = document.createElement('section');
   slide.className = 'slide slide--reading';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Reading</h2>
+    <h2>${activityLabel}${subActivitySuffix}</h2>
     <p class="slide__instruction">Read along with the audio. Each dialogue plays automatically.</p>
   `;
 
@@ -1060,7 +1042,7 @@ const buildReadingSlide = (
   controls.className = 'slide__controls';
   const playBtn = document.createElement('button');
   playBtn.className = 'primary-btn';
-  playBtn.textContent = 'Play Read Along ▶';
+  playBtn.textContent = 'Start';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(playBtn, status);
@@ -1151,7 +1133,7 @@ const buildReadingSlide = (
           }
 
           const duration = await audioManager.getDuration(url);
-          const pauseMs = Math.max(1500, Math.round(duration * 2000));
+          const pauseMs = computeSegmentGapMs('read', duration);
           await delay(pauseMs, { signal });
           if (signal.aborted) {
             break;
@@ -1164,7 +1146,7 @@ const buildReadingSlide = (
           break;
         }
 
-        await delay(1500, { signal });
+        await delay(getBetweenItemGapMs('read'), { signal });
         if (signal.aborted) {
           item.card.classList.remove('is-active');
           clearSegmentHighlights(item.segments);
@@ -1251,7 +1233,7 @@ const buildSpeakingSlide = (
   const slide = document.createElement('section');
   slide.className = 'slide slide--speaking';
   slide.innerHTML = `
-    <h2>${activityLabel}${subActivitySuffix} - Speaking</h2>
+    <h2>${activityLabel}${subActivitySuffix}</h2>
     <p class="slide__instruction">Listen to each question, use the pause to answer, then compare your response with the model answer.</p>
   `;
 
@@ -1261,7 +1243,7 @@ const buildSpeakingSlide = (
   controls.className = 'slide__controls';
   const startBtn = document.createElement('button');
   startBtn.className = 'primary-btn';
-  startBtn.textContent = 'Start Speaking Practice ▶';
+  startBtn.textContent = 'Start';
   const status = document.createElement('p');
   status.className = 'playback-status';
   controls.append(startBtn, status);
@@ -1382,7 +1364,7 @@ const buildSpeakingSlide = (
         }
 
         const answerDuration = await audioManager.getDuration(dialogue.audio_b);
-        const waitMs = Math.max(1000, Math.round(answerDuration * 3000));
+        const waitMs = Math.max(1000, Math.round(answerDuration * 1500));
         status.textContent = 'Your turn...';
         await delay(waitMs, { signal });
         if (signal.aborted) {
@@ -1428,6 +1410,10 @@ const buildSpeakingSlide = (
 
       if (!signal.aborted) {
         status.textContent = 'Great work! Practice complete.';
+        showCompletionModal({
+          title: 'Great Work!',
+          message: 'You completed the speaking practice.',
+        });
       } else {
         status.textContent = 'Practice stopped.';
       }

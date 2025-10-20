@@ -238,6 +238,34 @@ const createPronunciationSlide = ({
 
   let abortController = null;
   let activeItem = null;
+  let pauseRequested = false;
+
+  const playbackState = {
+    mode: "idle",
+    index: 0,
+  };
+
+  const updateButtonLabel = () => {
+    if (playbackState.mode === "playing") {
+      playBtn.textContent = "Pause";
+      return;
+    }
+    if (playbackState.mode === "paused") {
+      playBtn.textContent = "Resume";
+      return;
+    }
+    playBtn.textContent = "Start";
+  };
+
+  const setPlaybackMode = (mode, { index } = {}) => {
+    playbackState.mode = mode;
+    if (Number.isInteger(index)) {
+      playbackState.index = Math.max(0, index);
+    }
+    updateButtonLabel();
+  };
+
+  updateButtonLabel();
 
   const resetActiveItem = () => {
     if (!activeItem) {
@@ -295,50 +323,95 @@ const createPronunciationSlide = ({
     }
   };
 
-  const runSequence = async () => {
+  const resetState = ({ clearStatus = true } = {}) => {
+    slide._autoTriggered = false;
+    pauseRequested = false;
+    setPlaybackMode("idle", { index: 0 });
+    resetActiveItem();
+    if (clearStatus) {
+      status.textContent = "";
+    }
+  };
+
+  const runSequence = async (fromIndex = 0) => {
     if (!items.length) {
       status.textContent = "No audio available.";
+      resetState({ clearStatus: false });
       return;
     }
 
+    pauseRequested = false;
     abortController?.abort();
     abortController = new AbortController();
     const { signal } = abortController;
 
-    playBtn.disabled = true;
-    status.textContent = "Starting...";
+    setPlaybackMode("playing", { index: fromIndex });
+    status.textContent = fromIndex === 0 ? "Starting..." : "Resuming...";
+
+    let completed = false;
 
     try {
-      for (const item of items) {
-        await playEntry(item, { signal });
+      for (let index = fromIndex; index < items.length; index += 1) {
+        playbackState.index = index;
+        await playEntry(items[index], { signal });
         if (signal.aborted) {
           break;
         }
       }
 
-      status.textContent = signal.aborted
-        ? "Playback stopped."
-        : "Playback complete.";
+      if (!signal.aborted) {
+        completed = true;
+      }
     } finally {
-      playBtn.disabled = false;
+      const aborted = abortController?.signal?.aborted ?? false;
       abortController = null;
       resetActiveItem();
-      if (signal.aborted) {
-        status.textContent = "Playback stopped.";
+
+      if (aborted && pauseRequested) {
+        slide._autoTriggered = false;
+        setPlaybackMode("paused", { index: playbackState.index });
+        status.textContent = "Paused.";
+      } else {
+        const finalStatus = completed
+          ? "Playback complete."
+          : "Playback stopped.";
+        resetState({ clearStatus: false });
+        status.textContent = finalStatus;
       }
+
+      pauseRequested = false;
     }
   };
 
-  playBtn.addEventListener("click", runSequence);
+  playBtn.addEventListener("click", () => {
+    if (playbackState.mode === "playing") {
+      pauseRequested = true;
+      abortController?.abort();
+      return;
+    }
+
+    if (playbackState.mode === "paused") {
+      slide._autoTriggered = true;
+      runSequence(playbackState.index);
+      return;
+    }
+
+    slide._autoTriggered = true;
+    runSequence(0);
+  });
 
   const autoPlay = {
     button: playBtn,
     trigger: () => {
-      if (slide._autoTriggered) {
+      if (
+        slide._autoTriggered ||
+        playbackState.mode === "playing" ||
+        playbackState.mode === "paused"
+      ) {
         return;
       }
       slide._autoTriggered = true;
-      runSequence();
+      runSequence(0);
     },
     status,
   };
@@ -354,10 +427,7 @@ const createPronunciationSlide = ({
     abortController?.abort();
     abortController = null;
     audioManager.stopAll();
-    resetActiveItem();
-    status.textContent = "";
-    playBtn.disabled = false;
-    slide._autoTriggered = false;
+    resetState();
     slide._instructionComplete = false;
   };
 
