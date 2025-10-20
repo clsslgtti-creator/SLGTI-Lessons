@@ -570,6 +570,41 @@ const createSequencedTextSlide = (
   let sequenceAbort = null;
   let autoTriggered = false;
   let pendingAutoStart = null;
+  let pauseRequested = false;
+
+  const playbackState = {
+    mode: "idle",
+    resumeIndex: 0,
+  };
+
+  const updateButtonLabel = () => {
+    if (playbackState.mode === "playing") {
+      startBtn.textContent = "Pause";
+      return;
+    }
+    if (playbackState.mode === "paused") {
+      startBtn.textContent = "Resume";
+      return;
+    }
+    startBtn.textContent = "Start";
+  };
+
+  const setPlaybackMode = (mode, { resumeIndex } = {}) => {
+    playbackState.mode = mode;
+    if (Number.isInteger(resumeIndex)) {
+      playbackState.resumeIndex = Math.max(0, resumeIndex);
+    }
+    updateButtonLabel();
+  };
+
+  const resetPlaybackState = () => {
+    setPlaybackMode("idle", { resumeIndex: 0 });
+    autoTriggered = false;
+    slide._autoTriggered = false;
+    startBtn.disabled = false;
+  };
+
+  updateButtonLabel();
 
   const clearAutoStart = () => {
     if (pendingAutoStart !== null) {
@@ -582,12 +617,14 @@ const createSequencedTextSlide = (
     clearEntryHighlights(entries);
   };
 
-  const runSequence = async () => {
+  const runSequence = async (fromIndex = 0) => {
     if (!entries.length) {
       status.textContent = "Audio will be added soon.";
-      startBtn.disabled = false;
+      resetPlaybackState();
       return;
     }
+
+    pauseRequested = false;
 
     sequenceAbort?.abort();
     sequenceAbort = new AbortController();
@@ -595,11 +632,14 @@ const createSequencedTextSlide = (
 
     audioManager.stopAll();
     resetEntries();
-    startBtn.disabled = true;
-    status.textContent = "Starting...";
+    setPlaybackMode("playing", { resumeIndex: fromIndex });
+    status.textContent = fromIndex === 0 ? "Starting..." : "Resuming...";
+
+    let completed = false;
 
     try {
-      for (let index = 0; index < entries.length; index += 1) {
+      for (let index = fromIndex; index < entries.length; index += 1) {
+        playbackState.resumeIndex = index;
         const item = entries[index];
         item.card.classList.add("is-active");
         item.line.classList.add("is-playing");
@@ -619,6 +659,8 @@ const createSequencedTextSlide = (
           break;
         }
 
+        playbackState.resumeIndex = index + 1;
+
         let gapMs = 0;
         try {
           const duration = await audioManager.getDuration(item.entry.audio);
@@ -629,6 +671,10 @@ const createSequencedTextSlide = (
           );
         } catch (error) {
           console.error(error);
+        }
+
+        if (signal.aborted) {
+          break;
         }
 
         if (isRepeatMode && gapMs > 0) {
@@ -647,26 +693,45 @@ const createSequencedTextSlide = (
         }
       }
 
-      status.textContent = sequenceAbort?.signal?.aborted
-        ? "Playback stopped."
-        : "Playback complete.";
+      if (!signal.aborted) {
+        completed = true;
+        status.textContent = "Playback complete.";
+      }
     } finally {
-      startBtn.disabled = false;
+      const aborted = sequenceAbort?.signal?.aborted ?? false;
       sequenceAbort = null;
-      autoTriggered = false;
-      slide._autoTriggered = false;
+
+      if (aborted && pauseRequested) {
+        setPlaybackMode("paused", { resumeIndex: playbackState.resumeIndex });
+        status.textContent = "Paused.";
+      } else if (completed) {
+        resetPlaybackState();
+        resetEntries();
+      } else if (aborted) {
+        status.textContent = "Playback stopped.";
+        resetPlaybackState();
+        resetEntries();
+      } else {
+        resetPlaybackState();
+      }
+
+      pauseRequested = false;
     }
   };
 
-  const startSequence = () => {
+  const startSequence = (fromIndex = 0) => {
     clearAutoStart();
     autoTriggered = true;
     slide._autoTriggered = true;
-    runSequence();
+    runSequence(fromIndex);
   };
 
   const triggerAutoPlay = () => {
-    if (autoTriggered) {
+    if (
+      autoTriggered ||
+      playbackState.mode === "playing" ||
+      playbackState.mode === "paused"
+    ) {
       return;
     }
     autoTriggered = true;
@@ -679,22 +744,29 @@ const createSequencedTextSlide = (
   };
 
   startBtn.addEventListener("click", () => {
-    if (sequenceAbort) {
+    if (playbackState.mode === "playing") {
+      pauseRequested = true;
+      sequenceAbort?.abort();
       return;
     }
+
+    if (playbackState.mode === "paused") {
+      startSequence(playbackState.resumeIndex);
+      return;
+    }
+
     startSequence();
   });
 
   const onLeave = () => {
     clearAutoStart();
+    pauseRequested = false;
     sequenceAbort?.abort();
     sequenceAbort = null;
     audioManager.stopAll();
     resetEntries();
-    startBtn.disabled = false;
+    resetPlaybackState();
     status.textContent = "";
-    autoTriggered = false;
-    slide._autoTriggered = false;
   };
 
   const suffixSegment = subActivityLetter

@@ -508,6 +508,7 @@ const applyInstructionsToSlide = (slideElement, texts) => {
   anchor?.insertAdjacentElement("afterend", list);
 };
 
+const INITIAL_INSTRUCTION_DELAY_SECONDS = 5;
 let instructionPlayback = null;
 
 const cleanupInstructionController = (
@@ -521,6 +522,7 @@ const cleanupInstructionController = (
   const {
     audio,
     countdownInterval,
+    initialCountdownInterval,
     cleanupHandlers,
     onEnded,
     indicator,
@@ -540,6 +542,10 @@ const cleanupInstructionController = (
     window.clearInterval(countdownInterval);
   }
 
+  if (initialCountdownInterval) {
+    window.clearInterval(initialCountdownInterval);
+  }
+
   cleanupHandlers?.forEach((handler) => {
     try {
       handler();
@@ -548,7 +554,7 @@ const cleanupInstructionController = (
     }
   });
 
-  restoreButton?.();
+  restoreButton?.({ restoreText: true });
   indicator?.cleanup?.({ preserveContent });
 };
 
@@ -615,7 +621,7 @@ const startInstructionCountdown = (controller) => {
     return;
   }
 
-  controller.restoreButton?.();
+  controller.restoreButton?.({ restoreText: true });
 
   let remaining = 3;
   indicator?.update(`Starts in ${remaining}s`);
@@ -665,30 +671,34 @@ const handleInstructionForSlide = (slideObj) => {
   stopInstructionPlayback();
 
   const indicator = createInstructionIndicator(slideObj);
-  indicator?.update(audioUrl ? "Instruction playing..." : "Starts in 3s");
 
   const controller = {
     slide: slideObj,
     audio: null,
     countdownInterval: null,
+    initialCountdownInterval: null,
     cleanupHandlers: [],
     onEnded: null,
     indicator,
-    restoreButton: null,
+    restoreButton: () => {},
   };
 
   const { button } = slideObj.autoPlay || {};
   if (button && typeof button.disabled === "boolean") {
     controller.button = button;
     controller.buttonWasDisabled = button.disabled;
+    controller.buttonOriginalText = button.textContent;
     controller.buttonLocked = true;
     button.disabled = true;
-    controller.restoreButton = () => {
+    controller.restoreButton = ({ restoreText = true } = {}) => {
       if (!controller.buttonLocked) {
         return;
       }
       controller.buttonLocked = false;
       controller.button.disabled = controller.buttonWasDisabled ?? false;
+      if (restoreText && controller.buttonOriginalText !== undefined) {
+        controller.button.textContent = controller.buttonOriginalText;
+      }
     };
   }
 
@@ -698,11 +708,7 @@ const handleInstructionForSlide = (slideObj) => {
     stopInstructionPlayback({ preserveContent: true });
   };
 
-  const attachManualHandler = () => {
-    const { button } = slideObj.autoPlay || {};
-    if (!button || typeof button.addEventListener !== "function") {
-      return;
-    }
+  if (hasAutoPlay && button && typeof button.addEventListener === "function") {
     const manualHandler = () => {
       if (instructionPlayback?.slide !== slideObj) {
         return;
@@ -713,59 +719,99 @@ const handleInstructionForSlide = (slideObj) => {
     controller.cleanupHandlers.push(() =>
       button.removeEventListener("click", manualHandler)
     );
-  };
-
-  if (hasAutoPlay) {
-    attachManualHandler();
   }
 
-  const beginCountdown = () => {
+  let audio = null;
+  if (audioUrl) {
+    audio = new Audio(audioUrl);
+    controller.audio = audio;
+  }
+
+  const handleInstructionCompletedWithoutAuto = () => {
+    if (instructionPlayback?.slide !== slideObj) {
+      return;
+    }
+    const activeController = instructionPlayback;
+    instructionPlayback = null;
+    cleanupInstructionController(activeController);
+    slideObj._instructionComplete = true;
+  };
+
+  const beginAutoPlaybackCountdown = () => {
     if (!instructionPlayback || instructionPlayback.slide !== slideObj) {
       return;
     }
+    indicator?.update("Starts in 3s");
     startInstructionCountdown(controller);
   };
 
-  if (!audioUrl) {
-    instructionPlayback = controller;
-    beginCountdown();
-    return;
+  if (audio) {
+    const onEnded = () => {
+      if (!instructionPlayback || instructionPlayback.slide !== slideObj) {
+        return;
+      }
+
+      audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("error", onEnded);
+
+      if (!hasAutoPlay) {
+        handleInstructionCompletedWithoutAuto();
+        return;
+      }
+
+      beginAutoPlaybackCountdown();
+    };
+
+    controller.onEnded = onEnded;
+    audio.addEventListener("ended", onEnded, { once: false });
+    audio.addEventListener("error", onEnded, { once: false });
   }
 
-  const audio = new Audio(audioUrl);
-  controller.audio = audio;
-
-  const onEnded = () => {
-    if (!instructionPlayback || instructionPlayback.slide !== slideObj) {
+  const startInstruction = () => {
+    if (!instructionPlayback || instructionPlayback !== controller) {
       return;
     }
 
-    audio.removeEventListener("ended", onEnded);
-    audio.removeEventListener("error", onEnded);
-
-    if (!hasAutoPlay) {
-      const activeController = instructionPlayback;
-      instructionPlayback = null;
-      cleanupInstructionController(activeController);
-      slideObj._instructionComplete = true;
+    if (audio) {
+      indicator?.update("Instruction playing...");
+      const playPromise = audio.play();
+      if (playPromise?.catch) {
+        playPromise.catch(() => {
+          controller.onEnded?.();
+        });
+      }
       return;
     }
 
-    beginCountdown();
+    indicator?.update("Starts in 3s");
+    beginAutoPlaybackCountdown();
   };
 
-  controller.onEnded = onEnded;
-  audio.addEventListener("ended", onEnded, { once: false });
-  audio.addEventListener("error", onEnded, { once: false });
+  const beginInitialCountdown = () => {
+    let remaining = INITIAL_INSTRUCTION_DELAY_SECONDS;
+    indicator?.update(`Instruction starts in ${remaining}s`);
+
+    controller.initialCountdownInterval = window.setInterval(() => {
+      if (!instructionPlayback || instructionPlayback !== controller) {
+        window.clearInterval(controller.initialCountdownInterval);
+        controller.initialCountdownInterval = null;
+        return;
+      }
+
+      remaining -= 1;
+      if (remaining > 0) {
+        indicator?.update(`Instruction starts in ${remaining}s`);
+        return;
+      }
+
+      window.clearInterval(controller.initialCountdownInterval);
+      controller.initialCountdownInterval = null;
+      startInstruction();
+    }, 1000);
+  };
 
   instructionPlayback = controller;
-
-  const playPromise = audio.play();
-  if (playPromise?.catch) {
-    playPromise.catch(() => {
-      onEnded();
-    });
-  }
+  beginInitialCountdown();
 };
 
 const parseActivitySlideId = (slideId) => {
