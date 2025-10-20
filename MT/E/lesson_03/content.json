@@ -33,35 +33,35 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "f'i'tting",
+        "word_text": "valve c'a'p",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The pipe f'i'tting is loose.",
+        "sentence_text": "He is tightening the valve c'a'p now.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "dr'i'll",
+        "word_text": "ad'a'pter",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Use the dr'i'll on the plate.",
+        "sentence_text": "Fit the ad'a'pter carefully.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
-        "word_text": "sp'i'ndle",
+        "word_text": "tr'a'ck",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "The sp'i'ndle is turning fast.",
+        "sentence_text": "The tr'a'ck is very clear.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpeg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "b'i'll",
+        "word_text": "br'a'nd",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "B'i'll the client fairly.",
+        "sentence_text": "Which br'a'nd of paint are you using?",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpeg"
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
