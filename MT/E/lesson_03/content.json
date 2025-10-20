@@ -362,22 +362,22 @@
           },
           {
             "id": "l_4_2",
-            "question": "What is the supervisor doing?",
-            "answer": "Walking around.",
-            "options": [
-              "Talking loudly.",
-              "Walking around.",
-              "Instructing others."
-            ]
-          },
-          {
-            "id": "l_4_3",
             "question": "What are the trainees sharpening?",
             "answer": "Chisels and files.",
             "options": [
               "Gears and steel rods.",
               "Chisels and files.",
               "Engine parts."
+            ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "What is the supervisor doing?",
+            "answer": "Walking around.",
+            "options": [
+              "Talking loudly.",
+              "Walking around.",
+              "Instructing others."
             ]
           },
           {
