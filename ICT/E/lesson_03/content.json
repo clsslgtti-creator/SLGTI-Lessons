@@ -131,7 +131,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "What is the technician doing?",
         "text_b": " He is resetting old routers.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -149,7 +149,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "What is the chief technician doing?",
         "text_b": "He is checking  warranty cards for new computers.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
@@ -158,7 +158,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.jpeg",
+        "img": "assets/img/a_2_d_4.png",
         "text_a": "What is the safety inspector doing?",
         "text_b": "He is reading safety reports.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
@@ -176,7 +176,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpeg",
+        "img": "assets/img/a_2_d_6.png",
         "text_a": " What are they doing?",
         "text_b": "They are calibrating monitors.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
