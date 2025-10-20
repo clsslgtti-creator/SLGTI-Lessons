@@ -352,48 +352,52 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What is Mr. Silva doing in the workshop?",
-            "answer": "He is repairing a faulty alternator.",
+            "question": "What are two masons doing?",
+            "answer": "They are laying bricks.",
             "options": [
-              "He is repairing a faulty alternator.",
-              "He is cleaning greasy tools.",
-              "He is installing a new battery."
+              "They are laying bricks.",
+              "They are mixing the cement.",
+              "They are carrying slabs."
             ]
           },
           {
             "id": "l_4_2",
-            "question": "Who is installing a new battery?",
-            "answer": "Amal.",
-            "options": ["Nimal.", "Amal.", "Ravi."]
+            "question": "Why are they so busy?",
+            "answer": "The deadline to finish the project is nearing.",
+            "options": [
+              "The safety inspectors are at the site.",
+              "The site engineer is writing notes.",
+              "The deadline to finish the project is nearing."
+            ]
           },
           {
             "id": "l_4_3",
-            "question": "Where are the trainees cleaning the greasy tools?",
-            "answer": "Near the workbench.",
+            "question": "Where are the carpenters working?",
+            "answer": "Near the scaffolding.",
             "options": [
-              "Near the diagnostic machine.",
-              "Near the workbench.",
-              "Near the instructor’s desk."
+              "Near the scaffolding.",
+              "Near the gate.",
+              "Near the store."
             ]
           },
           {
             "id": "l_4_4",
-            "question": "What are the instructors doing?",
-            "answer": "They are watching and giving advice.",
+            "question": "What is the site engineer doing?",
+            "answer": "He is writing notes and checking blocks.",
             "options": [
-              "They are calibrating meters.",
-              "They are repairing the alternator.",
-              "They are watching and giving advice."
+              "He is writing notes and checking blocks.",
+              "He is mixing cement.",
+              "He is laying bricks."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What are Nimal and Ravi doing in the corner of the workshop?",
-            "answer": "They are calibrating meters.",
+            "question": "How are the helpers carrying the granite slabs?",
+            "answer": "By using a forklift",
             "options": [
-              "They are calibrating meters.",
-              "They are installing a battery.",
-              "They are cleaning the tools."
+              "By using safety equipment.",
+              "By using a forklift",
+              "By using a crane."
             ]
           }
         ]
@@ -401,78 +405,63 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "The workers are busy at the construction site today.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "It is five past nine.",
+          "text": "It is ten to nine. The project deadline is approaching.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The manager has just started the training.",
+          "text": "Two masons are laying bricks for the new wall.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "Another mason is helping them by mixing cement in a large metal tray. ",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "It is mid-April, and it is very hot.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "Everyone is sweating.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "The carpenters are cutting wooden planks near the scaffolding. ",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "n_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "id": "n_4_8",
+          "text": "They are near a huge tree, so there is some shade for them.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "Nearby, the site engineer is checking the concrete blocks and writing notes.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "Near the gate, two helpers are using a forklift to transport granite slabs to the store.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
+          "text": "Everyone is working together, and the site is full of noise.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "text": "All are wearing the correct safety equipment, including yellow helmets, as instructed by the management.",
           "audio": "assets/audio/a_4_n_12.mp3"
-        },
-        {
-          "id": "n_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
-          "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "n_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "n_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ],
       "activity_c": [
