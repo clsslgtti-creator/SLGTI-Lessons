@@ -1000,7 +1000,8 @@ const showSlide = (nextIndex) => {
     }
     grid.scrollTop = 0;
   });
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // window.scrollTo({ top: 0, behavior: "smooth" });
+  nextSlide.element.scrollIntoView({ behavior: "smooth", block: "start" });
 
   progressIndicator.textContent = `Slide ${currentSlideIndex + 1} of ${
     slides.length
