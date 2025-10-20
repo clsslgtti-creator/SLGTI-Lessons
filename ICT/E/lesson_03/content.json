@@ -352,48 +352,52 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What is Mr. Silva doing in the workshop?",
-            "answer": "He is repairing a faulty alternator.",
+            "question": "What time does the orientation session start?",
+            "answer": "At twenty-five to ten.",
             "options": [
-              "He is repairing a faulty alternator.",
-              "He is cleaning greasy tools.",
-              "He is installing a new battery."
+              "At twenty past ten.",
+              "At half past nine.",
+              "At twenty-five to ten."
             ]
           },
           {
             "id": "l_4_2",
-            "question": "Where are the trainees cleaning the greasy tools?",
-            "answer": "Near the workbench.",
+            "question": "What is the technician doing at one of the workstations?",
+            "answer": "Examining the cables with a diagnostic tool.",
             "options": [
-              "Near the diagnostic machine.",
-              "Near the workbench.",
-              "Near the instructor’s desk."
+              "Examining the cables with a diagnostic tool.",
+              "Replacing the old server.",
+              "Installing software updates on the laptops."
             ]
           },
           {
             "id": "l_4_3",
-            "question": "Who is installing a new battery?",
-            "answer": "Amal.",
-            "options": ["Nimal.", "Amal.", "Ravi."]
+            "question": "What are Anjali and Mohamad  doing in the back of the lab?",
+            "answer": "Recording system errors for troubleshooting.",
+            "options": [
+              "Recording system errors for troubleshooting.",
+              "Repairing faulty cables.",
+              "Calibrating the network switch."
+            ]
           },
           {
             "id": "l_4_4",
-            "question": "What are the instructors doing?",
-            "answer": "They are watching and giving advice.",
+            "question": "What is Shenali working on?",
+            "answer": "Setting up a firewall on a virtual machine.",
             "options": [
-              "They are calibrating meters.",
-              "They are repairing the alternator.",
-              "They are watching and giving advice."
+              "Setting up a firewall on a virtual machine.",
+              "Configuring a router for internet access.",
+              "Updating the picture generating software on a laptop."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What are Nimal and Ravi doing in the corner of the workshop?",
-            "answer": "They are calibrating meters.",
+            "question": "What does the instructor do while walking around the room?",
+            "answer": "Observes the tasks and offers advice.",
             "options": [
-              "They are calibrating meters.",
-              "They are installing a battery.",
-              "They are cleaning the tools."
+              "Observes the tasks and offers advice.",
+              "Collects feedback forms from students.",
+              "Reads instructions aloud from the manual."
             ]
           }
         ]
@@ -401,155 +405,135 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "The new group of ICT trainees is in the computer laboratory this morning.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "It is five past nine.",
+          "text": "It is nine thirty five.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The manager has just started the training.",
+          "text": "The supervisor has just commenced the orientation session.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "He is explaining the rules for handling expensive hardware and the importance of maintaining proper ventilation for the servers.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "The trainees are listening attentively.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "At one of the workstations, a technician is configuring a network switch and checking the cables with a diagnostic tool.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "Near the large screen, two students are installing updated software on a set of laptops.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "text": "Their desks are cluttered with power cords, flash drives, and manuals.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "Opposite them, Shenali is setting up a firewall on a virtual machine, while a junior trainee is reading the instructions aloud from the online documentation.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "In the back of the lab, Anjali and Mohamad are testing a new software application and recording system errors for troubleshooting.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
+          "text": "The instructor walks around the room, observing the tasks and offering advice on how to optimize performance.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "text": "Everyone is occupied, and the laboratory is filled with the quiet hum of machines.",
           "audio": "assets/audio/a_4_n_12.mp3"
         },
         {
           "id": "n_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "text": "The trainees understand that careful attention to procedures and safety can prevent costly mistakes in the ICT environment.",
           "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "n_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "n_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "r_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "The new group of ICT trainees is in the computer laboratory this morning.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "r_4_2",
-          "text": "It is five past nine.",
+          "text": "It is nine thirty five.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "r_4_3",
-          "text": "The manager has just started the training.",
+          "text": "The supervisor has just commenced the orientation session.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "r_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "He is explaining the rules for handling expensive hardware and the importance of maintaining proper ventilation for the servers.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "r_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "The trainees are listening attentively.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "r_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "At one of the workstations, a technician is configuring a network switch and checking the cables with a diagnostic tool.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "r_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "Near the large screen, two students are installing updated software on a set of laptops.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "r_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "text": "Their desks are cluttered with power cords, flash drives, and manuals.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "r_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "Opposite them, Shenali is setting up a firewall on a virtual machine, while a junior trainee is reading the instructions aloud from the online documentation.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "r_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "In the back of the lab, Anjali and Mohamad are testing a new software application and recording system errors for troubleshooting.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
           "id": "r_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
+          "text": "The instructor walks around the room, observing the tasks and offering advice on how to optimize performance.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "r_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "text": "Everyone is occupied, and the laboratory is filled with the quiet hum of machines.",
           "audio": "assets/audio/a_4_n_12.mp3"
         },
         {
           "id": "r_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "text": "The trainees understand that careful attention to procedures and safety can prevent costly mistakes in the ICT environment.",
           "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "r_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "r_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ]
     }

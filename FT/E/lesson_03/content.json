@@ -352,48 +352,44 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What is Mr. Silva doing in the workshop?",
-            "answer": "He is repairing a faulty alternator.",
+            "question": "What is Kamal doing?",
+            "answer": "Mixing flour and water.",
             "options": [
-              "He is repairing a faulty alternator.",
-              "He is cleaning greasy tools.",
-              "He is installing a new battery."
+              "Mixing flour and water.",
+              "Checking the dough.",
+              "Sealing bottles."
             ]
           },
           {
             "id": "l_4_2",
-            "question": "Where are the trainees cleaning the greasy tools?",
-            "answer": "Near the workbench.",
-            "options": [
-              "Near the diagnostic machine.",
-              "Near the workbench.",
-              "Near the instructor’s desk."
-            ]
+            "question": "Who is near the oven?",
+            "answer": "Rani",
+            "options": ["The instructor.", "Rani", "Kamal."]
           },
           {
             "id": "l_4_3",
-            "question": "Who is installing a new battery?",
-            "answer": "Amal.",
-            "options": ["Nimal.", "Amal.", "Ravi."]
+            "question": "What are the trainees cleaning?",
+            "answer": "The tables.",
+            "options": ["The oven.", "The tables.", "The bottles."]
           },
           {
             "id": "l_4_4",
-            "question": "What are the instructors doing?",
-            "answer": "They are watching and giving advice.",
+            "question": "What is laid out on the table?",
+            "answer": "The vegetables.",
             "options": [
-              "They are calibrating meters.",
-              "They are repairing the alternator.",
-              "They are watching and giving advice."
+              "The menu and recipes.",
+              "The sanitizer.",
+              "The vegetables."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What are Nimal and Ravi doing in the corner of the workshop?",
-            "answer": "They are calibrating meters.",
+            "question": "What have they been advised about?",
+            "answer": "Safety and hygiene.",
             "options": [
-              "They are calibrating meters.",
-              "They are installing a battery.",
-              "They are cleaning the tools."
+              "Menus and recipes.",
+              "Safety and hygiene.",
+              "Bags of flour."
             ]
           }
         ]
@@ -401,155 +397,125 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "Inside the food lab, the students are preparing for production. ",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "It is five past nine.",
+          "text": "It is five to ten.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The manager has just started the training.",
+          "text": "As an assignment, they are going to prepare the day’s meals in the canteen.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "The instructor has advised them on safety and hygiene precautions, and all are wearing gloves, aprons, and hair nets.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "Kamal is mixing flour and water in a big ceramic bowl.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "Near the oven, Rani is checking the dough carefully.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "Two trainees are cleaning the stainless steel tables with sanitizer.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "n_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "id": "n_4_8",
+          "text": "Close by, the instructor is testing the temperature of the milk processing chamber.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "In the corner, two students are sealing bottles of juice.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "The menus and recipes are on the wall on a whiteboard.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
+          "text": "The vegetables and other items are laid out on a table.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "text": "The lab is very clean, and everyone is concentrating on their work.",
           "audio": "assets/audio/a_4_n_12.mp3"
-        },
-        {
-          "id": "n_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
-          "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "n_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "n_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "r_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "Inside the food lab, the students are preparing for production. ",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "r_4_2",
-          "text": "It is five past nine.",
+          "text": "It is five to ten.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "r_4_3",
-          "text": "The manager has just started the training.",
+          "text": "As an assignment, they are going to prepare the day’s meals in the canteen.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "r_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "The instructor has advised them on safety and hygiene precautions, and all are wearing gloves, aprons, and hair nets.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "r_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "Kamal is mixing flour and water in a big ceramic bowl.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "r_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "Near the oven, Rani is checking the dough carefully.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "r_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "Two trainees are cleaning the stainless steel tables with sanitizer.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "r_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "id": "r_4_8",
+          "text": "Close by, the instructor is testing the temperature of the milk processing chamber.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "r_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "In the corner, two students are sealing bottles of juice.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "r_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "The menus and recipes are on the wall on a whiteboard.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
           "id": "r_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
+          "text": "The vegetables and other items are laid out on a table.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "r_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "text": "The lab is very clean, and everyone is concentrating on their work.",
           "audio": "assets/audio/a_4_n_12.mp3"
-        },
-        {
-          "id": "r_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
-          "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "r_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "r_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ]
     }
