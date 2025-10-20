@@ -153,7 +153,7 @@
         "text_b": " He is adjusting a loose screw.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Adjusting"
+        "keyword": "Loose Screw"
       },
       {
         "id": "d_2",
@@ -162,7 +162,7 @@
         "text_b": " I am tightening a bolt.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Tightening"
+        "keyword": "Bolt"
       },
       {
         "id": "d_3",
@@ -171,7 +171,7 @@
         "text_b": "It is designing an apartment block.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Designing"
+        "keyword": "CAD Machine"
       },
       {
         "id": "d_4",
@@ -180,7 +180,7 @@
         "text_b": " He is cleaning the carburetor.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Cleaning"
+        "keyword": "Carburetor"
       },
       {
         "id": "d_5",
@@ -189,7 +189,7 @@
         "text_b": "She is changing a car tire.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Changing"
+        "keyword": "Car Tire"
       },
       {
         "id": "d_6",
@@ -198,7 +198,7 @@
         "text_b": "He is welding the steel frame.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Welding"
+        "keyword": "Steel Frame"
       }
     ]
   },

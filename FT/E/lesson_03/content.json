@@ -153,7 +153,7 @@
         "text_b": "She is cutting the ripe mangoes for juice.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Cutting"
+        "keyword": "Ripe Mangoes"
       },
       {
         "id": "d_2",
@@ -162,7 +162,7 @@
         "text_b": "I am kneading the  bread dough on the table.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Kneading"
+        "keyword": "Bread Dough"
       },
       {
         "id": "d_3",
@@ -171,7 +171,7 @@
         "text_b": "He is mixing rice flour to make pittu. ",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Mixing"
+        "keyword": "Rice Flour"
       },
       {
         "id": "d_4",
@@ -180,7 +180,7 @@
         "text_b": "We are cleaning the coconut scraper.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Cleaning"
+        "keyword": "Coconut Scraper"
       },
       {
         "id": "d_5",
@@ -189,7 +189,7 @@
         "text_b": "It is frying the sliced brinjal quickly.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Frying"
+        "keyword": "Sliced Brinjal"
       },
       {
         "id": "d_6",
@@ -198,7 +198,7 @@
         "text_b": "They are cooking a spicy polos curry in a pot.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Cooking"
+        "keyword": "Polos Curry"
       }
     ]
   },

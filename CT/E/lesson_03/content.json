@@ -153,7 +153,7 @@
         "text_b": "I am breaking the old concrete wall.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Breaking"
+        "keyword": "Concrete wall"
       },
       {
         "id": "d_2",
@@ -162,7 +162,7 @@
         "text_b": "He is bending the long steel rods.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Bending"
+        "keyword": "Long steel rods"
       },
       {
         "id": "d_3",
@@ -171,7 +171,7 @@
         "text_b": "It is cutting a pipe.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Cutting"
+        "keyword": "Pipe"
       },
       {
         "id": "d_4",
@@ -180,7 +180,7 @@
         "text_b": "They are unloading bricks from the truck. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Unloading"
+        "keyword": "Bricks"
       },
       {
         "id": "d_5",
@@ -189,7 +189,7 @@
         "text_b": " She is wearing a yellow helmet with the company logo. ",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Wearing"
+        "keyword": "Yellow Helmet"
       },
       {
         "id": "d_6",
@@ -198,7 +198,7 @@
         "text_b": "We are spreading the mortar on the ground.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Spreading"
+        "keyword": "Motar"
       }
     ]
   },
