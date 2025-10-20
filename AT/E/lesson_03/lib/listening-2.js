@@ -301,7 +301,7 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
     }
     clearPlaybackTimers();
 
-    secondPlaybackRemaining = 60;
+    secondPlaybackRemaining = 20;
     const updateStatus = () => {
       status.textContent = `Second playback starts in ${secondPlaybackRemaining}s. Click play to listen sooner.`;
     };

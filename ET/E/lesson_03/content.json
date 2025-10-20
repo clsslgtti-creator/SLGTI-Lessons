@@ -150,7 +150,7 @@
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "What are the trainees and you doing?",
+        "text_a": "What are you and the trainees doing?",
         "text_b": " We are arranging the pliers on the workbench",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
@@ -352,48 +352,48 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What is Mr. Silva doing in the workshop?",
-            "answer": "He is repairing a faulty alternator.",
+            "question": "What is Sunil doing?",
+            "answer": "He is rewinding a motor.",
             "options": [
-              "He is repairing a faulty alternator.",
-              "He is cleaning greasy tools.",
-              "He is installing a new battery."
+              "He is rewinding a motor.",
+              "He is repairing an alternator.",
+              "He is installing a transformer."
             ]
           },
           {
             "id": "l_4_2",
-            "question": "Where are the trainees cleaning the greasy tools?",
-            "answer": "Near the workbench.",
-            "options": [
-              "Near the diagnostic machine.",
-              "Near the workbench.",
-              "Near the instructor’s desk."
-            ]
+            "question": "Who is repairing a faulty alternator?",
+            "answer": "Priya.",
+            "options": ["Sunil.", "Priya.", "The instructor."]
           },
           {
             "id": "l_4_3",
-            "question": "Who is installing a new battery?",
-            "answer": "Amal.",
-            "options": ["Nimal.", "Amal.", "Ravi."]
+            "question": "Where are the students calibrating digital meters?",
+            "answer": "By the window.",
+            "options": [
+              "By the window.",
+              "Near the board.",
+              "By the transformer."
+            ]
           },
           {
             "id": "l_4_4",
-            "question": "What are the instructors doing?",
-            "answer": "They are watching and giving advice.",
+            "question": "What is the instructor doing?",
+            "answer": "Installing a transformer.",
             "options": [
-              "They are calibrating meters.",
-              "They are repairing the alternator.",
-              "They are watching and giving advice."
+              "Rewinding a motor.",
+              "Installing a transformer.",
+              "Replacing wires."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What are Nimal and Ravi doing in the corner of the workshop?",
-            "answer": "They are calibrating meters.",
+            "question": "What has the inspector done?",
+            "answer": "Shown them the safety and hygiene equipment.",
             "options": [
-              "They are calibrating meters.",
-              "They are installing a battery.",
-              "They are cleaning the tools."
+              "Shown them how to install a transformer.",
+              "Shown them the safety and hygiene equipment.",
+              "Shown them the control panel networks."
             ]
           }
         ]
