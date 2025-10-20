@@ -7,31 +7,26 @@
   },
   "activity_1": {
     "type": "PRONUNCIATION",
-    "focus": "Short /ɪ/",
-    "image": "assets/img/a_1_p.jpeg",
+    "focus": "Short /æ/",
     "instructions": {
-      "activity_1_a": {
-        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+      "activity_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_1_b": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+      "activity_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
-      "activity_1_c": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
-        "audio": "assets/audio/a_2_i_d.mp3"
-      },
-      "activity_1_d": {
-        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+      "activity_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_1_e": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+      "activity_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
-      "activity_1_f": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+      "activity_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       }
     },
@@ -41,28 +36,32 @@
         "word_text": "f'i'tting",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "The pipe f'i'tting is loose.",
-        "sentence_audio": "assets/audio/a_1_p_1_b.mp3"
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.jpeg"
       },
       {
         "id": "p_2",
         "word_text": "dr'i'll",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
         "sentence_text": "Use the dr'i'll on the plate.",
-        "sentence_audio": "assets/audio/a_1_p_2_b.mp3"
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
         "word_text": "sp'i'ndle",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "The sp'i'ndle is turning fast.",
-        "sentence_audio": "assets/audio/a_1_p_3_b.mp3"
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.jpeg"
       },
       {
         "id": "p_4",
         "word_text": "b'i'll",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "B'i'll the client fairly.",
-        "sentence_audio": "assets/audio/a_1_p_4_b.mp3"
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.jpeg"
       }
     ]
   },
@@ -71,78 +70,62 @@
     "focus": "Present Continuous Tense",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogue.\nமாதிரி உரையாடலை கேளுங்கள்.\nආදර්ශ සංවාදය අසා බලන්න.",
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
-      "activity_2_a": {
-        "text": "Match the words with the pictures.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.\nපදයන් පින්තූර සමග ගැලපන්න.",
+      "activity_a": {
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_2_i_a.mp3"
       },
-      "activity_2_b": {
+      "activity_b": {
         "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_2_c": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
-      "activity_2_d": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+      "activity_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       },
-      "activity_2_e": {
-        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.",
+      "activity_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
         "audio": "assets/audio/a_2_i_e.mp3"
       }
     },
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/a_2_ex_1.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "What are you doing?",
+        "text_b": "I am cleaning my workstation.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
         "audio_b": "assets/audio/a_2_ex_1_b.mp3"
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_2.jpeg",
+        "text_a": "What are Mary and Ravi doing?",
+        "text_b": "They are talking.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
         "audio_b": "assets/audio/a_2_ex_2_b.mp3"
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_3.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_3.png",
+        "text_a": "What is Amita doing?",
+        "text_b": "She is sleeping.",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
         "audio_b": "assets/audio/a_2_ex_3_b.mp3"
       },
       {
-        "id": "e_4",
-        "img": "assets/img/a_2_ex_4.jpg",
-        "text_a": "",
-        "text_b": "",
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_4.jpeg",
+        "text_a": "What is John doing?",
+        "text_b": "He is arranging the tools.",
         "audio_a": "assets/audio/a_2_ex_4_a.mp3",
         "audio_b": "assets/audio/a_2_ex_4_b.mp3"
-      },
-      {
-        "id": "e_5",
-        "img": "assets/img/a_2_ex_5.jpg",
-        "text_a": "",
-        "text_b": "",
-        "audio_a": "assets/audio/a_2_ex_5_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_5_b.mp3"
-      },
-      {
-        "id": "e_6",
-        "img": "assets/img/a_2_ex_6.jpg",
-        "text_a": "",
-        "text_b": "",
-        "audio_a": "assets/audio/a_2_ex_6_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_6_b.mp3"
       }
     ],
     "dialogues": [
@@ -153,7 +136,7 @@
         "text_b": "I am breaking the old concrete wall.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Concrete wall"
+        "keyword": "concrete wall"
       },
       {
         "id": "d_2",
@@ -162,7 +145,7 @@
         "text_b": "He is bending the long steel rods.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Long steel rods"
+        "keyword": "long steel rods"
       },
       {
         "id": "d_3",
@@ -171,7 +154,7 @@
         "text_b": "It is cutting a pipe.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Pipe"
+        "keyword": "pipe"
       },
       {
         "id": "d_4",
@@ -180,7 +163,7 @@
         "text_b": "They are unloading bricks from the truck. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Bricks"
+        "keyword": "bricks"
       },
       {
         "id": "d_5",
@@ -189,7 +172,7 @@
         "text_b": " She is wearing a yellow helmet with the company logo. ",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Yellow Helmet"
+        "keyword": "yellow helmet"
       },
       {
         "id": "d_6",
@@ -198,14 +181,377 @@
         "text_b": "We are spreading the mortar on the ground.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Motar"
+        "keyword": "motar"
       }
     ]
   },
   "activity_3": {
-    "type": "GRAMMAR"
+    "type": "ACTIVITY-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_b": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_c": {
+        "text": "Match the times with the clocks.\nවේලාවන් ඔරලෝසු සමඟ ගැළපන්න.\nநேரங்களை மணிக்கடிகாரங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_3_i_c.mp3"
+      }
+    },
+    "content": {
+      "activity_a": [
+        {
+          "id": "a_3_a_1",
+          "text_a": "It is ten past four. ( 4:10)",
+          "text_b": "It is ten past six. (6:10)",
+          "text_c": "It is ten past ten. (10:10)",
+          "audio_a": "assets/audio/a_3_t_1_a.mp3",
+          "audio_b": "assets/audio/a_3_t_1_b.mp3",
+          "audio_c": "assets/audio/a_3_t_1_c.mp3"
+        },
+        {
+          "id": "a_3_a_2",
+          "text_a": "It is quarter past four. ( 4:15)",
+          "text_b": "It is quarter past six. (6:15)",
+          "text_c": "It is quarter past ten. (10:15)",
+          "audio_a": "assets/audio/a_3_t_2_a.mp3",
+          "audio_b": "assets/audio/a_3_t_2_b.mp3",
+          "audio_c": "assets/audio/a_3_t_2_c.mp3"
+        },
+        {
+          "id": "a_3_a_3",
+          "text_a": "It is half past four. (4:30)",
+          "text_b": "It is half past six. (6:30)",
+          "text_c": "It is half past ten. (10:30)",
+          "audio_a": "assets/audio/a_3_t_3_a.mp3",
+          "audio_b": "assets/audio/a_3_t_3_b.mp3",
+          "audio_c": "assets/audio/a_3_t_3_c.mp3"
+        },
+        {
+          "id": "a_3_a_4",
+          "text_a": "It is twenty-five to five. (4:35)",
+          "text_b": "It is twenty-five to seven. (6:35)",
+          "text_c": "It is twenty-five to eleven. (10:35)",
+          "audio_a": "assets/audio/a_3_t_4_a.mp3",
+          "audio_b": "assets/audio/a_3_t_4_b.mp3",
+          "audio_c": "assets/audio/a_3_t_4_c.mp3"
+        },
+        {
+          "id": "a_3_a_5",
+          "text_a": "It is quarter to five. (4:45)",
+          "text_b": "It is quarter to seven. (6:45)",
+          "text_c": "It is quarter to eleven. (10:45)",
+          "audio_a": "assets/audio/a_3_t_5_a.mp3",
+          "audio_b": "assets/audio/a_3_t_5_b.mp3",
+          "audio_c": "assets/audio/a_3_t_5_c.mp3"
+        }
+      ],
+      "activity_b": [
+        {
+          "id": "a_3_b_1",
+          "text_a": "It is ten past four. ( 4:10)",
+          "text_b": "It is ten past six. (6:10)",
+          "text_c": "It is ten past ten. (10:10)",
+          "audio_a": "assets/audio/a_3_t_1_a.mp3",
+          "audio_b": "assets/audio/a_3_t_1_b.mp3",
+          "audio_c": "assets/audio/a_3_t_1_c.mp3"
+        },
+        {
+          "id": "a_3_b_2",
+          "text_a": "It is quarter past four. ( 4:15)",
+          "text_b": "It is quarter past six. (6:15)",
+          "text_c": "It is quarter past ten. (10:15)",
+          "audio_a": "assets/audio/a_3_t_2_a.mp3",
+          "audio_b": "assets/audio/a_3_t_2_b.mp3",
+          "audio_c": "assets/audio/a_3_t_2_c.mp3"
+        },
+        {
+          "id": "a_3_b_3",
+          "text_a": "It is half past four. (4:30)",
+          "text_b": "It is half past six. (6:30)",
+          "text_c": "It is half past ten. (10:30)",
+          "audio_a": "assets/audio/a_3_t_3_a.mp3",
+          "audio_b": "assets/audio/a_3_t_3_b.mp3",
+          "audio_c": "assets/audio/a_3_t_3_c.mp3"
+        },
+        {
+          "id": "a_3_b_4",
+          "text_a": "It is twenty-five to five. (4:35)",
+          "text_b": "It is twenty-five to seven. (6:35)",
+          "text_c": "It is twenty-five to eleven. (10:35)",
+          "audio_a": "assets/audio/a_3_t_4_a.mp3",
+          "audio_b": "assets/audio/a_3_t_4_b.mp3",
+          "audio_c": "assets/audio/a_3_t_4_c.mp3"
+        },
+        {
+          "id": "a_3_b_5",
+          "text_a": "It is quarter to five. (4:45)",
+          "text_b": "It is quarter to seven. (6:45)",
+          "text_c": "It is quarter to eleven. (10:45)",
+          "audio_a": "assets/audio/a_3_t_5_a.mp3",
+          "audio_b": "assets/audio/a_3_t_5_b.mp3",
+          "audio_c": "assets/audio/a_3_t_5_c.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "c_1",
+          "img": "assets/img/a_3_c_1.png",
+          "keyword": "It’s half past eight."
+        },
+        {
+          "id": "c_2",
+          "img": "assets/img/a_3_c_2.png",
+          "keyword": "It’s twenty minutes past twelve."
+        },
+        {
+          "id": "c_3",
+          "img": "assets/img/a_3_c_3.png",
+          "keyword": "It’s a quarter to three."
+        },
+        {
+          "id": "c_4",
+          "img": "assets/img/a_3_c_4.png",
+          "keyword": "It’s ten past six."
+        },
+        {
+          "id": "c_5",
+          "img": "assets/img/a_3_c_5.png",
+          "keyword": "It’s five to seven."
+        },
+        {
+          "id": "c_6",
+          "img": "assets/img/a_3_c_6.png",
+          "keyword": "It’s twenty-five to nine."
+        }
+      ]
+    }
   },
   "activity_4": {
-    "type": "GAME"
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. සවන් දී ඔබට ඇසෙන අංක සලකුණු කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What is Mr. Silva doing in the workshop?",
+            "answer": "He is repairing a faulty alternator.",
+            "options": [
+              "He is repairing a faulty alternator.",
+              "He is cleaning greasy tools.",
+              "He is installing a new battery."
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": "Who is installing a new battery?",
+            "answer": "Amal.",
+            "options": ["Nimal.", "Amal.", "Ravi."]
+          },
+          {
+            "id": "l_4_3",
+            "question": "Where are the trainees cleaning the greasy tools?",
+            "answer": "Near the workbench.",
+            "options": [
+              "Near the diagnostic machine.",
+              "Near the workbench.",
+              "Near the instructor’s desk."
+            ]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What are the instructors doing?",
+            "answer": "They are watching and giving advice.",
+            "options": [
+              "They are calibrating meters.",
+              "They are repairing the alternator.",
+              "They are watching and giving advice."
+            ]
+          },
+          {
+            "id": "l_4_5",
+            "question": "What are Nimal and Ravi doing in the corner of the workshop?",
+            "answer": "They are calibrating meters.",
+            "options": [
+              "They are calibrating meters.",
+              "They are installing a battery.",
+              "They are cleaning the tools."
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "The new batch of trainees are in the automobile workshop today.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "It is five past nine.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "The manager has just started the training.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "The mechanics are working hard.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "He is checking the wires carefully.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_18",
+          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "Their overalls are dirty and oily.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "A new trainee is helping him by reading the car manual for details.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        },
+        {
+          "id": "n_4_13",
+          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "audio": "assets/audio/a_4_n_13.mp3"
+        },
+        {
+          "id": "n_4_14",
+          "text": "Everyone is busy, and the workshop is full of activity.",
+          "audio": "assets/audio/a_4_n_14.mp3"
+        },
+        {
+          "id": "n_4_15",
+          "text": "Everyone understands why safety instructions are so important.",
+          "audio": "assets/audio/a_4_n_15.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "r_4_1",
+          "text": "The new batch of trainees are in the automobile workshop today.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "It is five past nine.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "The manager has just started the training.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "The mechanics are working hard.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "He is checking the wires carefully.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_18",
+          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "Their overalls are dirty and oily.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "r_4_11",
+          "text": "A new trainee is helping him by reading the car manual for details.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "r_4_12",
+          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        },
+        {
+          "id": "r_4_13",
+          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "audio": "assets/audio/a_4_n_13.mp3"
+        },
+        {
+          "id": "r_4_14",
+          "text": "Everyone is busy, and the workshop is full of activity.",
+          "audio": "assets/audio/a_4_n_14.mp3"
+        },
+        {
+          "id": "r_4_15",
+          "text": "Everyone understands why safety instructions are so important.",
+          "audio": "assets/audio/a_4_n_15.mp3"
+        }
+      ]
+    }
   }
 }

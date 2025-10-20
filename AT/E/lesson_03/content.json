@@ -298,33 +298,33 @@
       ],
       "activity_c": [
         {
-          "id": "d_1",
-          "img": "assets/img/a_2_c_1.png",
+          "id": "c_1",
+          "img": "assets/img/a_3_c_1.png",
           "keyword": "It’s half past eight."
         },
         {
-          "id": "d_2",
-          "img": "assets/img/a_2_c_2.png",
+          "id": "c_2",
+          "img": "assets/img/a_3_c_2.png",
           "keyword": "It’s twenty minutes past twelve."
         },
         {
-          "id": "d_3",
-          "img": "assets/img/a_2_c_3.png",
+          "id": "c_3",
+          "img": "assets/img/a_3_c_3.png",
           "keyword": "It’s a quarter to three."
         },
         {
-          "id": "d_4",
-          "img": "assets/img/a_2_c_4.png",
+          "id": "c_4",
+          "img": "assets/img/a_3_c_4.png",
           "keyword": "It’s ten past six."
         },
         {
-          "id": "d_5",
-          "img": "assets/img/a_2_c_5.png",
+          "id": "c_5",
+          "img": "assets/img/a_3_c_5.png",
           "keyword": "It’s five to seven."
         },
         {
-          "id": "d_6",
-          "img": "assets/img/a_2_c_6.png",
+          "id": "c_6",
+          "img": "assets/img/a_3_c_6.png",
           "keyword": "It’s twenty-five to nine."
         }
       ]
@@ -362,12 +362,6 @@
           },
           {
             "id": "l_4_2",
-            "question": "Who is installing a new battery?",
-            "answer": "Amal.",
-            "options": ["Nimal.", "Amal.", "Ravi."]
-          },
-          {
-            "id": "l_4_3",
             "question": "Where are the trainees cleaning the greasy tools?",
             "answer": "Near the workbench.",
             "options": [
@@ -375,6 +369,12 @@
               "Near the workbench.",
               "Near the instructor’s desk."
             ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "Who is installing a new battery?",
+            "answer": "Amal.",
+            "options": ["Nimal.", "Amal.", "Ravi."]
           },
           {
             "id": "l_4_4",
