@@ -151,7 +151,7 @@
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
         "text_a": "What is the CAD machine doing now?",
-        "text_b": "It is designing an apartment block.",
+        "text_b": "It is drawing an apartment block.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
         "keyword": "CAD machine"
