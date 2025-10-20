@@ -352,48 +352,52 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What is Mr. Silva doing in the workshop?",
-            "answer": "He is repairing a faulty alternator.",
+            "question": "What is Ruwan doing?",
+            "answer": "Operating the lathe machine.",
             "options": [
-              "He is repairing a faulty alternator.",
-              "He is cleaning greasy tools.",
-              "He is installing a new battery."
+              "Operating the lathe machine.",
+              "Adjusting the milling machine.",
+              "Assembling an engine."
             ]
           },
           {
             "id": "l_4_2",
-            "question": "Where are the trainees cleaning the greasy tools?",
-            "answer": "Near the workbench.",
+            "question": "What is the supervisor doing?",
+            "answer": "Walking around.",
             "options": [
-              "Near the diagnostic machine.",
-              "Near the workbench.",
-              "Near the instructor’s desk."
+              "Talking loudly.",
+              "Walking around.",
+              "Instructing others."
             ]
           },
           {
             "id": "l_4_3",
-            "question": "Who is installing a new battery?",
-            "answer": "Amal.",
-            "options": ["Nimal.", "Amal.", "Ravi."]
+            "question": "What are the trainees sharpening?",
+            "answer": "Chisels and files.",
+            "options": [
+              "Gears and steel rods.",
+              "Chisels and files.",
+              "Engine parts."
+            ]
           },
           {
             "id": "l_4_4",
-            "question": "What are the instructors doing?",
-            "answer": "They are watching and giving advice.",
+            "question": "What is the instructor checking?",
+            "answer": "Alignment of gears.",
             "options": [
-              "They are calibrating meters.",
-              "They are repairing the alternator.",
-              "They are watching and giving advice."
+              "Alignment of gears.",
+              "The trainee students.",
+              "The engine."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What are Nimal and Ravi doing in the corner of the workshop?",
-            "answer": "They are calibrating meters.",
+            "question": "Why can’t they hear themselves?",
+            "answer": "The machines are noisy.",
             "options": [
-              "They are calibrating meters.",
-              "They are installing a battery.",
-              "They are cleaning the tools."
+              "All are talking at the same time.",
+              "The machines are noisy.",
+              "The alarm is ringing."
             ]
           }
         ]
@@ -401,155 +405,135 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "It is ten to nine. In the mechanical workshop, the trainees are practicing their skills.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "It is five past nine.",
+          "text": "First they were instructed on safety equipment and procedures.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The manager has just started the training.",
+          "text": "They are all wearing the required safety equipment for the tools they are using.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "Ruwan is operating the lathe machine and shaping a steel rod.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "He is following the measurements chart on the table.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "At another bench, Hassan is adjusting a milling machine.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "Two trainees are sharpening chisels and files carefully.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "text": "The supervisor is walking around and closely monitoring their actions.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "An instructor is checking the alignment of gears on the worktable.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "He is showing some students what to check for.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
+          "text": "In the corner, two students are assembling parts of an engine.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "text": "The sound of noisy machines fills the workshop and they can hardly hear each other when they speak.",
           "audio": "assets/audio/a_4_n_12.mp3"
         },
         {
           "id": "n_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "text": "In about half an hour a sound similar to an alarm will indicate the end of the shift.",
           "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "n_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "n_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "r_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "It is ten to nine. In the mechanical workshop, the trainees are practicing their skills.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "r_4_2",
-          "text": "It is five past nine.",
+          "text": "First they were instructed on safety equipment and procedures.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "r_4_3",
-          "text": "The manager has just started the training.",
+          "text": "They are all wearing the required safety equipment for the tools they are using.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "r_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "Ruwan is operating the lathe machine and shaping a steel rod.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "r_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "He is following the measurements chart on the table.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "r_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "At another bench, Hassan is adjusting a milling machine.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "r_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "Two trainees are sharpening chisels and files carefully.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "r_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "text": "The supervisor is walking around and closely monitoring their actions.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "r_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "An instructor is checking the alignment of gears on the worktable.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "r_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "He is showing some students what to check for.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
           "id": "r_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
+          "text": "In the corner, two students are assembling parts of an engine.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "r_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "text": "The sound of noisy machines fills the workshop and they can hardly hear each other when they speak.",
           "audio": "assets/audio/a_4_n_12.mp3"
         },
         {
           "id": "r_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "text": "In about half an hour a sound similar to an alarm will indicate the end of the shift.",
           "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "r_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "r_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ]
     }
