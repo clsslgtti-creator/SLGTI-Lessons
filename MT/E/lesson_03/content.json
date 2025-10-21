@@ -197,7 +197,7 @@
         "audio": "assets/audio/a_2_i_c.mp3"
       },
       "activity_c": {
-        "text": "Match the times with the clocks.\nවේලාවන් ඔරලෝසු සමඟ ගැළපන්න.\nநேரங்களை மணிக்கடிகாரங்களுடன் பொருத்துங்கள்.",
+        "text": "Match the times with the clocks.\nවේලාවන් ඔරලෝසු සමඟ ගළපන්න.\nநேரங்களை மணிக்கடிகாரங்களுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_3_i_c.mp3"
       }
     },
@@ -334,7 +334,7 @@
     "type": "LISTENING-2",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. සවන් දී ඔබට ඇසෙන අංක සලකුණු කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_b": {
