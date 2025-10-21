@@ -151,7 +151,7 @@
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
         "text_a": "What is the chef doing?",
-        "text_b": "He is mixing rice flour to make pittu. ",
+        "text_b": "He is mixing rice flour to make rotti.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
         "keyword": "rice flour"
