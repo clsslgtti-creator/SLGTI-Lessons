@@ -938,6 +938,44 @@ const createUnsupportedActivitySlide = (
   };
 };
 
+const formatLessonLabel = (meta = {}) => {
+  if (meta && typeof meta.title === "string" && meta.title.trim().length) {
+    return meta.title.trim();
+  }
+  if (typeof meta.lesson_no === "number" && Number.isFinite(meta.lesson_no)) {
+    const lessonNumber = Math.max(1, Math.floor(meta.lesson_no));
+    return `Lesson ${lessonNumber.toString().padStart(2, "0")}`;
+  }
+  return "this lesson";
+};
+
+const createLessonEndSlide = (meta = {}) => {
+  const lessonLabel = formatLessonLabel(meta);
+  const slide = document.createElement("section");
+  slide.className = "slide slide--end-of-lesson";
+  slide.dataset.role = "lesson-complete";
+
+  slide.innerHTML = `
+    <div class="end-of-lesson">
+      <div class="end-of-lesson__icon" aria-hidden="true">
+        <svg class="end-of-lesson__check" viewBox="0 0 64 64" focusable="false">
+          <circle cx="32" cy="32" r="30" fill="var(--accent-200, #e6f4ea)"></circle>
+          <path d="M27.6 41.2 19.8 33.4a2.4 2.4 0 0 1 3.4-3.4l6 6 11.6-11.6a2.4 2.4 0 0 1 3.4 3.4L31 41.2a2.4 2.4 0 0 1-3.4 0Z" fill="var(--accent-600, #2e7d32)"></path>
+        </svg>
+      </div>
+      <h2>End of Lesson</h2>
+      <p class="slide__instruction">Great job completing ${lessonLabel}! You can review the activities or exit when you're ready.</p>
+    </div>
+  `;
+
+  return {
+    id: "lesson-complete",
+    element: slide,
+    onEnter: () => {},
+    onLeave: () => {},
+  };
+};
+
 const collectActivityEntries = (lessonData = {}) =>
   Object.entries(lessonData)
     .filter(
@@ -1047,6 +1085,9 @@ const buildLessonSlides = (lessonData) => {
 
   const lessonSlides = [];
 
+  const lessonMeta =
+    lessonData && typeof lessonData.meta === "object" ? lessonData.meta : {};
+
   activityEntries.forEach(
     ({ key, type, normalizedType, data, focus, instructions }) => {
       const activityNumber = extractActivityNumber(key);
@@ -1138,7 +1179,12 @@ const buildLessonSlides = (lessonData) => {
   if (!lessonSlides.length) {
     slidesContainer.innerHTML =
       '<p class="empty-state">No compatible activities available yet.</p>';
+    return lessonSlides;
   }
+
+  const endSlide = createLessonEndSlide(lessonMeta);
+  lessonSlides.push(endSlide);
+  slidesContainer.appendChild(endSlide.element);
 
   return lessonSlides;
 };
