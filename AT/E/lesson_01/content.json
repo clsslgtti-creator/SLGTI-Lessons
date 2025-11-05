@@ -179,24 +179,26 @@
   },
   "activity_3": {
     "type": "GAME-1",
+    "bg_image": "assets/img/game/bg-11.jpg",
     "instructions": {
       "activity_1_a": {
         "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
         "audio": "assets/audio/a_3_i_a.mp3"
       }
     },
-    "options": ["Singular", "Plural"],
     "examples": [
       {
         "id": "e_1",
         "sentence": "He is at the site.",
         "audio": "assets/audio/a_3_ex_1.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Singular"
       },
       {
         "id": "e_2",
         "sentence": "Her parents are technicians.",
         "audio": "assets/audio/a_3_ex_2.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       }
     ],
@@ -205,60 +207,70 @@
         "id": "g_1",
         "sentence": "Meena is in Kandy today.",
         "audio": "assets/audio/a_3_g_1.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Singular"
       },
       {
         "id": "g_2",
         "sentence": "Are they at home today?",
         "audio": "assets/audio/a_3_g_2.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_3",
         "sentence": "My parents are at the head office.",
         "audio": "assets/audio/a_3_g_3.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_4",
         "sentence": "My teacher and I are at the factory.",
         "audio": "assets/audio/a_3_g_4.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_5",
         "sentence": "Some men are still in the storeroom.",
         "audio": "assets/audio/a_3_g_5.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_6",
         "sentence": "It is on the kitchen counter.",
         "audio": "assets/audio/a_3_g_6.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Singular"
       },
       {
         "id": "g_7",
         "sentence": "The clients are happy with your product.",
         "audio": "assets/audio/a_3_g_7.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_8",
         "sentence": "Many sick trainees are absent today.",
         "audio": "assets/audio/a_3_g_8.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_9",
         "sentence": "Is the weather very nice today?",
         "audio": "assets/audio/a_3_g_9.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Singular"
       },
       {
         "id": "g_10",
         "sentence": "Are all the knives in the steel cabinet?",
         "audio": "assets/audio/a_3_g_10.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       }
     ]

@@ -1,25 +1,49 @@
 const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
 
-const sanitizeOptions = (rawOptions = []) => {
+const DEFAULT_OPTION_LABELS = ["Option A", "Option B", "Option C"];
+
+const sanitizeOptions = (
+  rawOptions = [],
+  fallbackOptions = DEFAULT_OPTION_LABELS
+) => {
+  const fallback = Array.isArray(fallbackOptions)
+    ? fallbackOptions
+        .map((option) => (typeof option === "string" ? option.trim() : ""))
+        .filter((option) => option.length)
+    : [];
+
+  const fallbackPool =
+    fallback.length >= 2
+      ? fallback.slice(0, 3)
+      : DEFAULT_OPTION_LABELS.slice(0, 2);
+
   if (!Array.isArray(rawOptions)) {
-    return [];
+    return [...fallbackPool];
   }
+
   const trimmed = rawOptions
     .map((option) => (typeof option === "string" ? option.trim() : ""))
     .filter((option) => option.length);
+
   if (trimmed.length >= 2) {
-    return trimmed.slice(0, 2);
+    return trimmed.slice(0, 3);
   }
+
   if (trimmed.length === 1) {
-    return [trimmed[0], "Option B"];
+    const altSource = [...fallbackPool, ...DEFAULT_OPTION_LABELS];
+    const fallbackValue =
+      altSource.find((option) => option && option !== trimmed[0]) || "Option B";
+    return [trimmed[0], fallbackValue];
   }
-  return ["Option A", "Option B"];
+
+  return [...fallbackPool];
 };
 
-const normalizeExamples = (rawExamples = [], options) => {
+const normalizeExamples = (rawExamples = [], fallbackOptions) => {
   if (!Array.isArray(rawExamples)) {
     return [];
   }
+  const defaultOptions = sanitizeOptions(fallbackOptions);
   return rawExamples
     .map((item, index) => {
       const sentence =
@@ -31,6 +55,7 @@ const normalizeExamples = (rawExamples = [], options) => {
         typeof item?.audio === "string" && item.audio.trim().length
           ? item.audio.trim()
           : null;
+      const options = sanitizeOptions(item?.options, defaultOptions);
       const answerCandidate =
         typeof item?.answer === "string" ? item.answer.trim() : "";
       const answer = options.includes(answerCandidate)
@@ -44,6 +69,7 @@ const normalizeExamples = (rawExamples = [], options) => {
         answer,
         audio,
         audioKey,
+        options,
       };
     })
     .filter(Boolean);
@@ -66,10 +92,11 @@ const isMobileDevice = () => {
   );
 };
 
-const normalizeQuestions = (rawQuestions = [], options) => {
+const normalizeQuestions = (rawQuestions = [], fallbackOptions) => {
   if (!Array.isArray(rawQuestions)) {
     return [];
   }
+  const defaultOptions = sanitizeOptions(fallbackOptions);
   return rawQuestions
     .map((item, index) => {
       const sentence =
@@ -81,6 +108,7 @@ const normalizeQuestions = (rawQuestions = [], options) => {
         typeof item?.audio === "string" && item.audio.trim().length
           ? item.audio.trim()
           : null;
+      const options = sanitizeOptions(item?.options, defaultOptions);
       const answerCandidate =
         typeof item?.answer === "string" ? item.answer.trim() : "";
       const answer = options.includes(answerCandidate)
@@ -94,6 +122,7 @@ const normalizeQuestions = (rawQuestions = [], options) => {
         answer,
         audio,
         audioKey,
+        options,
       };
     })
     .filter(Boolean);
@@ -107,6 +136,8 @@ const DEFAULT_FEEDBACK_ASSETS = {
   incorrectImg: "assets/img/game/incorrect.png",
   timeoutImg: "assets/img/game/timeout.png",
 };
+
+const DEFAULT_BACKGROUND_IMAGE = "assets/img/game/bg-1.jpg";
 
 const createFeedbackPlayer = () => {
   const playTone = (frequency = 440, durationMs = 300) => {
@@ -204,12 +235,56 @@ const createButtonShadow = (scene, width, height, radius, offset = 6) => {
 const createGameScene = (config) => {
   const {
     options,
-    examples,
-    questions,
+    examples: rawExamples,
+    questions: rawQuestions,
     feedbackAssets,
+    backgroundImage,
     statusElement,
     onRoundUpdate,
   } = config;
+
+  const fallbackOptions = sanitizeOptions(options);
+
+  const prepareEntries = (entries = []) => {
+    if (!Array.isArray(entries)) {
+      return [];
+    }
+    return entries
+      .map((entry) => {
+        if (!entry) {
+          return null;
+        }
+        const entryOptions = sanitizeOptions(entry.options, fallbackOptions);
+        const answerCandidate =
+          typeof entry.answer === "string" ? entry.answer.trim() : "";
+        const answer = entryOptions.includes(answerCandidate)
+          ? answerCandidate
+          : entryOptions[0];
+        return {
+          ...entry,
+          answer,
+          options: entryOptions,
+        };
+      })
+      .filter(Boolean);
+  };
+
+  const examples = prepareEntries(rawExamples);
+  const questions = prepareEntries(rawQuestions);
+
+  const deriveMaxOptionCount = (list) =>
+    list.reduce(
+      (max, item) =>
+        Math.max(max, Array.isArray(item.options) ? item.options.length : 0),
+      0
+    );
+
+  const maxOptionCount = Math.max(
+    fallbackOptions.length,
+    deriveMaxOptionCount(examples),
+    deriveMaxOptionCount(questions),
+    2
+  );
 
   const feedbackPlayer = createFeedbackPlayer();
 
@@ -226,6 +301,7 @@ const createGameScene = (config) => {
       this.backgroundImage = null;
       this.orientationLocked = false;
       this.scaleListenersAttached = false;
+      this.topHudElements = [];
       this.exitButton = null;
       this.exitPanel = null;
     }
@@ -239,7 +315,11 @@ const createGameScene = (config) => {
     resetState() {
       this.examples = examples;
       this.questions = questions;
-      this.options = options;
+      this.fallbackOptions = Array.isArray(fallbackOptions)
+        ? [...fallbackOptions]
+        : fallbackOptions;
+      this.maxOptionCount = maxOptionCount;
+      this.optionButtonMetrics = null;
       this.feedbackAssets = feedbackAssets;
       this.exampleIndex = -1;
       this.questionIndex = -1;
@@ -259,6 +339,12 @@ const createGameScene = (config) => {
     }
 
     preload() {
+      const backgroundAsset = backgroundImage?.trim?.();
+      const resolvedBackground =
+        typeof backgroundAsset === "string" && backgroundAsset.length
+          ? backgroundAsset
+          : DEFAULT_BACKGROUND_IMAGE;
+
       this.load.once("complete", () => {
         if (!this.shouldAutoStart) {
           statusElement.textContent = "Press Start to play.";
@@ -313,19 +399,20 @@ const createGameScene = (config) => {
       }
 
       this.load.image("timer-img", "assets/img/game/timer.png");
-      this.load.image("bg-img", "assets/img/game/bg.jpg");
+      this.load.image("bg-img", resolvedBackground);
     }
 
     create() {
-      this.input.on('pointerdown', this.requestFullscreen, this);
-      this.sound.add('feedback-correct-audio')
-      this.sound.add('feedback-incorrect-audio')
-      this.sound.add('feedback-timeout-audio')  
+      this.input.on("pointerdown", this.requestFullscreen, this);
+      this.sound.add("feedback-correct-audio");
+      this.sound.add("feedback-incorrect-audio");
+      this.sound.add("feedback-timeout-audio");
       const { width, height } = this.sys.game.canvas;
       this.cameras.main.setBackgroundColor("#eef2f9");
       this.events.once(Phaser.Scenes.Events.SHUTDOWN, this.shutdown, this);
       this.events.once(Phaser.Scenes.Events.DESTROY, this.shutdown, this);
       this.gameUiElements = [];
+      this.topHudElements = [];
 
       const baseWidth =
         this.scale.gameSize?.width ?? this.sys.game.config.width ?? width;
@@ -382,6 +469,7 @@ const createGameScene = (config) => {
       topBar.graphics.setPosition(width / 2, 90);
       topBar.graphics.setDepth(2);
       this.gameUiElements.push(topBar.graphics);
+      this.topHudElements.push(topBar.graphics);
 
       this.phaseText = this.add
         .text(width / 2, 70, "Examples", {
@@ -394,6 +482,7 @@ const createGameScene = (config) => {
         .setOrigin(0.5, 0);
       this.phaseText.setDepth(3);
       this.gameUiElements.push(this.phaseText);
+      this.topHudElements.push(this.phaseText);
 
       const badgeHeight = clamp(height * 0.1, 58, 68);
       const timerBadgeWidth = clamp(width * 0.2, 160, 200);
@@ -433,6 +522,7 @@ const createGameScene = (config) => {
       ]);
       this.timerBadge.setDepth(3);
       this.gameUiElements.push(this.timerBadge);
+      this.topHudElements.push(this.timerBadge);
 
       const scoreBadgeWidth = clamp(width * 0.2, 160, 200);
       this.scorePanel = createRoundedPanel(
@@ -465,6 +555,7 @@ const createGameScene = (config) => {
       );
       this.scoreBadge.setDepth(3);
       this.gameUiElements.push(this.scoreBadge);
+      this.topHudElements.push(this.scoreBadge);
       this.updateScore();
       this.updateTimerText("Time: 10.0s");
 
@@ -743,8 +834,9 @@ const createGameScene = (config) => {
       this.optionButtons = this.createOptionButtons(
         width,
         height,
-        this.options
+        this.maxOptionCount
       );
+      this.configureOptionButtons(this.fallbackOptions, false);
       this.enableOptionButtons(false);
 
       this.createCenterStartButton(width, height);
@@ -949,6 +1041,20 @@ const createGameScene = (config) => {
       });
     }
 
+    setTopHudVisible(isVisible) {
+      if (!Array.isArray(this.topHudElements)) {
+        return;
+      }
+      this.topHudElements.forEach((item) => {
+        if (item?.setVisible) {
+          item.setVisible(isVisible);
+        } else if (item) {
+          // fallback for display objects without setVisible
+          item.visible = isVisible;
+        }
+      });
+    }
+
     createBarButton(label, width, height, { onClick, baseColor }) {
       const baseColorObj = Phaser.Display.Color.IntegerToColor(baseColor);
       const hoverColor = Phaser.Display.Color.GetColor(
@@ -1009,7 +1115,7 @@ const createGameScene = (config) => {
       });
       container.on("pointerdown", () => {
         if (container.input?.enabled && typeof onClick === "function") {
-           feedbackPlayer.playTone(640, 240);
+          feedbackPlayer.playTone(640, 240);
           onClick();
         }
       });
@@ -1122,6 +1228,7 @@ const createGameScene = (config) => {
       this.runState = "idle";
       this.setStartButtonState("Start", false, true);
       this.setGameUiVisible(false);
+      this.configureOptionButtons(this.fallbackOptions, false);
       this.enableOptionButtons(false);
       this.stopSentenceAudio();
       this.timerEvent?.remove();
@@ -1148,17 +1255,27 @@ const createGameScene = (config) => {
       }
     }
 
-    createOptionButtons(width, height, options) {
-      const buttons = [];
-      const buttonWidth = clamp(width * 0.32, 260, 420);
+    createOptionButtons(width, height, maxOptions) {
+      const visibleCount = Math.max(maxOptions || 0, 2);
+      const useCompactLayout = visibleCount >= 3;
+      const buttonWidth = clamp(
+        width * (useCompactLayout ? 0.24 : 0.32),
+        useCompactLayout ? 220 : 260,
+        useCompactLayout ? 320 : 420
+      );
       const buttonHeight = clamp(height * 0.16, 120, 140);
-      const horizontalSpacing = clamp(width * 0.26, 220, 320);
       const baseY = height - clamp(height * 0.18, 140, 180);
 
-      options.forEach((label, index) => {
-        const xPos =
-          width / 2 + (index === 0 ? -horizontalSpacing : horizontalSpacing);
-        const container = this.add.container(xPos, baseY);
+      this.optionButtonMetrics = {
+        buttonWidth,
+        buttonHeight,
+        baseY,
+      };
+
+      const buttons = [];
+
+      for (let index = 0; index < visibleCount; index += 1) {
+        const container = this.add.container(width / 2, baseY);
         container.setDepth(1);
         if (Array.isArray(this.gameUiElements)) {
           this.gameUiElements.push(container);
@@ -1193,13 +1310,13 @@ const createGameScene = (config) => {
             lineWidth: 3,
           },
         };
-        background.update(styles.base);
+        background.update(styles.disabled);
 
         const text = this.add
-          .text(0, 0, label, {
+          .text(0, 0, "", {
             fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
             fontSize: clamp(width * 0.03, 26, 32),
-            color: "#fff",
+            color: "#475569",
             align: "center",
             fontStyle: "bold",
             wordWrap: { width: buttonWidth - 40 },
@@ -1212,8 +1329,24 @@ const createGameScene = (config) => {
         const shadow = createButtonShadow(this, buttonWidth, buttonHeight, 28);
         container.addAt(shadow, 0); // behind background
 
+        container.setVisible(false);
+        container.disableInteractive();
+
+        const buttonState = {
+          container,
+          background,
+          text,
+          value: "",
+          styles,
+        };
+
         container.on("pointerover", () => {
-          if (!this.awaitingAnswer || this.gameOver) {
+          if (
+            !this.awaitingAnswer ||
+            this.gameOver ||
+            !buttonState.value ||
+            !buttonState.container.visible
+          ) {
             return;
           }
           this.input.setDefaultCursor("pointer");
@@ -1229,6 +1362,9 @@ const createGameScene = (config) => {
 
         container.on("pointerout", () => {
           this.input.setDefaultCursor("default");
+          if (!buttonState.container.visible || !buttonState.value) {
+            return;
+          }
           if (!this.awaitingAnswer || this.gameOver) {
             return;
           }
@@ -1243,7 +1379,12 @@ const createGameScene = (config) => {
         });
 
         container.on("pointerdown", () => {
-          if (!this.awaitingAnswer || this.gameOver) {
+          if (
+            !this.awaitingAnswer ||
+            this.gameOver ||
+            !buttonState.value ||
+            !buttonState.container.visible
+          ) {
             return;
           }
           this.tweens.add({
@@ -1253,19 +1394,83 @@ const createGameScene = (config) => {
             yoyo: true,
             ease: "Sine.easeInOut",
           });
-          this.handleAnswer(label);
+          this.handleAnswer(buttonState.value);
         });
 
-        buttons.push({
-          container,
-          background,
-          text,
-          value: label,
-          styles,
-        });
-      });
+        buttons.push(buttonState);
+      }
 
       return buttons;
+    }
+
+    configureOptionButtons(optionLabels = [], shouldShow = false) {
+      const fallback =
+        Array.isArray(this.fallbackOptions) && this.fallbackOptions.length
+          ? this.fallbackOptions
+          : sanitizeOptions();
+      const labels = sanitizeOptions(optionLabels, fallback);
+      const total = Math.min(labels.length, this.optionButtons.length);
+
+      if (!total) {
+        this.optionButtons.forEach((button) => {
+          button.value = "";
+          button.text.setText("");
+          button.background.update(button.styles.disabled);
+          button.container.setVisible(false);
+          button.container.disableInteractive();
+          button.container.setScale(1);
+        });
+        return;
+      }
+
+      const canvas = this.sys.game.canvas;
+      const width =
+        canvas?.width ??
+        this.scale.gameSize?.width ??
+        this.sys.game.config.width;
+      const height =
+        canvas?.height ??
+        this.scale.gameSize?.height ??
+        this.sys.game.config.height;
+      const metrics = this.optionButtonMetrics || {};
+      const baseY = metrics.baseY ?? height - clamp(height * 0.18, 140, 180);
+
+      let spacing = 0;
+      spacing = clamp(width * 0.6, 300, 400);
+
+      const positions = [];
+      const centerIndex = (total - 1) / 2;
+      for (let index = 0; index < total; index += 1) {
+        if (spacing <= 0) {
+          positions.push(width / 2);
+        } else {
+          const offset = index - centerIndex;
+          positions.push(width / 2 + offset * spacing);
+        }
+      }
+
+      this.optionButtons.forEach((button, index) => {
+        if (index < total) {
+          const label = labels[index];
+          button.value = label;
+          button.text.setText(label);
+          button.text.setColor("#475569");
+          button.background.update(button.styles.disabled);
+          button.container.setPosition(positions[index], baseY);
+          button.container.setVisible(Boolean(shouldShow && label));
+          button.container.setActive(true);
+          button.container.disableInteractive();
+          button.container.setScale(1);
+        } else {
+          button.value = "";
+          button.text.setText("");
+          button.background.update(button.styles.disabled);
+          button.container.setVisible(false);
+          button.container.setActive(false);
+          button.container.disableInteractive();
+          button.container.setScale(1);
+        }
+      });
     }
 
     enableOptionButtons(enabled) {
@@ -1273,16 +1478,17 @@ const createGameScene = (config) => {
         this.input.setDefaultCursor("default");
       }
       this.optionButtons.forEach((button) => {
-        if (enabled) {
-          button.container.setInteractive();
+        const isActive = button.container.visible && Boolean(button.value);
+        if (enabled && isActive) {
+          button.container.setInteractive({ useHandCursor: true });
         } else {
           button.container.disableInteractive();
         }
         button.container.setScale(1);
-        button.background.update(
-          enabled ? button.styles.base : button.styles.disabled
-        );
-        button.text.setColor(enabled ? "#fff" : "#475569");
+        const style =
+          enabled && isActive ? button.styles.base : button.styles.disabled;
+        button.background.update(style);
+        button.text.setColor(enabled && isActive ? "#fff" : "#475569");
       });
     }
 
@@ -1364,9 +1570,18 @@ const createGameScene = (config) => {
     showRound(entry, isExample) {
       const { width } = this.sys.game.canvas;
       const targetX = width / 2;
+      this.setTopHudVisible(true);
       this.sentenceCard.x = -width;
       this.sentenceCard.setAlpha(1);
       this.sentenceText.setText(entry.sentence);
+      const optionLabels =
+        Array.isArray(entry?.options) && entry.options.length
+          ? entry.options
+          : this.fallbackOptions;
+      this.configureOptionButtons(
+        optionLabels,
+        Array.isArray(optionLabels) && optionLabels.length > 0
+      );
 
       this.phaseText.setText(
         isExample
@@ -1617,7 +1832,7 @@ const createGameScene = (config) => {
       console.log(this.sound.get(key));
       if (key && this.sound.get(key)) {
         this.sound.play(key);
-        this.sound.setVolume(1); 
+        this.sound.setVolume(1);
         return;
       }
 
@@ -1744,6 +1959,11 @@ const createGameScene = (config) => {
         statusElement.classList.remove("is-transparent");
         statusElement.classList.add("is-visible");
       }
+      this.setTopHudVisible(false);
+      this.optionButtons.forEach((button) => {
+        button.container.setVisible(false);
+        button.container.disableInteractive();
+      });
       this.summaryBackdrop.setVisible(false);
       this.summaryBackdrop.setAlpha(0);
       this.countdownOverlay.setAlpha(1);
@@ -1761,7 +1981,7 @@ const createGameScene = (config) => {
             feedbackPlayer.playTone(320, 400);
           } else if (value === 0) {
             this.countdownText.setText("Start!");
-             feedbackPlayer.playTone(640, 240);
+            feedbackPlayer.playTone(640, 240);
           } else {
             event.remove();
             this.tweens.add({
@@ -1785,6 +2005,7 @@ const createGameScene = (config) => {
       this.gameOver = true;
       this.runState = "finished";
       this.enableOptionButtons(false);
+      this.configureOptionButtons(this.fallbackOptions, false);
       this.stopSentenceAudio();
       this.timerEvent?.remove();
       this.timerEvent = null;
@@ -2020,6 +2241,7 @@ export const buildGame1Slides = (activityData = {}, context = {}) => {
       examples,
       questions,
       feedbackAssets,
+      backgroundImage: activityData?.bg_image,
       statusElement: status,
       onRoundUpdate: (info) => {
         if (info.mode === "examples") {
