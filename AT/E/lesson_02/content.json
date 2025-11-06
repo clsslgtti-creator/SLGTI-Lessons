@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lesson_no": 1,
+    "lesson_no": 2,
     "level": "Elementary",
     "section": "Automobile Technology",
     "prepared_by": "Colombo Language School"
@@ -33,9 +33,9 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "eng'i'ne",
+        "word_text": "wh'ee'l",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The eng'i'ne is hot.",
+        "sentence_text": "The wh'ee'l is in good condition.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.jpeg"
       },
@@ -66,7 +66,7 @@
     ]
   },
   "activity_2": {
-    "type": "SBS",
+    "type": "SBS-1",
     "focus": "Verb ‘to be’ and preposition ‘on’",
     "instructions": {
       "example": {
@@ -94,6 +94,26 @@
         "audio": "assets/audio/a_2_i_e.mp3"
       }
     },
+    "tables": [
+      [
+        ["Where", "am", "I?"],
+        [null, "is", "he?"],
+        [null, null, "she?"],
+        [null, null, "it?"],
+        [null, "are", "we?"],
+        [null, null, "you?"],
+        [null, null, "they?"]
+      ],
+      [
+        ["I am", "I'm", "in the kitchen."],
+        ["He is", "He's", null],
+        ["She is", "She's", null],
+        ["It is", "It's", null],
+        ["We are", "We're", null],
+        ["You are", "You're", null],
+        ["They are", "They're", null]
+      ]
+    ],
     "example_dialogues": [
       {
         "id": "e_1",
@@ -179,24 +199,26 @@
   },
   "activity_3": {
     "type": "GAME-1",
+    "bg_image": "assets/img/game/bg-11.jpg",
     "instructions": {
       "activity_1_a": {
         "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
         "audio": "assets/audio/a_3_i_a.mp3"
       }
     },
-    "options": ["Singular", "Plural"],
     "examples": [
       {
         "id": "e_1",
         "sentence": "He is at the site.",
         "audio": "assets/audio/a_3_ex_1.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Singular"
       },
       {
         "id": "e_2",
         "sentence": "Her parents are technicians.",
         "audio": "assets/audio/a_3_ex_2.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       }
     ],
@@ -205,325 +227,294 @@
         "id": "g_1",
         "sentence": "Meena is in Kandy today.",
         "audio": "assets/audio/a_3_g_1.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Singular"
       },
       {
         "id": "g_2",
         "sentence": "Are they at home today?",
         "audio": "assets/audio/a_3_g_2.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_3",
         "sentence": "My parents are at the head office.",
         "audio": "assets/audio/a_3_g_3.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_4",
         "sentence": "My teacher and I are at the factory.",
         "audio": "assets/audio/a_3_g_4.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_5",
         "sentence": "Some men are still in the storeroom.",
         "audio": "assets/audio/a_3_g_5.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_6",
         "sentence": "It is on the kitchen counter.",
         "audio": "assets/audio/a_3_g_6.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Singular"
       },
       {
         "id": "g_7",
         "sentence": "The clients are happy with your product.",
         "audio": "assets/audio/a_3_g_7.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_8",
         "sentence": "Many sick trainees are absent today.",
         "audio": "assets/audio/a_3_g_8.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       },
       {
         "id": "g_9",
         "sentence": "Is the weather very nice today?",
         "audio": "assets/audio/a_3_g_9.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Singular"
       },
       {
         "id": "g_10",
         "sentence": "Are all the knives in the steel cabinet?",
         "audio": "assets/audio/a_3_g_10.mp3",
+        "options": ["Singular", "Plural"],
         "answer": "Plural"
       }
     ]
   },
   "activity_4": {
-    "type": "LISTENING-1",
+    "type": "LISTENING-2",
     "instructions": {
-      "activity_4_a": {
-        "text": "You will hear each recording twice. Listen and mark the numbers you hear.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
-      "activity_4_b": {
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
         "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
-      },
-      "activity_4_c": {
-        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
-        "audio": "assets/audio/a_2_i_d.mp3"
-      },
-      "activity_4_d": {
-        "text": "Listen and type the correct number.\nඅසන්න සහ නිවැරදි අංකය ටයිප් කරන්න.\nகேட்டு சரியான எண்ணைத் தட்டச்சு செய்யுங்கள்.",
-        "audio": "assets/audio/a_4_i_d.mp3"
       }
     },
     "content": {
-      "activity_4_a": [
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What is Mr. Silva doing in the workshop?",
+            "answer": "He is repairing a faulty alternator.",
+            "options": [
+              "He is repairing a faulty alternator.",
+              "He is cleaning greasy tools.",
+              "He is installing a new battery."
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": "Where are the trainees cleaning the greasy tools?",
+            "answer": "Near the workbench.",
+            "options": [
+              "Near the diagnostic machine.",
+              "Near the workbench.",
+              "Near the instructor’s desk."
+            ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "Who is installing a new battery?",
+            "answer": "Amal.",
+            "options": ["Nimal.", "Amal.", "Ravi."]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What are the instructors doing?",
+            "answer": "They are watching and giving advice.",
+            "options": [
+              "They are calibrating meters.",
+              "They are repairing the alternator.",
+              "They are watching and giving advice."
+            ]
+          },
+          {
+            "id": "l_4_5",
+            "question": "What are Nimal and Ravi doing in the corner of the workshop?",
+            "answer": "They are calibrating meters.",
+            "options": [
+              "They are calibrating meters.",
+              "They are installing a battery.",
+              "They are cleaning the tools."
+            ]
+          }
+        ]
+      },
+      "activity_b": [
         {
-          "id": "l_4_1",
-          "question_audio": "assets/audio/a_4_l_1.mp3",
-          "answer": "430",
-          "options": ["430", "413"]
+          "id": "n_4_1",
+          "text": "The new batch of trainees are in the automobile workshop today.",
+          "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
-          "id": "l_4_2",
-          "question_audio": "assets/audio/a_4_l_2.mp3",
-          "answer": "230",
-          "options": ["230", "213"]
+          "id": "n_4_2",
+          "text": "It is five past nine.",
+          "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
-          "id": "l_4_3",
-          "question_audio": "assets/audio/a_4_l_3.mp3",
-          "answer": "150",
-          "options": ["150", "115"]
+          "id": "n_4_3",
+          "text": "The manager has just started the training.",
+          "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
-          "id": "l_4_4",
-          "question_audio": "assets/audio/a_4_l_4.mp3",
-          "answer": "388",
-          "options": ["368", "388"]
+          "id": "n_4_4",
+          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
-          "id": "l_4_5",
-          "question_audio": "assets/audio/a_4_l_5.mp3",
-          "answer": "817",
-          "options": ["870", "817"]
+          "id": "n_4_5",
+          "text": "The mechanics are working hard.",
+          "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
-          "id": "l_4_6",
-          "question_audio": "assets/audio/a_4_l_6.mp3",
-          "answer": "1440",
-          "options": ["1414", "1440"]
+          "id": "n_4_6",
+          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
-          "id": "l_4_7",
-          "question_audio": "assets/audio/a_4_l_7.mp3",
-          "answer": "2013",
-          "options": ["2030", "2013"]
+          "id": "n_4_7",
+          "text": "He is checking the wires carefully.",
+          "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "l_4_8",
-          "question_audio": "assets/audio/a_4_l_8.mp3",
-          "answer": "25,700",
-          "options": ["25,500", "25,700"]
+          "id": "n_4_18",
+          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "Their overalls are dirty and oily.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "A new trainee is helping him by reading the car manual for details.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        },
+        {
+          "id": "n_4_13",
+          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "audio": "assets/audio/a_4_n_13.mp3"
+        },
+        {
+          "id": "n_4_14",
+          "text": "Everyone is busy, and the workshop is full of activity.",
+          "audio": "assets/audio/a_4_n_14.mp3"
+        },
+        {
+          "id": "n_4_15",
+          "text": "Everyone understands why safety instructions are so important.",
+          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ],
-      "activity_4_b": [
+      "activity_c": [
         {
           "id": "r_4_1",
-          "text_a": "150 — One hundred and fifty",
-          "text_b": "115 — One hundred and fifteen",
-          "audio_a": "assets/audio/a_4_r_1_a.mp3",
-          "audio_b": "assets/audio/a_4_r_1_b.mp3"
+          "text": "The new batch of trainees are in the automobile workshop today.",
+          "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "r_4_2",
-          "text_a": "368 — Three hundred and sixty-eight",
-          "text_b": "388 — Three hundred and eighty-eight",
-          "audio_a": "assets/audio/a_4_r_2_a.mp3",
-          "audio_b": "assets/audio/a_4_r_2_b.mp3"
+          "text": "It is five past nine.",
+          "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "r_4_3",
-          "text_a": "870 — Eight hundred and seventy",
-          "text_b": "817 — Eight hundred and seventeen",
-          "audio_a": "assets/audio/a_4_r_3_a.mp3",
-          "audio_b": "assets/audio/a_4_r_3_b.mp3"
+          "text": "The manager has just started the training.",
+          "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "r_4_4",
-          "text_a": "1416 — One thousand four hundred and sixteen",
-          "text_b": "1460 — One thousand four hundred and sixty",
-          "audio_a": "assets/audio/a_4_r_4_a.mp3",
-          "audio_b": "assets/audio/a_4_r_4_b.mp3"
+          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "r_4_5",
-          "text_a": "2030 — Two thousand and thirty",
-          "text_b": "2013 — Two thousand and thirteen",
-          "audio_a": "assets/audio/a_4_r_5_a.mp3",
-          "audio_b": "assets/audio/a_4_r_5_b.mp3"
+          "text": "The mechanics are working hard.",
+          "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "r_4_6",
-          "text_a": "25500 — Twenty-five thousand five hundred",
-          "text_b": "25700 — Twenty-five thousand seven hundred",
-          "audio_a": "assets/audio/a_4_r_6_a.mp3",
-          "audio_b": "assets/audio/a_4_r_6_b.mp3"
-        }
-      ],
-      "activity_4_c": [
-        {
-          "id": "a_4_1",
-          "text_a": "105 — one hundred and five",
-          "text_b": "107 — one hundred and seven",
-          "text_c": "109 — one hundred and nine",
-          "audio_a": "assets/audio/a_4_a_1_a.mp3",
-          "audio_b": "assets/audio/a_4_a_1_b.mp3",
-          "audio_c": "assets/audio/a_4_a_1_c.mp3"
+          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
-          "id": "a_4_2",
-          "text_a": "362 — three hundred and sixty-two",
-          "text_b": "364 — three hundred and sixty-four",
-          "text_c": "368 — three hundred and sixty-eight",
-          "audio_a": "assets/audio/a_4_a_2_a.mp3",
-          "audio_b": "assets/audio/a_4_a_2_b.mp3",
-          "audio_c": "assets/audio/a_4_a_2_c.mp3"
+          "id": "r_4_7",
+          "text": "He is checking the wires carefully.",
+          "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "a_4_3",
-          "text_a": "1,402 — one thousand four hundred and two",
-          "text_b": "1,406 — one thousand four hundred and six",
-          "text_c": "1,409 — one thousand four hundred and nine",
-          "audio_a": "assets/audio/a_4_a_3_a.mp3",
-          "audio_b": "assets/audio/a_4_a_3_b.mp3",
-          "audio_c": "assets/audio/a_4_a_3_c.mp3"
+          "id": "r_4_18",
+          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
-          "id": "a_4_4",
-          "text_a": "4,501 — four thousand five hundred and one",
-          "text_b": "4,601 — four thousand six hundred and one",
-          "text_c": "4,701 — four thousand seven hundred and one",
-          "audio_a": "assets/audio/a_4_a_4_a.mp3",
-          "audio_b": "assets/audio/a_4_a_4_b.mp3",
-          "audio_c": "assets/audio/a_4_a_4_c.mp3"
+          "id": "r_4_9",
+          "text": "Their overalls are dirty and oily.",
+          "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
-          "id": "a_4_5",
-          "text_a": "9,312 — nine thousand three hundred and twelve",
-          "text_b": "9,315 — nine thousand three hundred and fifteen",
-          "text_c": "9,317 — nine thousand three hundred and seventeen",
-          "audio_a": "assets/audio/a_4_a_5_a.mp3",
-          "audio_b": "assets/audio/a_4_a_5_b.mp3",
-          "audio_c": "assets/audio/a_4_a_5_c.mp3"
+          "id": "r_4_10",
+          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
-          "id": "a_4_6",
-          "text_a": "25,001 — twenty-five thousand and one",
-          "text_b": "27,001— twenty-seven thousand and one",
-          "text_c": "29,001 — twenty-nine thousand and one",
-          "audio_a": "assets/audio/a_4_a_6_a.mp3",
-          "audio_b": "assets/audio/a_4_a_6_b.mp3",
-          "audio_c": "assets/audio/a_4_a_6_c.mp3"
-        }
-      ],
-      "activity_4_d": [
-        {
-          "id": "a_4_w_1",
-          "question_audio": "assets/audio/a_4_w_1.mp3",
-          "answer": "108"
+          "id": "r_4_11",
+          "text": "A new trainee is helping him by reading the car manual for details.",
+          "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
-          "id": "a_4_w_2",
-          "question_audio": "assets/audio/a_4_w_2.mp3",
-          "answer": "110"
+          "id": "r_4_12",
+          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "audio": "assets/audio/a_4_n_12.mp3"
         },
         {
-          "id": "a_4_w_3",
-          "question_audio": "assets/audio/a_4_w_3.mp3",
-          "answer": "112"
+          "id": "r_4_13",
+          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "audio": "assets/audio/a_4_n_13.mp3"
         },
         {
-          "id": "a_4_w_4",
-          "question_audio": "assets/audio/a_4_w_4.mp3",
-          "answer": "365"
+          "id": "r_4_14",
+          "text": "Everyone is busy, and the workshop is full of activity.",
+          "audio": "assets/audio/a_4_n_14.mp3"
         },
         {
-          "id": "a_4_w_5",
-          "question_audio": "assets/audio/a_4_w_5.mp3",
-          "answer": "367"
-        },
-        {
-          "id": "a_4_w_6",
-          "question_audio": "assets/audio/a_4_w_6.mp3",
-          "answer": "371"
-        },
-        {
-          "id": "a_4_w_7",
-          "question_audio": "assets/audio/a_4_w_7.mp3",
-          "answer": "1405"
-        },
-        {
-          "id": "a_4_w_8",
-          "question_audio": "assets/audio/a_4_w_8.mp3",
-          "answer": "1409"
-        },
-        {
-          "id": "a_4_w_9",
-          "question_audio": "assets/audio/a_4_w_9.mp3",
-          "answer": "1412"
-        },
-        {
-          "id": "a_4_w_10",
-          "question_audio": "assets/audio/a_4_w_10.mp3",
-          "answer": "4503"
-        },
-        {
-          "id": "a_4_w_11",
-          "question_audio": "assets/audio/a_4_w_11.mp3",
-          "answer": "4603"
-        },
-        {
-          "id": "a_4_w_12",
-          "question_audio": "assets/audio/a_4_w_12.mp3",
-          "answer": "4703"
-        },
-        {
-          "id": "a_4_w_13",
-          "question_audio": "assets/audio/a_4_w_13.mp3",
-          "answer": "9315"
-        },
-        {
-          "id": "a_4_w_14",
-          "question_audio": "assets/audio/a_4_w_14.mp3",
-          "answer": "9318"
-        },
-        {
-          "id": "a_4_w_15",
-          "question_audio": "assets/audio/a_4_w_15.mp3",
-          "answer": "9320"
-        },
-        {
-          "id": "a_4_w_16",
-          "question_audio": "assets/audio/a_4_w_16.mp3",
-          "answer": "25003"
-        },
-        {
-          "id": "a_4_w_17",
-          "question_audio": "assets/audio/a_4_w_17.mp3",
-          "answer": "27003"
-        },
-        {
-          "id": "a_4_w_18",
-          "question_audio": "assets/audio/a_4_w_18.mp3",
-          "answer": "29003"
+          "id": "r_4_15",
+          "text": "Everyone understands why safety instructions are so important.",
+          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ]
     }
