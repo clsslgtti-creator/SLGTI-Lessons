@@ -93,6 +93,68 @@ const createDialogueSegments = (dialogue, card) => {
   ].filter(Boolean);
 };
 
+const createDialogueTables = (tablesData = []) => {
+  if (!Array.isArray(tablesData) || tablesData.length === 0) {
+    return null;
+  }
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'dialogue-table-group';
+
+  tablesData.forEach((tableData) => {
+    if (!Array.isArray(tableData) || tableData.length === 0) {
+      return;
+    }
+
+    const table = document.createElement('table');
+    table.className = 'dialogue-table';
+    const tbody = document.createElement('tbody');
+    table.appendChild(tbody);
+
+    const columnSpans = [];
+
+    tableData.forEach((rowData) => {
+      if (!Array.isArray(rowData) || rowData.length === 0) {
+        return;
+      }
+
+      const row = document.createElement('tr');
+      let hasCell = false;
+
+      rowData.forEach((cellValue, columnIndex) => {
+        if (cellValue === null || cellValue === undefined) {
+          const spanTracker = columnSpans[columnIndex];
+          if (spanTracker && spanTracker.cell) {
+            spanTracker.rowSpan += 1;
+            spanTracker.cell.rowSpan = spanTracker.rowSpan;
+          }
+          return;
+        }
+
+        const cell = document.createElement('td');
+        cell.textContent = `${cellValue}`;
+        columnSpans[columnIndex] = { cell, rowSpan: 1 };
+        row.appendChild(cell);
+        hasCell = true;
+      });
+
+      if (hasCell) {
+        tbody.appendChild(row);
+      }
+    });
+
+    if (tbody.children.length > 0) {
+      wrapper.appendChild(table);
+    }
+  });
+
+  if (!wrapper.children.length) {
+    return null;
+  }
+
+  return wrapper;
+};
+
 const clearSegmentHighlights = (segments = []) => {
   segments.forEach(({ element }) => {
     element?.classList.remove('is-playing');
@@ -125,7 +187,13 @@ const maybeInsertFocus = (slide, focusText, includeFocus) => {
 
 const buildModelDialogueSlide = (
   exampleDialogues,
-  { activityLabel = 'Activity', activityNumber = null, activityFocus = '', includeFocus = false } = {},
+  {
+    activityLabel = 'Activity',
+    activityNumber = null,
+    activityFocus = '',
+    includeFocus = false,
+    tables = [],
+  } = {},
 ) => {
   const slide = document.createElement('section');
   slide.className = 'slide slide--model';
@@ -145,6 +213,11 @@ const buildModelDialogueSlide = (
   status.className = 'playback-status';
   controls.append(playBtn, status);
   slide.appendChild(controls);
+
+  const tablesContainer = createDialogueTables(tables);
+  if (tablesContainer) {
+    slide.appendChild(tablesContainer);
+  }
 
   const content = document.createElement('div');
   content.className = 'dialogue-grid dialogue-grid--model';
@@ -1513,9 +1586,10 @@ export const buildSbsOneSlides = (activityData = {}, context = {}) => {
   const exampleDialogues = Array.isArray(activityData.example_dialogues)
     ? activityData.example_dialogues
     : [];
+  const tables = Array.isArray(activityData.tables) ? activityData.tables : [];
 
   return [
-    buildModelDialogueSlide(exampleDialogues, modelContext),
+    buildModelDialogueSlide(exampleDialogues, { ...modelContext, tables }),
     buildPreListeningSlide(dialogues, preListeningContext),
     buildListeningSlide(dialogues, listeningContext),
     buildListenAndRepeatSlide(dialogues, listenRepeatContext),
