@@ -209,26 +209,19 @@
     "examples": [
       {
         "id": "e_1",
-        "sentence": "He is at the site.",
+        "sentence": "The correct tyre pressure is 32 psi.\nThis tyre has 38 psi.\nThe pressure is ……………….",
         "audio": "assets/audio/a_3_ex_1.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Singular"
-      },
-      {
-        "id": "e_2",
-        "sentence": "Her parents are technicians.",
-        "audio": "assets/audio/a_3_ex_2.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Plural"
+        "options": ["Too high", "Correct", "Too low"],
+        "answer": "Too high"
       }
     ],
     "content": [
       {
         "id": "g_1",
-        "sentence": "Meena is in Kandy today.",
+        "sentence": "The normal range of the car engine temperature is 85–95 degrees Celsius.\nThe temperature of this engine is 100 degrees Celsius.\nThe temperature of this engine is …………….",
         "audio": "assets/audio/a_3_g_1.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Singular"
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
       },
       {
         "id": "g_2",
