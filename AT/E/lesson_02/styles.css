@@ -540,6 +540,33 @@ body {
   padding-top: 0.5rem;
 }
 
+.dialogue-grid--single-column {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.listening-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.5vw, 0.85rem);
+  padding: clamp(0.5rem, 1.5vw, 0.75rem) 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.listening-paragraph__line {
+  margin: 0;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  line-height: 1.6;
+  color: var(--color-text);
+  transition: color var(--transition-fast), font-weight var(--transition-fast);
+}
+
+.listening-paragraph__line.is-playing {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 .dialogue-table-group {
   display: grid;
 

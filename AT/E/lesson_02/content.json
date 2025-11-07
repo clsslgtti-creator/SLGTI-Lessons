@@ -309,6 +309,10 @@
       "activity_c": {
         "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
       }
     },
     "content": {
@@ -441,6 +445,83 @@
         }
       ],
       "activity_c": [
+        {
+          "id": "r_4_1",
+          "text": "The new batch of trainees are in the automobile workshop today.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "It is five past nine.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "The manager has just started the training.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "The mechanics are working hard.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "He is checking the wires carefully.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_18",
+          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "Their overalls are dirty and oily.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "r_4_11",
+          "text": "A new trainee is helping him by reading the car manual for details.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "r_4_12",
+          "text": "The instructors are watching the students closely and giving advice from time to time.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        },
+        {
+          "id": "r_4_13",
+          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "audio": "assets/audio/a_4_n_13.mp3"
+        },
+        {
+          "id": "r_4_14",
+          "text": "Everyone is busy, and the workshop is full of activity.",
+          "audio": "assets/audio/a_4_n_14.mp3"
+        },
+        {
+          "id": "r_4_15",
+          "text": "Everyone understands why safety instructions are so important.",
+          "audio": "assets/audio/a_4_n_15.mp3"
+        }
+      ],
+      "activity_d": [
         {
           "id": "r_4_1",
           "text": "The new batch of trainees are in the automobile workshop today.",

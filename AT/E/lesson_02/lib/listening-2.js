@@ -1,4 +1,8 @@
-import { audioManager, computeSegmentGapMs } from "./audio-manager.js";
+import {
+  audioManager,
+  computeSegmentGapMs,
+  getBetweenItemGapMs,
+} from "./audio-manager.js";
 import { showCompletionModal } from "./completion-modal.js";
 
 const smoothScrollIntoView = (element) => {
@@ -491,7 +495,14 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
 const createSequencedTextSlide = (
   items = [],
   context = {},
-  { mode = "listen", repeatPauseMs = 1500, autoDelayMs = 5000 } = {}
+  {
+    mode = "listen",
+    repeatPauseMs = 1500,
+    autoDelayMs = 5000,
+    layout = "grid",
+    showLineNumbers = true,
+    presentation = "cards",
+  } = {}
 ) => {
   const {
     activityLabel = "Activity",
@@ -503,6 +514,7 @@ const createSequencedTextSlide = (
   } = context;
 
   const isRepeatMode = mode === "listen-repeat";
+  const isReadMode = mode === "read";
   const slide = document.createElement("section");
   slide.className = isRepeatMode
     ? "slide slide--listen-repeat listening-slide listening-slide--repeat"
@@ -516,6 +528,8 @@ const createSequencedTextSlide = (
   if (instructionEl) {
     instructionEl.textContent = isRepeatMode
       ? "Listen and repeat each sentence."
+      : isReadMode
+      ? "Read along with the audio."
       : "Listen to each sentence.";
   }
 
@@ -530,17 +544,39 @@ const createSequencedTextSlide = (
   slide.appendChild(controls);
 
   const list = document.createElement("div");
-  list.className = "dialogue-grid listening-read-grid";
+  const isParagraphLayout = presentation === "paragraph";
+  if (isParagraphLayout) {
+    list.className = "listening-paragraph";
+  } else {
+    list.className = "dialogue-grid listening-read-grid";
+    if (layout === "single-column") {
+      list.classList.add("dialogue-grid--single-column");
+    }
+  }
   slide.appendChild(list);
 
   const entries = items.map((entry, index) => {
+    if (isParagraphLayout) {
+      const paragraph = document.createElement("p");
+      paragraph.className = "listening-paragraph__line";
+      paragraph.textContent = entry.text;
+      list.appendChild(paragraph);
+      return {
+        entry,
+        card: null,
+        line: paragraph,
+      };
+    }
+
     const card = document.createElement("article");
     card.className = "dialogue-card dialogue-card--reading listening-read-card";
 
-    const title = document.createElement("h3");
-    title.className = "dialogue-card__title";
-    title.textContent = `Line ${index + 1}`;
-    card.appendChild(title);
+    if (showLineNumbers) {
+      const title = document.createElement("h3");
+      title.className = "dialogue-card__title";
+      title.textContent = `Line ${index + 1}`;
+      card.appendChild(title);
+    }
 
     const wrapper = document.createElement("div");
     wrapper.className = "dialogue-card__texts";
@@ -641,10 +677,10 @@ const createSequencedTextSlide = (
       for (let index = fromIndex; index < entries.length; index += 1) {
         playbackState.resumeIndex = index;
         const item = entries[index];
-        item.card.classList.add("is-active");
+        item.card?.classList.add("is-active");
         item.line.classList.add("is-playing");
         status.textContent = "Listening...";
-        smoothScrollIntoView(item.card);
+        smoothScrollIntoView(item.card ?? item.line);
 
         try {
           await audioManager.play(item.entry.audio, { signal });
@@ -664,10 +700,16 @@ const createSequencedTextSlide = (
         let gapMs = 0;
         try {
           const duration = await audioManager.getDuration(item.entry.audio);
+          const timingMode = isReadMode
+            ? "read"
+            : isRepeatMode
+            ? "listen-repeat"
+            : "listen";
+          const timingOptions = isRepeatMode ? { repeatPauseMs } : undefined;
           gapMs = computeSegmentGapMs(
-            isRepeatMode ? "listen-repeat" : "listen",
+            timingMode,
             duration,
-            isRepeatMode ? { repeatPauseMs } : undefined
+            timingOptions
           );
         } catch (error) {
           console.error(error);
@@ -677,19 +719,34 @@ const createSequencedTextSlide = (
           break;
         }
 
-        if (isRepeatMode && gapMs > 0) {
-          status.textContent = "Your turn...";
-          await waitMs(gapMs, { signal });
-        } else if (!isRepeatMode && gapMs > 0 && index < entries.length - 1) {
-          status.textContent = "Next up...";
-          await waitMs(gapMs, { signal });
+        if (gapMs > 0) {
+          if (isRepeatMode) {
+            status.textContent = "Your turn...";
+            await waitMs(gapMs, { signal });
+          } else if (isReadMode) {
+            status.textContent = "Read along...";
+            await waitMs(gapMs, { signal });
+            if (!signal.aborted) {
+              status.textContent = "Listening...";
+            }
+          } else if (index < entries.length - 1) {
+            status.textContent = "Next up...";
+            await waitMs(gapMs, { signal });
+          }
         }
 
-        item.card.classList.remove("is-active");
+        item.card?.classList.remove("is-active");
         item.line.classList.remove("is-playing");
 
         if (signal.aborted) {
           break;
+        }
+
+        if (isReadMode && index < entries.length - 1) {
+          const betweenItemsGap = getBetweenItemGapMs("read");
+          if (betweenItemsGap > 0) {
+            await waitMs(betweenItemsGap, { signal });
+          }
         }
       }
 
@@ -801,6 +858,7 @@ export const buildListeningTwoSlides = (activityData = {}, context = {}) => {
   );
   const listenItems = normalizeLineItems(activityData?.content?.activity_b);
   const repeatItems = normalizeLineItems(activityData?.content?.activity_c);
+  const readAlongItems = normalizeLineItems(activityData?.content?.activity_d);
 
   const baseContext = {
     activityLabel,
@@ -818,12 +876,24 @@ export const buildListeningTwoSlides = (activityData = {}, context = {}) => {
     createSequencedTextSlide(
       listenItems,
       createSubActivityContext(baseContext, "b"),
-      { mode: "listen", autoDelayMs: 5000, repeatPauseMs }
+      {
+        mode: "listen",
+        autoDelayMs: 5000,
+        repeatPauseMs,
+        layout: "single-column",
+        showLineNumbers: false,
+        presentation: "paragraph",
+      }
     ),
     createSequencedTextSlide(
       repeatItems,
       createSubActivityContext(baseContext, "c"),
       { mode: "listen-repeat", autoDelayMs: 5000, repeatPauseMs }
+    ),
+    createSequencedTextSlide(
+      readAlongItems,
+      createSubActivityContext(baseContext, "d"),
+      { mode: "read", autoDelayMs: 5000, repeatPauseMs }
     ),
   ];
 
