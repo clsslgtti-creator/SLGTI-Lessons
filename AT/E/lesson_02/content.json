@@ -41,25 +41,25 @@
       },
       {
         "id": "p_2",
-        "word_text": "p'i'ston",
+        "word_text": "s'ea't",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Check the p'i'ston rings.",
+        "sentence_text": "Adjust the driver’s s'ea't before you start.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "gearsh'i'ft",
+        "word_text": "sp'ee'd",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Move the gearsh'i'ft carefully.",
+        "sentence_text": "This sp'ee'd is far too high.  ",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.jpeg"
       },
       {
         "id": "p_4",
-        "word_text": "cl'i'p",
+        "word_text": "d'ie'sel",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Use a cl'i'p for the wire.",
+        "sentence_text": "The d'ie'sel engine is in the garage.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
@@ -118,24 +118,24 @@
       {
         "id": "e_1",
         "img": "assets/img/a_2_ex_1.jpeg",
-        "text_a": "Where is the steel ruler?",
-        "text_b": "It is on the shelf.",
+        "text_a": "Where is the textbook?",
+        "text_b": " It is in the drawer.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
         "audio_b": "assets/audio/a_2_ex_1_b.mp3"
       },
       {
         "id": "e_2",
         "img": "assets/img/a_2_ex_2.jpeg",
-        "text_a": "Where is the workshop key?",
-        "text_b": "It is on the wall.",
+        "text_a": "Where is the pen?",
+        "text_b": " It is in the pencil case.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
         "audio_b": "assets/audio/a_2_ex_2_b.mp3"
       },
       {
         "id": "e_3",
         "img": "assets/img/a_2_ex_3.jpeg",
-        "text_a": "Where are the plastic files?",
-        "text_b": "They are on the desk.",
+        "text_a": "Where is the manager?",
+        "text_b": "He is in the office.",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
         "audio_b": "assets/audio/a_2_ex_3_b.mp3"
       }
@@ -144,56 +144,56 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Where is the car?",
-        "text_b": "It is on the jack stand.",
+        "text_a": "Where is the fuse box?",
+        "text_b": "It is in the vehicle servicing workshop. ",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "jack stand"
+        "keyword": "vehicle servicing workshop"
       },
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.jpeg",
-        "text_a": "Where is the engine?",
-        "text_b": "It is on the brown pallet.",
+        "text_a": "Where is the Maruti van ignition key?",
+        "text_b": " It is in the black cotton bag.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "brown pallet"
+        "keyword": "black cotton bag"
       },
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Where is the car manual?",
-        "text_b": "It is on the wooden desk.",
+        "text_a": "Where are diagnostic scanners?",
+        "text_b": "They are in the manager’s office.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "wooden desk"
+        "keyword": "manager’s office."
       },
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": "Where are the tools?",
-        "text_b": "They are on the silver chest.",
+        "text_a": "Where is the new technical instructor?",
+        "text_b": "She is in the driving simulator room. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "silver chest"
+        "keyword": "driving simulator room"
       },
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.jpeg",
-        "text_a": "Where are the drills?",
-        "text_b": "They are on the top shelf.",
+        "text_a": " Where is the speedometer?",
+        "text_b": "It is in the bottom drawer.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "top shelf"
+        "keyword": "bottom drawer."
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.jpeg",
-        "text_a": "Where are the battery chargers?",
-        "text_b": "They are on the wall-mounted cabinet.",
+        "text_a": "Where is the trainee mechanic?",
+        "text_b": "He is in the inspection bay.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "wall-mounted cabinet"
+        "keyword": "inspection bay"
       }
     ]
   },
@@ -225,66 +225,66 @@
       },
       {
         "id": "g_2",
-        "sentence": "Are they at home today?",
+        "sentence": "The correct weight of the car battery is 12 kilograms.\n The weight of this battery is 12.5 kilograms.\n The weight of this battery is ……..",
         "audio": "assets/audio/a_3_g_2.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Plural"
+        "options": ["Too heavy", "Correct", "Too light"],
+        "answer": "Too heavy"
       },
       {
         "id": "g_3",
-        "sentence": "My parents are at the head office.",
+        "sentence": "The acceptable tyre pressure is 30–32 PSI. \n The tyre pressure in this wheel is 28 PSI.\n The tyre pressure in this wheel is …………………",
         "audio": "assets/audio/a_3_g_3.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Plural"
+       "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too low"
       },
       {
         "id": "g_4",
-        "sentence": "My teacher and I are at the factory.",
+        "sentence": "The standard depth of tyre tread is 3–4 millimeters.\n The depth of this tyre tread is 2 millimeters.\n The depth of this tyre tread is …………..",
         "audio": "assets/audio/a_3_g_4.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Plural"
+        "options": ["Too Shallow", "Correct", "Too deep"],
+        "answer": "Too Shallow"
       },
       {
         "id": "g_5",
-        "sentence": "Some men are still in the storeroom.",
+        "sentence": "The correct length of a fan belt is 90–95 centimeters.\n The length of this fan belt is 100 centimeters.\n The length of this fan belt is …………",
         "audio": "assets/audio/a_3_g_5.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Plural"
+        "options": ["Too short", "Correct", "Too long"],
+        "answer": "Too long"
       },
       {
         "id": "g_6",
-        "sentence": "It is on the kitchen counter.",
+        "sentence": "The standard width of a brake pad is 8–9 centimeters.\n The width of this brake pad is 7 centimeters.\n The width of this brake pad is ……….",
         "audio": "assets/audio/a_3_g_6.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Singular"
+        "options": ["Too narrow", "Correct", "Too wide"],
+        "answer": "Too narrow"
       },
       {
         "id": "g_7",
-        "sentence": "The clients are happy with your product.",
+        "sentence": "The correct oil content of the gearbox is 1.5–1.8 liters.\n The oil content of this gearbox is 2 liters.\n The oil content of this gearbox is ……………",
         "audio": "assets/audio/a_3_g_7.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Plural"
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
       },
       {
         "id": "g_8",
-        "sentence": "Many sick trainees are absent today.",
+        "sentence": "The safe tyre pressure for a van is 34–36 PSI.\n The tyre pressure of this van is 36 PSI. \n The tyre pressure of this van is  …………..",
         "audio": "assets/audio/a_3_g_8.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Plural"
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Correct"
       },
       {
         "id": "g_9",
-        "sentence": "Is the weather very nice today?",
+        "sentence": "he recommended alignment angle is 0–2 degrees.\n The alignment angle of this wheel is 3 degrees.\n The alignment angle of this wheel is……….",
         "audio": "assets/audio/a_3_g_9.mp3",
-        "options": ["Singular", "Plural"],
+       "options": ["Too low", "Correct", "Too high"],
         "answer": "Singular"
       },
       {
         "id": "g_10",
-        "sentence": "Are all the knives in the steel cabinet?",
+        "sentence": "The correct charging voltage of a car alternator is 13–14.5 volts.\n The charging voltage of this car alternator is 12 volts.\n The charging voltage of this car alternator is……….",
         "audio": "assets/audio/a_3_g_10.mp3",
-        "options": ["Singular", "Plural"],
-        "answer": "Plural"
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too low"
       }
     ]
   },
@@ -314,48 +314,48 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What is Mr. Silva doing in the workshop?",
-            "answer": "He is repairing a faulty alternator.",
+            "question": "What is the temperature of the car engine?",
+            "answer": "90 degrees Celsius",
             "options": [
-              "He is repairing a faulty alternator.",
-              "He is cleaning greasy tools.",
-              "He is installing a new battery."
+              "70 degrees Celsius",
+              "90 degrees Celsius",
+              "100 degrees Celsius"
             ]
           },
           {
             "id": "l_4_2",
-            "question": "Where are the trainees cleaning the greasy tools?",
-            "answer": "Near the workbench.",
+            "question": "What is the correct temperature range for the diagnostic test?",
+            "answer": "85–95 degrees Celsius",
             "options": [
-              "Near the diagnostic machine.",
-              "Near the workbench.",
-              "Near the instructor’s desk."
+              "65–75 degrees Celsius",
+              "85–95 degrees Celsius",
+              "100–110 degrees Celsius"
             ]
           },
           {
             "id": "l_4_3",
-            "question": "Who is installing a new battery?",
-            "answer": "Amal.",
-            "options": ["Nimal.", "Amal.", "Ravi."]
+            "question": "What should be the weight of the battery?",
+            "answer": "12 kilograms",
+            "options": ["11.5 kilograms", "12 kilograms", "13.5 kilograms"]
           },
           {
             "id": "l_4_4",
-            "question": "What are the instructors doing?",
-            "answer": "They are watching and giving advice.",
+            "question": "What is the correct tyre pressure reading?",
+            "answer": "32 PSI",
             "options": [
-              "They are calibrating meters.",
-              "They are repairing the alternator.",
-              "They are watching and giving advice."
+              "28 PSI",
+              "32 PSI",
+              "36 PSI"
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What are Nimal and Ravi doing in the corner of the workshop?",
+            "question": ". Where is the record book kept?",
             "answer": "They are calibrating meters.",
             "options": [
-              "They are calibrating meters.",
-              "They are installing a battery.",
-              "They are cleaning the tools."
+              "In the classroom",
+              "In the garage office",
+              "In the service office"
             ]
           }
         ]
@@ -363,232 +363,157 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "I am checking the temperature of the car engine.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "It is five past nine.",
+          "text": "I am checking the length of the fan belt",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The manager has just started the training.",
+          "text": "I am checking the depth of the tyre tread..",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "I am checking the width of the brake pad.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "I am checking the oil content of the gearbox.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "The fan belt is about 95 centimeters. The fan belt is about 5 centimeters too long.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "n_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "id": "n_4_8",
+          "text": "The tyre tread is about 4 millimeters.The tyre tread is about 1 millimeter too shallow.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
           "audio": "assets/audio/a_4_n_10.mp3"
-        },
-        {
-          "id": "n_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
-          "audio": "assets/audio/a_4_n_11.mp3"
-        },
-        {
-          "id": "n_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
-          "audio": "assets/audio/a_4_n_12.mp3"
-        },
-        {
-          "id": "n_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
-          "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "n_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "n_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "r_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "I am checking the temperature of the car engine.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "r_4_2",
-          "text": "It is five past nine.",
+          "text": "I am checking the length of the fan belt",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "r_4_3",
-          "text": "The manager has just started the training.",
+          "text": "I am checking the depth of the tyre tread.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "r_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "I am checking the width of the brake pad.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "r_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "I am checking the oil content of the gearbox.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "r_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "r_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "The fan belt is about 95 centimeters. The fan belt is about 5 centimeters too long.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "r_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "id": "r_4_8",
+          "text": "The tyre tread is about 4 millimeters.The tyre tread is about 1 millimeter too shallow.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "r_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "r_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
           "audio": "assets/audio/a_4_n_10.mp3"
-        },
-        {
-          "id": "r_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
-          "audio": "assets/audio/a_4_n_11.mp3"
-        },
-        {
-          "id": "r_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
-          "audio": "assets/audio/a_4_n_12.mp3"
-        },
-        {
-          "id": "r_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
-          "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "r_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "r_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ],
       "activity_d": [
         {
           "id": "r_4_1",
-          "text": "The new batch of trainees are in the automobile workshop today.",
+          "text": "I am checking the temperature of the car engine.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "r_4_2",
-          "text": "It is five past nine.",
+          "text": "I am checking the length of the fan belt",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "r_4_3",
-          "text": "The manager has just started the training.",
+          "text": "I am checking the depth of the tyre tread.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "r_4_4",
-          "text": "He  is instructing the trainees about safety equipment and precautions using a multimedia projector.",
+          "text": "I am checking the width of the brake pad.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "r_4_5",
-          "text": "The mechanics are working hard.",
+          "text": "I am checking the oil content of the gearbox.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "r_4_6",
-          "text": "Mr. Silva, the chief mechanic,  is repairing a faulty alternator in one of the corners of the workshop.",
+          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "r_4_7",
-          "text": "He is checking the wires carefully.",
+          "text": "The fan belt is about 95 centimeters. The fan belt is about 5 centimeters too long.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "r_4_18",
-          "text": "Two trainees are cleaning the greasy tools near the workbench.",
+          "id": "r_4_8",
+          "text": "The tyre tread is about 4 millimeters.The tyre tread is about 1 millimeter too shallow.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "r_4_9",
-          "text": "Their overalls are dirty and oily.",
+          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "r_4_10",
-          "text": "Opposite them, Amal is installing a new battery in a small brown car.",
+          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
           "audio": "assets/audio/a_4_n_10.mp3"
-        },
-        {
-          "id": "r_4_11",
-          "text": "A new trainee is helping him by reading the car manual for details.",
-          "audio": "assets/audio/a_4_n_11.mp3"
-        },
-        {
-          "id": "r_4_12",
-          "text": "The instructors are watching the students closely and giving advice from time to time.",
-          "audio": "assets/audio/a_4_n_12.mp3"
-        },
-        {
-          "id": "r_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
-          "audio": "assets/audio/a_4_n_13.mp3"
-        },
-        {
-          "id": "r_4_14",
-          "text": "Everyone is busy, and the workshop is full of activity.",
-          "audio": "assets/audio/a_4_n_14.mp3"
-        },
-        {
-          "id": "r_4_15",
-          "text": "Everyone understands why safety instructions are so important.",
-          "audio": "assets/audio/a_4_n_15.mp3"
         }
       ]
     }
