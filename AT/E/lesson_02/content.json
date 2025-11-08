@@ -166,7 +166,7 @@
         "text_b": "They are in the manager’s office.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "manager’s office."
+        "keyword": "manager’s office"
       },
       {
         "id": "d_4",
@@ -184,7 +184,7 @@
         "text_b": "It is in the bottom drawer.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "bottom drawer."
+        "keyword": "bottom drawer"
       },
       {
         "id": "d_6",
@@ -351,7 +351,7 @@
           {
             "id": "l_4_5",
             "question": ". Where is the record book kept?",
-            "answer": "They are calibrating meters.",
+            "answer": "In the service office",
             "options": [
               "In the classroom",
               "In the garage office",

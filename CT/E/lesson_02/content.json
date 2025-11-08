@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "scr'ee'n",
+        "word_text": "b'ea'm",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": " The computer scr'ee'n is too wide.",
+        "sentence_text": "The b'ea'm is strong enough for the roof.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.jpeg"
       },
       {
         "id": "p_2",
-        "word_text": "k'ey'board",
+        "word_text": "st'ee'l",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Type this word on the k'ey'board.",
+        "sentence_text": "There are many st'ee'l rods in the yard.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "'e'mail",
+        "word_text": "c'ei'ling",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Send me an 'e'mail today.  ",
+        "sentence_text": "The brown c'ei'ling is in the new classroom.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.jpeg"
       },
       {
         "id": "p_4",
-        "word_text": "del'e'te",
+        "word_text": "k'ey'",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Del'e'ting these files is risky. ",
+        "sentence_text": "The mason has the brass k'ey' for the store.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
