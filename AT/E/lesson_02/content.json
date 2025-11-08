@@ -277,7 +277,7 @@
         "sentence": "he recommended alignment angle is 0–2 degrees.\n The alignment angle of this wheel is 3 degrees.\n The alignment angle of this wheel is……….",
         "audio": "assets/audio/a_3_g_9.mp3",
        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Singular"
+        "answer": "Too high"
       },
       {
         "id": "g_10",

@@ -7,76 +7,74 @@
   },
   "activity_1": {
     "type": "PRONUNCIATION",
-    "focus": "Long /iː/",
-    "image" : "assets/img/a_1_p.jpeg",
+    "focus": "Short /ɪ/",
     "instructions": {
       "activity_1_a": {
-        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_1_b": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
       "activity_1_c": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
-        "audio": "assets/audio/a_2_i_d.mp3"
-      },
-      "activity_1_d": {
-        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_1_e": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
-      "activity_1_f": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       }
     },
     "content": [
       {
-        "id" : "p_1",
-        "word_text": "b'ea'm",
+        "id": "p_1",
+        "word_text": "scr'ee'n",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The b'ea'm is strong enough for the roof.",
-        "sentence_audio": "assets/audio/a_1_p_1_b.mp3"
+        "sentence_text": " The computer scr'ee'n is too wide.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.jpeg"
       },
       {
-        "id" : "p_2",
-        "word_text": "st'ee'l",
+        "id": "p_2",
+        "word_text": "k'ey'board",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Workers are cutting st'ee'l in the yard.",
-        "sentence_audio": "assets/audio/a_1_p_2_b.mp3"
+        "sentence_text": "Type this word on the k'ey'board.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
       },
       {
-        "id" : "p_3",
-        "word_text": "c'ei'ling",
+        "id": "p_3",
+        "word_text": "'e'mail",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "The c'ei'ling is in the new classroom.",
-        "sentence_audio": "assets/audio/a_1_p_3_b.mp3"
+        "sentence_text": "Send me an 'e'mail today.  ",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.jpeg"
       },
       {
-        "id" : "p_4",
-        "word_text": "k'ey'",
+        "id": "p_4",
+        "word_text": "del'e'te",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "The mason has the k'ey' for the store.",
-        "sentence_audio": "assets/audio/a_1_p_4_b.mp3"
+        "sentence_text": "Del'e'ting these files is risky. ",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
   "activity_2": {
-    "type": "SBS",
-    "focus": "Where /verb ‘to be’/ preposition ‘in’",
-    "reference": "SBS 2 Page 11",
+    "type": "SBS-1",
+    "focus": "Verb ‘to be’ and preposition ‘on’",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogue.\nமாதிரி உரையாடலை கேளுங்கள்.\nආදර්ශ සංවාදය අසා බලන්න.",
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {
-        "text": "Match the words with the pictures.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.\nපදයන් පින්තූර සමග ගැලපන්න.",
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_2_i_a.mp3"
       },
       "activity_2_b": {
@@ -84,105 +82,440 @@
         "audio": "assets/audio/a_2_i_b.mp3"
       },
       "activity_2_c": {
-        "text": "Listen and repeat.\nகேட்டு மீண்டும் சொல்லுங்கள்.\nසවන් දී වාක්‍ය නැවත කියන්න.",
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
       },
       "activity_2_d": {
-        "text": "Read along.\nஒரே நேரத்தில் வாசியுங்கள்.\nපිටපත සමඟ කියවන්න.",
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
         "audio": "assets/audio/a_2_i_d.mp3"
       },
       "activity_2_e": {
-        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.",
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
         "audio": "assets/audio/a_2_i_e.mp3"
       }
     },
+    "tables": [
+      [
+        ["Where", "am", "I?"],
+        [null, "is", "he?"],
+        [null, null, "she?"],
+        [null, null, "it?"],
+        [null, "are", "we?"],
+        [null, null, "you?"],
+        [null, null, "they?"]
+      ],
+      [
+        ["I am", "I'm", "in the kitchen."],
+        ["He is", "He's", null],
+        ["She is", "She's", null],
+        ["It is", "It's", null],
+        ["We are", "We're", null],
+        ["You are", "You're", null],
+        ["They are", "They're", null]
+      ]
+    ],
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/a_2_ex_1.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "Where is the textbook?",
+        "text_b": " It is in the drawer.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
-        "audio_b": ""
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_2.jpeg",
+        "text_a": "Where is the pen?",
+        "text_b": " It is in the pencil case.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
-        "audio_b": ""
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_3.jpg",
-        "text_a": "",
-        "text_b": "",
+        "img": "assets/img/a_2_ex_3.jpeg",
+        "text_a": "Where is the manager?",
+        "text_b": "He is in the office.",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
-        "audio_b": ""
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
       }
     ],
     "dialogues": [
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Where are you?",
-        "text_b": "I am in the bathroom.",
+        "text_a": "Where is the site supervisor now?",
+        "text_b": "He is in the site office. ",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Bathroom"
+        "keyword": "site office"
       },
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.jpeg",
-        "text_a": "Where are Mr and Mrs Smith?",
-        "text_b": "They are in the dining room.",
+        "text_a": "Where are the cement bags?",
+        "text_b": " They are on the top rack.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "keyword": "Dining Room"
+        "keyword": "top rack"
       },
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Where is the power drill?",
-        "text_b": "It is in the tool cabinet.",
+        "text_a": "Where are the trainee masons?",
+        "text_b": "They are in the brick preparation yard.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "keyword": "Tool Cabinet"
+        "keyword": "brick preparation yard."
       },
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": "Where are the steel ladders?",
-        "text_b": "They are in the storeroom.",
+        "text_a": "Where is the large concrete mixer?",
+        "text_b": "It is in the fenced area. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "keyword": "Storeroom"
+        "keyword": "fenced area"
       },
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.jpeg",
-        "text_a": "Where is the gravel pile?",
-        "text_b": "It is in the open yard.",
+        "text_a": "Where are the construction helmets?",
+        "text_b": "They are in the locker room.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "keyword": "Open Yard"
+        "keyword": "locker room."
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.jpeg",
-        "text_a": "Where are the tile boxes?",
-        "text_b": "They are in the corner.",
+        "text_a": "Where is the bamboo scaffolding?",
+        "text_b": " It is in the warehouse",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "keyword": "Corner"
+        "keyword": "warehouse"
       }
     ]
   },
   "activity_3": {
-    "type": "GRAMMAR"
+    "type": "GAME-1",
+    "bg_image": "assets/img/game/bg-11.jpg",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
+        "audio": "assets/audio/a_3_i_a.mp3"
+      }
+    },
+    "examples": [
+      {
+        "id": "e_1",
+        "sentence": " The correct thickness of a concrete slab is 15 cm.\n This slab is 12 cm thick.\n The thickness is ………………..",
+        "audio": "assets/audio/a_3_ex_1.mp3",
+        "options": ["Too thick", "Correct", "Too thin"],
+        "answer": "Too thin"
+      }
+    ],
+    "content": [
+      {
+        "id": "g_1",
+        "sentence": "The correct height of bamboo scaffolding is 6 meters.\n This scaffolding is 7.5 meters.\nThis scaffolding is …………",
+        "audio": "assets/audio/a_3_g_1.mp3",
+        "options": ["Too high", "Correct", "Too low"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_2",
+        "sentence": " The correct weight of a cement bag is 50 kilograms.\nThis cement bag is 55 kilograms.\nThis cement bag is …………………..",
+        "audio": "assets/audio/a_3_g_2.mp3",
+        "options": ["Too heavy", "Correct", "Too light"],
+        "answer": "Too heavy"
+      },
+      {
+        "id": "g_3",
+        "sentence": "The acceptable sand–cement ratio is 1:3.\n The ratio used here is 1:5.\n This ratio is ……………",
+        "audio": "assets/audio/a_3_g_3.mp3",
+       "options": ["Too weak", "Correct", "Too strong"],
+        "answer": "Too weak"
+      },
+      {
+        "id": "g_4",
+        "sentence": "The correct depth of the foundation is 1.5 meters.\n This  foundation is 1 meter.\n This foundation is …………………………",
+        "audio": "assets/audio/a_3_g_4.mp3",
+        "options": ["Too Shallow", "Correct", "Too deep"],
+        "answer": "Too Shallow"
+      },
+      {
+        "id": "g_5",
+        "sentence": "The standard curing time for concrete is 28 days.\nThe curing time here is 20 days.\nThis curing time is………………………",
+        "audio": "assets/audio/a_3_g_5.mp3",
+        "options": ["Too short", "Correct", "Too long"],
+        "answer": "Too short"
+      },
+      {
+        "id": "g_6",
+        "sentence": " The safe load for scaffolding is 200 kilograms.\n This load is 250 kilograms.\nThis load is……………………………………….",
+        "audio": "assets/audio/a_3_g_6.mp3",
+        "options": ["Too heavy", "Correct", "Too light"],
+        "answer": "Too heavy"
+      },
+      {
+        "id": "g_7",
+        "sentence": "TThe recommended thickness of a brick wall is 23 centimeters.\nThis wall is 18 centimeters.\nThis wall is ……………………………………",
+        "audio": "assets/audio/a_3_g_7.mp3",
+        "options": ["Too thin", "Correct", "Too thick"],
+        "answer": "Too thin"
+      },
+      {
+        "id": "g_8",
+        "sentence": "The correct length of steel reinforcement is 10 meters.\nThis steel bar is 11 meters.\nThis steel bar is ………………………………",
+        "audio": "assets/audio/a_3_g_8.mp3",
+        "options": ["Too long", "Correct", "Too short"],
+        "answer": "long"
+      },
+      {
+        "id": "g_9",
+        "sentence": "The acceptable slump for concrete is 75–100 millimeters. \n This slump is 120 millimeters.\n This slump is ……………………………….",
+        "audio": "assets/audio/a_3_g_9.mp3",
+       "options": ["Too high", "Correct", "Too low"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_10",
+        "sentence": "The standard width of a doorway is 90 centimeters.\n This doorway is 80 centimeters.\n This doorway is ……………………",
+        "audio": "assets/audio/a_3_g_10.mp3",
+        "options": ["Too narrow", "Correct", "Too wide"],
+        "answer": "Too wide"
+      }
+    ]
   },
   "activity_4": {
-    "type": "GAME"
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What is the height of the scaffolding?",
+            "answer": " 6 meters",
+            "options": [
+              "5 meters",
+              "6 meters",
+              "7 meters"
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": "What is the correct height range?",
+            "answer": "5.5–6 meters",
+            "options": [
+              "4–5 meters",
+              "5.5–6 meters",
+              "6.5–7 meters"
+            ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "What is the weight of the cement bag?",
+            "answer": " 55 kilograms",
+            "options": ["50 kilograms", " 55 kilograms", "60 kilograms"]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What is the thickness of the wall?",
+            "answer": "23 centimeters",
+            "options": [
+              "18 centimeters",
+              "23 centimeters ",
+              "30 centimeters"
+            ]
+          },
+          {
+            "id": "l_4_5",
+            "question": "Where is the log book kept?",
+            "answer": "In the site office",
+            "options": [
+              "In the classroom",
+              " In the store",
+              "In the site office"
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "I am checking the height of the bamboo scaffolding.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "I am checking the weight of the cement bag.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "I am checking the thickness of the brick wall.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "I am checking the length of the steel bar.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "I am checking the width of the doorway.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The bamboo scaffolding is 4 meters high. The scaffolding is 50 cm too high. ",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The cement bag is 55 kilograms. The cement bag is 5 kilograms too heavy.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The steel bar is 11 meters. The steel bar is 1 meter too long.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The doorway is 80 centimeters. The doorway is 10 centimeters too narrow.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The wall is 18 centimeters. The wall is 5 centimeters too thin",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "r_4_1",
+          "text": "I am checking the height of the bamboo scaffolding.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "I am checking the weight of the cement bag.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "I am checking the thickness of the brick wall.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "I am checking the length of the steel bar.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "I am checking the width of the doorway.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "The bamboo scaffolding is 4 meters high. The scaffolding is 50 cm too high. ",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "The cement bag is 55 kilograms. The cement bag is 5 kilograms too heavy.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_8",
+          "text": "The steel bar is 11 meters. The steel bar is 1 meter too long.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "The doorway is 80 centimeters. The doorway is 10 centimeters too narrow.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "The wall is 18 centimeters. The wall is 5 centimeters too thin",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "r_4_1",
+          "text": "I am checking the height of the bamboo scaffolding.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "I am checking the weight of the cement bag.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "I am checking the thickness of the brick wall.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "I am checking the length of the steel bar.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "I am checking the width of the doorway.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "The bamboo scaffolding is 4 meters high. The scaffolding is 50 cm too high. ",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "The cement bag is 55 kilograms. The cement bag is 5 kilograms too heavy.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_8",
+          "text": "The steel bar is 11 meters. The steel bar is 1 meter too long.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "The doorway is 80 centimeters. The doorway is 10 centimeters too narrow..",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "The wall is 18 centimeters. The wall is 5 centimeters too thin",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ]
+    }
   }
 }
