@@ -2156,7 +2156,7 @@ const createGameScene = (config) => {
   return GameScene;
 };
 
-export const buildGame1Slides = (activityData = {}, context = {}) => {
+export const buildInteractive1Slides = (activityData = {}, context = {}) => {
   const { activityNumber, focus } = context;
   const slide = document.createElement("section");
   slide.className = "slide game-slide";
