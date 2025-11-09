@@ -1,0 +1,540 @@
+{
+  "meta": {
+    "lesson_no": 4,
+    "level": "Elementary",
+    "section": "Automobile Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Long /aː/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": [
+      {
+        "id": "p_1",
+        "word_text": "c'a'r",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "The c'a'r is in the garage.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.jpeg"
+      },
+      {
+        "id": "p_2",
+        "word_text": "p'a'rk",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "P'a'rk the vehicle in the shade.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "p'a'rt",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "This p'a'rt is on the table.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.jpeg"
+      },
+      {
+        "id": "p_4",
+        "word_text": "'a'rm",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "Lift the heavy tool with your 'a'rm.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS-3",
+    "focus": "Verb ‘to be’ and preposition ‘on’",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_a.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "tables": [
+      [
+        ["I am", "am", "tall"],
+        ["He is", "He's", null],
+        ["She is", "She's", null],
+        ["It is", "It's", null],
+        ["We are", "We're", null],
+        ["You are", "You're", null],
+        ["They are", "They're", null]
+      ]
+    ],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "Is the engine block clean or dirty?",
+        "text_b": "It is dirty.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.jpeg",
+        "text_a": "Is the instructor kind or strict?",
+        "text_b": "He is strict.",
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_3.jpeg",
+        "text_a": "Is the mechanic tired or energetic?",
+        "text_b": "He is energetic.",
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
+      }
+    ],
+    "keywords": [
+      {
+        "id": "k_1",
+        "image": "assets/img/a_1_k_1.jpeg",
+        "word": "Light/heavy"
+      },
+      {
+        "id": "k_2",
+        "image": "assets/img/a_1_k_2.jpeg",
+        "word": "Wide/narrow"
+      },
+      {
+        "id": "k_3",
+        "image": "assets/img/a_1_k_3.jpeg",
+        "word": "Lazy/energetic"
+      },
+      {
+        "id": "k_4",
+        "image": "assets/img/a_1_k_4.jpeg",
+        "word": "Strong/weak"
+      },
+      {
+        "id": "k_5",
+        "image": "assets/img/a_1_k_5.jpeg",
+        "word": "Correct/incorrect"
+      },
+      {
+        "id": "k_6",
+        "image": "assets/img/a_1_k_6.jpeg",
+        "word": "Thick/thin"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "Is this alternator new or old?",
+        "text_b": "It is old.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.jpeg",
+        "text_a": "Is the hydraulic jack light or heavy?",
+        "text_b": "It is heavy.",
+        "audio_a": "assets/audio/a_2_d_2_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_b.mp3"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "Is the engine block clean or dirty?",
+        "text_b": "It is dirty.",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_b.mp3"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.jpeg",
+        "text_a": "Is the air compressor small or large?",
+        "text_b": "It is large.",
+        "audio_a": "assets/audio/a_2_d_4_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_b.mp3"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.jpeg",
+        "text_a": "Is the instructor kind or strict? ",
+        "text_b": "He is strict.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_b.mp3"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.jpeg",
+        "text_a": "Is the mechanic tired or energetic?",
+        "text_b": "He is energetic.",
+        "audio_a": "assets/audio/a_2_d_6_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_b.mp3"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "INTRACTIVE-1",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
+        "audio": "assets/audio/a_3_i_a.mp3"
+      }
+    },
+    "activities": {
+      "activity_1_a": {
+        "type": "GAME-1",
+        "bg_image": "assets/img/game/bg-11.jpg",
+        "examples": [
+          {
+            "id": "e_1",
+            "sentence": "The correct tyre pressure is 32 psi.\nThis tyre has 38 psi.\nThe pressure is ……………….",
+            "audio": "assets/audio/a_3_ex_1.mp3",
+            "options": ["Too high", "Correct", "Too low"],
+            "answer": "Too high"
+          }
+        ],
+        "content": [
+          {
+            "id": "g_1",
+            "sentence": "The normal range of the car engine temperature is 85–95 degrees Celsius.\nThe temperature of this engine is 100 degrees Celsius.\nThe temperature of this engine is …………….",
+            "audio": "assets/audio/a_3_g_1.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_2",
+            "sentence": "The correct weight of the car battery is 12 kilograms.\n The weight of this battery is 12.5 kilograms.\n The weight of this battery is ……..",
+            "audio": "assets/audio/a_3_g_2.mp3",
+            "options": ["Too heavy", "Correct", "Too light"],
+            "answer": "Too heavy"
+          },
+          {
+            "id": "g_3",
+            "sentence": "The acceptable tyre pressure is 30–32 PSI. \n The tyre pressure in this wheel is 28 PSI.\n The tyre pressure in this wheel is …………………",
+            "audio": "assets/audio/a_3_g_3.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too low"
+          },
+          {
+            "id": "g_4",
+            "sentence": "The standard depth of tyre tread is 3–4 millimeters.\n The depth of this tyre tread is 2 millimeters.\n The depth of this tyre tread is …………..",
+            "audio": "assets/audio/a_3_g_4.mp3",
+            "options": ["Too Shallow", "Correct", "Too deep"],
+            "answer": "Too Shallow"
+          },
+          {
+            "id": "g_5",
+            "sentence": "The correct length of a fan belt is 90–95 centimeters.\n The length of this fan belt is 100 centimeters.\n The length of this fan belt is …………",
+            "audio": "assets/audio/a_3_g_5.mp3",
+            "options": ["Too short", "Correct", "Too long"],
+            "answer": "Too long"
+          },
+          {
+            "id": "g_6",
+            "sentence": "The standard width of a brake pad is 8–9 centimeters.\n The width of this brake pad is 7 centimeters.\n The width of this brake pad is ……….",
+            "audio": "assets/audio/a_3_g_6.mp3",
+            "options": ["Too narrow", "Correct", "Too wide"],
+            "answer": "Too narrow"
+          },
+          {
+            "id": "g_7",
+            "sentence": "The correct oil content of the gearbox is 1.5–1.8 liters.\n The oil content of this gearbox is 2 liters.\n The oil content of this gearbox is ……………",
+            "audio": "assets/audio/a_3_g_7.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_8",
+            "sentence": "The safe tyre pressure for a van is 34–36 PSI.\n The tyre pressure of this van is 36 PSI. \n The tyre pressure of this van is  …………..",
+            "audio": "assets/audio/a_3_g_8.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Correct"
+          },
+          {
+            "id": "g_9",
+            "sentence": "he recommended alignment angle is 0–2 degrees.\n The alignment angle of this wheel is 3 degrees.\n The alignment angle of this wheel is……….",
+            "audio": "assets/audio/a_3_g_9.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_10",
+            "sentence": "The correct charging voltage of a car alternator is 13–14.5 volts.\n The charging voltage of this car alternator is 12 volts.\n The charging voltage of this car alternator is……….",
+            "audio": "assets/audio/a_3_g_10.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too low"
+          }
+        ]
+      },
+      "activity_1_b": {}
+    }
+  },
+  "activity_4": {
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What is the temperature of the car engine?",
+            "answer": "90 degrees Celsius",
+            "options": [
+              "70 degrees Celsius",
+              "90 degrees Celsius",
+              "100 degrees Celsius"
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": "What is the correct temperature range for the diagnostic test?",
+            "answer": "85–95 degrees Celsius",
+            "options": [
+              "65–75 degrees Celsius",
+              "85–95 degrees Celsius",
+              "100–110 degrees Celsius"
+            ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "What should be the weight of the battery?",
+            "answer": "12 kilograms",
+            "options": ["11.5 kilograms", "12 kilograms", "13.5 kilograms"]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What is the correct tyre pressure reading?",
+            "answer": "32 PSI",
+            "options": ["28 PSI", "32 PSI", "36 PSI"]
+          },
+          {
+            "id": "l_4_5",
+            "question": ". Where is the record book kept?",
+            "answer": "In the service office",
+            "options": [
+              "In the classroom",
+              "In the garage office",
+              "In the service office"
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "I am checking the temperature of the car engine.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "I am checking the length of the fan belt",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "I am checking the depth of the tyre tread..",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "I am checking the width of the brake pad.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "I am checking the oil content of the gearbox.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The fan belt is about 95 centimeters. The fan belt is about 5 centimeters too long.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The tyre tread is about 4 millimeters.The tyre tread is about 1 millimeter too shallow.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "r_4_1",
+          "text": "I am checking the temperature of the car engine.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "I am checking the length of the fan belt",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "I am checking the depth of the tyre tread.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "I am checking the width of the brake pad.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "I am checking the oil content of the gearbox.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "The fan belt is about 95 centimeters. The fan belt is about 5 centimeters too long.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_8",
+          "text": "The tyre tread is about 4 millimeters.The tyre tread is about 1 millimeter too shallow.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "r_4_1",
+          "text": "I am checking the temperature of the car engine.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "I am checking the length of the fan belt",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "I am checking the depth of the tyre tread.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "I am checking the width of the brake pad.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "I am checking the oil content of the gearbox.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "The fan belt is about 95 centimeters. The fan belt is about 5 centimeters too long.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_8",
+          "text": "The tyre tread is about 4 millimeters.The tyre tread is about 1 millimeter too shallow.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ]
+    }
+  }
+}
