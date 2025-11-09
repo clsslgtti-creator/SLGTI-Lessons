@@ -161,10 +161,52 @@ const clearSegmentHighlights = (segments = []) => {
   });
 };
 
+const trimString = (value) => (typeof value === 'string' ? value.trim() : '');
+
 const normalizeKeyword = (value) => {
-  return typeof value === "string" && value.trim().length
-    ? value.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-")
-    : "";
+  return typeof value === 'string' && value.trim().length
+    ? value.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-')
+    : '';
+};
+
+const normalizeMatchingKeywords = (keywordEntries = [], fallbackDialogues = []) => {
+  const normalizedFromKeywords = (Array.isArray(keywordEntries) ? keywordEntries : [])
+    .map((entry, index) => {
+      const keyword = trimString(entry?.word ?? entry?.label ?? entry?.text);
+      const normalizedKeyword = normalizeKeyword(keyword);
+      const image = trimString(entry?.image ?? entry?.img ?? entry?.picture);
+      if (!keyword || !normalizedKeyword || !image) {
+        return null;
+      }
+      return {
+        id: entry?.id ?? `keyword_${index + 1}`,
+        keyword,
+        normalizedKeyword,
+        image,
+      };
+    })
+    .filter(Boolean);
+
+  if (normalizedFromKeywords.length) {
+    return normalizedFromKeywords;
+  }
+
+  return (Array.isArray(fallbackDialogues) ? fallbackDialogues : [])
+    .map((dialogue, index) => {
+      const keyword = trimString(dialogue?.keyword);
+      const normalizedKeyword = normalizeKeyword(keyword);
+      const image = trimString(dialogue?.img);
+      if (!keyword || !normalizedKeyword || !image) {
+        return null;
+      }
+      return {
+        id: dialogue?.id ?? `dialogue_${index + 1}`,
+        keyword,
+        normalizedKeyword,
+        image,
+      };
+    })
+    .filter(Boolean);
 };
 
 const maybeInsertFocus = (slide, focusText, includeFocus) => {
@@ -429,7 +471,7 @@ const buildModelDialogueSlide = (
 };
 
 const buildPreListeningSlide = (
-  dialogues,
+  matchingSource,
   {
     activityLabel = 'Activity',
     subActivitySuffix = '',
@@ -439,24 +481,29 @@ const buildPreListeningSlide = (
     includeFocus = false,
   } = {},
 ) => {
-  const usableDialogues = (Array.isArray(dialogues) ? dialogues : [])
-    .map((dialogue, index) => {
-      const keyword = typeof dialogue.keyword === 'string' ? dialogue.keyword.trim() : '';
-      const normalizedKeyword = normalizeKeyword(keyword);
-      return {
-        index,
-        dialogue,
-        keyword,
-        normalizedKeyword,
-      };
-    })
-    .filter((item) => item.keyword && item.normalizedKeyword && item.dialogue.img);
+  let providedKeywords = [];
+  let fallbackDialogues = [];
+  if (Array.isArray(matchingSource)) {
+    fallbackDialogues = matchingSource;
+  } else if (
+    matchingSource &&
+    typeof matchingSource === 'object'
+  ) {
+    if (Array.isArray(matchingSource.keywords)) {
+      providedKeywords = matchingSource.keywords;
+    }
+    if (Array.isArray(matchingSource.dialogues)) {
+      fallbackDialogues = matchingSource.dialogues;
+    }
+  }
+
+  const keywordItems = normalizeMatchingKeywords(providedKeywords, fallbackDialogues);
 
   const slide = document.createElement('section');
   slide.className = 'slide slide--pre-listening';
   slide.innerHTML = `
     <h2>${activityLabel}${subActivitySuffix}</h2>
-    <p class="slide__instruction">Match each picture with the correct place.</p>
+    <p class="slide__instruction">Match the words with the pictures.</p>
   `;
 
   maybeInsertFocus(slide, activityFocus, includeFocus);
@@ -483,11 +530,11 @@ const buildPreListeningSlide = (
     return array;
   };
 
-  const shuffledDialogues = shuffle([...usableDialogues]);
+  const shuffledKeywords = shuffle([...keywordItems]);
   const cardItems = [];
 
-  shuffledDialogues.forEach((item) => {
-    const { dialogue, keyword, normalizedKeyword } = item;
+  shuffledKeywords.forEach((item) => {
+    const { keyword, normalizedKeyword, image } = item;
 
     if (keywordSet.has(normalizedKeyword)) {
       return;
@@ -501,8 +548,8 @@ const buildPreListeningSlide = (
     const imgWrapper = document.createElement('div');
     imgWrapper.className = 'pre-listening-card__media';
     const img = document.createElement('img');
-    img.src = dialogue.img;
-    img.alt = keyword ? `Location: ${keyword}` : `Pre-Listening image`;
+    img.src = image;
+    img.alt = keyword ? `Keyword: ${keyword}` : 'Pre-Listening image';
     img.loading = 'lazy';
     imgWrapper.appendChild(img);
     card.appendChild(imgWrapper);
@@ -1551,7 +1598,7 @@ const createSubActivityContext = (base, letter) => ({
   subActivityLetter: letter || '',
 });
 
-export const buildSbsOneSlides = (activityData = {}, context = {}) => {
+export const buildSbsThreeSlides = (activityData = {}, context = {}) => {
   const { activityNumber, focus: rawFocus } = context;
   const activityLabel = activityNumber ? `Activity ${activityNumber}` : 'Activity';
   const activityFocus =
@@ -1587,10 +1634,11 @@ export const buildSbsOneSlides = (activityData = {}, context = {}) => {
     ? activityData.example_dialogues
     : [];
   const tables = Array.isArray(activityData.tables) ? activityData.tables : [];
+  const keywords = Array.isArray(activityData.keywords) ? activityData.keywords : [];
 
   return [
     buildModelDialogueSlide(exampleDialogues, { ...modelContext, tables }),
-    buildPreListeningSlide(dialogues, preListeningContext),
+    buildPreListeningSlide({ keywords, dialogues }, preListeningContext),
     buildListeningSlide(dialogues, listeningContext),
     buildListenAndRepeatSlide(dialogues, listenRepeatContext),
     buildReadingSlide(dialogues, readingContext),

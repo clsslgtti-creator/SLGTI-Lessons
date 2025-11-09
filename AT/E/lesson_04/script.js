@@ -1,4 +1,5 @@
 import { buildSbsOneSlides } from "./lib/sbs-1.js";
+import { buildSbsThreeSlides } from "./lib/sbs-3.js";
 import { buildPronunciationSlides } from "./lib/pronunciation.js";
 import { buildInteractive1Slides } from "./lib/interactive-1.js";
 import { buildActivityTwoSlides } from "./lib/activity-2.js";
@@ -207,6 +208,7 @@ const markLessonComplete = (index, totalSlides) => {
 
 const activityBuilders = {
   "SBS-1": buildSbsOneSlides,
+  "SBS-3": buildSbsThreeSlides,
   PRONUNCIATION: buildPronunciationSlides,
   "INTERACTIVE-1": buildInteractive1Slides,
   "LISTENING-1": buildListeningOneSlides,
