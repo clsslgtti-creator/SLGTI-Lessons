@@ -220,10 +220,49 @@
       "activity_a": {
         "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
         "audio": "assets/audio/a_3_i_a.mp3"
+      },
+       "activity_b": {
+        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
+        "audio": "assets/audio/a_3_i_a.mp3"
       }
     },
     "content": {
       "activity_a": {
+        "bg_image": "assets/img/game/bg-1.jpg",
+        "content": [
+          {
+            "id": "g_1",
+            "image": "assets/img/game/a_3_g_1.png",
+            "keyword" : "Conical"
+          },
+          {
+            "id": "g_2",
+            "image": "assets/img/game/a_3_g_2.png",
+            "keyword" : "Cylindrical"
+          },
+          {
+            "id": "g_3",
+            "image": "assets/img/game/a_3_g_3.png",
+            "keyword" : "Spherical"
+          },
+          {
+            "id": "g_4",
+            "image": "assets/img/game/a_3_g_4.png",
+            "keyword" : "Oval"
+          },
+          {
+            "id": "g_5",
+            "image": "assets/img/game/a_3_g_5.png",
+            "keyword" : "Rectangular"
+          },
+          {
+            "id": "g_6",
+            "image": "assets/img/game/a_3_g_6.png",
+            "keyword" : "Square"
+          }
+        ]
+      },
+      "activity_b": {
         "bg_image": "assets/img/game/bg-11.jpg",
         "examples": [
           {
@@ -306,8 +345,7 @@
             "answer": "Too low"
           }
         ]
-      },
-      "activity_b": {} 
+      }
     }
   },
   "activity_4": {
