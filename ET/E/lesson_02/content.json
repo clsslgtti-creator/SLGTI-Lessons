@@ -1,0 +1,551 @@
+{
+  "meta": {
+    "lesson_no": 2,
+    "level": "Elementary",
+    "section": "Automobile Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Short /ɪ/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": [
+      {
+        "id": "p_1",
+        "word_text": "m'e'ter",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "The m'e'ter is in the workshop.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.jpeg"
+      },
+      {
+        "id": "p_2",
+        "word_text": "l'ea'd",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "The copper l'ea'd is very clean.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "h'ea'ter",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": " This h'ea'ter is in the classroom.  ",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.jpeg"
+      },
+      {
+        "id": "p_4",
+        "word_text": "r'ea'der",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "This r'ea'der is not accurate. ",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS-1",
+    "focus": "Verb ‘to be’ and preposition ‘on’",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_a.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "tables": [
+      [
+        ["Where", "am", "I?"],
+        [null, "is", "he?"],
+        [null, null, "she?"],
+        [null, null, "it?"],
+        [null, "are", "we?"],
+        [null, null, "you?"],
+        [null, null, "they?"]
+      ],
+      [
+        ["I am", "I'm", "in the kitchen."],
+        ["He is", "He's", null],
+        ["She is", "She's", null],
+        ["It is", "It's", null],
+        ["We are", "We're", null],
+        ["You are", "You're", null],
+        ["They are", "They're", null]
+      ]
+    ],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "Where is the textbook?",
+        "text_b": " It is in the drawer.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.jpeg",
+        "text_a": "Where is the pen?",
+        "text_b": " It is in the pencil case.",
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_3.jpeg",
+        "text_a": "Where is the manager?",
+        "text_b": "He is in the office.",
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "Where is the heavy distribution board?",
+        "text_b": " It is in the control panel section.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "control panel section."
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.jpeg",
+        "text_a": "Where is the portable insulation tester?",
+        "text_b": "It is in the grey cotton bag. ",
+        "audio_a": "assets/audio/a_2_d_2_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_b.mp3",
+        "keyword": "grey cotton bag"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "Where are the protective rubber gloves?",
+        "text_b": "They are in the black chest. ",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_b.mp3",
+        "keyword": "black chest"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.jpeg",
+        "text_a": "Where are the new circuit breakers?",
+        "text_b": "They are in the chest of drawers.",
+        "audio_a": "assets/audio/a_2_d_4_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_b.mp3",
+        "keyword": "chest of drawers"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.jpeg",
+        "text_a": "Where is the senior electrician?",
+        "text_b": "He is in the wiring workshop.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_b.mp3",
+        "keyword": "wiring workshop"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.jpeg",
+        "text_a": "Where are the trainee technicians?",
+        "text_b": "They are in the reception area.",
+        "audio_a": "assets/audio/a_2_d_6_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_b.mp3",
+        "keyword": "reception area"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "GAME-1",
+    "bg_image": "assets/img/game/bg-11.jpg",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
+        "audio": "assets/audio/a_3_i_a.mp3"
+      }
+    },
+    "examples": [
+      {
+        "id": "e_1",
+        "sentence": "The correct resistance of this coil is 15 Ω.\n The multimeter shows 15 Ω.\n The resistance is ……………….",
+        "audio": "assets/audio/a_3_ex_1.mp3",
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Correct"
+      }
+    ],
+    "content": [
+      {
+        "id": "g_1",
+        "sentence": "The correct operating voltage for a circuit is 220–240 volts.\nThe voltage in this circuit is 210 volts.\nThe voltage in this circuit is ………….",
+        "audio": "assets/audio/a_3_g_1.mp3",
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too low"
+      },
+      {
+        "id": "g_2",
+        "sentence": "The correct current for this motor is 10 amperes.\n The current in this motor is 13 amperes.\nThe current in this motor is ………………….",
+        "audio": "assets/audio/a_3_g_2.mp3",
+        "options": ["Too weak", "Correct", "Too strong"],
+        "answer": "Too strong"
+      },
+      {
+        "id": "g_3",
+        "sentence": "The correct insulation resistance in wiring is above 1 megaohm.\n The insulation resistance in this wiring is 0.5 megaohms.\nThe insulation resistance in this wiring is ……………",
+        "audio": "assets/audio/a_3_g_3.mp3",
+       "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too low"
+      },
+      {
+        "id": "g_4",
+        "sentence": "The correct fuse rating for this circuit is 5 amperes.\nThe fuse in this circuit is 8 amperes.\nThe fuse in this circuit is …………………………",
+        "audio": "assets/audio/a_3_g_4.mp3",
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_5",
+        "sentence": "The correct earth resistance is less than 2 ohms.\nThe earth resistance in this test is 4 ohms.\nThe earth resistance in this test is………………………",
+        "audio": "assets/audio/a_3_g_5.mp3",
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_6",
+        "sentence": "The correct oil temperature of a transformer is 60 degrees Celsius.\n The oil temperature of this transformer is 75 degrees Celsius.\nThe oil temperature of this transformer is……………………………………….",
+        "audio": "assets/audio/a_3_g_6.mp3",
+        "options": ["Too cold", "Correct", "Too hot"],
+        "answer": "Too hot"
+      },
+      {
+        "id": "g_7",
+        "sentence": "The correct cable size for this circuit is 6 square millimeters.\nThe cable in this circuit is 4 square millimeters.\nThe cable in this circuit is ……………………………………",
+        "audio": "assets/audio/a_3_g_7.mp3",
+        "options": ["Too small", "Correct", "Too large"],
+        "answer": "Too small"
+      },
+      {
+        "id": "g_8",
+        "sentence": "The correct conductor length for this connection is 2 meters.\nThe conductor in this connection is 2.5 meters.\n The conductor in this connection is ………………………………",
+        "audio": "assets/audio/a_3_g_8.mp3",
+        "options": ["Too long", "Correct", "Too short"],
+        "answer": "Correct"
+      },
+      {
+        "id": "g_9",
+        "sentence": "The correct breaker rating for a distribution board is 32 amperes.\n The breaker in this distribution board is 25 amperes.\n The breaker in this distribution board is ………………………………",
+        "audio": "assets/audio/a_3_g_9.mp3",
+       "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_10",
+        "sentence": "The correct capacitor value for this motor is 40 microfarads.\n The capacitor in this motor is 60 microfarads.\n The capacitor in this motor is ……………………",
+        "audio": "assets/audio/a_3_g_10.mp3",
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
+      }
+    ]
+  },
+  "activity_4": {
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What is the voltage of the single-phase circuit?",
+            "answer": "230 volts ",
+            "options": [
+              "210 volts",
+              "230 volts",
+              "240 volts"
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": "What is the correct voltage range?",
+            "answer": "220–240 volts",
+            "options": [
+              "200–210 volts",
+              "220–240 volts",
+              "240–250 volts"
+            ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "What is the current of the motor?",
+            "answer": "13 amperes",
+            "options": ["10 amperes", "13 amperes", "15 amperes"]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What is the correct reading of the insulation resistance?",
+            "answer": "1 megaohms",
+            "options": [
+              "0.5 megaohms",
+              "1 megaohms",
+              "2 megaohms"
+            ]
+          },
+          {
+            "id": "l_4_5",
+            "question": "Where is the test log kept?",
+            "answer": "In the electrical workshop cabinet",
+            "options": [
+              "In the classroom",
+              " In the tool room",
+              "In the electrical workshop cabinet"
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "I am checking the voltage of the single-phase circuit.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "I am checking the resistance of the heating coil.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "I am checking the oil temperature of the transformer.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "I am checking the capacitance of the capacitor.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "The current is 13 amperes. The current is 3 amperes too high.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The conductor is 2.5 meters. The conductor is 0.5 meters too long.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The oil is 75 degrees Celsius. The oil is 15 degrees Celsius too hot.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The resistance is 0.5 megaohms. The resistance is 0.5 megaohms too low.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The resistance of the heating coil is about 12 ohms.– The resistance of the heating coil is about 2 ohms too high.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The extension cable is about 20 meters.– The extension cable is about 5 meters too long.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "The transformer oil is about 75 degrees Celsius. The transformer oil is about 15 degrees Celsius too hot.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "The junction box is about 6 centimeters. The junction box is about 2 centimeters too deep.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "r_4_1",
+          "text": "I am checking the voltage of the single-phase circuit.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "I am checking the resistance of the heating coil.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "I am checking the oil temperature of the transformer.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "I am checking the capacitance of the capacitor.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "The current is 13 amperes. The current is 3 amperes too high. ",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "The conductor is 2.5 meters. The conductor is 0.5 meters too long.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "The oil is 75 degrees Celsius. The oil is 15 degrees Celsius too hot.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_8",
+          "text": "The resistance is 0.5 megaohms. The resistance is 0.5 megaohms too low.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "The resistance of the heating coil is about 12 ohms.– The resistance of the heating coil is about 2 ohms too high.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "The extension cable is about 20 meters.– The extension cable is about 5 meters too long.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "The transformer oil is about 75 degrees Celsius. The transformer oil is about 15 degrees Celsius too hot.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "The junction box is about 6 centimeters. The junction box is about 2 centimeters too deep.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "r_4_1",
+          "text": "I am checking the voltage of the single-phase circuit.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "I am checking the resistance of the heating coil.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "I am checking the oil temperature of the transformer.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "I am checking the capacitance of the capacitor.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "The current is 13 amperes. The current is 3 amperes too high.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "The conductor is 2.5 meters. The conductor is 0.5 meters too long.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "The oil is 75 degrees Celsius. The oil is 15 degrees Celsius too hot.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_8",
+          "text": "The resistance is 0.5 megaohms. The resistance is 0.5 megaohms too low.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "The resistance of the heating coil is about 12 ohms.– The resistance of the heating coil is about 2 ohms too high.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "The extension cable is about 20 meters.– The extension cable is about 5 meters too long.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "The transformer oil is about 75 degrees Celsius. The transformer oil is about 15 degrees Celsius too hot.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "The junction box is about 6 centimeters. The junction box is about 2 centimeters too deep.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        }
+      ]
+    }
+  }
+}
