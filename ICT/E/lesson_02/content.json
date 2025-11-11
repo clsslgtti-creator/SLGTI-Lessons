@@ -1,0 +1,447 @@
+{
+  "meta": {
+    "lesson_no": 2,
+    "level": "Elementary",
+    "section": "ICT",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Short /ɪ/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+   "content": [
+      {
+        "id": "p_1",
+        "word_text": "scr'ee'n",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": " The computer scr'ee'n is too wide.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.jpeg"
+      },
+      {
+        "id": "p_2",
+        "word_text": "k'ey'board",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "Type this word on the k'ey'board.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "'e'mail",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "Send me an 'e'mail today.  ",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.jpeg"
+      },
+      {
+        "id": "p_4",
+        "word_text": "del'e'te",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "Del'e'ting these files is risky. ",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
+      }
+    ]
+
+  },
+  "activity_2": {
+    "type": "SBS-1",
+    "focus": "Verb ‘to be’ and preposition ‘on’",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_a.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "tables": [
+      [
+        ["Where", "am", "I?"],
+        [null, "is", "he?"],
+        [null, null, "she?"],
+        [null, null, "it?"],
+        [null, "are", "we?"],
+        [null, null, "you?"],
+        [null, null, "they?"]
+      ],
+      [
+        ["I am", "I'm", "in the kitchen."],
+        ["He is", "He's", null],
+        ["She is", "She's", null],
+        ["It is", "It's", null],
+        ["We are", "We're", null],
+        ["You are", "You're", null],
+        ["They are", "They're", null]
+      ]
+    ],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "Where is the textbook?",
+        "text_b": " It is in the drawer.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.jpeg",
+        "text_a": "Where is the pen?",
+        "text_b": " It is in the pencil case.",
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_3.jpeg",
+        "text_a": "Where is the manager?",
+        "text_b": "He is in the office.",
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "Where is the faulty desktop computer?",
+        "text_b": "It is in the electrical department maintenance workshop.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "maintenance workshop"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.jpeg",
+        "text_a": "Where is the network router?",
+        "text_b": "It is in the wooden chest of drawers.",
+        "audio_a": "assets/audio/a_2_d_2_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_b.mp3",
+        "keyword": "wooden chest of drawers"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "Where are the backup hard drives?",
+        "text_b": "They are in the new data storage room.",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_b.mp3",
+        "keyword": "data storage room"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.jpeg",
+        "text_a": "Where are the diagnostic cables?",
+        "text_b": "They are in the brown leather bag. ",
+        "audio_a": "assets/audio/a_2_d_4_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_b.mp3",
+        "keyword": "brown leather bag"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.jpeg",
+        "text_a": "Where is the ICT supervisor?",
+        "text_b": "He is in the recently opened multimedia section.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_b.mp3",
+        "keyword": "multimedia section"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.jpeg",
+        "text_a": "Where are the new headphones?",
+        "text_b": "They are in the blue cardboard box.",
+        "audio_a": "assets/audio/a_2_d_6_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_b.mp3",
+        "keyword": "blue cardboard box"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "GAME-1",
+    "bg_image": "assets/img/game/bg-11.jpg",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
+        "audio": "assets/audio/a_3_i_a.mp3"
+      }
+    },
+    "examples": [
+      {
+        "id": "e_1",
+        "sentence": "The correct network speed for the local server is 800–900 Mbps.\n The network speed in this server is 950 Mbps.\n The network speed in this server is …………",
+        "audio": "assets/audio/a_3_ex_1.mp3",
+        "options": ["Too fast", "Correct", "Too slow"],
+        "answer": "Too fast"
+      }
+    ],
+    "content": [
+      {
+        "id": "g_1",
+        "sentence": "The safe operating temperature of the server room is 20–25 degrees Celsius.\n The temperature in this server room is 28 degrees Celsius.\n The temperature in this server room is …………",
+        "audio": "assets/audio/a_3_g_1.mp3",
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_2",
+        "sentence": "The correct voltage for the power supply unit is 230 volts.\n The voltage in this PSU is 240 volts.\n The voltage in this PSU is ………………….",
+        "audio": "assets/audio/a_3_g_2.mp3",
+        "options": ["Too high", "Correct", "Too low"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_3",
+        "sentence": "The acceptable latency for network connections is 10–20 milliseconds.\n The latency in this connection is 8 milliseconds.\n The latency in this connection is ……………",
+        "audio": "assets/audio/a_3_g_3.mp3",
+       "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too low"
+      },
+      {
+        "id": "g_4",
+        "sentence": "The standard backup frequency for the database is once every 24 hours.\n The current backup interval is once every 48 hours.\n The backup interval is ………………………….",
+        "audio": "assets/audio/a_3_g_4.mp3",
+        "options": ["Too long", "Correct", "Too short"],
+        "answer": "Too long"
+      },
+      {
+        "id": "g_5",
+        "sentence": "The ideal CPU utilization for this server is 40–60 percent.\n The CPU utilization of this server is 75 percent.\n The CPU utilization of this server is………………………",
+        "audio": "assets/audio/a_3_g_5.mp3",
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_6",
+        "sentence": "The safe humidity level for ICT equipment is 40–50 percent.\n The humidity in the server room is 30 percent.\n The humidity in the server room is……………………………………….",
+        "audio": "assets/audio/a_3_g_6.mp3",
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too low"
+      },
+      {
+        "id": "g_7",
+        "sentence": "The recommended length of a patch cable is less than 100 meters.\n The length of this patch cable is 120 meters.\n The length of this patch cable is ……………………………………",
+        "audio": "assets/audio/a_3_g_7.mp3",
+        "options": ["Too long", "Correct", "Too short"],
+        "answer": "Too long"
+      },
+      {
+        "id": "g_8",
+        "sentence": "The standard capacity of the UPS for this lab is 5 kilovolt-amperes (kVA).\n The UPS in this lab is 4 kVA.\n The UPS in this lab is ……………………………….",
+        "audio": "assets/audio/a_3_g_8.mp3",
+        "options": ["Too strong", "Correct", "Too weak"],
+        "answer": "Too weak"
+      },
+      {
+        "id": "g_9",
+        "sentence": "The correct disk usage level for safe operation is below 80 percent.\n The disk usage on this server is 90 percent.\n The disk usage on this server is ……………………………….",
+        "audio": "assets/audio/a_3_g_9.mp3",
+       "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_10",
+        "sentence": "The acceptable packet loss rate is below 1 percent.\n The packet loss rate in this network is 2 percent.\n The packet loss rate in this network is ……………………",
+        "audio": "assets/audio/a_3_g_10.mp3",
+        "options": ["Too high", "Correct", "Too low"],
+        "answer": "Too high"
+      }
+    ]
+  },
+  "activity_4": {
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What is the temperature of the server rack?",
+            "answer": "25 degrees Celsius",
+            "options": [
+              "20 degrees Celsius",
+              "25 degrees Celsius",
+              "30 degrees Celsius"
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": ". What is the highest safe temperature range",
+            "answer": "25 degrees Celsius",
+             "options": [
+              "20 degrees Celsius",
+              "25 degrees Celsius",
+              "30 degrees Celsius"
+            ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "What is the voltage of the power supply?",
+            "answer": "240 volts",
+            "options": ["220 volts", "230 volts", "240 volts"]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What is the actual reading of the network speed?",
+            "answer": "900 Mbps",
+            "options": [
+              "850 Mbps",
+              "900 Mbps",
+              "950 Mbps"
+            ]
+          },
+          {
+            "id": "l_4_5",
+            "question": "Where is the ICT logbook kept?",
+            "answer": "In the server room",
+            "options": [
+              "In the computer lab",
+              "In the network cabinet",
+              "In the server room"
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "I am checking the temperature of the server rack.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "I am checking the voltage of the power supply.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "I am checking the speed of the network connection.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "I am checking the storage capacity of the hard drive.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "I am checking the security of the firewall.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "r_4_1",
+          "text": "I am checking the temperature of the server rack.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "I am checking the voltage of the power supply.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "I am checking the speed of the network connection.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "I am checking the storage capacity of the hard drive.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "I am checking the security of the firewall.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "r_4_1",
+          "text": "I am checking the temperature of the server rack.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "I am checking the voltage of the power supply.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "I am checking the speed of the network connection.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "I am checking the storage capacity of the hard drive.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "I am checking the security of the firewall.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        }
+      ]
+    }
+  }
+}
