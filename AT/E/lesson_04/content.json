@@ -530,156 +530,156 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "I am checking the temperature of the car engine.",
+          "text": "The steering wheel is circular.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "I am checking the length of the fan belt",
+          "text": "The rearview mirror is oval.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "I am checking the depth of the tyre tread..",
+          "text": "The radiator grille is rectangular.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "I am checking the width of the brake pad.",
+          "text": "The piston block is cubical.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "I am checking the oil content of the gearbox.",
+          "text": "The headlight lamp is round.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
+          "text": "The gear knobs are spherical.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "The fan belt is about 95 centimeters. The fan belt is about 5 centimeters too long.",
+          "text": "The toolbox lids are square.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "The tyre tread is about 4 millimeters.The tyre tread is about 1 millimeter too shallow.",
+          "text": "The tyre rims are circular.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
+          "text": "The fuel tank caps are round.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
+          "text": "The exhaust pipes are cylindrical.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ],
       "activity_c": [
         {
-          "id": "r_4_1",
-          "text": "I am checking the temperature of the car engine.",
+          "id": "n_4_1",
+          "text": "The steering wheel is circular.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
-          "id": "r_4_2",
-          "text": "I am checking the length of the fan belt",
+          "id": "n_4_2",
+          "text": "The rearview mirror is oval.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
-          "id": "r_4_3",
-          "text": "I am checking the depth of the tyre tread.",
+          "id": "n_4_3",
+          "text": "The radiator grille is rectangular.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
-          "id": "r_4_4",
-          "text": "I am checking the width of the brake pad.",
+          "id": "n_4_4",
+          "text": "The piston block is cubical.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
-          "id": "r_4_5",
-          "text": "I am checking the oil content of the gearbox.",
+          "id": "n_4_5",
+          "text": "The headlight lamp is round.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
-          "id": "r_4_6",
-          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
+          "id": "n_4_6",
+          "text": "The gear knobs are spherical.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
-          "id": "r_4_7",
-          "text": "The fan belt is about 95 centimeters. The fan belt is about 5 centimeters too long.",
+          "id": "n_4_7",
+          "text": "The toolbox lids are square.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "r_4_8",
-          "text": "The tyre tread is about 4 millimeters.The tyre tread is about 1 millimeter too shallow.",
+          "id": "n_4_8",
+          "text": "The tyre rims are circular.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
-          "id": "r_4_9",
-          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
+          "id": "n_4_9",
+          "text": "The fuel tank caps are round.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
-          "id": "r_4_10",
-          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
+          "id": "n_4_10",
+          "text": "The exhaust pipes are cylindrical.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ],
       "activity_d": [
         {
-          "id": "r_4_1",
-          "text": "I am checking the temperature of the car engine.",
+          "id": "n_4_1",
+          "text": "The steering wheel is circular.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
-          "id": "r_4_2",
-          "text": "I am checking the length of the fan belt",
+          "id": "n_4_2",
+          "text": "The rearview mirror is oval.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
-          "id": "r_4_3",
-          "text": "I am checking the depth of the tyre tread.",
+          "id": "n_4_3",
+          "text": "The radiator grille is rectangular.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
-          "id": "r_4_4",
-          "text": "I am checking the width of the brake pad.",
+          "id": "n_4_4",
+          "text": "The piston block is cubical.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
-          "id": "r_4_5",
-          "text": "I am checking the oil content of the gearbox.",
+          "id": "n_4_5",
+          "text": "The headlight lamp is round.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
-          "id": "r_4_6",
-          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
+          "id": "n_4_6",
+          "text": "The gear knobs are spherical.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
-          "id": "r_4_7",
-          "text": "The fan belt is about 95 centimeters. The fan belt is about 5 centimeters too long.",
+          "id": "n_4_7",
+          "text": "The toolbox lids are square.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "r_4_8",
-          "text": "The tyre tread is about 4 millimeters.The tyre tread is about 1 millimeter too shallow.",
+          "id": "n_4_8",
+          "text": "The tyre rims are circular.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
-          "id": "r_4_9",
-          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
+          "id": "n_4_9",
+          "text": "The fuel tank caps are round.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
-          "id": "r_4_10",
-          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
+          "id": "n_4_10",
+          "text": "The exhaust pipes are cylindrical.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ]
