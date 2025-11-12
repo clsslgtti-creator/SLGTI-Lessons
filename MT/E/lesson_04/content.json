@@ -1,0 +1,688 @@
+{
+  "meta": {
+    "lesson_no": 4,
+    "level": "Elementary",
+    "section": "Construction Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Long /aː/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": [
+      {
+        "id": "p_1",
+        "word_text": "c'a'r",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "The c'a'r is in the garage.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
+      },
+      {
+        "id": "p_2",
+        "word_text": "p'a'rk",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "P'a'rk the vehicle in the shade.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.jpeg"
+      },
+      {
+        "id": "p_3",
+        "word_text": "p'a'rt",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "This p'a'rt is on the table.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.png"
+      },
+      {
+        "id": "p_4",
+        "word_text": "'a'rm",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "Lift the heavy tool with your 'a'rm.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS-3",
+    "focus": "Verb ‘to be’ and preposition ‘on’",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_a.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "tables": [
+      [
+        ["I am", "am", "tall"],
+        ["He is", "He's", null],
+        ["She is", "She's", null],
+        ["It is", "It's", null],
+        ["We are", "We're", null],
+        ["You are", "You're", null],
+        ["They are", "They're", null]
+      ]
+    ],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.png",
+        "text_a": "Is the engine block clean or dirty?",
+        "text_b": "It is dirty.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.png",
+        "text_a": "Is the instructor kind or strict?",
+        "text_b": "He is strict.",
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_3.png",
+        "text_a": "Is the mechanic tired or energetic?",
+        "text_b": "He is energetic.",
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
+      }
+    ],
+    "keywords": [
+      {
+        "id": "k_1",
+        "image": "assets/img/a_2_k_1.jpeg",
+        "word": "Light/heavy"
+      },
+      {
+        "id": "k_2",
+        "image": "assets/img/a_2_k_2.jpeg",
+        "word": "Wide/narrow"
+      },
+      {
+        "id": "k_3",
+        "image": "assets/img/a_2_k_3.png",
+        "word": "Lazy/energetic"
+      },
+      {
+        "id": "k_4",
+        "image": "assets/img/a_2_k_4.png",
+        "word": "Strong/weak"
+      },
+      {
+        "id": "k_5",
+        "image": "assets/img/a_2_k_5.jpg",
+        "word": "Correct/incorrect"
+      },
+      {
+        "id": "k_6",
+        "image": "assets/img/a_2_k_6.jpeg",
+        "word": "Thick/thin"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "Is this alternator new or old?",
+        "text_b": "It is old.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.jpeg",
+        "text_a": "Is the hydraulic jack light or heavy?",
+        "text_b": "It is heavy.",
+        "audio_a": "assets/audio/a_2_d_2_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_b.mp3"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.png",
+        "text_a": "Is the engine block clean or dirty?",
+        "text_b": "It is dirty.",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_b.mp3"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.png",
+        "text_a": "Is the air compressor small or large?",
+        "text_b": "It is large.",
+        "audio_a": "assets/audio/a_2_d_4_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_b.mp3"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.png",
+        "text_a": "Is the instructor kind or strict? ",
+        "text_b": "He is strict.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_b.mp3"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.png",
+        "text_a": "Is the mechanic tired or energetic?",
+        "text_b": "He is energetic.",
+        "audio_a": "assets/audio/a_2_d_6_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_b.mp3"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "INTERACTIVE-1",
+    "instructions": {
+      "activity_a": {
+        "text": "Match each keyword with its picture. Select a word and connect it to the correct image.\nපිළිඹඳ රූපය සමඟ එක් එක් මූලපදය ගැලපිය යුතුය. වචනයක් තෝරා නිවැරදි රූපය වෙත සම්බන්ධ කරන්න.\n ஒவ்வொரு சொல்லையும் அதன் படத்துடன் பொருத்துங்கள். ஒரு சொல்லைத் தேர்ந்தெடுத்து சரியான படத்துடன் இணைக்கவும்.",
+        "audio": "assets/audio/a_3_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Make a question with the words. Say it aloud. Then check with the model question and answer.\nවචන භාවිතා කර ප්‍රශ්නයක් සාදන්න. එය උච්චාරණය කර කියන්න. එවිට ආදර්ශ ප්‍රශ්නය සහ පිළිතුර සමඟ පරික්ෂා කරන්න.\nகொடுக்கப்பட்ட சொற்களைப் பயன்படுத்தி ஒரு கேள்வியை உருவாக்குங்கள். அதைச் சத்தமாக சொல்லுங்கள். பிறகு மாதிரி கேள்வி மற்றும் பதிலுடன் சரிபார்க்கவும்.",
+        "audio": "assets/audio/a_3_i_c.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-1.jpg",
+        "content": [
+          {
+            "id": "g_a_1",
+            "image": "assets/img/a_3_a_g_1.jpeg",
+            "keyword": "Conical"
+          },
+          {
+            "id": "g_a_2",
+            "image": "assets/img/a_3_a_g_2.jpeg",
+            "keyword": "Cylindrical"
+          },
+          {
+            "id": "g_a_3",
+            "image": "assets/img/a_3_a_g_3.png",
+            "keyword": "Spherical"
+          },
+          {
+            "id": "g_a_4",
+            "image": "assets/img/a_3_a_g_4.jpeg",
+            "keyword": "Oval"
+          },
+          {
+            "id": "g_a_5",
+            "image": "assets/img/a_3_a_g_5.jpg",
+            "keyword": "Rectangular"
+          },
+          {
+            "id": "g_a_6",
+            "image": "assets/img/a_3_a_g_6.jpeg",
+            "keyword": "Square"
+          }
+        ]
+      },
+      "activity_b": {
+        "bg_image": "assets/img/game/bg-11.jpg",
+        "content": [
+          {
+            "id": "g_b_1",
+            "sentence": "Is the hopper pan conical?",
+            "audio": "assets/audio/a_3_b_g_1.mp3",
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_1.png"
+          },
+          {
+            "id": "g_b_2",
+            "sentence": "Is the gas cylinder cylindrical?",
+            "audio": "assets/audio/a_3_b_g_2.mp3",
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_2.png"
+          },
+          {
+            "id": "g_b_3",
+            "sentence": "Are the steering wheels circular?",
+            "audio": "assets/audio/a_3_b_g_3.mp3",
+            "options": ["Yes, they are.", "No, they aren’t."],
+            "answer": "Yes, they are.",
+            "image": "assets/img/a_3_b_g_3.jpg"
+          },
+          {
+            "id": "g_b_4",
+            "sentence": "Is the fuel tank cap round?",
+            "audio": "assets/audio/a_3_b_g_4.mp3",
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_4.jpg"
+          },
+          {
+            "id": "g_b_5",
+            "sentence": "Is the plug socket square?",
+            "audio": "assets/audio/a_3_b_g_5.mp3",
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_5.jpeg"
+          },
+          {
+            "id": "g_b_6",
+            "sentence": "Are  the lamp bulbs cubical?",
+            "audio": "assets/audio/a_3_b_g_6.mp3",
+            "options": ["Yes, they are.", "No, they aren't."],
+            "answer": "No, they aren’t.",
+            "image": "assets/img/a_3_b_g_6.jpg"
+          },
+          {
+            "id": "g_b_7",
+            "sentence": "Is the window frame spherical?",
+            "audio": "assets/audio/a_3_b_g_7.mp3",
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "No, it isn't.",
+            "image": "assets/img/a_3_b_g_7.jpg"
+          },
+          {
+            "id": "g_b_8",
+            "sentence": "Is the computer monitor oval?",
+            "audio": "assets/audio/a_3_b_g_8.mp3",
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "No, it isn't.",
+            "image": "assets/img/a_3_b_g_8.jpg"
+          },
+          {
+            "id": "g_b_9",
+            "sentence": "Is the projector lens round?",
+            "audio": "assets/audio/a_3_b_g_9.mp3",
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_9.jpg"
+          },
+          {
+            "id": "g_b_10",
+            "sentence": "Is the mouse scroll wheel rectangular?",
+            "audio": "assets/audio/a_3_b_g_10.mp3",
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_10.jpg"
+          }
+        ]
+      },
+      "activity_c": {
+        "bg_image": "assets/img/game/bg-5.jpg",
+        "examples": [
+          {
+            "id": "ex_c_1",
+            "words": "socket square / cylindrical?",
+            "txt_question": "Is the socket square cylindrical?",
+            "txt_answer": "No, it isn’t. It is square.",
+            "audio_question": "assets/audio/a_3_c_ex_q_1.mp3",
+            "audio_answer": "assets/audio/a_3_c_ex_a_1.mp3",
+            "image": "assets/img/a_3_b_g_5.jpeg"
+          }
+        ],
+        "content": [
+          {
+            "id": "g_c_1",
+            "words": "project lens / rectangular?",
+            "txt_question": "Is the project lens rectangular?",
+            "txt_answer": "No, it isn’t . It is round.",
+            "audio_question": "assets/audio/a_3_c_g_q_1.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_1.mp3",
+            "image": "assets/img/a_3_b_g_9.jpg"
+          },
+          {
+            "id": "g_c_2",
+            "words": "door / oval?",
+            "txt_question": "Is the door oval?",
+            "txt_answer": "No, it isn’t. It is rectangular.",
+            "audio_question": "assets/audio/a_3_c_g_q_2.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_2.mp3",
+            "image": "assets/img/a_3_a_g_5.jpg"
+          },
+          {
+            "id": "g_c_3",
+            "words": "lamp bulbs / rectangular?",
+            "txt_question": "Are lamp bulbs rectangular?",
+            "txt_answer": "No, they aren’t. They are spherical.",
+            "audio_question": "assets/audio/a_3_c_g_q_3.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_3.mp3",
+            "image": "assets/img/a_3_b_g_6.jpg"
+          },
+          {
+            "id": "g_c_4",
+            "words": "steering wheel / circular?",
+            "txt_question": "Is the steering wheel circular?",
+            "txt_answer": "Yes, it is. It is circular.",
+            "audio_question": "assets/audio/a_3_c_g_q_4.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_4.mp3",
+            "image": "assets/img/a_3_b_g_3.jpg"
+          },
+          {
+            "id": "g_c_5",
+            "words": "fuel tank cap / cubical?",
+            "txt_question": "Is the fuel tank cap cubical?",
+            "txt_answer": "No, it isn’t. It is round.",
+            "audio_question": "assets/audio/a_3_c_g_q_5.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_5.mp3",
+            "image": "assets/img/a_3_b_g_4.jpg"
+          },
+          {
+            "id": "g_c_6",
+            "words": "hopper pan / conical?",
+            "txt_question": "Is the hopper pan conical?",
+            "txt_answer": "Yes, it is. It is conical.",
+            "audio_question": "assets/audio/a_3_c_g_q_6.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_6.mp3",
+            "image": "assets/img/a_3_b_g_1.png"
+          },
+          {
+            "id": "g_c_7",
+            "words": "computer / oval?",
+            "txt_question": "Is the computer oval?",
+            "txt_answer": "No, it isn’t. It is rectangular.",
+            "audio_question": "assets/audio/a_3_c_q_7.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_7.mp3",
+            "image": "assets/img/a_3_b_g_8.jpg"
+          },
+          {
+            "id": "g_c_8",
+            "words": "gas cylinder/ square?",
+            "txt_question": "Is the gas cylinder square?",
+            "txt_answer": "No, it isn’t. It is cylindrical.",
+            "audio_question": "assets/audio/a_3_c_g_q_8.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_8.mp3",
+            "image": "assets/img/a_3_b_g_2.png"
+          },
+          {
+            "id": "g_c_9",
+            "words": "mouse scroll wheel / rectangular?",
+            "txt_question": "Is the mouse scroll wheel rectangular?",
+            "txt_answer": "No, it isn’t. It is circular.",
+            "audio_question": "assets/audio/a_3_c_g_q_9.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_9.mp3",
+            "image": "assets/img/a_3_b_g_10.jpg"
+          },
+          {
+            "id": "g_c_10",
+            "words": "window frame/ spherical?",
+            "txt_question": "Is the window frame spherical?",
+            "txt_answer": "No, it isn’t. It is rectangular.",
+            "audio_question": "assets/audio/a_3_c_g_q_10.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_10.mp3",
+            "image": "assets/img/a_3_b_g_7.jpg"
+          }
+        ]
+      }
+    }
+  },
+  "activity_4": {
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What shape was the toolbox that the customer wanted?",
+            "answer": "Round",
+            "options": [
+              "Square",
+              "Round",
+              "Rectangular"
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": "When did the shop sell out of the toolbox the first time?",
+            "answer": "Last week",
+            "options": [
+              "Last week",
+              "Yesterday",
+              "Tomorrow"
+            ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "Which oval item did the customer ask about?",
+            "answer": "Oval serving tray",
+            "options": ["Oval mirror", "Oval serving tray", "Oval bowl"]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What was the cubical item the customer wanted to buy?",
+            "answer": "Cubical gift box",
+            "options": ["Cubical stool", "Cubical gift box", "Cubical speaker"]
+          },
+          {
+            "id": "l_4_5",
+            "question": "What did the shopkeeper say about the square plastic containers?",
+            "answer": "They are in limited stock",
+            "options": [
+              "They will arrive next week",
+              "They are out of stock",
+              "They are in limited stock"
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "The steering wheel is circular.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "The rearview mirror is oval.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "The radiator grille is rectangular.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "The piston block is cubical.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "The headlight lamp is round.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The gear knobs are spherical.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The toolbox lids are square.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The tyre rims are circular.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The fuel tank caps are round.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The exhaust pipes are cylindrical.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "n_4_1",
+          "text": "The steering wheel is circular.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "The rearview mirror is oval.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "The radiator grille is rectangular.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "The piston block is cubical.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "The headlight lamp is round.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The gear knobs are spherical.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The toolbox lids are square.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The tyre rims are circular.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The fuel tank caps are round.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The exhaust pipes are cylindrical.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "n_4_1",
+          "text": "The steering wheel is circular.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "The rearview mirror is oval.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "The radiator grille is rectangular.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "The piston block is cubical.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "The headlight lamp is round.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The gear knobs are spherical.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The toolbox lids are square.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The tyre rims are circular.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The fuel tank caps are round.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The exhaust pipes are cylindrical.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ]
+    }
+  }
+}
