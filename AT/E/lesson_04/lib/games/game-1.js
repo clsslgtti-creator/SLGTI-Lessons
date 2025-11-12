@@ -1,5 +1,3 @@
-const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
-
 const DEFAULT_OPTION_LABELS = ["Option A", "Option B", "Option C"];
 
 export const sanitizeOptions = (
@@ -428,7 +426,7 @@ export const createGameScene = (config) => {
       const accentLeft = this.add.circle(
         width * 0.18,
         height * 0.82,
-        clamp(width * 0.16, 120, 180),
+        180,
         0x1f6feb,
         0.08
       );
@@ -439,7 +437,7 @@ export const createGameScene = (config) => {
       const accentRight = this.add.circle(
         width * 0.82,
         height * 0.26,
-        clamp(width * 0.18, 130, 210),
+        210,
         0xf0ab00,
         0.08
       );
@@ -449,7 +447,7 @@ export const createGameScene = (config) => {
 
       const accentStripe = this.add.rectangle(
         width / 2,
-        height - clamp(height * 0.12, 120, 160),
+        height - 120,
         width * 0.86,
         12,
         0x1f6feb,
@@ -484,8 +482,8 @@ export const createGameScene = (config) => {
       this.gameUiElements.push(this.phaseText);
       this.topHudElements.push(this.phaseText);
 
-      const badgeHeight = clamp(height * 0.1, 58, 68);
-      const timerBadgeWidth = clamp(width * 0.2, 160, 200);
+      const badgeHeight = 68;
+      const timerBadgeWidth = 200;
       this.timerPanel = createRoundedPanel(
         this,
         timerBadgeWidth,
@@ -524,7 +522,7 @@ export const createGameScene = (config) => {
       this.gameUiElements.push(this.timerBadge);
       this.topHudElements.push(this.timerBadge);
 
-      const scoreBadgeWidth = clamp(width * 0.2, 160, 200);
+      const scoreBadgeWidth = 200;
       this.scorePanel = createRoundedPanel(
         this,
         scoreBadgeWidth,
@@ -559,8 +557,8 @@ export const createGameScene = (config) => {
       this.updateScore();
       this.updateTimerText("Time: 10.0s");
 
-      const sentenceCardWidth = clamp(width * 0.78, 640, 980);
-      const sentenceCardHeight = clamp(height * 0.32, 180, 240);
+      const sentenceCardWidth = 980;
+      const sentenceCardHeight = 230;
       this.sentenceCardWidth = sentenceCardWidth;
       this.sentenceCardHeight = sentenceCardHeight;
       const sentencePanel = createRoundedPanel(
@@ -581,7 +579,7 @@ export const createGameScene = (config) => {
       this.sentenceText = this.add
         .text(0, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.032, 26, 34),
+          fontSize: 34,
           color: "#111827",
           align: "center",
           wordWrap: { width: sentenceCardWidth - 40 },
@@ -613,12 +611,7 @@ export const createGameScene = (config) => {
       this.feedbackGroup.setAlpha(0);
       this.feedbackGroup.setDepth(9);
 
-      const feedbackPanel = createRoundedPanel(
-        this,
-        clamp(width * 0.42, 260, 420),
-        120,
-        28
-      );
+      const feedbackPanel = createRoundedPanel(this, 420, 120, 28);
       feedbackPanel.update({
         fillColor: 0xffffff,
         fillAlpha: 0.98,
@@ -632,7 +625,7 @@ export const createGameScene = (config) => {
       this.feedbackLabel = this.add
         .text(20, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.026, 22, 30),
+          fontSize: 30,
           color: "#1f2933",
           fontStyle: "bold",
         })
@@ -657,7 +650,7 @@ export const createGameScene = (config) => {
       this.countdownText = this.add
         .text(0, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.12, 80, 140),
+          fontSize: 140,
           color: "#ffffff",
           fontStyle: "bold",
         })
@@ -679,12 +672,7 @@ export const createGameScene = (config) => {
 
       this.summaryOverlay = this.add.container(width / 2, height / 2);
       this.summaryOverlay.setDepth(19);
-      const summaryPanel = createRoundedPanel(
-        this,
-        clamp(width * 0.68, 520, 760),
-        clamp(height * 0.6, 420, 520),
-        36
-      );
+      const summaryPanel = createRoundedPanel(this, 760, 432, 36);
       summaryPanel.update({
         fillColor: 0xffffff,
         fillAlpha: 0.98,
@@ -697,7 +685,7 @@ export const createGameScene = (config) => {
       this.summaryTitle = this.add
         .text(0, -120, "Great Job!", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.04, 32, 42),
+          fontSize: 42,
           color: "#1f2933",
           fontStyle: "bold",
         })
@@ -706,17 +694,17 @@ export const createGameScene = (config) => {
       this.summaryBody = this.add
         .text(0, -40, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.028, 22, 28),
+          fontSize: 28,
           color: "#1f2933",
           align: "center",
-          wordWrap: { width: clamp(width * 0.5, 360, 540) },
+          wordWrap: { width: 540 },
         })
         .setOrigin(0.5);
 
-      const replayWidth = clamp(width * 0.26, 240, 320);
+      const replayWidth = 320;
       const replayHeight = 86;
-      const buttonRowY = clamp(height * 0.22, 90, 150);
-      const buttonOffset = clamp(width * 0.22, 120, 180);
+      const buttonRowY = 150;
+      const buttonOffset = 180;
 
       const replayContainer = this.add.container(-buttonOffset, buttonRowY);
       const replayPanel = createRoundedPanel(
@@ -735,7 +723,7 @@ export const createGameScene = (config) => {
       const replayLabel = this.add
         .text(0, 0, "Replay", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.028, 22, 28),
+          fontSize: 28,
           color: "#ffffff",
           fontStyle: "bold",
         })
@@ -786,7 +774,7 @@ export const createGameScene = (config) => {
       const exitLabel = this.add
         .text(0, 0, "Exit", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.028, 22, 28),
+          fontSize: 28,
           color: "#ffffff",
           fontStyle: "bold",
         })
@@ -851,8 +839,8 @@ export const createGameScene = (config) => {
     }
 
     createCenterStartButton(width, height) {
-      const buttonWidth = clamp(width * 0.4, 480, 520);
-      const buttonHeight = clamp(height * 0.28, 200, 280);
+      const buttonWidth = 512;
+      const buttonHeight = 202;
 
       this.startButton = this.createBarButton(
         "Start",
@@ -1093,7 +1081,7 @@ export const createGameScene = (config) => {
       const text = this.add
         .text(0, 0, label, {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.3, 72, 100),
+          fontSize: 100,
           color: "#ffffff",
           fontStyle: "bold",
         })
@@ -1258,13 +1246,9 @@ export const createGameScene = (config) => {
     createOptionButtons(width, height, maxOptions) {
       const visibleCount = Math.max(maxOptions || 0, 2);
       const useCompactLayout = visibleCount >= 3;
-      const buttonWidth = clamp(
-        width * (useCompactLayout ? 0.24 : 0.32),
-        useCompactLayout ? 220 : 260,
-        useCompactLayout ? 320 : 420
-      );
-      const buttonHeight = clamp(height * 0.16, 120, 140);
-      const baseY = height - clamp(height * 0.18, 140, 180);
+      const buttonWidth = useCompactLayout ? 307 : 410;
+      const buttonHeight = 120;
+      const baseY = height - 140;
 
       this.optionButtonMetrics = {
         buttonWidth,
@@ -1315,7 +1299,7 @@ export const createGameScene = (config) => {
         const text = this.add
           .text(0, 0, "", {
             fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-            fontSize: clamp(width * 0.03, 26, 32),
+            fontSize: 32,
             color: "#475569",
             align: "center",
             fontStyle: "bold",
@@ -1433,10 +1417,10 @@ export const createGameScene = (config) => {
         this.scale.gameSize?.height ??
         this.sys.game.config.height;
       const metrics = this.optionButtonMetrics || {};
-      const baseY = metrics.baseY ?? height - clamp(height * 0.18, 140, 180);
+      const baseY = metrics.baseY ?? height - 140;
 
       let spacing = 0;
-      spacing = clamp(width * 0.6, 300, 400);
+      spacing = 400;
 
       const positions = [];
       const centerIndex = (total - 1) / 2;
