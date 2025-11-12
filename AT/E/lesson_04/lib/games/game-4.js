@@ -1166,8 +1166,8 @@ export const createMatchingGameScene = (config = {}) => {
       const end = new Phaser.Math.Vector2();
       keywordNode.container
         .getWorldTransformMatrix()
-        .transformPoint(isLeft ? 180 : -180, 0, start);
-      imageNode.container.getWorldTransformMatrix().transformPoint(isLeft ? -90 : 90, 0, end);
+        .transformPoint(isLeft ? 175 : -175, 0, start);
+      imageNode.container.getWorldTransformMatrix().transformPoint(isLeft ? -85 : 85, 0, end);
       graphics.beginPath();
       graphics.moveTo(start.x, start.y);
       graphics.lineTo(end.x, end.y);
