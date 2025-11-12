@@ -5,11 +5,61 @@ import {
   normalizeExamples,
   normalizeQuestions,
 } from "./games/game-1.js";
+import {
+  createMatchingGameScene,
+  normalizeMatchingPairs,
+} from "./games/game-4.js";
 
 const GAME_INSTRUCTION_TEXT =
   "Press Start to play. Listen to each sentence and choose the correct answer before time runs out.";
+const MATCHING_INSTRUCTION_TEXT =
+  "Match each keyword with its picture. Select a word on the left, then connect it to the correct image on the right.";
 
 const trimText = (value) => (typeof value === "string" ? value.trim() : "");
+const GAME_MODES = {
+  QUIZ: "quiz",
+  MATCHING: "matching",
+};
+
+const getPhaser = () => window?.Phaser;
+
+const isMatchingEntry = (entry) => {
+  if (!entry || typeof entry !== "object") {
+    return false;
+  }
+  const hasKeyword =
+    typeof entry.keyword === "string" && entry.keyword.trim().length > 0;
+  const hasImage =
+    typeof entry.image === "string" && entry.image.trim().length > 0;
+  const hasQuestionFields =
+    typeof entry.sentence === "string" ||
+    Array.isArray(entry.options) ||
+    typeof entry.answer === "string";
+  return hasKeyword && hasImage && !hasQuestionFields;
+};
+
+const determineGameMode = (entries = []) => {
+  const sample = entries.find(
+    (item) => item && typeof item === "object" && !Array.isArray(item)
+  );
+  if (sample && isMatchingEntry(sample)) {
+    return GAME_MODES.MATCHING;
+  }
+  return GAME_MODES.QUIZ;
+};
+
+const resolveContentList = (value, fallback = []) => {
+  if (Array.isArray(value?.content)) {
+    return value.content;
+  }
+  if (Array.isArray(value?.questions)) {
+    return value.questions;
+  }
+  if (Array.isArray(value)) {
+    return value;
+  }
+  return fallback;
+};
 
 const deriveSubActivityLetter = (key, index = 0) => {
   if (typeof key === "string") {
@@ -27,12 +77,13 @@ const deriveSubActivityLetter = (key, index = 0) => {
   return "";
 };
 
-const buildSlideId = (activityNumber, letter = "") => {
+const buildSlideId = (activityNumber, letter = "", mode = "game1") => {
   const suffix = letter ? `-${letter}` : "";
+  const modeSuffix = mode ? `-${mode}` : "";
   if (activityNumber) {
-    return `activity-${activityNumber}${suffix}-game1`;
+    return `activity-${activityNumber}${suffix}${modeSuffix}`;
   }
-  return `activity${suffix}-game1`;
+  return `activity${suffix}${modeSuffix}`;
 };
 
 const formatActivityLabel = (activityNumber, letter = "") => {
@@ -112,8 +163,6 @@ const createGameSlide = (gameConfig = {}, context = {}) => {
   }
 
   let gameInstance = null;
-
-  const getPhaser = () => window?.Phaser;
 
   const startGame = () => {
     const PhaserLib = getPhaser();
@@ -200,13 +249,166 @@ const createGameSlide = (gameConfig = {}, context = {}) => {
   };
 };
 
+const createMatchingSlide = (gameConfig = {}, context = {}) => {
+  const { slideId, activityLabel, focusText, includeFocus } = context;
+
+  const slide = document.createElement("section");
+  slide.className = "slide game-slide";
+  if (slideId) {
+    slide.id = slideId;
+  }
+
+  const title = document.createElement("h2");
+  title.textContent = trimText(activityLabel) || "Matching Game";
+  slide.appendChild(title);
+
+  if (includeFocus && focusText) {
+    insertFocusElement(title, focusText);
+  }
+
+  const instruction = document.createElement("p");
+  instruction.className = "slide__instruction";
+  instruction.textContent = MATCHING_INSTRUCTION_TEXT;
+  slide.appendChild(instruction);
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "game1-shell game4-shell";
+
+  const stage = document.createElement("div");
+  stage.className = "game1-stage game4-stage";
+  const stageId = `game4-stage-${Math.random().toString(36).slice(2, 8)}`;
+  stage.id = stageId;
+
+  const status = document.createElement("p");
+  status.className = "game1-status game4-status is-visible";
+  status.textContent = "Loading game...";
+
+  wrapper.append(stage, status);
+  slide.appendChild(wrapper);
+
+  const backgroundImage =
+    gameConfig?.bg_image ?? gameConfig?.backgroundImage ?? null;
+  const pairs = normalizeMatchingPairs(
+    Array.isArray(gameConfig?.pairs) ? gameConfig.pairs : gameConfig?.content
+  );
+  const feedbackAssets = cloneFeedbackAssets();
+
+  if (!pairs.length) {
+    status.textContent = "The matching content is not ready yet.";
+    return {
+      id: slideId,
+      element: slide,
+      onEnter: () => {},
+      onLeave: () => {},
+    };
+  }
+
+  let gameInstance = null;
+
+  const startGame = () => {
+    const PhaserLib = getPhaser();
+    if (!PhaserLib) {
+      status.textContent =
+        "Phaser library is missing. Please reload the lesson.";
+      status.classList.add("is-error");
+      return;
+    }
+
+    if (gameInstance) {
+      gameInstance.destroy(true);
+      gameInstance = null;
+      stage.innerHTML = "";
+    }
+
+    status.textContent = "Loading game...";
+    status.classList.remove("is-error");
+    status.classList.remove("is-transparent");
+    status.classList.add("is-visible");
+
+    const GameScene = createMatchingGameScene({
+      pairs,
+      backgroundImage,
+      feedbackAssets,
+      statusElement: status,
+      onRoundUpdate: (info = {}) => {
+        const completedMatches = info.completedMatches ?? 0;
+        const total = info.total ?? pairs.length;
+        if (info.completed) {
+          status.textContent = `Matches complete - ${info.correctMatches ?? completedMatches}/${
+            info.total ?? total
+          } correct`;
+          status.classList.remove("is-transparent");
+        } else {
+          status.textContent = `Match progress: ${completedMatches}/${total}`;
+          status.classList.add("is-transparent");
+        }
+        status.classList.add("is-visible");
+      },
+    });
+
+    gameInstance = new PhaserLib.Game({
+      type: PhaserLib.AUTO,
+      parent: stageId,
+      backgroundColor: "#f3f6fb",
+      scale: {
+        mode: PhaserLib.Scale.FIT,
+        autoCenter: PhaserLib.Scale.CENTER_BOTH,
+        width: 1280,
+        height: 720,
+        fullscreenTarget: stage,
+        expandParent: true,
+      },
+      scene: GameScene,
+    });
+    if (gameInstance?.scale) {
+      gameInstance.scale.fullscreenTarget = stage;
+    }
+  };
+
+  const destroyGame = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+    if (gameInstance) {
+      gameInstance.destroy(true);
+      gameInstance = null;
+      stage.innerHTML = "";
+    }
+    status.textContent = "Game paused. Reopen this slide to play again.";
+    status.classList.remove("is-transparent");
+    status.classList.remove("is-error");
+    status.classList.add("is-visible");
+  };
+
+  return {
+    id: slideId,
+    element: slide,
+    onEnter: startGame,
+    onLeave: destroyGame,
+  };
+};
+
 const collectGameActivities = (activityData = {}) => {
   const content = activityData?.content;
   const baseOptions = activityData?.options;
   const baseExamples = activityData?.examples;
-  const legacyQuestions = Array.isArray(content) ? content : [];
   const defaultBackground =
     activityData?.bg_image ?? activityData?.backgroundImage ?? null;
+
+  const buildActivityPayload = (value, fallbackEntries = []) => {
+    const entries = resolveContentList(value, fallbackEntries);
+    const mode = determineGameMode(entries);
+    return {
+      mode,
+      data: {
+        options: value?.options ?? baseOptions,
+        examples: value?.examples ?? baseExamples,
+        content: entries,
+        pairs: entries,
+        bg_image: value?.bg_image ?? value?.backgroundImage ?? defaultBackground,
+      },
+    };
+  };
 
   if (content && typeof content === "object" && !Array.isArray(content)) {
     return Object.entries(content)
@@ -215,35 +417,31 @@ const collectGameActivities = (activityData = {}) => {
           return null;
         }
         const letter = deriveSubActivityLetter(key, index);
-        return {
-          key,
-          letter,
-          data: {
-            options: value.options ?? baseOptions,
-            examples: value.examples ?? baseExamples,
-            content: Array.isArray(value.content)
-              ? value.content
-              : Array.isArray(value.questions)
-              ? value.questions
-              : legacyQuestions,
-            bg_image: value.bg_image ?? value.backgroundImage ?? defaultBackground,
-          },
-        };
+        const activity = buildActivityPayload(value);
+        return activity
+          ? {
+              key,
+              letter,
+              mode: activity.mode,
+              data: activity.data,
+            }
+          : null;
       })
       .filter(Boolean);
   }
 
-  if (legacyQuestions.length) {
+  const legacyEntries = resolveContentList(content);
+  if (legacyEntries.length) {
+    const activity = buildActivityPayload(
+      { content: legacyEntries },
+      legacyEntries
+    );
     return [
       {
         key: "activity_a",
         letter: "a",
-        data: {
-          options: baseOptions,
-          examples: baseExamples,
-          content: legacyQuestions,
-          bg_image: defaultBackground,
-        },
+        mode: activity.mode,
+        data: activity.data,
       },
     ];
   }
@@ -261,7 +459,7 @@ export const buildInteractive1Slides = (activityData = {}, context = {}) => {
       createGameSlide(
         { content: [] },
         {
-          slideId: buildSlideId(activityNumber, ""),
+          slideId: buildSlideId(activityNumber, "", "game1"),
           activityLabel: formatActivityLabel(activityNumber, ""),
           focusText,
           includeFocus: Boolean(focusText),
@@ -270,12 +468,24 @@ export const buildInteractive1Slides = (activityData = {}, context = {}) => {
     ];
   }
 
-  return activities.map((activity, index) =>
-    createGameSlide(activity.data, {
-      slideId: buildSlideId(activityNumber, activity.letter),
+  return activities.map((activity, index) => {
+    const mode =
+      activity.mode === GAME_MODES.MATCHING
+        ? GAME_MODES.MATCHING
+        : GAME_MODES.QUIZ;
+    const slideContext = {
+      slideId: buildSlideId(
+        activityNumber,
+        activity.letter,
+        mode === GAME_MODES.MATCHING ? "game4" : "game1"
+      ),
       activityLabel: formatActivityLabel(activityNumber, activity.letter),
       focusText,
       includeFocus: Boolean(focusText) && index === 0,
-    })
-  );
+    };
+    if (mode === GAME_MODES.MATCHING) {
+      return createMatchingSlide(activity.data, slideContext);
+    }
+    return createGameSlide(activity.data, slideContext);
+  });
 };

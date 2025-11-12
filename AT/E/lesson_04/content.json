@@ -232,32 +232,32 @@
         "content": [
           {
             "id": "g_1",
-            "image": "assets/img/game/a_3_g_1.jpeg",
+            "image": "assets/img/a_3_g_1.jpeg",
             "keyword" : "Conical"
           },
           {
             "id": "g_2",
-            "image": "assets/img/game/a_3_g_2.jpeg",
+            "image": "assets/img/a_3_g_2.jpeg",
             "keyword" : "Cylindrical"
           },
           {
             "id": "g_3",
-            "image": "assets/img/game/a_3_g_3.jpeg",
+            "image": "assets/img/a_3_g_3.png",
             "keyword" : "Spherical"
           },
           {
             "id": "g_4",
-            "image": "assets/img/game/a_3_g_4.jpeg",
+            "image": "assets/img/a_3_g_4.jpeg",
             "keyword" : "Oval"
           },
           {
             "id": "g_5",
-            "image": "assets/img/game/a_3_g_5.png",
+            "image": "assets/img/a_3_g_5.jpg",
             "keyword" : "Rectangular"
           },
           {
             "id": "g_6",
-            "image": "assets/img/game/a_3_g_6.jpeg",
+            "image": "assets/img/a_3_g_6.jpeg",
             "keyword" : "Square"
           }
         ]
