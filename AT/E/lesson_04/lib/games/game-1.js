@@ -53,6 +53,10 @@ export const normalizeExamples = (rawExamples = [], fallbackOptions) => {
         typeof item?.audio === "string" && item.audio.trim().length
           ? item.audio.trim()
           : null;
+      const image =
+        typeof item?.image === "string" && item.image.trim().length
+          ? item.image.trim()
+          : null;
       const options = sanitizeOptions(item?.options, defaultOptions);
       const answerCandidate =
         typeof item?.answer === "string" ? item.answer.trim() : "";
@@ -67,6 +71,7 @@ export const normalizeExamples = (rawExamples = [], fallbackOptions) => {
         answer,
         audio,
         audioKey,
+        image,
         options,
       };
     })
@@ -106,6 +111,10 @@ export const normalizeQuestions = (rawQuestions = [], fallbackOptions) => {
         typeof item?.audio === "string" && item.audio.trim().length
           ? item.audio.trim()
           : null;
+      const image =
+        typeof item?.image === "string" && item.image.trim().length
+          ? item.image.trim()
+          : null;
       const options = sanitizeOptions(item?.options, defaultOptions);
       const answerCandidate =
         typeof item?.answer === "string" ? item.answer.trim() : "";
@@ -120,6 +129,7 @@ export const normalizeQuestions = (rawQuestions = [], fallbackOptions) => {
         answer,
         audio,
         audioKey,
+        image,
         options,
       };
     })
@@ -258,8 +268,16 @@ export const createGameScene = (config) => {
         const answer = entryOptions.includes(answerCandidate)
           ? answerCandidate
           : entryOptions[0];
+        const identifier = entry?.id ?? `entry_${Math.random().toString(36).slice(2, 8)}`;
+        const imageSrc =
+          typeof entry.image === "string" && entry.image.trim().length
+            ? entry.image.trim()
+            : null;
         return {
           ...entry,
+          id: identifier,
+          image: imageSrc,
+          imageKey: imageSrc ? `sentence_image_${identifier}` : null,
           answer,
           options: entryOptions,
         };
@@ -363,6 +381,9 @@ export const createGameScene = (config) => {
       [...this.examples, ...this.questions].forEach((item) => {
         if (item.audioKey && item.audio) {
           this.load.audio(item.audioKey, item.audio);
+        }
+        if (item.imageKey && item.image) {
+          this.load.image(item.imageKey, item.image);
         }
       });
       if (this.feedbackAssets.correctAudio) {
@@ -575,6 +596,11 @@ export const createGameScene = (config) => {
         lineWidth: 4,
       });
       this.sentencePanel = sentencePanel;
+      this.sentenceImageMaxWidth = sentenceCardWidth - 160;
+      this.sentenceImageMaxHeight = 150;
+      this.sentenceImage = this.add.image(0, -30, "");
+      this.sentenceImage.setVisible(false);
+      this.sentenceImage.setActive(false);
 
       this.sentenceText = this.add
         .text(0, 0, "", {
@@ -588,6 +614,7 @@ export const createGameScene = (config) => {
 
       this.sentenceCard = this.add.container(-sentenceCardWidth, height / 2, [
         sentencePanel.graphics,
+        this.sentenceImage,
         this.sentenceText,
       ]);
       this.gameUiElements.push(this.sentenceCard);
@@ -1558,6 +1585,7 @@ export const createGameScene = (config) => {
       this.sentenceCard.x = -width;
       this.sentenceCard.setAlpha(1);
       this.sentenceText.setText(entry.sentence);
+      this.updateSentenceMedia(entry);
       const optionLabels =
         Array.isArray(entry?.options) && entry.options.length
           ? entry.options
@@ -1600,6 +1628,36 @@ export const createGameScene = (config) => {
           this.playSentenceAudio(entry, { onComplete: afterAudio });
         },
       });
+    }
+
+    updateSentenceMedia(entry) {
+      if (!this.sentenceImage || !this.sentenceText) {
+        return;
+      }
+      const textureExists =
+        entry?.imageKey &&
+        entry?.image &&
+        typeof this.textures?.exists === "function" &&
+        this.textures.exists(entry.imageKey);
+      if (!textureExists) {
+        this.sentenceImage.setVisible(false);
+        this.sentenceImage.setActive(false);
+        this.sentenceText.setY(0);
+        return;
+      }
+      this.sentenceImage.setTexture(entry.imageKey);
+      this.sentenceImage.setActive(true);
+      this.sentenceImage.setVisible(true);
+      this.sentenceImage.setAlpha(1);
+      this.sentenceImage.setScale(1);
+      const imgWidth = this.sentenceImage.width || 1;
+      const imgHeight = this.sentenceImage.height || 1;
+      const maxWidth = this.sentenceImageMaxWidth || 400;
+      const maxHeight = this.sentenceImageMaxHeight || 150;
+      const scale = Math.min(1, maxWidth / imgWidth, maxHeight / imgHeight);
+      this.sentenceImage.setScale(scale);
+      this.sentenceImage.setY(-40);
+      this.sentenceText.setY(60);
     }
 
     playSentenceAudio(entry, options = {}) {
