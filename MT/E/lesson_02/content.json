@@ -1,0 +1,551 @@
+{
+  "meta": {
+    "lesson_no": 2,
+    "level": "Elementary",
+    "section": "Mechanical Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Short /ɪ/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": [
+      {
+        "id": "p_1",
+        "word_text": "mach'i'ne",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "The mach'i'ne is in the workshop.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.jpeg"
+      },
+      {
+        "id": "p_2",
+        "word_text": "st'ee'l",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "This part is made of st'ee'l.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "t'ee'th",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": " The gear t'ee'th are too wide",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.jpeg"
+      },
+      {
+        "id": "p_4",
+        "word_text": "'s'ea'ling ",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "S'ea'ling this joint isn’t easy.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS-1",
+    "focus": "Verb ‘to be’ and preposition ‘on’",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_a.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "tables": [
+      [
+        ["Where", "am", "I?"],
+        [null, "is", "he?"],
+        [null, null, "she?"],
+        [null, null, "it?"],
+        [null, "are", "we?"],
+        [null, null, "you?"],
+        [null, null, "they?"]
+      ],
+      [
+        ["I am", "I'm", "in the kitchen."],
+        ["He is", "He's", null],
+        ["She is", "She's", null],
+        ["It is", "It's", null],
+        ["We are", "We're", null],
+        ["You are", "You're", null],
+        ["They are", "They're", null]
+      ]
+    ],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "Where is the textbook?",
+        "text_b": " It is in the drawer.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.jpeg",
+        "text_a": "Where is the pen?",
+        "text_b": " It is in the pencil case.",
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_3.jpeg",
+        "text_a": "Where is the manager?",
+        "text_b": "He is in the office.",
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "Where is the broken drill press?",
+        "text_b": "It is in the engineering workshop.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "engineering workshop"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.jpeg",
+        "text_a": "Where is the adjustable torque wrench?",
+        "text_b": "It is in the grey cotton bag.",
+        "audio_a": "assets/audio/a_2_d_2_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_b.mp3",
+        "keyword": "grey cotton bag"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "Where are the protective welding gloves?",
+        "text_b": "They are in the safety locker.",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_b.mp3",
+        "keyword": "safety locker"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.jpeg",
+        "text_a": "Where are the large steel clamps?",
+        "text_b": "They are in the chest of drawers.",
+        "audio_a": "assets/audio/a_2_d_4_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_b.mp3",
+        "keyword": "chest of drawers"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.jpeg",
+        "text_a": "Where is the experienced mechanic?",
+        "text_b": "He is in the fabrication section.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_b.mp3",
+        "keyword": "fabrication section"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.jpeg",
+        "text_a": " Where are the new trainee technicians?",
+        "text_b": "They are in the maintenance bay.",
+        "audio_a": "assets/audio/a_2_d_6_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_b.mp3",
+        "keyword": "maintenance bay"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "GAME-1",
+    "bg_image": "assets/img/game/bg-11.jpg",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
+        "audio": "assets/audio/a_3_i_a.mp3"
+      }
+    },
+    "examples": [
+      {
+        "id": "e_1",
+        "sentence": "The correct clearance between piston and cylinder is 0.02–0.04 millimeters.\n The clearance in this engine is 0.07 millimeters.\n The clearance in this engine is …………",
+        "audio": "assets/audio/a_3_ex_1.mp3",
+        "options": ["Too wide", "Correct", "Too narrow"],
+        "answer": "Too narrow"
+      }
+    ],
+    "content": [
+      {
+        "id": "g_1",
+        "sentence": "The correct torque for tightening this bolt is 50–55 Newton meters.\n The torque on this bolt is 45 Newton meters.\n The torque on this bolt is …………",
+        "audio": "assets/audio/a_3_g_1.mp3",
+        "options": ["Too loose", "Correct", "Too tight"],
+        "answer": "Too loose"
+      },
+      {
+        "id": "g_2",
+        "sentence": "The standard thickness of the brake pad is 10–12 millimeters.\n The thickness of this brake pad is 8 millimeters.\n The thickness of this brake pad is …………………",
+        "audio": "assets/audio/a_3_g_2.mp3",
+        "options": ["Too thin", "Correct", "Too thick"],
+        "answer": "Too thin"
+      },
+      {
+        "id": "g_3",
+        "sentence": "The acceptable oil pressure in the hydraulic system is 120–140 bar.\n The oil pressure in this system is 150 bar.\n The oil pressure in this system is ……………",
+        "audio": "assets/audio/a_3_g_3.mp3",
+       "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_4",
+        "sentence": "The standard diameter of the drill bit for this task is 8 millimeters.\n The diameter of this drill bit is 6 millimeters.\n The diameter of this drill bit is …………………………",
+        "audio": "assets/audio/a_3_g_4.mp3",
+        "options": ["Too small", "Correct", "Too large"],
+        "answer": "Too small"
+      },
+      {
+        "id": "g_5", 
+        "sentence": "The ideal running speed of the lathe machine is 1200–1400 revolutions per minute.\n The running speed of this lathe is 1000 revolutions per minute.\n The running speed of this lathe is………………………",
+        "audio": "assets/audio/a_3_g_5.mp3",
+        "options": ["Too slow", "Correct", "Too fast"],
+        "answer": "Too slow"
+      },
+      {
+        "id": "g_6",
+        "sentence": "The safe pressure for compressed air lines is 6–8 bar.\n The pressure in this air line is 10 bar.\n The pressure in this air line is……………………………………….",
+        "audio": "assets/audio/a_3_g_6.mp3",
+        "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too high"
+      },
+      {
+        "id": "g_7",
+        "sentence": "The recommended length of the connecting rod is 145–150 millimeters.\n The length of this connecting rod is 152 millimeters.\n The length of this connecting rod is ……………………………………",
+        "audio": "assets/audio/a_3_g_7.mp3",
+        "options": ["Too long", "Correct", "Too short"],
+        "answer": "Too long"
+      },
+      {
+        "id": "g_8",
+        "sentence": "The standard weight of the flywheel is 15 kilograms.\n The flywheel in this machine is 13 kilograms.\n The flywheel in this machine is ………………………………",
+        "audio": "assets/audio/a_3_g_8.mp3",
+        "options": ["Too heavy", "Correct", "Too light"],
+        "answer": "Too light"
+      },
+      {
+        "id": "g_9",
+        "sentence": "The correct coolant temperature for this engine is 80–90 degrees Celsius.\n The coolant temperature in this engine is 70 degrees Celsius.\n The coolant temperature in this engine is ……………………………….",
+        "audio": "assets/audio/a_3_g_9.mp3",
+       "options": ["Too low", "Correct", "Too high"],
+        "answer": "Too low"
+      },
+      {
+        "id": "g_10",
+        "sentence": "The acceptable vibration level of the machine is below 3 millimeters per second.\n The vibration level of this machine is 5 millimeters per second.\n The vibration level of this machine is ……………………",
+        "audio": "assets/audio/a_3_g_10.mp3",
+        "options": ["Too high", "Correct", "Too low"],
+        "answer": "Too high"
+      }
+    ]
+  },
+  "activity_4": {
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What is the torque on the main bolt?",
+            "answer": "50 Newton meters",
+            "options": [
+              "45 Newton meters",
+              "50 Newton meters",
+              "55 Newton meters"
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": "What is the correct torque range for the bolt?",
+            "answer": "50–55 Newton meters",
+            "options": [
+              "40–45 Newton meters",
+              "50–55 Newton meters",
+              "60–65 Newton meters"
+            ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "What is the thickness of the brake pad?",
+            "answer": "10 millimeters",
+            "options": ["12 millimeters", " 10 millimeters", "8 millimeters"]
+          },
+          {
+            "id": "l_4_4",
+            "question": " What is the actual reading  of the oil pressure gauge?",
+            "answer": "130 bar",
+            "options": [
+              "120 bar",
+              "130 bar",
+              "140 bar"
+            ]
+          },
+          {
+            "id": "l_4_5",
+            "question": "Where is the maintenance logbook kept?",
+            "answer": "In the service office",
+            "options": [
+              " In the workshop office",
+              "In the tool store",
+              "In the engine service room"
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "I am checking the torque on the main bolt.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "I am checking the clearance of the piston.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "I am checking the diameter of the drill bit.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "I am checking the vibration of the machine.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "I am checking the pressure of the air line.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The bolt is about 50 Newton meters.The bolt is about 5 Newton meters too loose.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The brake pad is about 10 millimeters.The brake pad is about 2 millimeters too thin.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The connecting rod is about 150 millimeters.The connecting rod is about 2 millimeters too long.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The oil pressure is about 120 bar.The oil pressure is about 10 bar too high.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The coolant is about 85 degrees.The coolant is about 5 degrees too hot.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "The piston rod is about 145 millimeters.The piston rod is about 3 millimeters too long.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "The clearance is about 0.25 millimeters.The clearance is about 0.05 millimeters too wide.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "r_4_1",
+          "text": "I am checking the torque on the main bolt.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "I am checking the clearance of the piston.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "I am checking the diameter of the drill bit.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "I am checking the vibration of the machine.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "I am checking the pressure of the air line.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "The bolt is about 50 Newton meters.The bolt is about 5 Newton meters too loose.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "The brake pad is about 10 millimeters.The brake pad is about 2 millimeters too thin.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_8",
+          "text": "The connecting rod is about 150 millimeters.The connecting rod is about 2 millimeters too long.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "The oil pressure is about 120 bar.The oil pressure is about 10 bar too high.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "The coolant is about 85 degrees.The coolant is about 5 degrees too hot.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+         {
+          "id": "r_4_11",
+          "text": "The piston rod is about 145 millimeters.The piston rod is about 3 millimeters too long.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+         {
+          "id": "r_4_12",
+          "text": "The clearance is about 0.25 millimeters.The clearance is about 0.05 millimeters too wide.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "r_4_1",
+          "text": "I am checking the torque on the main bolt.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "r_4_2",
+          "text": "I am checking the clearance of the piston.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "r_4_3",
+          "text": "I am checking the diameter of the drill bit.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "r_4_4",
+          "text": "I am checking the vibration of the machine.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "r_4_5",
+          "text": "I am checking the pressure of the air line.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "r_4_6",
+          "text": "The bolt is about 50 Newton meters.The bolt is about 5 Newton meters too loose.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "r_4_7",
+          "text": "The brake pad is about 10 millimeters.The brake pad is about 2 millimeters too thin.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "r_4_8",
+          "text": "The connecting rod is about 150 millimeters.The connecting rod is about 2 millimeters too long.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "r_4_9",
+          "text": "The oil pressure is about 120 bar.The oil pressure is about 10 bar too high.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "r_4_10",
+          "text": "The coolant is about 85 degrees.The coolant is about 5 degrees too hot.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "r_4_11",
+          "text": "The piston rod is about 145 millimeters.The piston rod is about 3 millimeters too long.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "r_4_12",
+          "text": "The clearance is about 0.25 millimeters.The clearance is about 0.05 millimeters too wide.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        }
+      ]
+    }
+  }
+}
