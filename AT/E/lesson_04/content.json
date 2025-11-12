@@ -370,8 +370,8 @@
             "words": "project lens / rectangular?",
             "txt_question": "Is the project lens rectangular?",
             "txt_answer": "No, it isn’t . It is round.",
-            "audio_question": "assets/audio/a_3_c_q_1.mp3",
-            "audio_answer": "assets/audio/a_3_c_g_a.mp3",
+            "audio_question": "assets/audio/a_3_c_g_q_1.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_1.mp3",
             "image": "assets/img/a_3_b_g_9.jpg"
           },
           {
@@ -379,8 +379,8 @@
             "words": "door / oval?",
             "txt_question": "Is the door oval?",
             "txt_answer": "No, it isn’t. It is rectangular.",
-            "audio_question": "assets/audio/a_3_c_q_2.mp3",
-            "audio_answer": "assets/audio/a_3_c_a_2.mp3",
+            "audio_question": "assets/audio/a_3_c_g_q_2.mp3",
+            "audio_answer": "assets/audio/a_3_c_g_a_2.mp3",
             "image": "assets/img/a_3_a_g_5.jpg"
           },
           {
@@ -388,7 +388,7 @@
             "words": "lamp bulbs / rectangular?",
             "txt_question": "Are lamp bulbs rectangular?",
             "txt_answer": "No, they aren’t. They are spherical.",
-            "audio_question": "assets/audio/a_3_c_q_3.mp3",
+            "audio_question": "assets/audio/a_3_c_g_q_3.mp3",
             "audio_answer": "assets/audio/a_3_c_g_a_3.mp3",
             "image": "assets/img/a_3_b_g_6.jpg"
           },
