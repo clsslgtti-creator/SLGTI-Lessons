@@ -19,7 +19,9 @@ import {
 const GAME_INSTRUCTION_TEXT =
   "Press Start to play. Listen to each sentence and choose the correct answer before time runs out.";
 const MATCHING_INSTRUCTION_TEXT =
-  "Match each keyword with its picture. Select a word on the left, then connect it to the correct image on the right.";
+  "Match each keyword with its picture. Select a word and connect it to the correct image.";
+const PRACTICE_INSTRUCTION_TEXT =
+  "Press Start to practice. Use the highlighted words to build questions, then check the model question and answer.";
 
 const trimText = (value) => (typeof value === "string" ? value.trim() : "");
 const GAME_MODES = {
@@ -428,6 +430,11 @@ const createPracticeSlide = (gameConfig = {}, context = {}) => {
   if (includeFocus && focusText) {
     insertFocusElement(title, focusText);
   }
+
+  const instruction = document.createElement("p");
+  instruction.className = "slide__instruction";
+  instruction.textContent = PRACTICE_INSTRUCTION_TEXT;
+  slide.appendChild(instruction);
 
   const wrapper = document.createElement("div");
   wrapper.className = "game1-shell game5-shell";
