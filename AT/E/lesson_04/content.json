@@ -221,7 +221,7 @@
         "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
         "audio": "assets/audio/a_3_i_a.mp3"
       },
-       "activity_b": {
+      "activity_b": {
         "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
         "audio": "assets/audio/a_3_i_a.mp3"
       }
@@ -233,119 +233,111 @@
           {
             "id": "g_1",
             "image": "assets/img/a_3_g_1.jpeg",
-            "keyword" : "Conical"
+            "keyword": "Conical"
           },
           {
             "id": "g_2",
             "image": "assets/img/a_3_g_2.jpeg",
-            "keyword" : "Cylindrical"
+            "keyword": "Cylindrical"
           },
           {
             "id": "g_3",
             "image": "assets/img/a_3_g_3.png",
-            "keyword" : "Spherical"
+            "keyword": "Spherical"
           },
           {
             "id": "g_4",
             "image": "assets/img/a_3_g_4.jpeg",
-            "keyword" : "Oval"
+            "keyword": "Oval"
           },
           {
             "id": "g_5",
             "image": "assets/img/a_3_g_5.jpg",
-            "keyword" : "Rectangular"
+            "keyword": "Rectangular"
           },
           {
             "id": "g_6",
             "image": "assets/img/a_3_g_6.jpeg",
-            "keyword" : "Square"
+            "keyword": "Square"
           }
         ]
       },
       "activity_b": {
         "bg_image": "assets/img/game/bg-11.jpg",
-        "examples": [
-          {
-            "id": "e_1",
-            "sentence": "The correct tyre pressure is 32 psi.\nThis tyre has 38 psi.\nThe pressure is ……………….",
-            "audio": "assets/audio/a_3_ex_1.mp3",
-            "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high"
-          }
-        ],
         "content": [
           {
             "id": "g_1",
-            "sentence": "The normal range of the car engine temperature is 85–95 degrees Celsius.\nThe temperature of this engine is 100 degrees Celsius.\nThe temperature of this engine is …………….",
+            "sentence": "Is the hopper pan conical?",
             "audio": "assets/audio/a_3_g_1.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is."
           },
           {
             "id": "g_2",
-            "sentence": "The correct weight of the car battery is 12 kilograms.\n The weight of this battery is 12.5 kilograms.\n The weight of this battery is ……..",
+            "sentence": "Is the gas cylinder cylindrical?",
             "audio": "assets/audio/a_3_g_2.mp3",
-            "options": ["Too heavy", "Correct", "Too light"],
-            "answer": "Too heavy"
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is."
           },
           {
             "id": "g_3",
-            "sentence": "The acceptable tyre pressure is 30–32 PSI. \n The tyre pressure in this wheel is 28 PSI.\n The tyre pressure in this wheel is …………………",
+            "sentence": "Are the steering wheels circular?",
             "audio": "assets/audio/a_3_g_3.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low"
+            "options": ["Yes, they are.", "No, they aren’t."],
+            "answer": "Yes, they are."
           },
           {
             "id": "g_4",
-            "sentence": "The standard depth of tyre tread is 3–4 millimeters.\n The depth of this tyre tread is 2 millimeters.\n The depth of this tyre tread is …………..",
+            "sentence": "Is the fuel tank cap round?",
             "audio": "assets/audio/a_3_g_4.mp3",
-            "options": ["Too Shallow", "Correct", "Too deep"],
-            "answer": "Too Shallow"
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is."
           },
           {
             "id": "g_5",
-            "sentence": "The correct length of a fan belt is 90–95 centimeters.\n The length of this fan belt is 100 centimeters.\n The length of this fan belt is …………",
+            "sentence": "Is the plug socket square?",
             "audio": "assets/audio/a_3_g_5.mp3",
-            "options": ["Too short", "Correct", "Too long"],
-            "answer": "Too long"
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is."
           },
           {
             "id": "g_6",
-            "sentence": "The standard width of a brake pad is 8–9 centimeters.\n The width of this brake pad is 7 centimeters.\n The width of this brake pad is ……….",
+            "sentence": "Are  the lamp bulbs cubical?",
             "audio": "assets/audio/a_3_g_6.mp3",
-            "options": ["Too narrow", "Correct", "Too wide"],
-            "answer": "Too narrow"
+            "options": ["Yes, they are.", "No, they aren't."],
+            "answer": "No, they aren’t."
           },
           {
             "id": "g_7",
-            "sentence": "The correct oil content of the gearbox is 1.5–1.8 liters.\n The oil content of this gearbox is 2 liters.\n The oil content of this gearbox is ……………",
+            "sentence": "Is the window frame spherical?",
             "audio": "assets/audio/a_3_g_7.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "No, it isn't."
           },
           {
             "id": "g_8",
-            "sentence": "The safe tyre pressure for a van is 34–36 PSI.\n The tyre pressure of this van is 36 PSI. \n The tyre pressure of this van is  …………..",
+            "sentence": "Is the computer monitor oval?",
             "audio": "assets/audio/a_3_g_8.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Correct"
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "No, it isn't."
           },
           {
             "id": "g_9",
-            "sentence": "he recommended alignment angle is 0–2 degrees.\n The alignment angle of this wheel is 3 degrees.\n The alignment angle of this wheel is……….",
+            "sentence": "Is the projector lens round?",
             "audio": "assets/audio/a_3_g_9.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is."
           },
           {
             "id": "g_10",
-            "sentence": "The correct charging voltage of a car alternator is 13–14.5 volts.\n The charging voltage of this car alternator is 12 volts.\n The charging voltage of this car alternator is……….",
+            "sentence": "Is the mouse scroll wheel rectangular?",
             "audio": "assets/audio/a_3_g_10.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low"
+            "options": ["Yes, it is.", "No, it isn't."],
+            "answer": "Yes, it is."
           }
         ]
-      }
+      },
+      "activity_c": {}
     }
   },
   "activity_4": {
