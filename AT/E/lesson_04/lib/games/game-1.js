@@ -598,6 +598,8 @@ export const createGameScene = (config) => {
       this.sentencePanel = sentencePanel;
       this.sentenceImageMaxWidth = sentenceCardWidth - 160;
       this.sentenceImageMaxHeight = 150;
+      this.sentenceImagePadding = 10;
+      this.sentenceTextGap = 24;
       this.sentenceImage = this.add.image(0, -30, "");
       this.sentenceImage.setVisible(false);
       this.sentenceImage.setActive(false);
@@ -1656,8 +1658,14 @@ export const createGameScene = (config) => {
       const maxHeight = this.sentenceImageMaxHeight || 150;
       const scale = Math.min(1, maxWidth / imgWidth, maxHeight / imgHeight);
       this.sentenceImage.setScale(scale);
-      this.sentenceImage.setY(-40);
-      this.sentenceText.setY(60);
+      const displayHeight = imgHeight * scale;
+      const cardHeight = this.sentenceCardHeight || 230;
+      const padding = this.sentenceImagePadding ?? 10;
+      const topEdge = -cardHeight / 2;
+      const imageY = topEdge + padding + displayHeight / 2;
+      this.sentenceImage.setY(imageY);
+      const textGap = this.sentenceTextGap ?? 24;
+      this.sentenceText.setY(imageY + displayHeight / 2 + textGap);
     }
 
     playSentenceAudio(entry, options = {}) {
