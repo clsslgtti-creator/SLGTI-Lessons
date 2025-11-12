@@ -9,8 +9,6 @@ export const DEFAULT_FEEDBACK_ASSETS = {
 
 export const DEFAULT_BACKGROUND_IMAGE = "assets/img/game/bg-1.jpg";
 
-const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
-
 const shuffleArray = (list = []) => {
   const copy = Array.isArray(list) ? [...list] : [];
   for (let i = copy.length - 1; i > 0; i -= 1) {
@@ -34,10 +32,7 @@ const createTonePlayer = () => {
       oscillator.type = "triangle";
       oscillator.frequency.value = frequency;
       gain.gain.setValueAtTime(0.0001, context.currentTime);
-      gain.gain.exponentialRampToValueAtTime(
-        0.18,
-        context.currentTime + 0.02
-      );
+      gain.gain.exponentialRampToValueAtTime(0.18, context.currentTime + 0.02);
       gain.gain.exponentialRampToValueAtTime(
         0.0001,
         context.currentTime + durationMs / 1000
@@ -50,6 +45,235 @@ const createTonePlayer = () => {
         context.close().catch(() => {});
       });
     },
+  };
+};
+
+const PALETTE = {
+  primary: 0x1f6feb,
+  primaryDark: 0x1d4ed8,
+  primaryMuted: 0x93c5fd,
+  surface: 0xffffff,
+  slate: 0x0f172a,
+  success: 0x16a34a,
+  danger: 0xdc2626,
+};
+
+const KEYWORD_CARD_STYLES = {
+  base: {
+    fillColor: PALETTE.surface,
+    fillAlpha: 0.98,
+    strokeColor: PALETTE.primaryMuted,
+    strokeAlpha: 0.65,
+    lineWidth: 3,
+  },
+  hover: {
+    fillColor: 0xf8fafc,
+    fillAlpha: 1,
+    strokeColor: PALETTE.primaryMuted,
+    strokeAlpha: 0.85,
+    lineWidth: 3,
+  },
+  selected: {
+    fillColor: 0xdbeafe,
+    fillAlpha: 1,
+    strokeColor: PALETTE.primaryDark,
+    strokeAlpha: 0.95,
+    lineWidth: 3,
+  },
+  success: {
+    fillColor: 0xecfdf5,
+    fillAlpha: 1,
+    strokeColor: PALETTE.success,
+    strokeAlpha: 0.95,
+    lineWidth: 3,
+  },
+  error: {
+    fillColor: 0xfee2e2,
+    fillAlpha: 1,
+    strokeColor: PALETTE.danger,
+    strokeAlpha: 0.95,
+    lineWidth: 3,
+  },
+};
+
+const IMAGE_CARD_STYLES = {
+  base: {
+    fillColor: 0xffffff,
+    fillAlpha: 0.97,
+    strokeColor: PALETTE.primaryMuted,
+    strokeAlpha: 0.6,
+    lineWidth: 4,
+  },
+  hover: {
+    fillColor: 0xf8fafc,
+    fillAlpha: 1,
+    strokeColor: PALETTE.primaryDark,
+    strokeAlpha: 0.8,
+    lineWidth: 4,
+  },
+  success: {
+    fillColor: 0xecfdf5,
+    fillAlpha: 1,
+    strokeColor: PALETTE.success,
+    strokeAlpha: 0.9,
+    lineWidth: 4,
+  },
+  error: {
+    fillColor: 0xfee2e2,
+    fillAlpha: 1,
+    strokeColor: PALETTE.danger,
+    strokeAlpha: 0.9,
+    lineWidth: 4,
+  },
+};
+
+const createRoundedPanel = (
+  scene,
+  width,
+  height,
+  radius = 24,
+  initialStyle = {}
+) => {
+  const graphics = scene.add.graphics();
+  const state = {
+    fillColor: 0xffffff,
+    fillAlpha: 1,
+    strokeColor: 0x000000,
+    strokeAlpha: 0,
+    lineWidth: 0,
+    ...initialStyle,
+  };
+
+  const redraw = (style = {}) => {
+    Object.assign(state, style);
+    graphics.clear();
+    if (state.lineWidth > 0) {
+      graphics.lineStyle(state.lineWidth, state.strokeColor, state.strokeAlpha);
+    } else {
+      graphics.lineStyle();
+    }
+    graphics.fillStyle(state.fillColor, state.fillAlpha);
+    graphics.fillRoundedRect(-width / 2, -height / 2, width, height, radius);
+    if (state.lineWidth > 0) {
+      graphics.strokeRoundedRect(
+        -width / 2,
+        -height / 2,
+        width,
+        height,
+        radius
+      );
+    }
+  };
+
+  redraw();
+
+  return {
+    graphics,
+    update: redraw,
+    getStyle: () => ({ ...state }),
+  };
+};
+
+const createPrimaryButton = (
+  scene,
+  label,
+  width,
+  height,
+  { onClick, baseColor = PALETTE.primary, playTone, fontSize } = {}
+) => {
+  const baseColorObj = Phaser.Display.Color.IntegerToColor(baseColor);
+  const hoverColor = Phaser.Display.Color.GetColor(
+    Math.min(baseColorObj.red + 25, 255),
+    Math.min(baseColorObj.green + 25, 255),
+    Math.min(baseColorObj.blue + 25, 255)
+  );
+
+  const styles = {
+    base: {
+      fillColor: baseColor,
+      fillAlpha: 1,
+      strokeColor: baseColor,
+      strokeAlpha: 0.85,
+      lineWidth: 0,
+    },
+    hover: {
+      fillColor: hoverColor,
+      fillAlpha: 1,
+      strokeColor: baseColor,
+      strokeAlpha: 0.9,
+      lineWidth: 0,
+    },
+    disabled: {
+      fillColor: 0xa1a1aa,
+      fillAlpha: 1,
+      strokeColor: 0x71717a,
+      strokeAlpha: 0.8,
+      lineWidth: 0,
+    },
+  };
+
+  const panel = createRoundedPanel(scene, width, height, height / 2);
+  panel.update(styles.base);
+
+  const resolvedFontSize = Number.isFinite(fontSize) ? fontSize : height * 0.35;
+
+  const text = scene.add
+    .text(0, 0, label, {
+      fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+      fontSize: `${resolvedFontSize}px`,
+      color: "#ffffff",
+      fontStyle: "bold",
+      align: "center",
+    })
+    .setOrigin(0.5);
+
+  const container = scene.add.container(0, 0, [panel.graphics, text]);
+  container.setSize(width, height);
+  container.setDepth(10);
+  container.setInteractive({ useHandCursor: true });
+
+  const triggerTone = () => {
+    if (typeof playTone === "function") {
+      playTone();
+    }
+  };
+
+  container.on("pointerover", () => {
+    if (container.input?.enabled) {
+      panel.update(styles.hover);
+    }
+  });
+  container.on("pointerout", () => {
+    if (container.input?.enabled) {
+      panel.update(styles.base);
+    }
+  });
+  container.on("pointerdown", () => {
+    if (container.input?.enabled && typeof onClick === "function") {
+      triggerTone();
+      onClick();
+    }
+  });
+
+  const setEnabled = (state) => {
+    if (state) {
+      container.setInteractive({ useHandCursor: true });
+      panel.update(styles.base);
+      container.setAlpha(1);
+    } else {
+      container.disableInteractive();
+      panel.update(styles.disabled);
+      container.setAlpha(0.85);
+    }
+  };
+
+  return {
+    container,
+    text,
+    background: panel,
+    styles,
+    setEnabled,
+    setLabel: (value) => text.setText(value),
   };
 };
 
@@ -73,87 +297,6 @@ const createStatusController = (element) => {
 const sanitizeId = (value, fallback) => {
   const trimmed = typeof value === "string" ? value.trim() : "";
   return trimmed.length ? trimmed : fallback;
-};
-
-const createButton = (scene, config = {}) => {
-  const {
-    x = 0,
-    y = 0,
-    width = 220,
-    height = 68,
-    label = "Button",
-    onClick,
-  } = config;
-
-  const container = scene.add.container(x, y);
-  const shadow = scene.add.rectangle(6, 8, width, height, 0x0f172a, 0.18);
-  shadow.setOrigin(0.5);
-  shadow.setAngle(0.5);
-  const background = scene.add.rectangle(0, 0, width, height, 0x2563eb, 1);
-  background.setOrigin(0.5);
-  background.setStrokeStyle(3, 0x1e40af, 1);
-  const labelEl = scene.add
-    .text(0, 0, label, {
-      fontFamily: "'Outfit','Segoe UI',sans-serif",
-      fontSize: `${clamp(height * 0.4, 20, 26)}px`,
-      fontStyle: "700",
-      color: "#ffffff",
-      align: "center",
-    })
-    .setOrigin(0.5);
-
-  container.add([shadow, background, labelEl]);
-  container.setSize(width, height);
-  const hitArea = new Phaser.Geom.Rectangle(
-    -width / 2,
-    -height / 2,
-    width,
-    height
-  );
-  container.setInteractive(hitArea, Phaser.Geom.Rectangle.Contains);
-  if (container.input) {
-    container.input.cursor = "pointer";
-  }
-
-  let disabled = false;
-
-  container.on("pointerover", () => {
-    if (!disabled) {
-      container.setScale(1.02);
-    }
-  });
-  container.on("pointerout", () => {
-    container.setScale(1);
-  });
-  container.on("pointerup", () => {
-    if (disabled) {
-      return;
-    }
-    container.setScale(1);
-    if (typeof onClick === "function") {
-      onClick();
-    }
-  });
-
-  return {
-    container,
-    setEnabled(state) {
-      disabled = !state;
-      if (disabled) {
-        container.disableInteractive();
-        container.setAlpha(0.65);
-      } else {
-        container.setInteractive(hitArea, Phaser.Geom.Rectangle.Contains);
-        if (container.input) {
-          container.input.cursor = "pointer";
-        }
-        container.setAlpha(1);
-      }
-    },
-    setLabel(text) {
-      labelEl.setText(text);
-    },
-  };
 };
 
 export const normalizeMatchingPairs = (rawPairs = []) => {
@@ -267,10 +410,12 @@ export const createMatchingGameScene = (config = {}) => {
   const randomSuffix = Math.random().toString(36).slice(2, 8);
   const makeKey = (name) => `matching_${name}_${randomSuffix}`;
 
-  const sanitizedPairs = normalizeMatchingPairs(rawPairs).map((pair, index) => ({
-    ...pair,
-    textureKey: makeKey(`pair_${index}`),
-  }));
+  const sanitizedPairs = normalizeMatchingPairs(rawPairs).map(
+    (pair, index) => ({
+      ...pair,
+      textureKey: makeKey(`pair_${index}`),
+    })
+  );
 
   const resolvedFeedback = {
     ...DEFAULT_FEEDBACK_ASSETS,
@@ -308,6 +453,7 @@ export const createMatchingGameScene = (config = {}) => {
       this.incorrectAudioKey = incorrectAudioKey;
       this.shouldAutoStart = false;
       this.tipTimer = null;
+      this.startButton = null;
       this.resetSessionState();
     }
 
@@ -354,7 +500,10 @@ export const createMatchingGameScene = (config = {}) => {
         this.feedbackAssets.incorrectImg &&
         !this.textures.exists(this.incorrectIconKey)
       ) {
-        this.load.image(this.incorrectIconKey, this.feedbackAssets.incorrectImg);
+        this.load.image(
+          this.incorrectIconKey,
+          this.feedbackAssets.incorrectImg
+        );
       }
 
       if (
@@ -402,25 +551,26 @@ export const createMatchingGameScene = (config = {}) => {
       }
 
       this.addBackground();
+      this.input.on("pointerdown", this.requestFullscreen, this);
       this.lineLayer = this.add.layer();
       this.keywordLayer = this.add.layer();
       this.imageLayer = this.add.layer();
       this.buildColumns();
       this.createHud();
-      this.createStartOverlay();
       this.createResultOverlay();
+      this.createCenterStartButton(this.sceneWidth, this.sceneHeight);
       this.setInteractionState(false);
       this.updateProgressText();
+      this.setGameElementsVisible(false);
       this.updateTip(
-        this.shouldAutoStart
-          ? "Matching started automatically."
-          : "Select a keyword and then the matching image."
+        this.shouldAutoStart ? "Matching started automatically." : ""
       );
 
       if (this.shouldAutoStart) {
-        this.beginMatching(true);
+        this.handleStartPressed(true);
       } else {
-        this.showStartOverlay();
+        this.setStartButtonVisible(true);
+        this.statusController("Press Start to begin matching.");
       }
 
       this.events.once("shutdown", () => {
@@ -428,6 +578,7 @@ export const createMatchingGameScene = (config = {}) => {
           this.tipTimer.remove(false);
           this.tipTimer = null;
         }
+        this.input.off("pointerdown", this.requestFullscreen, this);
       });
     }
 
@@ -447,9 +598,9 @@ export const createMatchingGameScene = (config = {}) => {
       const imageOrder = shuffleArray(this.sessionPairs);
       const positions = this.computePositions(keywordOrder.length);
 
-      const keywordWidth = clamp(this.sceneWidth * 0.32, 320, 420);
-      const keywordHeight = clamp(this.sceneHeight * 0.085, 64, 96);
-      const keywordX = clamp(this.sceneWidth * 0.28, 260, 420);
+      const keywordWidth = 360;
+      const keywordHeight = 70;
+      const keywordX = this.sceneWidth / 2;
 
       keywordOrder.forEach((pair, index) => {
         const y = positions[index];
@@ -464,10 +615,8 @@ export const createMatchingGameScene = (config = {}) => {
         this.keywordNodes.push(node);
       });
 
-      const imageWidth = clamp(this.sceneWidth * 0.28, 260, 360);
-      const imageHeight = clamp(this.sceneHeight * 0.2, 150, 240);
-      const imageX =
-        this.sceneWidth - clamp(this.sceneWidth * 0.28, 260, 420);
+      const imageWidth = 180;
+      const imageHeight = 180;
 
       const createBadge = createResultBadgeFactory(this, {
         correctIconKey: this.correctIconKey,
@@ -475,14 +624,15 @@ export const createMatchingGameScene = (config = {}) => {
       });
 
       imageOrder.forEach((pair, index) => {
-        const y = positions[index];
+        const y = positions[index % 3] + (index % 3) * 100 + 50;
         const node = this.createImageNode(
           pair,
-          imageX,
+          index % 2 === 0 ? 1100 : 180,
           y,
           imageWidth,
           imageHeight,
-          createBadge
+          createBadge,
+          index % 2 === 0
         );
         this.imageLayer.add(node.container);
         this.imageNodes.push(node);
@@ -493,8 +643,8 @@ export const createMatchingGameScene = (config = {}) => {
       if (!count) {
         return [];
       }
-      const top = clamp(this.sceneHeight * 0.18, 120, this.sceneHeight * 0.3);
-      const bottom = this.sceneHeight - clamp(this.sceneHeight * 0.15, 100, 180);
+      const top = 160;
+      const bottom = 660;
       if (count === 1) {
         return [(top + bottom) / 2];
       }
@@ -504,60 +654,57 @@ export const createMatchingGameScene = (config = {}) => {
 
     createKeywordNode(pair, x, y, width, height) {
       const container = this.add.container(x, y);
-      const card = this.add.rectangle(0, 0, width, height, 0xffffff, 0.96);
-      card.setStrokeStyle(3, 0x94a3b8, 0.6);
+      const panel = createRoundedPanel(this, width, height, 24);
+      panel.update(KEYWORD_CARD_STYLES.base);
+
       const label = this.add
         .text(0, 0, pair.keyword, {
-          fontFamily: "'Outfit','Segoe UI',sans-serif",
-          fontSize: `${clamp(height * 0.4, 20, 30)}px`,
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: "30px",
           color: "#0f172a",
+          fontStyle: "600",
           align: "center",
-          wordWrap: { width: width - 40 },
+          wordWrap: { width: width - 48 },
         })
         .setOrigin(0.5);
-      container.add([card, label]);
+      container.add([panel.graphics, label]);
       container.setSize(width, height);
-      const hitArea = new Phaser.Geom.Rectangle(
-        -width / 2,
-        -height / 2,
-        width,
-        height
-      );
-      container.setInteractive(hitArea, Phaser.Geom.Rectangle.Contains);
+      container.setInteractive();
       if (container.input) {
         container.input.cursor = "pointer";
       }
+
+      const applyStyle = (styleKey) => {
+        const style = KEYWORD_CARD_STYLES[styleKey] || KEYWORD_CARD_STYLES.base;
+        panel.update(style);
+      };
 
       const node = {
         id: pair.id,
         pair,
         container,
-        card,
+        panel,
         label,
         matched: false,
+        selected: false,
         setSelected: (state) => {
+          node.selected = Boolean(state);
           if (node.matched) {
             return;
           }
-          card.setFillStyle(state ? 0xdbeafe : 0xffffff, 1);
-          card.setStrokeStyle(3, state ? 0x2563eb : 0x94a3b8, state ? 0.9 : 0.6);
+          applyStyle(node.selected ? "selected" : "base");
         },
         setMatched: (isCorrect) => {
           node.matched = true;
-          card.setFillStyle(isCorrect ? 0xecfdf5 : 0xfee2e2, 1);
-          card.setStrokeStyle(
-            3,
-            isCorrect ? 0x16a34a : 0xdc2626,
-            0.9
-          );
+          applyStyle(isCorrect ? "success" : "error");
           container.disableInteractive();
-          container.setAlpha(0.95);
+          container.setAlpha(0.98);
         },
         enable: () => {
           if (node.matched) {
             return;
           }
-          container.setInteractive(hitArea, Phaser.Geom.Rectangle.Contains);
+          container.setInteractive();
           if (container.input) {
             container.input.cursor = "pointer";
           }
@@ -579,37 +726,40 @@ export const createMatchingGameScene = (config = {}) => {
           return;
         }
         container.setScale(1.02);
+        if (!node.selected) {
+          applyStyle("hover");
+        }
       });
       container.on("pointerout", () => {
         container.setScale(1);
+        if (!node.matched) {
+          applyStyle(node.selected ? "selected" : "base");
+        }
       });
 
       return node;
     }
 
-    createImageNode(pair, x, y, width, height, badgeFactory) {
+    createImageNode(pair, x, y, width, height, badgeFactory, isLeft) {
       const container = this.add.container(x, y);
-      const frame = this.add.rectangle(0, 0, width, height, 0xffffff, 0.97);
-      frame.setStrokeStyle(4, 0xe2e8f0, 1);
+      const panel = createRoundedPanel(this, width, height, 5);
+      panel.update(IMAGE_CARD_STYLES.base);
       const picture = this.add.image(0, 0, pair.textureKey);
       const source = this.textures.get(pair.textureKey)?.getSourceImage();
       if (source?.width && source?.height) {
-        const safeWidth = width - 24;
-        const safeHeight = height - 24;
-        const scale = Math.min(safeWidth / source.width, safeHeight / source.height);
+        const safeWidth = width - 20;
+        const safeHeight = height - 20;
+        const scale = Math.min(
+          safeWidth / source.width,
+          safeHeight / source.height
+        );
         picture.setDisplaySize(source.width * scale, source.height * scale);
       } else {
-        picture.setDisplaySize(width - 24, height - 24);
+        picture.setDisplaySize(width - 20, height - 20);
       }
-      container.add([frame, picture]);
+      container.add([panel.graphics, picture]);
       container.setSize(width, height);
-      const hitArea = new Phaser.Geom.Rectangle(
-        -width / 2,
-        -height / 2,
-        width,
-        height
-      );
-      container.setInteractive(hitArea, Phaser.Geom.Rectangle.Contains);
+      container.setInteractive();
       if (container.input) {
         container.input.cursor = "pointer";
       }
@@ -618,17 +768,22 @@ export const createMatchingGameScene = (config = {}) => {
       badge.container.setPosition(width / 2 - 28, -height / 2 + 28);
       container.add(badge.container);
 
+      const applyStyle = (styleKey) => {
+        const style = IMAGE_CARD_STYLES[styleKey] || IMAGE_CARD_STYLES.base;
+        panel.update(style);
+      };
+
       const node = {
         id: pair.id,
         pair,
         container,
-        frame,
+        panel,
         picture,
         badge,
         matched: false,
         setMatched: (isCorrect) => {
           node.matched = true;
-          frame.setStrokeStyle(4, isCorrect ? 0x16a34a : 0xb91c1c, 0.95);
+          applyStyle(isCorrect ? "success" : "error");
           container.disableInteractive();
           container.setAlpha(0.98);
         },
@@ -636,7 +791,7 @@ export const createMatchingGameScene = (config = {}) => {
           if (node.matched) {
             return;
           }
-          container.setInteractive(hitArea, Phaser.Geom.Rectangle.Contains);
+          container.setInteractive();
           if (container.input) {
             container.input.cursor = "pointer";
           }
@@ -650,7 +805,7 @@ export const createMatchingGameScene = (config = {}) => {
         if (!this.gameActive || node.matched) {
           return;
         }
-        this.handleImageSelection(node);
+        this.handleImageSelection(node, isLeft);
       });
 
       container.on("pointerover", () => {
@@ -658,32 +813,155 @@ export const createMatchingGameScene = (config = {}) => {
           return;
         }
         container.setScale(1.02);
+        applyStyle("hover");
       });
       container.on("pointerout", () => {
         container.setScale(1);
+        if (!node.matched) {
+          applyStyle("base");
+        }
       });
 
       return node;
     }
 
     createHud() {
+      const progressWidth = 380;
+      const progressHeight = 64;
+      this.progressPanel = createRoundedPanel(
+        this,
+        progressWidth,
+        progressHeight,
+        18
+      );
+      this.progressPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.92,
+        strokeColor: PALETTE.primaryMuted,
+        strokeAlpha: 0.65,
+        lineWidth: 3,
+      });
       this.progressText = this.add
-        .text(this.sceneWidth / 2, 48, "", {
-          fontFamily: "'Outfit','Segoe UI',sans-serif",
+        .text(0, 0, "", {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "28px",
-          color: "#0f172a",
-          fontStyle: "600",
-        })
-        .setOrigin(0.5);
-
-      this.tipText = this.add
-        .text(this.sceneWidth / 2, this.sceneHeight - 40, "", {
-          fontFamily: "'Outfit','Segoe UI',sans-serif",
-          fontSize: "24px",
           color: "#1d4ed8",
+          fontStyle: "bold",
         })
         .setOrigin(0.5);
-      this.tipText.setAlpha(0.9);
+      this.progressBadge = this.add.container(270, 50, [
+        this.progressPanel.graphics,
+        this.progressText,
+      ]);
+      this.progressBadge.setDepth(5);
+
+      const tipWidth = 640;
+      const tipHeight = 48;
+      this.tipPanel = createRoundedPanel(this, tipWidth, tipHeight, 12);
+      this.tipPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.94,
+        strokeColor: PALETTE.primaryMuted,
+        strokeAlpha: 0.4,
+        lineWidth: 2,
+      });
+      this.tipText = this.add
+        .text(0, 0, "", {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: "20px",
+          color: "#0f172a",
+        })
+        .setOrigin(0.5);
+      this.tipBadge = this.add.container(880, 50, [
+        this.tipPanel.graphics,
+        this.tipText,
+      ]);
+      this.tipBadge.setDepth(5);
+      this.tipBadge.setAlpha(0);
+    }
+
+    setGameElementsVisible(isVisible) {
+      const targets = [
+        this.lineLayer,
+        this.keywordLayer,
+        this.imageLayer,
+        this.progressBadge,
+      ];
+      targets.forEach((item) => {
+        if (item?.setVisible) {
+          item.setVisible(isVisible);
+        } else if (item) {
+          item.visible = isVisible;
+        }
+      });
+      if (this.tipBadge) {
+        this.tipBadge.setVisible(isVisible);
+        if (!isVisible) {
+          this.tipBadge.setAlpha(0);
+        }
+      }
+    }
+
+    createCenterStartButton(width, height) {
+      const buttonWidth = 480;
+      const buttonHeight = 220;
+      this.startButton = createPrimaryButton(
+        this,
+        "Start",
+        buttonWidth,
+        buttonHeight,
+        {
+          onClick: () => this.handleStartPressed(false),
+          playTone: () => tonePlayer.playTone(640, 240),
+          fontSize: 100,
+        }
+      );
+      this.startButton.container.setPosition(width / 2, height / 2);
+      this.startButton.container.setDepth(20);
+      this.startButton.container.setVisible(false);
+      this.startButton.setEnabled(false);
+      this.tweens.add({
+        targets: this.startButton.container,
+        scale: 1.04,
+        duration: 600,
+        ease: "Sine.easeInOut",
+        repeat: -1,
+        yoyo: true,
+      });
+    }
+
+    setStartButtonVisible(visible) {
+      if (!this.startButton) {
+        return;
+      }
+      this.startButton.container.setVisible(visible);
+      this.startButton.setEnabled(visible);
+    }
+
+    handleStartPressed(autoStart) {
+      if (this.gameActive) {
+        if (!autoStart) {
+          this.restartGame(true);
+        }
+        return;
+      }
+      this.setStartButtonVisible(false);
+      this.beginMatching(autoStart);
+    }
+
+    requestFullscreen() {
+      if (this.scale?.isFullscreen) {
+        return;
+      }
+      const target = this.scale.parent || this.game.canvas;
+      if (!target) {
+        return;
+      }
+      try {
+        this.scale.startFullscreen({ target, navigationUI: "hide" });
+      } catch (error) {
+        // ignore failures (user gesture requirements, etc.)
+      }
     }
 
     updateProgressText() {
@@ -696,7 +974,7 @@ export const createMatchingGameScene = (config = {}) => {
     }
 
     updateTip(message, persistent = false) {
-      if (!this.tipText) {
+      if (!this.tipText || !this.tipBadge) {
         return;
       }
       if (this.tipTimer) {
@@ -704,79 +982,17 @@ export const createMatchingGameScene = (config = {}) => {
         this.tipTimer = null;
       }
       this.tipText.setText(message || "");
-      this.tipText.setAlpha(message ? 0.95 : 0);
-      if (!persistent && message) {
+      const hasMessage = Boolean(message);
+      this.tipBadge.setAlpha(hasMessage ? 0.95 : 0);
+      if (!persistent && hasMessage) {
         this.tipTimer = this.time.addEvent({
           delay: 2600,
           callback: () => {
-            this.tipText.setAlpha(0.35);
+            if (this.tipBadge) {
+              this.tipBadge.setAlpha(0.6);
+            }
           },
         });
-      }
-    }
-
-    createStartOverlay() {
-      this.startOverlay = this.add.container(
-        this.sceneWidth / 2,
-        this.sceneHeight / 2
-      );
-      this.startOverlay.setDepth(10);
-      const scrim = this.add.rectangle(
-        0,
-        0,
-        this.sceneWidth,
-        this.sceneHeight,
-        0x0f172a,
-        0.5
-      );
-      scrim.setInteractive();
-      const panel = this.add.rectangle(0, 0, 540, 360, 0xffffff, 1);
-      panel.setStrokeStyle(4, 0x1d4ed8, 0.6);
-      const title = this.add
-        .text(0, -120, "Matching Challenge", {
-          fontFamily: "'Outfit','Segoe UI',sans-serif",
-          fontSize: "36px",
-          fontStyle: "700",
-          color: "#0f172a",
-          align: "center",
-        })
-        .setOrigin(0.5);
-      const body = this.add
-        .text(
-          0,
-          -10,
-          "Click a keyword on the left, then select the picture that matches it on the right. All keywords must be used once.",
-          {
-            fontFamily: "'Outfit','Segoe UI',sans-serif",
-            fontSize: "20px",
-            color: "#1f2937",
-            align: "center",
-            wordWrap: { width: 460 },
-          }
-        )
-        .setOrigin(0.5);
-      const startButton = createButton(this, {
-        x: 0,
-        y: 110,
-        width: 220,
-        label: "Start Matching",
-        onClick: () => this.beginMatching(false),
-      });
-
-      this.startOverlay.add([scrim, panel, title, body, startButton.container]);
-      this.startOverlay.setVisible(false);
-    }
-
-    showStartOverlay() {
-      if (this.startOverlay) {
-        this.startOverlay.setVisible(true);
-      }
-      this.statusController("Press Start to begin matching.");
-    }
-
-    hideStartOverlay() {
-      if (this.startOverlay) {
-        this.startOverlay.setVisible(false);
       }
     }
 
@@ -796,45 +1012,73 @@ export const createMatchingGameScene = (config = {}) => {
         0.65
       );
       scrim.setInteractive();
-      const panel = this.add.rectangle(0, 0, 560, 360, 0xffffff, 1);
-      panel.setStrokeStyle(4, 0x0f766e, 0.8);
+      const panelWidth = 560;
+      const panelHeight = 380;
+      const panel = createRoundedPanel(this, panelWidth, panelHeight, 32);
+      panel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.98,
+        strokeColor: PALETTE.primaryMuted,
+        strokeAlpha: 0.8,
+        lineWidth: 4,
+      });
+      const resultTitleY = -panelHeight / 2 + 70;
       const title = this.add
-        .text(0, -120, "Great effort!", {
-          fontFamily: "'Outfit','Segoe UI',sans-serif",
+        .text(0, resultTitleY, "Great effort!", {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "36px",
           fontStyle: "700",
           color: "#0f172a",
           align: "center",
         })
         .setOrigin(0.5);
+      const summaryY = 0;
       this.resultSummary = this.add
-        .text(0, -20, "", {
-          fontFamily: "'Outfit','Segoe UI',sans-serif",
+        .text(0, summaryY, "", {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "24px",
           color: "#1f2937",
           align: "center",
-          wordWrap: { width: 460 },
+          wordWrap: { width: panelWidth - 120 },
         })
         .setOrigin(0.5);
 
-      const replayButton = createButton(this, {
-        x: -110,
-        y: 110,
-        width: 200,
-        label: "Replay",
-        onClick: () => this.restartGame(true),
-      });
-      const quitButton = createButton(this, {
-        x: 110,
-        y: 110,
-        width: 200,
-        label: "Quit",
-        onClick: () => this.handleQuit(),
-      });
+      const buttonWidth = 210;
+      const buttonHeight = 86;
+      const replayButton = createPrimaryButton(
+        this,
+        "Replay",
+        buttonWidth,
+        buttonHeight,
+        {
+          onClick: () => this.restartGame(true),
+          playTone: () => tonePlayer.playTone(640, 240),
+        }
+      );
+      replayButton.container.setPosition(
+        -buttonWidth / 2 - 20,
+        panelHeight / 2 - 90
+      );
+
+      const quitButton = createPrimaryButton(
+        this,
+        "Quit",
+        buttonWidth,
+        buttonHeight,
+        {
+          onClick: () => this.handleQuit(),
+          baseColor: PALETTE.slate,
+          playTone: () => tonePlayer.playTone(320, 320),
+        }
+      );
+      quitButton.container.setPosition(
+        buttonWidth / 2 + 20,
+        panelHeight / 2 - 90
+      );
 
       this.resultOverlay.add([
         scrim,
-        panel,
+        panel.graphics,
         title,
         this.resultSummary,
         replayButton.container,
@@ -848,7 +1092,7 @@ export const createMatchingGameScene = (config = {}) => {
       if (this.gameActive) {
         return;
       }
-      this.hideStartOverlay();
+      this.setGameElementsVisible(true);
       this.gameActive = true;
       this.statusController("Match each keyword with an image.");
       this.setInteractionState(true);
@@ -881,7 +1125,7 @@ export const createMatchingGameScene = (config = {}) => {
       this.updateTip("Now select the matching image.");
     }
 
-    handleImageSelection(node) {
+    handleImageSelection(node, isLeft) {
       if (!this.selectedKeyword) {
         this.updateTip("Pick a keyword first.", false);
         return;
@@ -895,7 +1139,7 @@ export const createMatchingGameScene = (config = {}) => {
       keywordNode.setMatched(isCorrect);
       node.setMatched(isCorrect);
 
-      this.drawConnection(keywordNode, node, isCorrect);
+      this.drawConnection(keywordNode, node, isCorrect, isLeft);
 
       this.matchesCompleted += 1;
       if (isCorrect) {
@@ -915,15 +1159,15 @@ export const createMatchingGameScene = (config = {}) => {
       }
     }
 
-    drawConnection(keywordNode, imageNode, isCorrect) {
+    drawConnection(keywordNode, imageNode, isCorrect, isLeft) {
       const graphics = this.add.graphics();
       graphics.lineStyle(6, isCorrect ? 0x16a34a : 0xdc2626, 0.9);
       const start = new Phaser.Math.Vector2();
       const end = new Phaser.Math.Vector2();
       keywordNode.container
         .getWorldTransformMatrix()
-        .transformPoint(0, 0, start);
-      imageNode.container.getWorldTransformMatrix().transformPoint(0, 0, end);
+        .transformPoint(isLeft ? 180 : -180, 0, start);
+      imageNode.container.getWorldTransformMatrix().transformPoint(isLeft ? -90 : 90, 0, end);
       graphics.beginPath();
       graphics.moveTo(start.x, start.y);
       graphics.lineTo(end.x, end.y);
@@ -979,15 +1223,39 @@ export const createMatchingGameScene = (config = {}) => {
     }
 
     handleQuit() {
-      this.resultOverlay?.setVisible(false);
-      this.updateTip("You can close the slide or replay anytime.", true);
-      this.statusController(
-        "Game finished. You can move on when you are ready."
-      );
+      this.exitToIdleState();
     }
 
     restartGame(autoStart = false) {
       this.scene.restart({ autoStart });
+    }
+
+    exitToIdleState() {
+      this.sound?.stopAll?.();
+      if (this.tipTimer) {
+        this.tipTimer.remove(false);
+        this.tipTimer = null;
+      }
+      this.setInteractionState(false);
+      this.setGameElementsVisible(false);
+      this.resultOverlay?.setVisible(false);
+      this.resultOverlay?.setAlpha?.(0);
+      this.replayButton?.setEnabled(false);
+      this.quitButton?.setEnabled(false);
+      this.selectedKeyword = null;
+      this.gameActive = false;
+      this.resultDisplayed = false;
+      this.shouldAutoStart = false;
+      this.updateTip("", true);
+      this.statusController("Press Start to begin matching.");
+      if (this.scale?.isFullscreen) {
+        try {
+          this.scale.stopFullscreen();
+        } catch (error) {
+          // ignore fullscreen errors
+        }
+      }
+      this.scene.restart({ autoStart: false });
     }
 
     reportProgress(completed) {
