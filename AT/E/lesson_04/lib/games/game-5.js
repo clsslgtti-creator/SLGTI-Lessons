@@ -21,10 +21,10 @@ const clampDuration = (value, fallback) => {
 };
 
 export const DEFAULT_PRACTICE_TIMINGS = {
-  buildMs: 5000,
+  buildMs: 10000,
   responseMs: 10000,
   revealMs: 5000,
-  betweenMs: 1200,
+  betweenMs: 3000,
 };
 
 export const sanitizePracticeTimings = (rawTimings = {}) => {
@@ -287,6 +287,7 @@ export const createPracticeGameScene = (config = {}) => {
       this.gameUiElements = [];
       this.cardDisplayed = false;
       this.activeCardTween = null;
+      this.hudHiddenForCountdown = false;
     }
 
     preload() {
@@ -339,14 +340,25 @@ export const createPracticeGameScene = (config = {}) => {
       accentLeft.setBlendMode(Phaser.BlendModes.SCREEN);
       accentRight.setBlendMode(Phaser.BlendModes.SCREEN);
 
+      const phasePanel = createRoundedPanel(this, 420, 78, 28);
+      phasePanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.92,
+        strokeColor: 0x93c5fd,
+        strokeAlpha: 0.4,
+        lineWidth: 3,
+      });
       this.phaseText = this.add
-        .text(300, 50, "Practice Ready", {
+        .text(0, 0, "Practice Ready", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: 36,
+          fontSize: 32,
           fontStyle: "bold",
           color: PRIMARY_TEXT,
         })
         .setOrigin(0.5);
+      this.phaseContainer = this.add
+        .container(360, 60, [phasePanel.graphics, this.phaseText])
+        .setDepth(2);
 
       const timerPanel = createRoundedPanel(this, 220, 64, 20);
       timerPanel.update({
@@ -365,11 +377,11 @@ export const createPracticeGameScene = (config = {}) => {
         })
         .setOrigin(0.5);
       this.timerBadge = this.add
-        .container(width - 280, 50, [timerPanel.graphics, this.timerText])
+        .container(width - 260, 50, [timerPanel.graphics, this.timerText])
         .setDepth(2);
 
       const cardWidth = 980;
-      const cardHeight = 400;
+      const cardHeight = 420;
       this.cardWidth = cardWidth;
       const cardPanel = createRoundedPanel(this, cardWidth, cardHeight, 32, {
         fillColor: 0xffffff,
@@ -434,7 +446,7 @@ export const createPracticeGameScene = (config = {}) => {
       });
 
       this.cardContainer = this.add
-        .container(width / 2, height / 2 - 20, [
+        .container(width / 2, height / 2, [
           cardPanel.graphics,
           this.cardSections.words.label,
           this.cardSections.words.value,
@@ -572,7 +584,7 @@ export const createPracticeGameScene = (config = {}) => {
       this.summaryOverlay.setAlpha(0);
 
       this.gameUiElements = [
-        this.phaseText,
+        this.phaseContainer,
         this.timerBadge,
         this.cardContainer,
         this.instructionContainer,
@@ -700,7 +712,7 @@ export const createPracticeGameScene = (config = {}) => {
       };
       this.transitionCardContent(updateCard);
       this.instructionText.setText(
-        "Use these words to make a yes/no question. You have 5 seconds."
+        "Use these words to make a yes/no question. You have 10 seconds."
       );
       this.stagePhase = "words";
       this.emitRoundUpdate({ ...context, phase: "words" });
@@ -819,6 +831,7 @@ export const createPracticeGameScene = (config = {}) => {
       if (this.countdownText) {
         this.countdownText.setAlpha(1);
       }
+      this.hideHudForCountdown();
       const steps = ["3", "2", "1", "Start"];
 
       const runStep = (index) => {
@@ -867,6 +880,7 @@ export const createPracticeGameScene = (config = {}) => {
         this.countdownText.setAlpha(0);
         this.countdownText.setText("");
       }
+      this.restoreHudAfterCountdown();
     }
 
     finishSession() {
@@ -940,6 +954,26 @@ export const createPracticeGameScene = (config = {}) => {
       });
     }
 
+    hideHudForCountdown() {
+      if (this.hudHiddenForCountdown) {
+        return;
+      }
+      this.hudHiddenForCountdown = true;
+      [this.phaseContainer, this.timerBadge, this.instructionContainer]
+        .filter(Boolean)
+        .forEach((item) => item.setVisible(false));
+    }
+
+    restoreHudAfterCountdown() {
+      if (!this.hudHiddenForCountdown) {
+        return;
+      }
+      this.hudHiddenForCountdown = false;
+      [this.phaseContainer, this.timerBadge, this.instructionContainer]
+        .filter(Boolean)
+        .forEach((item) => item.setVisible(true));
+    }
+
 
     emitRoundUpdate(info) {
       if (typeof onRoundUpdate === "function") {
@@ -956,6 +990,7 @@ export const createPracticeGameScene = (config = {}) => {
       this.cancelPendingEvents();
       this.hideCountdown(true);
       this.stopActiveAudio();
+      this.restoreHudAfterCountdown();
       this.hideCompletionModal(true);
     }
 
