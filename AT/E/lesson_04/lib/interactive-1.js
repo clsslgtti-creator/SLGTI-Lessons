@@ -89,10 +89,10 @@ const buildSlideId = (activityNumber, letter = "", mode = "game1") => {
 const formatActivityLabel = (activityNumber, letter = "") => {
   if (activityNumber) {
     return letter
-      ? `Activity ${activityNumber}${letter.toUpperCase()}`
+      ? `Activity ${activityNumber}${letter}`
       : `Activity ${activityNumber}`;
   }
-  return letter ? `Game ${letter.toUpperCase()}` : "Game";
+  return letter ? `Game ${letter}` : "Game";
 };
 
 const insertFocusElement = (titleEl, focusText) => {
