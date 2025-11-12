@@ -485,44 +485,44 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What is the temperature of the car engine?",
-            "answer": "90 degrees Celsius",
+            "question": "What shape was the toolbox that the customer wanted?",
+            "answer": "Round",
             "options": [
-              "70 degrees Celsius",
-              "90 degrees Celsius",
-              "100 degrees Celsius"
+              "Square",
+              "Round",
+              "Rectangular"
             ]
           },
           {
             "id": "l_4_2",
-            "question": "What is the correct temperature range for the diagnostic test?",
-            "answer": "85–95 degrees Celsius",
+            "question": "When did the shop sell out of the toolbox the first time?",
+            "answer": "Last week",
             "options": [
-              "65–75 degrees Celsius",
-              "85–95 degrees Celsius",
-              "100–110 degrees Celsius"
+              "Last week",
+              "Yesterday",
+              "Tomorrow"
             ]
           },
           {
             "id": "l_4_3",
-            "question": "What should be the weight of the battery?",
-            "answer": "12 kilograms",
-            "options": ["11.5 kilograms", "12 kilograms", "13.5 kilograms"]
+            "question": "Which oval item did the customer ask about?",
+            "answer": "Oval serving tray",
+            "options": ["Oval mirror", "Oval serving tray", "Oval bowl"]
           },
           {
             "id": "l_4_4",
-            "question": "What is the correct tyre pressure reading?",
-            "answer": "32 PSI",
-            "options": ["28 PSI", "32 PSI", "36 PSI"]
+            "question": "What was the cubical item the customer wanted to buy?",
+            "answer": "Cubical gift box",
+            "options": ["Cubical stool", "Cubical gift box", "Cubical speaker"]
           },
           {
             "id": "l_4_5",
-            "question": ". Where is the record book kept?",
-            "answer": "In the service office",
+            "question": "What did the shopkeeper say about the square plastic containers?",
+            "answer": "They are in limited stock",
             "options": [
-              "In the classroom",
-              "In the garage office",
-              "In the service office"
+              "They will arrive next week",
+              "They are out of stock",
+              "They are in limited stock"
             ]
           }
         ]
