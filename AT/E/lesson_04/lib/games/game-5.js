@@ -66,6 +66,10 @@ export const normalizePracticeItems = (items = []) => {
       const words = trimText(item.words);
       const question = trimText(item.txt_question);
       const answer = trimText(item.txt_answer);
+      const image =
+        typeof item.image === "string" && item.image.trim().length
+          ? item.image.trim()
+          : null;
       const questionAudio =
         typeof item.audio_question === "string" &&
         item.audio_question.trim().length
@@ -88,6 +92,8 @@ export const normalizePracticeItems = (items = []) => {
         answerAudio,
         questionAudioKey: questionAudio ? buildAudioKey("practice_q", id) : null,
         answerAudioKey: answerAudio ? buildAudioKey("practice_a", id) : null,
+        image,
+        imageKey: image ? buildAudioKey("practice_img", id) : null,
       };
     })
     .filter(Boolean);
@@ -313,6 +319,9 @@ export const createPracticeGameScene = (config = {}) => {
         if (entry?.answerAudioKey && entry.answerAudio) {
           this.load.audio(entry.answerAudioKey, entry.answerAudio);
         }
+        if (entry?.imageKey && entry.image) {
+          this.load.image(entry.imageKey, entry.image);
+        }
       });
 
       this.load.image("practice-bg", bgAsset);
@@ -383,6 +392,7 @@ export const createPracticeGameScene = (config = {}) => {
       const cardWidth = 980;
       const cardHeight = 420;
       this.cardWidth = cardWidth;
+      this.cardHeight = cardHeight;
       const cardPanel = createRoundedPanel(this, cardWidth, cardHeight, 32, {
         fillColor: 0xffffff,
         fillAlpha: 0.98,
@@ -391,6 +401,35 @@ export const createPracticeGameScene = (config = {}) => {
         lineWidth: 4,
       });
 
+      const imageColumnWidth = 250;
+      const imageColumnHeight = cardHeight - 80;
+      this.cardImageMaxWidth = 200;
+      this.cardImageMaxHeight = imageColumnHeight - 40;
+      this.cardImageColumnHeight = imageColumnHeight;
+      const imagePanel = createRoundedPanel(
+        this,
+        imageColumnWidth - 20,
+        imageColumnHeight,
+        28,
+        {
+          fillColor: 0xf8fafc,
+          fillAlpha: 1,
+          strokeColor: 0x93c5fd,
+          strokeAlpha: 0.35,
+          lineWidth: 2,
+        }
+      );
+      this.cardImage = this.add.image(0, 0, "");
+      this.cardImage.setVisible(false);
+      this.cardImage.setActive(false);
+      this.cardImageContainer = this.add.container(
+        -cardWidth / 2 + imageColumnWidth / 2 + 10,
+        0,
+        [imagePanel.graphics, this.cardImage]
+      );
+
+      const sectionStartX = -cardWidth / 2 + imageColumnWidth + 40;
+      const sectionWidth = cardWidth - imageColumnWidth - 80;
       const createCardSection = (
         offsetY,
         labelText,
@@ -398,43 +437,43 @@ export const createPracticeGameScene = (config = {}) => {
         valueColor
       ) => {
         const label = this.add
-          .text(0, offsetY, labelText.toUpperCase(), {
+          .text(sectionStartX, offsetY, labelText.toUpperCase(), {
             fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
             fontSize: 18,
             fontStyle: "bold",
             color: labelColor,
             letterSpacing: 2,
+            align: "left",
           })
-          .setOrigin(0.5);
+          .setOrigin(0, 0);
         const value = this.add
-          .text(0, offsetY + 34, "", {
+          .text(sectionStartX, offsetY + 30, "", {
             fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-            fontSize: 32,
-            fontStyle: "bold",
+            fontSize: 30,
             color: valueColor,
-            align: "center",
-            lineSpacing: 8,
-            wordWrap: { width: cardWidth - 80 },
+            align: "left",
+            lineSpacing: 6,
+            wordWrap: { width: sectionWidth },
           })
-          .setOrigin(0.5);
+          .setOrigin(0, 0);
         return { label, value };
       };
 
       this.cardSections = {
         words: createCardSection(
-          -150,
+          -cardHeight / 2 + 40,
           "Words",
           WORDS_LABEL_COLOR,
           WORDS_VALUE_COLOR
         ),
         question: createCardSection(
-          -30,
+          -cardHeight / 2 + 170,
           "Question",
           QUESTION_LABEL_COLOR,
           QUESTION_VALUE_COLOR
         ),
         answer: createCardSection(
-          100,
+          -cardHeight / 2 + 300,
           "Answer",
           ANSWER_LABEL_COLOR,
           ANSWER_VALUE_COLOR
@@ -448,6 +487,7 @@ export const createPracticeGameScene = (config = {}) => {
       this.cardContainer = this.add
         .container(width / 2, height / 2, [
           cardPanel.graphics,
+          this.cardImageContainer,
           this.cardSections.words.label,
           this.cardSections.words.value,
           this.cardSections.question.label,
@@ -1032,12 +1072,46 @@ export const createPracticeGameScene = (config = {}) => {
     }
 
     prepareCardSections(entry) {
+      this.updateCardImage(entry);
       this.setSectionContent("words", entry.words || entry.question || "");
       this.setSectionVisibility("words", true, { immediate: true });
       this.setSectionContent("question", "");
       this.setSectionVisibility("question", false, { immediate: true });
       this.setSectionContent("answer", "");
       this.setSectionVisibility("answer", false, { immediate: true });
+    }
+
+    updateCardImage(entry) {
+      if (!this.cardImage) {
+        return;
+      }
+      const hasTexture =
+        entry?.imageKey &&
+        entry?.image &&
+        typeof this.textures?.exists === "function" &&
+        this.textures.exists(entry.imageKey);
+      if (!hasTexture) {
+        this.cardImage.setVisible(false);
+        this.cardImage.setActive(false);
+        return;
+      }
+      this.cardImage.setTexture(entry.imageKey);
+      this.cardImage.setActive(true);
+      this.cardImage.setVisible(true);
+      this.cardImage.setAlpha(1);
+      this.cardImage.setScale(1);
+      const imgWidth = this.cardImage.width || 1;
+      const imgHeight = this.cardImage.height || 1;
+      const maxWidth = this.cardImageMaxWidth || 200;
+      const maxHeight = this.cardImageMaxHeight || 220;
+      const scale = Math.min(1, maxWidth / imgWidth, maxHeight / imgHeight);
+      this.cardImage.setScale(scale);
+      const displayHeight = imgHeight * scale;
+      const columnHeight = this.cardImageColumnHeight || maxHeight + 40;
+      const paddingTop = 20;
+      const topEdge = -columnHeight / 2;
+      const imageY = topEdge + paddingTop + displayHeight / 2;
+      this.cardImage.setY(imageY);
     }
 
     setSectionContent(key, text) {
