@@ -1,4 +1,14 @@
 const DEFAULT_BACKGROUND_IMAGE = "assets/img/game/bg-1.jpg";
+const PRIMARY_BLUE = 0x1f6feb;
+const PRIMARY_TEXT = "#0f172a";
+const SECONDARY_BLUE_TEXT = "#1d4ed8";
+const ACCENT_SKY = 0x0ea5e9;
+const WORDS_LABEL_COLOR = "#0ea5e9";
+const QUESTION_LABEL_COLOR = "#1d4ed8";
+const ANSWER_LABEL_COLOR = "#16a34a";
+const WORDS_VALUE_COLOR = "#0f172a";
+const QUESTION_VALUE_COLOR = "#102663ff";
+const ANSWER_VALUE_COLOR = "#065f46";
 
 const trimText = (value) => (typeof value === "string" ? value.trim() : "");
 
@@ -129,70 +139,103 @@ const createRoundedPanel = (
 };
 
 const createButton = (scene, label, width, height, options = {}) => {
-  const { onClick, colors = {} } = options;
-  const baseColor = colors.base ?? 0x2563eb;
-  const hoverColor = colors.hover ?? 0x1d4ed8;
-  const disabledColor = colors.disabled ?? 0x94a3b8;
+  const { onClick, baseColor = PRIMARY_BLUE } = options;
+  const baseColorObj = Phaser.Display.Color.IntegerToColor(baseColor);
+  const hoverColor = Phaser.Display.Color.GetColor(
+    Math.min(baseColorObj.red + 25, 255),
+    Math.min(baseColorObj.green + 25, 255),
+    Math.min(baseColorObj.blue + 25, 255)
+  );
 
-  const background = scene.add.rectangle(0, 0, width, height, baseColor, 1);
-  background.setStrokeStyle(4, 0x1e40af, 0.8);
-  background.setOrigin(0.5);
+  const styles = {
+    base: {
+      fillColor: baseColor,
+      fillAlpha: 1,
+      strokeColor: baseColor,
+      strokeAlpha: 0.9,
+      lineWidth: 0,
+    },
+    hover: {
+      fillColor: hoverColor,
+      fillAlpha: 1,
+      strokeColor: baseColor,
+      strokeAlpha: 0.9,
+      lineWidth: 0,
+    },
+    disabled: {
+      fillColor: 0xa1a1aa,
+      fillAlpha: 1,
+      strokeColor: 0x71717a,
+      strokeAlpha: 0.8,
+      lineWidth: 0,
+    },
+  };
+
+  const background = createRoundedPanel(
+    scene,
+    width,
+    height,
+    Math.min(height / 2, 110)
+  );
+  background.update(styles.base);
 
   const text = scene.add
     .text(0, 0, label, {
       fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-      fontSize: 28,
-      fontStyle: "bold",
+      fontSize: Math.min(100, height * 0.55),
       color: "#ffffff",
+      fontStyle: "bold",
     })
     .setOrigin(0.5);
 
-  const container = scene.add.container(0, 0, [background, text]);
+  const container = scene.add.container(0, 0, [background.graphics, text]);
   container.setSize(width, height);
+  container.setDepth(7);
   container.setInteractive({ useHandCursor: true });
 
+  const updateStyle = (style) => background.update(style);
+
   container.on("pointerover", () => {
-    if (container.getData("disabled")) {
-      return;
+    if (container.input?.enabled) {
+      updateStyle(styles.hover);
     }
-    background.fillColor = hoverColor;
   });
   container.on("pointerout", () => {
-    if (container.getData("disabled")) {
-      return;
+    if (container.input?.enabled) {
+      updateStyle(styles.base);
     }
-    background.fillColor = baseColor;
   });
   container.on("pointerdown", () => {
-    if (container.getData("disabled")) {
+    if (!container.input?.enabled) {
       return;
     }
-    background.fillColor = hoverColor;
+    updateStyle(styles.hover);
   });
   container.on("pointerup", () => {
-    if (container.getData("disabled")) {
+    if (!container.input?.enabled) {
       return;
     }
-    background.fillColor = baseColor;
+    updateStyle(styles.base);
     if (typeof onClick === "function") {
       onClick();
     }
   });
 
   const setDisabled = (disabled) => {
-    container.setData("disabled", disabled);
     if (disabled) {
-      background.fillColor = disabledColor;
       container.disableInteractive();
+      updateStyle(styles.disabled);
     } else {
-      background.fillColor = baseColor;
       container.setInteractive({ useHandCursor: true });
+      updateStyle(styles.base);
     }
   };
 
   return {
     container,
     text,
+    background,
+    styles,
     setDisabled,
     setLabel: (value) => text.setText(value),
   };
@@ -241,6 +284,9 @@ export const createPracticeGameScene = (config = {}) => {
       this.activeAudioCompleteHandler = null;
       this.currentRound = null;
       this.stagePhase = "idle";
+      this.gameUiElements = [];
+      this.cardDisplayed = false;
+      this.activeCardTween = null;
     }
 
     preload() {
@@ -275,6 +321,7 @@ export const createPracticeGameScene = (config = {}) => {
       this.cameras.main.setBackgroundColor("#eef2f9");
       this.events.once(Phaser.Scenes.Events.SHUTDOWN, this.shutdown, this);
       this.events.once(Phaser.Scenes.Events.DESTROY, this.shutdown, this);
+      this.input.on("pointerdown", this.requestFullscreen, this);
       const gameSize = this.scale?.gameSize;
       const width =
         gameSize?.width ?? this.sys.game.config.width ?? this.sys.game.canvas.width;
@@ -287,53 +334,43 @@ export const createPracticeGameScene = (config = {}) => {
       this.backgroundImage.setDepth(0);
       this.backgroundImage.setDisplaySize(width, height);
 
-      const accentLeft = this.add.circle(
-        width * 0.2,
-        height * 0.85,
-        160,
-        0x2563eb,
-        0.08
-      );
-      const accentRight = this.add.circle(
-        width * 0.82,
-        height * 0.2,
-        200,
-        0x0ea5e9,
-        0.08
-      );
+      const accentLeft = this.add.circle(width * 0.2, height * 0.85, 160, PRIMARY_BLUE, 0.08);
+      const accentRight = this.add.circle(width * 0.82, height * 0.2, 200, ACCENT_SKY, 0.08);
       accentLeft.setBlendMode(Phaser.BlendModes.SCREEN);
       accentRight.setBlendMode(Phaser.BlendModes.SCREEN);
 
       this.phaseText = this.add
-        .text(width / 2, 36, "Practice Ready", {
+        .text(300, 50, "Practice Ready", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: 36,
           fontStyle: "bold",
-          color: "#0f172a",
+          color: PRIMARY_TEXT,
         })
         .setOrigin(0.5);
 
-      const timerPanel = createRoundedPanel(this, 220, 64, 20, {
+      const timerPanel = createRoundedPanel(this, 220, 64, 20);
+      timerPanel.update({
         fillColor: 0xffffff,
-        fillAlpha: 0.92,
-        strokeColor: 0x2563eb,
-        strokeAlpha: 0.35,
-        lineWidth: 3,
+        fillAlpha: 0.8,
+        strokeColor: PRIMARY_BLUE,
+        strokeAlpha: 0.3,
+        lineWidth: 2,
       });
       this.timerText = this.add
         .text(0, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: 26,
           fontStyle: "bold",
-          color: "#1d4ed8",
+          color: SECONDARY_BLUE_TEXT,
         })
         .setOrigin(0.5);
       this.timerBadge = this.add
-        .container(width - 150, 100, [timerPanel.graphics, this.timerText])
+        .container(width - 280, 50, [timerPanel.graphics, this.timerText])
         .setDepth(2);
 
       const cardWidth = 980;
-      const cardHeight = 360;
+      const cardHeight = 400;
+      this.cardWidth = cardWidth;
       const cardPanel = createRoundedPanel(this, cardWidth, cardHeight, 32, {
         fillColor: 0xffffff,
         fillAlpha: 0.98,
@@ -341,51 +378,122 @@ export const createPracticeGameScene = (config = {}) => {
         strokeAlpha: 0.45,
         lineWidth: 4,
       });
-      this.cardLabel = this.add
-        .text(0, -cardHeight / 2 + 24, "", {
-          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: 26,
-          color: "#1d4ed8",
-          fontStyle: "bold",
-        })
-        .setOrigin(0.5, 0);
-      this.cardText = this.add
-        .text(0, 20, "", {
-          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: 34,
-          color: "#0f172a",
-          align: "center",
-          lineSpacing: 10,
-          wordWrap: { width: cardWidth - 60 },
-        })
-        .setOrigin(0.5);
+
+      const createCardSection = (
+        offsetY,
+        labelText,
+        labelColor,
+        valueColor
+      ) => {
+        const label = this.add
+          .text(0, offsetY, labelText.toUpperCase(), {
+            fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+            fontSize: 18,
+            fontStyle: "bold",
+            color: labelColor,
+            letterSpacing: 2,
+          })
+          .setOrigin(0.5);
+        const value = this.add
+          .text(0, offsetY + 34, "", {
+            fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+            fontSize: 32,
+            fontStyle: "bold",
+            color: valueColor,
+            align: "center",
+            lineSpacing: 8,
+            wordWrap: { width: cardWidth - 80 },
+          })
+          .setOrigin(0.5);
+        return { label, value };
+      };
+
+      this.cardSections = {
+        words: createCardSection(
+          -150,
+          "Words",
+          WORDS_LABEL_COLOR,
+          WORDS_VALUE_COLOR
+        ),
+        question: createCardSection(
+          -30,
+          "Question",
+          QUESTION_LABEL_COLOR,
+          QUESTION_VALUE_COLOR
+        ),
+        answer: createCardSection(
+          100,
+          "Answer",
+          ANSWER_LABEL_COLOR,
+          ANSWER_VALUE_COLOR
+        ),
+      };
+      Object.values(this.cardSections).forEach((section) => {
+        section.label.setAlpha(0);
+        section.value.setAlpha(0);
+      });
+
       this.cardContainer = this.add
-        .container(width / 2, height / 2 + 20, [
+        .container(width / 2, height / 2 - 20, [
           cardPanel.graphics,
-          this.cardLabel,
-          this.cardText,
+          this.cardSections.words.label,
+          this.cardSections.words.value,
+          this.cardSections.question.label,
+          this.cardSections.question.value,
+          this.cardSections.answer.label,
+          this.cardSections.answer.value,
         ])
         .setDepth(2);
 
+      const instructionWidth = 980;
+      const instructionHeight = 90;
+      const instructionPanel = createRoundedPanel(
+        this,
+        instructionWidth,
+        instructionHeight,
+        30
+      );
+      instructionPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.92,
+        strokeColor: 0x93c5fd,
+        strokeAlpha: 0.35,
+        lineWidth: 3,
+      });
       this.instructionText = this.add
-        .text(width / 2, height - 90, "Press Start to begin.", {
+        .text(0, 0, "Press Start to begin.", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: 28,
-          color: "#0f172a",
+          color: PRIMARY_TEXT,
         })
         .setOrigin(0.5);
+      this.instructionContainer = this.add
+        .container(width / 2, height - instructionHeight / 2 - 20, [
+          instructionPanel.graphics,
+          this.instructionText,
+        ])
+        .setDepth(2);
 
       this.startButton = createButton(
         this,
-        "Start Practice",
-        320,
-        88,
+        "Start",
+        512,
+        202,
         {
           onClick: () => this.handleStartPressed(false),
+          baseColor: PRIMARY_BLUE,
         }
       );
-      this.startButton.container.setPosition(width / 2, height - 180);
-      this.startButton.container.setDepth(3);
+      this.startButton.container.setPosition(width / 2, height / 2);
+      this.startButton.container.setDepth(6);
+      this.tweens.add({
+        targets: this.startButton.container,
+        scale: 1.04,
+        duration: 500,
+        ease: "Sine.easeInOut",
+        repeat: -1,
+        yoyo: true,
+      });
 
       this.countdownBackdrop = this.add
         .rectangle(0, 0, width, height, 0x0f172a, 0.55)
@@ -405,6 +513,71 @@ export const createPracticeGameScene = (config = {}) => {
         this.countdownText,
       ]);
       this.countdownOverlay.setDepth(5);
+
+      this.summaryBackdrop = this.add
+        .rectangle(width / 2, height / 2, width, height, 0x0f172a, 0.45)
+        .setDepth(18);
+      this.summaryBackdrop.setAlpha(0);
+      this.summaryBackdrop.setVisible(false);
+
+      this.summaryOverlay = this.add.container(width / 2, height / 2);
+      this.summaryOverlay.setDepth(19);
+      const summaryPanel = createRoundedPanel(this, 760, 420, 36);
+      summaryPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.98,
+        strokeColor: 0x93c5fd,
+        strokeAlpha: 0.35,
+        lineWidth: 4,
+      });
+      this.summaryTitle = this.add
+        .text(0, -110, "Practice complete!", {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: 40,
+          color: PRIMARY_TEXT,
+          fontStyle: "bold",
+        })
+        .setOrigin(0.5);
+      this.summaryBody = this.add
+        .text(0, -20, "Replay the prompts or quit to review instructions.", {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: 26,
+          color: PRIMARY_TEXT,
+          align: "center",
+          wordWrap: { width: 560 },
+        })
+        .setOrigin(0.5);
+
+      const replayButton = createButton(this, "Replay", 280, 96, {
+        onClick: () => this.restartPractice(true),
+        baseColor: PRIMARY_BLUE,
+      });
+      replayButton.container.setPosition(-170, 120);
+
+      const exitButton = createButton(this, "Quit", 280, 96, {
+        onClick: () => this.exitPracticeToIdleState(),
+        baseColor: 0x334155,
+      });
+      exitButton.container.setPosition(170, 120);
+
+      this.summaryButtons = { replay: replayButton, exit: exitButton };
+      this.summaryOverlay.add([
+        summaryPanel.graphics,
+        this.summaryTitle,
+        this.summaryBody,
+        replayButton.container,
+        exitButton.container,
+      ]);
+      this.summaryOverlay.setVisible(false);
+      this.summaryOverlay.setAlpha(0);
+
+      this.gameUiElements = [
+        this.phaseText,
+        this.timerBadge,
+        this.cardContainer,
+        this.instructionContainer,
+      ];
+      this.setGameUiVisible(false);
 
       if (this.shouldAutoStart) {
         this.time.delayedCall(750, () => this.handleStartPressed(true));
@@ -440,9 +613,11 @@ export const createPracticeGameScene = (config = {}) => {
         return;
       }
 
+      this.hideCompletionModal(true);
       this.sessionComplete = false;
       this.startButton.setDisabled(true);
       this.startButton.container.setVisible(false);
+      this.setGameUiVisible(true);
       this.currentExampleIndex = -1;
       this.currentPromptIndex = -1;
       this.countdownShown = this.examples.length === 0;
@@ -459,6 +634,7 @@ export const createPracticeGameScene = (config = {}) => {
       this.cancelPendingEvents();
       this.stopActiveAudio();
       this.hideCountdown(true);
+      this.cardDisplayed = false;
       this.runNextStep();
     }
 
@@ -486,7 +662,9 @@ export const createPracticeGameScene = (config = {}) => {
 
       if (this.examples.length && !this.countdownShown) {
         this.countdownShown = true;
-        this.playCountdown(() => this.runNextStep());
+        this.slideCardOut(() => {
+          this.playCountdown(() => this.runNextStep());
+        });
         return;
       }
 
@@ -515,13 +693,12 @@ export const createPracticeGameScene = (config = {}) => {
         `${labelPrefix} ${context.index + 1} of ${context.total}`
       );
       this.phaseText.setColor(
-        context.mode === "examples" ? "#0f172a" : "#1d4ed8"
+        context.mode === "examples" ? PRIMARY_TEXT : SECONDARY_BLUE_TEXT
       );
-      this.cardContainer.setAlpha(1);
-      this.cardLabel.setText("Create a question");
-      this.cardText.setText(
-        entry.words || entry.question || "Prepare a question."
-      );
+      const updateCard = () => {
+        this.prepareCardSections(entry);
+      };
+      this.transitionCardContent(updateCard);
       this.instructionText.setText(
         "Use these words to make a yes/no question. You have 5 seconds."
       );
@@ -535,8 +712,8 @@ export const createPracticeGameScene = (config = {}) => {
 
     showQuestionStage(entry, context) {
       this.stagePhase = "question";
-      this.cardLabel.setText("Model question");
-      this.cardText.setText(
+      this.revealCardSection(
+        "question",
         entry.question || "Listen to the modeled question."
       );
       this.instructionText.setText(
@@ -551,8 +728,8 @@ export const createPracticeGameScene = (config = {}) => {
 
     showAnswerStage(entry, context) {
       this.stagePhase = "answer";
-      this.cardLabel.setText("Model answer");
-      this.cardText.setText(
+      this.revealCardSection(
+        "answer",
         entry.answer || "Think of a suitable short answer."
       );
       this.instructionText.setText("Compare your answer with the model one.");
@@ -697,15 +874,19 @@ export const createPracticeGameScene = (config = {}) => {
       this.stopStageTimer();
       this.cancelPendingEvents();
       this.stopActiveAudio();
-      this.cardLabel.setText("Practice complete");
-      this.cardText.setText(
-        "Great job! Press Replay to practise again with the same prompts."
-      );
+      this.transitionCardContent(() => {
+        this.setSectionContent("words", "Great job!");
+        this.setSectionVisibility("words", true, { immediate: true });
+        this.setSectionContent(
+          "question",
+          "Press Replay to practise again with the same prompts."
+        );
+        this.setSectionVisibility("question", true, { immediate: true });
+        this.setSectionContent("answer", "");
+        this.setSectionVisibility("answer", false, { immediate: true });
+      });
       this.instructionText.setText("");
       this.phaseText.setText("Session complete");
-      this.startButton.setLabel("Replay Practice");
-      this.startButton.setDisabled(false);
-      this.startButton.container.setVisible(true);
       if (statusElement) {
         statusElement.textContent =
           "Practice finished. Press Replay to continue.";
@@ -713,6 +894,19 @@ export const createPracticeGameScene = (config = {}) => {
         statusElement.classList.add("is-visible");
       }
       this.emitRoundUpdate({ mode: "complete" });
+      this.showCompletionModal();
+    }
+
+    requestFullscreen() {
+      if (this.scale.isFullscreen) {
+        return;
+      }
+      const target = this.scale.parent || this.game.canvas;
+      try {
+        this.scale.startFullscreen({ target, navigationUI: "hide" });
+      } catch (error) {
+        // Ignore if the browser rejects the fullscreen request.
+      }
     }
 
     stopActiveAudio() {
@@ -730,6 +924,23 @@ export const createPracticeGameScene = (config = {}) => {
       this.activeAudioToken += 1;
     }
 
+    setGameUiVisible(isVisible) {
+      if (!Array.isArray(this.gameUiElements)) {
+        return;
+      }
+      this.gameUiElements.forEach((element) => {
+        if (!element) {
+          return;
+        }
+        if (typeof element.setVisible === "function") {
+          element.setVisible(isVisible);
+        } else {
+          element.visible = isVisible;
+        }
+      });
+    }
+
+
     emitRoundUpdate(info) {
       if (typeof onRoundUpdate === "function") {
         onRoundUpdate(info);
@@ -737,10 +948,247 @@ export const createPracticeGameScene = (config = {}) => {
     }
 
     shutdown() {
+      if (this.input) {
+        this.input.off("pointerdown", this.requestFullscreen, this);
+      }
+      this.stopCardTween();
       this.stopStageTimer();
       this.cancelPendingEvents();
       this.hideCountdown(true);
       this.stopActiveAudio();
+      this.hideCompletionModal(true);
+    }
+
+    stopCardTween() {
+      if (this.activeCardTween) {
+        this.activeCardTween.stop();
+        this.activeCardTween = null;
+      }
+    }
+
+    slideCardOut(onComplete) {
+      if (!this.cardContainer || !this.cardDisplayed) {
+        if (typeof onComplete === "function") {
+          onComplete();
+        }
+        return;
+      }
+      this.stopCardTween();
+      const width =
+        this.scale?.gameSize?.width ||
+        this.sys.game.canvas.width ||
+        this.sys.game.config.width ||
+        1280;
+      const cardWidth = this.cardWidth ?? this.cardContainer.width ?? width;
+      const offRight = width + cardWidth;
+      this.activeCardTween = this.tweens.add({
+        targets: this.cardContainer,
+        x: offRight,
+        duration: 450,
+        ease: "Cubic.easeIn",
+        onComplete: () => {
+          this.activeCardTween = null;
+          this.cardDisplayed = false;
+          if (typeof onComplete === "function") {
+            onComplete();
+          }
+        },
+      });
+    }
+
+    prepareCardSections(entry) {
+      this.setSectionContent("words", entry.words || entry.question || "");
+      this.setSectionVisibility("words", true, { immediate: true });
+      this.setSectionContent("question", "");
+      this.setSectionVisibility("question", false, { immediate: true });
+      this.setSectionContent("answer", "");
+      this.setSectionVisibility("answer", false, { immediate: true });
+    }
+
+    setSectionContent(key, text) {
+      const section = this.cardSections?.[key];
+      if (!section) {
+        return;
+      }
+      section.value.setText(text || "");
+    }
+
+    setSectionVisibility(key, visible, options = {}) {
+      const section = this.cardSections?.[key];
+      if (!section) {
+        return;
+      }
+      const targets = [section.label, section.value];
+      const alpha = visible ? 1 : 0;
+      if (options.immediate) {
+        targets.forEach((item) => item.setAlpha(alpha));
+        return;
+      }
+      this.tweens.add({
+        targets,
+        alpha,
+        duration: options.duration ?? 320,
+        ease: "Sine.easeOut",
+      });
+    }
+
+    revealCardSection(key, text) {
+      this.setSectionContent(key, text);
+      this.setSectionVisibility(key, true, { immediate: false });
+    }
+
+    transitionCardContent(applyContent) {
+      if (!this.cardContainer) {
+        if (typeof applyContent === "function") {
+          applyContent();
+        }
+        return;
+      }
+      this.stopCardTween();
+      const width =
+        this.scale?.gameSize?.width ||
+        this.sys.game.canvas.width ||
+        this.sys.game.config.width ||
+        1280;
+      const centerX = width / 2;
+      const offLeft = -width;
+      const cardWidth = this.cardWidth ?? this.cardContainer.width ?? width;
+      const offRight = width + cardWidth;
+
+      const enter = () => {
+        if (typeof applyContent === "function") {
+          applyContent();
+        }
+        this.cardContainer.x = offLeft;
+        this.cardContainer.setAlpha(1);
+        this.activeCardTween = this.tweens.add({
+          targets: this.cardContainer,
+          x: centerX,
+          duration: 600,
+          ease: "Cubic.easeOut",
+          onComplete: () => {
+            this.cardDisplayed = true;
+            this.activeCardTween = null;
+          },
+        });
+      };
+
+      if (!this.cardDisplayed) {
+        enter();
+        return;
+      }
+
+      this.activeCardTween = this.tweens.add({
+        targets: this.cardContainer,
+        x: offRight,
+        duration: 450,
+        ease: "Cubic.easeIn",
+        onComplete: () => {
+          this.activeCardTween = null;
+          enter();
+        },
+      });
+    }
+
+    showCompletionModal() {
+      if (!this.summaryBackdrop || !this.summaryOverlay) {
+        return;
+      }
+      this.summaryTitle?.setText("Practice complete!");
+      this.summaryBody?.setText(
+        "Replay the prompts or quit to review instructions."
+      );
+      this.summaryBackdrop.setVisible(true);
+      this.summaryOverlay.setVisible(true);
+      this.summaryBackdrop.setAlpha(0);
+      this.summaryOverlay.setAlpha(0);
+      this.tweens.add({
+        targets: this.summaryBackdrop,
+        alpha: 1,
+        duration: 220,
+        ease: "Sine.easeOut",
+      });
+      this.tweens.add({
+        targets: this.summaryOverlay,
+        alpha: 1,
+        duration: 220,
+        ease: "Sine.easeOut",
+      });
+    }
+
+    hideCompletionModal(force = false) {
+      if (!this.summaryBackdrop || !this.summaryOverlay) {
+        return;
+      }
+      const finalize = () => {
+        this.summaryBackdrop.setVisible(false);
+        this.summaryOverlay.setVisible(false);
+        this.summaryBackdrop.setAlpha(0);
+        this.summaryOverlay.setAlpha(0);
+      };
+      if (force) {
+        finalize();
+        return;
+      }
+      this.tweens.add({
+        targets: this.summaryOverlay,
+        alpha: 0,
+        duration: 180,
+        ease: "Sine.easeIn",
+        onComplete: finalize,
+      });
+      this.tweens.add({
+        targets: this.summaryBackdrop,
+        alpha: 0,
+        duration: 180,
+        ease: "Sine.easeIn",
+      });
+    }
+
+    restartPractice(autoStart = false) {
+      this.hideCompletionModal(true);
+      this.stopStageTimer();
+      this.cancelPendingEvents();
+      this.stopActiveAudio();
+      this.hideCountdown(true);
+      this.cardDisplayed = false;
+      if (statusElement) {
+        statusElement.textContent = "Preparing practice...";
+        statusElement.classList.remove("is-error");
+        statusElement.classList.remove("is-transparent");
+        statusElement.classList.add("is-visible");
+      }
+      this.scene.restart({ autoStart });
+    }
+
+    exitPracticeToIdleState() {
+      this.hideCompletionModal(true);
+      this.stopStageTimer();
+      this.cancelPendingEvents();
+      this.hideCountdown(true);
+      this.stopActiveAudio();
+      this.sessionComplete = false;
+      this.cardDisplayed = false;
+      this.currentExampleIndex = -1;
+      this.currentPromptIndex = -1;
+      this.stagePhase = "idle";
+      this.setGameUiVisible(false);
+      this.startButton.setLabel("Start");
+      this.startButton.setDisabled(false);
+      this.startButton.container.setVisible(true);
+      if (statusElement) {
+        statusElement.textContent = "Press Start to practice.";
+        statusElement.classList.remove("is-error");
+        statusElement.classList.remove("is-transparent");
+        statusElement.classList.add("is-visible");
+      }
+      if (this.scale.isFullscreen) {
+        try {
+          this.scale.stopFullscreen();
+        } catch (error) {
+          // ignore fullscreen errors
+        }
+      }
     }
   }
 
