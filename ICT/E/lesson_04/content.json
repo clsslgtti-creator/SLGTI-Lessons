@@ -208,7 +208,7 @@
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
         "text_a": "Is the trainee confident or nervous?",
-        "text_b": "She is nervous.",
+        "text_b": "He is nervous.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3"
       }
