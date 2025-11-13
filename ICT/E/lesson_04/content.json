@@ -421,10 +421,10 @@
           },
           {
             "id": "g_c_7",
-            "words": "computer / oval?",
-            "txt_question": "Is the computer oval?",
+            "words": "computer monitor / oval?",
+            "txt_question": "Is the computer monitor oval?",
             "txt_answer": "No, it isn’t. It is rectangular.",
-            "audio_question": "assets/audio/a_3_c_q_7.mp3",
+            "audio_question": "assets/audio/a_3_b_g_8.mp3",
             "audio_answer": "assets/audio/a_3_c_g_a_7.mp3",
             "image": "assets/img/a_3_b_g_8.jpg"
           },

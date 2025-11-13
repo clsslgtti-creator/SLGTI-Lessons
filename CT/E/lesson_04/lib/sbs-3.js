@@ -100,6 +100,7 @@ const createDialogueTables = (tablesData = []) => {
 
   const wrapper = document.createElement('div');
   wrapper.className = 'dialogue-table-group';
+  const tables = [];
 
   tablesData.forEach((tableData) => {
     if (!Array.isArray(tableData) || tableData.length === 0) {
@@ -145,11 +146,24 @@ const createDialogueTables = (tablesData = []) => {
 
     if (tbody.children.length > 0) {
       wrapper.appendChild(table);
+      tables.push(table);
     }
   });
 
-  if (!wrapper.children.length) {
+  const tableCount = tables.length;
+
+  if (tableCount === 0) {
     return null;
+  }
+
+  if (tableCount === 1) {
+    wrapper.classList.add('dialogue-table-group--single');
+  } else {
+    wrapper.classList.add('dialogue-table-group--multi');
+    if (tableCount % 2 === 1) {
+      wrapper.classList.add('dialogue-table-group--center-last');
+      tables[tableCount - 1].classList.add('dialogue-table--centered');
+    }
   }
 
   return wrapper;
@@ -330,6 +344,35 @@ const buildModelDialogueSlide = (
 
   updateButtonLabel();
 
+  const delay = (ms, { signal } = {}) =>
+    new Promise((resolve) => {
+      if (signal?.aborted) {
+        resolve();
+        return;
+      }
+
+      const timeoutId = window.setTimeout(() => {
+        cleanup();
+        resolve();
+      }, Math.max(0, ms));
+
+      const cleanup = () => {
+        window.clearTimeout(timeoutId);
+        if (signal) {
+          signal.removeEventListener('abort', onAbort);
+        }
+      };
+
+      const onAbort = () => {
+        cleanup();
+        resolve();
+      };
+
+      if (signal) {
+        signal.addEventListener('abort', onAbort, { once: true });
+      }
+    });
+
   const runSequence = async ({ itemIndex = 0, segmentIndex = 0 } = {}) => {
     if (!dialogueCards.length) {
       status.textContent = 'No audio available.';
@@ -394,6 +437,15 @@ const buildModelDialogueSlide = (
 
         playbackState.segmentIndex = 0;
         playbackState.itemIndex = i + 1;
+
+        const hasMoreItems = i < dialogueCards.length - 1;
+        if (hasMoreItems) {
+          status.textContent = 'Next dialogue...';
+          await delay(1500, { signal });
+          if (signal.aborted) {
+            break;
+          }
+        }
       }
 
       if (!sequenceAbort?.signal?.aborted) {

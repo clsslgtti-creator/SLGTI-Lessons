@@ -21,7 +21,7 @@ const clampDuration = (value, fallback) => {
 };
 
 export const DEFAULT_PRACTICE_TIMINGS = {
-  buildMs: 10000,
+  buildMs: 8000,
   responseMs: 10000,
   revealMs: 5000,
   betweenMs: 3000,
