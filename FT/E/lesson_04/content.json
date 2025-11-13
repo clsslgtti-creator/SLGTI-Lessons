@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": 4,
     "level": "Elementary",
-    "section": "Construction Technology",
+    "section": "Food Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "c'a'r",
+        "word_text": "j'a'r",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The c'a'r is in the garage.",
+        "sentence_text": "The j'a'r is full of rice.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "p'a'rk",
+        "word_text": "c'a'rt",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "P'a'rk the vehicle in the shade.",
+        "sentence_text": "Push the c'a'rt to the kitchen.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.jpeg"
+        "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "p'a'rt",
+        "word_text": "f'a'rm",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "This p'a'rt is on the table.",
+        "sentence_text": "Vegetables come from the f'a'rm.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "'a'rm",
+        "word_text": "l'a'rge",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Lift the heavy tool with your 'a'rm.",
+        "sentence_text": "The bakery uses a l'a'rge oven.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
@@ -67,7 +67,7 @@
   },
   "activity_2": {
     "type": "SBS-3",
-    "focus": "Verb ‘to be’ and preposition ‘on’",
+    "focus": "Adjectives and prepositions",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
@@ -167,48 +167,48 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Is this alternator new or old?",
-        "text_b": "It is old.",
+        "text_a": "Is the dough soft or hard?",
+        "text_b": "It is soft.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3"
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
-        "text_a": "Is the hydraulic jack light or heavy?",
-        "text_b": "It is heavy.",
+        "img": "assets/img/a_2_d_2.png",
+        "text_a": "Is the oven hot or cold?",
+        "text_b": "It is hot.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3"
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.png",
-        "text_a": "Is the engine block clean or dirty?",
-        "text_b": "It is dirty.",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "Is the mixing bowl full or empty?",
+        "text_b": "It is full.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3"
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.png",
-        "text_a": "Is the air compressor small or large?",
-        "text_b": "It is large.",
+        "img": "assets/img/a_2_d_4.jpeg",
+        "text_a": "Is the weighing scale correct or incorrect?",
+        "text_b": "It is correct.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3"
       },
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Is the instructor kind or strict? ",
-        "text_b": "He is strict.",
+        "text_a": "Is the baker young or old?",
+        "text_b": "He is young.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3"
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Is the mechanic tired or energetic?",
-        "text_b": "He is energetic.",
+        "text_a": "Is the trainee slow or fast?",
+        "text_b": "She is fast.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3"
       }
@@ -487,21 +487,13 @@
             "id": "l_4_1",
             "question": "What shape was the toolbox that the customer wanted?",
             "answer": "Round",
-            "options": [
-              "Square",
-              "Round",
-              "Rectangular"
-            ]
+            "options": ["Square", "Round", "Rectangular"]
           },
           {
             "id": "l_4_2",
             "question": "When did the shop sell out of the toolbox the first time?",
             "answer": "Last week",
-            "options": [
-              "Last week",
-              "Yesterday",
-              "Tomorrow"
-            ]
+            "options": ["Last week", "Yesterday", "Tomorrow"]
           },
           {
             "id": "l_4_3",
@@ -530,156 +522,156 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "The steering wheel is circular.",
+          "text": "The coconut scraper wheel is round.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "The rearview mirror is oval.",
+          "text": "The grinding stone is oval.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The radiator grille is rectangular.",
+          "text": "The baking tray is rectangular.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "The piston block is cubical.",
+          "text": "The ice cube mold is cubical.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The headlight lamp is round.",
+          "text": "The hopper pan is conical.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "The gear knobs are spherical.",
+          "text": "The rolling pins are  cylindrical.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "The toolbox lids are square.",
+          "text": "The cheese wheels  are  circular.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "The tyre rims are circular.",
+          "text": "The switch boxes are square.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "The fuel tank caps are round.",
+          "text": "The gas cylinders are cylindrical.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "The exhaust pipes are cylindrical.",
+          "text": "The metal funnels  are conical.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "n_4_1",
-          "text": "The steering wheel is circular.",
+          "text": "The coconut scraper wheel is round.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "The rearview mirror is oval.",
+          "text": "The grinding stone is oval.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The radiator grille is rectangular.",
+          "text": "The baking tray is rectangular.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "The piston block is cubical.",
+          "text": "The ice cube mold is cubical.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The headlight lamp is round.",
+          "text": "The hopper pan is conical.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "The gear knobs are spherical.",
+          "text": "The rolling pins are  cylindrical.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "The toolbox lids are square.",
+          "text": "The cheese wheels  are  circular.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "The tyre rims are circular.",
+          "text": "The switch boxes are square.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "The fuel tank caps are round.",
+          "text": "The gas cylinders are cylindrical.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "The exhaust pipes are cylindrical.",
+          "text": "The metal funnels  are conical.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ],
       "activity_d": [
         {
           "id": "n_4_1",
-          "text": "The steering wheel is circular.",
+          "text": "The coconut scraper wheel is round.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "The rearview mirror is oval.",
+          "text": "The grinding stone is oval.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The radiator grille is rectangular.",
+          "text": "The baking tray is rectangular.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "The piston block is cubical.",
+          "text": "The ice cube mold is cubical.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The headlight lamp is round.",
+          "text": "The hopper pan is conical.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "The gear knobs are spherical.",
+          "text": "The rolling pins are  cylindrical.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "The toolbox lids are square.",
+          "text": "The cheese wheels  are  circular.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "The tyre rims are circular.",
+          "text": "The switch boxes are square.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "The fuel tank caps are round.",
+          "text": "The gas cylinders are cylindrical.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "The exhaust pipes are cylindrical.",
+          "text": "The metal funnels  are conical.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ]
