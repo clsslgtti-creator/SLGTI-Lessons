@@ -33,7 +33,7 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "'a'r'ch",
+        "word_text": "'a'rch",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "The 'a'rch is very strong.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
@@ -57,7 +57,7 @@
       },
       {
         "id": "p_4",
-        "word_text": "b'a'rs",
+        "word_text": "b'a'r",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "Workers are waiting near the b'a'rs of steel.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
@@ -167,7 +167,7 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.png",
-        "text_a": "Is the crane tall or short? ",
+        "text_a": "Is the crane tall or short?",
         "text_b": "It is tall.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3"
@@ -175,7 +175,7 @@
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
-        "text_a": "Is the cement bag heavy or light? ",
+        "text_a": "Is the cement bag heavy or light?",
         "text_b": "It is heavy.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3"
@@ -183,15 +183,15 @@
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.png",
-        "text_a": "Is the ladder stable or unstable? ",
-        "text_b": "It is unstable",
+        "text_a": "Is the ladder stable or unstable?",
+        "text_b": "It is unstable.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3"
       },
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": "Is the hammer big or small? ",
+        "text_a": "Is the hammer big or small?",
         "text_b": "It is small.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3"
@@ -199,7 +199,7 @@
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Is the mason serious or relaxed?  ",
+        "text_a": "Is the mason serious or relaxed?",
         "text_b": "He is serious.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3"
@@ -207,8 +207,8 @@
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Is the helper lazy or active? ",
-        "text_b": "He is lazy",
+        "text_a": "Is the helper lazy or active?",
+        "text_b": "He is lazy.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3"
       }
@@ -530,7 +530,7 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "The brick is rectangular",
+          "text": "The brick is rectangular.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
@@ -582,7 +582,7 @@
       "activity_c": [
         {
           "id": "n_4_1",
-          "text": "The brick is rectangular",
+          "text": "The brick is rectangular.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
@@ -634,7 +634,7 @@
       "activity_d": [
         {
           "id": "n_4_1",
-          "text": "The brick is rectangular",
+          "text": "The brick is rectangular.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
