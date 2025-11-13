@@ -218,7 +218,7 @@
     "type": "INTERACTIVE-1",
     "instructions": {
       "activity_a": {
-        "text": "Match each keyword with its picture. Select a word and connect it to the correct image.\nපිළිඹඳ රූපය සමඟ එක් එක් මූලපදය ගැලපිය යුතුය. වචනයක් තෝරා නිවැරදි රූපය වෙත සම්බන්ධ කරන්න.\n ஒவ்வொரு சொல்லையும் அதன் படத்துடன் பொருத்துங்கள். ஒரு சொல்லைத் தேர்ந்தெடுத்து சரியான படத்துடன் இணைக்கவும்.",
+        "text": "Match each keyword with its picture.\nපිළිඹඳ රූපය සමඟ එක් එක් මූලපදය ගැලපිය යුතුය. \n ஒவ்வொரு சொல்லையும் அதன் படத்துடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_3_i_a.mp3"
       },
       "activity_b": {
@@ -487,21 +487,13 @@
             "id": "l_4_1",
             "question": "What shape was the toolbox that the customer wanted?",
             "answer": "Round",
-            "options": [
-              "Square",
-              "Round",
-              "Rectangular"
-            ]
+            "options": ["Square", "Round", "Rectangular"]
           },
           {
             "id": "l_4_2",
             "question": "When did the shop sell out of the toolbox the first time?",
             "answer": "Last week",
-            "options": [
-              "Last week",
-              "Yesterday",
-              "Tomorrow"
-            ]
+            "options": ["Last week", "Yesterday", "Tomorrow"]
           },
           {
             "id": "l_4_3",
