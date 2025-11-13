@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": 4,
     "level": "Elementary",
-    "section": "Construction Technology",
+    "section": "Electrical Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "c'a'r",
+        "word_text": "ch'a'rge",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The c'a'r is in the garage.",
+        "sentence_text": "The battery needs a full ch'a'rge.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "p'a'rk",
+        "word_text": "sp'a'rk",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "P'a'rk the vehicle in the shade.",
+        "sentence_text": "The wire made a small sp'a'rk.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
-        "word_text": "p'a'rt",
+        "word_text": "'a'rc",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "This p'a'rt is on the table.",
+        "sentence_text": "Do not touch the electric 'a'rc.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "'a'rm",
+        "word_text": "p'a'rt",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Lift the heavy tool with your 'a'rm.",
+        "sentence_text": "This p'a'rt is important for safety.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
@@ -67,7 +67,7 @@
   },
   "activity_2": {
     "type": "SBS-3",
-    "focus": "Verb ‘to be’ and preposition ‘on’",
+    "focus": "Adjectives and prepositions",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
@@ -166,49 +166,49 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Is this alternator new or old?",
-        "text_b": "It is old.",
+        "img": "assets/img/a_2_d_1.png",
+        "text_a": "Is the circuit breaker safe or unsafe?",
+        "text_b": "It is safe.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3"
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
-        "text_a": "Is the hydraulic jack light or heavy?",
-        "text_b": "It is heavy.",
+        "img": "assets/img/a_2_d_2.png",
+        "text_a": "Is the generator powerful or weak?",
+        "text_b": "It is powerful.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3"
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.png",
-        "text_a": "Is the engine block clean or dirty?",
-        "text_b": "It is dirty.",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "Is the cable thick or thin?",
+        "text_b": "It is thin.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3"
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.png",
-        "text_a": "Is the air compressor small or large?",
-        "text_b": "It is large.",
+        "img": "assets/img/a_2_d_4.jpeg",
+        "text_a": "Is the fuse box new or broken?",
+        "text_b": "It is broken.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3"
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.png",
-        "text_a": "Is the instructor kind or strict? ",
-        "text_b": "He is strict.",
+        "img": "assets/img/a_2_d_5.jpeg",
+        "text_a": "Is the electrician experienced or inexperienced?",
+        "text_b": "He is experienced.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3"
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Is the mechanic tired or energetic?",
-        "text_b": "He is energetic.",
+        "text_a": "Is the assistant quiet or talkative?",
+        "text_b": "He is talkative.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3"
       }
@@ -530,156 +530,156 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "The steering wheel is circular.",
+          "text": "The switch box is square.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "The rearview mirror is oval.",
+          "text": "The electric cable coil is circular.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The radiator grille is rectangular.",
+          "text": "The transformer core is rectangular.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "The piston block is cubical.",
+          "text": "The battery cell is cylindrical.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The headlight lamp is round.",
+          "text": "The plug socket is square.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "The gear knobs are spherical.",
+          "text": "The lamp bulbs are spherical.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "The toolbox lids are square.",
+          "text": "The fuse holders are oval.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "The tyre rims are circular.",
+          "text": "The junction boxes are cubical.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "The fuel tank caps are round.",
+          "text": "The rotor discs are round.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "The exhaust pipes are cylindrical.",
+          "text": "The insulators are conical.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "n_4_1",
-          "text": "The steering wheel is circular.",
+          "text": "The switch box is square.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "The rearview mirror is oval.",
+          "text": "The electric cable coil is circular.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The radiator grille is rectangular.",
+          "text": "The transformer core is rectangular.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "The piston block is cubical.",
+          "text": "The battery cell is cylindrical.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The headlight lamp is round.",
+          "text": "The plug socket is square.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "The gear knobs are spherical.",
+          "text": "The lamp bulbs are spherical.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "The toolbox lids are square.",
+          "text": "The fuse holders are oval.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "The tyre rims are circular.",
+          "text": "The junction boxes are cubical.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "The fuel tank caps are round.",
+          "text": "The rotor discs are round.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "The exhaust pipes are cylindrical.",
+          "text": "The insulators are conical.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ],
       "activity_d": [
         {
           "id": "n_4_1",
-          "text": "The steering wheel is circular.",
+          "text": "The switch box is square.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "The rearview mirror is oval.",
+          "text": "The electric cable coil is circular.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "The radiator grille is rectangular.",
+          "text": "The transformer core is rectangular.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "The piston block is cubical.",
+          "text": "The battery cell is cylindrical.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "The headlight lamp is round.",
+          "text": "The plug socket is square.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "The gear knobs are spherical.",
+          "text": "The lamp bulbs are spherical.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "The toolbox lids are square.",
+          "text": "The fuse holders are oval.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "The tyre rims are circular.",
+          "text": "The junction boxes are cubical.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "The fuel tank caps are round.",
+          "text": "The rotor discs are round.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "The exhaust pipes are cylindrical.",
+          "text": "The insulators are conical.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ]
