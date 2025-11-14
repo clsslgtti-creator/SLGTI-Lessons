@@ -37,7 +37,7 @@
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "The wh'ee'l is in good condition.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
@@ -45,7 +45,7 @@
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
         "sentence_text": "Adjust the driver’s s'ea't before you start.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.png"
+        "image": "assets/img/a_1_p_2.jpg"
       },
       {
         "id": "p_3",
@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "This sp'ee'd is far too high.  ",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpeg"
+        "image": "assets/img/a_1_p_3.jpg"
       },
       {
         "id": "p_4",
@@ -66,7 +66,7 @@
     ]
   },
   "activity_2": {
-    "type": "SBS-1",
+    "type": "SBS-3",
     "focus": "Verb ‘to be’ and preposition ‘on’",
     "instructions": {
       "example": {
@@ -125,7 +125,7 @@
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpeg",
+        "img": "assets/img/a_2_ex_2.png",
         "text_a": "Where is the pen?",
         "text_b": " It is in the pencil case.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
@@ -133,7 +133,7 @@
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_3.jpeg",
+        "img": "assets/img/a_2_ex_3.png",
         "text_a": "Where is the manager?",
         "text_b": "He is in the office.",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
@@ -161,8 +161,8 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Where are diagnostic scanners?",
+        "img": "assets/img/a_2_d_3.png",
+        "text_a": "Where are the diagnostic scanners?",
         "text_b": "They are in the manager’s office.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
@@ -170,7 +170,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.jpeg",
+        "img": "assets/img/a_2_d_4.png",
         "text_a": "Where is the new technical instructor?",
         "text_b": "She is in the driving simulator room. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
@@ -179,7 +179,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.jpeg",
+        "img": "assets/img/a_2_d_5.png",
         "text_a": " Where is the speedometer?",
         "text_b": "It is in the bottom drawer.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
@@ -188,7 +188,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpeg",
+        "img": "assets/img/a_2_d_6.png",
         "text_a": "Where is the trainee mechanic?",
         "text_b": "He is in the inspection bay.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
@@ -198,95 +198,110 @@
     ]
   },
   "activity_3": {
-    "type": "GAME-1",
-    "bg_image": "assets/img/game/bg-11.jpg",
+    "type": "INTERACTIVE-2",
     "instructions": {
       "activity_1_a": {
-        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
-        "audio": "assets/audio/a_3_i_a.mp3"
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
       }
     },
-    "examples": [
-      {
-        "id": "e_1",
-        "sentence": "The correct tire pressure is 32 psi.\nThis tire has 38 psi.\nThe pressure is ……………….",
-        "audio": "assets/audio/a_3_ex_1.mp3",
-        "options": ["Too high", "Correct", "Too low"],
-        "answer": "Too high"
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-6.jpg",
+        "examples": [
+          {
+            "id": "e_1",
+            "sentence": "The correct tire pressure is 32 psi. This tire has 38 psi.\n\nThe pressure is ……………….",
+            "audio": "assets/audio/a_3_ex_1.mp3",
+            "options": ["Too high", "Correct", "Too low"],
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_ex_1.jpeg"
+          }
+        ],
+        "content": [
+          {
+            "id": "g_1",
+            "sentence": "The normal range of the car engine temperature is 85–95 degrees Celsius. The temperature of this engine is 100 degrees Celsius.\n\nThe temperature of this engine is ………………….",
+            "audio": "assets/audio/a_3_g_1.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_1.jpeg"
+          },
+          {
+            "id": "g_2",
+            "sentence": "The correct weight of the car battery is 12 kilograms. The weight of this battery is 12.5 kilograms.\n\nThe weight of this battery is ………………….",
+            "audio": "assets/audio/a_3_g_2.mp3",
+            "options": ["Too heavy", "Correct", "Too light"],
+            "answer": "Too heavy",
+            "image": "assets/img/a_3_a_g_2.jpeg"
+          },
+          {
+            "id": "g_3",
+            "sentence": "The acceptable tire pressure is 30–32 PSI. The tire pressure in this wheel is 28 PSI.\n\nThe tire pressure in this wheel is ………………….",
+            "audio": "assets/audio/a_3_g_3.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too low",
+            "image": "assets/img/a_3_a_g_3.jpeg"
+          },
+          {
+            "id": "g_4",
+            "sentence": "The standard depth of tire tread is 3–4 millimeters. The depth of this tire tread is 2 millimeters.\n\n The depth of this tire tread is ………………….",
+            "audio": "assets/audio/a_3_g_4.mp3",
+            "options": ["Too Shallow", "Correct", "Too deep"],
+            "answer": "Too Shallow",
+            "image": "assets/img/a_3_a_g_4.jpeg"
+          },
+          {
+            "id": "g_5",
+            "sentence": "The correct length of a fan belt is 90–95 centimeters. The length of this fan belt is 100 centimeters.\n\n The length of this fan belt is ………………….",
+            "audio": "assets/audio/a_3_g_5.mp3",
+            "options": ["Too short", "Correct", "Too long"],
+            "answer": "Too long",
+            "image": "assets/img/a_3_a_g_5.jpeg"
+          },
+          {
+            "id": "g_6",
+            "sentence": "The standard width of a brake pad is 8–9 centimeters. The width of this brake pad is 7 centimeters.\n\n The width of this brake pad is ………………….",
+            "audio": "assets/audio/a_3_g_6.mp3",
+            "options": ["Too narrow", "Correct", "Too wide"],
+            "answer": "Too narrow",
+            "image": "assets/img/a_3_a_g_6.png"
+          },
+          {
+            "id": "g_7",
+            "sentence": "The correct oil content of the gearbox is 1.5–1.8 liters. The oil content of this gearbox is 2 liters.\n\n The oil content of this gearbox is ………………….",
+            "audio": "assets/audio/a_3_g_7.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_7.png"
+          },
+          {
+            "id": "g_8",
+            "sentence": "The safe tire pressure for a van is 34–36 PSI. The tire pressure of this van is 36 PSI. \n\n The tire pressure of this van is  ………………….",
+            "audio": "assets/audio/a_3_g_8.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Correct",
+            "image": "assets/img/a_3_a_g_8.png"
+          },
+          {
+            "id": "g_9",
+            "sentence": "he recommended alignment angle is 0–2 degrees. The alignment angle of this wheel is 3 degrees.\n\n The alignment angle of this wheel is ………………….",
+            "audio": "assets/audio/a_3_g_9.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_9.png"
+          },
+          {
+            "id": "g_10",
+            "sentence": "The correct charging voltage of a car alternator is 13–14.5 volts. The charging voltage of this car alternator is 12 volts.\n\n The charging voltage of this car alternator is ………………….",
+            "audio": "assets/audio/a_3_g_10.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too low",
+            "image": "assets/img/a_3_a_g_10.jpeg"
+          }
+        ]
       }
-    ],
-    "content": [
-      {
-        "id": "g_1",
-        "sentence": "The normal range of the car engine temperature is 85–95 degrees Celsius.\nThe temperature of this engine is 100 degrees Celsius.\nThe temperature of this engine is …………….",
-        "audio": "assets/audio/a_3_g_1.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_2",
-        "sentence": "The correct weight of the car battery is 12 kilograms.\n The weight of this battery is 12.5 kilograms.\n The weight of this battery is ……..",
-        "audio": "assets/audio/a_3_g_2.mp3",
-        "options": ["Too heavy", "Correct", "Too light"],
-        "answer": "Too heavy"
-      },
-      {
-        "id": "g_3",
-        "sentence": "The acceptable tire pressure is 30–32 PSI. \n The tire pressure in this wheel is 28 PSI.\n The tire pressure in this wheel is …………………",
-        "audio": "assets/audio/a_3_g_3.mp3",
-       "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too low"
-      },
-      {
-        "id": "g_4",
-        "sentence": "The standard depth of tire tread is 3–4 millimeters.\n The depth of this tire tread is 2 millimeters.\n The depth of this tire tread is …………..",
-        "audio": "assets/audio/a_3_g_4.mp3",
-        "options": ["Too Shallow", "Correct", "Too deep"],
-        "answer": "Too Shallow"
-      },
-      {
-        "id": "g_5",
-        "sentence": "The correct length of a fan belt is 90–95 centimeters.\n The length of this fan belt is 100 centimeters.\n The length of this fan belt is …………",
-        "audio": "assets/audio/a_3_g_5.mp3",
-        "options": ["Too short", "Correct", "Too long"],
-        "answer": "Too long"
-      },
-      {
-        "id": "g_6",
-        "sentence": "The standard width of a brake pad is 8–9 centimeters.\n The width of this brake pad is 7 centimeters.\n The width of this brake pad is ……….",
-        "audio": "assets/audio/a_3_g_6.mp3",
-        "options": ["Too narrow", "Correct", "Too wide"],
-        "answer": "Too narrow"
-      },
-      {
-        "id": "g_7",
-        "sentence": "The correct oil content of the gearbox is 1.5–1.8 liters.\n The oil content of this gearbox is 2 liters.\n The oil content of this gearbox is ……………",
-        "audio": "assets/audio/a_3_g_7.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_8",
-        "sentence": "The safe tire pressure for a van is 34–36 PSI.\n The tire pressure of this van is 36 PSI. \n The tire pressure of this van is  …………..",
-        "audio": "assets/audio/a_3_g_8.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Correct"
-      },
-      {
-        "id": "g_9",
-        "sentence": "he recommended alignment angle is 0–2 degrees.\n The alignment angle of this wheel is 3 degrees.\n The alignment angle of this wheel is……….",
-        "audio": "assets/audio/a_3_g_9.mp3",
-       "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_10",
-        "sentence": "The correct charging voltage of a car alternator is 13–14.5 volts.\n The charging voltage of this car alternator is 12 volts.\n The charging voltage of this car alternator is……….",
-        "audio": "assets/audio/a_3_g_10.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too low"
-      }
-    ]
+    }
   },
   "activity_4": {
     "type": "LISTENING-2",
@@ -342,11 +357,7 @@
             "id": "l_4_4",
             "question": "What is the correct tire pressure reading?",
             "answer": "32 PSI",
-            "options": [
-              "28 PSI",
-              "32 PSI",
-              "36 PSI"
-            ]
+            "options": ["28 PSI", "32 PSI", "36 PSI"]
           },
           {
             "id": "l_4_5",

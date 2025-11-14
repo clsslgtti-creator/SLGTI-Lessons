@@ -477,6 +477,8 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
   };
 
   const suffixSegment = subActivityLetter ? `-${subActivityLetter}` : "";
+  const instructionCountdownSeconds =
+    subActivityLetter === "a" ? 15 : undefined;
 
   return {
     id: activityNumber
@@ -489,6 +491,7 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
       status,
     },
     onLeave,
+    instructionCountdownSeconds,
   };
 };
 
