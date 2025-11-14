@@ -1,0 +1,633 @@
+{
+  "meta": {
+    "lesson_no": 5,
+    "level": "Elementary",
+    "section": "Automobile Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Short /ɒ/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": [
+      {
+        "id": "p_1",
+        "word_text": "r'o'd",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "The r'o'd is in front of the  engine.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
+      },
+      {
+        "id": "p_2",
+        "word_text": "sh'o'ck",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "Check the sh'o'ck absorber.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "l'o'ck",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "Turn the l'o'ck on the car door.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.png"
+      },
+      {
+        "id": "p_4",
+        "word_text": "st'o'p",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "Do not forget to st'o'p the bus.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS-3",
+    "focus": "Adjectives and prepositions",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_a.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "tables": [[["Where is ………?", "It is ………."]]],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "Where is the office?",
+        "text_b": "It is between the welding section and the food processing section.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.png",
+        "text_a": "Where is the hammer?",
+        "text_b": "It is above the table.",
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_3.png",
+        "text_a": "Where is the grinder?",
+        "text_b": "It is in front of the cooker.",
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
+      }
+    ],
+    "keywords": [
+      {
+        "id": "k_1",
+        "image": "assets/img/a_2_k_1.jpeg",
+        "word": "Behind"
+      },
+      {
+        "id": "k_2",
+        "image": "assets/img/a_2_k_2.png",
+        "word": "Under"
+      },
+      {
+        "id": "k_3",
+        "image": "assets/img/a_2_k_3.png",
+        "word": "Above"
+      },
+      {
+        "id": "k_4",
+        "image": "assets/img/a_2_k_4.jpeg",
+        "word": "In front of"
+      },
+      {
+        "id": "k_5",
+        "image": "assets/img/a_2_k_5.png",
+        "word": "Between"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "Where is the exhaust gas analyzer?",
+        "text_b": "It is between the table and the window.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.jpeg",
+        "text_a": "Where is the tire inflator?",
+        "text_b": "It is next to the door.",
+        "audio_a": "assets/audio/a_2_d_2_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_b.mp3"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "Where is the creeper seat?",
+        "text_b": "It is under the car.",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_b.mp3"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.png",
+        "text_a": "Where is the headlight beam setter?",
+        "text_b": "It is above the tool shelf.",
+        "audio_a": "assets/audio/a_2_d_4_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_b.mp3"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.png",
+        "text_a": "Where is the paint spray gun?",
+        "text_b": "It is in front of the workbench.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_b.mp3"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.png",
+        "text_a": "Where is the diesel injector tester?",
+        "text_b": "It is behind the chair.",
+        "audio_a": "assets/audio/a_2_d_6_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_b.mp3"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "INTERACTIVE-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
+      },
+      "activity_b": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-9.jpg",
+        "content": [
+          {
+            "id": "g_b_1",
+            "sentence": "Is the small black bag under the wooden chair?",
+            "audio": "assets/audio/a_3_b_g_1.mp3",
+            "options": [
+              "Yes, it is.",
+              "No, it isn't.",
+              "It is behind the tall table."
+            ],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_1.jpeg"
+          },
+          {
+            "id": "g_b_2",
+            "sentence": "Where is the new computer monitor?",
+            "audio": "assets/audio/a_3_b_g_2.mp3",
+            "options": [
+              "It is behind the grey wall.",
+              "No, it isn't.",
+              "She is in front of the black keyboard."
+            ],
+            "answer": "It is behind the grey wall.",
+            "image": "assets/img/a_3_b_g_2.png"
+          },
+          {
+            "id": "g_b_3",
+            "sentence": "Is the round white clock above the wide door?",
+            "audio": "assets/audio/a_3_b_g_3.mp3",
+            "options": [
+              "Yes, it is.",
+              "It is between the two small windows.",
+              "No, it isn't."
+            ],
+            "answer": "No, it isn't.",
+            "image": "assets/img/a_3_b_g_3.png"
+          },
+          {
+            "id": "g_b_4",
+            "sentence": "Where is the blue plastic pen holder?",
+            "audio": "assets/audio/a_3_b_g_4.mp3",
+            "options": [
+              "They are under the wide window.",
+              "It is next to the red notebook.",
+              "No, it isn't."
+            ],
+            "answer": "It is next to the red notebook.",
+            "image": "assets/img/a_3_b_g_4.jpeg"
+          },
+          {
+            "id": "g_b_5",
+            "sentence": "Are the tall silver fans behind the brown cupboard?",
+            "audio": "assets/audio/a_3_b_g_5.mp3",
+            "options": [
+              "No, it isn't.",
+              "He is under the small cupboard.",
+              "Yes, they are."
+            ],
+            "answer": "Yes, they are.",
+            "image": "assets/img/a_3_b_g_5.png"
+          },
+          {
+            "id": "g_b_6",
+            "sentence": "Where are the green plastic baskets?",
+            "audio": "assets/audio/a_3_b_g_6.mp3",
+            "options": [
+              "He is under the metal chair.",
+              "They are between the two wooden tables.",
+              "No, it isn't."
+            ],
+            "answer": "They are between the two wooden tables.",
+            "image": "assets/img/a_3_b_g_6.png"
+          },
+          {
+            "id": "g_b_7",
+            "sentence": "Is the small desk lamp next to the soft bed?",
+            "audio": "assets/audio/a_3_b_g_7.mp3",
+            "options": [
+              "It isn’t behind the tall bed.",
+              "Yes, it is.",
+              "No, it isn't."
+            ],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_7.png"
+          },
+          {
+            "id": "g_b_8",
+            "sentence": "Where is the colourful paper calendar?",
+            "audio": "assets/audio/a_3_b_g_8.mp3",
+            "options": [
+              "It is above the clean whiteboard.",
+              "Yes, it is.",
+              "It isn’t under the long table."
+            ],
+            "answer": "It is above the clean whiteboard.",
+            "image": "assets/img/a_3_b_g_8.jpeg"
+          },
+          {
+            "id": "g_b_9",
+            "sentence": "Is the old straw broom behind the wooden door?",
+            "audio": "assets/audio/a_3_b_g_9.mp3",
+            "options": [
+              "Yes, it is.",
+              "No, it isn't.",
+              "They are under the tall door."
+            ],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_9.png"
+          },
+          {
+            "id": "g_b_10",
+            "sentence": "Where are the brown office chairs?",
+            "audio": "assets/audio/a_3_b_g_10.mp3",
+            "options": [
+              "They are in front of the large desk.",
+              "He is between the two small drawers.",
+              "No, it isn't."
+            ],
+            "answer": "They are in front of the large desk.",
+            "image": "assets/img/a_3_b_g_10.png"
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_3_1",
+          "text": "Is the small black bag under the wooden chair?",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_3_2",
+          "text": "Where is the new computer monitor?",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_3_3",
+          "text": "Is the round white clock above the wide door?",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_3_4",
+          "text": "Where is the blue plastic pen holder?",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_3_5",
+          "text": "Are the tall silver fans behind the brown cupboard?",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_3_6",
+          "text": "Where are the green plastic baskets?",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_3_7",
+          "text": "Is the small desk lamp next to the soft bed?",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_3_8",
+          "text": "Where is the colourful paper calendar?",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_3_9",
+          "text": "Is the old straw broom behind the wooden door?",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_3_10",
+          "text": "Where are the brown office chairs?",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ]
+    }
+  },
+  "activity_4": {
+    "type": "LISTENING-3",
+    "instructions": {
+      "activity_a": {
+        "text": "You will hear this recording three times. As you listen, drag and drop the objects onto the provided grid.\nඔබ මෙම සටහන තුන් වතාවක් ඇසීමට යයි. ඔබ සවන් දී සිටින විට, ලබා දී ඇති ග්‍රිඩ් එකට වස්තු ඇදගෙන එවන්න.\nநீங்கள் இந்த பதிவை மூன்று முறை கேட்கப்போகிறீர்கள். நீங்கள் கேட்கும் போது, வழங்கப்பட்ட கட்டங்களுக்குள் பொருட்களை இழுத்து விடுங்கள்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "grid": { "rows": 3, "columns": 3 },
+        "content": [
+          {
+            "id": "l_4_1",
+            "image": "assets/img/a_4_l_1.png",
+            "grid": { "row": 0, "column": 0 }
+          },
+          {
+            "id": "l_4_2",
+            "image": "assets/img/a_4_l_2.png",
+            "grid": { "row": 0, "column": 1 }
+          },
+          {
+            "id": "l_4_3",
+            "image": "assets/img/a_4_l_3.png",
+            "grid": { "row": 0, "column": 2 }
+          },
+          {
+            "id": "l_4_4",
+            "image": "assets/img/a_4_l_4.png",
+            "grid": { "row": 1, "column": 0 }
+          },
+          {
+            "id": "l_4_5",
+            "image": "assets/img/a_4_l_5.png",
+            "grid": { "row": 1, "column": 1 }
+          },
+          {
+            "id": "l_4_6",
+            "image": "assets/img/a_4_l_6.png",
+            "grid": { "row": 1, "column": 2 }
+          },
+          {
+            "id": "l_4_7",
+            "image": "assets/img/a_4_l_7.png",
+            "grid": { "row": 2, "column": 0 }
+          },
+          {
+            "id": "l_4_8",
+            "image": "assets/img/a_4_l_8.png",
+            "grid": { "row": 2, "column": 1 }
+          },
+          {
+            "id": "l_4_9",
+            "image": "assets/img/a_4_l_9.png",
+            "grid": { "row": 2, "column": 2 }
+          }
+        ]
+      },
+      "activity_c": {
+        "image": "assets/img/a_4_b.png",
+        "content": [
+          {
+            "id": "n_4_1",
+            "text": "Good morning, trainees. Please look at the tool board in front of you. I will tell you where each tool is placed.",
+            "audio": "assets/audio/a_4_n_1.mp3"
+          },
+          {
+            "id": "n_4_2",
+            "text": "In the top row, there is a spanner on the left, a pair of pliers in the middle, and a hammer in the top right corner.",
+            "audio": "assets/audio/a_4_n_2.mp3"
+          },
+          {
+            "id": "n_4_3",
+            "text": "Under the hammer, in the middle row, you can see a spirit level.",
+            "audio": "assets/audio/a_4_n_3.mp3"
+          },
+          {
+            "id": "n_4_4",
+            "text": "Next to the spirit level, there is an oil can in the middle square.",
+            "audio": "assets/audio/a_4_n_4.mp3"
+          },
+          {
+            "id": "n_4_5",
+            "text": "Under the spirit level, in the right corner of the bottom row, there is a tape measure.",
+            "audio": "assets/audio/a_4_n_5.mp3"
+          },
+          {
+            "id": "n_4_6",
+            "text": "In the left bottom corner, you will find two rolls of insulation tape.",
+            "audio": "assets/audio/a_4_n_6.mp3"
+          },
+          {
+            "id": "n_4_7",
+            "text": "There are some small brushes between the tape rolls and the tape measure. ",
+            "audio": "assets/audio/a_4_n_7.mp3"
+          },
+          {
+            "id": "n_4_8",
+            "text": "Above the tape rolls in the left corner of the middle row, there is an insulation stripper. ",
+            "audio": "assets/audio/a_4_n_8.mp3"
+          },
+          {
+            "id": "n_4_9",
+            "text": "Now, look at your diagram and drag each tool to the correct place.",
+            "audio": "assets/audio/a_4_n_9.mp3"
+          },
+          {
+            "id": "n_4_10",
+            "text": "Ensure your layout matches the one I described exactly.",
+            "audio": "assets/audio/a_4_n_10.mp3"
+          }
+        ]
+      },
+      "activity_b": {
+        "image": "assets/img/a_4_b.png",
+        "content": [
+          {
+            "id": "n_4_1",
+            "text": "Good morning, trainees. Please look at the tool board in front of you. I will tell you where each tool is placed.",
+            "audio": "assets/audio/a_4_n_1.mp3"
+          },
+          {
+            "id": "n_4_2",
+            "text": "In the top row, there is a spanner on the left, a pair of pliers in the middle, and a hammer in the top right corner.",
+            "audio": "assets/audio/a_4_n_2.mp3"
+          },
+          {
+            "id": "n_4_3",
+            "text": "Under the hammer, in the middle row, you can see a spirit level.",
+            "audio": "assets/audio/a_4_n_3.mp3"
+          },
+          {
+            "id": "n_4_4",
+            "text": "Next to the spirit level, there is an oil can in the middle square.",
+            "audio": "assets/audio/a_4_n_4.mp3"
+          },
+          {
+            "id": "n_4_5",
+            "text": "Under the spirit level, in the right corner of the bottom row, there is a tape measure.",
+            "audio": "assets/audio/a_4_n_5.mp3"
+          },
+          {
+            "id": "n_4_6",
+            "text": "In the left bottom corner, you will find two rolls of insulation tape.",
+            "audio": "assets/audio/a_4_n_6.mp3"
+          },
+          {
+            "id": "n_4_7",
+            "text": "There are some small brushes between the tape rolls and the tape measure. ",
+            "audio": "assets/audio/a_4_n_7.mp3"
+          },
+          {
+            "id": "n_4_8",
+            "text": "Above the tape rolls in the left corner of the middle row, there is an insulation stripper. ",
+            "audio": "assets/audio/a_4_n_8.mp3"
+          },
+          {
+            "id": "n_4_9",
+            "text": "Now, look at your diagram and drag each tool to the correct place.",
+            "audio": "assets/audio/a_4_n_9.mp3"
+          },
+          {
+            "id": "n_4_10",
+            "text": "Ensure your layout matches the one I described exactly.",
+            "audio": "assets/audio/a_4_n_10.mp3"
+          }
+        ]
+      },
+      "activity_d": {
+        "image": "assets/img/a_4_b.png",
+        "content": [
+          {
+            "id": "n_4_1",
+            "text": "Good morning, trainees. Please look at the tool board in front of you. I will tell you where each tool is placed.",
+            "audio": "assets/audio/a_4_n_1.mp3"
+          },
+          {
+            "id": "n_4_2",
+            "text": "In the top row, there is a spanner on the left, a pair of pliers in the middle, and a hammer in the top right corner.",
+            "audio": "assets/audio/a_4_n_2.mp3"
+          },
+          {
+            "id": "n_4_3",
+            "text": "Under the hammer, in the middle row, you can see a spirit level.",
+            "audio": "assets/audio/a_4_n_3.mp3"
+          },
+          {
+            "id": "n_4_4",
+            "text": "Next to the spirit level, there is an oil can in the middle square.",
+            "audio": "assets/audio/a_4_n_4.mp3"
+          },
+          {
+            "id": "n_4_5",
+            "text": "Under the spirit level, in the right corner of the bottom row, there is a tape measure.",
+            "audio": "assets/audio/a_4_n_5.mp3"
+          },
+          {
+            "id": "n_4_6",
+            "text": "In the left bottom corner, you will find two rolls of insulation tape.",
+            "audio": "assets/audio/a_4_n_6.mp3"
+          },
+          {
+            "id": "n_4_7",
+            "text": "There are some small brushes between the tape rolls and the tape measure. ",
+            "audio": "assets/audio/a_4_n_7.mp3"
+          },
+          {
+            "id": "n_4_8",
+            "text": "Above the tape rolls in the left corner of the middle row, there is an insulation stripper. ",
+            "audio": "assets/audio/a_4_n_8.mp3"
+          },
+          {
+            "id": "n_4_9",
+            "text": "Now, look at your diagram and drag each tool to the correct place.",
+            "audio": "assets/audio/a_4_n_9.mp3"
+          },
+          {
+            "id": "n_4_10",
+            "text": "Ensure your layout matches the one I described exactly.",
+            "audio": "assets/audio/a_4_n_10.mp3"
+          }
+        ]
+      }
+    }
+  }
+}

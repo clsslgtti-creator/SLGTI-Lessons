@@ -463,7 +463,7 @@
           }
         ]
       },
-      "activity_b": {
+      "activity_c": {
         "image": "assets/img/a_4_b.png",
         "content": [
           {
@@ -518,7 +518,7 @@
           }
         ]
       },
-      "activity_b": {
+      "activity_d": {
         "image": "assets/img/a_4_b.png",
         "content": [
           {
