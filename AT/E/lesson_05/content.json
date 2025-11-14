@@ -1,0 +1,612 @@
+{
+  "meta": {
+    "lesson_no": 5,
+    "level": "Elementary",
+    "section": "Automobile Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Short /ɒ/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": [
+      {
+        "id": "p_1",
+        "word_text": "r'o'd",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "The r'o'd is in front of the  engine.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
+      },
+      {
+        "id": "p_2",
+        "word_text": "sh'o'ck",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "Check the sh'o'ck absorber.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "l'o'ck",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "Turn the l'o'ck on the car door.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.png"
+      },
+      {
+        "id": "p_4",
+        "word_text": "st'o'p",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "Do not forget to st'o'p the bus.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS-3",
+    "focus": "Adjectives and prepositions",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_a.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "tables": [[["Where is ………?", "It is ………."]]],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "Where is the office?",
+        "text_b": "It is between the welding section and the food processing section.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.png",
+        "text_a": "Where is the hammer?",
+        "text_b": "It is above the table.",
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_3.png",
+        "text_a": "Where is the grinder?",
+        "text_b": "It is in front of the cooker.",
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
+      }
+    ],
+    "keywords": [
+      {
+        "id": "k_1",
+        "image": "assets/img/a_2_k_1.jpeg",
+        "word": "Behind"
+      },
+      {
+        "id": "k_2",
+        "image": "assets/img/a_2_k_2.png",
+        "word": "Under"
+      },
+      {
+        "id": "k_3",
+        "image": "assets/img/a_2_k_3.png",
+        "word": "Above"
+      },
+      {
+        "id": "k_4",
+        "image": "assets/img/a_2_k_4.jpeg",
+        "word": "In front of"
+      },
+      {
+        "id": "k_5",
+        "image": "assets/img/a_2_k_5.png",
+        "word": "Between"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "Is this alternator new or old?",
+        "text_b": "It is old.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.jpeg",
+        "text_a": "Is the hydraulic jack light or heavy?",
+        "text_b": "It is heavy.",
+        "audio_a": "assets/audio/a_2_d_2_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_b.mp3"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.png",
+        "text_a": "Is the engine block clean or dirty?",
+        "text_b": "It is dirty.",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_b.mp3"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.png",
+        "text_a": "Is the air compressor small or large?",
+        "text_b": "It is large.",
+        "audio_a": "assets/audio/a_2_d_4_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_b.mp3"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.png",
+        "text_a": "Is the instructor kind or strict? ",
+        "text_b": "He is strict.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_b.mp3"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.png",
+        "text_a": "Is the mechanic tired or energetic?",
+        "text_b": "He is energetic.",
+        "audio_a": "assets/audio/a_2_d_6_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_b.mp3"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "INTERACTIVE-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
+      },
+      "activity_b": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-11.jpg",
+        "content": [
+          {
+            "id": "g_b_1",
+            "sentence": "Is the small black bag under the wooden chair?",
+            "audio": "assets/audio/a_3_b_g_1.mp3",
+            "options": [
+              "Yes, it is.",
+              "No, it isn't.",
+              "It is behind the tall table."
+            ],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_1.png"
+          },
+          {
+            "id": "g_b_2",
+            "sentence": "Where is the new computer monitor?",
+            "audio": "assets/audio/a_3_b_g_2.mp3",
+            "options": [
+              "It is behind the grey wall.",
+              "No, it isn't.",
+              "She is in front of the black keyboard."
+            ],
+            "answer": "It is behind the grey wall.",
+            "image": "assets/img/a_3_b_g_2.png"
+          },
+          {
+            "id": "g_b_3",
+            "sentence": "Is the round white clock above the wide door?",
+            "audio": "assets/audio/a_3_b_g_3.mp3",
+            "options": [
+              "Yes, it is.",
+              "It is between the two small windows.",
+              "No, it isn't."
+            ],
+            "answer": "No, it isn't.",
+            "image": "assets/img/a_3_b_g_3.jpg"
+          },
+          {
+            "id": "g_b_4",
+            "sentence": "Where is the blue plastic pen holder?",
+            "audio": "assets/audio/a_3_b_g_4.mp3",
+            "options": [
+              "They are under the wide window.",
+              "It is next to the red notebook.",
+              "No, it isn't."
+            ],
+            "answer": "It is next to the red notebook.",
+            "image": "assets/img/a_3_b_g_4.jpg"
+          },
+          {
+            "id": "g_b_5",
+            "sentence": "Are the tall silver fans behind the brown cupboard?",
+            "audio": "assets/audio/a_3_b_g_5.mp3",
+            "options": [
+              "No, it isn't.",
+              "He is under the small cupboard.",
+              "Yes, they are."
+            ],
+            "answer": "Yes, they are.",
+            "image": "assets/img/a_3_b_g_5.jpeg"
+          },
+          {
+            "id": "g_b_6",
+            "sentence": "Where are the green plastic baskets?",
+            "audio": "assets/audio/a_3_b_g_6.mp3",
+            "options": [
+              "He is under the metal chair.",
+              "They are between the two wooden tables.",
+              "No, it isn't."
+            ],
+            "answer": "They are between the two wooden tables.",
+            "image": "assets/img/a_3_b_g_6.jpg"
+          },
+          {
+            "id": "g_b_7",
+            "sentence": "Is the small desk lamp next to the soft bed?",
+            "audio": "assets/audio/a_3_b_g_7.mp3",
+            "options": [
+              "It isn’t behind the tall bed.",
+              "Yes, it is.",
+              "No, it isn't."
+            ],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_7.jpg"
+          },
+          {
+            "id": "g_b_8",
+            "sentence": "Where is the colourful paper calendar?",
+            "audio": "assets/audio/a_3_b_g_8.mp3",
+            "options": [
+              "It is above the clean whiteboard.",
+              "Yes, it is.",
+              "It isn’t under the long table."
+            ],
+            "answer": "It is above the clean whiteboard.",
+            "image": "assets/img/a_3_b_g_8.jpg"
+          },
+          {
+            "id": "g_b_9",
+            "sentence": "Is the old straw broom behind the wooden door?",
+            "audio": "assets/audio/a_3_b_g_9.mp3",
+            "options": [
+              "Yes, it is.",
+              "No, it isn't.",
+              "They are under the tall door."
+            ],
+            "answer": "Yes, it is.",
+            "image": "assets/img/a_3_b_g_9.jpg"
+          },
+          {
+            "id": "g_b_10",
+            "sentence": "Where are the brown office chairs?",
+            "audio": "assets/audio/a_3_b_g_10.mp3",
+            "options": [
+              "They are in front of the large desk.",
+              "He is between the two small drawers.",
+              "No, it isn't."
+            ],
+            "answer": "They are in front of the large desk.",
+            "image": "assets/img/a_3_b_g_10.jpg"
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_3_1",
+          "text": "Is the small black bag under the wooden chair?",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_3_2",
+          "text": "Where is the new computer monitor?",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_3_3",
+          "text": "Is the round white clock above the wide door?",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_3_4",
+          "text": "Where is the blue plastic pen holder?",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_3_5",
+          "text": "Are the tall silver fans behind the brown cupboard?",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_3_6",
+          "text": "Where are the green plastic baskets?",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_3_7",
+          "text": "Is the small desk lamp next to the soft bed?",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_3_8",
+          "text": "Where is the colourful paper calendar?",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_3_9",
+          "text": "Is the old straw broom behind the wooden door?",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_3_10",
+          "text": "Where are the brown office chairs?",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ]
+    }
+  },
+  "activity_4": {
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the question before you listen to the recording.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න. රෙකෝඩින් එක අහන්නට පෙර ප්‍රශ්නය කියවීම ඉතාමත් වැදගත්ය.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள். பதிவைக் கேட்பதற்கு முன் கேள்வியைப் படிப்பது மிகவும் முக்கியம்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What shape was the toolbox that the customer wanted?",
+            "answer": "Round",
+            "options": ["Square", "Round", "Rectangular"]
+          },
+          {
+            "id": "l_4_2",
+            "question": "When did the shop sell out of the toolbox the first time?",
+            "answer": "Last week",
+            "options": ["Last week", "Yesterday", "Tomorrow"]
+          },
+          {
+            "id": "l_4_3",
+            "question": "Which oval item did the customer ask about?",
+            "answer": "Oval serving tray",
+            "options": ["Oval mirror", "Oval serving tray", "Oval bowl"]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What was the cubical item the customer wanted to buy?",
+            "answer": "Cubical gift box",
+            "options": ["Cubical stool", "Cubical gift box", "Cubical speaker"]
+          },
+          {
+            "id": "l_4_5",
+            "question": "What did the shopkeeper say about the square plastic containers?",
+            "answer": "They are in limited stock",
+            "options": [
+              "They will arrive next week",
+              "They are out of stock",
+              "They are in limited stock"
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "The steering wheel is circular.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "The rearview mirror is oval.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "The radiator grille is rectangular.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "The piston block is cubical.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "The headlight lamp is round.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The gear knobs are spherical.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The toolbox lids are square.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The tire rims are circular.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The fuel tank caps are round.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The exhaust pipes are cylindrical.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "n_4_1",
+          "text": "The steering wheel is circular.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "The rearview mirror is oval.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "The radiator grille is rectangular.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "The piston block is cubical.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "The headlight lamp is round.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The gear knobs are spherical.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The toolbox lids are square.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The tire rims are circular.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The fuel tank caps are round.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The exhaust pipes are cylindrical.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "n_4_1",
+          "text": "The steering wheel is circular.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "The rearview mirror is oval.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "The radiator grille is rectangular.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "The piston block is cubical.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "The headlight lamp is round.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The gear knobs are spherical.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The toolbox lids are square.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The tire rims are circular.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The fuel tank caps are round.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The exhaust pipes are cylindrical.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        }
+      ]
+    }
+  }
+}
