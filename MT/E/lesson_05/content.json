@@ -167,7 +167,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "Where is the creeper seat?",
         "text_b": "It is under the car.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
@@ -183,7 +183,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.png",
+        "img": "assets/img/a_2_d_5.jpeg",
         "text_a": "Where is the paint spray gun?",
         "text_b": "It is in front of the workbench.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
@@ -191,7 +191,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.png",
+        "img": "assets/img/a_2_d_6.jpeg",
         "text_a": "Where is the diesel injector tester?",
         "text_b": "It is behind the chair.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",

@@ -151,7 +151,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Where is the exhaust gas analyzer?",
         "text_b": "It is between the table and the window.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",

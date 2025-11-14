@@ -151,7 +151,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Where is the exhaust gas analyzer?",
         "text_b": "It is between the table and the window.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -159,7 +159,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": "Where is the tire inflator?",
         "text_b": "It is next to the door.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -175,7 +175,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.png",
+        "img": "assets/img/a_2_d_4.jpeg",
         "text_a": "Where is the headlight beam setter?",
         "text_b": "It is above the tool shelf.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
