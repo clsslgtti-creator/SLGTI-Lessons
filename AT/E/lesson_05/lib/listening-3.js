@@ -323,8 +323,6 @@ const buildMatchingGridSlide = (data = {}, context = {}) => {
         zone.className = "pre-listening-dropzone listening-matching-dropzone";
         const key = `${row}-${column}`;
         const label = document.createElement("p");
-        label.className = "pre-listening-dropzone__label";
-        label.textContent = `Row ${row + 1}, Column ${column + 1}`;
 
         const body = document.createElement("div");
         body.className = "pre-listening-dropzone__body";
@@ -335,7 +333,7 @@ const buildMatchingGridSlide = (data = {}, context = {}) => {
           zone.dataset.expectedId = expectedId;
         }
 
-        zone.append(label, body);
+        zone.append(body);
         dropzones.push(zone);
         dropzoneMap.set(key, zone);
         grid.appendChild(zone);
@@ -397,8 +395,6 @@ const buildMatchingGridSlide = (data = {}, context = {}) => {
       if (body?.contains(card)) {
         body.removeChild(card);
       }
-      const label = zone.querySelector(".pre-listening-dropzone__label");
-      label?.classList.remove("is-hidden");
     }
     card.dataset.assignedZone = "";
   };
@@ -440,8 +436,6 @@ const buildMatchingGridSlide = (data = {}, context = {}) => {
       zone.classList.remove("is-filled", "is-hover");
       const body = zone.querySelector(".pre-listening-dropzone__body");
       body.innerHTML = "";
-      const label = zone.querySelector(".pre-listening-dropzone__label");
-      label?.classList.remove("is-hidden");
     });
     cards.forEach((card) => {
       card.dataset.assignedZone = "";
@@ -545,7 +539,6 @@ const buildMatchingGridSlide = (data = {}, context = {}) => {
         const cardEl = ui.draggable.get(0);
         const zoneEl = this;
         const zoneKey = zoneEl.dataset.zoneKey;
-        const label = zoneEl.querySelector(".pre-listening-dropzone__label");
         $(this).removeClass("is-hover");
         if (!cardEl || !zoneKey) {
           return;
@@ -561,7 +554,6 @@ const buildMatchingGridSlide = (data = {}, context = {}) => {
 
         const body = zoneEl.querySelector(".pre-listening-dropzone__body");
         body.appendChild(cardEl);
-        label?.classList.add("is-hidden");
         resetCardPosition(cardEl);
         cardEl.dataset.assignedZone = zoneKey;
         placements.set(zoneKey, cardEl);
