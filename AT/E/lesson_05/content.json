@@ -419,47 +419,47 @@
           {
             "id": "l_4_1",
             "image": "assets/img/a_4_l_1.png",
-            "grid": {"row":0,"column":0}
+            "grid": { "row": 0, "column": 0 }
           },
           {
             "id": "l_4_2",
             "image": "assets/img/a_4_l_2.png",
-            "grid": {"row":0,"column":1}
+            "grid": { "row": 0, "column": 1 }
           },
           {
             "id": "l_4_3",
             "image": "assets/img/a_4_l_3.png",
-            "grid": {"row":0,"column":2}
+            "grid": { "row": 0, "column": 2 }
           },
           {
             "id": "l_4_4",
             "image": "assets/img/a_4_l_4.png",
-            "grid": {"row":1,"column":0}
+            "grid": { "row": 1, "column": 0 }
           },
           {
             "id": "l_4_5",
             "image": "assets/img/a_4_l_5.png",
-            "grid": {"row":1,"column":1}
+            "grid": { "row": 1, "column": 1 }
           },
           {
             "id": "l_4_6",
             "image": "assets/img/a_4_l_6.png",
-            "grid": {"row":1,"column":2}
+            "grid": { "row": 1, "column": 2 }
           },
           {
             "id": "l_4_7",
             "image": "assets/img/a_4_l_7.png",
-            "grid": {"row":2,"column":0}
+            "grid": { "row": 2, "column": 0 }
           },
           {
             "id": "l_4_8",
             "image": "assets/img/a_4_l_8.png",
-            "grid": {"row":2,"column":1}
+            "grid": { "row": 2, "column": 1 }
           },
           {
             "id": "l_4_9",
             "image": "assets/img/a_4_l_9.png",
-            "grid": {"row":2,"column":2}
+            "grid": { "row": 2, "column": 2 }
           }
         ]
       },
@@ -468,162 +468,162 @@
         "content": [
           {
             "id": "n_4_1",
-            "text": "The steering wheel is circular.",
+            "text": "Good morning, trainees. Please look at the tool board in front of you. I will tell you where each tool is placed.",
             "audio": "assets/audio/a_4_n_1.mp3"
           },
           {
             "id": "n_4_2",
-            "text": "The rearview mirror is oval.",
+            "text": "In the top row, there is a spanner on the left, a pair of pliers in the middle, and a hammer in the top right corner.",
             "audio": "assets/audio/a_4_n_2.mp3"
           },
           {
             "id": "n_4_3",
-            "text": "The radiator grille is rectangular.",
+            "text": "Under the hammer, in the middle row, you can see a spirit level.",
             "audio": "assets/audio/a_4_n_3.mp3"
           },
           {
             "id": "n_4_4",
-            "text": "The piston block is cubical.",
+            "text": "Next to the spirit level, there is an oil can in the middle square.",
             "audio": "assets/audio/a_4_n_4.mp3"
           },
           {
             "id": "n_4_5",
-            "text": "The headlight lamp is round.",
+            "text": "Under the spirit level, in the right corner of the bottom row, there is a tape measure.",
             "audio": "assets/audio/a_4_n_5.mp3"
           },
           {
             "id": "n_4_6",
-            "text": "The gear knobs are spherical.",
+            "text": "In the left bottom corner, you will find two rolls of insulation tape.",
             "audio": "assets/audio/a_4_n_6.mp3"
           },
           {
             "id": "n_4_7",
-            "text": "The toolbox lids are square.",
+            "text": "There are some small brushes between the tape rolls and the tape measure. ",
             "audio": "assets/audio/a_4_n_7.mp3"
           },
           {
             "id": "n_4_8",
-            "text": "The tire rims are circular.",
+            "text": "Above the tape rolls in the left corner of the middle row, there is an insulation stripper. ",
             "audio": "assets/audio/a_4_n_8.mp3"
           },
           {
             "id": "n_4_9",
-            "text": "The fuel tank caps are round.",
+            "text": "Now, look at your diagram and drag each tool to the correct place.",
             "audio": "assets/audio/a_4_n_9.mp3"
           },
           {
             "id": "n_4_10",
-            "text": "The exhaust pipes are cylindrical.",
+            "text": "Ensure your layout matches the one I described exactly.",
             "audio": "assets/audio/a_4_n_10.mp3"
           }
         ]
       },
-      "activity_c": {
+      "activity_b": {
         "image": "assets/img/a_4_b.png",
         "content": [
           {
             "id": "n_4_1",
-            "text": "The steering wheel is circular.",
+            "text": "Good morning, trainees. Please look at the tool board in front of you. I will tell you where each tool is placed.",
             "audio": "assets/audio/a_4_n_1.mp3"
           },
           {
             "id": "n_4_2",
-            "text": "The rearview mirror is oval.",
+            "text": "In the top row, there is a spanner on the left, a pair of pliers in the middle, and a hammer in the top right corner.",
             "audio": "assets/audio/a_4_n_2.mp3"
           },
           {
             "id": "n_4_3",
-            "text": "The radiator grille is rectangular.",
+            "text": "Under the hammer, in the middle row, you can see a spirit level.",
             "audio": "assets/audio/a_4_n_3.mp3"
           },
           {
             "id": "n_4_4",
-            "text": "The piston block is cubical.",
+            "text": "Next to the spirit level, there is an oil can in the middle square.",
             "audio": "assets/audio/a_4_n_4.mp3"
           },
           {
             "id": "n_4_5",
-            "text": "The headlight lamp is round.",
+            "text": "Under the spirit level, in the right corner of the bottom row, there is a tape measure.",
             "audio": "assets/audio/a_4_n_5.mp3"
           },
           {
             "id": "n_4_6",
-            "text": "The gear knobs are spherical.",
+            "text": "In the left bottom corner, you will find two rolls of insulation tape.",
             "audio": "assets/audio/a_4_n_6.mp3"
           },
           {
             "id": "n_4_7",
-            "text": "The toolbox lids are square.",
+            "text": "There are some small brushes between the tape rolls and the tape measure. ",
             "audio": "assets/audio/a_4_n_7.mp3"
           },
           {
             "id": "n_4_8",
-            "text": "The tire rims are circular.",
+            "text": "Above the tape rolls in the left corner of the middle row, there is an insulation stripper. ",
             "audio": "assets/audio/a_4_n_8.mp3"
           },
           {
             "id": "n_4_9",
-            "text": "The fuel tank caps are round.",
+            "text": "Now, look at your diagram and drag each tool to the correct place.",
             "audio": "assets/audio/a_4_n_9.mp3"
           },
           {
             "id": "n_4_10",
-            "text": "The exhaust pipes are cylindrical.",
+            "text": "Ensure your layout matches the one I described exactly.",
             "audio": "assets/audio/a_4_n_10.mp3"
           }
         ]
       },
-      "activity_d": {
+      "activity_b": {
         "image": "assets/img/a_4_b.png",
         "content": [
           {
             "id": "n_4_1",
-            "text": "The steering wheel is circular.",
+            "text": "Good morning, trainees. Please look at the tool board in front of you. I will tell you where each tool is placed.",
             "audio": "assets/audio/a_4_n_1.mp3"
           },
           {
             "id": "n_4_2",
-            "text": "The rearview mirror is oval.",
+            "text": "In the top row, there is a spanner on the left, a pair of pliers in the middle, and a hammer in the top right corner.",
             "audio": "assets/audio/a_4_n_2.mp3"
           },
           {
             "id": "n_4_3",
-            "text": "The radiator grille is rectangular.",
+            "text": "Under the hammer, in the middle row, you can see a spirit level.",
             "audio": "assets/audio/a_4_n_3.mp3"
           },
           {
             "id": "n_4_4",
-            "text": "The piston block is cubical.",
+            "text": "Next to the spirit level, there is an oil can in the middle square.",
             "audio": "assets/audio/a_4_n_4.mp3"
           },
           {
             "id": "n_4_5",
-            "text": "The headlight lamp is round.",
+            "text": "Under the spirit level, in the right corner of the bottom row, there is a tape measure.",
             "audio": "assets/audio/a_4_n_5.mp3"
           },
           {
             "id": "n_4_6",
-            "text": "The gear knobs are spherical.",
+            "text": "In the left bottom corner, you will find two rolls of insulation tape.",
             "audio": "assets/audio/a_4_n_6.mp3"
           },
           {
             "id": "n_4_7",
-            "text": "The toolbox lids are square.",
+            "text": "There are some small brushes between the tape rolls and the tape measure. ",
             "audio": "assets/audio/a_4_n_7.mp3"
           },
           {
             "id": "n_4_8",
-            "text": "The tire rims are circular.",
+            "text": "Above the tape rolls in the left corner of the middle row, there is an insulation stripper. ",
             "audio": "assets/audio/a_4_n_8.mp3"
           },
           {
             "id": "n_4_9",
-            "text": "The fuel tank caps are round.",
+            "text": "Now, look at your diagram and drag each tool to the correct place.",
             "audio": "assets/audio/a_4_n_9.mp3"
           },
           {
             "id": "n_4_10",
-            "text": "The exhaust pipes are cylindrical.",
+            "text": "Ensure your layout matches the one I described exactly.",
             "audio": "assets/audio/a_4_n_10.mp3"
           }
         ]
