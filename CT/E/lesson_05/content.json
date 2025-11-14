@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "r'o'd",
+        "word_text": "bl'o'ck",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The r'o'd is in front of the  engine.",
+        "sentence_text": "The bl'o'ck is made of cement.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "sh'o'ck",
+        "word_text": "r'o'ck",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Check the sh'o'ck absorber.",
+        "sentence_text": "There is a large r'o'ck in front of  the staircase.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
-        "word_text": "l'o'ck",
+        "word_text": "c'o't",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Turn the l'o'ck on the car door.",
+        "sentence_text": "The worker is sleeping on a c'o't.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "st'o'p",
+        "word_text": "r'o'd",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Do not forget to st'o'p the bus.",
+        "sentence_text": "Tie the steel r'o'd with wire.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
@@ -152,48 +152,48 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.png",
-        "text_a": "Where is the exhaust gas analyzer?",
-        "text_b": "It is between the table and the window.",
+        "text_a": "Where is the laser level?",
+        "text_b": " It is between the buckets.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3"
       },
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
-        "text_a": "Where is the tire inflator?",
-        "text_b": "It is next to the door.",
+        "text_a": "Where is the concrete core cutter?",
+        "text_b": "It is next to the wall.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3"
       },
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Where is the creeper seat?",
-        "text_b": "It is under the car.",
+        "text_a": "Where is the trowel set?",
+        "text_b": "It is behind the table.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3"
       },
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": "Where is the headlight beam setter?",
-        "text_b": "It is above the tool shelf.",
+        "text_a": "Where is the bucket of lime wash?",
+        "text_b": "It is under the bench.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3"
       },
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Where is the paint spray gun?",
-        "text_b": "It is in front of the workbench.",
+        "text_a": "Where is the mortar mixer? ",
+        "text_b": "It is above the wooden platform.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3"
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Where is the diesel injector tester?",
-        "text_b": "It is behind the chair.",
+        "text_a": "Where is the scaffold ladder?",
+        "text_b": " It is in front of the building.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3"
       }

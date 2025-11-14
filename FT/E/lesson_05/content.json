@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "r'o'd",
+        "word_text": "p'o't",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The r'o'd is in front of the  engine.",
+        "sentence_text": "The boiled rice is in the p'o't.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "sh'o'ck",
+        "word_text": "ch'o'p",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Check the sh'o'ck absorber.",
+        "sentence_text": "There is a colander in front of the ch'o'pping board.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "l'o'ck",
+        "word_text": "h'o't",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Turn the l'o'ck on the car door.",
+        "sentence_text": "Be careful, the oil is extremely h'o't.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.jpeg"
       },
       {
         "id": "p_4",
-        "word_text": "st'o'p",
+        "word_text": "c'o'ck",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Do not forget to st'o'p the bus.",
+        "sentence_text": "He turned the c'o'ck on the gas stove to light the burner.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
@@ -152,48 +152,48 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.png",
-        "text_a": "Where is the exhaust gas analyzer?",
-        "text_b": "It is between the table and the window.",
+        "text_a": "Where is the steam jacketed kettle?",
+        "text_b": "It is between the stove and the sink.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3"
       },
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.jpeg",
-        "text_a": "Where is the tire inflator?",
-        "text_b": "It is next to the door.",
+        "text_a": "Where is the fruit pulper? ",
+        "text_b": "It is next to the fridge.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3"
       },
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Where is the creeper seat?",
-        "text_b": "It is under the car.",
+        "text_a": "Where is the ice cream churner?",
+        "text_b": "It is under the counter.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3"
       },
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.png",
-        "text_a": "Where is the headlight beam setter?",
-        "text_b": "It is above the tool shelf.",
+        "text_a": "Where is the smoke chamber? ",
+        "text_b": "It is above the cupboard.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3"
       },
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Where is the paint spray gun?",
-        "text_b": "It is in front of the workbench.",
+        "text_a": "Where is the vacuum fryer?",
+        "text_b": "It is in front of the window.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3"
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Where is the diesel injector tester?",
-        "text_b": "It is behind the chair.",
+        "text_a": "Where is the tray sealer? ",
+        "text_b": "It is behind the table.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3"
       }
