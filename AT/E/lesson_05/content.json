@@ -152,48 +152,48 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Is this alternator new or old?",
-        "text_b": "It is old.",
+        "text_a": "Where is the exhaust gas analyzer?",
+        "text_b": "It is between the table and the window.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3"
       },
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.jpeg",
-        "text_a": "Is the hydraulic jack light or heavy?",
-        "text_b": "It is heavy.",
+        "text_a": "Where is the tire inflator?",
+        "text_b": "It is next to the door.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3"
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.png",
-        "text_a": "Is the engine block clean or dirty?",
-        "text_b": "It is dirty.",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "Where is the creeper seat?",
+        "text_b": "It is under the car.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3"
       },
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.png",
-        "text_a": "Is the air compressor small or large?",
-        "text_b": "It is large.",
+        "text_a": "Where is the headlight beam setter?",
+        "text_b": "It is above the tool shelf.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3"
       },
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Is the instructor kind or strict? ",
-        "text_b": "He is strict.",
+        "text_a": "Where is the paint spray gun?",
+        "text_b": "It is in front of the workbench.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3"
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Is the mechanic tired or energetic?",
-        "text_b": "He is energetic.",
+        "text_a": "Where is the diesel injector tester?",
+        "text_b": "It is behind the chair.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3"
       }
@@ -213,7 +213,7 @@
     },
     "content": {
       "activity_a": {
-        "bg_image": "assets/img/game/bg-11.jpg",
+        "bg_image": "assets/img/game/bg-9.jpg",
         "content": [
           {
             "id": "g_b_1",
@@ -225,7 +225,7 @@
               "It is behind the tall table."
             ],
             "answer": "Yes, it is.",
-            "image": "assets/img/a_3_b_g_1.png"
+            "image": "assets/img/a_3_b_g_1.jpeg"
           },
           {
             "id": "g_b_2",
@@ -249,7 +249,7 @@
               "No, it isn't."
             ],
             "answer": "No, it isn't.",
-            "image": "assets/img/a_3_b_g_3.jpg"
+            "image": "assets/img/a_3_b_g_3.png"
           },
           {
             "id": "g_b_4",
@@ -261,7 +261,7 @@
               "No, it isn't."
             ],
             "answer": "It is next to the red notebook.",
-            "image": "assets/img/a_3_b_g_4.jpg"
+            "image": "assets/img/a_3_b_g_4.jpeg"
           },
           {
             "id": "g_b_5",
@@ -273,7 +273,7 @@
               "Yes, they are."
             ],
             "answer": "Yes, they are.",
-            "image": "assets/img/a_3_b_g_5.jpeg"
+            "image": "assets/img/a_3_b_g_5.png"
           },
           {
             "id": "g_b_6",
@@ -285,7 +285,7 @@
               "No, it isn't."
             ],
             "answer": "They are between the two wooden tables.",
-            "image": "assets/img/a_3_b_g_6.jpg"
+            "image": "assets/img/a_3_b_g_6.png"
           },
           {
             "id": "g_b_7",
@@ -297,7 +297,7 @@
               "No, it isn't."
             ],
             "answer": "Yes, it is.",
-            "image": "assets/img/a_3_b_g_7.jpg"
+            "image": "assets/img/a_3_b_g_7.png"
           },
           {
             "id": "g_b_8",
@@ -309,7 +309,7 @@
               "It isn’t under the long table."
             ],
             "answer": "It is above the clean whiteboard.",
-            "image": "assets/img/a_3_b_g_8.jpg"
+            "image": "assets/img/a_3_b_g_8.jpeg"
           },
           {
             "id": "g_b_9",
@@ -321,7 +321,7 @@
               "They are under the tall door."
             ],
             "answer": "Yes, it is.",
-            "image": "assets/img/a_3_b_g_9.jpg"
+            "image": "assets/img/a_3_b_g_9.png"
           },
           {
             "id": "g_b_10",
@@ -333,7 +333,7 @@
               "No, it isn't."
             ],
             "answer": "They are in front of the large desk.",
-            "image": "assets/img/a_3_b_g_10.jpg"
+            "image": "assets/img/a_3_b_g_10.png"
           }
         ]
       },
@@ -392,10 +392,10 @@
     }
   },
   "activity_4": {
-    "type": "LISTENING-2",
+    "type": "LISTENING-3",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the question before you listen to the recording.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න. රෙකෝඩින් එක අහන්නට පෙර ප්‍රශ්නය කියවීම ඉතාමත් වැදගත්ය.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள். பதிவைக் கேட்பதற்கு முன் கேள்வியைப் படிப்பது மிகவும் முக்கியம்.",
+        "text": "You will hear this recording three times. As you listen, drag and drop the objects onto the provided grid.\nඔබ මෙම සටහන තුන් වතාවක් ඇසීමට යයි. ඔබ සවන් දී සිටින විට, ලබා දී ඇති ග්‍රිඩ් එකට වස්තු ඇදගෙන එවන්න.\nநீங்கள் இந்த பதிவை மூன்று முறை கேட்கப்போகிறீர்கள். நீங்கள் கேட்கும் போது, வழங்கப்பட்ட கட்டங்களுக்குள் பொருட்களை இழுத்து விடுங்கள்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_b": {
@@ -414,199 +414,220 @@
     "content": {
       "activity_a": {
         "audio": "assets/audio/a_4_l_1.mp3",
-        "Questions": [
+        "grid": { "rows": 3, "columns": 3 },
+        "content": [
           {
             "id": "l_4_1",
-            "question": "What shape was the toolbox that the customer wanted?",
-            "answer": "Round",
-            "options": ["Square", "Round", "Rectangular"]
+            "image": "assets/img/a_4_l_1.png",
+            "grid": {"row":0,"column":0}
           },
           {
             "id": "l_4_2",
-            "question": "When did the shop sell out of the toolbox the first time?",
-            "answer": "Last week",
-            "options": ["Last week", "Yesterday", "Tomorrow"]
+            "image": "assets/img/a_4_l_2.png",
+            "grid": {"row":0,"column":1}
           },
           {
             "id": "l_4_3",
-            "question": "Which oval item did the customer ask about?",
-            "answer": "Oval serving tray",
-            "options": ["Oval mirror", "Oval serving tray", "Oval bowl"]
+            "image": "assets/img/a_4_l_3.png",
+            "grid": {"row":0,"column":2}
           },
           {
             "id": "l_4_4",
-            "question": "What was the cubical item the customer wanted to buy?",
-            "answer": "Cubical gift box",
-            "options": ["Cubical stool", "Cubical gift box", "Cubical speaker"]
+            "image": "assets/img/a_4_l_4.png",
+            "grid": {"row":1,"column":0}
           },
           {
             "id": "l_4_5",
-            "question": "What did the shopkeeper say about the square plastic containers?",
-            "answer": "They are in limited stock",
-            "options": [
-              "They will arrive next week",
-              "They are out of stock",
-              "They are in limited stock"
-            ]
+            "image": "assets/img/a_4_l_5.png",
+            "grid": {"row":1,"column":1}
+          },
+          {
+            "id": "l_4_6",
+            "image": "assets/img/a_4_l_6.png",
+            "grid": {"row":1,"column":2}
+          },
+          {
+            "id": "l_4_7",
+            "image": "assets/img/a_4_l_7.png",
+            "grid": {"row":2,"column":0}
+          },
+          {
+            "id": "l_4_8",
+            "image": "assets/img/a_4_l_8.png",
+            "grid": {"row":2,"column":1}
+          },
+          {
+            "id": "l_4_9",
+            "image": "assets/img/a_4_l_9.png",
+            "grid": {"row":2,"column":2}
           }
         ]
       },
-      "activity_b": [
-        {
-          "id": "n_4_1",
-          "text": "The steering wheel is circular.",
-          "audio": "assets/audio/a_4_n_1.mp3"
-        },
-        {
-          "id": "n_4_2",
-          "text": "The rearview mirror is oval.",
-          "audio": "assets/audio/a_4_n_2.mp3"
-        },
-        {
-          "id": "n_4_3",
-          "text": "The radiator grille is rectangular.",
-          "audio": "assets/audio/a_4_n_3.mp3"
-        },
-        {
-          "id": "n_4_4",
-          "text": "The piston block is cubical.",
-          "audio": "assets/audio/a_4_n_4.mp3"
-        },
-        {
-          "id": "n_4_5",
-          "text": "The headlight lamp is round.",
-          "audio": "assets/audio/a_4_n_5.mp3"
-        },
-        {
-          "id": "n_4_6",
-          "text": "The gear knobs are spherical.",
-          "audio": "assets/audio/a_4_n_6.mp3"
-        },
-        {
-          "id": "n_4_7",
-          "text": "The toolbox lids are square.",
-          "audio": "assets/audio/a_4_n_7.mp3"
-        },
-        {
-          "id": "n_4_8",
-          "text": "The tire rims are circular.",
-          "audio": "assets/audio/a_4_n_8.mp3"
-        },
-        {
-          "id": "n_4_9",
-          "text": "The fuel tank caps are round.",
-          "audio": "assets/audio/a_4_n_9.mp3"
-        },
-        {
-          "id": "n_4_10",
-          "text": "The exhaust pipes are cylindrical.",
-          "audio": "assets/audio/a_4_n_10.mp3"
-        }
-      ],
-      "activity_c": [
-        {
-          "id": "n_4_1",
-          "text": "The steering wheel is circular.",
-          "audio": "assets/audio/a_4_n_1.mp3"
-        },
-        {
-          "id": "n_4_2",
-          "text": "The rearview mirror is oval.",
-          "audio": "assets/audio/a_4_n_2.mp3"
-        },
-        {
-          "id": "n_4_3",
-          "text": "The radiator grille is rectangular.",
-          "audio": "assets/audio/a_4_n_3.mp3"
-        },
-        {
-          "id": "n_4_4",
-          "text": "The piston block is cubical.",
-          "audio": "assets/audio/a_4_n_4.mp3"
-        },
-        {
-          "id": "n_4_5",
-          "text": "The headlight lamp is round.",
-          "audio": "assets/audio/a_4_n_5.mp3"
-        },
-        {
-          "id": "n_4_6",
-          "text": "The gear knobs are spherical.",
-          "audio": "assets/audio/a_4_n_6.mp3"
-        },
-        {
-          "id": "n_4_7",
-          "text": "The toolbox lids are square.",
-          "audio": "assets/audio/a_4_n_7.mp3"
-        },
-        {
-          "id": "n_4_8",
-          "text": "The tire rims are circular.",
-          "audio": "assets/audio/a_4_n_8.mp3"
-        },
-        {
-          "id": "n_4_9",
-          "text": "The fuel tank caps are round.",
-          "audio": "assets/audio/a_4_n_9.mp3"
-        },
-        {
-          "id": "n_4_10",
-          "text": "The exhaust pipes are cylindrical.",
-          "audio": "assets/audio/a_4_n_10.mp3"
-        }
-      ],
-      "activity_d": [
-        {
-          "id": "n_4_1",
-          "text": "The steering wheel is circular.",
-          "audio": "assets/audio/a_4_n_1.mp3"
-        },
-        {
-          "id": "n_4_2",
-          "text": "The rearview mirror is oval.",
-          "audio": "assets/audio/a_4_n_2.mp3"
-        },
-        {
-          "id": "n_4_3",
-          "text": "The radiator grille is rectangular.",
-          "audio": "assets/audio/a_4_n_3.mp3"
-        },
-        {
-          "id": "n_4_4",
-          "text": "The piston block is cubical.",
-          "audio": "assets/audio/a_4_n_4.mp3"
-        },
-        {
-          "id": "n_4_5",
-          "text": "The headlight lamp is round.",
-          "audio": "assets/audio/a_4_n_5.mp3"
-        },
-        {
-          "id": "n_4_6",
-          "text": "The gear knobs are spherical.",
-          "audio": "assets/audio/a_4_n_6.mp3"
-        },
-        {
-          "id": "n_4_7",
-          "text": "The toolbox lids are square.",
-          "audio": "assets/audio/a_4_n_7.mp3"
-        },
-        {
-          "id": "n_4_8",
-          "text": "The tire rims are circular.",
-          "audio": "assets/audio/a_4_n_8.mp3"
-        },
-        {
-          "id": "n_4_9",
-          "text": "The fuel tank caps are round.",
-          "audio": "assets/audio/a_4_n_9.mp3"
-        },
-        {
-          "id": "n_4_10",
-          "text": "The exhaust pipes are cylindrical.",
-          "audio": "assets/audio/a_4_n_10.mp3"
-        }
-      ]
+      "activity_b": {
+        "image": "assets/img/a_4_b.png",
+        "content": [
+          {
+            "id": "n_4_1",
+            "text": "The steering wheel is circular.",
+            "audio": "assets/audio/a_4_n_1.mp3"
+          },
+          {
+            "id": "n_4_2",
+            "text": "The rearview mirror is oval.",
+            "audio": "assets/audio/a_4_n_2.mp3"
+          },
+          {
+            "id": "n_4_3",
+            "text": "The radiator grille is rectangular.",
+            "audio": "assets/audio/a_4_n_3.mp3"
+          },
+          {
+            "id": "n_4_4",
+            "text": "The piston block is cubical.",
+            "audio": "assets/audio/a_4_n_4.mp3"
+          },
+          {
+            "id": "n_4_5",
+            "text": "The headlight lamp is round.",
+            "audio": "assets/audio/a_4_n_5.mp3"
+          },
+          {
+            "id": "n_4_6",
+            "text": "The gear knobs are spherical.",
+            "audio": "assets/audio/a_4_n_6.mp3"
+          },
+          {
+            "id": "n_4_7",
+            "text": "The toolbox lids are square.",
+            "audio": "assets/audio/a_4_n_7.mp3"
+          },
+          {
+            "id": "n_4_8",
+            "text": "The tire rims are circular.",
+            "audio": "assets/audio/a_4_n_8.mp3"
+          },
+          {
+            "id": "n_4_9",
+            "text": "The fuel tank caps are round.",
+            "audio": "assets/audio/a_4_n_9.mp3"
+          },
+          {
+            "id": "n_4_10",
+            "text": "The exhaust pipes are cylindrical.",
+            "audio": "assets/audio/a_4_n_10.mp3"
+          }
+        ]
+      },
+      "activity_c": {
+        "image": "assets/img/a_4_b.png",
+        "content": [
+          {
+            "id": "n_4_1",
+            "text": "The steering wheel is circular.",
+            "audio": "assets/audio/a_4_n_1.mp3"
+          },
+          {
+            "id": "n_4_2",
+            "text": "The rearview mirror is oval.",
+            "audio": "assets/audio/a_4_n_2.mp3"
+          },
+          {
+            "id": "n_4_3",
+            "text": "The radiator grille is rectangular.",
+            "audio": "assets/audio/a_4_n_3.mp3"
+          },
+          {
+            "id": "n_4_4",
+            "text": "The piston block is cubical.",
+            "audio": "assets/audio/a_4_n_4.mp3"
+          },
+          {
+            "id": "n_4_5",
+            "text": "The headlight lamp is round.",
+            "audio": "assets/audio/a_4_n_5.mp3"
+          },
+          {
+            "id": "n_4_6",
+            "text": "The gear knobs are spherical.",
+            "audio": "assets/audio/a_4_n_6.mp3"
+          },
+          {
+            "id": "n_4_7",
+            "text": "The toolbox lids are square.",
+            "audio": "assets/audio/a_4_n_7.mp3"
+          },
+          {
+            "id": "n_4_8",
+            "text": "The tire rims are circular.",
+            "audio": "assets/audio/a_4_n_8.mp3"
+          },
+          {
+            "id": "n_4_9",
+            "text": "The fuel tank caps are round.",
+            "audio": "assets/audio/a_4_n_9.mp3"
+          },
+          {
+            "id": "n_4_10",
+            "text": "The exhaust pipes are cylindrical.",
+            "audio": "assets/audio/a_4_n_10.mp3"
+          }
+        ]
+      },
+      "activity_d": {
+        "image": "assets/img/a_4_b.png",
+        "content": [
+          {
+            "id": "n_4_1",
+            "text": "The steering wheel is circular.",
+            "audio": "assets/audio/a_4_n_1.mp3"
+          },
+          {
+            "id": "n_4_2",
+            "text": "The rearview mirror is oval.",
+            "audio": "assets/audio/a_4_n_2.mp3"
+          },
+          {
+            "id": "n_4_3",
+            "text": "The radiator grille is rectangular.",
+            "audio": "assets/audio/a_4_n_3.mp3"
+          },
+          {
+            "id": "n_4_4",
+            "text": "The piston block is cubical.",
+            "audio": "assets/audio/a_4_n_4.mp3"
+          },
+          {
+            "id": "n_4_5",
+            "text": "The headlight lamp is round.",
+            "audio": "assets/audio/a_4_n_5.mp3"
+          },
+          {
+            "id": "n_4_6",
+            "text": "The gear knobs are spherical.",
+            "audio": "assets/audio/a_4_n_6.mp3"
+          },
+          {
+            "id": "n_4_7",
+            "text": "The toolbox lids are square.",
+            "audio": "assets/audio/a_4_n_7.mp3"
+          },
+          {
+            "id": "n_4_8",
+            "text": "The tire rims are circular.",
+            "audio": "assets/audio/a_4_n_8.mp3"
+          },
+          {
+            "id": "n_4_9",
+            "text": "The fuel tank caps are round.",
+            "audio": "assets/audio/a_4_n_9.mp3"
+          },
+          {
+            "id": "n_4_10",
+            "text": "The exhaust pipes are cylindrical.",
+            "audio": "assets/audio/a_4_n_10.mp3"
+          }
+        ]
+      }
     }
   }
 }
