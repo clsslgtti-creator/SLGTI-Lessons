@@ -608,6 +608,34 @@ const createInstructionIndicator = (slideObj) => {
   };
 };
 
+const resolveInstructionCountdownSeconds = (slideObj) => {
+  const toSeconds = (value) => {
+    const parsed = Number(value);
+    if (!Number.isFinite(parsed) || parsed <= 0) {
+      return null;
+    }
+    return Math.max(1, Math.floor(parsed));
+  };
+
+  if (!slideObj) {
+    return 3;
+  }
+
+  const fromSlide = toSeconds(slideObj.instructionCountdownSeconds);
+  if (fromSlide) {
+    return fromSlide;
+  }
+
+  const fromDataset = toSeconds(
+    slideObj.element?.dataset?.instructionCountdownSeconds
+  );
+  if (fromDataset) {
+    return fromDataset;
+  }
+
+  return 3;
+};
+
 const startInstructionCountdown = (controller) => {
   if (!instructionPlayback || instructionPlayback !== controller) {
     return;
@@ -625,7 +653,8 @@ const startInstructionCountdown = (controller) => {
 
   controller.restoreButton?.({ restoreText: true });
 
-  let remaining = 3;
+  const countdownSeconds = resolveInstructionCountdownSeconds(slideObj);
+  let remaining = countdownSeconds;
   indicator?.update(`Starts in ${remaining}s`);
 
   controller.countdownInterval = window.setInterval(() => {
