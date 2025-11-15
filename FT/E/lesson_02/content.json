@@ -37,7 +37,7 @@
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "The mince m'ea't is in the cold room.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "P'ee'ling these vegetables isn’t difficult.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpeg"
+        "image": "assets/img/a_1_p_3.jpg"
       },
       {
         "id": "p_4",
@@ -143,7 +143,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Where is the assistant baker now?",
         "text_b": " He is in the fermentation room.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -152,7 +152,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": " Where is the bread dough?",
         "text_b": " It is in the large mixing bowl.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -161,7 +161,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.jpg",
         "text_a": "Where are the Year 1 trainees?",
         "text_b": "They are in the cake preparation room.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
@@ -170,16 +170,16 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": " Where is the lamprais ?",
-        "text_b": " It is  in the gas oven. ",
+        "img": "assets/img/a_2_d_4.png",
+        "text_a": "Where is the lamprais?",
+        "text_b": "It is  in the gas oven. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "keyword": "gas oven"
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.jpeg",
+        "img": "assets/img/a_2_d_5.png",
         "text_a": "Where are the milk bottles?",
         "text_b": "They are in the cold store.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
@@ -188,7 +188,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpeg",
+        "img": "assets/img/a_2_d_6.png",
         "text_a": "Where are the string hoppers?",
         "text_b": "They are in the steamer.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
@@ -214,7 +214,8 @@
             "sentence": "The correct baking time for small bread rolls is 15–18 minutes. The baking time for these rolls is 22 minutes.\n\nThe baking time for these rolls is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
             "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long"
+            "answer": "Too long",
+            "image": "assets/img/a_3_a_ex_1.png"
           }
         ],
         "content": [
@@ -223,70 +224,80 @@
             "sentence": "The range of the oven temperature for baking buns is 180–190 degrees Celsius. The temperature in this oven is 160 degrees Celsius.\n\nThe temperature in this oven is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low"
+            "answer": "Too low",
+            "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_2",
             "sentence": "The correct weight of the dough for a batch is 2 kilograms. The weight of this dough is 2.3 kilograms.\n\nThe weight of this dough is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
             "options": ["Too heavy", "Correct", "Too light"],
-            "answer": "Too heavy"
+            "answer": "Too heavy",
+            "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_3",
             "sentence": "The acceptable sugar content in syrup is 10–12 percent. The sugar content in this syrup is 14 percent.\n\nThe sugar content in this syrup is ………………….",
             "audio": "assets/audio/a_3_g_3.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_4",
             "sentence": "The standard moisture level of flour is 12–14 percent. The moisture level of this flour is 18 percent.\n\nThe moisture level of this flour is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_5",
             "sentence": "The ideal fermentation time for bread dough is 2–3 hours. The fermentation time for this dough is 4 hours.\n\n The fermentation time for this dough is ………………….",
             "audio": "assets/audio/a_3_g_5.mp3",
             "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long"
+            "answer": "Too long",
+            "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_6",
             "sentence": "The safe cold storage temperature for dairy products is 2–4 degrees Celsius. This cold storage room temperature is 6 degrees Celsius.\n\n This cold storage room temperature is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
             "options": ["Too cold", "Correct", "Too warm"],
-            "answer": "Too warm"
+            "answer": "Too warm",
+            "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_7",
             "sentence": "The recommended depth of batter in the tray is 2 centimeters. The batter in this tray is 3.5 centimeters deep.\n\n The batter in this tray is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
             "options": ["Too deep", "Correct", "Too shallow"],
-            "answer": "Too deep"
+            "answer": "Too deep",
+            "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_8",
             "sentence": "The standard weight of a pastry sheet is 500 grams. The pastry sheet in this batch is 650 grams.\n\n The pastry sheet in this batch is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
             "options": ["Too heavy", "Correct", "Too light"],
-            "answer": "Too heavy"
+            "answer": "Too heavy",
+            "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_9",
             "sentence": "The correct oil content in fried snacks is 8–10 percent. The oil content in these snacks is 13 percent.\n\n The oil content in these snacks is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_10",
             "sentence": "The acceptable moisture level for bread dough is between 60% and 65%. The moisture level of this  bread dough is 70 %.\n\n The moisture level of this bread dough is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
             "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_1.png"
           }
         ]
       }
