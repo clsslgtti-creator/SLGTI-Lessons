@@ -1,6 +1,8 @@
 import { buildSbsOneSlides } from "./lib/sbs-1.js";
+import { buildSbsThreeSlides } from "./lib/sbs-3.js";
 import { buildPronunciationSlides } from "./lib/pronunciation.js";
-import { buildGame1Slides } from "./lib/game-1.js";
+import { buildInteractive1Slides } from "./lib/interactive-1.js";
+import { buildInteractive2Slides } from "./lib/interactive-2.js";
 import { buildActivityTwoSlides } from "./lib/activity-2.js";
 import { buildListeningOneSlides } from "./lib/listening-1.js";
 import { buildListeningTwoSlides } from "./lib/listening-2.js";
@@ -207,8 +209,10 @@ const markLessonComplete = (index, totalSlides) => {
 
 const activityBuilders = {
   "SBS-1": buildSbsOneSlides,
+  "SBS-3": buildSbsThreeSlides,
   PRONUNCIATION: buildPronunciationSlides,
-  "GAME-1": buildGame1Slides,
+  "INTERACTIVE-1": buildInteractive1Slides,
+  "INTERACTIVE-2": buildInteractive2Slides,
   "LISTENING-1": buildListeningOneSlides,
   "LISTENING-2": buildListeningTwoSlides,
   "ACTIVITY-2": buildActivityTwoSlides,
@@ -606,6 +610,34 @@ const createInstructionIndicator = (slideObj) => {
   };
 };
 
+const resolveInstructionCountdownSeconds = (slideObj) => {
+  const toSeconds = (value) => {
+    const parsed = Number(value);
+    if (!Number.isFinite(parsed) || parsed <= 0) {
+      return null;
+    }
+    return Math.max(1, Math.floor(parsed));
+  };
+
+  if (!slideObj) {
+    return 3;
+  }
+
+  const fromSlide = toSeconds(slideObj.instructionCountdownSeconds);
+  if (fromSlide) {
+    return fromSlide;
+  }
+
+  const fromDataset = toSeconds(
+    slideObj.element?.dataset?.instructionCountdownSeconds
+  );
+  if (fromDataset) {
+    return fromDataset;
+  }
+
+  return 3;
+};
+
 const startInstructionCountdown = (controller) => {
   if (!instructionPlayback || instructionPlayback !== controller) {
     return;
@@ -623,7 +655,8 @@ const startInstructionCountdown = (controller) => {
 
   controller.restoreButton?.({ restoreText: true });
 
-  let remaining = 3;
+  const countdownSeconds = resolveInstructionCountdownSeconds(slideObj);
+  let remaining = countdownSeconds;
   indicator?.update(`Starts in ${remaining}s`);
 
   controller.countdownInterval = window.setInterval(() => {
@@ -838,12 +871,22 @@ const parseActivitySlideId = (slideId) => {
     "activity2-listen": "a",
     "activity2-repeat": "b",
     "activity2-match": "c",
+    game1: "a",
+    game2: "a",
+    game3: "a",
+    game4: "a",
+    game5: "a",
   };
   const rolePattern =
-    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read|listening1-mcq|listening1-repeat|listening1-read|listening1-type|activity2-listen|activity2-repeat|activity2-match)";
-  const detailedMatch = new RegExp(
+    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read|listening1-mcq|listening1-repeat|listening1-read|listening1-type|activity2-listen|activity2-repeat|activity2-match|game1|game2|game3|game4|game5)";
+  const numberedPattern = new RegExp(
     `^activity-(\\d+)(?:-([a-z]))?-${rolePattern}$`
-  ).exec(normalized);
+  );
+  const numberlessPattern = new RegExp(
+    `^activity(?:-([a-z]))?-${rolePattern}$`
+  );
+
+  const detailedMatch = numberedPattern.exec(normalized);
   if (detailedMatch) {
     const [, activityNumber, letter, role] = detailedMatch;
     return {
@@ -853,13 +896,13 @@ const parseActivitySlideId = (slideId) => {
     };
   }
 
-  const simpleMatch = new RegExp(`^activity-${rolePattern}$`).exec(normalized);
-  if (simpleMatch) {
-    const [, role] = simpleMatch;
+  const unnumberedMatch = numberlessPattern.exec(normalized);
+  if (unnumberedMatch) {
+    const [, letter, role] = unnumberedMatch;
     return {
       activityNumber: null,
       role,
-      letter: letterMap[role] || "",
+      letter: letter || letterMap[role] || "",
     };
   }
   return null;

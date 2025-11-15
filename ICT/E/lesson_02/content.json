@@ -30,7 +30,7 @@
         "audio": "assets/audio/a_2_i_d.mp3"
       }
     },
-   "content": [
+    "content": [
       {
         "id": "p_1",
         "word_text": "scr'ee'n",
@@ -64,7 +64,6 @@
         "image": "assets/img/a_1_p_4.png"
       }
     ]
-
   },
   "activity_2": {
     "type": "SBS-1",
@@ -199,101 +198,105 @@
     ]
   },
   "activity_3": {
-    "type": "GAME-1",
-    "bg_image": "assets/img/game/bg-11.jpg",
+    "type": "INTERACTIVE-2",
     "instructions": {
       "activity_1_a": {
-        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
-        "audio": "assets/audio/a_3_i_a.mp3"
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
       }
     },
-    "examples": [
-      {
-        "id": "e_1",
-        "sentence": "The correct network speed for the local server is 800–900 Mbps.\n The network speed in this server is 950 Mbps.\n The network speed in this server is …………",
-        "audio": "assets/audio/a_3_ex_1.mp3",
-        "options": ["Too fast", "Correct", "Too slow"],
-        "answer": "Too fast"
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-5.jpg",
+        "examples": [
+          {
+            "id": "e_1",
+            "sentence": "The correct network speed for the local server is 800–900 Mbps. The network speed in this server is 950 Mbps.\n\n The network speed in this server is ………………….",
+            "audio": "assets/audio/a_3_ex_1.mp3",
+            "options": ["Too fast", "Correct", "Too slow"],
+            "answer": "Too fast"
+          }
+        ],
+        "content": [
+          {
+            "id": "g_1",
+            "sentence": "The safe operating temperature of the server room is 20–25 degrees Celsius.The temperature in this server room is 28 degrees Celsius.\n\n The temperature in this server room is ………………….",
+            "audio": "assets/audio/a_3_g_1.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_2",
+            "sentence": "The correct voltage for the power supply unit is 230 volts. The voltage in this PSU is 240 volts.\n\n The voltage in this PSU is ………………….",
+            "audio": "assets/audio/a_3_g_2.mp3",
+            "options": ["Too high", "Correct", "Too low"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_3",
+            "sentence": "The acceptable latency for network connections is 10–20 milliseconds. The latency in this connection is 8 milliseconds.\n\n The latency in this connection is ………………….",
+            "audio": "assets/audio/a_3_g_3.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too low"
+          },
+          {
+            "id": "g_4",
+            "sentence": "The standard backup frequency for the database is once every 24 hours. The current backup interval is once every 48 hours.\n\n The backup interval is ………………….",
+            "audio": "assets/audio/a_3_g_4.mp3",
+            "options": ["Too long", "Correct", "Too short"],
+            "answer": "Too long"
+          },
+          {
+            "id": "g_5",
+            "sentence": "The ideal CPU utilization for this server is 40–60 percent. The CPU utilization of this server is 75 percent.\n\n The CPU utilization of this server is ………………….",
+            "audio": "assets/audio/a_3_g_5.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_6",
+            "sentence": "The safe humidity level for ICT equipment is 40–50 percent. The humidity in the server room is 30 percent.\n\n The humidity in the server room is ………………….",
+            "audio": "assets/audio/a_3_g_6.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too low"
+          },
+          {
+            "id": "g_7",
+            "sentence": "The recommended length of a patch cable is less than 100 meters. The length of this patch cable is 120 meters.\n\n The length of this patch cable is ………………….",
+            "audio": "assets/audio/a_3_g_7.mp3",
+            "options": ["Too long", "Correct", "Too short"],
+            "answer": "Too long"
+          },
+          {
+            "id": "g_8",
+            "sentence": "The standard capacity of the UPS for this lab is 5 kilovolt-amperes (kVA). The UPS in this lab is 4 kVA.\n\n The UPS in this lab is ………………….",
+            "audio": "assets/audio/a_3_g_8.mp3",
+            "options": ["Too strong", "Correct", "Too weak"],
+            "answer": "Too weak"
+          },
+          {
+            "id": "g_9",
+            "sentence": "The correct disk usage level for safe operation is below 80 percent. The disk usage on this server is 90 percent.\n\n The disk usage on this server is ………………….",
+            "audio": "assets/audio/a_3_g_9.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_10",
+            "sentence": "The acceptable packet loss rate is below 1 percent. The packet loss rate in this network is 2 percent.\n\n The packet loss rate in this network is ………………….",
+            "audio": "assets/audio/a_3_g_10.mp3",
+            "options": ["Too high", "Correct", "Too low"],
+            "answer": "Too high"
+          }
+        ]
       }
-    ],
-    "content": [
-      {
-        "id": "g_1",
-        "sentence": "The safe operating temperature of the server room is 20–25 degrees Celsius.\n The temperature in this server room is 28 degrees Celsius.\n The temperature in this server room is …………",
-        "audio": "assets/audio/a_3_g_1.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_2",
-        "sentence": "The correct voltage for the power supply unit is 230 volts.\n The voltage in this PSU is 240 volts.\n The voltage in this PSU is ………………….",
-        "audio": "assets/audio/a_3_g_2.mp3",
-        "options": ["Too high", "Correct", "Too low"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_3",
-        "sentence": "The acceptable latency for network connections is 10–20 milliseconds.\n The latency in this connection is 8 milliseconds.\n The latency in this connection is ……………",
-        "audio": "assets/audio/a_3_g_3.mp3",
-       "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too low"
-      },
-      {
-        "id": "g_4",
-        "sentence": "The standard backup frequency for the database is once every 24 hours.\n The current backup interval is once every 48 hours.\n The backup interval is ………………………….",
-        "audio": "assets/audio/a_3_g_4.mp3",
-        "options": ["Too long", "Correct", "Too short"],
-        "answer": "Too long"
-      },
-      {
-        "id": "g_5",
-        "sentence": "The ideal CPU utilization for this server is 40–60 percent.\n The CPU utilization of this server is 75 percent.\n The CPU utilization of this server is………………………",
-        "audio": "assets/audio/a_3_g_5.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_6",
-        "sentence": "The safe humidity level for ICT equipment is 40–50 percent.\n The humidity in the server room is 30 percent.\n The humidity in the server room is……………………………………….",
-        "audio": "assets/audio/a_3_g_6.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too low"
-      },
-      {
-        "id": "g_7",
-        "sentence": "The recommended length of a patch cable is less than 100 meters.\n The length of this patch cable is 120 meters.\n The length of this patch cable is ……………………………………",
-        "audio": "assets/audio/a_3_g_7.mp3",
-        "options": ["Too long", "Correct", "Too short"],
-        "answer": "Too long"
-      },
-      {
-        "id": "g_8",
-        "sentence": "The standard capacity of the UPS for this lab is 5 kilovolt-amperes (kVA).\n The UPS in this lab is 4 kVA.\n The UPS in this lab is ……………………………….",
-        "audio": "assets/audio/a_3_g_8.mp3",
-        "options": ["Too strong", "Correct", "Too weak"],
-        "answer": "Too weak"
-      },
-      {
-        "id": "g_9",
-        "sentence": "The correct disk usage level for safe operation is below 80 percent.\n The disk usage on this server is 90 percent.\n The disk usage on this server is ……………………………….",
-        "audio": "assets/audio/a_3_g_9.mp3",
-       "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_10",
-        "sentence": "The acceptable packet loss rate is below 1 percent.\n The packet loss rate in this network is 2 percent.\n The packet loss rate in this network is ……………………",
-        "audio": "assets/audio/a_3_g_10.mp3",
-        "options": ["Too high", "Correct", "Too low"],
-        "answer": "Too high"
-      }
-    ]
+    }
   },
   "activity_4": {
     "type": "LISTENING-2",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the question before you listen to the recording.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න. රෙකෝඩින් එක අහන්නට පෙර ප්‍රශ්නය කියවීම ඉතාමත් වැදගත්ය.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள். பதிவைக் கேட்பதற்கு முன் கேள்வியைப் படிப்பது மிகவும் முக்கியம்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_b": {
@@ -327,7 +330,7 @@
             "id": "l_4_2",
             "question": ". What is the highest safe temperature range",
             "answer": "25 degrees Celsius",
-             "options": [
+            "options": [
               "20 degrees Celsius",
               "25 degrees Celsius",
               "30 degrees Celsius"
@@ -343,11 +346,7 @@
             "id": "l_4_4",
             "question": "What is the actual reading of the network speed?",
             "answer": "900 Mbps",
-            "options": [
-              "850 Mbps",
-              "900 Mbps",
-              "950 Mbps"
-            ]
+            "options": ["850 Mbps", "900 Mbps", "950 Mbps"]
           },
           {
             "id": "l_4_5",

@@ -198,101 +198,105 @@
     ]
   },
   "activity_3": {
-    "type": "GAME-1",
-    "bg_image": "assets/img/game/bg-11.jpg",
+    "type": "INTERACTIVE-2",
     "instructions": {
       "activity_1_a": {
-        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
-        "audio": "assets/audio/a_3_i_a.mp3"
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
       }
     },
-    "examples": [
-      {
-        "id": "e_1",
-        "sentence": "The correct resistance of this coil is 15 Ω.\n The multimeter shows 15 Ω.\n The resistance is ……………….",
-        "audio": "assets/audio/a_3_ex_1.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Correct"
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-6.jpg",
+        "examples": [
+          {
+            "id": "e_1",
+            "sentence": "The correct resistance of this coil is 15 Ω. The multimeter shows 15 Ω.\n\n The resistance is ………………….",
+            "audio": "assets/audio/a_3_ex_1.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Correct"
+          }
+        ],
+        "content": [
+          {
+            "id": "g_1",
+            "sentence": "The correct operating voltage for a circuit is 220–240 volts. The voltage in this circuit is 210 volts.\n\nThe voltage in this circuit is ………………….",
+            "audio": "assets/audio/a_3_g_1.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too low"
+          },
+          {
+            "id": "g_2",
+            "sentence": "The correct current for this motor is 10 amperes. The current in this motor is 13 amperes.\n\nThe current in this motor is ………………….",
+            "audio": "assets/audio/a_3_g_2.mp3",
+            "options": ["Too weak", "Correct", "Too strong"],
+            "answer": "Too strong"
+          },
+          {
+            "id": "g_3",
+            "sentence": "The correct insulation resistance in wiring is above 1 megaohm. The insulation resistance in this wiring is 0.5 megaohms.\n\nThe insulation resistance in this wiring is ………………….",
+            "audio": "assets/audio/a_3_g_3.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too low"
+          },
+          {
+            "id": "g_4",
+            "sentence": "The correct fuse rating for this circuit is 5 amperes. The fuse in this circuit is 8 amperes.\n\nThe fuse in this circuit is ………………….",
+            "audio": "assets/audio/a_3_g_4.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_5",
+            "sentence": "The correct earth resistance is less than 2 ohms. The earth resistance in this test is 4 ohms.\n\nThe earth resistance in this test is ………………….",
+            "audio": "assets/audio/a_3_g_5.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_6",
+            "sentence": "The correct oil temperature of a transformer is 60 degrees Celsius. The oil temperature of this transformer is 75 degrees Celsius.\n\n The oil temperature of this transformer is ………………….",
+            "audio": "assets/audio/a_3_g_6.mp3",
+            "options": ["Too cold", "Correct", "Too hot"],
+            "answer": "Too hot"
+          },
+          {
+            "id": "g_7",
+            "sentence": "The correct cable size for this circuit is 6 square millimeters. The cable in this circuit is 4 square millimeters.\n\n The cable in this circuit is ………………….",
+            "audio": "assets/audio/a_3_g_7.mp3",
+            "options": ["Too small", "Correct", "Too large"],
+            "answer": "Too small"
+          },
+          {
+            "id": "g_8",
+            "sentence": "The correct conductor length for this connection is 2 meters. The conductor in this connection is 2.5 meters.\n\n The conductor in this connection is ………………….",
+            "audio": "assets/audio/a_3_g_8.mp3",
+            "options": ["Too long", "Correct", "Too short"],
+            "answer": "Correct"
+          },
+          {
+            "id": "g_9",
+            "sentence": "The correct breaker rating for a distribution board is 32 amperes. The breaker in this distribution board is 25 amperes.\n\n The breaker in this distribution board is ………………….",
+            "audio": "assets/audio/a_3_g_9.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_10",
+            "sentence": "The correct capacitor value for this motor is 40 microfarads. The capacitor in this motor is 60 microfarads.\n\n The capacitor in this motor is ………………….",
+            "audio": "assets/audio/a_3_g_10.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          }
+        ]
       }
-    ],
-    "content": [
-      {
-        "id": "g_1",
-        "sentence": "The correct operating voltage for a circuit is 220–240 volts.\nThe voltage in this circuit is 210 volts.\nThe voltage in this circuit is ………….",
-        "audio": "assets/audio/a_3_g_1.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too low"
-      },
-      {
-        "id": "g_2",
-        "sentence": "The correct current for this motor is 10 amperes.\n The current in this motor is 13 amperes.\nThe current in this motor is ………………….",
-        "audio": "assets/audio/a_3_g_2.mp3",
-        "options": ["Too weak", "Correct", "Too strong"],
-        "answer": "Too strong"
-      },
-      {
-        "id": "g_3",
-        "sentence": "The correct insulation resistance in wiring is above 1 megaohm.\n The insulation resistance in this wiring is 0.5 megaohms.\nThe insulation resistance in this wiring is ……………",
-        "audio": "assets/audio/a_3_g_3.mp3",
-       "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too low"
-      },
-      {
-        "id": "g_4",
-        "sentence": "The correct fuse rating for this circuit is 5 amperes.\nThe fuse in this circuit is 8 amperes.\nThe fuse in this circuit is …………………………",
-        "audio": "assets/audio/a_3_g_4.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_5",
-        "sentence": "The correct earth resistance is less than 2 ohms.\nThe earth resistance in this test is 4 ohms.\nThe earth resistance in this test is………………………",
-        "audio": "assets/audio/a_3_g_5.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_6",
-        "sentence": "The correct oil temperature of a transformer is 60 degrees Celsius.\n The oil temperature of this transformer is 75 degrees Celsius.\nThe oil temperature of this transformer is……………………………………….",
-        "audio": "assets/audio/a_3_g_6.mp3",
-        "options": ["Too cold", "Correct", "Too hot"],
-        "answer": "Too hot"
-      },
-      {
-        "id": "g_7",
-        "sentence": "The correct cable size for this circuit is 6 square millimeters.\nThe cable in this circuit is 4 square millimeters.\nThe cable in this circuit is ……………………………………",
-        "audio": "assets/audio/a_3_g_7.mp3",
-        "options": ["Too small", "Correct", "Too large"],
-        "answer": "Too small"
-      },
-      {
-        "id": "g_8",
-        "sentence": "The correct conductor length for this connection is 2 meters.\nThe conductor in this connection is 2.5 meters.\n The conductor in this connection is ………………………………",
-        "audio": "assets/audio/a_3_g_8.mp3",
-        "options": ["Too long", "Correct", "Too short"],
-        "answer": "Correct"
-      },
-      {
-        "id": "g_9",
-        "sentence": "The correct breaker rating for a distribution board is 32 amperes.\n The breaker in this distribution board is 25 amperes.\n The breaker in this distribution board is ………………………………",
-        "audio": "assets/audio/a_3_g_9.mp3",
-       "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_10",
-        "sentence": "The correct capacitor value for this motor is 40 microfarads.\n The capacitor in this motor is 60 microfarads.\n The capacitor in this motor is ……………………",
-        "audio": "assets/audio/a_3_g_10.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      }
-    ]
+    }
   },
   "activity_4": {
     "type": "LISTENING-2",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the question before you listen to the recording.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න. රෙකෝඩින් එක අහන්නට පෙර ප්‍රශ්නය කියවීම ඉතාමත් වැදගත්ය.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள். பதிவைக் கேட்பதற்கு முன் கேள்வியைப் படிப்பது மிகவும் முக்கியம்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_b": {
@@ -316,21 +320,13 @@
             "id": "l_4_1",
             "question": "What is the voltage of the single-phase circuit?",
             "answer": "230 volts ",
-            "options": [
-              "210 volts",
-              "230 volts",
-              "240 volts"
-            ]
+            "options": ["210 volts", "230 volts", "240 volts"]
           },
           {
             "id": "l_4_2",
             "question": "What is the correct voltage range?",
             "answer": "220–240 volts",
-            "options": [
-              "200–210 volts",
-              "220–240 volts",
-              "240–250 volts"
-            ]
+            "options": ["200–210 volts", "220–240 volts", "240–250 volts"]
           },
           {
             "id": "l_4_3",
@@ -342,11 +338,7 @@
             "id": "l_4_4",
             "question": "What is the correct reading of the insulation resistance?",
             "answer": "1 megaohms",
-            "options": [
-              "0.5 megaohms",
-              "1 megaohms",
-              "2 megaohms"
-            ]
+            "options": ["0.5 megaohms", "1 megaohms", "2 megaohms"]
           },
           {
             "id": "l_4_5",

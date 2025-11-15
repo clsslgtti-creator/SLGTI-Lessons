@@ -1,8 +1,6 @@
-const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
-
 const DEFAULT_OPTION_LABELS = ["Option A", "Option B", "Option C"];
 
-const sanitizeOptions = (
+export const sanitizeOptions = (
   rawOptions = [],
   fallbackOptions = DEFAULT_OPTION_LABELS
 ) => {
@@ -39,7 +37,7 @@ const sanitizeOptions = (
   return [...fallbackPool];
 };
 
-const normalizeExamples = (rawExamples = [], fallbackOptions) => {
+export const normalizeExamples = (rawExamples = [], fallbackOptions) => {
   if (!Array.isArray(rawExamples)) {
     return [];
   }
@@ -55,6 +53,10 @@ const normalizeExamples = (rawExamples = [], fallbackOptions) => {
         typeof item?.audio === "string" && item.audio.trim().length
           ? item.audio.trim()
           : null;
+      const image =
+        typeof item?.image === "string" && item.image.trim().length
+          ? item.image.trim()
+          : null;
       const options = sanitizeOptions(item?.options, defaultOptions);
       const answerCandidate =
         typeof item?.answer === "string" ? item.answer.trim() : "";
@@ -69,6 +71,7 @@ const normalizeExamples = (rawExamples = [], fallbackOptions) => {
         answer,
         audio,
         audioKey,
+        image,
         options,
       };
     })
@@ -92,7 +95,7 @@ const isMobileDevice = () => {
   );
 };
 
-const normalizeQuestions = (rawQuestions = [], fallbackOptions) => {
+export const normalizeQuestions = (rawQuestions = [], fallbackOptions) => {
   if (!Array.isArray(rawQuestions)) {
     return [];
   }
@@ -108,6 +111,10 @@ const normalizeQuestions = (rawQuestions = [], fallbackOptions) => {
         typeof item?.audio === "string" && item.audio.trim().length
           ? item.audio.trim()
           : null;
+      const image =
+        typeof item?.image === "string" && item.image.trim().length
+          ? item.image.trim()
+          : null;
       const options = sanitizeOptions(item?.options, defaultOptions);
       const answerCandidate =
         typeof item?.answer === "string" ? item.answer.trim() : "";
@@ -122,13 +129,14 @@ const normalizeQuestions = (rawQuestions = [], fallbackOptions) => {
         answer,
         audio,
         audioKey,
+        image,
         options,
       };
     })
     .filter(Boolean);
 };
 
-const DEFAULT_FEEDBACK_ASSETS = {
+export const DEFAULT_FEEDBACK_ASSETS = {
   correctAudio: "assets/audio/game/correct.wav",
   incorrectAudio: "assets/audio/game/incorrect.wav",
   timeoutAudio: "assets/audio/game/timeout.wav",
@@ -137,7 +145,7 @@ const DEFAULT_FEEDBACK_ASSETS = {
   timeoutImg: "assets/img/game/timeout.png",
 };
 
-const DEFAULT_BACKGROUND_IMAGE = "assets/img/game/bg-1.jpg";
+export const DEFAULT_BACKGROUND_IMAGE = "assets/img/game/bg-1.jpg";
 
 const createFeedbackPlayer = () => {
   const playTone = (frequency = 440, durationMs = 300) => {
@@ -232,7 +240,7 @@ const createButtonShadow = (scene, width, height, radius, offset = 6) => {
   return shadow;
 };
 
-const createGameScene = (config) => {
+export const createGameScene = (config) => {
   const {
     options,
     examples: rawExamples,
@@ -260,8 +268,16 @@ const createGameScene = (config) => {
         const answer = entryOptions.includes(answerCandidate)
           ? answerCandidate
           : entryOptions[0];
+        const identifier = entry?.id ?? `entry_${Math.random().toString(36).slice(2, 8)}`;
+        const imageSrc =
+          typeof entry.image === "string" && entry.image.trim().length
+            ? entry.image.trim()
+            : null;
         return {
           ...entry,
+          id: identifier,
+          image: imageSrc,
+          imageKey: imageSrc ? `sentence_image_${identifier}` : null,
           answer,
           options: entryOptions,
         };
@@ -366,6 +382,9 @@ const createGameScene = (config) => {
         if (item.audioKey && item.audio) {
           this.load.audio(item.audioKey, item.audio);
         }
+        if (item.imageKey && item.image) {
+          this.load.image(item.imageKey, item.image);
+        }
       });
       if (this.feedbackAssets.correctAudio) {
         this.load.audio(
@@ -428,7 +447,7 @@ const createGameScene = (config) => {
       const accentLeft = this.add.circle(
         width * 0.18,
         height * 0.82,
-        clamp(width * 0.16, 120, 180),
+        180,
         0x1f6feb,
         0.08
       );
@@ -439,7 +458,7 @@ const createGameScene = (config) => {
       const accentRight = this.add.circle(
         width * 0.82,
         height * 0.26,
-        clamp(width * 0.18, 130, 210),
+        210,
         0xf0ab00,
         0.08
       );
@@ -449,7 +468,7 @@ const createGameScene = (config) => {
 
       const accentStripe = this.add.rectangle(
         width / 2,
-        height - clamp(height * 0.12, 120, 160),
+        height - 120,
         width * 0.86,
         12,
         0x1f6feb,
@@ -484,8 +503,8 @@ const createGameScene = (config) => {
       this.gameUiElements.push(this.phaseText);
       this.topHudElements.push(this.phaseText);
 
-      const badgeHeight = clamp(height * 0.1, 58, 68);
-      const timerBadgeWidth = clamp(width * 0.2, 160, 200);
+      const badgeHeight = 68;
+      const timerBadgeWidth = 200;
       this.timerPanel = createRoundedPanel(
         this,
         timerBadgeWidth,
@@ -524,7 +543,7 @@ const createGameScene = (config) => {
       this.gameUiElements.push(this.timerBadge);
       this.topHudElements.push(this.timerBadge);
 
-      const scoreBadgeWidth = clamp(width * 0.2, 160, 200);
+      const scoreBadgeWidth = 200;
       this.scorePanel = createRoundedPanel(
         this,
         scoreBadgeWidth,
@@ -559,8 +578,8 @@ const createGameScene = (config) => {
       this.updateScore();
       this.updateTimerText("Time: 10.0s");
 
-      const sentenceCardWidth = clamp(width * 0.78, 640, 980);
-      const sentenceCardHeight = clamp(height * 0.32, 180, 240);
+      const sentenceCardWidth = 1050;
+      const sentenceCardHeight = 380;
       this.sentenceCardWidth = sentenceCardWidth;
       this.sentenceCardHeight = sentenceCardHeight;
       const sentencePanel = createRoundedPanel(
@@ -577,19 +596,27 @@ const createGameScene = (config) => {
         lineWidth: 4,
       });
       this.sentencePanel = sentencePanel;
+      this.sentenceImageMaxWidth = sentenceCardWidth - 160;
+      this.sentenceImageMaxHeight = 150;
+      this.sentenceImagePadding = 10;
+      this.sentenceTextGap = 24;
+      this.sentenceImage = this.add.image(0, -150, "");
+      this.sentenceImage.setVisible(false);
+      this.sentenceImage.setActive(false);
 
       this.sentenceText = this.add
         .text(0, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.032, 26, 34),
+          fontSize: 32,
           color: "#111827",
           align: "center",
           wordWrap: { width: sentenceCardWidth - 40 },
         })
-        .setOrigin(0.5);
+        .setOrigin(0.5, 0);
 
-      this.sentenceCard = this.add.container(-sentenceCardWidth, height / 2, [
+      this.sentenceCard = this.add.container(-sentenceCardWidth, height/2, [
         sentencePanel.graphics,
+        this.sentenceImage,
         this.sentenceText,
       ]);
       this.gameUiElements.push(this.sentenceCard);
@@ -613,12 +640,7 @@ const createGameScene = (config) => {
       this.feedbackGroup.setAlpha(0);
       this.feedbackGroup.setDepth(9);
 
-      const feedbackPanel = createRoundedPanel(
-        this,
-        clamp(width * 0.42, 260, 420),
-        120,
-        28
-      );
+      const feedbackPanel = createRoundedPanel(this, 420, 120, 28);
       feedbackPanel.update({
         fillColor: 0xffffff,
         fillAlpha: 0.98,
@@ -632,7 +654,7 @@ const createGameScene = (config) => {
       this.feedbackLabel = this.add
         .text(20, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.026, 22, 30),
+          fontSize: 30,
           color: "#1f2933",
           fontStyle: "bold",
         })
@@ -657,7 +679,7 @@ const createGameScene = (config) => {
       this.countdownText = this.add
         .text(0, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.12, 80, 140),
+          fontSize: 140,
           color: "#ffffff",
           fontStyle: "bold",
         })
@@ -679,12 +701,7 @@ const createGameScene = (config) => {
 
       this.summaryOverlay = this.add.container(width / 2, height / 2);
       this.summaryOverlay.setDepth(19);
-      const summaryPanel = createRoundedPanel(
-        this,
-        clamp(width * 0.68, 520, 760),
-        clamp(height * 0.6, 420, 520),
-        36
-      );
+      const summaryPanel = createRoundedPanel(this, 760, 432, 36);
       summaryPanel.update({
         fillColor: 0xffffff,
         fillAlpha: 0.98,
@@ -697,7 +714,7 @@ const createGameScene = (config) => {
       this.summaryTitle = this.add
         .text(0, -120, "Great Job!", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.04, 32, 42),
+          fontSize: 42,
           color: "#1f2933",
           fontStyle: "bold",
         })
@@ -706,17 +723,17 @@ const createGameScene = (config) => {
       this.summaryBody = this.add
         .text(0, -40, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.028, 22, 28),
+          fontSize: 28,
           color: "#1f2933",
           align: "center",
-          wordWrap: { width: clamp(width * 0.5, 360, 540) },
+          wordWrap: { width: 540 },
         })
         .setOrigin(0.5);
 
-      const replayWidth = clamp(width * 0.26, 240, 320);
+      const replayWidth = 320;
       const replayHeight = 86;
-      const buttonRowY = clamp(height * 0.22, 90, 150);
-      const buttonOffset = clamp(width * 0.22, 120, 180);
+      const buttonRowY = 150;
+      const buttonOffset = 180;
 
       const replayContainer = this.add.container(-buttonOffset, buttonRowY);
       const replayPanel = createRoundedPanel(
@@ -735,7 +752,7 @@ const createGameScene = (config) => {
       const replayLabel = this.add
         .text(0, 0, "Replay", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.028, 22, 28),
+          fontSize: 28,
           color: "#ffffff",
           fontStyle: "bold",
         })
@@ -786,7 +803,7 @@ const createGameScene = (config) => {
       const exitLabel = this.add
         .text(0, 0, "Exit", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.028, 22, 28),
+          fontSize: 28,
           color: "#ffffff",
           fontStyle: "bold",
         })
@@ -851,8 +868,8 @@ const createGameScene = (config) => {
     }
 
     createCenterStartButton(width, height) {
-      const buttonWidth = clamp(width * 0.4, 480, 520);
-      const buttonHeight = clamp(height * 0.28, 200, 280);
+      const buttonWidth = 512;
+      const buttonHeight = 202;
 
       this.startButton = this.createBarButton(
         "Start",
@@ -1093,7 +1110,7 @@ const createGameScene = (config) => {
       const text = this.add
         .text(0, 0, label, {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: clamp(width * 0.3, 72, 100),
+          fontSize: 100,
           color: "#ffffff",
           fontStyle: "bold",
         })
@@ -1258,13 +1275,9 @@ const createGameScene = (config) => {
     createOptionButtons(width, height, maxOptions) {
       const visibleCount = Math.max(maxOptions || 0, 2);
       const useCompactLayout = visibleCount >= 3;
-      const buttonWidth = clamp(
-        width * (useCompactLayout ? 0.24 : 0.32),
-        useCompactLayout ? 220 : 260,
-        useCompactLayout ? 320 : 420
-      );
-      const buttonHeight = clamp(height * 0.16, 120, 140);
-      const baseY = height - clamp(height * 0.18, 140, 180);
+      const buttonWidth = useCompactLayout ? 307 : 410;
+      const buttonHeight = 100;
+      const baseY = height - 80;
 
       this.optionButtonMetrics = {
         buttonWidth,
@@ -1315,7 +1328,7 @@ const createGameScene = (config) => {
         const text = this.add
           .text(0, 0, "", {
             fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-            fontSize: clamp(width * 0.03, 26, 32),
+            fontSize: 32,
             color: "#475569",
             align: "center",
             fontStyle: "bold",
@@ -1433,10 +1446,10 @@ const createGameScene = (config) => {
         this.scale.gameSize?.height ??
         this.sys.game.config.height;
       const metrics = this.optionButtonMetrics || {};
-      const baseY = metrics.baseY ?? height - clamp(height * 0.18, 140, 180);
+      const baseY = metrics.baseY ?? height - 80;
 
       let spacing = 0;
-      spacing = clamp(width * 0.6, 300, 400);
+      spacing = 400;
 
       const positions = [];
       const centerIndex = (total - 1) / 2;
@@ -1574,6 +1587,7 @@ const createGameScene = (config) => {
       this.sentenceCard.x = -width;
       this.sentenceCard.setAlpha(1);
       this.sentenceText.setText(entry.sentence);
+      this.updateSentenceMedia(entry);
       const optionLabels =
         Array.isArray(entry?.options) && entry.options.length
           ? entry.options
@@ -1616,6 +1630,42 @@ const createGameScene = (config) => {
           this.playSentenceAudio(entry, { onComplete: afterAudio });
         },
       });
+    }
+
+    updateSentenceMedia(entry) {
+      if (!this.sentenceImage || !this.sentenceText) {
+        return;
+      }
+      const textureExists =
+        entry?.imageKey &&
+        entry?.image &&
+        typeof this.textures?.exists === "function" &&
+        this.textures.exists(entry.imageKey);
+      if (!textureExists) {
+        this.sentenceImage.setVisible(false);
+        this.sentenceImage.setActive(false);
+        this.sentenceText.setY(0);
+        return;
+      }
+      this.sentenceImage.setTexture(entry.imageKey);
+      this.sentenceImage.setActive(true);
+      this.sentenceImage.setVisible(true);
+      this.sentenceImage.setAlpha(1);
+      this.sentenceImage.setScale(1);
+      const imgWidth = this.sentenceImage.width || 1;
+      const imgHeight = this.sentenceImage.height || 1;
+      const maxWidth = this.sentenceImageMaxWidth || 400;
+      const maxHeight = this.sentenceImageMaxHeight || 150;
+      const scale = Math.min(1, maxWidth / imgWidth, maxHeight / imgHeight);
+      this.sentenceImage.setScale(scale);
+      const displayHeight = imgHeight * scale;
+      const cardHeight = this.sentenceCardHeight || 230;
+      const padding = this.sentenceImagePadding ?? 10;
+      const topEdge = -cardHeight / 2;
+      const imageY = topEdge + padding + displayHeight / 2;
+      this.sentenceImage.setY(imageY);
+      const textGap = this.sentenceTextGap ?? 24;
+      this.sentenceText.setY(imageY + displayHeight / 2 + textGap);
     }
 
     playSentenceAudio(entry, options = {}) {
@@ -2156,151 +2206,3 @@ const createGameScene = (config) => {
   return GameScene;
 };
 
-export const buildGame1Slides = (activityData = {}, context = {}) => {
-  const { activityNumber, focus } = context;
-  const slide = document.createElement("section");
-  slide.className = "slide game-slide";
-
-  const title = document.createElement("h2");
-  title.textContent = activityNumber ? `Activity ${activityNumber}` : "Game";
-  slide.appendChild(title);
-
-  if (typeof focus === "string" && focus.trim().length) {
-    const focusEl = document.createElement("p");
-    focusEl.className = "activity-focus";
-    focusEl.innerHTML = `<span class="activity-focus__label">Focus</span>${focus}`;
-    slide.appendChild(focusEl);
-  }
-
-  const wrapper = document.createElement("div");
-  wrapper.className = "game1-shell";
-  const stage = document.createElement("div");
-  stage.className = "game1-stage";
-  const stageId = `game1-stage-${Math.random().toString(36).slice(2, 8)}`;
-  stage.id = stageId;
-
-  const instruction = document.createElement("p");
-  instruction.className = "slide__instruction";
-  instruction.textContent =
-    "Press Start to play. Listen to each sentence and choose the correct answer before time runs out.";
-  slide.appendChild(instruction);
-
-  const status = document.createElement("p");
-  status.className = "game1-status is-visible";
-  status.textContent = "Loading game...";
-
-  wrapper.append(stage, status);
-  slide.appendChild(wrapper);
-
-  const options = sanitizeOptions(activityData?.options);
-  const examples = normalizeExamples(activityData?.examples, options);
-  const questions = normalizeQuestions(activityData?.content, options);
-
-  const feedbackAssets = { ...DEFAULT_FEEDBACK_ASSETS };
-
-  if (!questions.length) {
-    status.textContent = "The game content is not ready yet.";
-    return [
-      {
-        id: activityNumber
-          ? `activity-${activityNumber}-game1`
-          : "activity-game1",
-        element: slide,
-        onEnter: () => {},
-        onLeave: () => {},
-      },
-    ];
-  }
-
-  let gameInstance = null;
-
-  const getPhaser = () => window?.Phaser;
-
-  const startGame = () => {
-    const PhaserLib = getPhaser();
-    if (!PhaserLib) {
-      status.textContent =
-        "Phaser library is missing. Please reload the lesson.";
-      status.classList.add("is-error");
-      return;
-    }
-
-    if (gameInstance) {
-      gameInstance.destroy(true);
-      gameInstance = null;
-      stage.innerHTML = "";
-    }
-
-    status.textContent = "Loading game...";
-    status.classList.remove("is-error");
-    status.classList.remove("is-transparent");
-    status.classList.add("is-visible");
-
-    const GameScene = createGameScene({
-      options,
-      examples,
-      questions,
-      feedbackAssets,
-      backgroundImage: activityData?.bg_image,
-      statusElement: status,
-      onRoundUpdate: (info) => {
-        if (info.mode === "examples") {
-          status.textContent = `Example ${info.exampleIndex + 1} of ${
-            info.exampleTotal
-          } - Watch and listen`;
-          status.classList.remove("is-transparent");
-        } else if (info.mode === "questions") {
-          status.textContent = `Question ${info.questionIndex + 1} of ${
-            info.questionTotal
-          } - Score ${info.score}/${info.total}`;
-          status.classList.add("is-transparent");
-        }
-        status.classList.add("is-visible");
-      },
-    });
-
-    gameInstance = new PhaserLib.Game({
-      type: PhaserLib.AUTO,
-      parent: stageId,
-      backgroundColor: "#f3f6fb",
-      scale: {
-        mode: PhaserLib.Scale.FIT,
-        autoCenter: PhaserLib.Scale.CENTER_BOTH,
-        width: 1280,
-        height: 720,
-        fullscreenTarget: stage,
-        expandParent: true,
-      },
-      scene: GameScene,
-    });
-    if (gameInstance?.scale) {
-      gameInstance.scale.fullscreenTarget = stage;
-    }
-  };
-
-  const destroyGame = () => {
-    if (document.fullscreenElement) {
-      document.exitFullscreen().catch(() => {});
-    }
-    if (gameInstance) {
-      gameInstance.destroy(true);
-      gameInstance = null;
-      stage.innerHTML = "";
-    }
-    status.textContent = "Game paused. Reopen this slide to play again.";
-    status.classList.remove("is-transparent");
-    status.classList.remove("is-error");
-    status.classList.add("is-visible");
-  };
-
-  return [
-    {
-      id: activityNumber
-        ? `activity-${activityNumber}-game1`
-        : "activity-game1",
-      element: slide,
-      onEnter: startGame,
-      onLeave: destroyGame,
-    },
-  ];
-};

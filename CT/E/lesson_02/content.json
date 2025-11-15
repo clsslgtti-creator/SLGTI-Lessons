@@ -198,101 +198,105 @@
     ]
   },
   "activity_3": {
-    "type": "GAME-1",
-    "bg_image": "assets/img/game/bg-11.jpg",
+    "type": "INTERACTIVE-2",
     "instructions": {
       "activity_1_a": {
-        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
-        "audio": "assets/audio/a_3_i_a.mp3"
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
       }
     },
-    "examples": [
-      {
-        "id": "e_1",
-        "sentence": " The correct thickness of a concrete slab is 15 cm.\n This slab is 12 cm thick.\n The thickness is ………………..",
-        "audio": "assets/audio/a_3_ex_1.mp3",
-        "options": ["Too thick", "Correct", "Too thin"],
-        "answer": "Too thin"
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-6.jpg",
+        "examples": [
+          {
+            "id": "e_1",
+            "sentence": " The correct thickness of a concrete slab is 15 cm. This slab is 12 cm thick.\n The thickness is ………………..",
+            "audio": "assets/audio/a_3_ex_1.mp3",
+            "options": ["Too thick", "Correct", "Too thin"],
+            "answer": "Too thin"
+          }
+        ],
+        "content": [
+          {
+            "id": "g_1",
+            "sentence": "The correct height of bamboo scaffolding is 6 meters. This scaffolding is 7.5 meters.\n\nThis scaffolding is ………………….",
+            "audio": "assets/audio/a_3_g_1.mp3",
+            "options": ["Too high", "Correct", "Too low"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_2",
+            "sentence": " The correct weight of a cement bag is 50 kilograms. This cement bag is 55 kilograms.\n\nThis cement bag is ………………….",
+            "audio": "assets/audio/a_3_g_2.mp3",
+            "options": ["Too heavy", "Correct", "Too light"],
+            "answer": "Too heavy"
+          },
+          {
+            "id": "g_3",
+            "sentence": "The acceptable sand–cement ratio is 1:3. The ratio used here is 1:5.\n\n This ratio is ………………….",
+            "audio": "assets/audio/a_3_g_3.mp3",
+            "options": ["Too weak", "Correct", "Too strong"],
+            "answer": "Too weak"
+          },
+          {
+            "id": "g_4",
+            "sentence": "The correct depth of the foundation is 1.5 meters. This  foundation is 1 meter.\n\n This foundation is ………………….",
+            "audio": "assets/audio/a_3_g_4.mp3",
+            "options": ["Too Shallow", "Correct", "Too deep"],
+            "answer": "Too Shallow"
+          },
+          {
+            "id": "g_5",
+            "sentence": "The standard curing time for concrete is 28 days. The curing time here is 20 days.\n\nThis curing time is ………………….",
+            "audio": "assets/audio/a_3_g_5.mp3",
+            "options": ["Too short", "Correct", "Too long"],
+            "answer": "Too short"
+          },
+          {
+            "id": "g_6",
+            "sentence": " The safe load for scaffolding is 200 kilograms. This load is 250 kilograms.\n\nThis load is ………………….",
+            "audio": "assets/audio/a_3_g_6.mp3",
+            "options": ["Too heavy", "Correct", "Too light"],
+            "answer": "Too heavy"
+          },
+          {
+            "id": "g_7",
+            "sentence": "TThe recommended thickness of a brick wall is 23 centimeters. This wall is 18 centimeters.\n\nThis wall is ………………….",
+            "audio": "assets/audio/a_3_g_7.mp3",
+            "options": ["Too thin", "Correct", "Too thick"],
+            "answer": "Too thin"
+          },
+          {
+            "id": "g_8",
+            "sentence": "The correct length of steel reinforcement is 10 meters. This steel bar is 11 meters.\n\nThis steel bar is ………………….",
+            "audio": "assets/audio/a_3_g_8.mp3",
+            "options": ["Too long", "Correct", "Too short"],
+            "answer": "long"
+          },
+          {
+            "id": "g_9",
+            "sentence": "The acceptable slump for concrete is 75–100 millimeters. This slump is 120 millimeters.\n\n This slump is ………………….",
+            "audio": "assets/audio/a_3_g_9.mp3",
+            "options": ["Too high", "Correct", "Too low"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_10",
+            "sentence": "The standard width of a doorway is 90 centimeters. This doorway is 80 centimeters.\n\n This doorway is ………………….",
+            "audio": "assets/audio/a_3_g_10.mp3",
+            "options": ["Too narrow", "Correct", "Too wide"],
+            "answer": "Too wide"
+          }
+        ]
       }
-    ],
-    "content": [
-      {
-        "id": "g_1",
-        "sentence": "The correct height of bamboo scaffolding is 6 meters.\n This scaffolding is 7.5 meters.\nThis scaffolding is …………",
-        "audio": "assets/audio/a_3_g_1.mp3",
-        "options": ["Too high", "Correct", "Too low"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_2",
-        "sentence": " The correct weight of a cement bag is 50 kilograms.\nThis cement bag is 55 kilograms.\nThis cement bag is …………………..",
-        "audio": "assets/audio/a_3_g_2.mp3",
-        "options": ["Too heavy", "Correct", "Too light"],
-        "answer": "Too heavy"
-      },
-      {
-        "id": "g_3",
-        "sentence": "The acceptable sand–cement ratio is 1:3.\n The ratio used here is 1:5.\n This ratio is ……………",
-        "audio": "assets/audio/a_3_g_3.mp3",
-       "options": ["Too weak", "Correct", "Too strong"],
-        "answer": "Too weak"
-      },
-      {
-        "id": "g_4",
-        "sentence": "The correct depth of the foundation is 1.5 meters.\n This  foundation is 1 meter.\n This foundation is …………………………",
-        "audio": "assets/audio/a_3_g_4.mp3",
-        "options": ["Too Shallow", "Correct", "Too deep"],
-        "answer": "Too Shallow"
-      },
-      {
-        "id": "g_5",
-        "sentence": "The standard curing time for concrete is 28 days.\nThe curing time here is 20 days.\nThis curing time is………………………",
-        "audio": "assets/audio/a_3_g_5.mp3",
-        "options": ["Too short", "Correct", "Too long"],
-        "answer": "Too short"
-      },
-      {
-        "id": "g_6",
-        "sentence": " The safe load for scaffolding is 200 kilograms.\n This load is 250 kilograms.\nThis load is……………………………………….",
-        "audio": "assets/audio/a_3_g_6.mp3",
-        "options": ["Too heavy", "Correct", "Too light"],
-        "answer": "Too heavy"
-      },
-      {
-        "id": "g_7",
-        "sentence": "TThe recommended thickness of a brick wall is 23 centimeters.\nThis wall is 18 centimeters.\nThis wall is ……………………………………",
-        "audio": "assets/audio/a_3_g_7.mp3",
-        "options": ["Too thin", "Correct", "Too thick"],
-        "answer": "Too thin"
-      },
-      {
-        "id": "g_8",
-        "sentence": "The correct length of steel reinforcement is 10 meters.\nThis steel bar is 11 meters.\nThis steel bar is ………………………………",
-        "audio": "assets/audio/a_3_g_8.mp3",
-        "options": ["Too long", "Correct", "Too short"],
-        "answer": "long"
-      },
-      {
-        "id": "g_9",
-        "sentence": "The acceptable slump for concrete is 75–100 millimeters. \n This slump is 120 millimeters.\n This slump is ……………………………….",
-        "audio": "assets/audio/a_3_g_9.mp3",
-       "options": ["Too high", "Correct", "Too low"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_10",
-        "sentence": "The standard width of a doorway is 90 centimeters.\n This doorway is 80 centimeters.\n This doorway is ……………………",
-        "audio": "assets/audio/a_3_g_10.mp3",
-        "options": ["Too narrow", "Correct", "Too wide"],
-        "answer": "Too wide"
-      }
-    ]
+    }
   },
   "activity_4": {
     "type": "LISTENING-2",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the question before you listen to the recording.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න. රෙකෝඩින් එක අහන්නට පෙර ප්‍රශ්නය කියවීම ඉතාමත් වැදගත්ය.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள். பதிவைக் கேட்பதற்கு முன் கேள்வியைப் படிப்பது மிகவும் முக்கியம்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_b": {
@@ -316,21 +320,13 @@
             "id": "l_4_1",
             "question": "What is the height of the scaffolding?",
             "answer": " 6 meters",
-            "options": [
-              "5 meters",
-              "6 meters",
-              "7 meters"
-            ]
+            "options": ["5 meters", "6 meters", "7 meters"]
           },
           {
             "id": "l_4_2",
             "question": "What is the correct height range?",
             "answer": "5.5–6 meters",
-            "options": [
-              "4–5 meters",
-              "5.5–6 meters",
-              "6.5–7 meters"
-            ]
+            "options": ["4–5 meters", "5.5–6 meters", "6.5–7 meters"]
           },
           {
             "id": "l_4_3",
@@ -342,11 +338,7 @@
             "id": "l_4_4",
             "question": "What is the thickness of the wall?",
             "answer": "23 centimeters",
-            "options": [
-              "18 centimeters",
-              "23 centimeters ",
-              "30 centimeters"
-            ]
+            "options": ["18 centimeters", "23 centimeters ", "30 centimeters"]
           },
           {
             "id": "l_4_5",

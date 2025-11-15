@@ -198,100 +198,105 @@
     ]
   },
   "activity_3": {
-    "type": "GAME-1",
-    "bg_image": "assets/img/game/bg-11.jpg",
+    "type": "INTERACTIVE-2",
     "instructions": {
       "activity_1_a": {
-        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
-        "audio": "assets/audio/a_3_i_a.mp3"
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
       }
     },
-    "examples": [
-      {
-        "id": "e_1",
-        "sentence": "The correct baking time for small bread rolls is 15–18 minutes.\nThe baking time for these rolls is 22 minutes.\nThe baking time for these rolls is ………….",
-        "audio": "assets/audio/a_3_ex_1.mp3",
-        "options": ["Too long", "Correct", "Too short"],
-        "answer": "Too long"
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-6.jpg",
+        "examples": [
+          {
+            "id": "e_1",
+            "sentence": "The correct baking time for small bread rolls is 15–18 minutes. The baking time for these rolls is 22 minutes.\n\nThe baking time for these rolls is ………………….",
+            "audio": "assets/audio/a_3_ex_1.mp3",
+            "options": ["Too long", "Correct", "Too short"],
+            "answer": "Too long"
+          }
+        ],
+        "content": [
+          {
+            "id": "g_1",
+            "sentence": "The range of the oven temperature for baking buns is 180–190 degrees Celsius. The temperature in this oven is 160 degrees Celsius.\n\nThe temperature in this oven is ………………….",
+            "audio": "assets/audio/a_3_g_1.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too low"
+          },
+          {
+            "id": "g_2",
+            "sentence": "The correct weight of the dough for a batch is 2 kilograms. The weight of this dough is 2.3 kilograms.\n\nThe weight of this dough is ………………….",
+            "audio": "assets/audio/a_3_g_2.mp3",
+            "options": ["Too heavy", "Correct", "Too light"],
+            "answer": "Too heavy"
+          },
+          {
+            "id": "g_3",
+            "sentence": "The acceptable sugar content in syrup is 10–12 percent. The sugar content in this syrup is 14 percent.\n\nThe sugar content in this syrup is ………………….",
+            "audio": "assets/audio/a_3_g_3.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_4",
+            "sentence": "The standard moisture level of flour is 12–14 percent. The moisture level of this flour is 18 percent.\n\nThe moisture level of this flour is ………………….",
+            "audio": "assets/audio/a_3_g_4.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_5",
+            "sentence": "The ideal fermentation time for bread dough is 2–3 hours. The fermentation time for this dough is 4 hours.\n\n The fermentation time for this dough is ………………….",
+            "audio": "assets/audio/a_3_g_5.mp3",
+            "options": ["Too long", "Correct", "Too short"],
+            "answer": "Too long"
+          },
+          {
+            "id": "g_6",
+            "sentence": "The safe cold storage temperature for dairy products is 2–4 degrees Celsius. This cold storage room temperature is 6 degrees Celsius.\n\n This cold storage room temperature is ………………….",
+            "audio": "assets/audio/a_3_g_6.mp3",
+            "options": ["Too cold", "Correct", "Too warm"],
+            "answer": "Too warm"
+          },
+          {
+            "id": "g_7",
+            "sentence": "The recommended depth of batter in the tray is 2 centimeters. The batter in this tray is 3.5 centimeters deep.\n\n The batter in this tray is ………………….",
+            "audio": "assets/audio/a_3_g_7.mp3",
+            "options": ["Too deep", "Correct", "Too shallow"],
+            "answer": "Too deep"
+          },
+          {
+            "id": "g_8",
+            "sentence": "The standard weight of a pastry sheet is 500 grams. The pastry sheet in this batch is 650 grams.\n\n The pastry sheet in this batch is ………………….",
+            "audio": "assets/audio/a_3_g_8.mp3",
+            "options": ["Too heavy", "Correct", "Too light"],
+            "answer": "Too heavy"
+          },
+          {
+            "id": "g_9",
+            "sentence": "The correct oil content in fried snacks is 8–10 percent. The oil content in these snacks is 13 percent.\n\n The oil content in these snacks is ………………….",
+            "audio": "assets/audio/a_3_g_9.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_10",
+            "sentence": "The acceptable moisture level for bread dough is between 60% and 65%. The moisture level of this  bread dough is 70 %.\n\n The moisture level of this bread dough is ………………….",
+            "audio": "assets/audio/a_3_g_10.mp3",
+            "options": ["Too high", "Correct", "Too low"],
+            "answer": "Too high"
+          }
+        ]
       }
-    ],
-    "content": [
-      {
-        "id": "g_1",
-        "sentence": "The range of the oven temperature for baking buns is 180–190 degrees Celsius.\nThe temperature in this oven is 160 degrees Celsius.\nThe temperature in this oven is ………….",        "audio": "assets/audio/a_3_g_1.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too low"
-      },
-      {
-        "id": "g_2",
-        "sentence": "The correct weight of the dough for a batch is 2 kilograms.\n The weight of this dough is 2.3 kilograms.\nThe weight of this dough is ………………….",
-        "audio": "assets/audio/a_3_g_2.mp3",
-        "options": ["Too heavy", "Correct", "Too light"],
-        "answer": "Too heavy"
-      },
-      {
-        "id": "g_3",
-        "sentence": "The acceptable sugar content in syrup is 10–12 percent.\n The sugar content in this syrup is 14 percent.\nThe sugar content in this syrup is ……………",
-        "audio": "assets/audio/a_3_g_3.mp3",
-       "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_4",
-        "sentence": "The standard moisture level of flour is 12–14 percent.\n The moisture level of this flour is 18 percent.\nThe moisture level of this flour is …………………………",
-        "audio": "assets/audio/a_3_g_4.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_5",
-        "sentence": "The ideal fermentation time for bread dough is 2–3 hours.\n The fermentation time for this dough is 4 hours.\n The fermentation time for this dough is………………………",
-        "audio": "assets/audio/a_3_g_5.mp3",
-        "options": ["Too long", "Correct", "Too short"],
-        "answer": "Too long"
-      },
-      {
-        "id": "g_6",
-        "sentence": "The safe cold storage temperature for dairy products is 2–4 degrees Celsius.\n This cold storage room temperature is 6 degrees Celsius.\n This cold storage room temperature is……………………………………….",
-        "audio": "assets/audio/a_3_g_6.mp3",
-        "options": ["Too cold", "Correct", "Too warm"],
-        "answer": "Too warm"
-      },
-      {
-        "id": "g_7",
-        "sentence": "The recommended depth of batter in the tray is 2 centimeters.\n The batter in this tray is 3.5 centimeters deep.\n The batter in this tray is ……………………………………",
-        "audio": "assets/audio/a_3_g_7.mp3",
-        "options": ["Too deep", "Correct", "Too shallow"],
-        "answer": "Too deep"
-      },
-      {
-        "id": "g_8",
-        "sentence": "The standard weight of a pastry sheet is 500 grams.\n The pastry sheet in this batch is 650 grams.\n The pastry sheet in this batch is ……………………………….",
-        "audio": "assets/audio/a_3_g_8.mp3",
-        "options": ["Too heavy", "Correct", "Too light"],
-        "answer": "Too heavy"
-      },
-      {
-        "id": "g_9",
-        "sentence": "The correct oil content in fried snacks is 8–10 percent.\n The oil content in these snacks is 13 percent.\n The oil content in these snacks is ……………………………….",
-        "audio": "assets/audio/a_3_g_9.mp3",
-       "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_10",
-        "sentence": "The acceptable moisture level for bread dough is between 60% and 65% .\n The moisture level of this  bread dough is 70 %.\n The moisture level of this bread dough is ……………………",
-        "audio": "assets/audio/a_3_g_10.mp3",
-        "options": ["Too high", "Correct", "Too low"],
-        "answer": "Too high"
-      }
-    ]
+    }
   },
   "activity_4": {
     "type": "LISTENING-2",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the question before you listen to the recording.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න. රෙකෝඩින් එක අහන්නට පෙර ප්‍රශ්නය කියවීම ඉතාමත් වැදගත්ය.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள். பதிவைக் கேட்பதற்கு முன் கேள்வியைப் படிப்பது மிகவும் முக்கியம்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_b": {
@@ -335,17 +340,17 @@
             "id": "l_4_3",
             "question": "What should be the correct weight of the dough?",
             "answer": "2 kilograms 350 grams",
-            "options": ["1.5 kilograms", "2 kilograms 350 grams ", "2.3 kilograms"]
+            "options": [
+              "1.5 kilograms",
+              "2 kilograms 350 grams ",
+              "2.3 kilograms"
+            ]
           },
           {
             "id": "l_4_4",
             "question": "What is the correct reading of the moisture meter?",
             "answer": " 65 percent",
-            "options": [
-              "55 percent",
-              "65 percent",
-              "75 percent"
-            ]
+            "options": ["55 percent", "65 percent", "75 percent"]
           },
           {
             "id": "l_4_5",

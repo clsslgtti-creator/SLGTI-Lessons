@@ -198,101 +198,105 @@
     ]
   },
   "activity_3": {
-    "type": "GAME-1",
-    "bg_image": "assets/img/game/bg-11.jpg",
+    "type": "INTERACTIVE-2",
     "instructions": {
       "activity_1_a": {
-        "text": "Read the sentences appearing on the screen and press the button to indicate whether the subject(s) in each sentence is singular or plural.\nතිරයේ දිස්වන වාක්‍යයන් කියවන්න. සෑම වාක්‍යයකම උක්තය​ ඒකවචන ද බහුවචන ද යන්න පෙන්වීමට බොත්තම ඔබන්න.\nதிரையில் தோன்றும் வாக்கியங்களை வாசியுங்கள். ஒவ்வொரு வாக்கியத்திலும் பொருள் ஒருமைதானா அல்லது பன்மைதானா என்பதை குறிப்பிட பொத்தானை அழுத்துங்கள்.",
-        "audio": "assets/audio/a_3_i_a.mp3"
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
       }
     },
-    "examples": [
-      {
-        "id": "e_1",
-        "sentence": "The correct clearance between piston and cylinder is 0.02–0.04 millimeters.\n The clearance in this engine is 0.07 millimeters.\n The clearance in this engine is …………",
-        "audio": "assets/audio/a_3_ex_1.mp3",
-        "options": ["Too wide", "Correct", "Too narrow"],
-        "answer": "Too narrow"
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-5.jpg",
+        "examples": [
+          {
+            "id": "e_1",
+            "sentence": "The correct clearance between piston and cylinder is 0.02–0.04 millimeters.The clearance in this engine is 0.07 millimeters.\n\n The clearance in this engine is ………………….",
+            "audio": "assets/audio/a_3_ex_1.mp3",
+            "options": ["Too wide", "Correct", "Too narrow"],
+            "answer": "Too narrow"
+          }
+        ],
+        "content": [
+          {
+            "id": "g_1",
+            "sentence": "The correct torque for tightening this bolt is 50–55 Newton meters.The torque on this bolt is 45 Newton meters.\n\n The torque on this bolt is ………………….",
+            "audio": "assets/audio/a_3_g_1.mp3",
+            "options": ["Too loose", "Correct", "Too tight"],
+            "answer": "Too loose"
+          },
+          {
+            "id": "g_2",
+            "sentence": "The standard thickness of the brake pad is 10–12 millimeters.The thickness of this brake pad is 8 millimeters.\n\n The thickness of this brake pad is ………………….",
+            "audio": "assets/audio/a_3_g_2.mp3",
+            "options": ["Too thin", "Correct", "Too thick"],
+            "answer": "Too thin"
+          },
+          {
+            "id": "g_3",
+            "sentence": "The acceptable oil pressure in the hydraulic system is 120–140 bar.The oil pressure in this system is 150 bar.\n\n The oil pressure in this system is ………………….",
+            "audio": "assets/audio/a_3_g_3.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_4",
+            "sentence": "The standard diameter of the drill bit for this task is 8 millimeters.The diameter of this drill bit is 6 millimeters.\n\n The diameter of this drill bit is ………………….",
+            "audio": "assets/audio/a_3_g_4.mp3",
+            "options": ["Too small", "Correct", "Too large"],
+            "answer": "Too small"
+          },
+          {
+            "id": "g_5",
+            "sentence": "The ideal running speed of the lathe machine is 1200–1400 revolutions per minute.The running speed of this lathe is 1000 revolutions per minute.\n\n The running speed of this lathe is ………………….",
+            "audio": "assets/audio/a_3_g_5.mp3",
+            "options": ["Too slow", "Correct", "Too fast"],
+            "answer": "Too slow"
+          },
+          {
+            "id": "g_6",
+            "sentence": "The safe pressure for compressed air lines is 6–8 bar.The pressure in this air line is 10 bar.\n\n The pressure in this air line is ………………….",
+            "audio": "assets/audio/a_3_g_6.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too high"
+          },
+          {
+            "id": "g_7",
+            "sentence": "The recommended length of the connecting rod is 145–150 millimeters.The length of this connecting rod is 152 millimeters.\n\n The length of this connecting rod is ………………….",
+            "audio": "assets/audio/a_3_g_7.mp3",
+            "options": ["Too long", "Correct", "Too short"],
+            "answer": "Too long"
+          },
+          {
+            "id": "g_8",
+            "sentence": "The standard weight of the flywheel is 15 kilograms.The flywheel in this machine is 13 kilograms.\n\n The flywheel in this machine is ………………….",
+            "audio": "assets/audio/a_3_g_8.mp3",
+            "options": ["Too heavy", "Correct", "Too light"],
+            "answer": "Too light"
+          },
+          {
+            "id": "g_9",
+            "sentence": "The correct coolant temperature for this engine is 80–90 degrees Celsius.The coolant temperature in this engine is 70 degrees Celsius.\n\n The coolant temperature in this engine is ………………….",
+            "audio": "assets/audio/a_3_g_9.mp3",
+            "options": ["Too low", "Correct", "Too high"],
+            "answer": "Too low"
+          },
+          {
+            "id": "g_10",
+            "sentence": "The acceptable vibration level of the machine is below 3 millimeters per second.The vibration level of this machine is 5 millimeters per second.\n\n The vibration level of this machine is ………………….",
+            "audio": "assets/audio/a_3_g_10.mp3",
+            "options": ["Too high", "Correct", "Too low"],
+            "answer": "Too high"
+          }
+        ]
       }
-    ],
-    "content": [
-      {
-        "id": "g_1",
-        "sentence": "The correct torque for tightening this bolt is 50–55 Newton meters.\n The torque on this bolt is 45 Newton meters.\n The torque on this bolt is …………",
-        "audio": "assets/audio/a_3_g_1.mp3",
-        "options": ["Too loose", "Correct", "Too tight"],
-        "answer": "Too loose"
-      },
-      {
-        "id": "g_2",
-        "sentence": "The standard thickness of the brake pad is 10–12 millimeters.\n The thickness of this brake pad is 8 millimeters.\n The thickness of this brake pad is …………………",
-        "audio": "assets/audio/a_3_g_2.mp3",
-        "options": ["Too thin", "Correct", "Too thick"],
-        "answer": "Too thin"
-      },
-      {
-        "id": "g_3",
-        "sentence": "The acceptable oil pressure in the hydraulic system is 120–140 bar.\n The oil pressure in this system is 150 bar.\n The oil pressure in this system is ……………",
-        "audio": "assets/audio/a_3_g_3.mp3",
-       "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_4",
-        "sentence": "The standard diameter of the drill bit for this task is 8 millimeters.\n The diameter of this drill bit is 6 millimeters.\n The diameter of this drill bit is …………………………",
-        "audio": "assets/audio/a_3_g_4.mp3",
-        "options": ["Too small", "Correct", "Too large"],
-        "answer": "Too small"
-      },
-      {
-        "id": "g_5", 
-        "sentence": "The ideal running speed of the lathe machine is 1200–1400 revolutions per minute.\n The running speed of this lathe is 1000 revolutions per minute.\n The running speed of this lathe is………………………",
-        "audio": "assets/audio/a_3_g_5.mp3",
-        "options": ["Too slow", "Correct", "Too fast"],
-        "answer": "Too slow"
-      },
-      {
-        "id": "g_6",
-        "sentence": "The safe pressure for compressed air lines is 6–8 bar.\n The pressure in this air line is 10 bar.\n The pressure in this air line is……………………………………….",
-        "audio": "assets/audio/a_3_g_6.mp3",
-        "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too high"
-      },
-      {
-        "id": "g_7",
-        "sentence": "The recommended length of the connecting rod is 145–150 millimeters.\n The length of this connecting rod is 152 millimeters.\n The length of this connecting rod is ……………………………………",
-        "audio": "assets/audio/a_3_g_7.mp3",
-        "options": ["Too long", "Correct", "Too short"],
-        "answer": "Too long"
-      },
-      {
-        "id": "g_8",
-        "sentence": "The standard weight of the flywheel is 15 kilograms.\n The flywheel in this machine is 13 kilograms.\n The flywheel in this machine is ………………………………",
-        "audio": "assets/audio/a_3_g_8.mp3",
-        "options": ["Too heavy", "Correct", "Too light"],
-        "answer": "Too light"
-      },
-      {
-        "id": "g_9",
-        "sentence": "The correct coolant temperature for this engine is 80–90 degrees Celsius.\n The coolant temperature in this engine is 70 degrees Celsius.\n The coolant temperature in this engine is ……………………………….",
-        "audio": "assets/audio/a_3_g_9.mp3",
-       "options": ["Too low", "Correct", "Too high"],
-        "answer": "Too low"
-      },
-      {
-        "id": "g_10",
-        "sentence": "The acceptable vibration level of the machine is below 3 millimeters per second.\n The vibration level of this machine is 5 millimeters per second.\n The vibration level of this machine is ……………………",
-        "audio": "assets/audio/a_3_g_10.mp3",
-        "options": ["Too high", "Correct", "Too low"],
-        "answer": "Too high"
-      }
-    ]
+    }
   },
   "activity_4": {
     "type": "LISTENING-2",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the question before you listen to the recording.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න. රෙකෝඩින් එක අහන්නට පෙර ප්‍රශ්නය කියවීම ඉතාමත් වැදගත්ය.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள். பதிவைக் கேட்பதற்கு முன் கேள்வியைப் படிப்பது மிகவும் முக்கியம்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_b": {
@@ -342,11 +346,7 @@
             "id": "l_4_4",
             "question": " What is the actual reading  of the oil pressure gauge?",
             "answer": "130 bar",
-            "options": [
-              "120 bar",
-              "130 bar",
-              "140 bar"
-            ]
+            "options": ["120 bar", "130 bar", "140 bar"]
           },
           {
             "id": "l_4_5",
@@ -473,12 +473,12 @@
           "text": "The coolant is about 85 degrees.The coolant is about 5 degrees too hot.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
-         {
+        {
           "id": "r_4_11",
           "text": "The piston rod is about 145 millimeters.The piston rod is about 3 millimeters too long.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
-         {
+        {
           "id": "r_4_12",
           "text": "The clearance is about 0.25 millimeters.The clearance is about 0.05 millimeters too wide.",
           "audio": "assets/audio/a_4_n_12.mp3"
