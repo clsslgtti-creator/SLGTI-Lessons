@@ -7,7 +7,7 @@
   },
   "activity_1": {
     "type": "PRONUNCIATION",
-    "focus": "Short /ɪ/",
+    "focus": "Long /iː/",
     "instructions": {
       "activity_1_a": {
         "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
@@ -57,9 +57,9 @@
       },
       {
         "id": "p_4",
-        "word_text": "'s'ea'ling ",
+        "word_text": "h'ea't",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "S'ea'ling this joint isn’t easy.",
+        "sentence_text": "The h'ea't is an important factor when testing these machines.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
@@ -67,7 +67,7 @@
   },
   "activity_2": {
     "type": "SBS-3",
-    "focus": "Verb ‘to be’ and preposition ‘on’",
+    "focus": "Verb ‘to be’ ,preposition ‘in’, ‘too’",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
@@ -362,9 +362,9 @@
           {
             "id": "l_4_5",
             "question": "Where is the maintenance logbook kept?",
-            "answer": "In the service office",
+            "answer": "In the engine service room",
             "options": [
-              " In the workshop office",
+              "In the workshop office",
               "In the tool store",
               "In the engine service room"
             ]

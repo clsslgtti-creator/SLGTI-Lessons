@@ -7,7 +7,7 @@
   },
   "activity_1": {
     "type": "PRONUNCIATION",
-    "focus": "Short /ɪ/",
+    "focus": "Long /iː/",
     "instructions": {
       "activity_1_a": {
         "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
@@ -67,7 +67,7 @@
   },
   "activity_2": {
     "type": "SBS-3",
-    "focus": "Verb ‘to be’ and preposition ‘on’",
+    "focus": "Verb ‘to be’ ,preposition ‘in’, ‘too’",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
@@ -269,7 +269,7 @@
           },
           {
             "id": "g_7",
-            "sentence": "The recommended length of a patch cable is less than 100 meters. The length of this patch cable is 120 meters.\n\n The length of this patch cable is ………………….",
+            "sentence": "The recommended length of a patch cable is less than 100 centimeters. The length of this patch cable is 120 centimeters.\n\n The length of this patch cable is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
             "options": ["Too long", "Correct", "Too short"],
             "answer": "Too long",
