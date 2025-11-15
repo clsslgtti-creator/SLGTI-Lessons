@@ -45,7 +45,7 @@
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
         "sentence_text": "This part is made of st'ee'l.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.png"
+        "image": "assets/img/a_1_p_2.jpg"
       },
       {
         "id": "p_3",
@@ -143,7 +143,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Where is the broken drill press?",
         "text_b": "It is in the engineering workshop.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -152,7 +152,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": "Where is the adjustable torque wrench?",
         "text_b": "It is in the grey cotton bag.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -161,7 +161,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "Where are the protective welding gloves?",
         "text_b": "They are in the safety locker.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
@@ -179,7 +179,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.jpeg",
+        "img": "assets/img/a_2_d_5.png",
         "text_a": "Where is the experienced mechanic?",
         "text_b": "He is in the fabrication section.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
@@ -188,7 +188,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpeg",
+        "img": "assets/img/a_2_d_6.png",
         "text_a": " Where are the new trainee technicians?",
         "text_b": "They are in the maintenance bay.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
@@ -214,7 +214,8 @@
             "sentence": "The correct clearance between piston and cylinder is 0.02–0.04 millimeters.The clearance in this engine is 0.07 millimeters.\n\n The clearance in this engine is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
             "options": ["Too wide", "Correct", "Too narrow"],
-            "answer": "Too narrow"
+            "answer": "Too narrow",
+            "image": "assets/img/a_3_a_ex_1.png"
           }
         ],
         "content": [
@@ -223,70 +224,80 @@
             "sentence": "The correct torque for tightening this bolt is 50–55 Newton meters.The torque on this bolt is 45 Newton meters.\n\n The torque on this bolt is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
             "options": ["Too loose", "Correct", "Too tight"],
-            "answer": "Too loose"
+            "answer": "Too loose",
+            "image": "assets/img/a_3_a_g_1.jpeg"
           },
           {
             "id": "g_2",
             "sentence": "The standard thickness of the brake pad is 10–12 millimeters.The thickness of this brake pad is 8 millimeters.\n\n The thickness of this brake pad is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
             "options": ["Too thin", "Correct", "Too thick"],
-            "answer": "Too thin"
+            "answer": "Too thin",
+            "image": "assets/img/a_3_a_g_2.png"
           },
           {
             "id": "g_3",
             "sentence": "The acceptable oil pressure in the hydraulic system is 120–140 bar.The oil pressure in this system is 150 bar.\n\n The oil pressure in this system is ………………….",
             "audio": "assets/audio/a_3_g_3.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_3.png"
           },
           {
             "id": "g_4",
             "sentence": "The standard diameter of the drill bit for this task is 8 millimeters.The diameter of this drill bit is 6 millimeters.\n\n The diameter of this drill bit is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
             "options": ["Too small", "Correct", "Too large"],
-            "answer": "Too small"
+            "answer": "Too small",
+            "image": "assets/img/a_3_a_g_4.png"
           },
           {
             "id": "g_5",
             "sentence": "The ideal running speed of the lathe machine is 1200–1400 revolutions per minute.The running speed of this lathe is 1000 revolutions per minute.\n\n The running speed of this lathe is ………………….",
             "audio": "assets/audio/a_3_g_5.mp3",
             "options": ["Too slow", "Correct", "Too fast"],
-            "answer": "Too slow"
+            "answer": "Too slow",
+            "image": "assets/img/a_3_a_g_5.png"
           },
           {
             "id": "g_6",
             "sentence": "The safe pressure for compressed air lines is 6–8 bar.The pressure in this air line is 10 bar.\n\n The pressure in this air line is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_6.jpeg"
           },
           {
             "id": "g_7",
             "sentence": "The recommended length of the connecting rod is 145–150 millimeters.The length of this connecting rod is 152 millimeters.\n\n The length of this connecting rod is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
             "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long"
+            "answer": "Too long",
+            "image": "assets/img/a_3_a_g_7.png"
           },
           {
             "id": "g_8",
             "sentence": "The standard weight of the flywheel is 15 kilograms.The flywheel in this machine is 13 kilograms.\n\n The flywheel in this machine is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
             "options": ["Too heavy", "Correct", "Too light"],
-            "answer": "Too light"
+            "answer": "Too light",
+            "image": "assets/img/a_3_a_g_8.jpeg"
           },
           {
             "id": "g_9",
             "sentence": "The correct coolant temperature for this engine is 80–90 degrees Celsius.The coolant temperature in this engine is 70 degrees Celsius.\n\n The coolant temperature in this engine is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low"
+            "answer": "Too low",
+            "image": "assets/img/a_3_a_g_9.jpeg"
           },
           {
             "id": "g_10",
             "sentence": "The acceptable vibration level of the machine is below 3 millimeters per second.The vibration level of this machine is 5 millimeters per second.\n\n The vibration level of this machine is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
             "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_10.png"
           }
         ]
       }
