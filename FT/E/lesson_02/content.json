@@ -125,7 +125,7 @@
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpeg",
+        "img": "assets/img/a_2_ex_2.png",
         "text_a": "Where is the pen?",
         "text_b": " It is in the pencil case.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
@@ -133,7 +133,7 @@
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_3.jpeg",
+        "img": "assets/img/a_2_ex_3.png",
         "text_a": "Where is the manager?",
         "text_b": "He is in the office.",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
