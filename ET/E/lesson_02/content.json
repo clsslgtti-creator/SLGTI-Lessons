@@ -37,7 +37,7 @@
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "The m'e'ter is in the workshop.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": " This h'ea'ter is in the classroom.  ",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpeg"
+        "image": "assets/img/a_1_p_3.jpg"
       },
       {
         "id": "p_4",
@@ -61,7 +61,7 @@
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "This r'ea'der is not accurate. ",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.png"
+        "image": "assets/img/a_1_p_4.jpg"
       }
     ]
   },
@@ -143,7 +143,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Where is the heavy distribution board?",
         "text_b": " It is in the control panel section.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -152,7 +152,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": "Where is the portable insulation tester?",
         "text_b": "It is in the grey cotton bag. ",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -161,7 +161,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "Where are the protective rubber gloves?",
         "text_b": "They are in the black chest. ",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
@@ -179,7 +179,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.jpeg",
+        "img": "assets/img/a_2_d_5.png",
         "text_a": "Where is the senior electrician?",
         "text_b": "He is in the wiring workshop.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
@@ -214,7 +214,8 @@
             "sentence": "The correct resistance of this coil is 15 Ω. The multimeter shows 15 Ω.\n\n The resistance is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Correct"
+            "answer": "Correct",
+            "image": "assets/img/a_3_a_ex_1.png"
           }
         ],
         "content": [
@@ -223,70 +224,80 @@
             "sentence": "The correct operating voltage for a circuit is 220–240 volts. The voltage in this circuit is 210 volts.\n\nThe voltage in this circuit is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low"
+            "answer": "Too low",
+            "image": "assets/img/a_3_a_g_1.jpeg"
           },
           {
             "id": "g_2",
             "sentence": "The correct current for this motor is 10 amperes. The current in this motor is 13 amperes.\n\nThe current in this motor is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
             "options": ["Too weak", "Correct", "Too strong"],
-            "answer": "Too strong"
+            "answer": "Too strong",
+            "image": "assets/img/a_3_a_g_2.png"
           },
           {
             "id": "g_3",
             "sentence": "The correct insulation resistance in wiring is above 1 megaohm. The insulation resistance in this wiring is 0.5 megaohms.\n\nThe insulation resistance in this wiring is ………………….",
             "audio": "assets/audio/a_3_g_3.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low"
+            "answer": "Too low",
+            "image": "assets/img/a_3_a_g_3.png"
           },
           {
             "id": "g_4",
             "sentence": "The correct fuse rating for this circuit is 5 amperes. The fuse in this circuit is 8 amperes.\n\nThe fuse in this circuit is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_4.png"
           },
           {
             "id": "g_5",
             "sentence": "The correct earth resistance is less than 2 ohms. The earth resistance in this test is 4 ohms.\n\nThe earth resistance in this test is ………………….",
             "audio": "assets/audio/a_3_g_5.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_5.png"
           },
           {
             "id": "g_6",
             "sentence": "The correct oil temperature of a transformer is 60 degrees Celsius. The oil temperature of this transformer is 75 degrees Celsius.\n\n The oil temperature of this transformer is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
             "options": ["Too cold", "Correct", "Too hot"],
-            "answer": "Too hot"
+            "answer": "Too hot",
+            "image": "assets/img/a_3_a_g_6.png"
           },
           {
             "id": "g_7",
             "sentence": "The correct cable size for this circuit is 6 square millimeters. The cable in this circuit is 4 square millimeters.\n\n The cable in this circuit is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
             "options": ["Too small", "Correct", "Too large"],
-            "answer": "Too small"
+            "answer": "Too small",
+            "image": "assets/img/a_3_a_g_7.jpeg"
           },
           {
             "id": "g_8",
             "sentence": "The correct conductor length for this connection is 2 meters. The conductor in this connection is 2.5 meters.\n\n The conductor in this connection is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
             "options": ["Too long", "Correct", "Too short"],
-            "answer": "Correct"
+            "answer": "Correct",
+            "image": "assets/img/a_3_a_g_8.png"
           },
           {
             "id": "g_9",
             "sentence": "The correct breaker rating for a distribution board is 32 amperes. The breaker in this distribution board is 25 amperes.\n\n The breaker in this distribution board is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_9.jpeg"
           },
           {
             "id": "g_10",
             "sentence": "The correct capacitor value for this motor is 40 microfarads. The capacitor in this motor is 60 microfarads.\n\n The capacitor in this motor is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_10.png"
           }
         ]
       }
