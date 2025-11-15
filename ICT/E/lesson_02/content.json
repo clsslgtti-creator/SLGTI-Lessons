@@ -37,7 +37,7 @@
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": " The computer scr'ee'n is too wide.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.jpg"
       },
       {
         "id": "p_2",
@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "Send me an 'e'mail today.  ",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpeg"
+        "image": "assets/img/a_1_p_3.jpg"
       },
       {
         "id": "p_4",
@@ -143,7 +143,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Where is the faulty desktop computer?",
         "text_b": "It is in the electrical department maintenance workshop.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -152,7 +152,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": "Where is the network router?",
         "text_b": "It is in the wooden chest of drawers.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -161,7 +161,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "Where are the backup hard drives?",
         "text_b": "They are in the new data storage room.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
@@ -188,7 +188,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpeg",
+        "img": "assets/img/a_2_d_6.png",
         "text_a": "Where are the new headphones?",
         "text_b": "They are in the blue cardboard box.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
@@ -214,7 +214,8 @@
             "sentence": "The correct network speed for the local server is 800–900 Mbps. The network speed in this server is 950 Mbps.\n\n The network speed in this server is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
             "options": ["Too fast", "Correct", "Too slow"],
-            "answer": "Too fast"
+            "answer": "Too fast",
+            "image": "assets/img/a_3_a_ex_1.jpeg"
           }
         ],
         "content": [
@@ -223,70 +224,80 @@
             "sentence": "The safe operating temperature of the server room is 20–25 degrees Celsius.The temperature in this server room is 28 degrees Celsius.\n\n The temperature in this server room is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_1.jpeg"
           },
           {
             "id": "g_2",
             "sentence": "The correct voltage for the power supply unit is 230 volts. The voltage in this PSU is 240 volts.\n\n The voltage in this PSU is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
             "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_2.png"
           },
           {
             "id": "g_3",
             "sentence": "The acceptable latency for network connections is 10–20 milliseconds. The latency in this connection is 8 milliseconds.\n\n The latency in this connection is ………………….",
             "audio": "assets/audio/a_3_g_3.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low"
+            "answer": "Too low",
+            "image": "assets/img/a_3_a_g_3.jpeg"
           },
           {
             "id": "g_4",
             "sentence": "The standard backup frequency for the database is once every 24 hours. The current backup interval is once every 48 hours.\n\n The backup interval is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
             "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long"
+            "answer": "Too long",
+            "image": "assets/img/a_3_a_g_4.png"
           },
           {
             "id": "g_5",
             "sentence": "The ideal CPU utilization for this server is 40–60 percent. The CPU utilization of this server is 75 percent.\n\n The CPU utilization of this server is ………………….",
             "audio": "assets/audio/a_3_g_5.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_5.png"
           },
           {
             "id": "g_6",
             "sentence": "The safe humidity level for ICT equipment is 40–50 percent. The humidity in the server room is 30 percent.\n\n The humidity in the server room is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low"
+            "answer": "Too low",
+            "image": "assets/img/a_3_a_g_6.png"
           },
           {
             "id": "g_7",
             "sentence": "The recommended length of a patch cable is less than 100 meters. The length of this patch cable is 120 meters.\n\n The length of this patch cable is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
             "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long"
+            "answer": "Too long",
+            "image": "assets/img/a_3_a_g_7.jpeg"
           },
           {
             "id": "g_8",
             "sentence": "The standard capacity of the UPS for this lab is 5 kilovolt-amperes (kVA). The UPS in this lab is 4 kVA.\n\n The UPS in this lab is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
             "options": ["Too strong", "Correct", "Too weak"],
-            "answer": "Too weak"
+            "answer": "Too weak",
+            "image": "assets/img/a_3_a_g_8.jpeg"
           },
           {
             "id": "g_9",
             "sentence": "The correct disk usage level for safe operation is below 80 percent. The disk usage on this server is 90 percent.\n\n The disk usage on this server is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_9.png"
           },
           {
             "id": "g_10",
             "sentence": "The acceptable packet loss rate is below 1 percent. The packet loss rate in this network is 2 percent.\n\n The packet loss rate in this network is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
             "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high"
+            "answer": "Too high",
+            "image": "assets/img/a_3_a_g_10.png"
           }
         ]
       }
