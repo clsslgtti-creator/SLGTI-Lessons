@@ -161,7 +161,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "Where are the Year 1 trainees?",
         "text_b": "They are in the cake preparation room.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
@@ -170,7 +170,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.png",
+        "img": "assets/img/a_2_d_4.jpeg",
         "text_a": "Where is the lamprais?",
         "text_b": "It is  in the gas oven. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
@@ -188,7 +188,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.png",
+        "img": "assets/img/a_2_d_6.jpg",
         "text_a": "Where are the string hoppers?",
         "text_b": "They are in the steamer.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
