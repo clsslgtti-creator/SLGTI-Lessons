@@ -51,7 +51,7 @@
         "id": "p_3",
         "word_text": "sp'ee'd",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "This sp'ee'd is far too high.  ",
+        "sentence_text": "This sp'ee'd is far too high.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.jpg"
       },
@@ -145,7 +145,7 @@
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
         "text_a": "Where is the fuse box?",
-        "text_b": "It is in the vehicle servicing workshop. ",
+        "text_b": "It is in the vehicle servicing workshop.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
         "keyword": "vehicle servicing workshop"
@@ -211,7 +211,7 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "The correct tire pressure is 32 psi. This tire has 38 psi.\n\nThe pressure is ……………….",
+            "sentence": "The correct tire pressure is 32 PSI. This tire has 38 PSI.\n\nThe pressure is ……………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
             "options": ["Too high", "Correct", "Too low"],
             "answer": "Too high",
@@ -379,12 +379,12 @@
         },
         {
           "id": "n_4_2",
-          "text": "I am checking the length of the fan belt",
+          "text": "I am checking the length of the fan belt.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "I am checking the depth of the tire tread..",
+          "text": "I am checking the depth of the tire tread.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
