@@ -172,7 +172,7 @@
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
         "text_a": "Where are the diagnostic cables?",
-        "text_b": "They are in the brown leather bag. ",
+        "text_b": "They are in the brown leather bag.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "keyword": "brown leather bag"
