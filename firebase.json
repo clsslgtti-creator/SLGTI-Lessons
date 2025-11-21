@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "/public",
+    "public": "/",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -8,8 +8,124 @@
     ],
     "rewrites": [
       {
-        "source": "/:subject/E/:lesson",
-        "destination": "/:subject/E/:lesson/index.html"
+        "source": "/AT/E/lesson_01",
+        "destination": "/AT/E/lesson_01/index.html"
+      },
+      {
+        "source": "/AT/E/lesson_02",
+        "destination": "/AT/E/lesson_02/index.html"
+      },
+      {
+        "source": "/AT/E/lesson_03",
+        "destination": "/AT/E/lesson_03/index.html"
+      },
+      {
+        "source": "/AT/E/lesson_04",
+        "destination": "/AT/E/lesson_04/index.html"
+      },
+      {
+        "source": "/AT/E/lesson_05",
+        "destination": "/AT/E/lesson_05/index.html"
+      },
+      {
+        "source": "/CT/E/lesson_01",
+        "destination": "/CT/E/lesson_01/index.html"
+      },
+      {
+        "source": "/CT/E/lesson_02",
+        "destination": "/CT/E/lesson_02/index.html"
+      },
+      {
+        "source": "/CT/E/lesson_03",
+        "destination": "/CT/E/lesson_03/index.html"
+      },
+      {
+        "source": "/CT/E/lesson_04",
+        "destination": "/CT/E/lesson_04/index.html"
+      },
+      {
+        "source": "/CT/E/lesson_05",
+        "destination": "/CT/E/lesson_05/index.html"
+      },
+      {
+        "source": "/ET/E/lesson_01",
+        "destination": "/ET/E/lesson_01/index.html"
+      },
+      {
+        "source": "/ET/E/lesson_02",
+        "destination": "/ET/E/lesson_02/index.html"
+      },
+      {
+        "source": "/ET/E/lesson_03",
+        "destination": "/ET/E/lesson_03/index.html"
+      },
+      {
+        "source": "/ET/E/lesson_04",
+        "destination": "/ET/E/lesson_04/index.html"
+      },
+      {
+        "source": "/ET/E/lesson_05",
+        "destination": "/ET/E/lesson_05/index.html"
+      },
+      {
+        "source": "/FT/E/lesson_01",
+        "destination": "/FT/E/lesson_01/index.html"
+      },
+      {
+        "source": "/FT/E/lesson_02",
+        "destination": "/FT/E/lesson_02/index.html"
+      },
+      {
+        "source": "/FT/E/lesson_03",
+        "destination": "/FT/E/lesson_03/index.html"
+      },
+      {
+        "source": "/FT/E/lesson_04",
+        "destination": "/FT/E/lesson_04/index.html"
+      },
+      {
+        "source": "/FT/E/lesson_05",
+        "destination": "/FT/E/lesson_05/index.html"
+      },
+      {
+        "source": "/ICT/E/lesson_01",
+        "destination": "/ICT/E/lesson_01/index.html"
+      },
+      {
+        "source": "/ICT/E/lesson_02",
+        "destination": "/ICT/E/lesson_02/index.html"
+      },
+      {
+        "source": "/ICT/E/lesson_03",
+        "destination": "/ICT/E/lesson_03/index.html"
+      },
+      {
+        "source": "/ICT/E/lesson_04",
+        "destination": "/ICT/E/lesson_04/index.html"
+      },
+      {
+        "source": "/ICT/E/lesson_05",
+        "destination": "/ICT/E/lesson_05/index.html"
+      },
+      {
+        "source": "/MT/E/lesson_01",
+        "destination": "/MT/E/lesson_01/index.html"
+      },
+      {
+        "source": "/MT/E/lesson_02",
+        "destination": "/MT/E/lesson_02/index.html"
+      },
+      {
+        "source": "/MT/E/lesson_03",
+        "destination": "/MT/E/lesson_03/index.html"
+      },
+      {
+        "source": "/MT/E/lesson_04",
+        "destination": "/MT/E/lesson_04/index.html"
+      },
+      {
+        "source": "/MT/E/lesson_05",
+        "destination": "/MT/E/lesson_05/index.html"
       },
       {
         "source": "**",
