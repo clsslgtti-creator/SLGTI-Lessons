@@ -330,7 +330,7 @@
           {
             "id": "l_4_1",
             "question": "What is the voltage of the single-phase circuit?",
-            "answer": "230 volts ",
+            "answer": "230 volts",
             "options": ["210 volts", "230 volts", "240 volts"]
           },
           {

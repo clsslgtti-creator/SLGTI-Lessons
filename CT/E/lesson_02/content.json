@@ -330,7 +330,7 @@
           {
             "id": "l_4_1",
             "question": "What is the height of the scaffolding?",
-            "answer": " 6 meters",
+            "answer": "6 meters",
             "options": ["5 meters", "6 meters", "7 meters"]
           },
           {
@@ -342,14 +342,14 @@
           {
             "id": "l_4_3",
             "question": "What is the weight of the cement bag?",
-            "answer": " 55 kilograms",
-            "options": ["50 kilograms", " 55 kilograms", "60 kilograms"]
+            "answer": "55 kilograms",
+            "options": ["50 kilograms", "55 kilograms", "60 kilograms"]
           },
           {
             "id": "l_4_4",
             "question": "What is the thickness of the wall?",
             "answer": "23 centimeters",
-            "options": ["18 centimeters", "23 centimeters ", "30 centimeters"]
+            "options": ["18 centimeters", "23 centimeters", "30 centimeters"]
           },
           {
             "id": "l_4_5",
@@ -357,7 +357,7 @@
             "answer": "In the site office",
             "options": [
               "In the classroom",
-              " In the store",
+              "In the store",
               "In the site office"
             ]
           }
