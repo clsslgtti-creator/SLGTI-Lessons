@@ -396,60 +396,195 @@
           "id": "n_4_5",
           "text": "I am checking the security of the firewall.",
           "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The server rack is about 25 degrees Celsius. The server rack is about 2 degrees too hot.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The voltage is about 230 volts. The voltage is about 10 volts too high.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The network connection is about 850 Mbps. The network connection is about 50 Mbps too high.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The storage capacity is about 1 terabyte. The storage capacity is about 200 gigabytes too small.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The firewall is about 90 percent secure. The firewall is about 5 percent too weak.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "The data cable is about 5 millimeters. The data cable is about 1 millimeter too wide.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "The patch cord is about 2 meters. The patch cord is about 0.5 meters too short.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_13",
+          "text": "The UPS load is about 60 percent. The UPS load is about 10 percent too high.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_14",
+          "text": "The router capacity is about 200 users. The router capacity is about 50 users, which is too low.",
+          "audio": "assets/audio/a_4_n_4.mp3"
         }
       ],
       "activity_c": [
         {
-          "id": "r_4_1",
+          "id": "n_4_1",
           "text": "I am checking the temperature of the server rack.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
-          "id": "r_4_2",
+          "id": "n_4_2",
           "text": "I am checking the voltage of the power supply.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
-          "id": "r_4_3",
+          "id": "n_4_3",
           "text": "I am checking the speed of the network connection.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
-          "id": "r_4_4",
+          "id": "n_4_4",
           "text": "I am checking the storage capacity of the hard drive.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
-          "id": "r_4_5",
+          "id": "n_4_5",
           "text": "I am checking the security of the firewall.",
           "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The server rack is about 25 degrees Celsius. The server rack is about 2 degrees too hot.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The voltage is about 230 volts. The voltage is about 10 volts too high.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The network connection is about 850 Mbps. The network connection is about 50 Mbps too high.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The storage capacity is about 1 terabyte. The storage capacity is about 200 gigabytes too small.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The firewall is about 90 percent secure. The firewall is about 5 percent too weak.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "The data cable is about 5 millimeters. The data cable is about 1 millimeter too wide.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "The patch cord is about 2 meters. The patch cord is about 0.5 meters too short.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_13",
+          "text": "The UPS load is about 60 percent. The UPS load is about 10 percent too high.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_14",
+          "text": "The router capacity is about 200 users. The router capacity is about 50 users, which is too low.",
+          "audio": "assets/audio/a_4_n_4.mp3"
         }
       ],
       "activity_d": [
         {
-          "id": "r_4_1",
+          "id": "n_4_1",
           "text": "I am checking the temperature of the server rack.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
-          "id": "r_4_2",
+          "id": "n_4_2",
           "text": "I am checking the voltage of the power supply.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
-          "id": "r_4_3",
+          "id": "n_4_3",
           "text": "I am checking the speed of the network connection.",
           "audio": "assets/audio/a_4_n_3.mp3"
         },
         {
-          "id": "r_4_4",
+          "id": "n_4_4",
           "text": "I am checking the storage capacity of the hard drive.",
           "audio": "assets/audio/a_4_n_4.mp3"
         },
         {
-          "id": "r_4_5",
+          "id": "n_4_5",
           "text": "I am checking the security of the firewall.",
           "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "The server rack is about 25 degrees Celsius. The server rack is about 2 degrees too hot.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "The voltage is about 230 volts. The voltage is about 10 volts too high.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The network connection is about 850 Mbps. The network connection is about 50 Mbps too high.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "The storage capacity is about 1 terabyte. The storage capacity is about 200 gigabytes too small.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "The firewall is about 90 percent secure. The firewall is about 5 percent too weak.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "The data cable is about 5 millimeters. The data cable is about 1 millimeter too wide.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "The patch cord is about 2 meters. The patch cord is about 0.5 meters too short.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_13",
+          "text": "The UPS load is about 60 percent. The UPS load is about 10 percent too high.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_14",
+          "text": "The router capacity is about 200 users. The router capacity is about 50 users, which is too low.",
+          "audio": "assets/audio/a_4_n_4.mp3"
         }
       ]
     }
