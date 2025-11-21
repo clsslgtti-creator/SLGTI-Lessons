@@ -353,20 +353,20 @@
             "answer": "2 kilograms 350 grams",
             "options": [
               "1.5 kilograms",
-              "2 kilograms 350 grams ",
+              "2 kilograms 350 grams",
               "2.3 kilograms"
             ]
           },
           {
             "id": "l_4_4",
             "question": "What is the correct reading of the moisture meter?",
-            "answer": " 65 percent",
+            "answer": "65 percent",
             "options": ["55 percent", "65 percent", "75 percent"]
           },
           {
             "id": "l_4_5",
             "question": "Where is the record book kept?",
-            "answer": " In the confectionery room",
+            "answer": "In the confectionery room",
             "options": [
               "In the bakery shop",
               "In the pastry room ",
