@@ -280,7 +280,7 @@
             "sentence": "The correct conductor length for this connection is 2 meters. The conductor in this connection is 2.5 meters.\n\n The conductor in this connection is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
             "options": ["Too long", "Correct", "Too short"],
-            "answer": "Correct",
+            "answer": "Too long",
             "image": "assets/img/a_3_a_g_8.png"
           },
           {
@@ -288,7 +288,7 @@
             "sentence": "The correct breaker rating for a distribution board is 32 amperes. The breaker in this distribution board is 25 amperes.\n\n The breaker in this distribution board is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
             "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "answer": "Too low",
             "image": "assets/img/a_3_a_g_9.jpeg"
           },
           {

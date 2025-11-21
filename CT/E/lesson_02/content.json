@@ -211,7 +211,7 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": " The correct thickness of a concrete slab is 15 cm. This slab is 12 cm thick.\n\n The thickness is ………………….",
+            "sentence": "The correct thickness of a concrete slab is 15 cm. This slab is 12 cm thick.\n\n The thickness is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
             "options": ["Too thick", "Correct", "Too thin"],
             "answer": "Too thin",
@@ -245,7 +245,7 @@
           },
           {
             "id": "g_4",
-            "sentence": "The correct depth of the foundation is 1.5 meters. This  foundation is 1 meter.\n\n This foundation is ………………….",
+            "sentence": "The correct depth of the foundation is 1.5 meters. This foundation is 1 meter.\n\n This foundation is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
             "options": ["Too Shallow", "Correct", "Too deep"],
             "answer": "Too Shallow",
@@ -296,7 +296,7 @@
             "sentence": "The standard width of a doorway is 90 centimeters. This doorway is 80 centimeters.\n\n This doorway is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
             "options": ["Too narrow", "Correct", "Too wide"],
-            "answer": "Too wide",
+            "answer": "Too narrow",
             "image": "assets/img/a_3_a_g_10.png"
           }
         ]
