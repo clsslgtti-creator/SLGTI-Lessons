@@ -221,7 +221,7 @@
         "content": [
           {
             "id": "g_1",
-            "sentence": "The safe operating temperature of the server room is 20–25 degrees Celsius.The temperature in this server room is 28 degrees Celsius.\n\n The temperature in this server room is ………………….",
+            "sentence": "The safe operating temperature of the server room is 20–25 degrees Celsius. The temperature in this server room is 28 degrees Celsius.\n\n The temperature in this server room is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
             "options": ["Too low", "Correct", "Too high"],
             "answer": "Too high",

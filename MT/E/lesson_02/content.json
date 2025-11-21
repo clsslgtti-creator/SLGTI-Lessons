@@ -211,7 +211,7 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "The correct clearance between piston and cylinder is 0.02–0.04 millimeters.The clearance in this engine is 0.07 millimeters.\n\n The clearance in this engine is ………………….",
+            "sentence": "The correct clearance between piston and cylinder is 0.02–0.04 millimeters. The clearance in this engine is 0.07 millimeters.\n\n The clearance in this engine is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
             "options": ["Too wide", "Correct", "Too narrow"],
             "answer": "Too wide",
@@ -221,7 +221,7 @@
         "content": [
           {
             "id": "g_1",
-            "sentence": "The correct torque for tightening this bolt is 50–55 Newton meters.The torque on this bolt is 45 Newton meters.\n\n The torque on this bolt is ………………….",
+            "sentence": "The correct torque for tightening this bolt is 50–55 Newton meters. The torque on this bolt is 45 Newton meters.\n\n The torque on this bolt is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
             "options": ["Too loose", "Correct", "Too tight"],
             "answer": "Too loose",
@@ -229,7 +229,7 @@
           },
           {
             "id": "g_2",
-            "sentence": "The standard thickness of the brake pad is 10–12 millimeters.The thickness of this brake pad is 8 millimeters.\n\n The thickness of this brake pad is ………………….",
+            "sentence": "The standard thickness of the brake pad is 10–12 millimeters. The thickness of this brake pad is 8 millimeters.\n\n The thickness of this brake pad is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
             "options": ["Too thin", "Correct", "Too thick"],
             "answer": "Too thin",
@@ -237,7 +237,7 @@
           },
           {
             "id": "g_3",
-            "sentence": "The acceptable oil pressure in the hydraulic system is 120–140 bar.The oil pressure in this system is 150 bar.\n\n The oil pressure in this system is ………………….",
+            "sentence": "The acceptable oil pressure in the hydraulic system is 120–140 bar. The oil pressure in this system is 150 bar.\n\n The oil pressure in this system is ………………….",
             "audio": "assets/audio/a_3_g_3.mp3",
             "options": ["Too low", "Correct", "Too high"],
             "answer": "Too high",
@@ -245,7 +245,7 @@
           },
           {
             "id": "g_4",
-            "sentence": "The standard diameter of the drill bit for this task is 8 millimeters.The diameter of this drill bit is 6 millimeters.\n\n The diameter of this drill bit is ………………….",
+            "sentence": "The standard diameter of the drill bit for this task is 8 millimeters. The diameter of this drill bit is 6 millimeters.\n\n The diameter of this drill bit is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
             "options": ["Too small", "Correct", "Too large"],
             "answer": "Too small",
@@ -253,7 +253,7 @@
           },
           {
             "id": "g_5",
-            "sentence": "The ideal running speed of the lathe machine is 1200–1400 revolutions per minute.The running speed of this lathe is 1000 revolutions per minute.\n\n The running speed of this lathe is ………………….",
+            "sentence": "The ideal running speed of the lathe machine is 1200–1400 revolutions per minute. The running speed of this lathe is 1000 revolutions per minute.\n\n The running speed of this lathe is ………………….",
             "audio": "assets/audio/a_3_g_5.mp3",
             "options": ["Too slow", "Correct", "Too fast"],
             "answer": "Too slow",
@@ -261,7 +261,7 @@
           },
           {
             "id": "g_6",
-            "sentence": "The safe pressure for compressed air lines is 6–8 bar.The pressure in this air line is 10 bar.\n\n The pressure in this air line is ………………….",
+            "sentence": "The safe pressure for compressed air lines is 6–8 bar. The pressure in this air line is 10 bar.\n\n The pressure in this air line is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
             "options": ["Too low", "Correct", "Too high"],
             "answer": "Too high",
@@ -269,7 +269,7 @@
           },
           {
             "id": "g_7",
-            "sentence": "The recommended length of the connecting rod is 145–150 millimeters.The length of this connecting rod is 152 millimeters.\n\n The length of this connecting rod is ………………….",
+            "sentence": "The recommended length of the connecting rod is 145–150 millimeters. The length of this connecting rod is 152 millimeters.\n\n The length of this connecting rod is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
             "options": ["Too long", "Correct", "Too short"],
             "answer": "Too long",
@@ -277,7 +277,7 @@
           },
           {
             "id": "g_8",
-            "sentence": "The standard weight of the flywheel is 15 kilograms.The flywheel in this machine is 13 kilograms.\n\n The flywheel in this machine is ………………….",
+            "sentence": "The standard weight of the flywheel is 15 kilograms. The flywheel in this machine is 13 kilograms.\n\n The flywheel in this machine is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
             "options": ["Too heavy", "Correct", "Too light"],
             "answer": "Too light",
@@ -285,7 +285,7 @@
           },
           {
             "id": "g_9",
-            "sentence": "The correct coolant temperature for this engine is 80–90 degrees Celsius.The coolant temperature in this engine is 70 degrees Celsius.\n\n The coolant temperature in this engine is ………………….",
+            "sentence": "The correct coolant temperature for this engine is 80–90 degrees Celsius. The coolant temperature in this engine is 70 degrees Celsius.\n\n The coolant temperature in this engine is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
             "options": ["Too low", "Correct", "Too high"],
             "answer": "Too low",
@@ -293,7 +293,7 @@
           },
           {
             "id": "g_10",
-            "sentence": "The acceptable vibration level of the machine is below 3 millimeters per second.The vibration level of this machine is 5 millimeters per second.\n\n The vibration level of this machine is ………………….",
+            "sentence": "The acceptable vibration level of the machine is below 3 millimeters per second. The vibration level of this machine is 5 millimeters per second.\n\n The vibration level of this machine is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
             "options": ["Too high", "Correct", "Too low"],
             "answer": "Too high",
