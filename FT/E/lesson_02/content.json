@@ -145,7 +145,7 @@
         "id": "d_1",
         "img": "assets/img/a_2_d_1.png",
         "text_a": "Where is the assistant baker now?",
-        "text_b": " He is in the fermentation room.",
+        "text_b": "He is in the fermentation room.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
         "keyword": "fermentation room"
@@ -153,8 +153,8 @@
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
-        "text_a": " Where is the bread dough?",
-        "text_b": " It is in the large mixing bowl.",
+        "text_a": "Where is the bread dough?",
+        "text_b": "It is in the large mixing bowl.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "keyword": "large mixing bowl"
@@ -172,7 +172,7 @@
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
         "text_a": "Where is the lamprais?",
-        "text_b": "It is  in the gas oven. ",
+        "text_b": "It is in the gas oven.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "keyword": "gas oven"
