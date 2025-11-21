@@ -145,7 +145,7 @@
         "id": "d_1",
         "img": "assets/img/a_2_d_1.png",
         "text_a": "Where is the heavy distribution board?",
-        "text_b": " It is in the control panel section.",
+        "text_b": "It is in the control panel section.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
         "keyword": "control panel section."
@@ -154,7 +154,7 @@
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
         "text_a": "Where is the portable insulation tester?",
-        "text_b": "It is in the grey cotton bag. ",
+        "text_b": "It is in the grey cotton bag.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "keyword": "grey cotton bag"
@@ -163,7 +163,7 @@
         "id": "d_3",
         "img": "assets/img/a_2_d_3.png",
         "text_a": "Where are the protective rubber gloves?",
-        "text_b": "They are in the black chest. ",
+        "text_b": "They are in the black chest.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
         "keyword": "black chest"
