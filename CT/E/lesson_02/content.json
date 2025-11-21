@@ -229,7 +229,7 @@
           },
           {
             "id": "g_2",
-            "sentence": " The correct weight of a cement bag is 50 kilograms. This cement bag is 55 kilograms.\n\nThis cement bag is ………………….",
+            "sentence": "The correct weight of a cement bag is 50 kilograms. This cement bag is 55 kilograms.\n\nThis cement bag is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
             "options": ["Too heavy", "Correct", "Too light"],
             "answer": "Too heavy",
@@ -261,7 +261,7 @@
           },
           {
             "id": "g_6",
-            "sentence": " The safe load for scaffolding is 200 kilograms. This load is 250 kilograms.\n\nThis load is ………………….",
+            "sentence": "The safe load for scaffolding is 200 kilograms. This load is 250 kilograms.\n\nThis load is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
             "options": ["Too heavy", "Correct", "Too light"],
             "answer": "Too heavy",
@@ -269,7 +269,7 @@
           },
           {
             "id": "g_7",
-            "sentence": "TThe recommended thickness of a brick wall is 23 centimeters. This wall is 18 centimeters.\n\nThis wall is ………………….",
+            "sentence": "The recommended thickness of a brick wall is 23 centimeters. This wall is 18 centimeters.\n\nThis wall is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
             "options": ["Too thin", "Correct", "Too thick"],
             "answer": "Too thin",
