@@ -339,7 +339,7 @@
           },
           {
             "id": "l_4_2",
-            "question": ". What is the highest safe temperature range",
+            "question": "What is the highest safe temperature range",
             "answer": "25 degrees Celsius",
             "options": [
               "20 degrees Celsius",
