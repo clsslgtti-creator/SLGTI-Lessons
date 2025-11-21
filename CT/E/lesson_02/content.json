@@ -145,7 +145,7 @@
         "id": "d_1",
         "img": "assets/img/a_2_d_1.png",
         "text_a": "Where is the site supervisor now?",
-        "text_b": "He is in the site office. ",
+        "text_b": "He is in the site office.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
         "keyword": "site office"
@@ -154,7 +154,7 @@
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
         "text_a": "Where are the cement bags?",
-        "text_b": " They are on the top rack.",
+        "text_b": "They are on the top rack.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "keyword": "top rack"
@@ -172,7 +172,7 @@
         "id": "d_4",
         "img": "assets/img/a_2_d_4.png",
         "text_a": "Where is the large concrete mixer?",
-        "text_b": "It is in the fenced area. ",
+        "text_b": "It is in the fenced area.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "keyword": "fenced area"
@@ -190,7 +190,7 @@
         "id": "d_6",
         "img": "assets/img/a_2_d_6.jpeg",
         "text_a": "Where is the bamboo scaffolding?",
-        "text_b": " It is in the warehouse",
+        "text_b": "It is in the warehouse.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
         "keyword": "warehouse"
