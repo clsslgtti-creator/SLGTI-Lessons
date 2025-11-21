@@ -378,7 +378,7 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "I am checking the temperature of the gas oven",
+          "text": "I am checking the temperature of the gas oven.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
@@ -403,12 +403,12 @@
         },
         {
           "id": "n_4_6",
-          "text": "The dough is about 150 grams. –The dough is about 150 grams too much.",
+          "text": "The dough is about 150 grams. The dough is about 150 grams too much.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "The pastry sheet is about 5 centimeters.  The pastry sheet is about 5 centimeters too long",
+          "text": "The pastry sheet is about 5 centimeters. The pastry sheet is about 5 centimeters too long",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
@@ -418,7 +418,7 @@
         },
         {
           "id": "n_4_9",
-          "text": " The mixing bowl is about 2 centimeters.The mixing bowl is about 2 centimeters too deep.",
+          "text": "The mixing bowl is about 2 centimeters. The mixing bowl is about 2 centimeters too deep.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
@@ -430,7 +430,7 @@
       "activity_c": [
         {
           "id": "r_4_1",
-          "text": "I am checking the temperature of the gas oven",
+          "text": "I am checking the temperature of the gas oven.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
@@ -455,12 +455,12 @@
         },
         {
           "id": "r_4_6",
-          "text": "The dough is about 150 grams. –The dough is about 150 grams too much.",
+          "text": "The dough is about 150 grams. The dough is about 150 grams too much.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "r_4_7",
-          "text": " The pastry sheet is about 5 centimeters.  The pastry sheet is about 5 centimeters too long.",
+          "text": "The pastry sheet is about 5 centimeters. The pastry sheet is about 5 centimeters too long.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
@@ -470,7 +470,7 @@
         },
         {
           "id": "r_4_9",
-          "text": "The mixing bowl is about 2 centimeters.The mixing bowl is about 2 centimeters too deep.",
+          "text": "The mixing bowl is about 2 centimeters. The mixing bowl is about 2 centimeters too deep.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
@@ -482,7 +482,7 @@
       "activity_d": [
         {
           "id": "r_4_1",
-          "text": "I am checking the temperature of the gas oven",
+          "text": "I am checking the temperature of the gas oven.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
@@ -507,12 +507,12 @@
         },
         {
           "id": "r_4_6",
-          "text": "The dough is about 150 grams. –The dough is about 150 grams too much.",
+          "text": "The dough is about 150 grams. The dough is about 150 grams too much.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "r_4_7",
-          "text": " The pastry sheet is about 5 centimeters.  The pastry sheet is about 5 centimeters too long.",
+          "text": "The pastry sheet is about 5 centimeters. The pastry sheet is about 5 centimeters too long.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
@@ -522,7 +522,7 @@
         },
         {
           "id": "r_4_9",
-          "text": " The mixing bowl is about 2 centimeters.The mixing bowl is about 2 centimeters too deep.",
+          "text": "The mixing bowl is about 2 centimeters. The mixing bowl is about 2 centimeters too deep.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
