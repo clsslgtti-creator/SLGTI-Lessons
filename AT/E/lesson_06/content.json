@@ -7,7 +7,7 @@
   },
   "activity_1": {
     "type": "PRONUNCIATION",
-    "focus": "Short /ɒ/",
+    "focus": "Long /ɔː/",
     "instructions": {
       "activity_1_a": {
         "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
@@ -33,35 +33,35 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "r'o'd",
+        "word_text": "d'oo'r",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The r'o'd is in front of the  engine.",
+        "sentence_text": "There are two d'oo'rs on the right side of the car.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "sh'o'ck",
+        "word_text": "fl'oo'r",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Check the sh'o'ck absorber.",
+        "sentence_text": "There is some oil on the workshop fl'oo'r.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "l'o'ck",
+        "word_text": "t'o'rque",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Turn the l'o'ck on the car door.",
+        "sentence_text": "Use more t'o'rque on the nut.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "st'o'p",
+        "word_text": "h'o'rn",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Do not forget to st'o'p the bus.",
+        "sentence_text": "The h'o'rn works well on the road.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.png"
+        "image": "assets/img/a_1_p_4.jpg"
       }
     ]
   },
@@ -107,13 +107,13 @@
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/a_2_ex_1.jpeg",
+        "img": "assets/img/a_2_ex_1.png",
         "text_a": "Is there a laser pointer in the cupboard?",
         "text_b": "Yes, there is.",
         "text_c": "There is a very bright-coloured laser pointer in the cupboard.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
         "audio_b": "assets/audio/a_2_ex_1_b.mp3",
-        "audio_c": "assets/audio/a_2_ex_1_b.mp3"
+        "audio_c": "assets/audio/a_2_ex_1_c.mp3"
       },
       {
         "id": "e_2",
@@ -123,7 +123,7 @@
         "text_c": "There are some neatly arranged job cards in the cupboard.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
         "audio_b": "assets/audio/a_2_ex_1_b.mp3",
-        "audio_c": "assets/audio/a_2_ex_1_b.mp3"
+        "audio_c": "assets/audio/a_2_ex_1_c.mp3"
       },
       {
         "id": "e_3",
@@ -133,34 +133,39 @@
         "text_c": "Actually, there aren’t any receipt books in the office.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
         "audio_b": "assets/audio/a_2_ex_1_b.mp3",
-        "audio_c": "assets/audio/a_2_ex_1_b.mp3"
+        "audio_c": "assets/audio/a_2_ex_1_c.mp3"
       }
     ],
     "keywords": [
       {
         "id": "k_1",
-        "image": "assets/img/a_2_k_1.jpeg",
-        "word": "Behind"
+        "image": "assets/img/a_2_d_1.jpeg",
+        "word": "face shield"
       },
       {
         "id": "k_2",
-        "image": "assets/img/a_2_k_2.png",
-        "word": "Under"
+        "image": "assets/img/a_2_d_2.png",
+        "word": "a pair of safety gloves"
       },
       {
         "id": "k_3",
-        "image": "assets/img/a_2_k_3.png",
-        "word": "Above"
+        "image": "assets/img/a_2_d_3.jpeg",
+        "word": "a reflective vest"
       },
       {
         "id": "k_4",
-        "image": "assets/img/a_2_k_4.jpeg",
-        "word": "In front of"
+        "image": "assets/img/a_2_d_4.jpeg",
+        "word": "fire extinguisher"
       },
       {
         "id": "k_5",
-        "image": "assets/img/a_2_k_5.png",
-        "word": "Between"
+        "image": "assets/img/a_2_d_5.png",
+        "word": "steel-toe boots"
+      },
+      {
+        "id": "k_6",
+        "image": "assets/img/a_2_d_6.png",
+        "word": "earmuffs"
       }
     ],
     "dialogues": [
@@ -172,17 +177,17 @@
         "text_c": "There is a very durable face shield in the machine hall.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "audio_c": "assets/audio/a_2_d_1_b.mp3"
+        "audio_c": "assets/audio/a_2_d_1_c.mp3"
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": "Is there a pair of safety gloves in the inspection area?",
         "text_b": "Yes, there is.",
         "text_c": "There is a very thick pair of safety gloves in the inspection area.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
-        "audio_c": "assets/audio/a_2_d_2_b.mp3"
+        "audio_c": "assets/audio/a_2_d_2_c.mp3"
       },
       {
         "id": "d_3",
@@ -192,7 +197,7 @@
         "text_c": "There is a very bright reflective vest in the workshop.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
-        "audio_c": "assets/audio/a_2_d_3_b.mp3"
+        "audio_c": "assets/audio/a_2_d_3_c.mp3"
       },
       {
         "id": "d_4",
@@ -202,7 +207,7 @@
         "text_c": "Actually, there aren’t any fire extinguishers in the garage.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
-        "audio_c": "assets/audio/a_2_d_4_b.mp3"
+        "audio_c": "assets/audio/a_2_d_4_c.mp3"
       },
       {
         "id": "d_5",
@@ -212,7 +217,7 @@
         "text_c": "There is a very sturdy pair of steel-toe boots in the corner.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
-        "audio_c": "assets/audio/a_2_d_5_b.mp3"
+        "audio_c": "assets/audio/a_2_d_5_c.mp3"
       },
       {
         "id": "d_6",
@@ -222,7 +227,7 @@
         "text_c": "There are very big earmuffs in the lab.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
-        "audio_c": "assets/audio/a_2_d_6_b.mp3"
+        "audio_c": "assets/audio/a_2_d_6_c.mp3"
       }
     ]
   },
