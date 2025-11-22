@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "/",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -8,28 +8,8 @@
     ],
     "rewrites": [
       {
-        "source": "/AT/E/lesson_02",
-        "destination": "/AT/E/lesson_02/index.html"
-      },
-      {
-        "source": "/CT/E/lesson_02",
-        "destination": "/CT/E/lesson_02/index.html"
-      },
-      {
-        "source": "/ET/E/lesson_02",
-        "destination": "/ET/E/lesson_02/index.html"
-      },
-      {
-        "source": "/FT/E/lesson_02",
-        "destination": "/FT/E/lesson_02/index.html"
-      },
-      {
-        "source": "/ICT/E/lesson_02",
-        "destination": "/ICT/E/lesson_02/index.html"
-      },
-      {
-        "source": "/MT/E/lesson_02",
-        "destination": "/MT/E/lesson_02/index.html"
+        "source": "/:subject/E/:lesson",
+        "destination": "/:subject/E/:lesson/index.html"
       },
       {
         "source": "**",

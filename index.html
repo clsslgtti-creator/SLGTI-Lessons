@@ -410,5 +410,29 @@
 
       setupAccordionGroup(sectionAccordions);
     </script>
+    
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBDF8WZ1MIRaAQ8e-wdsFN_j0mDPtTfWXc",
+        authDomain: "slgti-c4e61.firebaseapp.com",
+        projectId: "slgti-c4e61",
+        storageBucket: "slgti-c4e61.firebasestorage.app",
+        messagingSenderId: "279565988726",
+        appId: "1:279565988726:web:365379f281728a09038057",
+        measurementId: "G-TP0S2DH6P0",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>
