@@ -91,7 +91,7 @@
       },
       "activity_2_e": {
         "text": "Read the answer and use the pause to ask the correct question. Then compare your response with the model answer.\n පිළිතුර කියවා නිවැරදි ප්‍රශ්නය ඇසීමට විරාමය භාවිතා කරන්න. ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\n பதிலைக் கவனமாக வாசித்து, இடைவெளியில் சரியான கேள்வியை கேளுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடவும்.",
-        "audio": "assets/audio/a_2_i_e.mp3"
+        "audio": "assets/audio/a_2_i_f.mp3"
       }
     },
     "tables": [
@@ -121,9 +121,9 @@
         "text_a": "Are there job cards in the cupboard?",
         "text_b": "Yes, there are.",
         "text_c": "There are some neatly arranged job cards in the cupboard.",
-        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_1_b.mp3",
-        "audio_c": "assets/audio/a_2_ex_1_c.mp3"
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3",
+        "audio_c": "assets/audio/a_2_ex_2_c.mp3"
       },
       {
         "id": "e_3",
@@ -131,9 +131,9 @@
         "text_a": "Is there a  receipt book in the office?",
         "text_b": "No, there isn’t.",
         "text_c": "Actually, there aren’t any receipt books in the office.",
-        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_1_b.mp3",
-        "audio_c": "assets/audio/a_2_ex_1_c.mp3"
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3",
+        "audio_c": "assets/audio/a_2_ex_3_c.mp3"
       }
     ],
     "keywords": [
@@ -245,126 +245,116 @@
     },
     "content": {
       "activity_a": {
-        "bg_image": "assets/img/game/bg-9.jpg",
+        "bg_image": "assets/img/game/bg-6.jpg",
         "content": [
           {
             "id": "g_b_1",
-            "sentence": "Is the small black bag under the wooden chair?",
-            "audio": "assets/audio/a_3_b_g_1.mp3",
+            "sentence": "Is there a first aid kit in the room?",
+            "audio": "assets/audio/a_3_b_1.mp3",
             "options": [
-              "Yes, it is.",
-              "No, it isn't.",
-              "It is behind the tall table."
+              "Yes, there is.",
+              "No, there isn’t."
             ],
-            "answer": "Yes, it is.",
-            "image": "assets/img/a_3_b_g_1.jpeg"
+            "answer": "Yes, there is.",
+            "image": "assets/img/a_3_b_g_1.png"
           },
           {
             "id": "g_b_2",
-            "sentence": "Where is the new computer monitor?",
-            "audio": "assets/audio/a_3_b_g_2.mp3",
+            "sentence": "Are there safety helmets on the table?",
+            "audio": "assets/audio/a_3_b_2.mp3",
             "options": [
-              "It is behind the grey wall.",
-              "No, it isn't.",
-              "She is in front of the black keyboard."
+              "Yes, there are.",
+              "No, there aren’t."
             ],
-            "answer": "It is behind the grey wall.",
+            "answer": "No, there aren’t.",
             "image": "assets/img/a_3_b_g_2.png"
           },
           {
             "id": "g_b_3",
-            "sentence": "Is the round white clock above the wide door?",
-            "audio": "assets/audio/a_3_b_g_3.mp3",
+            "sentence": "Is there a fire extinguisher near the door?",
+            "audio": "assets/audio/a_3_b_3.mp3",
             "options": [
-              "Yes, it is.",
-              "It is between the two small windows.",
-              "No, it isn't."
+              "Yes, there is.",
+              "No, there isn’t."
             ],
-            "answer": "No, it isn't.",
+            "answer": "No, there isn’t.",
             "image": "assets/img/a_3_b_g_3.png"
           },
           {
             "id": "g_b_4",
-            "sentence": "Where is the blue plastic pen holder?",
-            "audio": "assets/audio/a_3_b_g_4.mp3",
+            "sentence": "Are there gloves in the drawer?",
+            "audio": "assets/audio/a_3_b_4.mp3",
             "options": [
-              "They are under the wide window.",
-              "It is next to the red notebook.",
-              "No, it isn't."
+              "Yes, there are.",
+              "No, there aren’t."
             ],
-            "answer": "It is next to the red notebook.",
-            "image": "assets/img/a_3_b_g_4.jpeg"
+            "answer": "Yes, there are.",
+            "image": "assets/img/a_3_b_g_4.png"
           },
           {
             "id": "g_b_5",
-            "sentence": "Are the tall silver fans behind the brown cupboard?",
-            "audio": "assets/audio/a_3_b_g_5.mp3",
+            "sentence": "Is there a warning sign on the wall?",
+            "audio": "assets/audio/a_3_b_5.mp3",
             "options": [
-              "No, it isn't.",
-              "He is under the small cupboard.",
-              "Yes, they are."
+              "Yes, there is.",
+              "No, there isn’t."
             ],
-            "answer": "Yes, they are.",
+            "answer": "No, there isn’t.",
             "image": "assets/img/a_3_b_g_5.png"
           },
           {
             "id": "g_b_6",
-            "sentence": "Where are the green plastic baskets?",
-            "audio": "assets/audio/a_3_b_g_6.mp3",
+            "sentence": "Are there reflective vests in the cupboard?",
+            "audio": "assets/audio/a_3_b_6.mp3",
             "options": [
-              "He is under the metal chair.",
-              "They are between the two wooden tables.",
-              "No, it isn't."
+              "Yes, there are.",
+              "No, there aren’t."
             ],
-            "answer": "They are between the two wooden tables.",
+            "answer": "Yes, there are.",
             "image": "assets/img/a_3_b_g_6.png"
           },
           {
             "id": "g_b_7",
-            "sentence": "Is the small desk lamp next to the soft bed?",
-            "audio": "assets/audio/a_3_b_g_7.mp3",
+            "sentence": "Is there a safety harness on the shelf?",
+            "audio": "assets/audio/a_3_b_7.mp3",
             "options": [
-              "It isn’t behind the tall bed.",
-              "Yes, it is.",
-              "No, it isn't."
+              "Yes, there is.",
+              "No, there isn’t."
             ],
-            "answer": "Yes, it is.",
+            "answer": "Yes, there is.",
             "image": "assets/img/a_3_b_g_7.png"
           },
           {
             "id": "g_b_8",
-            "sentence": "Where is the colourful paper calendar?",
-            "audio": "assets/audio/a_3_b_g_8.mp3",
+            "sentence": "Are there goggles in the box?",
+            "audio": "assets/audio/a_3_b_8.mp3",
             "options": [
-              "It is above the clean whiteboard.",
-              "Yes, it is.",
-              "It isn’t under the long table."
+              "Yes, there are.",
+              "No, there aren’t."
             ],
-            "answer": "It is above the clean whiteboard.",
-            "image": "assets/img/a_3_b_g_8.jpeg"
+            "answer": "No, there aren’t.",
+            "image": "assets/img/a_3_b_g_8.png"
           },
           {
             "id": "g_b_9",
-            "sentence": "Is the old straw broom behind the wooden door?",
-            "audio": "assets/audio/a_3_b_g_9.mp3",
+            "sentence": "Is there a pair of boots under the bench?",
+            "audio": "assets/audio/a_3_b_9.mp3",
             "options": [
-              "Yes, it is.",
-              "No, it isn't.",
-              "They are under the tall door."
+              "Yes, there is.",
+              "No, there isn’t."
             ],
-            "answer": "Yes, it is.",
+            "answer": "Yes, there is.",
             "image": "assets/img/a_3_b_g_9.png"
           },
           {
             "id": "g_b_10",
-            "sentence": "Where are the brown office chairs?",
-            "audio": "assets/audio/a_3_b_g_10.mp3",
+            "sentence": "Are there ear protectors in the bag?",
+            "audio": "assets/audio/a_3_b_10.mp3",
             "options": [
-              "They are in front of the large desk.",
-              "He is between the two small drawers.",
-              "No, it isn't."
+              "Yes, there are.",
+              "No, there aren’t."
             ],
-            "answer": "They are in front of the large desk.",
+            "answer": "No, there aren’t.",
             "image": "assets/img/a_3_b_g_10.png"
           }
         ]
@@ -372,52 +362,52 @@
       "activity_b": [
         {
           "id": "n_3_1",
-          "text": "Is the small black bag under the wooden chair?",
+          "text": "Is there a first aid kit in the room?  Yes, there is.",
           "audio": "assets/audio/a_3_b_g_1.mp3"
         },
         {
           "id": "n_3_2",
-          "text": "Where is the new computer monitor?",
+          "text": "Are there safety helmets on the table? No, there aren’t.",
           "audio": "assets/audio/a_3_b_g_2.mp3"
         },
         {
           "id": "n_3_3",
-          "text": "Is the round white clock above the wide door?",
+          "text": "Is there a fire extinguisher near the door?  No, there isn’t.",
           "audio": "assets/audio/a_3_b_g_3.mp3"
         },
         {
           "id": "n_3_4",
-          "text": "Where is the blue plastic pen holder?",
+          "text": "Are there any gloves in the drawer?  Yes, there are.",
           "audio": "assets/audio/a_3_b_g_4.mp3"
         },
         {
           "id": "n_3_5",
-          "text": "Are the tall silver fans behind the brown cupboard?",
+          "text": "Is there a warning sign on the wall? No, there isn’t.",
           "audio": "assets/audio/a_3_b_g_5.mp3"
         },
         {
           "id": "n_3_6",
-          "text": "Where are the green plastic baskets?",
+          "text": "Are there any reflective vests in the cupboard?  Yes, there are.",
           "audio": "assets/audio/a_3_b_g_6.mp3"
         },
         {
           "id": "n_3_7",
-          "text": "Is the small desk lamp next to the soft bed?",
+          "text": "Is there a safety harness on the shelf?  Yes, there is.",
           "audio": "assets/audio/a_3_b_g_7.mp3"
         },
         {
           "id": "n_3_8",
-          "text": "Where is the colourful paper calendar?",
+          "text": "Are there any goggles in the box?  No, there aren’t.",
           "audio": "assets/audio/a_3_b_g_8.mp3"
         },
         {
           "id": "n_3_9",
-          "text": "Is the old straw broom behind the wooden door?",
+          "text": "Is there a pair of boots under the bench?  Yes, there is.",
           "audio": "assets/audio/a_3_b_g_9.mp3"
         },
         {
           "id": "n_3_10",
-          "text": "Where are the brown office chairs?",
+          "text": "Are there any ear protectors in the bag? No, there aren’t.",
           "audio": "assets/audio/a_3_b_g_10.mp3"
         }
       ]
