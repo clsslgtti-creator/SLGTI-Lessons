@@ -66,7 +66,7 @@
     ]
   },
   "activity_2": {
-    "type": "SBS-3",
+    "type": "SBS-2",
     "focus": "Adjectives and prepositions",
     "instructions": {
       "example": {
@@ -108,26 +108,32 @@
       {
         "id": "e_1",
         "img": "assets/img/a_2_ex_1.jpeg",
-        "text_a": "Where is the office?",
-        "text_b": "It is between the welding section and the food processing section.",
+        "text_a": "Is there a laser pointer in the cupboard?",
+        "text_b": "Yes, there is.",
+        "text_c": "There is a very bright-coloured laser pointer in the cupboard.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3",
+        "audio_c": "assets/audio/a_2_ex_1_b.mp3"
       },
       {
         "id": "e_2",
         "img": "assets/img/a_2_ex_2.png",
-        "text_a": "Where is the hammer?",
-        "text_b": "It is above the table.",
-        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
+        "text_a": "Are there job cards in the cupboard?",
+        "text_b": "Yes, there are.",
+        "text_c": "There are some neatly arranged job cards in the cupboard.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3",
+        "audio_c": "assets/audio/a_2_ex_1_b.mp3"
       },
       {
         "id": "e_3",
         "img": "assets/img/a_2_ex_3.png",
-        "text_a": "Where is the grinder?",
-        "text_b": "It is in front of the cooker.",
-        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
+        "text_a": "Is there a  receipt book in the office?",
+        "text_b": "No, there isn’t.",
+        "text_c": "Actually, there aren’t any receipt books in the office.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3",
+        "audio_c": "assets/audio/a_2_ex_1_b.mp3"
       }
     ],
     "keywords": [
@@ -161,50 +167,62 @@
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Where is the exhaust gas analyzer?",
-        "text_b": "It is between the table and the window.",
+        "text_a": "Is there a face shield in the machine hall?",
+        "text_b": "Yes, there is.",
+        "text_c": "There is a very durable face shield in the machine hall.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
-        "audio_b": "assets/audio/a_2_d_1_b.mp3"
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "audio_c": "assets/audio/a_2_d_1_b.mp3"
       },
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.jpeg",
-        "text_a": "Where is the tire inflator?",
-        "text_b": "It is next to the door.",
+        "text_a": "Is there a pair of safety gloves in the inspection area?",
+        "text_b": "Yes, there is.",
+        "text_c": "There is a very thick pair of safety gloves in the inspection area.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
-        "audio_b": "assets/audio/a_2_d_2_b.mp3"
+        "audio_b": "assets/audio/a_2_d_2_b.mp3",
+        "audio_c": "assets/audio/a_2_d_2_b.mp3"
       },
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Where is the creeper seat?",
-        "text_b": "It is under the car.",
+        "text_a": "Is there a reflective vest in the workshop?",
+        "text_b": "Yes, there is.",
+        "text_c": "There is a very bright reflective vest in the workshop.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
-        "audio_b": "assets/audio/a_2_d_3_b.mp3"
+        "audio_b": "assets/audio/a_2_d_3_b.mp3",
+        "audio_c": "assets/audio/a_2_d_3_b.mp3"
       },
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.png",
-        "text_a": "Where is the headlight beam setter?",
-        "text_b": "It is above the tool shelf.",
+        "text_a": "Is there a fire extinguisher in the garage?",
+        "text_b": "No, there isn’t.",
+        "text_c": "Actually, there aren’t any fire extinguishers in the garage.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
-        "audio_b": "assets/audio/a_2_d_4_b.mp3"
+        "audio_b": "assets/audio/a_2_d_4_b.mp3",
+        "audio_c": "assets/audio/a_2_d_4_b.mp3"
       },
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Where is the paint spray gun?",
-        "text_b": "It is in front of the workbench.",
+        "text_a": "Is there a pair of steel-toe boots in the corner?",
+        "text_b": "Yes, there is.",
+        "text_c": "There is a very sturdy pair of steel-toe boots in the corner.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
-        "audio_b": "assets/audio/a_2_d_5_b.mp3"
+        "audio_b": "assets/audio/a_2_d_5_b.mp3",
+        "audio_c": "assets/audio/a_2_d_5_b.mp3"
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Where is the diesel injector tester?",
-        "text_b": "It is behind the chair.",
+        "text_a": "Are there earmuffs in the lab?",
+        "text_b": "Yes, there are.",
+        "text_c": "There are very big earmuffs in the lab.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
-        "audio_b": "assets/audio/a_2_d_6_b.mp3"
+        "audio_b": "assets/audio/a_2_d_6_b.mp3",
+        "audio_c": "assets/audio/a_2_d_6_b.mp3"
       }
     ]
   },
