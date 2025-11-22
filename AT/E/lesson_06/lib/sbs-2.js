@@ -1425,7 +1425,7 @@ const buildSpeakingSlide = (
   slide.className = 'slide slide--speaking';
   slide.innerHTML = `
     <h2>${activityLabel}${subActivitySuffix}</h2>
-    <p class="slide__instruction">Listen to each question, use the pause to answer, then compare your response with the model answer.</p>
+    <p class="slide__instruction">Listen to each answer, use the pause to ask the question, then compare with the model question.</p>
   `;
 
   maybeInsertFocus(slide, activityFocus, includeFocus);
@@ -1447,7 +1447,7 @@ const buildSpeakingSlide = (
   const cards = dialogues.map((dialogue, index) => {
     const card = createDialogueCard(dialogue, {
       classes: ['dialogue-card--speaking'],
-      showAnswer: false,
+      showAnswer: true,
     });
     const heading = document.createElement('h3');
     heading.className = 'dialogue-card__title';
@@ -1456,7 +1456,7 @@ const buildSpeakingSlide = (
 
     const prompt = document.createElement('p');
     prompt.className = 'dialogue-card__prompt';
-    prompt.textContent = 'Your turn to answer...';
+    prompt.textContent = 'Your turn to ask the question...';
     card.appendChild(prompt);
 
     cardsWrapper.appendChild(card);
@@ -1464,14 +1464,15 @@ const buildSpeakingSlide = (
     const questionEl = card.querySelector('.dialogue-card__line--question');
     const answerPrimaryEl = card.querySelector('.dialogue-card__line--answer-primary');
     const answerDetailEl = card.querySelector('.dialogue-card__line--answer-secondary');
-    const answerEls = Array.from(card.querySelectorAll('.dialogue-card__line--answer'));
     const segments = createDialogueSegments(dialogue, card);
+    if (questionEl) {
+      questionEl.classList.add('is-hidden');
+    }
 
     return {
       dialogue,
       card,
       questionEl,
-      answerEls,
       answerPrimaryEl,
       answerDetailEl,
       prompt,
@@ -1512,11 +1513,9 @@ const buildSpeakingSlide = (
     });
 
   const resetCards = () => {
-    cards.forEach(({ card, answerEls = [], segments }) => {
-      card.classList.remove('is-active', 'show-answer');
-      answerEls.forEach((answer) => {
-        answer.classList.add('is-hidden');
-      });
+    cards.forEach(({ card, questionEl, segments }) => {
+      card.classList.remove('is-active');
+      questionEl?.classList.add('is-hidden');
       clearSegmentHighlights(segments);
     });
   };
@@ -1553,7 +1552,6 @@ const buildSpeakingSlide = (
         const {
           dialogue,
           card,
-          answerEls = [],
           answerPrimaryEl,
           answerDetailEl,
           questionEl,
@@ -1562,44 +1560,7 @@ const buildSpeakingSlide = (
         card.classList.add('is-active');
         smoothScrollIntoView(card);
 
-        if (questionEl) {
-          questionEl.classList.add('is-playing');
-        }
-        try {
-          await audioManager.play(dialogue.audio_a, { signal });
-        } finally {
-          questionEl?.classList.remove('is-playing');
-        }
-        if (signal.aborted) {
-          clearSegmentHighlights(segments);
-          break;
-        }
-
-        const waitSource = dialogue.audio_b ?? dialogue.audio_c;
-        let waitMs = 1500;
-        if (waitSource) {
-          try {
-            const answerDuration = await audioManager.getDuration(waitSource);
-            if (Number.isFinite(answerDuration)) {
-              waitMs = Math.max(1000, Math.round(answerDuration * 1500));
-            }
-          } catch (durationError) {
-            console.warn('Unable to determine speaking wait duration', durationError);
-          }
-        }
-
-        status.textContent = 'Your turn...';
-        await delay(waitMs, { signal });
-        if (signal.aborted) {
-          clearSegmentHighlights(segments);
-          break;
-        }
-
-        if (answerEls.length) {
-          answerEls.forEach((answer) => answer.classList.remove('is-hidden'));
-          card.classList.add('show-answer');
-        }
-
+        status.textContent = 'Listening to answers...';
         await playLine(dialogue.audio_b, answerPrimaryEl);
         if (signal.aborted) {
           clearSegmentHighlights(segments);
@@ -1617,6 +1578,35 @@ const buildSpeakingSlide = (
             clearSegmentHighlights(segments);
             break;
           }
+        }
+
+        const waitSource = dialogue.audio_a;
+        let waitMs = 1500;
+        if (waitSource) {
+          try {
+            const questionDuration = await audioManager.getDuration(waitSource);
+            if (Number.isFinite(questionDuration)) {
+              waitMs = Math.max(1000, Math.round(questionDuration * 1500));
+            }
+          } catch (durationError) {
+            console.warn('Unable to determine speaking wait duration', durationError);
+          }
+        }
+
+        status.textContent = 'Your turn to ask...';
+        await delay(waitMs, { signal });
+        if (signal.aborted) {
+          clearSegmentHighlights(segments);
+          break;
+        }
+
+        if (questionEl) {
+          questionEl.classList.remove('is-hidden');
+        }
+        await playLine(dialogue.audio_a, questionEl);
+        if (signal.aborted) {
+          clearSegmentHighlights(segments);
+          break;
         }
 
         const hasMoreCards = index < cards.length - 1;
