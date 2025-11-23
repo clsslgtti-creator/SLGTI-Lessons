@@ -458,125 +458,125 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text_a": "Safety equipment is not optional; it is essential because accidents can happen quickly.",
-          "audio_a": "assets/audio/a_4_n_1.mp3"
+          "text": "Safety equipment is not optional; it is essential because accidents can happen quickly.",
+          "audio": "assets/audio/n_4_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text_a": "A clean safety helmet is near the entrance.",
-          "audio_a": "assets/audio/a_4_n_2.mp3"
+          "text": "A clean safety helmet is near the entrance.",
+          "audio": "assets/audio/n_4_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text_a": "Bright reflective vests are on the table.",
-          "audio_a": "assets/audio/a_4_n_3.mp3"
+          "text": "Bright reflective vests are on the table.",
+          "audio": "assets/audio/n_4_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text_a": "Safety goggles are in the drawer, but some students are not wearing them because they believe the task is easy.",
-          "audio_a": "assets/audio/a_4_n_4.mp3"
+          "text": "Safety goggles are in the drawer, but some students are not wearing them because they believe the task is easy.",
+          "audio": "assets/audio/n_4_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text_a": "They are using sharp tools, and they must protect their eyes.",
-          "audio_a": "assets/audio/a_4_n_5.mp3"
+          "text": "They are using sharp tools, and they must protect their eyes.",
+          "audio": "assets/audio/n_4_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text_a": "He is checking if trainees are wearing heavy safety boots.",
-          "audio_a": "assets/audio/a_4_n_6.mp3"
+          "text": "He is checking if trainees are wearing heavy safety boots.",
+          "audio": "assets/audio/n_4_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text_a": "Another trainee is using a noisy machine without ear protectors.",
-          "audio_a": "assets/audio/a_4_n_7.mp3"
+          "text": "Another trainee is using a noisy machine without ear protectors.",
+          "audio": "assets/audio/n_4_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text_a": "The muffs are in his bag, but he is not putting them on because he is in a hurry.",
-          "audio_a": "assets/audio/a_4_n_8.mp3"
+          "text": "The muffs are in his bag, but he is not putting them on because he is in a hurry.",
+          "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text_a": "In the food laboratory, clean hair nets are very important.",
-          "audio_a": "assets/audio/a_4_n_9.mp3"
+          "text": "In the food laboratory, clean hair nets are very important.",
+          "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text_a": "In the electrical section, trainees are wearing insulated gloves and rubber boots.",
-          "audio_a": "assets/audio/a_4_n_10.mp3"
+          "text": "In the electrical section, trainees are wearing insulated gloves and rubber boots.",
+          "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text_a": "They are not touching live wires because it is extremely dangerous.",
-          "audio_a": "assets/audio/a_4_n_11.mp3"
+          "text": "They are not touching live wires because it is extremely dangerous.",
+          "audio": "assets/audio/n_4_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text_a": "Safety rules are clear: wear the right equipment, follow instructions, and stay alert.",
-          "audio_a": "assets/audio/a_4_n_12.mp3"
+          "text": "Safety rules are clear: wear the right equipment, follow instructions, and stay alert.",
+          "audio": "assets/audio/n_4_12.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "n_4_1",
-          "text_a": "Safety equipment is not optional; it is essential because accidents can happen quickly.",
-          "audio_a": "assets/audio/a_4_n_1.mp3"
+          "text": "Safety equipment is not optional; it is essential because accidents can happen quickly.",
+          "audio": "assets/audio/n_4_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text_a": "A clean safety helmet is near the entrance.",
-          "audio_a": "assets/audio/a_4_n_2.mp3"
+          "text": "A clean safety helmet is near the entrance.",
+          "audio": "assets/audio/n_4_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text_a": "Bright reflective vests are on the table.",
-          "audio_a": "assets/audio/a_4_n_3.mp3"
+          "text": "Bright reflective vests are on the table.",
+          "audio": "assets/audio/n_4_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text_a": "Safety goggles are in the drawer, but some students are not wearing them because they believe the task is easy.",
-          "audio_a": "assets/audio/a_4_n_4.mp3"
+          "text": "Safety goggles are in the drawer, but some students are not wearing them because they believe the task is easy.",
+          "audio": "assets/audio/n_4_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text_a": "They are using sharp tools, and they must protect their eyes.",
-          "audio_a": "assets/audio/a_4_n_5.mp3"
+          "text": "They are using sharp tools, and they must protect their eyes.",
+          "audio": "assets/audio/n_4_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text_a": "He is checking if trainees are wearing heavy safety boots.",
-          "audio_a": "assets/audio/a_4_n_6.mp3"
+          "text": "He is checking if trainees are wearing heavy safety boots.",
+          "audio": "assets/audio/n_4_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text_a": "Another trainee is using a noisy machine without ear protectors.",
-          "audio_a": "assets/audio/a_4_n_7.mp3"
+          "text": "Another trainee is using a noisy machine without ear protectors.",
+          "audio": "assets/audio/n_4_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text_a": "The muffs are in his bag, but he is not putting them on because he is in a hurry.",
-          "audio_a": "assets/audio/a_4_n_8.mp3"
+          "text": "The muffs are in his bag, but he is not putting them on because he is in a hurry.",
+          "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text_a": "In the food laboratory, clean hair nets are very important.",
-          "audio_a": "assets/audio/a_4_n_9.mp3"
+          "text": "In the food laboratory, clean hair nets are very important.",
+          "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text_a": "In the electrical section, trainees are wearing insulated gloves and rubber boots.",
-          "audio_a": "assets/audio/a_4_n_10.mp3"
+          "text": "In the electrical section, trainees are wearing insulated gloves and rubber boots.",
+          "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text_a": "They are not touching live wires because it is extremely dangerous.",
-          "audio_a": "assets/audio/a_4_n_11.mp3"
+          "text": "They are not touching live wires because it is extremely dangerous.",
+          "audio": "assets/audio/n_4_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text_a": "Safety rules are clear: wear the right equipment, follow instructions, and stay alert.",
-          "audio_a": "assets/audio/a_4_n_12.mp3"
+          "text": "Safety rules are clear: wear the right equipment, follow instructions, and stay alert.",
+          "audio": "assets/audio/n_4_12.mp3"
         }
       ],
       "activity_d": [

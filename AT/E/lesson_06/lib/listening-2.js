@@ -97,9 +97,14 @@ const maybeInsertFocus = (slide, focusText, includeFocus) => {
 };
 
 const clearEntryHighlights = (items = []) => {
-  items.forEach(({ card, line }) => {
+  items.forEach(({ card, line, segments }) => {
     card?.classList.remove("is-active");
     line?.classList.remove("is-playing");
+    if (Array.isArray(segments)) {
+      segments.forEach(({ element }) => {
+        element?.classList.remove("is-playing");
+      });
+    }
   });
 };
 
@@ -154,6 +159,47 @@ const normalizeLineItems = (raw = []) => {
         return null;
       }
       return { id, text, audio };
+    })
+    .filter(Boolean);
+};
+
+const ACTIVITY_D_VARIANT_SUFFIXES = ["a", "b", "c"];
+
+const normalizeActivityDGroups = (raw = []) => {
+  if (!Array.isArray(raw)) {
+    return [];
+  }
+
+  return raw
+    .map((entry, entryIndex) => {
+      const baseId = trimString(entry?.id) || `line_${entryIndex + 1}`;
+
+      const variantLines = ACTIVITY_D_VARIANT_SUFFIXES.map((suffix) => {
+        const text = trimString(entry?.[`text_${suffix}`]);
+        const audio = trimString(entry?.[`audio_${suffix}`]);
+        if (!text || !audio) {
+          return null;
+        }
+        return { text, audio };
+      }).filter(Boolean);
+
+      if (variantLines.length) {
+        return {
+          id: baseId,
+          lines: variantLines,
+        };
+      }
+
+      const fallbackText = trimString(entry?.text);
+      const fallbackAudio = trimString(entry?.audio);
+      if (fallbackText && fallbackAudio) {
+        return {
+          id: baseId,
+          lines: [{ text: fallbackText, audio: fallbackAudio }],
+        };
+      }
+
+      return null;
     })
     .filter(Boolean);
 };
@@ -505,6 +551,8 @@ const createSequencedTextSlide = (
     layout = "grid",
     showLineNumbers = true,
     presentation = "cards",
+    groupedEntries = false,
+    groupLabel = "Set",
   } = {}
 ) => {
   const {
@@ -558,17 +606,72 @@ const createSequencedTextSlide = (
   }
   slide.appendChild(list);
 
-  const entries = items.map((entry, index) => {
+  const entries = [];
+
+  (Array.isArray(items) ? items : []).forEach((entry, index) => {
+    if (groupedEntries) {
+      const segments = Array.isArray(entry?.lines)
+        ? entry.lines
+            .map((line) => {
+              const text = trimString(line?.text);
+              const audio = trimString(line?.audio);
+              if (!text || !audio) {
+                return null;
+              }
+              return { text, audio };
+            })
+            .filter(Boolean)
+        : [];
+      if (!segments.length) {
+        return;
+      }
+
+      const card = document.createElement("article");
+      card.className =
+        "dialogue-card dialogue-card--reading listening-read-card";
+
+      const title = document.createElement("h3");
+      title.className = "dialogue-card__title";
+      title.textContent = `${groupLabel} ${index + 1}`;
+      card.appendChild(title);
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "dialogue-card__texts";
+
+      const renderedSegments = segments.map((segment) => {
+        const paragraph = document.createElement("p");
+        paragraph.className = "dialogue-card__line";
+        paragraph.textContent = segment.text;
+        wrapper.appendChild(paragraph);
+        return {
+          audio: segment.audio,
+          element: paragraph,
+        };
+      });
+
+      card.appendChild(wrapper);
+      list.appendChild(card);
+
+      entries.push({
+        entry,
+        card,
+        line: null,
+        segments: renderedSegments,
+      });
+      return;
+    }
+
     if (isParagraphLayout) {
       const paragraph = document.createElement("p");
       paragraph.className = "listening-paragraph__line";
       paragraph.textContent = entry.text;
       list.appendChild(paragraph);
-      return {
+      entries.push({
         entry,
         card: null,
         line: paragraph,
-      };
+      });
+      return;
     }
 
     const card = document.createElement("article");
@@ -592,11 +695,11 @@ const createSequencedTextSlide = (
     card.appendChild(wrapper);
     list.appendChild(card);
 
-    return {
+    entries.push({
       entry,
       card,
       line,
-    };
+    });
   });
 
   if (!entries.length) {
@@ -680,17 +783,96 @@ const createSequencedTextSlide = (
       for (let index = fromIndex; index < entries.length; index += 1) {
         playbackState.resumeIndex = index;
         const item = entries[index];
-        item.card?.classList.add("is-active");
-        item.line.classList.add("is-playing");
-        status.textContent = "Listening...";
-        smoothScrollIntoView(item.card ?? item.line);
 
-        try {
-          await audioManager.play(item.entry.audio, { signal });
-        } catch (error) {
-          if (!signal.aborted) {
+        const segments = groupedEntries
+          ? item.segments ?? []
+          : item.entry?.audio
+          ? [
+              {
+                audio: item.entry.audio,
+                element: item.line,
+              },
+            ]
+          : [];
+
+        if (!segments.length) {
+          continue;
+        }
+
+        const scrollTarget = item.card ?? item.line;
+        if (scrollTarget) {
+          smoothScrollIntoView(scrollTarget);
+        }
+
+        item.card?.classList.add("is-active");
+
+        for (let segIndex = 0; segIndex < segments.length; segIndex += 1) {
+          const segment = segments[segIndex];
+          if (!segment?.audio) {
+            continue;
+          }
+
+          const element = segment.element ?? item.line;
+          element?.classList.add("is-playing");
+          status.textContent = "Listening...";
+
+          try {
+            await audioManager.play(segment.audio, { signal });
+          } catch (error) {
+            if (!signal.aborted) {
+              console.error(error);
+              status.textContent = "Unable to play audio.";
+            }
+          } finally {
+            element?.classList.remove("is-playing");
+          }
+
+          if (signal.aborted) {
+            break;
+          }
+
+          let gapMs = 0;
+          try {
+            const duration = await audioManager.getDuration(segment.audio);
+            const timingMode = isReadMode
+              ? "read"
+              : isRepeatMode
+              ? "listen-repeat"
+              : "listen";
+            const timingOptions = isRepeatMode ? { repeatPauseMs } : undefined;
+            gapMs = computeSegmentGapMs(
+              timingMode,
+              duration,
+              timingOptions
+            );
+          } catch (error) {
             console.error(error);
-            status.textContent = "Unable to play audio.";
+          }
+
+          if (signal.aborted) {
+            break;
+          }
+
+          const isLastSegment = segIndex >= segments.length - 1;
+
+          if (gapMs > 0) {
+            if (isRepeatMode) {
+              status.textContent = "Your turn...";
+              await waitMs(gapMs, { signal });
+            } else if (isReadMode) {
+              status.textContent = "Read along...";
+              await waitMs(gapMs, { signal });
+              if (!signal.aborted) {
+                status.textContent = "Listening...";
+              }
+            } else if (!isLastSegment || index < entries.length - 1) {
+              status.textContent = "Next up...";
+              await waitMs(gapMs, { signal });
+            }
+          }
+
+          if (signal.aborted) {
+            break;
           }
         }
 
@@ -700,50 +882,8 @@ const createSequencedTextSlide = (
 
         playbackState.resumeIndex = index + 1;
 
-        let gapMs = 0;
-        try {
-          const duration = await audioManager.getDuration(item.entry.audio);
-          const timingMode = isReadMode
-            ? "read"
-            : isRepeatMode
-            ? "listen-repeat"
-            : "listen";
-          const timingOptions = isRepeatMode ? { repeatPauseMs } : undefined;
-          gapMs = computeSegmentGapMs(
-            timingMode,
-            duration,
-            timingOptions
-          );
-        } catch (error) {
-          console.error(error);
-        }
-
-        if (signal.aborted) {
-          break;
-        }
-
-        if (gapMs > 0) {
-          if (isRepeatMode) {
-            status.textContent = "Your turn...";
-            await waitMs(gapMs, { signal });
-          } else if (isReadMode) {
-            status.textContent = "Read along...";
-            await waitMs(gapMs, { signal });
-            if (!signal.aborted) {
-              status.textContent = "Listening...";
-            }
-          } else if (index < entries.length - 1) {
-            status.textContent = "Next up...";
-            await waitMs(gapMs, { signal });
-          }
-        }
-
         item.card?.classList.remove("is-active");
-        item.line.classList.remove("is-playing");
-
-        if (signal.aborted) {
-          break;
-        }
+        item.line?.classList.remove("is-playing");
 
         if (isReadMode && index < entries.length - 1) {
           const betweenItemsGap = getBetweenItemGapMs("read");
@@ -861,7 +1001,9 @@ export const buildListeningTwoSlides = (activityData = {}, context = {}) => {
   );
   const listenItems = normalizeLineItems(activityData?.content?.activity_b);
   const repeatItems = normalizeLineItems(activityData?.content?.activity_c);
-  const readAlongItems = normalizeLineItems(activityData?.content?.activity_d);
+  const readAlongItems = normalizeActivityDGroups(
+    activityData?.content?.activity_d
+  );
 
   const baseContext = {
     activityLabel,
@@ -896,7 +1038,14 @@ export const buildListeningTwoSlides = (activityData = {}, context = {}) => {
     createSequencedTextSlide(
       readAlongItems,
       createSubActivityContext(baseContext, "d"),
-      { mode: "read", autoDelayMs: 5000, repeatPauseMs }
+      {
+        mode: "read",
+        autoDelayMs: 5000,
+        repeatPauseMs,
+        groupedEntries: true,
+        groupLabel: "Set",
+        showLineNumbers: false,
+      }
     ),
   ];
 
