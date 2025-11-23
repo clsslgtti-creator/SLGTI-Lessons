@@ -171,7 +171,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Is there a hair net in the bakery?",
         "text_b": "Yes, there is.",
         "text_c": "There is a very clean hair net in the bakery.",
@@ -181,7 +181,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.png",
+        "img": "assets/img/a_2_d_2.jpeg",
         "text_a": "Is there a pair of disposable gloves in the storage room?",
         "text_b": "Yes, there is.",
         "text_c": "There is a very thin  pair of disposable gloves in the storage room.",
@@ -191,7 +191,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "Is there a face mask in the kitchen?",
         "text_b": "Yes, there is.",
         "text_c": "There is a very strong face mask in the kitchen.",
@@ -201,7 +201,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.jpeg",
+        "img": "assets/img/a_2_d_4.png",
         "text_a": "Is there a plastic apron in the kitchen?",
         "text_b": "No, there isn’t.",
         "text_c": "Actually, there aren’t any plastic  aprons in the kitchen.",
@@ -211,7 +211,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.png",
+        "img": "assets/img/a_2_d_5.jpeg",
         "text_a": "Is there a fire extinguisher in the bakery?",
         "text_b": "No, there isn’t.",
         "text_c": "Actually, there aren’t any fire extinguishers in the bakery.",
@@ -221,7 +221,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.png",
+        "img": "assets/img/a_2_d_6.jpeg",
         "text_a": "Is there a first aid kit in the canteen?",
         "text_b": "No, there isn’t.",
         "text_c": "Actually, there aren’t any first aid kits in the canteen.",
