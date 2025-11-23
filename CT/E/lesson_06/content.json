@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": 6,
     "level": "Elementary",
-    "section": "Automobile Technology",
+    "section": "Construction Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -33,41 +33,41 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "d'oo'r",
+        "word_text": "fl'oo'r",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "There are two d'oo'rs on the right side of the car.",
+        "sentence_text": "Lay tiles on the fl'oo'r.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "fl'oo'r",
+        "word_text": "b'o'ard",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "There is some oil on the workshop fl'oo'r.",
+        "sentence_text": "There is a  wooden b'o'ard on the table.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "t'o'rque",
+        "word_text": "m'o'rtar",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Use more t'o'rque on the nut.",
+        "sentence_text": "There is some  m'o'rtar in the corner of the hall.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.png"
+        "image": "assets/img/a_1_p_3.jpeg"
       },
       {
         "id": "p_4",
-        "word_text": "h'o'rn",
+        "word_text": "f'o'rmwork",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "The h'o'rn works well on the road.",
+        "sentence_text": "Build the f'o'rmwork for the slab.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpg"
+        "image": "assets/img/a_1_p_4.jpeg"
       }
     ]
   },
   "activity_2": {
     "type": "SBS-2",
-    "focus": "Adjectives and prepositions",
+    "focus": "There is ………, There are ……….",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
@@ -171,10 +171,10 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Is there a face shield in the machine hall?",
+        "img": "assets/img/a_2_d_1.png",
+        "text_a": "Is there a safety helmet on the site?",
         "text_b": "Yes, there is.",
-        "text_c": "There is a very durable face shield in the machine hall.",
+        "text_c": "There is a very strong safety helmet on the site.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
         "audio_c": "assets/audio/a_2_d_1_c.mp3"
@@ -182,19 +182,19 @@
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
-        "text_a": "Is there a pair of safety gloves in the inspection area?",
+        "text_a": "Is there a pair of safety boots near the building?",
         "text_b": "Yes, there is.",
-        "text_c": "There is a very thick pair of safety gloves in the inspection area.",
+        "text_c": "There is a very sturdy pair of safety boots near the building.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "audio_c": "assets/audio/a_2_d_2_c.mp3"
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Is there a reflective vest in the workshop?",
+        "img": "assets/img/a_2_d_3.png",
+        "text_a": "Is there a reflective jacket in the corner?",
         "text_b": "Yes, there is.",
-        "text_c": "There is a very bright reflective vest in the workshop.",
+        "text_c": "There is a very bright reflective jacket in the corner.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
         "audio_c": "assets/audio/a_2_d_3_c.mp3"
@@ -202,9 +202,9 @@
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": "Is there a fire extinguisher in the garage?",
+        "text_a": "Is there a fall protection harness on the site?",
         "text_b": "No, there isn’t.",
-        "text_c": "Actually, there aren’t any fire extinguishers in the garage.",
+        "text_c": "Actually, there aren’t any fall protection harnesses on the site.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "audio_c": "assets/audio/a_2_d_4_c.mp3"
@@ -212,19 +212,19 @@
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Is there a pair of steel-toe boots in the corner?",
-        "text_b": "Yes, there is.",
-        "text_c": "There is a very sturdy pair of steel-toe boots in the corner.",
+        "text_a": "Is there a pair of safety goggles in the office?",
+        "text_b": "No, there isn’t.",
+        "text_c": "Actually, there aren’t any safety goggles in the office.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
         "audio_c": "assets/audio/a_2_d_5_c.mp3"
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.png",
-        "text_a": "Are there earmuffs in the lab?",
-        "text_b": "Yes, there are.",
-        "text_c": "There are very big earmuffs in the lab.",
+        "img": "assets/img/a_2_d_6.jpeg",
+        "text_a": "Is there a fire blanket on the table?",
+        "text_b": "No, there isn’t.",
+        "text_c": "Actually, there aren’t any fire blankets on the table.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
         "audio_c": "assets/audio/a_2_d_6_c.mp3"
