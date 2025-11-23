@@ -251,10 +251,7 @@
             "id": "g_b_1",
             "sentence": "Is there a first aid kit in the room?",
             "audio": "assets/audio/a_3_b_1.mp3",
-            "options": [
-              "Yes, there is.",
-              "No, there isn’t."
-            ],
+            "options": ["Yes, there is.", "No, there isn’t."],
             "answer": "Yes, there is.",
             "image": "assets/img/a_3_b_g_1.png"
           },
@@ -262,10 +259,7 @@
             "id": "g_b_2",
             "sentence": "Are there safety helmets on the table?",
             "audio": "assets/audio/a_3_b_2.mp3",
-            "options": [
-              "Yes, there are.",
-              "No, there aren’t."
-            ],
+            "options": ["Yes, there are.", "No, there aren’t."],
             "answer": "No, there aren’t.",
             "image": "assets/img/a_3_b_g_2.png"
           },
@@ -273,10 +267,7 @@
             "id": "g_b_3",
             "sentence": "Is there a fire extinguisher near the door?",
             "audio": "assets/audio/a_3_b_3.mp3",
-            "options": [
-              "Yes, there is.",
-              "No, there isn’t."
-            ],
+            "options": ["Yes, there is.", "No, there isn’t."],
             "answer": "No, there isn’t.",
             "image": "assets/img/a_3_b_g_3.png"
           },
@@ -284,10 +275,7 @@
             "id": "g_b_4",
             "sentence": "Are there gloves in the drawer?",
             "audio": "assets/audio/a_3_b_4.mp3",
-            "options": [
-              "Yes, there are.",
-              "No, there aren’t."
-            ],
+            "options": ["Yes, there are.", "No, there aren’t."],
             "answer": "Yes, there are.",
             "image": "assets/img/a_3_b_g_4.png"
           },
@@ -295,10 +283,7 @@
             "id": "g_b_5",
             "sentence": "Is there a warning sign on the wall?",
             "audio": "assets/audio/a_3_b_5.mp3",
-            "options": [
-              "Yes, there is.",
-              "No, there isn’t."
-            ],
+            "options": ["Yes, there is.", "No, there isn’t."],
             "answer": "No, there isn’t.",
             "image": "assets/img/a_3_b_g_5.png"
           },
@@ -306,10 +291,7 @@
             "id": "g_b_6",
             "sentence": "Are there reflective vests in the cupboard?",
             "audio": "assets/audio/a_3_b_6.mp3",
-            "options": [
-              "Yes, there are.",
-              "No, there aren’t."
-            ],
+            "options": ["Yes, there are.", "No, there aren’t."],
             "answer": "Yes, there are.",
             "image": "assets/img/a_3_b_g_6.png"
           },
@@ -317,10 +299,7 @@
             "id": "g_b_7",
             "sentence": "Is there a safety harness on the shelf?",
             "audio": "assets/audio/a_3_b_7.mp3",
-            "options": [
-              "Yes, there is.",
-              "No, there isn’t."
-            ],
+            "options": ["Yes, there is.", "No, there isn’t."],
             "answer": "Yes, there is.",
             "image": "assets/img/a_3_b_g_7.png"
           },
@@ -328,10 +307,7 @@
             "id": "g_b_8",
             "sentence": "Are there goggles in the box?",
             "audio": "assets/audio/a_3_b_8.mp3",
-            "options": [
-              "Yes, there are.",
-              "No, there aren’t."
-            ],
+            "options": ["Yes, there are.", "No, there aren’t."],
             "answer": "No, there aren’t.",
             "image": "assets/img/a_3_b_g_8.png"
           },
@@ -339,10 +315,7 @@
             "id": "g_b_9",
             "sentence": "Is there a pair of boots under the bench?",
             "audio": "assets/audio/a_3_b_9.mp3",
-            "options": [
-              "Yes, there is.",
-              "No, there isn’t."
-            ],
+            "options": ["Yes, there is.", "No, there isn’t."],
             "answer": "Yes, there is.",
             "image": "assets/img/a_3_b_g_9.png"
           },
@@ -350,10 +323,7 @@
             "id": "g_b_10",
             "sentence": "Are there ear protectors in the bag?",
             "audio": "assets/audio/a_3_b_10.mp3",
-            "options": [
-              "Yes, there are.",
-              "No, there aren’t."
-            ],
+            "options": ["Yes, there are.", "No, there aren’t."],
             "answer": "No, there aren’t.",
             "image": "assets/img/a_3_b_g_10.png"
           }
@@ -414,10 +384,10 @@
     }
   },
   "activity_4": {
-    "type": "LISTENING-3",
+    "type": "LISTENING-2",
     "instructions": {
       "activity_a": {
-        "text": "You will hear this recording three times. As you listen, drag and drop the objects onto the provided grid.\nඔබ මෙම සටහන තුන් වතාවක් ඇසීමට යයි. ඔබ සවන් දී සිටින විට, ලබා දී ඇති ග්‍රිඩ් එකට වස්තු ඇදගෙන එවන්න.\nநீங்கள் இந்த பதிவை மூன்று முறை கேட்கப்போகிறீர்கள். நீங்கள் கேட்கும் போது, வழங்கப்பட்ட கட்டங்களுக்குள் பொருட்களை இழுத்து விடுங்கள்.",
+        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the questions before you listen to the recording.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න. රෙකෝඩින් එක අහන්නට පෙර ප්‍රශ්නය කියවීම ඉතාමත් වැදගත්ය.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள். பதிவைக் கேட்பதற்கு முன் கேள்விகளைப் படிப்பது மிகவும் முக்கியம்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_b": {
@@ -436,220 +406,216 @@
     "content": {
       "activity_a": {
         "audio": "assets/audio/a_4_l_1.mp3",
-        "grid": { "rows": 3, "columns": 3 },
-        "content": [
+        "Questions": [
           {
             "id": "l_4_1",
-            "image": "assets/img/a_4_l_1.png",
-            "grid": { "row": 0, "column": 0 }
+            "question": "Why are safety goggles important?",
+            "answer": "Because they protect the eyes from sharp tools",
+            "options": [
+              "Because they look professional",
+              "Because they protect the eyes from sharp tools",
+              "Because they are easy to carry"
+            ]
           },
           {
             "id": "l_4_2",
-            "image": "assets/img/a_4_l_2.png",
-            "grid": { "row": 0, "column": 1 }
+            "question": "What is the instructor checking in the workshop?",
+            "answer": "If the trainees are wearing safety boots",
+            "options": [
+              "If the trainees are wearing safety boots",
+              "If the trainees are reading books",
+              "If the trainees are using computers"
+            ]
           },
           {
             "id": "l_4_3",
-            "image": "assets/img/a_4_l_3.png",
-            "grid": { "row": 0, "column": 2 }
+            "question": "Why is one trainee not safe in the workshop?",
+            "answer": "He is wearing light sandals instead of safety boots",
+            "options": [
+              "He is not speaking to the instructor",
+              "He is wearing light sandals instead of safety boots",
+              "He is holding a reflective vest"
+            ]
           },
           {
             "id": "l_4_4",
-            "image": "assets/img/a_4_l_4.png",
-            "grid": { "row": 1, "column": 0 }
+            "question": "What routine in the food laboratory reduces risks?",
+            "answer": "Washing hands and wearing gloves",
+            "options": ["Writing notes in a book", "Eating food during work", "Washing hands and wearing gloves"]
           },
           {
             "id": "l_4_5",
-            "image": "assets/img/a_4_l_5.png",
-            "grid": { "row": 1, "column": 1 }
-          },
-          {
-            "id": "l_4_6",
-            "image": "assets/img/a_4_l_6.png",
-            "grid": { "row": 1, "column": 2 }
-          },
-          {
-            "id": "l_4_7",
-            "image": "assets/img/a_4_l_7.png",
-            "grid": { "row": 2, "column": 0 }
-          },
-          {
-            "id": "l_4_8",
-            "image": "assets/img/a_4_l_8.png",
-            "grid": { "row": 2, "column": 1 }
-          },
-          {
-            "id": "l_4_9",
-            "image": "assets/img/a_4_l_9.png",
-            "grid": { "row": 2, "column": 2 }
+            "question": "Why are trainees wearing insulated gloves and rubber boots in the electrical section?",
+            "answer": "Because they make their work safe ",
+            "options": [
+              "Because they are comfortable",
+              "Because they make their work safe",
+              "Because they are cheaper"
+            ]
           }
         ]
       },
-      "activity_c": {
-        "image": "assets/img/a_4_b.png",
-        "content": [
-          {
-            "id": "n_4_1",
-            "text": "Good morning, trainees. Please look at the tool board in front of you. I will tell you where each tool is placed.",
-            "audio": "assets/audio/a_4_n_1.mp3"
-          },
-          {
-            "id": "n_4_2",
-            "text": "In the top row, there is a spanner on the left, a pair of pliers in the middle, and a hammer in the top right corner.",
-            "audio": "assets/audio/a_4_n_2.mp3"
-          },
-          {
-            "id": "n_4_3",
-            "text": "Under the hammer, in the middle row, you can see a spirit level.",
-            "audio": "assets/audio/a_4_n_3.mp3"
-          },
-          {
-            "id": "n_4_4",
-            "text": "Next to the spirit level, there is an oil can in the middle square.",
-            "audio": "assets/audio/a_4_n_4.mp3"
-          },
-          {
-            "id": "n_4_5",
-            "text": "Under the spirit level, in the right corner of the bottom row, there is a tape measure.",
-            "audio": "assets/audio/a_4_n_5.mp3"
-          },
-          {
-            "id": "n_4_6",
-            "text": "In the left bottom corner, you will find two rolls of insulation tape.",
-            "audio": "assets/audio/a_4_n_6.mp3"
-          },
-          {
-            "id": "n_4_7",
-            "text": "There are some small brushes between the tape rolls and the tape measure. ",
-            "audio": "assets/audio/a_4_n_7.mp3"
-          },
-          {
-            "id": "n_4_8",
-            "text": "Above the tape rolls in the left corner of the middle row, there is an insulation stripper. ",
-            "audio": "assets/audio/a_4_n_8.mp3"
-          },
-          {
-            "id": "n_4_9",
-            "text": "Now, look at your diagram and drag each tool to the correct place.",
-            "audio": "assets/audio/a_4_n_9.mp3"
-          },
-          {
-            "id": "n_4_10",
-            "text": "Ensure your layout matches the one I described exactly.",
-            "audio": "assets/audio/a_4_n_10.mp3"
-          }
-        ]
-      },
-      "activity_d": {
-        "image": "assets/img/a_4_b.png",
-        "content": [
-          {
-            "id": "n_4_1",
-            "text": "Good morning, trainees. Please look at the tool board in front of you. I will tell you where each tool is placed.",
-            "audio": "assets/audio/a_4_n_1.mp3"
-          },
-          {
-            "id": "n_4_2",
-            "text": "In the top row, there is a spanner on the left, a pair of pliers in the middle, and a hammer in the top right corner.",
-            "audio": "assets/audio/a_4_n_2.mp3"
-          },
-          {
-            "id": "n_4_3",
-            "text": "Under the hammer, in the middle row, you can see a spirit level.",
-            "audio": "assets/audio/a_4_n_3.mp3"
-          },
-          {
-            "id": "n_4_4",
-            "text": "Next to the spirit level, there is an oil can in the middle square.",
-            "audio": "assets/audio/a_4_n_4.mp3"
-          },
-          {
-            "id": "n_4_5",
-            "text": "Under the spirit level, in the right corner of the bottom row, there is a tape measure.",
-            "audio": "assets/audio/a_4_n_5.mp3"
-          },
-          {
-            "id": "n_4_6",
-            "text": "In the left bottom corner, you will find two rolls of insulation tape.",
-            "audio": "assets/audio/a_4_n_6.mp3"
-          },
-          {
-            "id": "n_4_7",
-            "text": "There are some small brushes between the tape rolls and the tape measure. ",
-            "audio": "assets/audio/a_4_n_7.mp3"
-          },
-          {
-            "id": "n_4_8",
-            "text": "Above the tape rolls in the left corner of the middle row, there is an insulation stripper. ",
-            "audio": "assets/audio/a_4_n_8.mp3"
-          },
-          {
-            "id": "n_4_9",
-            "text": "Now, look at your diagram and drag each tool to the correct place.",
-            "audio": "assets/audio/a_4_n_9.mp3"
-          },
-          {
-            "id": "n_4_10",
-            "text": "Ensure your layout matches the one I described exactly.",
-            "audio": "assets/audio/a_4_n_10.mp3"
-          }
-        ]
-      },
-      "activity_b": {
-        "image": "assets/img/a_4_b.png",
-        "content": [
-          {
-            "id": "n_4_1",
-            "text": "Good morning, trainees. Please look at the tool board in front of you. I will tell you where each tool is placed.",
-            "audio": "assets/audio/a_4_n_1.mp3"
-          },
-          {
-            "id": "n_4_2",
-            "text": "In the top row, there is a spanner on the left, a pair of pliers in the middle, and a hammer in the top right corner.",
-            "audio": "assets/audio/a_4_n_2.mp3"
-          },
-          {
-            "id": "n_4_3",
-            "text": "Under the hammer, in the middle row, you can see a spirit level.",
-            "audio": "assets/audio/a_4_n_3.mp3"
-          },
-          {
-            "id": "n_4_4",
-            "text": "Next to the spirit level, there is an oil can in the middle square.",
-            "audio": "assets/audio/a_4_n_4.mp3"
-          },
-          {
-            "id": "n_4_5",
-            "text": "Under the spirit level, in the right corner of the bottom row, there is a tape measure.",
-            "audio": "assets/audio/a_4_n_5.mp3"
-          },
-          {
-            "id": "n_4_6",
-            "text": "In the left bottom corner, you will find two rolls of insulation tape.",
-            "audio": "assets/audio/a_4_n_6.mp3"
-          },
-          {
-            "id": "n_4_7",
-            "text": "There are some small brushes between the tape rolls and the tape measure. ",
-            "audio": "assets/audio/a_4_n_7.mp3"
-          },
-          {
-            "id": "n_4_8",
-            "text": "Above the tape rolls in the left corner of the middle row, there is an insulation stripper. ",
-            "audio": "assets/audio/a_4_n_8.mp3"
-          },
-          {
-            "id": "n_4_9",
-            "text": "Now, look at your diagram and drag each tool to the correct place.",
-            "audio": "assets/audio/a_4_n_9.mp3"
-          },
-          {
-            "id": "n_4_10",
-            "text": "Ensure your layout matches the one I described exactly.",
-            "audio": "assets/audio/a_4_n_10.mp3"
-          }
-        ]
-      }
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "Safety equipment is not optional; it is essential because accidents can happen quickly.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "A clean safety helmet is near the entrance.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "Bright reflective vests are on the table.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "Safety goggles are in the drawer, but some students are not wearing them because they believe the task is easy.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "They are using sharp tools, and they must protect their eyes.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "He is checking if trainees are wearing heavy safety boots.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "Another trainee is using a noisy machine without ear protectors.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The muffs are in his bag, but he is not putting them on because he is in a hurry.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "In the food laboratory, clean hair nets are very important.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "In the electrical section, trainees are wearing insulated gloves and rubber boots.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "They are not touching live wires because it is extremely dangerous.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "Safety rules are clear: wear the right equipment, follow instructions, and stay alert.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "n_4_1",
+          "text": "Safety equipment is not optional; it is essential because accidents can happen quickly.",
+          "audio": "assets/audio/a_4_n_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "A clean safety helmet is near the entrance.",
+          "audio": "assets/audio/a_4_n_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "Bright reflective vests are on the table.",
+          "audio": "assets/audio/a_4_n_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "Safety goggles are in the drawer, but some students are not wearing them because they believe the task is easy.",
+          "audio": "assets/audio/a_4_n_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "They are using sharp tools, and they must protect their eyes.",
+          "audio": "assets/audio/a_4_n_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "He is checking if trainees are wearing heavy safety boots.",
+          "audio": "assets/audio/a_4_n_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "Another trainee is using a noisy machine without ear protectors.",
+          "audio": "assets/audio/a_4_n_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The muffs are in his bag, but he is not putting them on because he is in a hurry.",
+          "audio": "assets/audio/a_4_n_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "In the food laboratory, clean hair nets are very important.",
+          "audio": "assets/audio/a_4_n_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "In the electrical section, trainees are wearing insulated gloves and rubber boots.",
+          "audio": "assets/audio/a_4_n_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "They are not touching live wires because it is extremely dangerous.",
+          "audio": "assets/audio/a_4_n_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "Safety rules are clear: wear the right equipment, follow instructions, and stay alert.",
+          "audio": "assets/audio/a_4_n_12.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "n_4_1",
+          "text_a": "There is a pair of leather gloves on the shelf.",
+          "audio_a": "assets/audio/a_4_d_1_a.mp3",
+          "text_b": "There are some leather gloves on the shelf.",
+          "audio_b": "assets/audio/a_4_d_1_b.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text_a": "There is a pair of scissors on the table.",
+          "audio_a": "assets/audio/a_4_d_2_a.mp3",
+          "text_b": "There are some scissors on the table.",
+          "audio_b": "assets/audio/a_4_d_2_b.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text_a": "There is a pair of boots under the bench.",
+          "audio_a": "assets/audio/a_4_d_3_a.mp3",
+          "text_b": "There are some boots under the bench.",
+          "audio_b": "assets/audio/a_4_d_3_b.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text_a": "There is a pair of ear protectors in the bag.",
+          "audio_a": "assets/audio/a_4_d_4_a.mp3",
+          "text_b": "There are some ear protectors in the bag.",
+          "audio_b": "assets/audio/a_4_d_4_b.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text_a": "There is a pair of pliers on the workbench.",
+          "audio_a": "assets/audio/a_4_d_5_a.mp3",
+          "text_b": "There are some pliers on the workbench.",
+          "audio_b": "assets/audio/a_4_d_5_b.mp3"
+        }
+      ]
     }
   }
 }
