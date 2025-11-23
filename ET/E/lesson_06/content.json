@@ -1,0 +1,621 @@
+{
+  "meta": {
+    "lesson_no": 6,
+    "level": "Elementary",
+    "section": "Electrical Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Long /ɔː/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": [
+      {
+        "id": "p_1",
+        "word_text": "c'o'rd",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "There is a green  c'o'rd on the board.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
+      },
+      {
+        "id": "p_2",
+        "word_text": "sh'o'rt",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "We are sh'o'rt of energy saving bulbs.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "b'o'ard",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "There are two  switchb'o'ards mounted on the wall.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.png"
+      },
+      {
+        "id": "p_4",
+        "word_text": "transf'o'rmer",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "Check the transf'o'rmer on the floor.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS-2",
+    "focus": "There is ………, There are ……….",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_a.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Read the answer and use the pause to ask the correct question. Then compare your response with the model answer.\n පිළිතුර කියවා නිවැරදි ප්‍රශ්නය ඇසීමට විරාමය භාවිතා කරන්න. ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\n பதிலைக் கவனமாக வாசித்து, இடைவெளியில் சரியான கேள்வியை கேளுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடவும்.",
+        "audio": "assets/audio/a_2_i_f.mp3"
+      }
+    },
+    "tables": [
+      [
+        ["Is there a window?", "Yes, there is."],
+        [null, "No, there isn’t."],
+        [null, "There is ………."],
+        ["Are there any windows?", "Yes, there are."],
+        [null, "No, there aren’t."],
+        [null, "There are ………."]
+      ]
+    ],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.png",
+        "text_a": "Is there a laser pointer in the cupboard?",
+        "text_b": "Yes, there is.",
+        "text_c": "There is a very bright-coloured laser pointer in the cupboard.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3",
+        "audio_c": "assets/audio/a_2_ex_1_c.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.png",
+        "text_a": "Are there job cards in the cupboard?",
+        "text_b": "Yes, there are.",
+        "text_c": "There are some neatly arranged job cards in the cupboard.",
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3",
+        "audio_c": "assets/audio/a_2_ex_2_c.mp3"
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_3.png",
+        "text_a": "Is there a  receipt book in the office?",
+        "text_b": "No, there isn’t.",
+        "text_c": "Actually, there aren’t any receipt books in the office.",
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3",
+        "audio_c": "assets/audio/a_2_ex_3_c.mp3"
+      }
+    ],
+    "keywords": [
+      {
+        "id": "k_1",
+        "image": "assets/img/a_2_d_1.jpeg",
+        "word": "face shield"
+      },
+      {
+        "id": "k_2",
+        "image": "assets/img/a_2_d_2.png",
+        "word": "a pair of safety gloves"
+      },
+      {
+        "id": "k_3",
+        "image": "assets/img/a_2_d_3.jpeg",
+        "word": "a reflective vest"
+      },
+      {
+        "id": "k_4",
+        "image": "assets/img/a_2_d_4.jpeg",
+        "word": "fire extinguisher"
+      },
+      {
+        "id": "k_5",
+        "image": "assets/img/a_2_d_5.png",
+        "word": "steel-toe boots"
+      },
+      {
+        "id": "k_6",
+        "image": "assets/img/a_2_d_6.png",
+        "word": "earmuffs"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "Is there a face shield in the machine hall?",
+        "text_b": "Yes, there is.",
+        "text_c": "There is a very durable face shield in the machine hall.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "audio_c": "assets/audio/a_2_d_1_c.mp3"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.png",
+        "text_a": "Is there a pair of safety gloves in the inspection area?",
+        "text_b": "Yes, there is.",
+        "text_c": "There is a very thick pair of safety gloves in the inspection area.",
+        "audio_a": "assets/audio/a_2_d_2_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_b.mp3",
+        "audio_c": "assets/audio/a_2_d_2_c.mp3"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "Is there a reflective vest in the workshop?",
+        "text_b": "Yes, there is.",
+        "text_c": "There is a very bright reflective vest in the workshop.",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_b.mp3",
+        "audio_c": "assets/audio/a_2_d_3_c.mp3"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.jpeg",
+        "text_a": "Is there a fire extinguisher in the garage?",
+        "text_b": "No, there isn’t.",
+        "text_c": "Actually, there aren’t any fire extinguishers in the garage.",
+        "audio_a": "assets/audio/a_2_d_4_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_b.mp3",
+        "audio_c": "assets/audio/a_2_d_4_c.mp3"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.png",
+        "text_a": "Is there a pair of steel-toe boots in the corner?",
+        "text_b": "Yes, there is.",
+        "text_c": "There is a very sturdy pair of steel-toe boots in the corner.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_b.mp3",
+        "audio_c": "assets/audio/a_2_d_5_c.mp3"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.png",
+        "text_a": "Are there earmuffs in the lab?",
+        "text_b": "Yes, there are.",
+        "text_c": "There are very big earmuffs in the lab.",
+        "audio_a": "assets/audio/a_2_d_6_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_b.mp3",
+        "audio_c": "assets/audio/a_2_d_6_c.mp3"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "INTERACTIVE-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
+      },
+      "activity_b": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-6.jpg",
+        "content": [
+          {
+            "id": "g_b_1",
+            "sentence": "Is there a first aid kit in the room?",
+            "audio": "assets/audio/a_3_b_1.mp3",
+            "options": ["Yes, there is.", "No, there isn’t."],
+            "answer": "Yes, there is.",
+            "image": "assets/img/a_3_b_g_1.png"
+          },
+          {
+            "id": "g_b_2",
+            "sentence": "Are there safety helmets on the table?",
+            "audio": "assets/audio/a_3_b_2.mp3",
+            "options": ["Yes, there are.", "No, there aren’t."],
+            "answer": "No, there aren’t.",
+            "image": "assets/img/a_3_b_g_2.png"
+          },
+          {
+            "id": "g_b_3",
+            "sentence": "Is there a fire extinguisher near the door?",
+            "audio": "assets/audio/a_3_b_3.mp3",
+            "options": ["Yes, there is.", "No, there isn’t."],
+            "answer": "No, there isn’t.",
+            "image": "assets/img/a_3_b_g_3.png"
+          },
+          {
+            "id": "g_b_4",
+            "sentence": "Are there gloves in the drawer?",
+            "audio": "assets/audio/a_3_b_4.mp3",
+            "options": ["Yes, there are.", "No, there aren’t."],
+            "answer": "Yes, there are.",
+            "image": "assets/img/a_3_b_g_4.png"
+          },
+          {
+            "id": "g_b_5",
+            "sentence": "Is there a warning sign on the wall?",
+            "audio": "assets/audio/a_3_b_5.mp3",
+            "options": ["Yes, there is.", "No, there isn’t."],
+            "answer": "No, there isn’t.",
+            "image": "assets/img/a_3_b_g_5.png"
+          },
+          {
+            "id": "g_b_6",
+            "sentence": "Are there reflective vests in the cupboard?",
+            "audio": "assets/audio/a_3_b_6.mp3",
+            "options": ["Yes, there are.", "No, there aren’t."],
+            "answer": "Yes, there are.",
+            "image": "assets/img/a_3_b_g_6.png"
+          },
+          {
+            "id": "g_b_7",
+            "sentence": "Is there a safety harness on the shelf?",
+            "audio": "assets/audio/a_3_b_7.mp3",
+            "options": ["Yes, there is.", "No, there isn’t."],
+            "answer": "Yes, there is.",
+            "image": "assets/img/a_3_b_g_7.png"
+          },
+          {
+            "id": "g_b_8",
+            "sentence": "Are there goggles in the box?",
+            "audio": "assets/audio/a_3_b_8.mp3",
+            "options": ["Yes, there are.", "No, there aren’t."],
+            "answer": "No, there aren’t.",
+            "image": "assets/img/a_3_b_g_8.png"
+          },
+          {
+            "id": "g_b_9",
+            "sentence": "Is there a pair of boots under the bench?",
+            "audio": "assets/audio/a_3_b_9.mp3",
+            "options": ["Yes, there is.", "No, there isn’t."],
+            "answer": "Yes, there is.",
+            "image": "assets/img/a_3_b_g_9.png"
+          },
+          {
+            "id": "g_b_10",
+            "sentence": "Are there ear protectors in the bag?",
+            "audio": "assets/audio/a_3_b_10.mp3",
+            "options": ["Yes, there are.", "No, there aren’t."],
+            "answer": "No, there aren’t.",
+            "image": "assets/img/a_3_b_g_10.png"
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_3_1",
+          "text": "Is there a first aid kit in the room?  Yes, there is.",
+          "audio": "assets/audio/a_3_b_g_1.mp3"
+        },
+        {
+          "id": "n_3_2",
+          "text": "Are there safety helmets on the table? No, there aren’t.",
+          "audio": "assets/audio/a_3_b_g_2.mp3"
+        },
+        {
+          "id": "n_3_3",
+          "text": "Is there a fire extinguisher near the door?  No, there isn’t.",
+          "audio": "assets/audio/a_3_b_g_3.mp3"
+        },
+        {
+          "id": "n_3_4",
+          "text": "Are there any gloves in the drawer?  Yes, there are.",
+          "audio": "assets/audio/a_3_b_g_4.mp3"
+        },
+        {
+          "id": "n_3_5",
+          "text": "Is there a warning sign on the wall? No, there isn’t.",
+          "audio": "assets/audio/a_3_b_g_5.mp3"
+        },
+        {
+          "id": "n_3_6",
+          "text": "Are there any reflective vests in the cupboard?  Yes, there are.",
+          "audio": "assets/audio/a_3_b_g_6.mp3"
+        },
+        {
+          "id": "n_3_7",
+          "text": "Is there a safety harness on the shelf?  Yes, there is.",
+          "audio": "assets/audio/a_3_b_g_7.mp3"
+        },
+        {
+          "id": "n_3_8",
+          "text": "Are there any goggles in the box?  No, there aren’t.",
+          "audio": "assets/audio/a_3_b_g_8.mp3"
+        },
+        {
+          "id": "n_3_9",
+          "text": "Is there a pair of boots under the bench?  Yes, there is.",
+          "audio": "assets/audio/a_3_b_g_9.mp3"
+        },
+        {
+          "id": "n_3_10",
+          "text": "Are there any ear protectors in the bag? No, there aren’t.",
+          "audio": "assets/audio/a_3_b_g_10.mp3"
+        }
+      ]
+    }
+  },
+  "activity_4": {
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the questions before you listen to the recording.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න. රෙකෝඩින් එක අහන්නට පෙර ප්‍රශ්නය කියවීම ඉතාමත් වැදගත්ය.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள். பதிவைக் கேட்பதற்கு முன் கேள்விகளைப் படிப்பது மிகவும் முக்கியம்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "Why are safety goggles important?",
+            "answer": "Because they protect the eyes from sharp tools",
+            "options": [
+              "Because they look professional",
+              "Because they protect the eyes from sharp tools",
+              "Because they are easy to carry"
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": "What is the instructor checking in the workshop?",
+            "answer": "If the trainees are wearing safety boots",
+            "options": [
+              "If the trainees are wearing safety boots",
+              "If the trainees are reading books",
+              "If the trainees are using computers"
+            ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "Why is one trainee not safe in the workshop?",
+            "answer": "He is wearing light sandals instead of safety boots",
+            "options": [
+              "He is not speaking to the instructor",
+              "He is wearing light sandals instead of safety boots",
+              "He is holding a reflective vest"
+            ]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What routine in the food laboratory reduces risks?",
+            "answer": "Washing hands and wearing gloves",
+            "options": ["Writing notes in a book", "Eating food during work", "Washing hands and wearing gloves"]
+          },
+          {
+            "id": "l_4_5",
+            "question": "Why are trainees wearing insulated gloves and rubber boots in the electrical section?",
+            "answer": "Because they make their work safe ",
+            "options": [
+              "Because they are comfortable",
+              "Because they make their work safe",
+              "Because they are cheaper"
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "Safety equipment is not optional; it is essential because accidents can happen quickly.",
+          "audio": "assets/audio/n_4_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "A clean safety helmet is near the entrance.",
+          "audio": "assets/audio/n_4_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "Bright reflective vests are on the table.",
+          "audio": "assets/audio/n_4_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "Safety goggles are in the drawer, but some students are not wearing them because they believe the task is easy.",
+          "audio": "assets/audio/n_4_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "They are using sharp tools, and they must protect their eyes.",
+          "audio": "assets/audio/n_4_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "He is checking if trainees are wearing heavy safety boots.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "Another trainee is using a noisy machine without ear protectors.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The muffs are in his bag, but he is not putting them on because he is in a hurry.",
+          "audio": "assets/audio/n_4_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "In the food laboratory, clean hair nets are very important.",
+          "audio": "assets/audio/n_4_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "In the electrical section, trainees are wearing insulated gloves and rubber boots.",
+          "audio": "assets/audio/n_4_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "They are not touching live wires because it is extremely dangerous.",
+          "audio": "assets/audio/n_4_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "Safety rules are clear: wear the right equipment, follow instructions, and stay alert.",
+          "audio": "assets/audio/n_4_12.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "n_4_1",
+          "text": "Safety equipment is not optional; it is essential because accidents can happen quickly.",
+          "audio": "assets/audio/n_4_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "A clean safety helmet is near the entrance.",
+          "audio": "assets/audio/n_4_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "Bright reflective vests are on the table.",
+          "audio": "assets/audio/n_4_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "Safety goggles are in the drawer, but some students are not wearing them because they believe the task is easy.",
+          "audio": "assets/audio/n_4_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "They are using sharp tools, and they must protect their eyes.",
+          "audio": "assets/audio/n_4_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "He is checking if trainees are wearing heavy safety boots.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "Another trainee is using a noisy machine without ear protectors.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "The muffs are in his bag, but he is not putting them on because he is in a hurry.",
+          "audio": "assets/audio/n_4_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "In the food laboratory, clean hair nets are very important.",
+          "audio": "assets/audio/n_4_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "In the electrical section, trainees are wearing insulated gloves and rubber boots.",
+          "audio": "assets/audio/n_4_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "They are not touching live wires because it is extremely dangerous.",
+          "audio": "assets/audio/n_4_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "Safety rules are clear: wear the right equipment, follow instructions, and stay alert.",
+          "audio": "assets/audio/n_4_12.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "n_4_d_1",
+          "text_a": "There is a pair of leather gloves on the shelf.",
+          "audio_a": "assets/audio/a_4_d_1_a.mp3",
+          "text_b": "There are some leather gloves on the shelf.",
+          "audio_b": "assets/audio/a_4_d_1_b.mp3"
+        },
+        {
+          "id": "n_4_d_2",
+          "text_a": "There is a pair of scissors on the table.",
+          "audio_a": "assets/audio/a_4_d_2_a.mp3",
+          "text_b": "There are some scissors on the table.",
+          "audio_b": "assets/audio/a_4_d_2_b.mp3"
+        },
+        {
+          "id": "n_4_d_3",
+          "text_a": "There is a pair of boots under the bench.",
+          "audio_a": "assets/audio/a_4_d_3_a.mp3",
+          "text_b": "There are some boots under the bench.",
+          "audio_b": "assets/audio/a_4_d_3_b.mp3"
+        },
+        {
+          "id": "n_4_d_4",
+          "text_a": "There is a pair of ear protectors in the bag.",
+          "audio_a": "assets/audio/a_4_d_4_a.mp3",
+          "text_b": "There are some ear protectors in the bag.",
+          "audio_b": "assets/audio/a_4_d_4_b.mp3"
+        },
+        {
+          "id": "n_4_d_5",
+          "text_a": "There is a pair of pliers on the workbench.",
+          "audio_a": "assets/audio/a_4_d_5_a.mp3",
+          "text_b": "There are some pliers on the workbench.",
+          "audio_b": "assets/audio/a_4_d_5_b.mp3"
+        }
+      ]
+    }
+  }
+}
