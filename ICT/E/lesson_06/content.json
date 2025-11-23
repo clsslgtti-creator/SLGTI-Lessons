@@ -33,35 +33,35 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "d'oo'r",
+        "word_text": "port",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "There are two d'oo'rs on the right side of the car.",
+        "sentence_text": "Connect the cable to the USB port.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.png"
+        "image": "assets/img/a_1_p_1.jpg"
       },
       {
         "id": "p_2",
-        "word_text": "fl'oo'r",
+        "word_text": "b'o'ard",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "There is some oil on the workshop fl'oo'r.",
+        "sentence_text": "There is a control panel on the monitor b'o'ard.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.png"
+        "image": "assets/img/a_1_p_2.jpg"
       },
       {
         "id": "p_3",
-        "word_text": "t'o'rque",
+        "word_text": "sh'o'rt",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Use more t'o'rque on the nut.",
+        "sentence_text": "Use the sh'o'rt command for copy.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.png"
+        "image": "assets/img/a_1_p_3.jpg"
       },
       {
         "id": "p_4",
-        "word_text": "h'o'rn",
+        "word_text": "st'o'rage",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "The h'o'rn works well on the road.",
+        "sentence_text": "There aren’t any old files in the st'o'rage.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpg"
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
@@ -140,41 +140,41 @@
       {
         "id": "k_1",
         "image": "assets/img/a_2_d_1.jpeg",
-        "word": "face shield"
+        "word": "a pair of anti-static gloves"
       },
       {
         "id": "k_2",
         "image": "assets/img/a_2_d_2.png",
-        "word": "a pair of safety gloves"
+        "word": "a surge protector"
       },
       {
         "id": "k_3",
-        "image": "assets/img/a_2_d_3.jpeg",
-        "word": "a reflective vest"
+        "image": "assets/img/a_2_d_3.png",
+        "word": "a pair of blue-light safety glasses"
       },
       {
         "id": "k_4",
         "image": "assets/img/a_2_d_4.jpeg",
-        "word": "fire extinguisher"
+        "word": "an emergency exit sign"
       },
       {
         "id": "k_5",
         "image": "assets/img/a_2_d_5.png",
-        "word": "steel-toe boots"
+        "word": "a fire extinguisher"
       },
       {
         "id": "k_6",
         "image": "assets/img/a_2_d_6.png",
-        "word": "earmuffs"
+        "word": "a smoke detector"
       }
     ],
     "dialogues": [
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Is there a face shield in the machine hall?",
+        "text_a": "Is there a pair of anti-static gloves in the seminar hall?",
         "text_b": "Yes, there is.",
-        "text_c": "There is a very durable face shield in the machine hall.",
+        "text_c": "There is a very useful pair of anti-static gloves in the seminar hall.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
         "audio_c": "assets/audio/a_2_d_1_c.mp3"
@@ -182,19 +182,19 @@
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
-        "text_a": "Is there a pair of safety gloves in the inspection area?",
+        "text_a": "Is there a surge protector in the lab?",
         "text_b": "Yes, there is.",
-        "text_c": "There is a very thick pair of safety gloves in the inspection area.",
+        "text_c": "There is a very reliable surge protector in the lab.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "audio_c": "assets/audio/a_2_d_2_c.mp3"
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Is there a reflective vest in the workshop?",
+        "img": "assets/img/a_2_d_3.png",
+        "text_a": "Is there a pair of blue-light safety glasses in the office?",
         "text_b": "Yes, there is.",
-        "text_c": "There is a very bright reflective vest in the workshop.",
+        "text_c": "There is a very good pair of blue-light safety glasses in the office.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
         "audio_c": "assets/audio/a_2_d_3_c.mp3"
@@ -202,9 +202,9 @@
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": "Is there a fire extinguisher in the garage?",
+        "text_a": "Is there an emergency exit sign in the seminar room?",
         "text_b": "No, there isn’t.",
-        "text_c": "Actually, there aren’t any fire extinguishers in the garage.",
+        "text_c": "Actually, there aren’t any emergency exit signs in the seminar room.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "audio_c": "assets/audio/a_2_d_4_c.mp3"
@@ -212,9 +212,9 @@
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Is there a pair of steel-toe boots in the corner?",
-        "text_b": "Yes, there is.",
-        "text_c": "There is a very sturdy pair of steel-toe boots in the corner.",
+        "text_a": "Is there a fire extinguisher in the classroom?",
+        "text_b": "No, there isn’t.",
+        "text_c": "Actually, there aren’t any fire extinguishers in the classroom.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
         "audio_c": "assets/audio/a_2_d_5_c.mp3"
@@ -222,9 +222,9 @@
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Are there earmuffs in the lab?",
-        "text_b": "Yes, there are.",
-        "text_c": "There are very big earmuffs in the lab.",
+        "text_a": "Is there a smoke detector in the server room?",
+        "text_b": "No, there isn’t.",
+        "text_c": "Actually, there aren’t any smoke detectors in the server room.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
         "audio_c": "assets/audio/a_2_d_6_c.mp3"
