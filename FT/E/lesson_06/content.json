@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": 6,
     "level": "Elementary",
-    "section": "Automobile Technology",
+    "section": "Food Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -33,41 +33,41 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "d'oo'r",
+        "word_text": "b'o'ard",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "There are two d'oo'rs on the right side of the car.",
+        "sentence_text": "There aren’t any  chopping b'o'ards on the top shelf.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "fl'oo'r",
+        "word_text": "p'o'rtion",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "There is some oil on the workshop fl'oo'r.",
+        "sentence_text": "There are a few  small p'o'rtions of rice on the counter.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "t'o'rque",
+        "word_text": "st'o're",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Use more t'o'rque on the nut.",
+        "sentence_text": "St'o're milk at the right temperature  in the cold room.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "h'o'rn",
+        "word_text": "f'o'rk",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "The h'o'rn works well on the road.",
+        "sentence_text": "There are ten wooden f'o'rks in the drawer.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpg"
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
   "activity_2": {
     "type": "SBS-2",
-    "focus": "Adjectives and prepositions",
+    "focus": "There is ………, There are ……….",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
@@ -139,42 +139,42 @@
     "keywords": [
       {
         "id": "k_1",
-        "image": "assets/img/a_2_d_1.jpeg",
-        "word": "face shield"
+        "image": "assets/img/a_2_d_1.png",
+        "word": "a hair net"
       },
       {
         "id": "k_2",
-        "image": "assets/img/a_2_d_2.png",
-        "word": "a pair of safety gloves"
+        "image": "assets/img/a_2_d_2.jpeg",
+        "word": "a pair of disposable gloves"
       },
       {
         "id": "k_3",
-        "image": "assets/img/a_2_d_3.jpeg",
-        "word": "a reflective vest"
+        "image": "assets/img/a_2_d_3.png",
+        "word": "a face mask"
       },
       {
         "id": "k_4",
-        "image": "assets/img/a_2_d_4.jpeg",
-        "word": "fire extinguisher"
+        "image": "assets/img/a_2_d_4.png",
+        "word": "a plastic apron "
       },
       {
         "id": "k_5",
-        "image": "assets/img/a_2_d_5.png",
-        "word": "steel-toe boots"
+        "image": "assets/img/a_2_d_5.jpeg",
+        "word": "a fire extinguisher"
       },
       {
         "id": "k_6",
-        "image": "assets/img/a_2_d_6.png",
-        "word": "earmuffs"
+        "image": "assets/img/a_2_d_6.jpeg",
+        "word": "a first aid kit"
       }
     ],
     "dialogues": [
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.jpeg",
-        "text_a": "Is there a face shield in the machine hall?",
+        "text_a": "Is there a hair net in the bakery?",
         "text_b": "Yes, there is.",
-        "text_c": "There is a very durable face shield in the machine hall.",
+        "text_c": "There is a very clean hair net in the bakery.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_d_1_b.mp3",
         "audio_c": "assets/audio/a_2_d_1_c.mp3"
@@ -182,9 +182,9 @@
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
-        "text_a": "Is there a pair of safety gloves in the inspection area?",
+        "text_a": "Is there a pair of disposable gloves in the storage room?",
         "text_b": "Yes, there is.",
-        "text_c": "There is a very thick pair of safety gloves in the inspection area.",
+        "text_c": "There is a very thin  pair of disposable gloves in the storage room.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "audio_c": "assets/audio/a_2_d_2_c.mp3"
@@ -192,9 +192,9 @@
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Is there a reflective vest in the workshop?",
+        "text_a": "Is there a face mask in the kitchen?",
         "text_b": "Yes, there is.",
-        "text_c": "There is a very bright reflective vest in the workshop.",
+        "text_c": "There is a very strong face mask in the kitchen.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
         "audio_c": "assets/audio/a_2_d_3_c.mp3"
@@ -202,9 +202,9 @@
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": "Is there a fire extinguisher in the garage?",
+        "text_a": "Is there a plastic apron in the kitchen?",
         "text_b": "No, there isn’t.",
-        "text_c": "Actually, there aren’t any fire extinguishers in the garage.",
+        "text_c": "Actually, there aren’t any plastic  aprons in the kitchen.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "audio_c": "assets/audio/a_2_d_4_c.mp3"
@@ -212,9 +212,9 @@
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Is there a pair of steel-toe boots in the corner?",
-        "text_b": "Yes, there is.",
-        "text_c": "There is a very sturdy pair of steel-toe boots in the corner.",
+        "text_a": "Is there a fire extinguisher in the bakery?",
+        "text_b": "No, there isn’t.",
+        "text_c": "Actually, there aren’t any fire extinguishers in the bakery.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
         "audio_c": "assets/audio/a_2_d_5_c.mp3"
@@ -222,9 +222,9 @@
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Are there earmuffs in the lab?",
-        "text_b": "Yes, there are.",
-        "text_c": "There are very big earmuffs in the lab.",
+        "text_a": "Is there a first aid kit in the canteen?",
+        "text_b": "No, there isn’t.",
+        "text_c": "Actually, there aren’t any first aid kits in the canteen.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
         "audio_c": "assets/audio/a_2_d_6_c.mp3"

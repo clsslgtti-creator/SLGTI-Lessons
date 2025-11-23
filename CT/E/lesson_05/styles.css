@@ -343,7 +343,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  aspect-ratio: 1 / 1;
+  /* aspect-ratio: 1 / 1; */
 
   border: 2px dashed rgba(99, 102, 241, 0.35);
 

@@ -139,33 +139,33 @@
     "keywords": [
       {
         "id": "k_1",
-        "image": "assets/img/a_2_d_1.jpeg",
-        "word": "face shield"
+        "image": "assets/img/a_2_d_1.png",
+        "word": "a safety helmet"
       },
       {
         "id": "k_2",
         "image": "assets/img/a_2_d_2.png",
-        "word": "a pair of safety gloves"
+        "word": "a pair of safety boots"
       },
       {
         "id": "k_3",
-        "image": "assets/img/a_2_d_3.jpeg",
-        "word": "a reflective vest"
+        "image": "assets/img/a_2_d_3.png",
+        "word": "a reflective jacket"
       },
       {
         "id": "k_4",
         "image": "assets/img/a_2_d_4.jpeg",
-        "word": "fire extinguisher"
+        "word": "a fall protection harness "
       },
       {
         "id": "k_5",
         "image": "assets/img/a_2_d_5.png",
-        "word": "steel-toe boots"
+        "word": "a pair of safety goggles"
       },
       {
         "id": "k_6",
-        "image": "assets/img/a_2_d_6.png",
-        "word": "earmuffs"
+        "image": "assets/img/a_2_d_6.jpeg",
+        "word": "a fire blanket"
       }
     ],
     "dialogues": [
