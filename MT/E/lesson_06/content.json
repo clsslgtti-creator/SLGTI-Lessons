@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": 6,
     "level": "Elementary",
-    "section": "Automobile Technology",
+    "section": "Mechanical Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -33,41 +33,41 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "d'oo'r",
+        "word_text": "t'o'rque",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "There are two d'oo'rs on the right side of the car.",
+        "sentence_text": "Apply more t'o'rque to the bolt.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.png"
+        "image": "assets/img/a_1_p_1.jpeg"
       },
       {
         "id": "p_2",
-        "word_text": "fl'oo'r",
+        "word_text": "b'o're",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "There is some oil on the workshop fl'oo'r.",
+        "sentence_text": "Measure the b'o're of the cylinder.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "t'o'rque",
+        "word_text": "f'o'rge",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Use more t'o'rque on the nut.",
+        "sentence_text": "Heat the metal in the f'o'rge to the correct temperature.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "h'o'rn",
+        "word_text": "fl'oo'r",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "The h'o'rn works well on the road.",
+        "sentence_text": "There is a big jack  on the workshop fl'oo'r.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpg"
+        "image": "assets/img/a_1_p_4.jpeg"
       }
     ]
   },
   "activity_2": {
     "type": "SBS-2",
-    "focus": "Adjectives and prepositions",
+    "focus": "There is ………, There are ……….",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
