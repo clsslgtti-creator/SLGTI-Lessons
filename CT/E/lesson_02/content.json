@@ -172,7 +172,7 @@
         "id": "d_4",
         "img": "assets/img/a_2_d_4.png",
         "text_a": "Where is the large concrete mixer?",
-        "text_b": "It is in the fenced area.",
+        "text_b": " It is in the fenced area.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "keyword": "fenced area"
@@ -207,7 +207,7 @@
     },
     "content": {
       "activity_a": {
-        "bg_image": "assets/img/game/bg-6.jpg",
+        "bg_image": "assets/img/game/bg-3.jpg",
         "examples": [
           {
             "id": "e_1",
