@@ -43,7 +43,7 @@
         "id": "p_2",
         "word_text": "fr'ee'zer",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "This deep- fr'ee'zer is too heavy.",
+        "sentence_text": "This deep-fr'ee'zer is too heavy.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
@@ -408,7 +408,7 @@
         },
         {
           "id": "n_4_7",
-          "text": "The pastry sheet is about 5 centimeters. The pastry sheet is about 5 centimeters too long",
+          "text": "The pastry sheet is about 5 centimeters. The pastry sheet is about 5 centimeters too long.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
