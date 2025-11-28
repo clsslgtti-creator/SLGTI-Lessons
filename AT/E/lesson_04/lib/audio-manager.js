@@ -1,7 +1,7 @@
 const DEFAULT_MODE_TIMINGS = Object.freeze({
   listen: {
     minimumGapMs: 1000,
-    multiplierMs: 1000,
+    multiplierMs: 0,
     betweenItemsMs: 0,
   },
   'listen-repeat': {
