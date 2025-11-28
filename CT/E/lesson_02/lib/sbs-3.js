@@ -152,7 +152,7 @@ const createDialogueTables = (tablesData = []) => {
 
   const tableCount = tables.length;
 
-  console.log('Created dialogue tables:', tableCount);
+  
   if (tableCount === 0) {
     return null;
   }
@@ -513,6 +513,7 @@ const buildModelDialogueSlide = (
     id: activityNumber ? `activity-${activityNumber}-model` : 'activity-model',
     element: slide,
     autoPlay,
+    instructionCountdownSeconds: 5,
     onLeave: () => {
       sequenceAbort?.abort();
       sequenceAbort = null;
