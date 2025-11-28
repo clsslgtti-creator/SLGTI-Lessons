@@ -311,10 +311,10 @@
           },
           {
             "id": "g_b_6",
-            "sentence": "Are  the lamp bulbs cubical?",
+            "sentence": "Are the lamp bulbs cubical?",
             "audio": "assets/audio/a_3_b_g_6.mp3",
             "options": ["Yes, they are.", "No, they aren't."],
-            "answer": "No, they aren’t.",
+            "answer": "No, they aren't.",
             "image": "assets/img/a_3_b_g_6.jpg"
           },
           {
@@ -346,7 +346,7 @@
             "sentence": "Is the mouse scroll wheel rectangular?",
             "audio": "assets/audio/a_3_b_g_10.mp3",
             "options": ["Yes, it is.", "No, it isn't."],
-            "answer": "Yes, it is.",
+            "answer": "No, it isn't.",
             "image": "assets/img/a_3_b_g_10.jpg"
           }
         ]
@@ -356,8 +356,8 @@
         "examples": [
           {
             "id": "ex_c_1",
-            "words": "socket square / cylindrical?",
-            "txt_question": "Is the socket square cylindrical?",
+            "words": "socket / cylindrical?",
+            "txt_question": "Is the socket cylindrical?",
             "txt_answer": "No, it isn’t. It is square.",
             "audio_question": "assets/audio/a_3_c_ex_q_1.mp3",
             "audio_answer": "assets/audio/a_3_c_ex_a_1.mp3",
