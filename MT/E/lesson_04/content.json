@@ -176,7 +176,7 @@
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
         "text_a": "Is the gearbox noisy or quiet?",
-        "text_b": "It is noisy.",
+        "text_b": "It is noisy.", 
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3"
       },
