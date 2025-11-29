@@ -45,7 +45,7 @@
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
         "sentence_text": "Finish the t'a'sk today.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.png"
+        "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
@@ -149,7 +149,7 @@
       },
       {
         "id": "k_4",
-        "image": "assets/img/a_2_k_4.png",
+        "image": "assets/img/a_2_k_4.jpeg",
         "word": "Strong/weak"
       },
       {
@@ -291,7 +291,7 @@
             "audio": "assets/audio/a_3_b_g_3.mp3",
             "options": ["Yes, they are.", "No, they aren’t."],
             "answer": "Yes, they are.",
-            "image": "assets/img/a_3_b_g_3.jpg"
+            "image": "assets/img/a_3_b_g_x.jpeg"
           },
           {
             "id": "g_b_4",
@@ -315,7 +315,7 @@
             "audio": "assets/audio/a_3_b_g_6.mp3",
             "options": ["Yes, they are.", "No, they aren't."],
             "answer": "No, they aren't.",
-            "image": "assets/img/a_3_b_g_6.jpg"
+            "image": "assets/img/a_3_b_g_6.png"
           },
           {
             "id": "g_b_7",
@@ -390,7 +390,7 @@
             "txt_answer": "No, they aren’t. They are spherical.",
             "audio_question": "assets/audio/a_3_c_g_q_3.mp3",
             "audio_answer": "assets/audio/a_3_c_g_a_3.mp3",
-            "image": "assets/img/a_3_b_g_6.jpg"
+            "image": "assets/img/a_3_b_g_6.png"
           },
           {
             "id": "g_c_4",
