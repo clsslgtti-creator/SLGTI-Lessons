@@ -1093,7 +1093,7 @@ export const buildListeningThreeSlides = (activityData = {}, context = {}) => {
       createSubActivityContext(baseContext, "b"),
       {
         mode: "listen",
-        autoDelayMs: 5000,
+        autoDelayMs: 0,
         repeatPauseMs,
         layout: "single-column",
         showLineNumbers: false,
@@ -1106,7 +1106,7 @@ export const buildListeningThreeSlides = (activityData = {}, context = {}) => {
       createSubActivityContext(baseContext, "c"),
       {
         mode: "listen-repeat",
-        autoDelayMs: 5000,
+        autoDelayMs: 0,
         repeatPauseMs,
         illustrationUrl: repeatImage,
       }
@@ -1116,7 +1116,7 @@ export const buildListeningThreeSlides = (activityData = {}, context = {}) => {
       createSubActivityContext(baseContext, "d"),
       {
         mode: "read",
-        autoDelayMs: 5000,
+        autoDelayMs: 0,
         repeatPauseMs,
         illustrationUrl: readImage,
       }
