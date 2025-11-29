@@ -143,7 +143,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.png",
+        "img": "assets/img/a_2_d_1.jpeg",
         "text_a": "Where is the broken drill press?",
         "text_b": "It is in the engineering workshop.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -152,7 +152,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.png",
+        "img": "assets/img/a_2_d_2.jpeg",
         "text_a": "Where is the adjustable torque wrench?",
         "text_b": "It is in the grey cotton bag.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -179,7 +179,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.png",
+        "img": "assets/img/a_2_d_5.jpeg",
         "text_a": "Where is the experienced mechanic?",
         "text_b": "He is in the fabrication section.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
@@ -188,7 +188,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.png",
+        "img": "assets/img/a_2_d_6.jpeg",
         "text_a": "Where are the new trainee technicians?",
         "text_b": "They are in the maintenance bay.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",

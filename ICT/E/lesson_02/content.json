@@ -257,7 +257,7 @@
             "audio": "assets/audio/a_3_g_5.mp3",
             "options": ["Too low", "Correct", "Too high"],
             "answer": "Too high",
-            "image": "assets/img/a_3_a_g_5.png"
+            "image": "assets/img/a_3_a_g_5.jpeg"
           },
           {
             "id": "g_6",
