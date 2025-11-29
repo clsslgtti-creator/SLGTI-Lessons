@@ -309,7 +309,7 @@
               "It isn’t under the long table."
             ],
             "answer": "It is above the clean whiteboard.",
-            "image": "assets/img/a_3_b_g_8.jpeg"
+            "image": "assets/img/a_3_b_g_8.png"
           },
           {
             "id": "g_b_9",
@@ -464,7 +464,7 @@
         ]
       },
       "activity_c": {
-        "image": "assets/img/a_4_b.png",
+        "image": "assets/img/a_4_b.jpeg",
         "content": [
           {
             "id": "n_4_1",
@@ -519,7 +519,7 @@
         ]
       },
       "activity_d": {
-        "image": "assets/img/a_4_b.png",
+        "image": "assets/img/a_4_b.jpeg",
         "content": [
           {
             "id": "n_4_1",
@@ -574,7 +574,7 @@
         ]
       },
       "activity_b": {
-        "image": "assets/img/a_4_b.png",
+        "image": "assets/img/a_4_b.jpeg",
         "content": [
           {
             "id": "n_4_1",

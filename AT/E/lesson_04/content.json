@@ -149,7 +149,7 @@
       },
       {
         "id": "k_4",
-        "image": "assets/img/a_2_k_4.png",
+        "image": "assets/img/a_2_k_4.jpeg",
         "word": "Strong/weak"
       },
       {
@@ -289,9 +289,9 @@
             "id": "g_b_3",
             "sentence": "Are the steering wheels circular?",
             "audio": "assets/audio/a_3_b_g_3.mp3",
-            "options": ["Yes, they are.", "No, they aren't."],
+            "options": ["Yes, they are.", "No, they aren’t."],
             "answer": "Yes, they are.",
-            "image": "assets/img/a_3_b_g_3.jpg"
+            "image": "assets/img/a_3_b_g_x.jpeg"
           },
           {
             "id": "g_b_4",
@@ -311,11 +311,11 @@
           },
           {
             "id": "g_b_6",
-            "sentence": "Are  the lamp bulbs cubical?",
+            "sentence": "Are the lamp bulbs cubical?",
             "audio": "assets/audio/a_3_b_g_6.mp3",
             "options": ["Yes, they are.", "No, they aren't."],
             "answer": "No, they aren't.",
-            "image": "assets/img/a_3_b_g_6.jpg"
+            "image": "assets/img/a_3_b_g_6.png"
           },
           {
             "id": "g_b_7",
@@ -356,8 +356,8 @@
         "examples": [
           {
             "id": "ex_c_1",
-            "words": "socket square / cylindrical?",
-            "txt_question": "Is the socket square cylindrical?",
+            "words": "socket / cylindrical?",
+            "txt_question": "Is the socket cylindrical?",
             "txt_answer": "No, it isn’t. It is square.",
             "audio_question": "assets/audio/a_3_c_ex_q_1.mp3",
             "audio_answer": "assets/audio/a_3_c_ex_a_1.mp3",
@@ -390,7 +390,7 @@
             "txt_answer": "No, they aren’t. They are spherical.",
             "audio_question": "assets/audio/a_3_c_g_q_3.mp3",
             "audio_answer": "assets/audio/a_3_c_g_a_3.mp3",
-            "image": "assets/img/a_3_b_g_6.jpg"
+            "image": "assets/img/a_3_b_g_6.png"
           },
           {
             "id": "g_c_4",

@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "There is a kn'o'b in front of the generator.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpeg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
@@ -309,7 +309,7 @@
               "It isn’t under the long table."
             ],
             "answer": "It is above the clean whiteboard.",
-            "image": "assets/img/a_3_b_g_8.jpeg"
+            "image": "assets/img/a_3_b_g_8.png"
           },
           {
             "id": "g_b_9",
@@ -464,7 +464,7 @@
         ]
       },
       "activity_c": {
-        "image": "assets/img/a_4_b.png",
+        "image": "assets/img/a_4_b.jpeg",
         "content": [
           {
             "id": "n_4_1",
@@ -519,7 +519,7 @@
         ]
       },
       "activity_b": {
-        "image": "assets/img/a_4_b.png",
+        "image": "assets/img/a_4_b.jpeg",
         "content": [
           {
             "id": "n_4_1",
@@ -574,7 +574,7 @@
         ]
       },
       "activity_d": {
-        "image": "assets/img/a_4_b.png",
+        "image": "assets/img/a_4_b.jpeg",
         "content": [
           {
             "id": "n_4_1",

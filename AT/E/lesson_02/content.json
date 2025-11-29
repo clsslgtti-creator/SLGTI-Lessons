@@ -152,7 +152,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": "Where is the Maruti van ignition key?",
         "text_b": " It is in the black cotton bag.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -207,7 +207,7 @@
     },
     "content": {
       "activity_a": {
-        "bg_image": "assets/img/game/bg-6.jpg",
+        "bg_image": "assets/img/game/bg-3.jpg",
         "examples": [
           {
             "id": "e_1",
@@ -361,7 +361,7 @@
           },
           {
             "id": "l_4_5",
-            "question": ". Where is the record book kept?",
+            "question": "Where is the record book kept?",
             "answer": "In the service office",
             "options": [
               "In the classroom",
@@ -399,7 +399,7 @@
         },
         {
           "id": "n_4_6",
-          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
+          "text": "The battery is about 12.5 kilograms. The battery is about 500 grams  too heavy.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -409,17 +409,17 @@
         },
         {
           "id": "n_4_8",
-          "text": "The tire tread is about 4 millimeters.The tire tread is about 1 millimeter too shallow.",
+          "text": "The tire tread is about 4 millimeters. The tire tread is about 1 millimeter too shallow.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
+          "text": "The brake pad is about 8 centimeters. The brake pad is about 2 millimeters too narrow.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
+          "text": "The oil content of the gearbox is about 1.8 liters. The oil content of the gearbox is about 200 milliliters too high.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ],
@@ -451,7 +451,7 @@
         },
         {
           "id": "r_4_6",
-          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
+          "text": "The battery is about 12.5 kilograms. The battery is about 500 grams  too heavy.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -461,17 +461,17 @@
         },
         {
           "id": "r_4_8",
-          "text": "The tire tread is about 4 millimeters.The tire tread is about 1 millimeter too shallow.",
+          "text": "The tire tread is about 4 millimeters. The tire tread is about 1 millimeter too shallow.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "r_4_9",
-          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
+          "text": "The brake pad is about 8 centimeters. The brake pad is about 2 millimeters too narrow.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "r_4_10",
-          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
+          "text": "The oil content of the gearbox is about 1.8 liters. The oil content of the gearbox is about 200 milliliters too high.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ],
@@ -503,7 +503,7 @@
         },
         {
           "id": "r_4_6",
-          "text": "The battery is about 12.5 kilograms.The battery is about 500 grams  too heavy.",
+          "text": "The battery is about 12.5 kilograms. The battery is about 500 grams  too heavy.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -513,17 +513,17 @@
         },
         {
           "id": "r_4_8",
-          "text": "The tire tread is about 4 millimeters.The tire tread is about 1 millimeter too shallow.",
+          "text": "The tire tread is about 4 millimeters. The tire tread is about 1 millimeter too shallow.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "r_4_9",
-          "text": "The brake pad is about 8 centimeters.The brake pad is about 2 millimeters too narrow.",
+          "text": "The brake pad is about 8 centimeters. The brake pad is about 2 millimeters too narrow.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "r_4_10",
-          "text": "The oil content of the gearbox is about 1.8 liters.The oil content of the gearbox is about 200 milliliters too high.",
+          "text": "The oil content of the gearbox is about 1.8 liters. The oil content of the gearbox is about 200 milliliters too high.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ]
