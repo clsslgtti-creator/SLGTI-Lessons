@@ -86,32 +86,6 @@ const createGameSlide = (gameConfig = {}, context = {}) => {
   stage.className = "game1-stage";
   const stageId = `game1-stage-${Math.random().toString(36).slice(2, 8)}`;
   stage.id = stageId;
-  stage.style.position = stage.style.position || "relative";
-  stage.style.overflow = stage.style.overflow || "hidden";
-
-  const stageSurface = document.createElement("div");
-  stageSurface.className = "game1-stage__surface";
-  const stageSurfaceId = `${stageId}-surface`;
-  stageSurface.id = stageSurfaceId;
-  stage.appendChild(stageSurface);
-
-  const lockOverlay = document.createElement("div");
-  lockOverlay.className = "game1-stage__overlay";
-  lockOverlay.setAttribute("aria-hidden", "true");
-  lockOverlay.innerHTML = `
-    <div class="game1-stage__overlay-content">
-      <p class="game1-stage__overlay-text">
-        Listen to the instructions first. The Start button unlocks when the audio finishes.
-      </p>
-      <div class="game1-stage__overlay-indicator" aria-hidden="true"></div>
-    </div>
-  `;
-  lockOverlay.addEventListener("click", (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    event.stopImmediatePropagation();
-  });
-  stage.appendChild(lockOverlay);
 
   const status = document.createElement("p");
   status.className = "game1-status is-visible";
@@ -138,87 +112,10 @@ const createGameSlide = (gameConfig = {}, context = {}) => {
   }
 
   let gameInstance = null;
-  let slideRef = null;
-  let overlayMonitorHandle = null;
-  let overlayVisible = false;
-
-  const requestFrame = (callback) => {
-    if (
-      typeof window !== "undefined" &&
-      typeof window.requestAnimationFrame === "function"
-    ) {
-      return window.requestAnimationFrame(callback);
-    }
-    return setTimeout(callback, 16);
-  };
-
-  const cancelFrame = (handle) => {
-    if (handle == null) {
-      return;
-    }
-    if (
-      typeof window !== "undefined" &&
-      typeof window.cancelAnimationFrame === "function"
-    ) {
-      window.cancelAnimationFrame(handle);
-      return;
-    }
-    clearTimeout(handle);
-  };
-
-  const stopOverlayMonitor = () => {
-    if (overlayMonitorHandle !== null) {
-      cancelFrame(overlayMonitorHandle);
-      overlayMonitorHandle = null;
-    }
-  };
-
-  const showOverlay = () => {
-    if (overlayVisible) {
-      return;
-    }
-    overlayVisible = true;
-    lockOverlay.classList.add("is-active");
-  };
-
-  const hideOverlay = () => {
-    if (!overlayVisible) {
-      lockOverlay.classList.remove("is-active");
-      return;
-    }
-    overlayVisible = false;
-    lockOverlay.classList.remove("is-active");
-  };
-
-  const monitorInstructionComplete = () => {
-    if (!slideRef || !lockOverlay.isConnected) {
-      hideOverlay();
-      stopOverlayMonitor();
-      return;
-    }
-    if (slideRef._instructionComplete) {
-      hideOverlay();
-      stopOverlayMonitor();
-      return;
-    }
-    overlayMonitorHandle = requestFrame(monitorInstructionComplete);
-  };
-
-  const enforceInstructionOverlay = () => {
-    if (!slideRef || slideRef._instructionComplete) {
-      hideOverlay();
-      stopOverlayMonitor();
-      return;
-    }
-    showOverlay();
-    stopOverlayMonitor();
-    overlayMonitorHandle = requestFrame(monitorInstructionComplete);
-  };
 
   const getPhaser = () => window?.Phaser;
 
   const startGame = () => {
-    enforceInstructionOverlay();
     const PhaserLib = getPhaser();
     if (!PhaserLib) {
       status.textContent =
@@ -230,7 +127,7 @@ const createGameSlide = (gameConfig = {}, context = {}) => {
     if (gameInstance) {
       gameInstance.destroy(true);
       gameInstance = null;
-      stageSurface.innerHTML = "";
+      stage.innerHTML = "";
     }
 
     status.textContent = "Loading game...";
@@ -263,7 +160,7 @@ const createGameSlide = (gameConfig = {}, context = {}) => {
 
     gameInstance = new PhaserLib.Game({
       type: PhaserLib.AUTO,
-      parent: stageSurfaceId,
+      parent: stageId,
       backgroundColor: "#f3f6fb",
       scale: {
         mode: PhaserLib.Scale.FIT,
@@ -287,28 +184,20 @@ const createGameSlide = (gameConfig = {}, context = {}) => {
     if (gameInstance) {
       gameInstance.destroy(true);
       gameInstance = null;
-      stageSurface.innerHTML = "";
+      stage.innerHTML = "";
     }
-    hideOverlay();
-    stopOverlayMonitor();
     status.textContent = "Game paused. Reopen this slide to play again.";
     status.classList.remove("is-transparent");
     status.classList.remove("is-error");
     status.classList.add("is-visible");
   };
 
-  const slideDefinition = {
+  return {
     id: slideId,
     element: slide,
     onEnter: startGame,
-    onLeave: () => {
-      destroyGame();
-    },
+    onLeave: destroyGame,
   };
-
-  slideRef = slideDefinition;
-
-  return slideDefinition;
 };
 
 const collectGameActivities = (activityData = {}) => {

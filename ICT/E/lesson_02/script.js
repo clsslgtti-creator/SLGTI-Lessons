@@ -512,6 +512,101 @@ const applyInstructionsToSlide = (slideElement, texts) => {
   anchor?.insertAdjacentElement("afterend", list);
 };
 
+// Prevent Phaser game interaction until the intro finishes.
+const blockGameShellInteraction = (slideElement) => {
+  if (!slideElement) {
+    return null;
+  }
+
+  const shells = Array.from(
+    slideElement.querySelectorAll(".game1-shell")
+  ).filter((shell) => shell instanceof HTMLElement);
+  if (!shells.length) {
+    return null;
+  }
+
+  const cleanupFns = shells.map((shell) => {
+    const overlay = document.createElement("div");
+    overlay.className = "game1-shell-overlay";
+    overlay.setAttribute("aria-hidden", "true");
+    overlay.textContent = "Please listen to the introduction first.";
+    Object.assign(overlay.style, {
+      position: "absolute",
+      inset: "0",
+      zIndex: "999",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      textAlign: "center",
+      padding: "1rem",
+      background: "rgba(3, 7, 18, 0.55)",
+      color: "#fff",
+      fontSize: "1rem",
+      fontWeight: "600",
+      pointerEvents: "all",
+      cursor: "not-allowed",
+      userSelect: "none",
+      backdropFilter: "blur(2px)",
+    });
+
+    const previousPosition = shell.style.position;
+    const computedPosition = window?.getComputedStyle
+      ? window.getComputedStyle(shell).position
+      : previousPosition;
+    const forcedPosition = !previousPosition && computedPosition === "static";
+    if (forcedPosition) {
+      shell.style.position = "relative";
+    }
+
+    shell.appendChild(overlay);
+
+    const cancelEvents = [
+      "pointerdown",
+      "pointerup",
+      "pointermove",
+      "click",
+      "mousedown",
+      "mouseup",
+      "touchstart",
+      "touchend",
+      "contextmenu",
+      "dragstart",
+    ];
+    const interceptors = cancelEvents.map((eventName) => {
+      const handler = (event) => {
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        return false;
+      };
+      shell.addEventListener(eventName, handler, true);
+      return { eventName, handler };
+    });
+
+    return () => {
+      overlay.remove();
+      interceptors.forEach(({ eventName, handler }) => {
+        shell.removeEventListener(eventName, handler, true);
+      });
+      if (forcedPosition) {
+        shell.style.position = "";
+      } else if (previousPosition) {
+        shell.style.position = previousPosition;
+      }
+    };
+  });
+
+  return () => {
+    cleanupFns.forEach((cleanup) => {
+      try {
+        cleanup();
+      } catch {
+        /* ignore */
+      }
+    });
+  };
+};
+
+
 const INITIAL_INSTRUCTION_DELAY_SECONDS = 5;
 let instructionPlayback = null;
 
@@ -715,6 +810,11 @@ const handleInstructionForSlide = (slideObj) => {
     indicator,
     restoreButton: () => {},
   };
+  const releaseGameShellLock = blockGameShellInteraction(slideObj.element);
+  if (releaseGameShellLock) {
+    controller.cleanupHandlers.push(releaseGameShellLock);
+  }
+
 
   const { button } = slideObj.autoPlay || {};
   if (button && typeof button.disabled === "boolean") {
