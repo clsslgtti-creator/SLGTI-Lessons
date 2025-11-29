@@ -59,7 +59,7 @@
         "id": "p_4",
         "word_text": "sh'o'ck",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Mechanical  sh'o'ck testing is important",
+        "sentence_text": "Mechanical  sh'o'ck testing is important.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.jpeg"
       }
@@ -161,7 +161,7 @@
         "id": "d_2",
         "img": "assets/img/a_2_d_2.jpeg",
         "text_a": "Where is the CNC controller unit?",
-        "text_b": "It is next to the door",
+        "text_b": "It is next to the door.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3"
       },

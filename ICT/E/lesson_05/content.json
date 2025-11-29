@@ -35,7 +35,7 @@
         "id": "p_1",
         "word_text": "l'o'g",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "Write your surname clearly in the l'o'g file",
+        "sentence_text": "Write your surname clearly in the l'o'g file.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
@@ -160,7 +160,7 @@
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
-        "text_a": "Where is the power backup inverter",
+        "text_a": "Where is the power backup inverter?",
         "text_b": "It is under the table.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3"
