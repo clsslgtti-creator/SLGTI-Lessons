@@ -144,7 +144,7 @@
       },
       {
         "id": "k_2",
-        "image": "assets/img/a_2_d_2.png",
+        "image": "assets/img/a_2_d_v.png",
         "word": "a surge protector"
       },
       {
@@ -154,17 +154,17 @@
       },
       {
         "id": "k_4",
-        "image": "assets/img/a_2_d_4.jpeg",
+        "image": "assets/img/a_2_d_y.png",
         "word": "an emergency exit sign"
       },
       {
         "id": "k_5",
-        "image": "assets/img/a_2_d_5.png",
+        "image": "assets/img/a_2_d_x.png",
         "word": "a fire extinguisher"
       },
       {
         "id": "k_6",
-        "image": "assets/img/a_2_d_6.png",
+        "image": "assets/img/a_2_d_z.png",
         "word": "a smoke detector"
       }
     ],
