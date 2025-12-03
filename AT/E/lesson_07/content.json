@@ -37,7 +37,7 @@
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "This cl'u'tch was hard to press.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
@@ -61,7 +61,7 @@
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "Check the water p'u'mps carefully.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpg"
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
@@ -134,7 +134,7 @@
     "keywords": [
       {
         "id": "k_1",
-        "image": "assets/img/a_2_d_1.jpeg",
+        "image": "assets/img/a_2_d_1.png",
         "word": "tired/rested"
       },
       {
@@ -144,12 +144,12 @@
       },
       {
         "id": "k_3",
-        "image": "assets/img/a_2_d_3.jpeg",
+        "image": "assets/img/a_2_d_3.png",
         "word": "satisfied/disappointed"
       },
       {
         "id": "k_4",
-        "image": "assets/img/a_2_d_x.png",
+        "image": "assets/img/a_2_d_4.jpeg",
         "word": "cold/hot"
       },
       {
@@ -166,7 +166,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Were you tired yesterday morning?",
         "text_b": "No, I wasn’t. I was rested.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -182,7 +182,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "Was the instructor satisfied with our work yesterday?",
         "text_b": "No, he wasn’t. He was disappointed.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
