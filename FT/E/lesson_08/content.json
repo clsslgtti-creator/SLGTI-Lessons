@@ -72,137 +72,137 @@
     },
     "content": [
       {
-        "question": "Is the mechanic tired or energetic?",
+        "question": "Is the baker tired or energetic?",
         "options": [
           "He is energetic.",
           "His tired.",
           "He is tired or energetic.",
-          "Him energetic."
+          "Him’s energetic."
         ],
         "answer": "He is energetic."
       },
       {
-        "question": "Were the tools clean yesterday?",
+        "question": "Was the oven clean yesterday?",
         "options": [
-          "No, there weren’t. They were dirty.",
-          "Yes, they were. Their were dirty.",
-          "Yes, they was dirty.",
-          "No, they weren’t. They were dirty."
+          "No, it isn’t. It is dirty.",
+          "Yes, it wasn’t. It was dirty.",
+          "No, it is. It was dirty.",
+          "No, it wasn’t. It was dirty."
         ],
-        "answer": "No, there weren’t. They were dirty."
+        "answer": "No, it wasn’t. It was dirty."
       },
       {
-        "question": "Where is Fathima?",
+        "question": "Where is Kamal?",
         "options": [
-          "She’s in the workshop.",
-          "Shi’s in the maintenance yard.",
-          "They are in the office.",
-          "Hers in workshop."
+          "He’s in the bakery.",
+          "His in the flour storage.",
+          "They are in the kitchen.",
+          "His in bakery."
         ],
-        "answer": "She’s in the workshop."
+        "answer": "He’s in the bakery."
       },
       {
-        "question": "Where is the storeroom?",
+        "question": "Where is the mixing machine?",
         "options": [
-          "They are behind the factory.",
-          "It’s between the factory and the office.",
-          "Its front of office.",
-          "Its next from factory."
+          "They are behind the oven.",
+          "It’s between the oven and the freezer.",
+          "Its front of the freezer.",
+          "They are between oven or freezer."
         ],
-        "answer": "It’s between the factory and the office."
+        "answer": "It’s between the oven and the freezer."
       },
       {
-        "question": "Where are the tools?",
+        "question": "Where are the trays?",
         "options": [
-          "Their next to the cables.",
-          "There are under the cables.",
-          "They’re next to the cables.",
-          "There’s next to cables."
+          "Their next to the oven.",
+          "There are under the oven.",
+          "Their’re next to the oven.",
+          "They’re next to the oven."
         ],
-        "answer": "They’re next to the cables."
+        "answer": "They’re next to the oven."
       },
       {
-        "question": "Where are the pliers?",
+        "question": "Where are the bread loaves?",
         "options": [
-          "They’re on the worktable.",
-          "There are on the worktable.",
-          "It’s on the worktable.",
-          "Its on worktable."
+          "They’re on the cooling rack.",
+          "There are on the cooling rack.",
+          "It’s on the cooling rack.",
+          "Their on the cooling rack."
         ],
-        "answer": "They’re on the worktable."
+        "answer": "They’re on the cooling rack."
       },
       {
-        "question": "What are you and the inspector doing?",
+        "question": "What are you and the chef doing?",
         "options": [
-          "We’are checked the safety equipment.",
-          "We’re checking the safety equipment.",
-          "They’re checking the safety equipment.",
-          "He’s checking the safety equipment."
+          "We’ar tested the dough.",
+          "We’re testing the dough.",
+          "They’re testing the dough.",
+          "We’are testing dough."
         ],
-        "answer": "We’re checking the safety equipment."
+        "answer": "We’re testing the dough."
       },
       {
         "question": "Where is the supervisor?",
         "options": [
-          "He’s inspecting the storeroom.",
-          "His inspected the storeroom.",
-          "He are inspecting the storeroom.",
-          "Him inspecting storeroom."
+          "He’s checking the flour stock.",
+          "His checked the flour stock.",
+          "He are checking the flour stock.",
+          "Him’s checking the flour stock."
         ],
-        "answer": "He’s inspecting the storeroom."
+        "answer": "He’s checking the flour stock."
       },
       {
-        "question": "Is there a First aid box?",
+        "question": "Is there a sugar container?",
         "options": [
           "Yes, there isn’t.",
           "No, there aren’t.",
-          "No, their isn’t.",
-          "Yes, there is."
+          "Yes, there is.",
+          "Yes, here is."
         ],
         "answer": "Yes, there is."
       },
       {
-        "question": "Are there any extra safety gloves?",
+        "question": "Are there any extra baking gloves?",
         "options": [
-          "No. there isn’t.",
+          "No, there isn’t.",
           "No, there aren’t.",
           "Yes, there is.",
-          "Yes, their are."
+          "Yes, theire’are."
         ],
         "answer": "No, there aren’t."
       },
       {
-        "question": "Where is the duty chart?",
+        "question": "Where is the weighing scale?",
         "options": [
-          "He’s behind the desk calendar.",
-          "Its front of desk calendar.",
-          "It’s between desk calendar.",
-          "It’s behind the desk calendar."
+          "He’s between the oven.",
+          "Its front of the mixing bowl.",
+          "It’s behind the cupboard.",
+          "They is in the refrigerator."
         ],
-        "answer": "It’s behind the desk calendar."
+        "answer": "It’s behind the cupboard."
       },
       {
-        "question": "Are there any face shields?",
+        "question": "Are there any clean aprons?",
         "options": [
-          "Yes, their aren’t. There are any face shields.",
-          "No, there isn’t. There are no any face shields.",
-          "Yes, there are. There are some thick face shields on the table.",
-          "No, there aren’t. There are any thick face shields on the table."
+          "Yes, their aren’t. There are any clean aprons.",
+          "No, there isn’t. There are no any clean aprons.",
+          "Yes, there are. There are some clean aprons on the rack.",
+          "No, there aren’t. There are any aprons on the rack."
         ],
-        "answer": "Yes, there are. There are some thick face shields on the table."
+        "answer": "Yes, there are. There are some clean aprons on the rack."
       },
       {
-        "question": "Is there a reflective vest?",
+        "question": "Is there a refrigerator in the lab?",
         "options": [
-          "Yes, there are. Its in the cupboard.",
-          "No, there isn’t. There aren’t any bright reflective vests in the cupboard.",
-          "Yes, there is. There is any bright reflective vest in the cupboard.",
-          "No, there aren’t. There are no any reflective vests in the cupboard."
+          "Yes, there are. Its in the storeroom.",
+          "No, there isn’t. There aren’t any refrigerators in the lab.",
+          "Yes, there is. There is any refrigerator in the lab.",
+          "No, there aren’t. There are no any refrigerator in the lab."
         ],
-        "answer": "No, there isn’t. There aren’t any bright reflective vests in the cupboard."
+        "answer": "No, there isn’t. There aren’t any refrigerators in the lab."
       },
       {
-        "question": "Was the digital meter accurate yesterday?",
+        "question": "Was the thermometer accurate yesterday?",
         "options": [
           "No, it wasn’t. It was inaccurate.",
           "Yes, it is. It was inaccurate.",
@@ -212,14 +212,14 @@
         "answer": "No, it wasn’t. It was inaccurate."
       },
       {
-        "question": "What are the technicians doing?",
+        "question": "What are the trainees doing?",
         "options": [
-          "Theire calibrating instruments.",
-          "Hes calibrating instrument.",
-          "They’re calibrating the measuring instruments.",
-          "We’are calibrating the instruments."
+          "Theire cleaning the chopping boards.",
+          "Hes washing knife.",
+          "They’re sterilizing the cooking utensils.",
+          "We’are preparing the aprons."
         ],
-        "answer": "They’re calibrating the measuring instruments."
+        "answer": "They’re sterilizing the cooking utensils."
       }
     ]
   },

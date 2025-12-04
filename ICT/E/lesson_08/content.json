@@ -72,154 +72,154 @@
     },
     "content": [
       {
-        "question": "Is the mechanic tired or energetic?",
+        "question": "Is the technician tired or energetic?",
         "options": [
           "He is energetic.",
           "His tired.",
           "He is tired or energetic.",
-          "Him energetic."
+          "Him’s energetic."
         ],
         "answer": "He is energetic."
       },
       {
-        "question": "Were the tools clean yesterday?",
+        "question": "Was the computer system fast yesterday?",
         "options": [
-          "No, there weren’t. They were dirty.",
-          "Yes, they were. Their were dirty.",
-          "Yes, they was dirty.",
-          "No, they weren’t. They were dirty."
+          "Yes, it’s. It was slow.",
+          "No, it weren’t. They was slow.",
+          "No, they’re slow.",
+          "No, it wasn’t. It was slow."
         ],
-        "answer": "No, there weren’t. They were dirty."
+        "answer": "No, it wasn’t. It was slow."
       },
       {
         "question": "Where is Fathima?",
         "options": [
-          "She’s in the workshop.",
-          "Shi’s in the maintenance yard.",
+          "She’s in the computer lab.",
+          "Shi’s in the server room.",
           "They are in the office.",
-          "Hers in workshop."
+          "Hers in the computer lab."
         ],
-        "answer": "She’s in the workshop."
+        "answer": "She’s in the computer lab."
       },
       {
-        "question": "Where is the storeroom?",
+        "question": "Where is the printer?",
         "options": [
-          "They are behind the factory.",
-          "It’s between the factory and the office.",
-          "Its front of office.",
-          "Its next from factory."
+          "They are behind the router.",
+          "It’s between the router and the scanner.",
+          "Its front of the scanner.",
+          "They’re between router or monitor."
         ],
-        "answer": "It’s between the factory and the office."
+        "answer": "It’s between the router and the scanner."
       },
       {
-        "question": "Where are the tools?",
+        "question": "Where are the network cables?",
         "options": [
-          "Their next to the cables.",
-          "There are under the cables.",
-          "They’re next to the cables.",
-          "There’s next to cables."
+          "Their next to the server.",
+          "There are under the server.",
+          "Theirs are next to the server.",
+          "They’re next to the server."
         ],
-        "answer": "They’re next to the cables."
+        "answer": "They’re next to the server."
       },
       {
-        "question": "Where are the pliers?",
+        "question": "Where are the laptops?",
         "options": [
-          "They’re on the worktable.",
-          "There are on the worktable.",
-          "It’s on the worktable.",
-          "Its on worktable."
+          "They’re on the desk.",
+          "There are on the desk.",
+          "It’s on the desk.",
+          "Theirs are on the desk."
         ],
-        "answer": "They’re on the worktable."
+        "answer": "They’re on the desk."
       },
       {
-        "question": "What are you and the inspector doing?",
+        "question": "What are you and the instructor doing?",
         "options": [
-          "We’are checked the safety equipment.",
-          "We’re checking the safety equipment.",
-          "They’re checking the safety equipment.",
-          "He’s checking the safety equipment."
+          "We’ar fixed the projector.",
+          "We’re fixing the projector.",
+          "They’re fixing the projector.",
+          "He’is fixing the projector."
         ],
-        "answer": "We’re checking the safety equipment."
+        "answer": "We’re fixing the projector."
       },
       {
-        "question": "Where is the supervisor?",
+        "question": "Where is the IT officer?",
         "options": [
-          "He’s inspecting the storeroom.",
-          "His inspected the storeroom.",
-          "He are inspecting the storeroom.",
-          "Him inspecting storeroom."
+          "He’s repairing the router.",
+          "His repaired the router.",
+          "He are repairing the router.",
+          "Him’s repairing the router."
         ],
-        "answer": "He’s inspecting the storeroom."
+        "answer": "He’s repairing the router."
       },
       {
-        "question": "Is there a First aid box?",
+        "question": "Is there a first aid kit in the lab?",
         "options": [
           "Yes, there isn’t.",
           "No, there aren’t.",
-          "No, their isn’t.",
-          "Yes, there is."
+          "Yes, there is.",
+          "Yes, there’re."
         ],
         "answer": "Yes, there is."
       },
       {
-        "question": "Are there any extra safety gloves?",
+        "question": "Are there any spare mouse devices?",
         "options": [
-          "No. there isn’t.",
+          "No, there isn’t.",
           "No, there aren’t.",
           "Yes, there is.",
-          "Yes, their are."
+          "Yes, there are mice."
         ],
-        "answer": "No, there aren’t."
+        "answer": "Yes, there are mice."
       },
       {
-        "question": "Where is the duty chart?",
+        "question": "Where is the server tower?",
         "options": [
-          "He’s behind the desk calendar.",
-          "Its front of desk calendar.",
-          "It’s between desk calendar.",
-          "It’s behind the desk calendar."
+          "He’s between the mouse pad.",
+          "Its front of the monitor.",
+          "It’s behind the workstation.",
+          "They is in the cupboard."
         ],
-        "answer": "It’s behind the desk calendar."
+        "answer": "It’s behind the workstation."
       },
       {
-        "question": "Are there any face shields?",
+        "question": "Are there any USB cables?",
         "options": [
-          "Yes, their aren’t. There are any face shields.",
-          "No, there isn’t. There are no any face shields.",
-          "Yes, there are. There are some thick face shields on the table.",
-          "No, there aren’t. There are any thick face shields on the table."
+          "Yes, their aren’t. There are any USB cables.",
+          "No, there isn’t. There are no any USB cables.",
+          "Yes, there are. There are some USB cables on the desk.",
+          "No, there aren’t. There are any USB cables on the desk."
         ],
-        "answer": "Yes, there are. There are some thick face shields on the table."
+        "answer": "Yes, there are. There are some USB cables on the desk."
       },
       {
-        "question": "Is there a reflective vest?",
+        "question": "Is there a projector in the lab?",
         "options": [
-          "Yes, there are. Its in the cupboard.",
-          "No, there isn’t. There aren’t any bright reflective vests in the cupboard.",
-          "Yes, there is. There is any bright reflective vest in the cupboard.",
-          "No, there aren’t. There are no any reflective vests in the cupboard."
+          "Yes, there are. Its in the office.",
+          "No, there isn’t. There aren’t any projectors in the lab.",
+          "Yes, there is. There is any projector in the lab.",
+          "No, there aren’t. There are no any projector in the lab."
         ],
-        "answer": "No, there isn’t. There aren’t any bright reflective vests in the cupboard."
+        "answer": "No, there isn’t. There aren’t any projectors in the lab."
       },
       {
-        "question": "Was the digital meter accurate yesterday?",
+        "question": "Was the laptop battery full yesterday?",
         "options": [
-          "No, it wasn’t. It was inaccurate.",
-          "Yes, it is. It was inaccurate.",
-          "No, it isn’t. It is inaccurate.",
-          "No, they wasn’t. It was inaccurate."
+          "No, it wasn’t. It was empty.",
+          "Yes, it is. It was empty.",
+          "No, it isn’t. It is empty.",
+          "No, they wasn’t. It was empty."
         ],
-        "answer": "No, it wasn’t. It was inaccurate."
+        "answer": "No, it wasn’t. It was empty."
       },
       {
-        "question": "What are the technicians doing?",
+        "question": "What are the students doing?",
         "options": [
-          "Theire calibrating instruments.",
-          "Hes calibrating instrument.",
-          "They’re calibrating the measuring instruments.",
-          "We’are calibrating the instruments."
+          "Theire installing the application.",
+          "Hes typing report.",
+          "They’re configuring the network settings.",
+          "We’are repairing the keyboard."
         ],
-        "answer": "They’re calibrating the measuring instruments."
+        "answer": "They’re configuring the network settings."
       }
     ]
   },
