@@ -233,87 +233,88 @@
       {
         "words": [
           "the",
-          "mechanic",
+          "cook",
+          "prepares",
+          "rice",
+          "in",
+          "the",
+          "kitchen",
+          "."
+        ],
+        "sentence": "The cook prepares rice in the kitchen."
+      },
+      {
+        "words": [
+          "did",
+          "the",
+          "trainee",
+          "boil",
+          "milk",
+          "yesterday",
+          "morning",
+          "?"
+        ],
+        "sentence": "Did the trainee boil milk yesterday morning?"
+      },
+      {
+        "words": ["they", "bake", "bread", "in", "the", "oven", "daily", "."],
+        "sentence": "They bake bread in the oven daily."
+      },
+      {
+        "words": [
+          "he",
+          "did",
+          "not",
+          "cut",
+          "vegetables",
+          "yesterday",
+          "evening",
+          "."
+        ],
+        "sentence": "He did not cut vegetables yesterday evening."
+      },
+      {
+        "words": [
+          "the",
+          "instructor",
           "checks",
           "the",
-          "brakes",
+          "refrigerator",
           "every",
           "day",
           "."
         ],
-        "sentence": "The mechanic checks the brakes every day."
+        "sentence": "The instructor checks the refrigerator every day."
       },
       {
-        "words": ["she", "didn’t", "drive", "the", "bus", "today", "."],
-        "sentence": "She didn’t drive the bus today."
+        "words": ["she", "fried", "fish", "in", "oil", "last", "night", "."],
+        "sentence": "She fried fish in oil last night."
       },
       {
-        "words": ["did", "they", "replace", "the", "clutch", "yesterday", "?"],
-        "sentence": "Did they replace the clutch yesterday?"
+        "words": ["do", "they", "wash", "plates", "in", "the", "sink", "?"],
+        "sentence": "Do they wash plates in the sink?"
       },
       {
         "words": [
           "the",
-          "trainee",
-          "checks",
+          "students",
+          "measured",
           "the",
-          "tyre",
-          "pressure",
-          "daily",
+          "flour",
+          "in",
+          "class",
+          "yesterday",
           "."
         ],
-        "sentence": "The trainee checks the tyre pressure daily."
+        "sentence": "The students measured the flour in class yesterday."
       },
       {
-        "words": ["he", "washed", "the", "car", "in", "the", "garage", "."],
-        "sentence": "He washed the car in the garage."
+        "words": ["he", "does", "not", "clean", "the", "cutting", "board", "."],
+        "sentence": "He does not clean the cutting board."
       },
       {
-        "words": ["they", "do", "not", "fix", "engines", "at", "night", "."],
-        "sentence": "They do not fix engines at night."
-      },
-      {
-        "words": [
-          "did",
-          "the",
-          "worker",
-          "clean",
-          "the",
-          "workshop",
-          "floor",
-          "?"
-        ],
-        "sentence": "Did the worker clean the workshop floor?"
-      },
-      {
-        "words": [
-          "the",
-          "supervisor",
-          "inspects",
-          "the",
-          "vehicles",
-          "each",
-          "morning",
-          "."
-        ],
-        "sentence": "The supervisor inspects the vehicles each morning."
-      },
-      {
-        "words": ["she", "changed", "the", "battery", "last", "monday", "."],
-        "sentence": "She changed the battery last Monday."
-      },
-      {
-        "words": [
-          "did",
-          "the",
-          "mechanic",
-          "test",
-          "the",
-          "windscreen",
-          "wipers",
-          "?"
-        ],
-        "sentence": "Did the mechanic test the windscreen wipers?"
+        "words": ["the", "baker", "mixed", "spices", "in", "the", "dough", "."],
+        "sentence": "The baker mixed spices in the dough."
       }
     ]
   },

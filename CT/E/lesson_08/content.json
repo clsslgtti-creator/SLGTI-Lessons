@@ -233,87 +233,107 @@
       {
         "words": [
           "the",
-          "mechanic",
-          "checks",
-          "the",
-          "brakes",
+          "mason",
+          "builds",
+          "a",
+          "strong",
+          "wall",
           "every",
-          "day",
+          "week",
           "."
         ],
-        "sentence": "The mechanic checks the brakes every day."
-      },
-      {
-        "words": ["she", "didn’t", "drive", "the", "bus", "today", "."],
-        "sentence": "She didn’t drive the bus today."
-      },
-      {
-        "words": ["did", "they", "replace", "the", "clutch", "yesterday", "?"],
-        "sentence": "Did they replace the clutch yesterday?"
+        "sentence": "The mason builds a strong wall every week."
       },
       {
         "words": [
+          "they",
+          "did",
+          "not",
+          "finish",
           "the",
-          "trainee",
-          "checks",
-          "the",
-          "tyre",
-          "pressure",
-          "daily",
+          "roof",
+          "yesterday",
           "."
         ],
-        "sentence": "The trainee checks the tyre pressure daily."
-      },
-      {
-        "words": ["he", "washed", "the", "car", "in", "the", "garage", "."],
-        "sentence": "He washed the car in the garage."
-      },
-      {
-        "words": ["they", "do", "not", "fix", "engines", "at", "night", "."],
-        "sentence": "They do not fix engines at night."
+        "sentence": "They did not finish the roof yesterday."
       },
       {
         "words": [
           "did",
           "the",
-          "worker",
-          "clean",
+          "engineer",
+          "check",
           "the",
-          "workshop",
-          "floor",
+          "cement",
+          "bags",
           "?"
         ],
-        "sentence": "Did the worker clean the workshop floor?"
+        "sentence": "Did the engineer check the cement bags?"
+      },
+      {
+        "words": [
+          "the",
+          "workers",
+          "carry",
+          "bricks",
+          "to",
+          "the",
+          "site",
+          "."
+        ],
+        "sentence": "The workers carry bricks to the site."
+      },
+      {
+        "words": ["he", "painted", "the", "door", "of", "the", "house", "."],
+        "sentence": "He painted the door of the house."
+      },
+      {
+        "words": ["she", "didn’t", "measure", "the", "beam", "correctly", "."],
+        "sentence": "She didn’t measure the beam correctly."
       },
       {
         "words": [
           "the",
           "supervisor",
-          "inspects",
+          "checked",
           "the",
-          "vehicles",
-          "each",
-          "morning",
+          "scaffolding",
+          "last",
+          "night",
           "."
         ],
-        "sentence": "The supervisor inspects the vehicles each morning."
-      },
-      {
-        "words": ["she", "changed", "the", "battery", "last", "monday", "."],
-        "sentence": "She changed the battery last Monday."
+        "sentence": "The supervisor checked the scaffolding last night."
       },
       {
         "words": [
-          "did",
+          "do",
+          "they",
+          "mix",
           "the",
-          "mechanic",
-          "test",
+          "concrete",
+          "in",
           "the",
-          "windscreen",
-          "wipers",
+          "yard",
           "?"
         ],
-        "sentence": "Did the mechanic test the windscreen wipers?"
+        "sentence": "Do they mix the concrete in the yard?"
+      },
+      {
+        "words": [
+          "the",
+          "carpenter",
+          "cut",
+          "the",
+          "timber",
+          "last",
+          "friday",
+          "."
+        ],
+        "sentence": "The carpenter cut the timber last Friday."
+      },
+      {
+        "words": ["the", "builder", "uses", "a", "hammer", "and", "nails", "."],
+        "sentence": "The builder uses a hammer and nails."
       }
     ]
   },

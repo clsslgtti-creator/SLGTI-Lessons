@@ -233,87 +233,114 @@
       {
         "words": [
           "the",
-          "mechanic",
-          "checks",
+          "machinist",
+          "operates",
           "the",
-          "brakes",
-          "every",
-          "day",
+          "lathe",
+          "in",
+          "class",
           "."
         ],
-        "sentence": "The mechanic checks the brakes every day."
+        "sentence": "The machinist operates the lathe in class."
       },
       {
-        "words": ["she", "didn’t", "drive", "the", "bus", "today", "."],
-        "sentence": "She didn’t drive the bus today."
-      },
-      {
-        "words": ["did", "they", "replace", "the", "clutch", "yesterday", "?"],
-        "sentence": "Did they replace the clutch yesterday?"
+        "words": [
+          "they",
+          "did",
+          "not",
+          "oil",
+          "the",
+          "gears",
+          "yesterday",
+          "."
+        ],
+        "sentence": "They did not oil the gears yesterday."
       },
       {
         "words": [
           "the",
           "trainee",
+          "filed",
+          "a",
+          "metal",
+          "piece",
+          "today",
+          "."
+        ],
+        "sentence": "The trainee filed a metal piece today."
+      },
+      {
+        "words": ["did", "he", "polish", "the", "shaft", "last", "night", "?"],
+        "sentence": "Did he polish the shaft last night?"
+      },
+      {
+        "words": [
+          "the",
+          "instructor",
           "checks",
           "the",
-          "tyre",
-          "pressure",
+          "cutting",
+          "tools",
           "daily",
           "."
         ],
-        "sentence": "The trainee checks the tyre pressure daily."
+        "sentence": "The instructor checks the cutting tools daily."
       },
       {
-        "words": ["he", "washed", "the", "car", "in", "the", "garage", "."],
-        "sentence": "He washed the car in the garage."
+        "words": [
+          "she",
+          "tightened",
+          "the",
+          "bolts",
+          "on",
+          "the",
+          "frame",
+          "."
+        ],
+        "sentence": "She tightened the bolts on the frame."
       },
       {
-        "words": ["they", "do", "not", "fix", "engines", "at", "night", "."],
-        "sentence": "They do not fix engines at night."
+        "words": [
+          "they",
+          "do",
+          "not",
+          "measure",
+          "the",
+          "part",
+          "correctly",
+          "."
+        ],
+        "sentence": "They do not measure the part correctly."
+      },
+      {
+        "words": [
+          "the",
+          "students",
+          "adjusted",
+          "the",
+          "spanner",
+          "last",
+          "week",
+          "."
+        ],
+        "sentence": "The students adjusted the spanner last week."
+      },
+      {
+        "words": ["he", "uses", "a", "drill", "in", "the", "workshop", "."],
+        "sentence": "He uses a drill in the workshop."
       },
       {
         "words": [
           "did",
           "the",
           "worker",
-          "clean",
+          "sharpen",
           "the",
-          "workshop",
-          "floor",
+          "saw",
+          "blade",
           "?"
         ],
-        "sentence": "Did the worker clean the workshop floor?"
-      },
-      {
-        "words": [
-          "the",
-          "supervisor",
-          "inspects",
-          "the",
-          "vehicles",
-          "each",
-          "morning",
-          "."
-        ],
-        "sentence": "The supervisor inspects the vehicles each morning."
-      },
-      {
-        "words": ["she", "changed", "the", "battery", "last", "monday", "."],
-        "sentence": "She changed the battery last Monday."
-      },
-      {
-        "words": [
-          "did",
-          "the",
-          "mechanic",
-          "test",
-          "the",
-          "windscreen",
-          "wipers",
-          "?"
-        ],
-        "sentence": "Did the mechanic test the windscreen wipers?"
+        "sentence": "Did the worker sharpen the saw blade?"
       }
     ]
   },

@@ -233,87 +233,114 @@
       {
         "words": [
           "the",
-          "mechanic",
-          "checks",
+          "student",
+          "types",
+          "reports",
+          "on",
           "the",
-          "brakes",
-          "every",
-          "day",
+          "computer",
           "."
         ],
-        "sentence": "The mechanic checks the brakes every day."
+        "sentence": "The student types reports on the computer."
       },
       {
-        "words": ["she", "didn’t", "drive", "the", "bus", "today", "."],
-        "sentence": "She didn’t drive the bus today."
-      },
-      {
-        "words": ["did", "they", "replace", "the", "clutch", "yesterday", "?"],
-        "sentence": "Did they replace the clutch yesterday?"
+        "words": ["she", "didn’t", "update", "the", "file", "today", "."],
+        "sentence": "She didn’t update the file today."
       },
       {
         "words": [
+          "did",
           "the",
           "trainee",
-          "checks",
+          "install",
           "the",
-          "tyre",
-          "pressure",
-          "daily",
+          "software",
+          "yesterday",
+          "?"
+        ],
+        "sentence": "Did the trainee install the software yesterday?"
+      },
+      {
+        "words": [
+          "they",
+          "check",
+          "emails",
+          "on",
+          "the",
+          "office",
+          "laptop",
           "."
         ],
-        "sentence": "The trainee checks the tyre pressure daily."
+        "sentence": "They check emails on the office laptop."
       },
       {
-        "words": ["he", "washed", "the", "car", "in", "the", "garage", "."],
-        "sentence": "He washed the car in the garage."
+        "words": [
+          "the",
+          "programmer",
+          "wrote",
+          "code",
+          "in",
+          "the",
+          "lab",
+          "."
+        ],
+        "sentence": "The programmer wrote code in the lab."
       },
       {
-        "words": ["they", "do", "not", "fix", "engines", "at", "night", "."],
-        "sentence": "They do not fix engines at night."
+        "words": ["he", "did", "not", "save", "the", "new", "data", "."],
+        "sentence": "He did not save the new data."
       },
       {
         "words": [
           "did",
+          "she",
+          "print",
           "the",
-          "worker",
-          "clean",
-          "the",
-          "workshop",
-          "floor",
-          "?"
-        ],
-        "sentence": "Did the worker clean the workshop floor?"
-      },
-      {
-        "words": [
-          "the",
-          "supervisor",
-          "inspects",
-          "the",
-          "vehicles",
-          "each",
+          "document",
+          "this",
           "morning",
-          "."
+          "?"
         ],
-        "sentence": "The supervisor inspects the vehicles each morning."
-      },
-      {
-        "words": ["she", "changed", "the", "battery", "last", "monday", "."],
-        "sentence": "She changed the battery last Monday."
+        "sentence": "Did she print the document this morning?"
       },
       {
         "words": [
-          "did",
           "the",
-          "mechanic",
-          "test",
+          "technician",
+          "repaired",
           "the",
-          "windscreen",
-          "wipers",
-          "?"
+          "printer",
+          "last",
+          "week",
+          "."
         ],
-        "sentence": "Did the mechanic test the windscreen wipers?"
+        "sentence": "The technician repaired the printer last week."
+      },
+      {
+        "words": [
+          "the",
+          "instructor",
+          "teaches",
+          "databases",
+          "in",
+          "the",
+          "class",
+          "."
+        ],
+        "sentence": "The instructor teaches databases in the class."
+      },
+      {
+        "words": [
+          "he",
+          "uploaded",
+          "the",
+          "project",
+          "files",
+          "last",
+          "night",
+          "."
+        ],
+        "sentence": "He uploaded the project files last night."
       }
     ]
   },

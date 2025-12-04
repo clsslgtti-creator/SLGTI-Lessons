@@ -233,87 +233,115 @@
       {
         "words": [
           "the",
-          "mechanic",
+          "electrician",
           "checks",
           "the",
-          "brakes",
+          "light",
           "every",
-          "day",
+          "morning",
           "."
         ],
-        "sentence": "The mechanic checks the brakes every day."
+        "sentence": "The electrician checks the light every morning."
       },
       {
-        "words": ["she", "didn’t", "drive", "the", "bus", "today", "."],
-        "sentence": "She didn’t drive the bus today."
+        "words": [
+          "did",
+          "they",
+          "test",
+          "the",
+          "wires",
+          "yesterday",
+          "morning",
+          "?"
+        ],
+        "sentence": "Did they test the wires yesterday morning?"
       },
       {
-        "words": ["did", "they", "replace", "the", "clutch", "yesterday", "?"],
-        "sentence": "Did they replace the clutch yesterday?"
+        "words": [
+          "he",
+          "connected",
+          "the",
+          "cable",
+          "to",
+          "the",
+          "socket",
+          "."
+        ],
+        "sentence": "He connected the cable to the socket."
+      },
+      {
+        "words": ["she", "didn’t", "fix", "the", "fan", "properly", "."],
+        "sentence": "She didn’t fix the fan properly."
+      },
+      {
+        "words": [
+          "the",
+          "students",
+          "measure",
+          "the",
+          "voltage",
+          "in",
+          "the",
+          "circuit",
+          "."
+        ],
+        "sentence": "The students measure the voltage in the circuit."
+      },
+      {
+        "words": ["they", "did", "not", "check", "the", "fuse", "box", "."],
+        "sentence": "They did not check the fuse box."
+      },
+      {
+        "words": [
+          "does",
+          "the",
+          "engineer",
+          "replace",
+          "switches",
+          "every",
+          "week",
+          "?"
+        ],
+        "sentence": "Does the engineer replace switches every week?"
+      },
+      {
+        "words": [
+          "the",
+          "instructor",
+          "taught",
+          "earth",
+          "wiring",
+          "yesterday",
+          "afternoon",
+          "."
+        ],
+        "sentence": "The instructor taught earth wiring yesterday afternoon."
       },
       {
         "words": [
           "the",
           "trainee",
-          "checks",
-          "the",
-          "tyre",
-          "pressure",
-          "daily",
+          "installs",
+          "a",
+          "bulb",
+          "in",
+          "class",
           "."
         ],
-        "sentence": "The trainee checks the tyre pressure daily."
-      },
-      {
-        "words": ["he", "washed", "the", "car", "in", "the", "garage", "."],
-        "sentence": "He washed the car in the garage."
-      },
-      {
-        "words": ["they", "do", "not", "fix", "engines", "at", "night", "."],
-        "sentence": "They do not fix engines at night."
+        "sentence": "The trainee installs a bulb in class."
       },
       {
         "words": [
-          "did",
+          "he",
+          "changed",
           "the",
-          "worker",
-          "clean",
-          "the",
-          "workshop",
-          "floor",
-          "?"
-        ],
-        "sentence": "Did the worker clean the workshop floor?"
-      },
-      {
-        "words": [
-          "the",
-          "supervisor",
-          "inspects",
-          "the",
-          "vehicles",
-          "each",
-          "morning",
+          "circuit",
+          "board",
+          "last",
+          "night",
           "."
         ],
-        "sentence": "The supervisor inspects the vehicles each morning."
-      },
-      {
-        "words": ["she", "changed", "the", "battery", "last", "monday", "."],
-        "sentence": "She changed the battery last Monday."
-      },
-      {
-        "words": [
-          "did",
-          "the",
-          "mechanic",
-          "test",
-          "the",
-          "windscreen",
-          "wipers",
-          "?"
-        ],
-        "sentence": "Did the mechanic test the windscreen wipers?"
+        "sentence": "He changed the circuit board last night."
       }
     ]
   },
