@@ -24,6 +24,19 @@ const tokenizeSentence = (sentence) => {
   return matches ? matches : [];
 };
 
+const normalizeWordList = (input) => {
+  if (!Array.isArray(input)) {
+    return null;
+  }
+  const words = input
+    .map((item) => (typeof item === "string" ? item.trim() : ""))
+    .filter((item) => item.length);
+  if (words.length < 2) {
+    return null;
+  }
+  return words;
+};
+
 const normalizeSentences = (raw = []) =>
   (Array.isArray(raw) ? raw : [])
     .map((entry, index) => {
@@ -31,7 +44,8 @@ const normalizeSentences = (raw = []) =>
       if (!sentence) {
         return null;
       }
-      const tokens = tokenizeSentence(sentence);
+      const providedWords = normalizeWordList(entry?.words);
+      const tokens = providedWords ?? tokenizeSentence(sentence);
       if (tokens.length < 2) {
         return null;
       }

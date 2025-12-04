@@ -231,33 +231,88 @@
     },
     "content": [
       {
+        "words": [
+          "the",
+          "mechanic",
+          "checks",
+          "the",
+          "brakes",
+          "every",
+          "day",
+          "."
+        ],
         "sentence": "The mechanic checks the brakes every day."
       },
       {
+        "words": ["she", "didn’t", "drive", "the", "bus", "today", "."],
         "sentence": "She didn’t drive the bus today."
       },
       {
+        "words": ["did", "they", "replace", "the", "clutch", "yesterday", "?"],
         "sentence": "Did they replace the clutch yesterday?"
       },
       {
+        "words": [
+          "the",
+          "trainee",
+          "checks",
+          "the",
+          "tyre",
+          "pressure",
+          "daily",
+          "."
+        ],
         "sentence": "The trainee checks the tyre pressure daily."
       },
       {
+        "words": ["he", "washed", "the", "car", "in", "the", "garage", "."],
         "sentence": "He washed the car in the garage."
       },
       {
+        "words": ["they", "do", "not", "fix", "engines", "at", "night", "."],
         "sentence": "They do not fix engines at night."
       },
       {
+        "words": [
+          "did",
+          "the",
+          "worker",
+          "clean",
+          "the",
+          "workshop",
+          "floor",
+          "?"
+        ],
         "sentence": "Did the worker clean the workshop floor?"
       },
       {
+        "words": [
+          "the",
+          "supervisor",
+          "inspects",
+          "the",
+          "vehicles",
+          "each",
+          "morning",
+          "."
+        ],
         "sentence": "The supervisor inspects the vehicles each morning."
       },
       {
+        "words": ["she", "changed", "the", "battery", "last", "monday", "."],
         "sentence": "She changed the battery last Monday."
       },
       {
+        "words": [
+          "did",
+          "the",
+          "mechanic",
+          "test",
+          "the",
+          "windscreen",
+          "wipers",
+          "?"
+        ],
         "sentence": "Did the mechanic test the windscreen wipers?"
       }
     ]
