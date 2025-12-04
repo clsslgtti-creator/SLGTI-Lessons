@@ -1,0 +1,454 @@
+{
+  "meta": {
+    "lesson_no": "8 - Test",
+    "level": "Elementary",
+    "section": "Automobile Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
+      "audio": "assets/audio/a_1_i.mp3"
+    },
+    "content": [
+      {
+        "question": "The computer servers ___ very secure in the data room.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The trainees ___ learning about software installation right now.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The projector ___ in the laboratory two days ago.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "was"
+      },
+      {
+        "question": "The technicians ___ busy with the network cables at the moment.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The laptops ___ ready for the training session last week.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The ICT instructor ___ explaining the new programming task right now.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "is"
+      },
+      {
+        "question": "The printers ___ out of order during the exam yesterday morning.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The students ___ very excited about the coding competition last May.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The router ___ on the shelf next to the switch.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "is"
+      },
+      {
+        "question": "The technicians ___ not happy with the old operating system last year.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "were"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
+      "audio": "assets/audio/a_2_i.mp3"
+    },
+    "content": [
+      {
+        "question": "Is the mechanic tired or energetic?",
+        "options": [
+          "He is energetic.",
+          "His tired.",
+          "He is tired or energetic.",
+          "Him energetic."
+        ],
+        "answer": "He is energetic."
+      },
+      {
+        "question": "Were the tools clean yesterday?",
+        "options": [
+          "No, there weren’t. They were dirty.",
+          "Yes, they were. Their were dirty.",
+          "Yes, they was dirty.",
+          "No, they weren’t. They were dirty."
+        ],
+        "answer": "No, there weren’t. They were dirty."
+      },
+      {
+        "question": "Where is Fathima?",
+        "options": [
+          "She’s in the workshop.",
+          "Shi’s in the maintenance yard.",
+          "They are in the office.",
+          "Hers in workshop."
+        ],
+        "answer": "She’s in the workshop."
+      },
+      {
+        "question": "Where is the storeroom?",
+        "options": [
+          "They are behind the factory.",
+          "It’s between the factory and the office.",
+          "Its front of office.",
+          "Its next from factory."
+        ],
+        "answer": "It’s between the factory and the office."
+      },
+      {
+        "question": "Where are the tools?",
+        "options": [
+          "Their next to the cables.",
+          "There are under the cables.",
+          "They’re next to the cables.",
+          "There’s next to cables."
+        ],
+        "answer": "They’re next to the cables."
+      },
+      {
+        "question": "Where are the pliers?",
+        "options": [
+          "They’re on the worktable.",
+          "There are on the worktable.",
+          "It’s on the worktable.",
+          "Its on worktable."
+        ],
+        "answer": "They’re on the worktable."
+      },
+      {
+        "question": "What are you and the inspector doing?",
+        "options": [
+          "We’are checked the safety equipment.",
+          "We’re checking the safety equipment.",
+          "They’re checking the safety equipment.",
+          "He’s checking the safety equipment."
+        ],
+        "answer": "We’re checking the safety equipment."
+      },
+      {
+        "question": "Where is the supervisor?",
+        "options": [
+          "He’s inspecting the storeroom.",
+          "His inspected the storeroom.",
+          "He are inspecting the storeroom.",
+          "Him inspecting storeroom."
+        ],
+        "answer": "He’s inspecting the storeroom."
+      },
+      {
+        "question": "Is there a First aid box?",
+        "options": [
+          "Yes, there isn’t.",
+          "No, there aren’t.",
+          "No, their isn’t.",
+          "Yes, there is."
+        ],
+        "answer": "Yes, there is."
+      },
+      {
+        "question": "Are there any extra safety gloves?",
+        "options": [
+          "No. there isn’t.",
+          "No, there aren’t.",
+          "Yes, there is.",
+          "Yes, their are."
+        ],
+        "answer": "No, there aren’t."
+      },
+      {
+        "question": "Where is the duty chart?",
+        "options": [
+          "He’s behind the desk calendar.",
+          "Its front of desk calendar.",
+          "It’s between desk calendar.",
+          "It’s behind the desk calendar."
+        ],
+        "answer": "It’s behind the desk calendar."
+      },
+      {
+        "question": "Are there any face shields?",
+        "options": [
+          "Yes, their aren’t. There are any face shields.",
+          "No, there isn’t. There are no any face shields.",
+          "Yes, there are. There are some thick face shields on the table.",
+          "No, there aren’t. There are any thick face shields on the table."
+        ],
+        "answer": "Yes, there are. There are some thick face shields on the table."
+      },
+      {
+        "question": "Is there a reflective vest?",
+        "options": [
+          "Yes, there are. Its in the cupboard.",
+          "No, there isn’t. There aren’t any bright reflective vests in the cupboard.",
+          "Yes, there is. There is any bright reflective vest in the cupboard.",
+          "No, there aren’t. There are no any reflective vests in the cupboard."
+        ],
+        "answer": "No, there isn’t. There aren’t any bright reflective vests in the cupboard."
+      },
+      {
+        "question": "Was the digital meter accurate yesterday?",
+        "options": [
+          "No, it wasn’t. It was inaccurate.",
+          "Yes, it is. It was inaccurate.",
+          "No, it isn’t. It is inaccurate.",
+          "No, they wasn’t. It was inaccurate."
+        ],
+        "answer": "No, it wasn’t. It was inaccurate."
+      },
+      {
+        "question": "What are the technicians doing?",
+        "options": [
+          "Theire calibrating instruments.",
+          "Hes calibrating instrument.",
+          "They’re calibrating the measuring instruments.",
+          "We’are calibrating the instruments."
+        ],
+        "answer": "They’re calibrating the measuring instruments."
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "JUMBLED",
+    "instruction": {
+      "text": "Rearrange these sentences in the correct order.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும்.",
+      "audio": "assets/audio/a_3_i.mp3"
+    },
+    "content": [
+      {
+        "words": [
+          "the",
+          "mechanic",
+          "checks",
+          "the",
+          "brakes",
+          "every",
+          "day",
+          "."
+        ],
+        "sentence": "The mechanic checks the brakes every day."
+      },
+      {
+        "words": ["she", "didn’t", "drive", "the", "bus", "today", "."],
+        "sentence": "She didn’t drive the bus today."
+      },
+      {
+        "words": ["did", "they", "replace", "the", "clutch", "yesterday", "?"],
+        "sentence": "Did they replace the clutch yesterday?"
+      },
+      {
+        "words": [
+          "the",
+          "trainee",
+          "checks",
+          "the",
+          "tyre",
+          "pressure",
+          "daily",
+          "."
+        ],
+        "sentence": "The trainee checks the tyre pressure daily."
+      },
+      {
+        "words": ["he", "washed", "the", "car", "in", "the", "garage", "."],
+        "sentence": "He washed the car in the garage."
+      },
+      {
+        "words": ["they", "do", "not", "fix", "engines", "at", "night", "."],
+        "sentence": "They do not fix engines at night."
+      },
+      {
+        "words": [
+          "did",
+          "the",
+          "worker",
+          "clean",
+          "the",
+          "workshop",
+          "floor",
+          "?"
+        ],
+        "sentence": "Did the worker clean the workshop floor?"
+      },
+      {
+        "words": [
+          "the",
+          "supervisor",
+          "inspects",
+          "the",
+          "vehicles",
+          "each",
+          "morning",
+          "."
+        ],
+        "sentence": "The supervisor inspects the vehicles each morning."
+      },
+      {
+        "words": ["she", "changed", "the", "battery", "last", "monday", "."],
+        "sentence": "She changed the battery last Monday."
+      },
+      {
+        "words": [
+          "did",
+          "the",
+          "mechanic",
+          "test",
+          "the",
+          "windscreen",
+          "wipers",
+          "?"
+        ],
+        "sentence": "Did the mechanic test the windscreen wipers?"
+      }
+    ]
+  },
+  "activity_4": {
+    "type": "LISTENING",
+    "instruction": {
+      "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
+      "audio": "assets/audio/a_4_i.mp3"
+    },
+    "audio": "assets/audio/a_4_q.mp3",
+    "content": [
+      {
+        "question": "Where were Kamal and Ramesh yesterday morning?",
+        "options": [
+          "In a Colombo market",
+          "In the Kurunegala workshop",
+          "At a Galle Face exhibition",
+          "In a Jaffna training hall"
+        ],
+        "answer": "In the Kurunegala workshop"
+      },
+      {
+        "question": "What kind of vehicle was noisy?",
+        "options": [
+          "The hybrid car",
+          "The diesel van",
+          "The electric scooter",
+          "The petrol motorbike"
+        ],
+        "answer": "The diesel van"
+      },
+      {
+        "question": "What problem did the hybrid car have yesterday?",
+        "options": [
+          "Its engine oil was leaking.",
+          "Its battery was not charging.",
+          "Its brake pads were broken.",
+          "Its tyres were flat."
+        ],
+        "answer": "Its battery was not charging."
+      },
+      {
+        "question": "Who repaired the flat tyre?",
+        "options": ["Kamal", "Ramesh", "Anura", "The instructor"],
+        "answer": "Anura"
+      },
+      {
+        "question": "Why is Kamal confident?",
+        "options": [
+          "He is going to Galle Face.",
+          "He has presented before.",
+          "He is going with Ramesh.",
+          "He has checked the brakepads."
+        ],
+        "answer": "He has presented before."
+      },
+      {
+        "question": "What was wrong with the old pressure gauge?",
+        "options": [
+          "It was broken yesterday.",
+          "It was not accurate last week.",
+          "It was missing today.",
+          "It was very expensive."
+        ],
+        "answer": "It was not accurate last week."
+      },
+      {
+        "question": "What are the trainees learning right now?",
+        "options": [
+          "How to repair a hybrid battery",
+          "How to use a hydraulic lift",
+          "How to replace brake pads",
+          "How to change engine oil"
+        ],
+        "answer": "How to use a hydraulic lift"
+      },
+      {
+        "question": "Why is the instructor not happy?",
+        "options": [
+          "The gauge was inaccurate.",
+          "Only one student wore a reflective vest.",
+          "Kamal spoke too loudly.",
+          "The hybrid car was noisy."
+        ],
+        "answer": "Only one student wore a reflective vest."
+      },
+      {
+        "question": "What will happen tomorrow?",
+        "options": [
+          "The group will repair a van in Kurunegala.",
+          "The group will travel to Galle Face for an exhibition.",
+          "Ramesh will repair a tyre in Colombo.",
+          "Kamal will buy a new hydraulic lift."
+        ],
+        "answer": "The group will travel to Galle Face for an exhibition."
+      },
+      {
+        "question": "Why is Ramesh nervous?",
+        "options": [
+          "He has never driven a hybrid car.",
+          "He has never spoken at a public event.",
+          "He has never repaired an engine.",
+          "He has never visited Colombo."
+        ],
+        "answer": "He has never spoken at a public event."
+      },
+      {
+        "question": "Where did the car with the flat tyre come from?",
+        "options": ["Kurunegala", "Colombo", "Jaffna"],
+        "answer": "Colombo"
+      },
+      {
+        "question": "Where was the small fair in 2023?",
+        "options": ["Colombo", "Kurunegala", "Jaffna"],
+        "answer": "Jaffna"
+      },
+      {
+        "question": "What are they demonstrating on the vehicles tomorrow?",
+        "options": [
+          "How to check food quality",
+          "How to check brake pads",
+          "How to check roof lights"
+        ],
+        "answer": "How to check brake pads"
+      },
+      {
+        "question": "Which tool was replaced?",
+        "options": ["Digital pressure gauge", "Engine lift", "Car battery"],
+        "answer": "Digital pressure gauge"
+      },
+      {
+        "question": "What are they not supposed to do with the hydraulic lift?",
+        "options": ["Drive under it", "Stand under it", "Sit beside it"],
+        "answer": "Stand under it"
+      }
+    ]
+  }
+}
