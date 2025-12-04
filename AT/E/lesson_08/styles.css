@@ -21,11 +21,11 @@
 
   --radius-sm: 6px;
 
-  --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.12);
+  --shadow-lg: none;
 
-  --shadow-md: 0 10px 20px rgba(15, 23, 42, 0.12);
+  --shadow-md: none;
 
-  --shadow-sm: 0 4px 10px rgba(15, 23, 42, 0.08);
+  --shadow-sm: none;
 
   --transition-fast: 0.25s ease;
 
@@ -1064,6 +1064,13 @@ body {
   color: #065f46;
 }
 
+.listening-option.is-selected:not(.is-correct):not(.is-incorrect) {
+  border-color: rgba(31, 111, 235, 0.75);
+  background: rgba(31, 111, 235, 0.12);
+  color: var(--color-primary);
+  box-shadow: 0 12px 20px rgba(31, 111, 235, 0.2);
+}
+
 .listening-option.is-incorrect {
   border-color: #dc2626;
 
@@ -1606,6 +1613,12 @@ body {
   color: var(--color-text);
 }
 
+body *,
+body *::before,
+body *::after {
+  box-shadow: none !important;
+}
+
 .assessment-summary__score {
   margin: 0;
   font-size: clamp(1.1rem, 2.6vw, 1.35rem);
@@ -1627,7 +1640,7 @@ body {
   content: "Listen to the instructions before answering.";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.55);
+  background: rgba(255, 255, 255, 0.125);
   color: #fff;
   border-radius: inherit;
   display: flex;
