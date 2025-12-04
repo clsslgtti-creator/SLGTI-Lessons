@@ -1,20 +1,215 @@
-import { buildSbsOneSlides } from "./lib/sbs-1.js";
-import { buildSbsTwoSlides } from "./lib/sbs-2.js";
-import { buildSbsThreeSlides } from "./lib/sbs-3.js";
-import { buildPronunciationSlides } from "./lib/pronunciation.js";
-import { buildInteractive1Slides } from "./lib/interactive-1.js";
-import { buildInteractive2Slides } from "./lib/interactive-2.js";
-import { buildInteractive3Slides } from "./lib/interactive-3.js";
-import { buildActivityTwoSlides } from "./lib/activity-2.js";
-import { buildListeningOneSlides } from "./lib/listening-1.js";
-import { buildListeningTwoSlides } from "./lib/listening-2.js";
-import { buildListeningThreeSlides } from "./lib/listening-3.js";
+import { buildMcqSlides } from "./lib/mcq.js";
+import { buildJumbledSlides } from "./lib/jumbled.js";
+import { buildListeningSlides } from "./lib/listening.js";
 
 const slidesContainer = document.getElementById("slides");
 const progressIndicator = document.getElementById("progressIndicator");
 const prevBtn = document.getElementById("prevSlide");
 const nextBtn = document.getElementById("nextSlide");
 const lessonMetaEl = document.getElementById("lessonMeta");
+
+const ASSESSMENT_MAX_SCORE = 50;
+
+const deepClone = (value) => {
+  if (value === null || value === undefined) {
+    return null;
+  }
+  try {
+    return JSON.parse(JSON.stringify(value));
+  } catch {
+    return null;
+  }
+};
+
+const assessmentState = {
+  maxScore: ASSESSMENT_MAX_SCORE,
+  activities: {},
+  totalPossible: 0,
+  totalCorrect: 0,
+};
+
+const assessmentListeners = new Set();
+
+const recalcAssessmentTotals = () => {
+  let possible = 0;
+  let correct = 0;
+  Object.values(assessmentState.activities).forEach((activity) => {
+    const total = Number.isFinite(activity.total) ? Math.max(0, activity.total) : 0;
+    const earned = Number.isFinite(activity.correct) ? Math.max(0, activity.correct) : 0;
+    possible += total;
+    correct += Math.min(total, earned);
+  });
+  assessmentState.totalPossible = possible;
+  assessmentState.totalCorrect = Math.min(possible, correct);
+};
+
+const computeScaledScore = () => {
+  if (!assessmentState.totalPossible || assessmentState.totalPossible <= 0) {
+    return 0;
+  }
+  const ratio = assessmentState.totalCorrect / assessmentState.totalPossible;
+  return Math.round(ratio * assessmentState.maxScore);
+};
+
+const getAssessmentSnapshot = () => {
+  const activities = {};
+  Object.entries(assessmentState.activities).forEach(([key, value]) => {
+    activities[key] = {
+      type: value.type || "UNKNOWN",
+      label: value.label || key,
+      total: Number.isFinite(value.total) ? Math.max(0, value.total) : 0,
+      correct: Number.isFinite(value.correct) ? Math.max(0, value.correct) : 0,
+      submitted: Boolean(value.submitted),
+      detail: value.detail ? deepClone(value.detail) : null,
+      timestamp: value.timestamp || null,
+    };
+  });
+  return {
+    maxScore: assessmentState.maxScore,
+    totalPossible: assessmentState.totalPossible,
+    totalCorrect: assessmentState.totalCorrect,
+    scaledScore: computeScaledScore(),
+    activities,
+  };
+};
+
+const notifyAssessmentSubscribers = () => {
+  recalcAssessmentTotals();
+  const snapshot = getAssessmentSnapshot();
+  assessmentListeners.forEach((listener) => {
+    try {
+      listener(snapshot);
+    } catch (error) {
+      console.error("[Assessment] Listener failed.", error);
+    }
+  });
+  persistScormAssessmentSnapshot(snapshot);
+  updateScormScore(snapshot);
+};
+
+const subscribeToAssessment = (listener) => {
+  if (typeof listener !== "function") {
+    return () => {};
+  }
+  assessmentListeners.add(listener);
+  return () => assessmentListeners.delete(listener);
+};
+
+const getActivityAssessment = (activityKey) => {
+  const entry = assessmentState.activities?.[activityKey];
+  if (!entry) {
+    return null;
+  }
+  return {
+    ...entry,
+    detail: entry.detail ? deepClone(entry.detail) : null,
+  };
+};
+
+const registerAssessmentActivity = (activityKey, definition = {}) => {
+  if (!activityKey) {
+    return;
+  }
+  const existing = assessmentState.activities[activityKey];
+  const totalFromDefinition = Number.isFinite(definition.total)
+    ? Math.max(0, Math.floor(definition.total))
+    : undefined;
+  const next = {
+    type: definition.type || existing?.type || "UNKNOWN",
+    label: definition.label || existing?.label || activityKey,
+    total:
+      totalFromDefinition !== undefined
+        ? totalFromDefinition
+        : Number.isFinite(existing?.total)
+        ? existing.total
+        : 0,
+    correct: Number.isFinite(existing?.correct) ? existing.correct : 0,
+    submitted: Boolean(existing?.submitted),
+    detail: existing?.detail ? deepClone(existing.detail) : null,
+    timestamp: existing?.timestamp || null,
+  };
+  assessmentState.activities[activityKey] = next;
+  notifyAssessmentSubscribers();
+};
+
+const recordAssessmentResult = (activityKey, result = {}) => {
+  if (!activityKey) {
+    return;
+  }
+  const existing = assessmentState.activities[activityKey];
+  const total = Number.isFinite(result.total)
+    ? Math.max(0, Math.floor(result.total))
+    : Number.isFinite(existing?.total)
+    ? existing.total
+    : 0;
+  const correct = Number.isFinite(result.correct)
+    ? Math.max(0, Math.min(total, Math.floor(result.correct)))
+    : Number.isFinite(existing?.correct)
+    ? Math.min(total, existing.correct)
+    : 0;
+  assessmentState.activities[activityKey] = {
+    type: result.type || existing?.type || "UNKNOWN",
+    label: result.label || existing?.label || activityKey,
+    total,
+    correct,
+    submitted: result.submitted !== undefined ? Boolean(result.submitted) : true,
+    detail: result.detail ? deepClone(result.detail) : null,
+    timestamp: result.timestamp || new Date().toISOString(),
+  };
+  notifyAssessmentSubscribers();
+};
+
+const applyAssessmentSnapshot = (snapshot) => {
+  if (!snapshot || typeof snapshot !== "object") {
+    return;
+  }
+  const { activities } = snapshot;
+  if (!activities || typeof activities !== "object") {
+    return;
+  }
+  assessmentState.activities = {};
+  Object.entries(activities).forEach(([key, value]) => {
+    if (!key || !value) {
+      return;
+    }
+    assessmentState.activities[key] = {
+      type: value.type || "UNKNOWN",
+      label: value.label || key,
+      total: Number.isFinite(value.total) ? Math.max(0, Math.floor(value.total)) : 0,
+      correct: Number.isFinite(value.correct) ? Math.max(0, Math.floor(value.correct)) : 0,
+      submitted: Boolean(value.submitted),
+      detail: value.detail ? deepClone(value.detail) : null,
+      timestamp: value.timestamp || null,
+    };
+  });
+  notifyAssessmentSubscribers();
+};
+
+const createActivityAssessmentHooks = (activityKey, context = {}) => {
+  const activityLabel = context.activityNumber
+    ? `Activity ${context.activityNumber}`
+    : "Activity";
+  const resolvedLabel =
+    context.focus && typeof context.focus === "string" && context.focus.trim().length
+      ? `${activityLabel}: ${context.focus}`
+      : activityLabel;
+  const resolvedType = context.normalizedType || context.type || "UNKNOWN";
+  return {
+    registerActivity: (definition = {}) =>
+      registerAssessmentActivity(activityKey, {
+        type: resolvedType,
+        label: definition.label || resolvedLabel,
+        ...definition,
+      }),
+    submitResult: (result = {}) =>
+      recordAssessmentResult(activityKey, {
+        type: resolvedType,
+        label: result.label || resolvedLabel,
+        ...result,
+      }),
+    getState: () => getActivityAssessment(activityKey),
+  };
+};
 
 // SCORM integration helpers keep track of the LMS lifecycle and resume data.
 const scormState = {
@@ -25,8 +220,11 @@ const scormState = {
   completionRecorded: false,
   lastSavedIndex: null,
   lastSavedTotal: null,
+  lastSavedSuspendJson: null,
   exitRegistered: false,
   quitting: false,
+  resumeAssessmentSnapshot: null,
+  lastRecordedScore: null,
 };
 
 const safeParseIndex = (value) => {
@@ -100,6 +298,9 @@ const ensureScormConnection = () => {
     if (typeof suspendPayload.totalSlides === "number") {
       scormState.lastSavedTotal = suspendPayload.totalSlides;
     }
+    if (suspendPayload && typeof suspendPayload === "object") {
+      scormState.resumeAssessmentSnapshot = suspendPayload.assessment ?? null;
+    }
     const resumeCandidate = fromLocation ?? fromSuspend ?? 0;
     scormState.resumeIndex =
       typeof resumeCandidate === "number" && resumeCandidate >= 0
@@ -137,6 +338,14 @@ const getResumeSlideIndex = (totalSlides) => {
   return Math.max(0, Math.min(upperBound, requested));
 };
 
+const buildSuspendPayload = (index, totalSlides) => ({
+  currentSlide: index,
+  totalSlides,
+  completed: scormState.completionRecorded,
+  timestamp: new Date().toISOString(),
+  assessment: getAssessmentSnapshot(),
+});
+
 const persistScormProgress = (index, totalSlides) => {
   if (!ensureScormConnection() || !scormState.api) {
     return;
@@ -160,16 +369,13 @@ const persistScormProgress = (index, totalSlides) => {
   scormState.resumeIndex = index;
   scormState.lastSavedTotal = normalizedTotal;
 
-  const payload = {
-    currentSlide: index,
-    totalSlides: normalizedTotal,
-    completed: scormState.completionRecorded,
-    timestamp: new Date().toISOString(),
-  };
+  const payload = buildSuspendPayload(index, normalizedTotal);
 
   try {
     scormState.api.set("cmi.core.lesson_location", String(index));
-    scormState.api.set("cmi.suspend_data", JSON.stringify(payload));
+    const serialized = JSON.stringify(payload);
+    scormState.lastSavedSuspendJson = serialized;
+    scormState.api.set("cmi.suspend_data", serialized);
     if (!scormState.completionRecorded) {
       scormState.api.set("cmi.core.exit", "suspend");
       scormState.api.set("cmi.core.lesson_status", "incomplete");
@@ -192,36 +398,82 @@ const markLessonComplete = (index, totalSlides) => {
   scormState.completionRecorded = true;
   scormState.resumeIndex = index;
 
-  const payload = {
-    currentSlide: index,
-    totalSlides,
-    completed: true,
-    timestamp: new Date().toISOString(),
-  };
+  const payload = buildSuspendPayload(index, totalSlides);
+  payload.completed = true;
 
   try {
     scormState.api.set("cmi.core.lesson_status", "completed");
     scormState.api.set("cmi.core.exit", "normal");
     scormState.api.set("cmi.core.lesson_location", String(index));
-    scormState.api.set("cmi.suspend_data", JSON.stringify(payload));
+    const serialized = JSON.stringify(payload);
+    scormState.lastSavedSuspendJson = serialized;
+    scormState.api.set("cmi.suspend_data", serialized);
     scormState.api.save();
   } catch (error) {
     console.error("[SCORM] Unable to persist completion.", error);
   }
 };
 
+function persistScormAssessmentSnapshot(snapshot) {
+  if (!ensureScormConnection() || !scormState.api) {
+    return;
+  }
+
+  const recordedIndex =
+    Number.isInteger(scormState.lastSavedIndex) && scormState.lastSavedIndex >= 0
+      ? scormState.lastSavedIndex
+      : Number.isInteger(currentSlideIndex) && currentSlideIndex >= 0
+      ? currentSlideIndex
+      : 0;
+  const recordedTotal =
+    Number.isInteger(scormState.lastSavedTotal) && scormState.lastSavedTotal > 0
+      ? scormState.lastSavedTotal
+      : slides.length || null;
+
+  const payload = buildSuspendPayload(recordedIndex, recordedTotal);
+  if (snapshot && typeof snapshot === "object") {
+    payload.assessment = snapshot;
+  }
+
+  const serialized = JSON.stringify(payload);
+  if (serialized === scormState.lastSavedSuspendJson) {
+    return;
+  }
+
+  try {
+    scormState.api.set("cmi.suspend_data", serialized);
+    scormState.lastSavedSuspendJson = serialized;
+    scormState.api.save();
+  } catch (error) {
+    console.error("[SCORM] Unable to save assessment snapshot.", error);
+  }
+}
+
+function updateScormScore(snapshot = getAssessmentSnapshot()) {
+  if (!ensureScormConnection() || !scormState.api) {
+    return;
+  }
+  const rawScore = Number.isFinite(snapshot?.scaledScore)
+    ? Math.max(0, Math.min(ASSESSMENT_MAX_SCORE, snapshot.scaledScore))
+    : 0;
+  if (scormState.lastRecordedScore === rawScore) {
+    return;
+  }
+  try {
+    scormState.api.set("cmi.core.score.min", "0");
+    scormState.api.set("cmi.core.score.max", String(ASSESSMENT_MAX_SCORE));
+    scormState.api.set("cmi.core.score.raw", String(rawScore));
+    scormState.lastRecordedScore = rawScore;
+    scormState.api.save();
+  } catch (error) {
+    console.error("[SCORM] Unable to record score.", error);
+  }
+}
+
 const activityBuilders = {
-  "SBS-1": buildSbsOneSlides,
-  "SBS-3": buildSbsThreeSlides,
-  "SBS-2": buildSbsTwoSlides,
-  PRONUNCIATION: buildPronunciationSlides,
-  "INTERACTIVE-1": buildInteractive1Slides,
-  "INTERACTIVE-2": buildInteractive2Slides,
-  "INTERACTIVE-3": buildInteractive3Slides,
-  "LISTENING-1": buildListeningOneSlides,
-  "LISTENING-2": buildListeningTwoSlides,
-  "LISTENING-3": buildListeningThreeSlides,
-  "ACTIVITY-2": buildActivityTwoSlides,
+  MCQ: buildMcqSlides,
+  JUMBLED: buildJumbledSlides,
+  LISTENING: buildListeningSlides,
 };
 
 const extractInstructionEntries = (input, { allowObject = false } = {}) => {
@@ -615,6 +867,20 @@ const blockGameShellInteraction = (slideElement) => {
 const INITIAL_INSTRUCTION_DELAY_SECONDS = 5;
 let instructionPlayback = null;
 
+const setSlideInstructionLock = (slideObj, locked) => {
+  if (!slideObj?.element) {
+    return;
+  }
+  const target = slideObj.element;
+  target.classList.toggle("is-instruction-locked", locked);
+  target.dispatchEvent(
+    new CustomEvent("instructionstatechange", {
+      bubbles: false,
+      detail: { locked: Boolean(locked) },
+    })
+  );
+};
+
 const cleanupInstructionController = (
   controller,
   { preserveContent = false } = {}
@@ -659,6 +925,10 @@ const cleanupInstructionController = (
   });
 
   restoreButton?.({ restoreText: true });
+  if (controller.requiresLock && controller.slide?._instructionLockActive) {
+    setSlideInstructionLock(controller.slide, false);
+    controller.slide._instructionLockActive = false;
+  }
   indicator?.cleanup?.({ preserveContent });
 };
 
@@ -795,6 +1065,7 @@ const handleInstructionForSlide = (slideObj) => {
 
   const audioUrl = slideObj.instructionAudio;
   const hasAutoPlay = Boolean(slideObj.autoPlay?.trigger);
+  const shouldGateInteractions = Boolean(audioUrl);
 
   if (!audioUrl && !hasAutoPlay) {
     slideObj._instructionComplete = true;
@@ -814,7 +1085,13 @@ const handleInstructionForSlide = (slideObj) => {
     onEnded: null,
     indicator,
     restoreButton: () => {},
+    requiresLock: shouldGateInteractions,
   };
+
+  if (shouldGateInteractions) {
+    slideObj._instructionLockActive = true;
+    setSlideInstructionLock(slideObj, true);
+  }
 
   const releaseGameShellLock = blockGameShellInteraction(slideObj.element);
   if (releaseGameShellLock) {
@@ -1116,10 +1393,32 @@ const createLessonEndSlide = (meta = {}) => {
     </div>
   `;
 
+  const container = slide.querySelector(".end-of-lesson");
+  const scoreSummary = document.createElement("div");
+  scoreSummary.className = "assessment-summary";
+  const scoreLabel = document.createElement("p");
+  scoreLabel.className = "assessment-summary__score";
+  const detailLabel = document.createElement("p");
+  detailLabel.className = "assessment-summary__detail";
+  scoreSummary.append(scoreLabel, detailLabel);
+  container?.appendChild(scoreSummary);
+
+  const updateSummary = (snapshot) => {
+    if (!snapshot || snapshot.totalPossible <= 0) {
+      scoreLabel.textContent = "Total Score: Pending";
+      detailLabel.textContent = "Submit the activities to view your score.";
+      return;
+    }
+    scoreLabel.innerHTML = `Total Score: <strong>${snapshot.scaledScore} / ${snapshot.maxScore}</strong>`;
+    detailLabel.textContent = `You answered ${snapshot.totalCorrect} of ${snapshot.totalPossible} questions correctly.`;
+  };
+
+  subscribeToAssessment(updateSummary);
+
   return {
     id: "lesson-complete",
     element: slide,
-    onEnter: () => {},
+    onEnter: () => updateSummary(getAssessmentSnapshot()),
     onLeave: () => {},
   };
 };
@@ -1136,7 +1435,7 @@ const collectActivityEntries = (lessonData = {}) =>
         typeof value.focus === "string" && value.focus.trim().length
           ? value.focus.trim()
           : "";
-      const instructions = value.instructions ?? null;
+      const instructions = value.instructions ?? value.instruction ?? null;
       return {
         key,
         type: rawType,
@@ -1252,7 +1551,10 @@ const buildLessonSlides = (lessonData) => {
         isGeneral: instructionsAreGeneral,
       } = createInstructionResolver(instructions, activityNumber);
       const handler = activityBuilders[normalizedType];
-      const producedSlides = handler ? handler(data, context) : null;
+      const assessmentHooks = createActivityAssessmentHooks(key, context);
+      const producedSlides = handler
+        ? handler(data, context, assessmentHooks)
+        : null;
       const slideObjects = (
         Array.isArray(producedSlides) ? producedSlides : []
       ).filter((item) => item && item.element instanceof HTMLElement);
@@ -1342,8 +1644,13 @@ const init = async () => {
     const data = await fetchJson("content.json");
     renderLessonMeta(data.meta ?? {});
 
-    slides = buildLessonSlides(data);
     const scormReady = ensureScormConnection();
+    if (scormReady && scormState.resumeAssessmentSnapshot) {
+      applyAssessmentSnapshot(scormState.resumeAssessmentSnapshot);
+      scormState.resumeAssessmentSnapshot = null;
+    }
+
+    slides = buildLessonSlides(data);
     const resumeIndex = scormReady ? getResumeSlideIndex(slides.length) : 0;
     currentSlideIndex = resumeIndex;
     attachNavigation();

@@ -1594,6 +1594,229 @@ body {
   margin: 0 auto;
 }
 
+.assessment-summary {
+  width: 100%;
+  border: 1px solid rgba(31, 41, 51, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  background: rgba(15, 23, 42, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--color-text);
+}
+
+.assessment-summary__score {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.6vw, 1.35rem);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.assessment-summary__detail {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.slide.is-instruction-locked {
+  position: relative;
+}
+
+.slide.is-instruction-locked::after {
+  content: "Listen to the instructions before answering.";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  color: #fff;
+  border-radius: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.instruction-overlay {
+  margin-bottom: 1rem;
+  background: rgba(15, 23, 42, 0.08);
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-align: center;
+}
+
+.slide--assessment {
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.slide--assessment .listening-mcq-grid {
+  margin-top: 0.5rem;
+}
+
+.quiz-card {
+  border: 1px solid rgba(31, 41, 51, 0.08);
+}
+
+.quiz-card.is-correct {
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 12px 24px rgba(34, 197, 94, 0.16);
+}
+
+.quiz-card.is-incorrect {
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.assessment-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(31, 41, 51, 0.15);
+}
+
+.assessment-actions .primary-btn {
+  min-width: 180px;
+}
+
+.assessment-result {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+.assessment-result--success {
+  color: #16a34a;
+}
+
+.assessment-result--error {
+  color: #b91c1c;
+}
+
+@media (max-width: 640px) {
+  .assessment-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .assessment-actions .primary-btn {
+    width: 100%;
+  }
+}
+
+.jumbled-grid {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.jumbled-layout {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.jumbled-zone {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.jumbled-zone--target {
+  min-height: 140px;
+}
+
+.jumbled-zone--bank {
+  min-height: 140px;
+}
+
+.jumbled-label {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.jumbled-target,
+.jumbled-bank {
+  min-height: 120px;
+  border: 1px dashed rgba(31, 41, 51, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-content: flex-start;
+}
+
+.jumbled-target {
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.jumbled-bank {
+  background: rgba(31, 111, 235, 0.05);
+}
+
+.jumbled-placeholder {
+  margin: 0;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.jumbled-token {
+  appearance: none;
+  border: 1px solid rgba(31, 41, 51, 0.25);
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.85rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  cursor: grab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  user-select: none;
+}
+
+.jumbled-token:active {
+  cursor: grabbing;
+  transform: scale(1.02);
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.2);
+}
+
+.jumbled-token.is-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.jumbled-feedback {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.jumbled-feedback--positive {
+  color: #047857;
+}
+
+.jumbled-feedback--negative {
+  color: #b91c1c;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
