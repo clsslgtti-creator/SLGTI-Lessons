@@ -38,6 +38,7 @@ const normalizeSentences = (raw = []) =>
       return {
         id: normalizeId(entry?.id, index, "jumbled"),
         tokens,
+        display: sentence,
       };
     })
     .filter(Boolean);
@@ -342,9 +343,17 @@ export const buildJumbledSlides = (
       token.element.draggable = false;
       token.element.classList.add("is-locked");
     });
+    const sentenceText =
+      typeof entry.question.display === "string"
+        ? entry.question.display
+        : "";
     entry.feedback.textContent = isCorrect
-      ? "Correct!"
-      : "Please review this sentence.";
+      ? sentenceText
+        ? `Correct! Sentence: ${sentenceText}`
+        : "Correct!"
+      : sentenceText
+      ? `Incorrect. Correct answer: ${sentenceText}`
+      : "Incorrect.";
     entry.feedback.classList.toggle("jumbled-feedback--positive", isCorrect);
     entry.feedback.classList.toggle("jumbled-feedback--negative", !isCorrect);
     return { isCorrect, arranged };
