@@ -353,128 +353,133 @@
     "audio": "assets/audio/a_4_q.mp3",
     "content": [
       {
-        "question": "Where were Kamal and Ramesh yesterday morning?",
+        "question": "Where were Sajith and Anusha yesterday?",
         "options": [
-          "In a Colombo market",
-          "In the Kurunegala workshop",
-          "At a Galle Face exhibition",
-          "In a Jaffna training hall"
+          "At the Galle IT Expo",
+          "At the Colombo ICT lab",
+          "At the Jaffna training centre",
+          "At the Kandy fair"
         ],
-        "answer": "In the Kurunegala workshop"
+        "answer": "At the Colombo ICT lab"
       },
       {
-        "question": "What kind of vehicle was noisy?",
+        "question": "What were they installing?",
         "options": [
-          "The hybrid car",
-          "The diesel van",
-          "The electric scooter",
-          "The petrol motorbike"
+          "A wireless router",
+          "Network cables",
+          "Laptop software",
+          "Projector lamps"
         ],
-        "answer": "The diesel van"
+        "answer": "Network cables"
       },
       {
-        "question": "What problem did the hybrid car have yesterday?",
+        "question": "What problem did one server have?",
         "options": [
-          "Its engine oil was leaking.",
-          "Its battery was not charging.",
-          "Its brake pads were broken.",
-          "Its tyres were flat."
+          "It was too noisy.",
+          "It was not working.",
+          "It was overheated.",
+          "It was too old."
         ],
-        "answer": "Its battery was not charging."
+        "answer": "It was not working."
       },
       {
-        "question": "Who repaired the flat tyre?",
-        "options": ["Kamal", "Ramesh", "Anura", "The instructor"],
-        "answer": "Anura"
-      },
-      {
-        "question": "Why is Kamal confident?",
+        "question": "Why could some students not connect to the router?",
         "options": [
-          "He is going to Galle Face.",
-          "He has presented before.",
-          "He is going with Ramesh.",
-          "He has checked the brakepads."
+          "The router was very slow.",
+          "They typed the wrong settings.",
+          "The server tower was missing.",
+          "Ramesh forgot to install software."
         ],
-        "answer": "He has presented before."
+        "answer": "They typed the wrong settings."
       },
       {
-        "question": "What was wrong with the old pressure gauge?",
+        "question": "What will the trainees have to do if the system crashes tomorrow?",
         "options": [
-          "It was broken yesterday.",
-          "It was not accurate last week.",
-          "It was missing today.",
-          "It was very expensive."
+          "Stop the IT Expo",
+          "Ask Sajith to buy a new laptop",
+          "Restore the backup",
+          "Call the projector company"
         ],
-        "answer": "It was not accurate last week."
+        "answer": "Restore the backup"
       },
       {
-        "question": "What are the trainees learning right now?",
+        "question": "What are the trainees doing right now?",
         "options": [
-          "How to repair a hybrid battery",
-          "How to use a hydraulic lift",
-          "How to replace brake pads",
-          "How to change engine oil"
+          "Installing cables",
+          "Configuring a wireless router",
+          "Repairing the server tower",
+          "Writing reports"
         ],
-        "answer": "How to use a hydraulic lift"
+        "answer": "Configuring a wireless router"
       },
       {
-        "question": "Why is the instructor not happy?",
+        "question": "What did the instructor remind them about?",
         "options": [
-          "The gauge was inaccurate.",
-          "Only one student wore a reflective vest.",
-          "Kamal spoke too loudly.",
-          "The hybrid car was noisy."
+          "Not to forget to wear helmets",
+          "Not to use wrong passwords",
+          "Not to type too slowly",
+          "Not to speak too loudly"
         ],
-        "answer": "Only one student wore a reflective vest."
+        "answer": "Not to use wrong passwords"
       },
       {
-        "question": "What will happen tomorrow?",
+        "question": "Where will the group go tomorrow?",
         "options": [
-          "The group will repair a van in Kurunegala.",
-          "The group will travel to Galle Face for an exhibition.",
-          "Ramesh will repair a tyre in Colombo.",
-          "Kamal will buy a new hydraulic lift."
+          "To the Kandy IT Expo",
+          "To the Galle Face IT Expo",
+          "To the Jaffna Tech Fair",
+          "To Kurunegala"
         ],
-        "answer": "The group will travel to Galle Face for an exhibition."
+        "answer": "To the Galle Face IT Expo"
       },
       {
-        "question": "Why is Ramesh nervous?",
+        "question": "Why is Anusha nervous?",
         "options": [
-          "He has never driven a hybrid car.",
-          "He has never spoken at a public event.",
-          "He has never repaired an engine.",
-          "He has never visited Colombo."
+          "She hasn’t been to Galle Face.",
+          "She has never spoken to a big audience.",
+          "She has never travelled.",
+          "She doesn’t know to set up a firewall."
         ],
-        "answer": "He has never spoken at a public event."
+        "answer": "She has never spoken to a big audience."
       },
       {
-        "question": "Where did the car with the flat tyre come from?",
-        "options": ["Kurunegala", "Colombo", "Jaffna"],
-        "answer": "Colombo"
-      },
-      {
-        "question": "Where was the small fair in 2023?",
-        "options": ["Colombo", "Kurunegala", "Jaffna"],
-        "answer": "Jaffna"
-      },
-      {
-        "question": "What are they demonstrating on the vehicles tomorrow?",
+        "question": "What was not working properly and was still unclear?",
         "options": [
-          "How to check food quality",
-          "How to check brake pads",
-          "How to check roof lights"
+          "The projector display",
+          "The server",
+          "The laptop",
+          "Network cables"
         ],
-        "answer": "How to check brake pads"
+        "answer": "The projector display"
       },
       {
-        "question": "Which tool was replaced?",
-        "options": ["Digital pressure gauge", "Engine lift", "Car battery"],
-        "answer": "Digital pressure gauge"
+        "question": "Who presented in 2023?",
+        "options": ["Sajith", "Ramesh", "Anusha"],
+        "answer": "Sajith"
       },
       {
-        "question": "What are they not supposed to do with the hydraulic lift?",
-        "options": ["Drive under it", "Stand under it", "Sit beside it"],
-        "answer": "Stand under it"
+        "question": "What was Ramesh repairing?",
+        "options": ["A server", "A projector", "A laptop"],
+        "answer": "A projector"
+      },
+      {
+        "question": "Which device crashed last week?",
+        "options": ["A server", "The Firewall", "The projector"],
+        "answer": "A server"
+      },
+      {
+        "question": "Where was the past presentation?",
+        "options": ["Colombo", "Matara", "Kandy"],
+        "answer": "Kandy"
+      },
+      {
+        "question": "What will they demonstrate besides the firewall?",
+        "options": [
+          "Cloud backup",
+          "How to restore backup",
+          "How to configure a wireless router"
+        ],
+        "answer": "Cloud backup"
       }
     ]
   }

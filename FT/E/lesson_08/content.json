@@ -327,128 +327,124 @@
     "audio": "assets/audio/a_4_q.mp3",
     "content": [
       {
-        "question": "Where were Kamal and Ramesh yesterday morning?",
+        "question": "Where were Fathima and Nimal yesterday?",
         "options": [
-          "In a Colombo market",
-          "In the Kurunegala workshop",
-          "At a Galle Face exhibition",
-          "In a Jaffna training hall"
+          "At the Matara dairy",
+          "At the Kurunegala workshop",
+          "At the Jaffna food lab",
+          "In a Colombo bakery"
         ],
-        "answer": "In the Kurunegala workshop"
+        "answer": "At the Jaffna food lab"
       },
       {
-        "question": "What kind of vehicle was noisy?",
+        "question": "What machine were they testing?",
         "options": [
-          "The hybrid car",
-          "The diesel van",
-          "The electric scooter",
-          "The petrol motorbike"
+          "An Ice-cream freezer",
+          "A Spice roaster",
+          "An Oven",
+          "A Water filter"
         ],
-        "answer": "The diesel van"
+        "answer": "A Spice roaster"
       },
       {
-        "question": "What problem did the hybrid car have yesterday?",
+        "question": "What was wrong with the moisture meter?",
         "options": [
-          "Its engine oil was leaking.",
-          "Its battery was not charging.",
-          "Its brake pads were broken.",
-          "Its tyres were flat."
+          "It was not showing the right result.",
+          "It was missing yesterday.",
+          "It was new and unused.",
+          "It was too expensive."
         ],
-        "answer": "Its battery was not charging."
+        "answer": "It was not showing the right result."
       },
       {
-        "question": "Who repaired the flat tyre?",
-        "options": ["Kamal", "Ramesh", "Anura", "The instructor"],
-        "answer": "Anura"
-      },
-      {
-        "question": "Why is Kamal confident?",
+        "question": "Why did the instructor ask them to repeat the experiment twice?",
         "options": [
-          "He is going to Galle Face.",
-          "He has presented before.",
-          "He is going with Ramesh.",
-          "He has checked the brakepads."
+          "Because the machine was broken.",
+          "Because the results needed to be accurate.",
+          "Because Fathima forgot her notebook.",
+          "Because Nimal was late."
         ],
-        "answer": "He has presented before."
+        "answer": "Because the results needed to be accurate."
       },
       {
-        "question": "What was wrong with the old pressure gauge?",
+        "question": "What will the trainees have to do if the results are wrong tomorrow?",
         "options": [
-          "It was broken yesterday.",
-          "It was not accurate last week.",
-          "It was missing today.",
-          "It was very expensive."
+          "Stop the test immediately",
+          "Clean the machine again",
+          "Replace the spice roaster",
+          "Visit the dairy plant"
         ],
-        "answer": "It was not accurate last week."
+        "answer": "Clean the machine again"
       },
       {
-        "question": "What are the trainees learning right now?",
+        "question": "What are trainees learning right now?",
         "options": [
-          "How to repair a hybrid battery",
-          "How to use a hydraulic lift",
-          "How to replace brake pads",
-          "How to change engine oil"
+          "How to bake bread",
+          "How to pasteurize milk",
+          "How to cut vegetables",
+          "How to clean the lab"
         ],
-        "answer": "How to use a hydraulic lift"
+        "answer": "How to pasteurize milk"
       },
       {
-        "question": "Why is the instructor not happy?",
+        "question": "Why was the instructor unhappy?",
         "options": [
-          "The gauge was inaccurate.",
+          "One student was not stirring the milk properly.",
           "Only one student wore a reflective vest.",
-          "Kamal spoke too loudly.",
-          "The hybrid car was noisy."
+          "Kamal forgot his hairnet.",
+          "Nimal was absent."
         ],
-        "answer": "Only one student wore a reflective vest."
+        "answer": "Kamal forgot his hairnet."
       },
       {
-        "question": "What will happen tomorrow?",
+        "question": "Where will they go tomorrow?",
         "options": [
-          "The group will repair a van in Kurunegala.",
-          "The group will travel to Galle Face for an exhibition.",
-          "Ramesh will repair a tyre in Colombo.",
-          "Kamal will buy a new hydraulic lift."
+          "To the Colombo food exhibition",
+          "To the Kurunegala dairy plant",
+          "To the Jaffna fish market",
+          "To an ice-cream shop in Galle"
         ],
-        "answer": "The group will travel to Galle Face for an exhibition."
+        "answer": "To the Kurunegala dairy plant"
       },
       {
-        "question": "Why is Ramesh nervous?",
+        "question": "What will they test in the yoghurt?",
+        "options": ["Temperature", "pH level", "Colour", "Texture only"],
+        "answer": "pH level"
+      },
+      {
+        "question": "Why is Nimal nervous?",
         "options": [
-          "He has never driven a hybrid car.",
-          "He has never spoken at a public event.",
-          "He has never repaired an engine.",
-          "He has never visited Colombo."
+          "He hasn’t been to Matara.",
+          "He has never been outside Jaffna.",
+          "He has never travelled.",
+          "He doesn’t know how to seal plastic bottles."
         ],
-        "answer": "He has never spoken at a public event."
+        "answer": "He has never been outside Jaffna."
       },
       {
-        "question": "Where did the car with the flat tyre come from?",
-        "options": ["Kurunegala", "Colombo", "Jaffna"],
-        "answer": "Colombo"
+        "question": "When did Fathima visit Matara?",
+        "options": ["Five years ago.", "In 2023", "Last year"],
+        "answer": "In 2023"
       },
       {
-        "question": "Where was the small fair in 2023?",
-        "options": ["Colombo", "Kurunegala", "Jaffna"],
-        "answer": "Jaffna"
+        "question": "What was cleaned?",
+        "options": ["Mixing machine", "Moisture meter", "Plastic bottles"],
+        "answer": "Mixing machine"
       },
       {
-        "question": "What are they demonstrating on the vehicles tomorrow?",
-        "options": [
-          "How to check food quality",
-          "How to check brake pads",
-          "How to check roof lights"
-        ],
-        "answer": "How to check brake pads"
+        "question": "Which product was pasteurized?",
+        "options": ["Chillies", "Yoghurt", "Milk"],
+        "answer": "Milk"
       },
       {
-        "question": "Which tool was replaced?",
-        "options": ["Digital pressure gauge", "Engine lift", "Car battery"],
-        "answer": "Digital pressure gauge"
+        "question": "What protective items did Kamal wear?",
+        "options": ["Apron and gloves", "Hairnet", "Boots"],
+        "answer": "Apron and gloves"
       },
       {
-        "question": "What are they not supposed to do with the hydraulic lift?",
-        "options": ["Drive under it", "Stand under it", "Sit beside it"],
-        "answer": "Stand under it"
+        "question": "Where was the ice-cream factory?",
+        "options": ["Matara", "Kandy", "Jaffna"],
+        "answer": "Matara"
       }
     ]
   }
