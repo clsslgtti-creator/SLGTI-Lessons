@@ -558,13 +558,13 @@ const createInstructionsElement = (texts) => {
 
   if (normalized.length === 1) {
     const paragraph = document.createElement("p");
-    paragraph.className = "activity-instructions";
+    paragraph.className = "activity-instructions slide__instruction";
     paragraph.textContent = normalized[0];
     return paragraph;
   }
 
   const list = document.createElement("ul");
-  list.className = "activity-instructions";
+  list.className = "activity-instructions slide__instruction";
   normalized.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
@@ -744,10 +744,10 @@ const applyInstructionsToSlide = (slideElement, texts) => {
     const text = normalized[0];
     if (existing) {
       existing.textContent = text;
-      existing.classList.add("activity-instructions");
+      existing.classList.add("activity-instructions", "slide__instruction");
     } else {
       const paragraph = document.createElement("p");
-      paragraph.className = "activity-instructions";
+      paragraph.className = "activity-instructions slide__instruction";
       paragraph.textContent = text;
       anchor?.insertAdjacentElement("afterend", paragraph);
     }
@@ -755,7 +755,7 @@ const applyInstructionsToSlide = (slideElement, texts) => {
   }
 
   const list = document.createElement("ul");
-  list.className = "activity-instructions";
+  list.className = "activity-instructions slide__instruction";
   normalized.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
