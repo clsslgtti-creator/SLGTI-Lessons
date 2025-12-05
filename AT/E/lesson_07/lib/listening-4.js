@@ -394,13 +394,13 @@ const buildWordSentenceMatchingSlide = (pairs, context = {}) => {
   const layout = document.createElement("div");
   layout.className = "listening-word-match";
 
-  const sentencesColumn = document.createElement("div");
-  sentencesColumn.className = "word-match-sentences";
-  layout.appendChild(sentencesColumn);
-
   const wordsColumn = document.createElement("div");
   wordsColumn.className = "word-match-bank";
   layout.appendChild(wordsColumn);
+
+  const sentencesColumn = document.createElement("div");
+  sentencesColumn.className = "word-match-sentences";
+  layout.appendChild(sentencesColumn);
 
   const feedbackEl = document.createElement("p");
   feedbackEl.className =
