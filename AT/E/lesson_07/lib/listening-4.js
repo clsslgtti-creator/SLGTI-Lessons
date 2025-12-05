@@ -196,6 +196,9 @@ const buildVideoSlide = (data = {}, context = {}) => {
   videoEl.controls = true;
   videoEl.preload = "metadata";
   videoEl.playsInline = true;
+  videoEl.style.width = "100%";
+  videoEl.style.height = "auto";
+  videoEl.style.maxHeight = "65vh";
   if (videoUrl) {
     const source = document.createElement("source");
     source.src = videoUrl;
@@ -467,6 +470,27 @@ const buildWordSentenceMatchingSlide = (pairs, context = {}) => {
 
   let evaluationShown = false;
 
+  const markZoneState = (zone, cardEl) => {
+    if (!zone) {
+      return false;
+    }
+    const expectedId = zone.dataset.expectedId;
+    zone.classList.remove("is-correct", "is-incorrect");
+    cardEl?.classList.remove("is-correct", "is-incorrect");
+    if (!cardEl) {
+      return false;
+    }
+    const isMatch = cardEl.dataset.itemId === expectedId;
+    if (isMatch) {
+      zone.classList.add("is-correct");
+      cardEl.classList.add("is-correct");
+    } else {
+      zone.classList.add("is-incorrect");
+      cardEl.classList.add("is-incorrect");
+    }
+    return isMatch;
+  };
+
   const detachFromZone = (cardEl) => {
     if (!cardEl) {
       return;
@@ -544,16 +568,9 @@ const buildWordSentenceMatchingSlide = (pairs, context = {}) => {
     dropzones.forEach((zone) => {
       const expectedId = zone.dataset.expectedId;
       const cardEl = placements.get(zone.dataset.zoneId);
-      zone.classList.remove("is-correct", "is-incorrect");
-      cardEl?.classList.remove("is-correct", "is-incorrect");
-
-      if (cardEl && cardEl.dataset.itemId === expectedId) {
-        zone.classList.add("is-correct");
-        cardEl?.classList.add("is-correct");
+      const isMatch = cardEl ? markZoneState(zone, cardEl) : false;
+      if (isMatch) {
         correctCount += 1;
-      } else {
-        zone.classList.add("is-incorrect");
-        cardEl?.classList.add("is-incorrect");
       }
     });
 
@@ -638,15 +655,15 @@ const buildWordSentenceMatchingSlide = (pairs, context = {}) => {
         }
 
         const placeholder = zoneEl.querySelector(".word-match-placeholder");
-        placeholder?.classList.add("is-hidden");
-        zoneEl.appendChild(cardEl);
-        resetCardPosition(cardEl);
-        cardEl.dataset.assignedZone = zoneId;
-        zoneEl.classList.add("is-filled");
-        cardEl.classList.remove("is-correct", "is-incorrect");
-        placements.set(zoneId, cardEl);
-        checkForCompletion();
-      },
+      placeholder?.classList.add("is-hidden");
+      zoneEl.appendChild(cardEl);
+      resetCardPosition(cardEl);
+      cardEl.dataset.assignedZone = zoneId;
+      zoneEl.classList.add("is-filled");
+      placements.set(zoneId, cardEl);
+      markZoneState(zoneEl, cardEl);
+      checkForCompletion();
+    },
     });
 
     $(wordsColumn).droppable({
