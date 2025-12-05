@@ -1,0 +1,558 @@
+{
+  "meta": {
+    "lesson_no": 7,
+    "level": "Elementary",
+    "section": "Electrical Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Long /ɔː/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": [
+      {
+        "id": "p_1",
+        "word_text": "cl'u'tch",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "This cl'u'tch was hard to press.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
+      },
+      {
+        "id": "p_2",
+        "word_text": "b'u's",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "Those b'u'ses were full of passengers last week.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "tr'u'ck",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "There were five men in a large tr'u'ck here yesterday.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.png"
+      },
+      {
+        "id": "p_4",
+        "word_text": "p'u'mp",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "Check the water p'u'mps carefully.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS-3",
+    "focus": "Simple Past Tense - Verb ‘to be’",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_a.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "tables": [
+      [
+        ["I", "wasn’t", "was not"],
+        ["He", null, null],
+        ["She", null, null],
+        ["It", null, null],
+        ["We", "weren’t", "were not"],
+        ["you", null, null],
+        ["They", null, null]
+      ]
+    ],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.png",
+        "text_a": "Was the principal happy with the lecture?",
+        "text_b": "No, he wasn’t. He was unhappy.",
+        "audio_a": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.png",
+        "text_a": "Was the mango sweet?",
+        "text_b": "No, it wasn’t. It was sour.",
+        "audio_a": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
+      },
+      {
+        "id": "e_3",
+        "img": "assets/img/a_2_ex_3.png",
+        "text_a": "Were the air conditioners dry?",
+        "text_b": "No, they weren’t. They were wet.",
+        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
+      }
+    ],
+    "keywords": [
+      {
+        "id": "k_1",
+        "image": "assets/img/a_2_d_1.png",
+        "word": "tired/rested"
+      },
+      {
+        "id": "k_2",
+        "image": "assets/img/a_2_d_2.png",
+        "word": "on time/late"
+      },
+      {
+        "id": "k_3",
+        "image": "assets/img/a_2_d_3.png",
+        "word": "satisfied/disappointed"
+      },
+      {
+        "id": "k_4",
+        "image": "assets/img/a_2_d_4.jpeg",
+        "word": "cold/hot"
+      },
+      {
+        "id": "k_5",
+        "image": "assets/img/a_2_d_5.png",
+        "word": "tasty/awful"
+      },
+      {
+        "id": "k_6",
+        "image": "assets/img/a_2_d_6.png",
+        "word": "sad/cheerful"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.png",
+        "text_a": "Were you tired yesterday morning?",
+        "text_b": "No, I wasn’t. I was rested.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.png",
+        "text_a": "Were the trainees on time for the school bus?",
+        "text_b": "No, they weren’t. They were late.",
+        "audio_a": "assets/audio/a_2_d_2_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_b.mp3"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.png",
+        "text_a": "Was the instructor satisfied with our work yesterday?",
+        "text_b": "No, he wasn’t. He was disappointed.",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_b.mp3"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.jpeg",
+        "text_a": "Was it cold yesterday?",
+        "text_b": "No, it wasn’t. It was hot.",
+        "audio_a": "assets/audio/a_2_d_4_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_b.mp3"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.png",
+        "text_a": "Was the food tasty at the school canteen last week?",
+        "text_b": "No, it wasn’t. It was awful.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_b.mp3"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.png",
+        "text_a": "Were the students sad?",
+        "text_b": "No, they weren’t. They were cheerful.",
+        "audio_a": "assets/audio/a_2_d_6_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_b.mp3"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "INTERACTIVE-3",
+    "instructions": {
+      "activity_a": {
+        "text": "Remember we often use these or similar time markers in the sentences in the Simple Past Tense. \nඅපි සාමාන්‍ය භූත කාලයේ වාක්‍යවලදී මෙම හෝ සමාන කාල සලකුණු බොහෝ විට භාවිතා කරන බව මතක තබා ගන්න.\nநாம் சாதாரண கடந்த கால வாக்கியங்களில் இந்த அல்லது இதர நேர குறியீடுகளை அடிக்கடி பயன்படுத்துவதை நினைவில் கொள்ளுங்கள்.",
+        "audio": "assets/audio/a_3_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Choose the correct form of the verb 'to be'. Use the past tense only when the time markers clearly indicate that the action happened in the past.\nක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. කාල සලකුණු පැහැදිලිව ක්‍රියාව භූත කාලයේ සිදු වූ බව පෙන්වන්නේ නම් පමණක් භූත කාලය භාවිතා කරන්න.\nவினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். நேர குறியீடுகள் நடவடிக்கை கடந்த காலத்தில் நடந்தது என்பதை தெளிவாகக் காட்டும் போது மட்டுமே கடந்த காலத்தைப் பயன்படுத்தவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
+      }
+    },
+    "content": {
+      "activity_a": [
+        [
+          "Yesterday",
+          "Yesterday morning",
+          "Yesterday afternoon",
+          "Yesterday evening"
+        ],
+        ["Last night", "Last week", "Last month", "Last year", "Last May"],
+        ["In 2012", "In May 2012"],
+        [
+          "Two days ago",
+          "Two weeks ago",
+          "Two years ago",
+          "Before I was born",
+          "On the 25th May 2023",
+          "On the 7th July 1564"
+        ]
+      ],
+      "activity_b": {
+        "bg_image": "assets/img/game/bg-8.jpg",
+        "content": [
+          {
+            "id": "g_b_1",
+            "sentence": "The safety officer ___  always responsible for checking all warning signs at SLGTI.",
+            "options": ["is", "was"],
+            "answer": "is"
+          },
+          {
+            "id": "g_b_2",
+            "sentence": "The trainees ___ very attentive during the inspection yesterday morning.",
+            "options": ["were", "are"],
+            "answer": "were"
+          },
+          {
+            "id": "g_b_3",
+            "sentence": "The technical instructors ___ usually very strict about protective clothing.",
+            "options": ["are", "were"],
+            "answer": "are"
+          },
+          {
+            "id": "g_b_4",
+            "sentence": "The technical officer ___ in the restricted zone two days ago.",
+            "options": ["was", "is"],
+            "answer": "was"
+          },
+          {
+            "id": "g_b_5",
+            "sentence": "The trainees in all 6 sections ___ always very careful when handling flammable substances.",
+            "options": ["are", "were"],
+            "answer": "are"
+          },
+          {
+            "id": "g_b_6",
+            "sentence": "The maintenance workers are busy because the alarm system ___ faulty last night.",
+            "options": ["is", "was"],
+            "answer": "was"
+          },
+          {
+            "id": "g_b_7",
+            "sentence": "The storekeeper ___ responsible for keeping all safety equipment in order.",
+            "options": ["is", "was"],
+            "answer": "is"
+          },
+          {
+            "id": "g_b_8",
+            "sentence": "The heads of departments ___ satisfied with the installation of the new warning systems last May.  ",
+            "options": ["are", "were"],
+            "answer": "were"
+          },
+          {
+            "id": "g_b_9",
+            "sentence": "The demonstrators ___ in the workshop when the emergency signal was first tested in 2023.",
+            "options": ["were", "are"],
+            "answer": "were"
+          },
+          {
+            "id": "g_b_10",
+            "sentence": "The Principal ___ disappointed because the procedures were not followed correctly during tests three weeks ago.",
+            "options": ["is", "was"],
+            "answer": "was"
+          }
+        ]
+      }
+    }
+  },
+  "activity_4": {
+    "type": "LISTENING-4",
+    "instructions": {
+      "activity_a": {
+        "text": "Watch the Video.\nවීඩියෝව බලන්න.\nவீடியோவைப் பாருங்கள்.",
+        "audio": "assets/audio/a_4_i_b.mp3"
+      },
+      "activity_b": {
+        "text": "Match the words to their definitions.\nපදයන් ඒවායේ අර්ථ සමඟ ගැලපෙන්න.\nசொற்களை அவற்றின் வரையறைகளுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_4_i_c.mp3"
+      },
+      "activity_c": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_e": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "video": "assets/video/video_1.mp4"
+      },
+      "activity_b": [
+        {
+          "id": "n_4_b_1",
+          "word": "Negligence",
+          "definition": "not doing an important task"
+        },
+        {
+          "id": "n_4_b_1",
+          "word": "Misuse",
+          "definition": "not using equipment the proper way"
+        },
+        {
+          "id": "n_4_b_1",
+          "word": "Cause",
+          "definition": "the reason for a problem or issue"
+        },
+        {
+          "id": "n_4_b_1",
+          "word": "Hazard",
+          "definition": "danger or risk"
+        },
+        {
+          "id": "n_4_b_1",
+          "word": "Disability",
+          "definition": "losing a function you used to have, because of injury"
+        },
+        {
+          "id": "n_4_b_1",
+          "word": "Debris",
+          "definition": "rubble or rubbish scattered all over"
+        },
+        {
+          "id": "n_4_b_1",
+          "word": "Slips",
+          "definition": "to lose your footing and slide on the ground"
+        },
+        {
+          "id": "n_4_b_1",
+          "word": "Trips",
+          "definition": "accidentally fall over an object on the ground"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "n_4_1",
+          "text": "There are many causes of accidents like negligence, unsafe work areas, misuse of tools and equipment and failure to use protective equipment.",
+          "audio": "assets/audio/n_4_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "Here are six common causes of accidents.",
+          "audio": "assets/audio/n_4_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "Unsafe housekeeping: injuries from slips and trips are common in unsafe work areas.",
+          "audio": "assets/audio/n_4_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "Holes, spills, garbage, debris, improperly stored items: poor housekeeping causes slips and trips.",
+          "audio": "assets/audio/n_4_4.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "When garbage and tools are left lying around, or holes are not covered, accidents can happen quickly.",
+          "audio": "assets/audio/n_4_11.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "Falling hazards: a fall is bound to happen when someone repeatedly fails to look where they are going.",
+          "audio": "assets/audio/n_4_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "Other falling hazards lurk on stairwells with loose guardrails, or with things stored on the steps.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "A simple fall can be life changing, or even fatal.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "Misuse of stepladders: a tipped over stepladder is a leading cause of injury or long term disability.",
+          "audio": "assets/audio/n_4_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "Failure to set the feet on solid level ground or using the top steps can lead to fatal falls.",
+          "audio": "assets/audio/n_4_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "Don’t leave tools on a stepladder, they hurt when they fall off.",
+          "audio": "assets/audio/n_4_10.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "Misusing a stepladder may not seem dangerous, but it can lead to a permanent disability.",
+          "audio": "assets/audio/n_4_12.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "n_4_1",
+          "text": "There are many causes of accidents like negligence, unsafe work areas, misuse of tools and equipment and failure to use protective equipment.",
+          "audio": "assets/audio/n_4_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "Here are six common causes of accidents.",
+          "audio": "assets/audio/n_4_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "Unsafe housekeeping: injuries from slips and trips are common in unsafe work areas.",
+          "audio": "assets/audio/n_4_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "Holes, spills, garbage, debris, improperly stored items: poor housekeeping causes slips and trips.",
+          "audio": "assets/audio/n_4_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "Falling hazards: a fall is bound to happen when someone repeatedly fails to look where they are going.",
+          "audio": "assets/audio/n_4_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "Other falling hazards lurk on stairwells with loose guardrails, or with things stored on the steps.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "A simple fall can be life changing, or even fatal.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "Misuse of stepladders: a tipped over stepladder is a leading cause of injury or long term disability.",
+          "audio": "assets/audio/n_4_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "Failure to set the feet on solid level ground or using the top steps can lead to fatal falls.",
+          "audio": "assets/audio/n_4_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "Don’t leave tools on a stepladder, they hurt when they fall off.",
+          "audio": "assets/audio/n_4_10.mp3"
+        }
+      ],
+      "activity_e": [
+        {
+          "id": "n_4_1",
+          "text": "There are many causes of accidents like negligence, unsafe work areas, misuse of tools and equipment and failure to use protective equipment.",
+          "audio": "assets/audio/n_4_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "Here are six common causes of accidents.",
+          "audio": "assets/audio/n_4_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "Unsafe housekeeping: injuries from slips and trips are common in unsafe work areas.",
+          "audio": "assets/audio/n_4_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "Holes, spills, garbage, debris, improperly stored items: poor housekeeping causes slips and trips.",
+          "audio": "assets/audio/n_4_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "Falling hazards: a fall is bound to happen when someone repeatedly fails to look where they are going.",
+          "audio": "assets/audio/n_4_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "Other falling hazards lurk on stairwells with loose guardrails, or with things stored on the steps.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "A simple fall can be life changing, or even fatal.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "Misuse of stepladders: a tipped over stepladder is a leading cause of injury or long term disability.",
+          "audio": "assets/audio/n_4_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "Failure to set the feet on solid level ground or using the top steps can lead to fatal falls.",
+          "audio": "assets/audio/n_4_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "Don’t leave tools on a stepladder, they hurt when they fall off.",
+          "audio": "assets/audio/n_4_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "When garbage and tools are left lying around, or holes are not covered, accidents can happen quickly.",
+          "audio": "assets/audio/n_4_11.mp3"
+        }
+      ]
+    }
+  }
+}
