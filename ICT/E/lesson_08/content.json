@@ -1,0 +1,486 @@
+{
+  "meta": {
+    "lesson_no": "8 - Test",
+    "level": "Elementary",
+    "section": "Information and Communication Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
+      "audio": "assets/audio/a_1_i.mp3"
+    },
+    "content": [
+      {
+        "question": "The computer servers ___ very secure in the data room.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The trainees ___ learning about software installation right now.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The projector ___ in the laboratory two days ago.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "was"
+      },
+      {
+        "question": "The technicians ___ busy with the network cables at the moment.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The laptops ___ ready for the training session last week.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The ICT instructor ___ explaining the new programming task right now.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "is"
+      },
+      {
+        "question": "The printers ___ out of order during the exam yesterday morning.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The students ___ very excited about the coding competition last May.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The router ___ on the shelf next to the switch.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "is"
+      },
+      {
+        "question": "The technicians ___ not happy with the old operating system last year.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "were"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
+      "audio": "assets/audio/a_2_i.mp3"
+    },
+    "content": [
+      {
+        "question": "Is the technician tired or energetic?",
+        "options": [
+          "He is energetic.",
+          "His tired.",
+          "He is tired or energetic.",
+          "Him’s energetic."
+        ],
+        "answer": "He is energetic."
+      },
+      {
+        "question": "Was the computer system fast yesterday?",
+        "options": [
+          "Yes, it’s. It was slow.",
+          "No, it weren’t. They was slow.",
+          "No, they’re slow.",
+          "No, it wasn’t. It was slow."
+        ],
+        "answer": "No, it wasn’t. It was slow."
+      },
+      {
+        "question": "Where is Fathima?",
+        "options": [
+          "She’s in the computer lab.",
+          "Shi’s in the server room.",
+          "They are in the office.",
+          "Hers in the computer lab."
+        ],
+        "answer": "She’s in the computer lab."
+      },
+      {
+        "question": "Where is the printer?",
+        "options": [
+          "They are behind the router.",
+          "It’s between the router and the scanner.",
+          "Its front of the scanner.",
+          "They’re between router or monitor."
+        ],
+        "answer": "It’s between the router and the scanner."
+      },
+      {
+        "question": "Where are the network cables?",
+        "options": [
+          "Their next to the server.",
+          "There are under the server.",
+          "Theirs are next to the server.",
+          "They’re next to the server."
+        ],
+        "answer": "They’re next to the server."
+      },
+      {
+        "question": "Where are the laptops?",
+        "options": [
+          "They’re on the desk.",
+          "There are on the desk.",
+          "It’s on the desk.",
+          "Theirs are on the desk."
+        ],
+        "answer": "They’re on the desk."
+      },
+      {
+        "question": "What are you and the instructor doing?",
+        "options": [
+          "We’ar fixed the projector.",
+          "We’re fixing the projector.",
+          "They’re fixing the projector.",
+          "He’is fixing the projector."
+        ],
+        "answer": "We’re fixing the projector."
+      },
+      {
+        "question": "Where is the IT officer?",
+        "options": [
+          "He’s repairing the router.",
+          "His repaired the router.",
+          "He are repairing the router.",
+          "Him’s repairing the router."
+        ],
+        "answer": "He’s repairing the router."
+      },
+      {
+        "question": "Is there a first aid kit in the lab?",
+        "options": [
+          "Yes, there isn’t.",
+          "No, there aren’t.",
+          "Yes, there is.",
+          "Yes, there’re."
+        ],
+        "answer": "Yes, there is."
+      },
+      {
+        "question": "Are there any spare mouse devices?",
+        "options": [
+          "No, there isn’t.",
+          "No, there aren’t.",
+          "Yes, there is.",
+          "Yes, there are mice."
+        ],
+        "answer": "Yes, there are mice."
+      },
+      {
+        "question": "Where is the server tower?",
+        "options": [
+          "He’s between the mouse pad.",
+          "Its front of the monitor.",
+          "It’s behind the workstation.",
+          "They is in the cupboard."
+        ],
+        "answer": "It’s behind the workstation."
+      },
+      {
+        "question": "Are there any USB cables?",
+        "options": [
+          "Yes, their aren’t. There are any USB cables.",
+          "No, there isn’t. There are no any USB cables.",
+          "Yes, there are. There are some USB cables on the desk.",
+          "No, there aren’t. There are any USB cables on the desk."
+        ],
+        "answer": "Yes, there are. There are some USB cables on the desk."
+      },
+      {
+        "question": "Is there a projector in the lab?",
+        "options": [
+          "Yes, there are. Its in the office.",
+          "No, there isn’t. There aren’t any projectors in the lab.",
+          "Yes, there is. There is any projector in the lab.",
+          "No, there aren’t. There are no any projector in the lab."
+        ],
+        "answer": "No, there isn’t. There aren’t any projectors in the lab."
+      },
+      {
+        "question": "Was the laptop battery full yesterday?",
+        "options": [
+          "No, it wasn’t. It was empty.",
+          "Yes, it is. It was empty.",
+          "No, it isn’t. It is empty.",
+          "No, they wasn’t. It was empty."
+        ],
+        "answer": "No, it wasn’t. It was empty."
+      },
+      {
+        "question": "What are the students doing?",
+        "options": [
+          "Theire installing the application.",
+          "Hes typing report.",
+          "They’re configuring the network settings.",
+          "We’are repairing the keyboard."
+        ],
+        "answer": "They’re configuring the network settings."
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "JUMBLED",
+    "instruction": {
+      "text": "Rearrange these sentences in the correct order.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும்.",
+      "audio": "assets/audio/a_3_i.mp3"
+    },
+    "content": [
+      {
+        "words": [
+          "the",
+          "student",
+          "types",
+          "reports",
+          "on",
+          "the",
+          "computer",
+          "."
+        ],
+        "sentence": "The student types reports on the computer."
+      },
+      {
+        "words": ["she", "didn’t", "update", "the", "file", "today", "."],
+        "sentence": "She didn’t update the file today."
+      },
+      {
+        "words": [
+          "did",
+          "the",
+          "trainee",
+          "install",
+          "the",
+          "software",
+          "yesterday",
+          "?"
+        ],
+        "sentence": "Did the trainee install the software yesterday?"
+      },
+      {
+        "words": [
+          "they",
+          "check",
+          "emails",
+          "on",
+          "the",
+          "office",
+          "laptop",
+          "."
+        ],
+        "sentence": "They check emails on the office laptop."
+      },
+      {
+        "words": [
+          "the",
+          "programmer",
+          "wrote",
+          "code",
+          "in",
+          "the",
+          "lab",
+          "."
+        ],
+        "sentence": "The programmer wrote code in the lab."
+      },
+      {
+        "words": ["he", "did", "not", "save", "the", "new", "data", "."],
+        "sentence": "He did not save the new data."
+      },
+      {
+        "words": [
+          "did",
+          "she",
+          "print",
+          "the",
+          "document",
+          "this",
+          "morning",
+          "?"
+        ],
+        "sentence": "Did she print the document this morning?"
+      },
+      {
+        "words": [
+          "the",
+          "technician",
+          "repaired",
+          "the",
+          "printer",
+          "last",
+          "week",
+          "."
+        ],
+        "sentence": "The technician repaired the printer last week."
+      },
+      {
+        "words": [
+          "the",
+          "instructor",
+          "teaches",
+          "databases",
+          "in",
+          "the",
+          "class",
+          "."
+        ],
+        "sentence": "The instructor teaches databases in the class."
+      },
+      {
+        "words": [
+          "he",
+          "uploaded",
+          "the",
+          "project",
+          "files",
+          "last",
+          "night",
+          "."
+        ],
+        "sentence": "He uploaded the project files last night."
+      }
+    ]
+  },
+  "activity_4": {
+    "type": "LISTENING",
+    "instruction": {
+      "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
+      "audio": "assets/audio/a_4_i.mp3"
+    },
+    "audio": "assets/audio/a_4_q.mp3",
+    "content": [
+      {
+        "question": "Where were Sajith and Anusha yesterday?",
+        "options": [
+          "At the Galle IT Expo",
+          "At the Colombo ICT lab",
+          "At the Jaffna training centre",
+          "At the Kandy fair"
+        ],
+        "answer": "At the Colombo ICT lab"
+      },
+      {
+        "question": "What were they installing?",
+        "options": [
+          "A wireless router",
+          "Network cables",
+          "Laptop software",
+          "Projector lamps"
+        ],
+        "answer": "Network cables"
+      },
+      {
+        "question": "What problem did one server have?",
+        "options": [
+          "It was too noisy.",
+          "It was not working.",
+          "It was overheated.",
+          "It was too old."
+        ],
+        "answer": "It was not working."
+      },
+      {
+        "question": "Why could some students not connect to the router?",
+        "options": [
+          "The router was very slow.",
+          "They typed the wrong settings.",
+          "The server tower was missing.",
+          "Ramesh forgot to install software."
+        ],
+        "answer": "They typed the wrong settings."
+      },
+      {
+        "question": "What will the trainees have to do if the system crashes tomorrow?",
+        "options": [
+          "Stop the IT Expo",
+          "Ask Sajith to buy a new laptop",
+          "Restore the backup",
+          "Call the projector company"
+        ],
+        "answer": "Restore the backup"
+      },
+      {
+        "question": "What are the trainees doing right now?",
+        "options": [
+          "Installing cables",
+          "Configuring a wireless router",
+          "Repairing the server tower",
+          "Writing reports"
+        ],
+        "answer": "Configuring a wireless router"
+      },
+      {
+        "question": "What did the instructor remind them about?",
+        "options": [
+          "Not to forget to wear helmets",
+          "Not to use wrong passwords",
+          "Not to type too slowly",
+          "Not to speak too loudly"
+        ],
+        "answer": "Not to use wrong passwords"
+      },
+      {
+        "question": "Where will the group go tomorrow?",
+        "options": [
+          "To the Kandy IT Expo",
+          "To the Galle Face IT Expo",
+          "To the Jaffna Tech Fair",
+          "To Kurunegala"
+        ],
+        "answer": "To the Galle Face IT Expo"
+      },
+      {
+        "question": "Why is Anusha nervous?",
+        "options": [
+          "She hasn’t been to Galle Face.",
+          "She has never spoken to a big audience.",
+          "She has never travelled.",
+          "She doesn’t know to set up a firewall."
+        ],
+        "answer": "She has never spoken to a big audience."
+      },
+      {
+        "question": "What was not working properly and was still unclear?",
+        "options": [
+          "The projector display",
+          "The server",
+          "The laptop",
+          "Network cables"
+        ],
+        "answer": "The projector display"
+      },
+      {
+        "question": "Who presented in 2023?",
+        "options": ["Sajith", "Ramesh", "Anusha"],
+        "answer": "Sajith"
+      },
+      {
+        "question": "What was Ramesh repairing?",
+        "options": ["A server", "A projector", "A laptop"],
+        "answer": "A projector"
+      },
+      {
+        "question": "Which device crashed last week?",
+        "options": ["A server", "The Firewall", "The projector"],
+        "answer": "A server"
+      },
+      {
+        "question": "Where was the past presentation?",
+        "options": ["Colombo", "Matara", "Kandy"],
+        "answer": "Kandy"
+      },
+      {
+        "question": "What will they demonstrate besides the firewall?",
+        "options": [
+          "Cloud backup",
+          "How to restore backup",
+          "How to configure a wireless router"
+        ],
+        "answer": "Cloud backup"
+      }
+    ]
+  }
+}

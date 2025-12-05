@@ -1,0 +1,463 @@
+{
+  "meta": {
+    "lesson_no": "8 - Test",
+    "level": "Elementary",
+    "section": "Construction Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
+      "audio": "assets/audio/a_1_i.mp3"
+    },
+    "content": [
+      {
+        "question": "The scaffolding poles ___ very stable on the site yesterday.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The workers ___ fixing the roof tiles at the moment.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The engineer ___ at the construction site two days ago.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "was"
+      },
+      {
+        "question": "The safety signs ___ clear to everyone right now.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The cement mixers ___ very noisy last week.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The mason ___ responsible for the wall measurements yesterday morning.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "was"
+      },
+      {
+        "question": "The foundation blocks ___ strong enough for the new building.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The trainees ___ painting the wooden doors in the workshop right now.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The supervisors ___ satisfied with the safety inspection last May.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The blueprints ___ on the architect’s desk yesterday afternoon.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "were"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
+      "audio": "assets/audio/a_2_i.mp3"
+    },
+    "content": [
+      {
+        "question": "Is the mechanic tired or energetic?",
+        "options": [
+          "He is energetic.",
+          "His tired.",
+          "He is tired or energetic.",
+          "Him energetic."
+        ],
+        "answer": "He is energetic."
+      },
+      {
+        "question": "Were the tools clean yesterday?",
+        "options": [
+          "No, there weren’t. They were dirty.",
+          "Yes, they were. Their were dirty.",
+          "Yes, they was dirty.",
+          "No, they weren’t. They were dirty."
+        ],
+        "answer": "No, there weren’t. They were dirty."
+      },
+      {
+        "question": "Where is Fathima?",
+        "options": [
+          "She’s in the workshop.",
+          "Shi’s in the maintenance yard.",
+          "They are in the office.",
+          "Hers in workshop."
+        ],
+        "answer": "She’s in the workshop."
+      },
+      {
+        "question": "Where is the storeroom?",
+        "options": [
+          "They are behind the factory.",
+          "It’s between the factory and the office.",
+          "Its front of office.",
+          "Its next from factory."
+        ],
+        "answer": "It’s between the factory and the office."
+      },
+      {
+        "question": "Where are the tools?",
+        "options": [
+          "Their next to the cables.",
+          "There are under the cables.",
+          "They’re next to the cables.",
+          "There’s next to cables."
+        ],
+        "answer": "They’re next to the cables."
+      },
+      {
+        "question": "Where are the pliers?",
+        "options": [
+          "They’re on the worktable.",
+          "There are on the worktable.",
+          "It’s on the worktable.",
+          "Its on worktable."
+        ],
+        "answer": "They’re on the worktable."
+      },
+      {
+        "question": "What are you and the inspector doing?",
+        "options": [
+          "We’are checked the safety equipment.",
+          "We’re checking the safety equipment.",
+          "They’re checking the safety equipment.",
+          "He’s checking the safety equipment."
+        ],
+        "answer": "We’re checking the safety equipment."
+      },
+      {
+        "question": "Where is the supervisor?",
+        "options": [
+          "He’s inspecting the storeroom.",
+          "His inspected the storeroom.",
+          "He are inspecting the storeroom.",
+          "Him inspecting storeroom."
+        ],
+        "answer": "He’s inspecting the storeroom."
+      },
+      {
+        "question": "Is there a First aid box?",
+        "options": [
+          "Yes, there isn’t.",
+          "No, there aren’t.",
+          "No, their isn’t.",
+          "Yes, there is."
+        ],
+        "answer": "Yes, there is."
+      },
+      {
+        "question": "Are there any extra safety gloves?",
+        "options": [
+          "No. there isn’t.",
+          "No, there aren’t.",
+          "Yes, there is.",
+          "Yes, their are."
+        ],
+        "answer": "No, there aren’t."
+      },
+      {
+        "question": "Where is the duty chart?",
+        "options": [
+          "He’s behind the desk calendar.",
+          "Its front of desk calendar.",
+          "It’s between desk calendar.",
+          "It’s behind the desk calendar."
+        ],
+        "answer": "It’s behind the desk calendar."
+      },
+      {
+        "question": "Are there any face shields?",
+        "options": [
+          "Yes, their aren’t. There are any face shields.",
+          "No, there isn’t. There are no any face shields.",
+          "Yes, there are. There are some thick face shields on the table.",
+          "No, there aren’t. There are any thick face shields on the table."
+        ],
+        "answer": "Yes, there are. There are some thick face shields on the table."
+      },
+      {
+        "question": "Is there a reflective vest?",
+        "options": [
+          "Yes, there are. Its in the cupboard.",
+          "No, there isn’t. There aren’t any bright reflective vests in the cupboard.",
+          "Yes, there is. There is any bright reflective vest in the cupboard.",
+          "No, there aren’t. There are no any reflective vests in the cupboard."
+        ],
+        "answer": "No, there isn’t. There aren’t any bright reflective vests in the cupboard."
+      },
+      {
+        "question": "Was the digital meter accurate yesterday?",
+        "options": [
+          "No, it wasn’t. It was inaccurate.",
+          "Yes, it is. It was inaccurate.",
+          "No, it isn’t. It is inaccurate.",
+          "No, they wasn’t. It was inaccurate."
+        ],
+        "answer": "No, it wasn’t. It was inaccurate."
+      },
+      {
+        "question": "What are the technicians doing?",
+        "options": [
+          "Theire calibrating instruments.",
+          "Hes calibrating instrument.",
+          "They’re calibrating the measuring instruments.",
+          "We’are calibrating the instruments."
+        ],
+        "answer": "They’re calibrating the measuring instruments."
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "JUMBLED",
+    "instruction": {
+      "text": "Rearrange these sentences in the correct order.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும்.",
+      "audio": "assets/audio/a_3_i.mp3"
+    },
+    "content": [
+      {
+        "words": [
+          "the",
+          "mason",
+          "builds",
+          "a",
+          "strong",
+          "wall",
+          "every",
+          "week",
+          "."
+        ],
+        "sentence": "The mason builds a strong wall every week."
+      },
+      {
+        "words": [
+          "they",
+          "did",
+          "not",
+          "finish",
+          "the",
+          "roof",
+          "yesterday",
+          "."
+        ],
+        "sentence": "They did not finish the roof yesterday."
+      },
+      {
+        "words": [
+          "did",
+          "the",
+          "engineer",
+          "check",
+          "the",
+          "cement",
+          "bags",
+          "?"
+        ],
+        "sentence": "Did the engineer check the cement bags?"
+      },
+      {
+        "words": [
+          "the",
+          "workers",
+          "carry",
+          "bricks",
+          "to",
+          "the",
+          "site",
+          "."
+        ],
+        "sentence": "The workers carry bricks to the site."
+      },
+      {
+        "words": ["he", "painted", "the", "door", "of", "the", "house", "."],
+        "sentence": "He painted the door of the house."
+      },
+      {
+        "words": ["she", "didn’t", "measure", "the", "beam", "correctly", "."],
+        "sentence": "She didn’t measure the beam correctly."
+      },
+      {
+        "words": [
+          "the",
+          "supervisor",
+          "checked",
+          "the",
+          "scaffolding",
+          "last",
+          "night",
+          "."
+        ],
+        "sentence": "The supervisor checked the scaffolding last night."
+      },
+      {
+        "words": [
+          "do",
+          "they",
+          "mix",
+          "the",
+          "concrete",
+          "in",
+          "the",
+          "yard",
+          "?"
+        ],
+        "sentence": "Do they mix the concrete in the yard?"
+      },
+      {
+        "words": [
+          "the",
+          "carpenter",
+          "cut",
+          "the",
+          "timber",
+          "last",
+          "friday",
+          "."
+        ],
+        "sentence": "The carpenter cut the timber last Friday."
+      },
+      {
+        "words": ["the", "builder", "uses", "a", "hammer", "and", "nails", "."],
+        "sentence": "The builder uses a hammer and nails."
+      }
+    ]
+  },
+  "activity_4": {
+    "type": "LISTENING",
+    "instruction": {
+      "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
+      "audio": "assets/audio/a_4_i.mp3"
+    },
+    "audio": "assets/audio/a_4_q.mp3",
+    "content": [
+      {
+        "question": "Where were Mahesh and Pradeep yesterday?",
+        "options": [
+          "At a Colombo housing site",
+          "At a Galle construction site",
+          "At a Jaffna bridge site",
+          "In Kurunegala"
+        ],
+        "answer": "At a Galle construction site"
+      },
+      {
+        "question": "What tool did they use?",
+        "options": ["A measuring tape", "A theodolite", "A hammer", "A level"],
+        "answer": "A theodolite"
+      },
+      {
+        "question": "What was wrong with the cement?",
+        "options": ["Too dry", "Too wet", "Missing sand", "Mixed with oil"],
+        "answer": "Too wet"
+      },
+      {
+        "question": "Why did the supervisor ask Anura to continue drilling?",
+        "options": [
+          "Because the scaffolding was not ready.",
+          "Because he wanted to finish the work on time.",
+          "Because the cement was too dry.",
+          "Because Mahesh left the site."
+        ],
+        "answer": "Because he wanted to finish the work on time."
+      },
+      {
+        "question": "What will happen if the scaffolding is not checked tomorrow?",
+        "options": [
+          "The workers will climb the wall anyway.",
+          "The workers will not be allowed to climb.",
+          "The wall will collapse.",
+          "The cement will dry too fast."
+        ],
+        "answer": "The workers will not be allowed to climb."
+      },
+      {
+        "question": "What safety item did Anura forget?",
+        "options": ["A helmet", "Boots", "Goggles", "Gloves"],
+        "answer": "Goggles"
+      },
+      {
+        "question": "What is wrong with the concrete blocks?",
+        "options": [
+          "They are too dry.",
+          "Some are uneven.",
+          "Some are broken.",
+          "They are too heavy."
+        ],
+        "answer": "Some are uneven."
+      },
+      {
+        "question": "Where will they go tomorrow?",
+        "options": [
+          "To the Trincomalee project",
+          "To the Colombo housing project",
+          "To Jaffna for training",
+          "To the Galle market"
+        ],
+        "answer": "To the Colombo housing project"
+      },
+      {
+        "question": "Why is Pradeep nervous?",
+        "options": [
+          "He hasn’t done a project before.",
+          "It’s his first project outside Galle.",
+          "He has never been to Colombo.",
+          "He has never designed a housing project."
+        ],
+        "answer": "It’s his first project outside Galle."
+      },
+      {
+        "question": "Who worked in Trincomalee?",
+        "options": ["Mahesh", "Pradeep", "Anura", "Instructor"],
+        "answer": "Mahesh"
+      },
+      {
+        "question": "When was the Trincomalee project?",
+        "options": ["2023", "Five years ago", "Last year"],
+        "answer": "2023"
+      },
+      {
+        "question": "What was too wet?",
+        "options": [
+          "The concrete blocks",
+          "The cement",
+          "The drilling machine"
+        ],
+        "answer": "The cement"
+      },
+      {
+        "question": "What tool measures lines?",
+        "options": ["Multimeter", "Drilling machine", "Theodolite"],
+        "answer": "Theodolite"
+      },
+      {
+        "question": "What were they building with the concrete blocks?",
+        "options": ["A wall", "The foundation", "The kitchen"],
+        "answer": "A wall"
+      },
+      {
+        "question": "What protective items did Anura wear?",
+        "options": [
+          "Gloves and face shield",
+          "Helmet and boots",
+          "Reflective vest"
+        ],
+        "answer": "Helmet and boots"
+      }
+    ]
+  }
+}

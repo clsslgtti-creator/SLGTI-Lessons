@@ -1,0 +1,451 @@
+{
+  "meta": {
+    "lesson_no": "8 - Test",
+    "level": "Elementary",
+    "section": "Food Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
+      "audio": "assets/audio/a_1_i.mp3"
+    },
+    "content": [
+      {
+        "question": "The mixing bowl ___ on the stainless-steel table right now.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "is"
+      },
+      {
+        "question": "The ovens ___ very hot during the bread-baking process yesterday.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The food safety inspector ___ checking the hygiene standards at the moment.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "is"
+      },
+      {
+        "question": "The dairy products ___ in the cold storage two days ago.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The trainees ___ preparing the spice mixture in the training kitchen right now.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The flour bags ___ stacked neatly in the storeroom last week.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The coconut scraper ___ very sharp and efficient.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "is"
+      },
+      {
+        "question": "The meat samples ___ on the inspection table yesterday morning.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The trainees ___ washing the utensils in the sink at the moment.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The quality manager ___ satisfied with the packaging of dried fish last May.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "was"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
+      "audio": "assets/audio/a_2_i.mp3"
+    },
+    "content": [
+      {
+        "question": "Is the baker tired or energetic?",
+        "options": [
+          "He is energetic.",
+          "His tired.",
+          "He is tired or energetic.",
+          "Him’s energetic."
+        ],
+        "answer": "He is energetic."
+      },
+      {
+        "question": "Was the oven clean yesterday?",
+        "options": [
+          "No, it isn’t. It is dirty.",
+          "Yes, it wasn’t. It was dirty.",
+          "No, it is. It was dirty.",
+          "No, it wasn’t. It was dirty."
+        ],
+        "answer": "No, it wasn’t. It was dirty."
+      },
+      {
+        "question": "Where is Kamal?",
+        "options": [
+          "He’s in the bakery.",
+          "His in the flour storage.",
+          "They are in the kitchen.",
+          "His in bakery."
+        ],
+        "answer": "He’s in the bakery."
+      },
+      {
+        "question": "Where is the mixing machine?",
+        "options": [
+          "They are behind the oven.",
+          "It’s between the oven and the freezer.",
+          "Its front of the freezer.",
+          "They are between oven or freezer."
+        ],
+        "answer": "It’s between the oven and the freezer."
+      },
+      {
+        "question": "Where are the trays?",
+        "options": [
+          "Their next to the oven.",
+          "There are under the oven.",
+          "Their’re next to the oven.",
+          "They’re next to the oven."
+        ],
+        "answer": "They’re next to the oven."
+      },
+      {
+        "question": "Where are the bread loaves?",
+        "options": [
+          "They’re on the cooling rack.",
+          "There are on the cooling rack.",
+          "It’s on the cooling rack.",
+          "Their on the cooling rack."
+        ],
+        "answer": "They’re on the cooling rack."
+      },
+      {
+        "question": "What are you and the chef doing?",
+        "options": [
+          "We’ar tested the dough.",
+          "We’re testing the dough.",
+          "They’re testing the dough.",
+          "We’are testing dough."
+        ],
+        "answer": "We’re testing the dough."
+      },
+      {
+        "question": "Where is the supervisor?",
+        "options": [
+          "He’s checking the flour stock.",
+          "His checked the flour stock.",
+          "He are checking the flour stock.",
+          "Him’s checking the flour stock."
+        ],
+        "answer": "He’s checking the flour stock."
+      },
+      {
+        "question": "Is there a sugar container?",
+        "options": [
+          "Yes, there isn’t.",
+          "No, there aren’t.",
+          "Yes, there is.",
+          "Yes, here is."
+        ],
+        "answer": "Yes, there is."
+      },
+      {
+        "question": "Are there any extra baking gloves?",
+        "options": [
+          "No, there isn’t.",
+          "No, there aren’t.",
+          "Yes, there is.",
+          "Yes, theire’are."
+        ],
+        "answer": "No, there aren’t."
+      },
+      {
+        "question": "Where is the weighing scale?",
+        "options": [
+          "He’s between the oven.",
+          "Its front of the mixing bowl.",
+          "It’s behind the cupboard.",
+          "They is in the refrigerator."
+        ],
+        "answer": "It’s behind the cupboard."
+      },
+      {
+        "question": "Are there any clean aprons?",
+        "options": [
+          "Yes, their aren’t. There are any clean aprons.",
+          "No, there isn’t. There are no any clean aprons.",
+          "Yes, there are. There are some clean aprons on the rack.",
+          "No, there aren’t. There are any aprons on the rack."
+        ],
+        "answer": "Yes, there are. There are some clean aprons on the rack."
+      },
+      {
+        "question": "Is there a refrigerator in the lab?",
+        "options": [
+          "Yes, there are. Its in the storeroom.",
+          "No, there isn’t. There aren’t any refrigerators in the lab.",
+          "Yes, there is. There is any refrigerator in the lab.",
+          "No, there aren’t. There are no any refrigerator in the lab."
+        ],
+        "answer": "No, there isn’t. There aren’t any refrigerators in the lab."
+      },
+      {
+        "question": "Was the thermometer accurate yesterday?",
+        "options": [
+          "No, it wasn’t. It was inaccurate.",
+          "Yes, it is. It was inaccurate.",
+          "No, it isn’t. It is inaccurate.",
+          "No, they wasn’t. It was inaccurate."
+        ],
+        "answer": "No, it wasn’t. It was inaccurate."
+      },
+      {
+        "question": "What are the trainees doing?",
+        "options": [
+          "Theire cleaning the chopping boards.",
+          "Hes washing knife.",
+          "They’re sterilizing the cooking utensils.",
+          "We’are preparing the aprons."
+        ],
+        "answer": "They’re sterilizing the cooking utensils."
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "JUMBLED",
+    "instruction": {
+      "text": "Rearrange these sentences in the correct order.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும்.",
+      "audio": "assets/audio/a_3_i.mp3"
+    },
+    "content": [
+      {
+        "words": [
+          "the",
+          "cook",
+          "prepares",
+          "rice",
+          "in",
+          "the",
+          "kitchen",
+          "."
+        ],
+        "sentence": "The cook prepares rice in the kitchen."
+      },
+      {
+        "words": [
+          "did",
+          "the",
+          "trainee",
+          "boil",
+          "milk",
+          "yesterday",
+          "morning",
+          "?"
+        ],
+        "sentence": "Did the trainee boil milk yesterday morning?"
+      },
+      {
+        "words": ["they", "bake", "bread", "in", "the", "oven", "daily", "."],
+        "sentence": "They bake bread in the oven daily."
+      },
+      {
+        "words": [
+          "he",
+          "did",
+          "not",
+          "cut",
+          "vegetables",
+          "yesterday",
+          "evening",
+          "."
+        ],
+        "sentence": "He did not cut vegetables yesterday evening."
+      },
+      {
+        "words": [
+          "the",
+          "instructor",
+          "checks",
+          "the",
+          "refrigerator",
+          "every",
+          "day",
+          "."
+        ],
+        "sentence": "The instructor checks the refrigerator every day."
+      },
+      {
+        "words": ["she", "fried", "fish", "in", "oil", "last", "night", "."],
+        "sentence": "She fried fish in oil last night."
+      },
+      {
+        "words": ["do", "they", "wash", "plates", "in", "the", "sink", "?"],
+        "sentence": "Do they wash plates in the sink?"
+      },
+      {
+        "words": [
+          "the",
+          "students",
+          "measured",
+          "the",
+          "flour",
+          "in",
+          "class",
+          "yesterday",
+          "."
+        ],
+        "sentence": "The students measured the flour in class yesterday."
+      },
+      {
+        "words": ["he", "does", "not", "clean", "the", "cutting", "board", "."],
+        "sentence": "He does not clean the cutting board."
+      },
+      {
+        "words": ["the", "baker", "mixed", "spices", "in", "the", "dough", "."],
+        "sentence": "The baker mixed spices in the dough."
+      }
+    ]
+  },
+  "activity_4": {
+    "type": "LISTENING",
+    "instruction": {
+      "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
+      "audio": "assets/audio/a_4_i.mp3"
+    },
+    "audio": "assets/audio/a_4_q.mp3",
+    "content": [
+      {
+        "question": "Where were Fathima and Nimal yesterday?",
+        "options": [
+          "At the Matara dairy",
+          "At the Kurunegala workshop",
+          "At the Jaffna food lab",
+          "In a Colombo bakery"
+        ],
+        "answer": "At the Jaffna food lab"
+      },
+      {
+        "question": "What machine were they testing?",
+        "options": [
+          "An Ice-cream freezer",
+          "A Spice roaster",
+          "An Oven",
+          "A Water filter"
+        ],
+        "answer": "A Spice roaster"
+      },
+      {
+        "question": "What was wrong with the moisture meter?",
+        "options": [
+          "It was not showing the right result.",
+          "It was missing yesterday.",
+          "It was new and unused.",
+          "It was too expensive."
+        ],
+        "answer": "It was not showing the right result."
+      },
+      {
+        "question": "Why did the instructor ask them to repeat the experiment twice?",
+        "options": [
+          "Because the machine was broken.",
+          "Because the results needed to be accurate.",
+          "Because Fathima forgot her notebook.",
+          "Because Nimal was late."
+        ],
+        "answer": "Because the results needed to be accurate."
+      },
+      {
+        "question": "What will the trainees have to do if the results are wrong tomorrow?",
+        "options": [
+          "Stop the test immediately",
+          "Clean the machine again",
+          "Replace the spice roaster",
+          "Visit the dairy plant"
+        ],
+        "answer": "Clean the machine again"
+      },
+      {
+        "question": "What are trainees learning right now?",
+        "options": [
+          "How to bake bread",
+          "How to pasteurize milk",
+          "How to cut vegetables",
+          "How to clean the lab"
+        ],
+        "answer": "How to pasteurize milk"
+      },
+      {
+        "question": "Why was the instructor unhappy?",
+        "options": [
+          "One student was not stirring the milk properly.",
+          "Only one student wore a reflective vest.",
+          "Kamal forgot his hairnet.",
+          "Nimal was absent."
+        ],
+        "answer": "Kamal forgot his hairnet."
+      },
+      {
+        "question": "Where will they go tomorrow?",
+        "options": [
+          "To the Colombo food exhibition",
+          "To the Kurunegala dairy plant",
+          "To the Jaffna fish market",
+          "To an ice-cream shop in Galle"
+        ],
+        "answer": "To the Kurunegala dairy plant"
+      },
+      {
+        "question": "What will they test in the yoghurt?",
+        "options": ["Temperature", "pH level", "Colour", "Texture only"],
+        "answer": "pH level"
+      },
+      {
+        "question": "Why is Nimal nervous?",
+        "options": [
+          "He hasn’t been to Matara.",
+          "He has never been outside Jaffna.",
+          "He has never travelled.",
+          "He doesn’t know how to seal plastic bottles."
+        ],
+        "answer": "He has never been outside Jaffna."
+      },
+      {
+        "question": "When did Fathima visit Matara?",
+        "options": ["Five years ago.", "In 2023", "Last year"],
+        "answer": "In 2023"
+      },
+      {
+        "question": "What was cleaned?",
+        "options": ["Mixing machine", "Moisture meter", "Plastic bottles"],
+        "answer": "Mixing machine"
+      },
+      {
+        "question": "Which product was pasteurized?",
+        "options": ["Chillies", "Yoghurt", "Milk"],
+        "answer": "Milk"
+      },
+      {
+        "question": "What protective items did Kamal wear?",
+        "options": ["Apron and gloves", "Hairnet", "Boots"],
+        "answer": "Apron and gloves"
+      },
+      {
+        "question": "Where was the ice-cream factory?",
+        "options": ["Matara", "Kandy", "Jaffna"],
+        "answer": "Matara"
+      }
+    ]
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "meta": {
+    "lesson_no": "8 - Test",
+    "level": "Elementary",
+    "section": "Electrical Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
+      "audio": "assets/audio/a_1_i.mp3"
+    },
+    "content": [
+      {
+        "question": "The switchboards ___ in the testing room yesterday morning.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The electrician ___ busy with the circuit diagram at the moment.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "is"
+      },
+      {
+        "question": "The fuses ___ damaged during the storm two days ago.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The trainees ___ working with the soldering iron right now.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The batteries ___ fully charged last week.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The generator ___ very noisy yesterday evening.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "was"
+      },
+      {
+        "question": "The instructor ___ in the control room right now.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "is"
+      },
+      {
+        "question": "The warning lights ___ not working in the lab last May.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "were"
+      },
+      {
+        "question": "The transformers ___ outside the building.",
+        "options": ["are", "is", "was", "were"],
+        "answer": "are"
+      },
+      {
+        "question": "The wires ___ very hot during the test yesterday afternoon.",
+        "options": ["is", "are", "was", "were"],
+        "answer": "were"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
+      "audio": "assets/audio/a_2_i.mp3"
+    },
+    "content": [
+      {
+        "question": "Is the mechanic tired or energetic?",
+        "options": [
+          "He is energetic.",
+          "His tired.",
+          "He is tired or energetic.",
+          "Him energetic."
+        ],
+        "answer": "He is energetic."
+      },
+      {
+        "question": "Were the tools clean yesterday?",
+        "options": [
+          "No, there weren’t. They were dirty.",
+          "Yes, they were. Their were dirty.",
+          "Yes, they was dirty.",
+          "No, they weren’t. They were dirty."
+        ],
+        "answer": "No, there weren’t. They were dirty."
+      },
+      {
+        "question": "Where is Fathima?",
+        "options": [
+          "She’s in the workshop.",
+          "Shi’s in the maintenance yard.",
+          "They are in the office.",
+          "Hers in workshop."
+        ],
+        "answer": "She’s in the workshop."
+      },
+      {
+        "question": "Where is the storeroom?",
+        "options": [
+          "They are behind the factory.",
+          "It’s between the factory and the office.",
+          "Its front of office.",
+          "Its next from factory."
+        ],
+        "answer": "It’s between the factory and the office."
+      },
+      {
+        "question": "Where are the tools?",
+        "options": [
+          "Their next to the cables.",
+          "There are under the cables.",
+          "They’re next to the cables.",
+          "There’s next to cables."
+        ],
+        "answer": "They’re next to the cables."
+      },
+      {
+        "question": "Where are the pliers?",
+        "options": [
+          "They’re on the worktable.",
+          "There are on the worktable.",
+          "It’s on the worktable.",
+          "Its on worktable."
+        ],
+        "answer": "They’re on the worktable."
+      },
+      {
+        "question": "What are you and the inspector doing?",
+        "options": [
+          "We’are checked the safety equipment.",
+          "We’re checking the safety equipment.",
+          "They’re checking the safety equipment.",
+          "He’s checking the safety equipment."
+        ],
+        "answer": "We’re checking the safety equipment."
+      },
+      {
+        "question": "Where is the supervisor?",
+        "options": [
+          "He’s inspecting the storeroom.",
+          "His inspected the storeroom.",
+          "He are inspecting the storeroom.",
+          "Him inspecting storeroom."
+        ],
+        "answer": "He’s inspecting the storeroom."
+      },
+      {
+        "question": "Is there a First aid box?",
+        "options": [
+          "Yes, there isn’t.",
+          "No, there aren’t.",
+          "No, their isn’t.",
+          "Yes, there is."
+        ],
+        "answer": "Yes, there is."
+      },
+      {
+        "question": "Are there any extra safety gloves?",
+        "options": [
+          "No. there isn’t.",
+          "No, there aren’t.",
+          "Yes, there is.",
+          "Yes, their are."
+        ],
+        "answer": "No, there aren’t."
+      },
+      {
+        "question": "Where is the duty chart?",
+        "options": [
+          "He’s behind the desk calendar.",
+          "Its front of desk calendar.",
+          "It’s between desk calendar.",
+          "It’s behind the desk calendar."
+        ],
+        "answer": "It’s behind the desk calendar."
+      },
+      {
+        "question": "Are there any face shields?",
+        "options": [
+          "Yes, their aren’t. There are any face shields.",
+          "No, there isn’t. There are no any face shields.",
+          "Yes, there are. There are some thick face shields on the table.",
+          "No, there aren’t. There are any thick face shields on the table."
+        ],
+        "answer": "Yes, there are. There are some thick face shields on the table."
+      },
+      {
+        "question": "Is there a reflective vest?",
+        "options": [
+          "Yes, there are. Its in the cupboard.",
+          "No, there isn’t. There aren’t any bright reflective vests in the cupboard.",
+          "Yes, there is. There is any bright reflective vest in the cupboard.",
+          "No, there aren’t. There are no any reflective vests in the cupboard."
+        ],
+        "answer": "No, there isn’t. There aren’t any bright reflective vests in the cupboard."
+      },
+      {
+        "question": "Was the digital meter accurate yesterday?",
+        "options": [
+          "No, it wasn’t. It was inaccurate.",
+          "Yes, it is. It was inaccurate.",
+          "No, it isn’t. It is inaccurate.",
+          "No, they wasn’t. It was inaccurate."
+        ],
+        "answer": "No, it wasn’t. It was inaccurate."
+      },
+      {
+        "question": "What are the technicians doing?",
+        "options": [
+          "Theire calibrating instruments.",
+          "Hes calibrating instrument.",
+          "They’re calibrating the measuring instruments.",
+          "We’are calibrating the instruments."
+        ],
+        "answer": "They’re calibrating the measuring instruments."
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "JUMBLED",
+    "instruction": {
+      "text": "Rearrange these sentences in the correct order.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும்.",
+      "audio": "assets/audio/a_3_i.mp3"
+    },
+    "content": [
+      {
+        "words": [
+          "the",
+          "electrician",
+          "checks",
+          "the",
+          "light",
+          "every",
+          "morning",
+          "."
+        ],
+        "sentence": "The electrician checks the light every morning."
+      },
+      {
+        "words": [
+          "did",
+          "they",
+          "test",
+          "the",
+          "wires",
+          "yesterday",
+          "morning",
+          "?"
+        ],
+        "sentence": "Did they test the wires yesterday morning?"
+      },
+      {
+        "words": [
+          "he",
+          "connected",
+          "the",
+          "cable",
+          "to",
+          "the",
+          "socket",
+          "."
+        ],
+        "sentence": "He connected the cable to the socket."
+      },
+      {
+        "words": ["she", "didn’t", "fix", "the", "fan", "properly", "."],
+        "sentence": "She didn’t fix the fan properly."
+      },
+      {
+        "words": [
+          "the",
+          "students",
+          "measure",
+          "the",
+          "voltage",
+          "in",
+          "the",
+          "circuit",
+          "."
+        ],
+        "sentence": "The students measure the voltage in the circuit."
+      },
+      {
+        "words": ["they", "did", "not", "check", "the", "fuse", "box", "."],
+        "sentence": "They did not check the fuse box."
+      },
+      {
+        "words": [
+          "does",
+          "the",
+          "engineer",
+          "replace",
+          "switches",
+          "every",
+          "week",
+          "?"
+        ],
+        "sentence": "Does the engineer replace switches every week?"
+      },
+      {
+        "words": [
+          "the",
+          "instructor",
+          "taught",
+          "earth",
+          "wiring",
+          "yesterday",
+          "afternoon",
+          "."
+        ],
+        "sentence": "The instructor taught earth wiring yesterday afternoon."
+      },
+      {
+        "words": [
+          "the",
+          "trainee",
+          "installs",
+          "a",
+          "bulb",
+          "in",
+          "class",
+          "."
+        ],
+        "sentence": "The trainee installs a bulb in class."
+      },
+      {
+        "words": [
+          "he",
+          "changed",
+          "the",
+          "circuit",
+          "board",
+          "last",
+          "night",
+          "."
+        ],
+        "sentence": "He changed the circuit board last night."
+      }
+    ]
+  },
+  "activity_4": {
+    "type": "LISTENING",
+    "instruction": {
+      "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
+      "audio": "assets/audio/a_4_i.mp3"
+    },
+    "audio": "assets/audio/a_4_q.mp3",
+    "content": [
+      {
+        "question": "Where were Kumar and Rohan yesterday?",
+        "options": [
+          "At the Jaffna lab",
+          "At the Negombo electrical lab",
+          "At a Colombo fair",
+          "In Kurunegala"
+        ],
+        "answer": "At the Negombo electrical lab"
+      },
+      {
+        "question": "What device did they test?",
+        "options": [
+          "A fuse holder",
+          "The circuit breaker",
+          "A switch",
+          "A battery"
+        ],
+        "answer": "The circuit breaker"
+      },
+      {
+        "question": "What instrument showed wrong values?",
+        "options": [
+          "An ammeter",
+          "A multimeter",
+          "A voltmeter",
+          "A thermometer"
+        ],
+        "answer": "A multimeter"
+      },
+      {
+        "question": "Why did the instructor remind them to be careful?",
+        "options": [
+          "Because the multimeter was broken.",
+          "Because electricity is dangerous.",
+          "Because the lamps were too bright.",
+          "Because Asma worked too slowly."
+        ],
+        "answer": "Because electricity is dangerous."
+      },
+      {
+        "question": "What will the supervisor do if the lamps are not installed correctly?",
+        "options": [
+          "He will cancel the exhibition.",
+          "He will stop the practice session.",
+          "He will call the electrician.",
+          "He will change the fuse."
+        ],
+        "answer": "He will stop the practice session."
+      },
+      {
+        "question": "What are trainees installing now?",
+        "options": [
+          "Solar panels",
+          "Fluorescent lamps",
+          "Air conditioners",
+          "Motors"
+        ],
+        "answer": "Fluorescent lamps"
+      },
+      {
+        "question": "What is the problem with the lamps now?",
+        "options": [
+          "Broken tubes",
+          "Some are not connected",
+          "Too bright",
+          "Flickering"
+        ],
+        "answer": "Some are not connected"
+      },
+      {
+        "question": "Where will they go tomorrow?",
+        "options": [
+          "To the Kurunegala show",
+          "To the exhibition in Colombo",
+          "To Galle Face",
+          "To Jaffna"
+        ],
+        "answer": "To the exhibition in Colombo"
+      },
+      {
+        "question": "What will they demonstrate tomorrow?",
+        "options": [
+          "How to repair cars",
+          "How to test transformers",
+          "How to repair laptops",
+          "How to repair electric fans"
+        ],
+        "answer": "How to test transformers"
+      },
+      {
+        "question": "Why is Rohan nervous?",
+        "options": [
+          "He has never travelled to Colombo.",
+          "He has never used a microphone.",
+          "He doesn’t know to test transformers.",
+          "He doesn’t know to check fuses."
+        ],
+        "answer": "He has never used a microphone."
+      },
+      {
+        "question": "Who presented in 2023?",
+        "options": ["Asma", "Rohan", "Kumar"],
+        "answer": "Kumar"
+      },
+      {
+        "question": "Who connected the cables?",
+        "options": ["Asma", "Rohan", "Kumar"],
+        "answer": "Asma"
+      },
+      {
+        "question": "What device was accurate?",
+        "options": ["Voltage meter", "Circuit breaker", "Control panel"],
+        "answer": "Circuit breaker"
+      },
+      {
+        "question": "What are they installing?",
+        "options": ["Fluorescent lamps", "Cables", "Switches"],
+        "answer": "Fluorescent lamps"
+      },
+      {
+        "question": "Where was the 2023 presentation?",
+        "options": ["Colombo", "Matara", "Kurunegala"],
+        "answer": "Kurunegala"
+      }
+    ]
+  }
+}
