@@ -9,6 +9,7 @@ import { buildActivityTwoSlides } from "./lib/activity-2.js";
 import { buildListeningOneSlides } from "./lib/listening-1.js";
 import { buildListeningTwoSlides } from "./lib/listening-2.js";
 import { buildListeningThreeSlides } from "./lib/listening-3.js";
+import { buildListeningFourSlides } from "./lib/listening-4.js";
 
 const slidesContainer = document.getElementById("slides");
 const progressIndicator = document.getElementById("progressIndicator");
@@ -221,6 +222,7 @@ const activityBuilders = {
   "LISTENING-1": buildListeningOneSlides,
   "LISTENING-2": buildListeningTwoSlides,
   "LISTENING-3": buildListeningThreeSlides,
+  "LISTENING-4": buildListeningFourSlides,
   "ACTIVITY-2": buildActivityTwoSlides,
 };
 
