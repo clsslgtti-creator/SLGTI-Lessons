@@ -7,7 +7,7 @@
   },
   "activity_1": {
     "type": "PRONUNCIATION",
-    "focus": "Long /ɔː/",
+    "focus": "Short /ʌ/",
     "instructions": {
       "activity_1_a": {
         "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "cl'u'tch",
+        "word_text": "c'u'p",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "This cl'u'tch was hard to press.",
+        "sentence_text": "Pour tea into the c'u'p.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "b'u's",
+        "word_text": "n'u't",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Those b'u'ses were full of passengers last week.",
+        "sentence_text": "There were not enough n'u'ts in the workshop yesterday morning.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "tr'u'ck",
+        "word_text": "b'u'tter",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "There were five men in a large tr'u'ck here yesterday.",
+        "sentence_text": "Spread b'u'tter on the bread.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "p'u'mp",
+        "word_text": "l'u'nch",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Check the water p'u'mps carefully.",
+        "sentence_text": "Yesterday all men were at  the office for l'u'nch sharp at 1 p.m. ",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }

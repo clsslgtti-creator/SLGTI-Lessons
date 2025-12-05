@@ -7,7 +7,7 @@
   },
   "activity_1": {
     "type": "PRONUNCIATION",
-    "focus": "Long /ɔː/",
+    "focus": "Short /ʌ/",
     "instructions": {
       "activity_1_a": {
         "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "cl'u'tch",
+        "word_text": "m'u'd",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "This cl'u'tch was hard to press.",
+        "sentence_text": "The workers were in a  m'u'd house yesterday.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "b'u's",
+        "word_text": "dr'u'm",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Those b'u'ses were full of passengers last week.",
+        "sentence_text": "Five men carried water in a dr'u'm an hour ago.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "tr'u'ck",
+        "word_text": "h'u't",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "There were five men in a large tr'u'ck here yesterday.",
+        "sentence_text": "There were  six small h'u'ts near the site last week.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "p'u'mp",
+        "word_text": "c'u't",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Check the water p'u'mps carefully.",
+        "sentence_text": "Do not c'u't wood without safety gear.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
