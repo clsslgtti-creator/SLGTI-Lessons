@@ -1,3 +1,4 @@
+
 export const DEFAULT_FEEDBACK_ASSETS = {
   correctAudio: "assets/audio/game/correct.wav",
   incorrectAudio: "assets/audio/game/incorrect.wav",
@@ -16,8 +17,8 @@ const TOKEN_BASE_HEIGHT = 70;
 const trimText = (value) =>
   typeof value === "string" ? value.trim() : "";
 
-const joinWordsForDisplay = (words = []) => {
-  return words.reduce((acc, word, index) => {
+const joinWordsForDisplay = (words = []) =>
+  words.reduce((acc, word, index) => {
     if (!word) {
       return acc;
     }
@@ -29,7 +30,6 @@ const joinWordsForDisplay = (words = []) => {
     }
     return `${acc} ${word}`;
   }, "");
-};
 
 const shuffleArray = (list = []) => {
   const copy = Array.isArray(list) ? [...list] : [];
@@ -116,7 +116,6 @@ const createRoundedPanel = (
     getStyle: () => ({ ...state }),
   };
 };
-
 const createPrimaryButton = (
   scene,
   label,
@@ -124,13 +123,19 @@ const createPrimaryButton = (
   height,
   { onClick, baseColor = 0x1d4ed8, textSize = 32 } = {}
 ) => {
-  const panel = createRoundedPanel(scene, width, height, Math.min(30, height / 2), {
-    fillColor: baseColor,
-    fillAlpha: 1,
-    strokeColor: baseColor,
-    strokeAlpha: 0.8,
-    lineWidth: 0,
-  });
+  const panel = createRoundedPanel(
+    scene,
+    width,
+    height,
+    Math.min(30, height / 2),
+    {
+      fillColor: baseColor,
+      fillAlpha: 1,
+      strokeColor: baseColor,
+      strokeAlpha: 0.8,
+      lineWidth: 0,
+    }
+  );
 
   const text = scene.add
     .text(0, 0, label, {
@@ -192,6 +197,80 @@ const createPrimaryButton = (
   };
 };
 
+const createBarButton = (
+  scene,
+  label,
+  width,
+  height,
+  { onClick, baseColor = 0x1f6feb } = {}
+) => {
+  const baseColorObj = Phaser.Display.Color.IntegerToColor(baseColor);
+  const hoverColor = Phaser.Display.Color.GetColor(
+    Math.min(baseColorObj.red + 25, 255),
+    Math.min(baseColorObj.green + 25, 255),
+    Math.min(baseColorObj.blue + 25, 255)
+  );
+
+  const panel = createRoundedPanel(scene, width, height, Math.min(42, height / 2));
+  const styles = {
+    base: {
+      fillColor: baseColor,
+      fillAlpha: 1,
+      strokeColor: baseColor,
+      strokeAlpha: 0.9,
+      lineWidth: 0,
+    },
+    hover: {
+      fillColor: hoverColor,
+      fillAlpha: 1,
+      strokeColor: baseColor,
+      strokeAlpha: 0.9,
+      lineWidth: 0,
+    },
+    disabled: {
+      fillColor: 0xa1a1aa,
+      fillAlpha: 1,
+      strokeColor: 0x71717a,
+      strokeAlpha: 0.9,
+      lineWidth: 0,
+    },
+  };
+  panel.update(styles.base);
+
+  const text = scene.add
+    .text(0, 0, label, {
+      fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+      fontSize: 58,
+      color: "#ffffff",
+      fontStyle: "bold",
+      align: "center",
+    })
+    .setOrigin(0.5);
+
+  const container = scene.add.container(0, 0, [panel.graphics, text]);
+  container.setSize(width, height);
+  container.setInteractive({ useHandCursor: true });
+  container.on("pointerover", () => {
+    if (!container.input?.enabled) {
+      return;
+    }
+    panel.update(styles.hover);
+  });
+  container.on("pointerout", () => {
+    if (!container.input?.enabled) {
+      return;
+    }
+    panel.update(styles.base);
+  });
+  container.on("pointerdown", () => {
+    if (container.input?.enabled && typeof onClick === "function") {
+      onClick();
+    }
+  });
+
+  return { container, background: panel, text, styles };
+};
+
 const TOKEN_STYLES = {
   bank: {
     fillColor: 0xffffff,
@@ -234,7 +313,7 @@ const setTokenStyle = (token, styleKey = "bank") => {
     strokeAlpha: style.strokeAlpha,
     lineWidth: 3,
   });
-  token.text.setColor(styleKey === "bank" ? "#0f172a" : "#0f172a");
+  token.text.setColor("#0f172a");
 };
 
 const createToken = (scene, word, index, onClick) => {
@@ -255,10 +334,15 @@ const createToken = (scene, word, index, onClick) => {
     })
     .setOrigin(0.5);
 
+  const container = scene.add.container(0, 0, [background.graphics, text]);
+  container.setSize(width, height);
+  container.setDepth(4);
+  container.setInteractive({ useHandCursor: true });
+
   const token = {
     id: `${word}-${index}-${Math.random().toString(36).slice(2, 8)}`,
     word,
-    container: null,
+    container,
     text,
     background,
     width,
@@ -266,10 +350,6 @@ const createToken = (scene, word, index, onClick) => {
     state: "bank",
   };
 
-  const container = scene.add.container(0, 0, [background.graphics, text]);
-  container.setSize(width, height);
-  container.setDepth(4);
-  container.setInteractive({ useHandCursor: true });
   container.on("pointerdown", () => onClick?.(token));
   container.on("pointerover", () => {
     if (!container.input?.enabled) {
@@ -288,10 +368,7 @@ const createToken = (scene, word, index, onClick) => {
     }
   });
 
-  token.container = container;
-
   setTokenStyle(token, "bank");
-
   return token;
 };
 
@@ -343,6 +420,22 @@ export const normalizeFirstSentence = (entry) => {
   };
 };
 
+const isMobileDevice = () => {
+  if (typeof navigator === "undefined") {
+    return false;
+  }
+  const ua = (navigator.userAgent || "").toLowerCase();
+  const hasTouch =
+    (typeof window !== "undefined" && "ontouchstart" in window) ||
+    navigator.maxTouchPoints > 1 ||
+    navigator.msMaxTouchPoints > 1;
+  return (
+    hasTouch &&
+    /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile/i.test(
+      ua
+    )
+  );
+};
 export const createGameScene = (config = {}) => {
   const {
     questions: rawQuestions = [],
@@ -361,19 +454,37 @@ export const createGameScene = (config = {}) => {
     constructor() {
       super("GameTwoScene");
       this.questions = questions;
+      this.totalQuestions = questions.length;
       this.firstSentence = firstSentence;
       this.feedbackAssets = feedbackAssets;
       this.backgroundImageKey = null;
-      this.timePerQuestionMs = timePerQuestionMs;
-      this.activeTimer = null;
-      this.currentIndex = -1;
-      this.state = "idle";
-      this.score = 0;
-      this.assembledWords = [];
-      this.arrangedTokens = [];
-      this.bankTokens = [];
-      this.awaitingAnswer = false;
+      this.timePerQuestionMs = Math.max(5000, timePerQuestionMs);
       this.statusElement = statusElement;
+      this.defaultTimerLabel = `Time: ${(this.timePerQuestionMs / 1000).toFixed(
+        1
+      )}s`;
+      this.score = 0;
+      this.currentIndex = -1;
+      this.awaitingAnswer = false;
+      this.activeTimer = null;
+      this.bankTokens = [];
+      this.arrangedTokens = [];
+      this.assembledWords = [];
+      this.runState = "idle";
+      this.gameUiElements = [];
+      this.topHudElements = [];
+      this.startButton = null;
+      this.feedbackBackdrop = null;
+      this.feedbackGroup = null;
+      this.feedbackPanel = null;
+      this.feedbackIcon = null;
+      this.feedbackLabel = null;
+      this.summaryOverlay = null;
+      this.summaryBackdrop = null;
+      this.summaryTitle = null;
+      this.summaryBody = null;
+      this.orientationLocked = false;
+      this.scaleListenersAttached = false;
       this.activeAudio = null;
       this.pendingAudioToken = 0;
     }
@@ -410,10 +521,16 @@ export const createGameScene = (config = {}) => {
         );
       }
       if (this.feedbackAssets.timeoutAudio) {
-        this.load.audio("word-game-timeout", this.feedbackAssets.timeoutAudio);
+        this.load.audio(
+          "word-game-timeout",
+          this.feedbackAssets.timeoutAudio
+        );
       }
       if (this.feedbackAssets.correctImg) {
-        this.load.image("word-game-correct-img", this.feedbackAssets.correctImg);
+        this.load.image(
+          "word-game-correct-img",
+          this.feedbackAssets.correctImg
+        );
       }
       if (this.feedbackAssets.incorrectImg) {
         this.load.image(
@@ -422,13 +539,21 @@ export const createGameScene = (config = {}) => {
         );
       }
       if (this.feedbackAssets.timeoutImg) {
-        this.load.image("word-game-timeout-img", this.feedbackAssets.timeoutImg);
+        this.load.image(
+          "word-game-timeout-img",
+          this.feedbackAssets.timeoutImg
+        );
       }
     }
-
     create() {
+      this.events.once(Phaser.Scenes.Events.SHUTDOWN, this.shutdown, this);
+      this.events.once(Phaser.Scenes.Events.DESTROY, this.shutdown, this);
+
       const { width, height } = this.sys.game.canvas;
       this.cameras.main.setBackgroundColor("#edf2fb");
+      this.gameUiElements = [];
+      this.topHudElements = [];
+
       this.background = this.add
         .image(width / 2, height / 2, this.backgroundImageKey)
         .setOrigin(0.5)
@@ -436,32 +561,110 @@ export const createGameScene = (config = {}) => {
       this.background.displayWidth = width;
       this.background.displayHeight = height;
 
+      const accentLeft = this.add.circle(
+        width * 0.18,
+        height * 0.82,
+        180,
+        0x1f6feb,
+        0.08
+      );
+      accentLeft.setBlendMode(Phaser.BlendModes.SCREEN);
+      accentLeft.setDepth(0.5);
+      this.gameUiElements.push(accentLeft);
+
+      const accentRight = this.add.circle(
+        width * 0.82,
+        height * 0.26,
+        210,
+        0xf0ab00,
+        0.08
+      );
+      accentRight.setBlendMode(Phaser.BlendModes.SCREEN);
+      accentRight.setDepth(0.5);
+      this.gameUiElements.push(accentRight);
+
+      const topBar = createRoundedPanel(this, width * 0.82, 120, 28);
+      topBar.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.85,
+        strokeColor: 0x93c5fd,
+        strokeAlpha: 0.18,
+        lineWidth: 2,
+      });
+      topBar.graphics.setPosition(width / 2, 90);
+      topBar.graphics.setDepth(2);
+      this.topHudElements.push(topBar.graphics);
+
       this.phaseText = this.add
-        .text(width / 2, 24, "Arrange the sentence", {
+        .text(width / 2, 70, "Ready to start?", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "34px",
           color: "#0f172a",
           fontStyle: "bold",
+          letterSpacing: 0.6,
         })
         .setOrigin(0.5, 0);
+      this.phaseText.setDepth(3);
+      this.topHudElements.push(this.phaseText);
 
+      const badgeHeight = 68;
+      const timerBadgeWidth = 200;
+      this.timerPanel = createRoundedPanel(this, timerBadgeWidth, badgeHeight, 20);
+      this.timerPanel.graphics.setPosition(50, -16);
+      this.timerPanelBaseStyle = {
+        fillColor: 0x1f6feb,
+        fillAlpha: 0.12,
+        strokeColor: 0x1f6feb,
+        strokeAlpha: 0.24,
+        lineWidth: 2,
+      };
+      this.timerPanelActiveStyle = {
+        fillColor: 0x1f6feb,
+        fillAlpha: 0.18,
+        strokeColor: 0x1d4ed8,
+        strokeAlpha: 0.42,
+        lineWidth: 2,
+      };
+      this.timerPanel.update(this.timerPanelBaseStyle);
       this.timerText = this.add
-        .text(60, 30, "Time: 20.0s", {
+        .text(50, -16, this.defaultTimerLabel, {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: "26px",
+          color: "#1f2937",
+          fontStyle: "bold",
+        })
+        .setOrigin(0.5);
+      this.timerBadge = this.add.container(timerBadgeWidth / 2 + 90, 108, [
+        this.timerPanel.graphics,
+        this.timerText,
+      ]);
+      this.timerBadge.setDepth(3);
+      this.topHudElements.push(this.timerBadge);
+
+      const scoreBadgeWidth = 200;
+      this.scorePanel = createRoundedPanel(this, scoreBadgeWidth, badgeHeight, 20);
+      this.scorePanel.graphics.setPosition(-50, -16);
+      this.scorePanel.update({
+        fillColor: 0x1f6feb,
+        fillAlpha: 0.12,
+        strokeColor: 0x1f6feb,
+        strokeAlpha: 0.24,
+        lineWidth: 2,
+      });
+      this.scoreText = this.add
+        .text(-50, -16, `Score: 0/${this.totalQuestions}`, {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "26px",
           color: "#1d4ed8",
           fontStyle: "bold",
         })
-        .setOrigin(0, 0);
-
-      this.scoreText = this.add
-        .text(width - 60, 30, "Score: 0/0", {
-          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: "26px",
-          color: "#16a34a",
-          fontStyle: "bold",
-        })
-        .setOrigin(1, 0);
+        .setOrigin(0.5);
+      this.scoreBadge = this.add.container(width - scoreBadgeWidth / 2 - 90, 108, [
+        this.scorePanel.graphics,
+        this.scoreText,
+      ]);
+      this.scoreBadge.setDepth(3);
+      this.topHudElements.push(this.scoreBadge);
 
       const sentencePanel = createRoundedPanel(this, width * 0.82, 160, 24, {
         fillColor: 0xffffff,
@@ -473,7 +676,7 @@ export const createGameScene = (config = {}) => {
       sentencePanel.graphics.setPosition(width / 2, 150);
 
       this.sentenceText = this.add
-        .text(width / 2, 150, "Press Start to begin.", {
+        .text(width / 2, 150, "Tap Start to begin.", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "30px",
           color: "#0f172a",
@@ -495,7 +698,6 @@ export const createGameScene = (config = {}) => {
       this.targetArea = {
         width: width * 0.76,
         height: 160,
-        position: { x: width / 2, y: height / 2 - 40 },
       };
 
       const bankPanel = createRoundedPanel(this, width * 0.82, 180, 26, {
@@ -522,40 +724,56 @@ export const createGameScene = (config = {}) => {
           wordWrap: { width: width * 0.78 },
         })
         .setOrigin(0.5);
+      this.feedbackBackdrop = this.add.rectangle(
+        width / 2,
+        height / 2,
+        width,
+        height,
+        0x0f172a,
+        0.3
+      );
+      this.feedbackBackdrop.setAlpha(0);
+      this.feedbackBackdrop.setDepth(8);
+      this.feedbackBackdrop.setVisible(false);
 
-      this.feedbackText = this.add
-        .text(width / 2, height - 50, "", {
-          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: "30px",
-          color: "#0f172a",
-          fontStyle: "bold",
-        })
-        .setOrigin(0.5);
-
-      this.startOverlay = this.add.container(width / 2, height / 2, []);
-      const startPanel = createRoundedPanel(this, 420, 220, 32, {
+      this.feedbackGroup = this.add.container(width / 2, height / 2 + 120);
+      this.feedbackGroup.setAlpha(0);
+      this.feedbackGroup.setDepth(9);
+      const feedbackPanel = createRoundedPanel(this, 420, 120, 28);
+      feedbackPanel.update({
         fillColor: 0xffffff,
         fillAlpha: 0.98,
-        strokeColor: 0x93c5fd,
-        strokeAlpha: 0.7,
+        strokeColor: 0x1f2933,
+        strokeAlpha: 0.15,
         lineWidth: 3,
       });
-      startPanel.graphics.setDepth(10);
-      const startText = this.add
-        .text(0, -40, "Arrange the jumbled words\nto form a sentence.", {
+      this.feedbackPanel = feedbackPanel;
+      this.feedbackIcon = this.add.image(-120, 0, "").setVisible(false);
+      this.feedbackLabel = this.add
+        .text(30, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: "26px",
-          color: "#0f172a",
-          align: "center",
+          fontSize: 30,
+          color: "#1f2933",
+          fontStyle: "bold",
         })
-        .setOrigin(0.5);
-      const startButton = createPrimaryButton(this, "Start", 220, 72, {
-        onClick: () => this.startGame(),
-      });
-      startButton.container.setPosition(0, 70);
+        .setOrigin(0, 0.5);
+      this.feedbackGroup.add([
+        feedbackPanel.graphics,
+        this.feedbackIcon,
+        this.feedbackLabel,
+      ]);
 
-      this.startOverlay.add([startPanel.graphics, startText, startButton.container]);
-      this.startButton = startButton;
+      this.summaryBackdrop = this.add.rectangle(
+        width / 2,
+        height / 2,
+        width,
+        height,
+        0x0f172a,
+        0.45
+      );
+      this.summaryBackdrop.setVisible(false);
+      this.summaryBackdrop.setAlpha(0);
+      this.summaryBackdrop.setDepth(18);
 
       this.summaryOverlay = this.add.container(width / 2, height / 2);
       const summaryPanel = createRoundedPanel(this, 520, 300, 32, {
@@ -565,7 +783,7 @@ export const createGameScene = (config = {}) => {
         strokeAlpha: 0.15,
         lineWidth: 3,
       });
-      summaryPanel.graphics.setDepth(10);
+      summaryPanel.graphics.setDepth(19);
       this.summaryTitle = this.add
         .text(0, -80, "Great job!", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
@@ -584,7 +802,7 @@ export const createGameScene = (config = {}) => {
         })
         .setOrigin(0.5);
       const replayButton = createPrimaryButton(this, "Replay", 200, 64, {
-        onClick: () => this.restartGame(),
+        onClick: () => this.handleReplayPressed(),
       });
       replayButton.container.setPosition(0, 110);
       this.summaryOverlay.add([
@@ -593,88 +811,186 @@ export const createGameScene = (config = {}) => {
         this.summaryBody,
         replayButton.container,
       ]);
+      this.summaryOverlay.setDepth(19);
       this.summaryOverlay.setVisible(false);
+      this.summaryOverlay.setAlpha(0);
 
-      this.updateScoreText();
-      this.updateTimerText(this.timePerQuestionMs);
+      this.createCenterStartButton(width, height);
+      this.attachScaleListeners();
+      this.input.on("pointerdown", this.requestFullscreen, this);
+
+      this.prepareIdleState();
 
       if (this.statusElement) {
-        this.statusElement.textContent = "Press Start to begin.";
+        this.statusElement.textContent = "Press Start to play.";
         this.statusElement.classList.add("is-visible");
         this.statusElement.classList.remove("is-error");
+      }
+    }
+    prepareIdleState() {
+      this.runState = "idle";
+      this.stopTimer(true);
+      this.resetTokens();
+      this.hideFeedback();
+      if (this.previewText) {
+        this.previewText.setText("");
+      }
+      this.showSentenceText("Tap Start to play.");
+      this.setTopHudVisible(false);
+      this.setStartButtonState("Start", false, true);
+      this.hideSummary();
+      if (this.statusElement) {
+        this.statusElement.textContent = "Press Start to play.";
+        this.statusElement.classList.remove("is-error");
+        this.statusElement.classList.remove("is-transparent");
+        this.statusElement.classList.add("is-visible");
+      }
+    }
+
+    createCenterStartButton(width, height) {
+      const buttonWidth = 512;
+      const buttonHeight = 202;
+      this.startButton = createBarButton(this, "Start", buttonWidth, buttonHeight, {
+        onClick: () => this.handleStartPressed(false),
+        baseColor: 0x1f6feb,
+      });
+      this.startButton.container.setPosition(width / 2, height / 2);
+      this.startButton.container.setDepth(12);
+      this.tweens.add({
+        targets: this.startButton.container,
+        scale: 1.04,
+        duration: 500,
+        ease: "Sine.linear",
+        repeat: -1,
+        yoyo: true,
+      });
+    }
+
+    setStartButtonState(label, disabled = false, visible = true) {
+      if (!this.startButton) {
+        return;
+      }
+      this.startButton.text.setText(label);
+      this.startButton.container.setVisible(visible);
+      if (disabled) {
+        this.startButton.container.disableInteractive();
+        this.startButton.background.update(this.startButton.styles.disabled);
+      } else {
+        this.startButton.container.setInteractive({ useHandCursor: true });
+        this.startButton.background.update(this.startButton.styles.base);
+      }
+    }
+
+    setTopHudVisible(isVisible) {
+      this.topHudElements.forEach((element) => {
+        if (element?.setVisible) {
+          element.setVisible(isVisible);
+        } else if (element) {
+          element.visible = isVisible;
+        }
+      });
+    }
+
+    handleStartPressed(autoStart = false) {
+      if (this.runState === "loading") {
+        return;
+      }
+      if (!autoStart) {
+        this.requestFullscreen();
+      }
+      this.runState = "loading";
+      this.setStartButtonState("Loading...", true, true);
+      this.hideSummary();
+      if (this.statusElement) {
+        this.statusElement.textContent = "Preparing game...";
+        this.statusElement.classList.remove("is-error");
+        this.statusElement.classList.remove("is-transparent");
+        this.statusElement.classList.add("is-visible");
+      }
+      this.time.delayedCall(160, () => {
+        this.setStartButtonState("Start", true, false);
+        this.startGame();
+      });
+    }
+
+    hideSummary() {
+      if (this.summaryOverlay) {
+        this.summaryOverlay.setVisible(false);
+        this.summaryOverlay.setAlpha(0);
+      }
+      if (this.summaryBackdrop) {
+        this.summaryBackdrop.setVisible(false);
+        this.summaryBackdrop.setAlpha(0);
       }
     }
 
     startGame() {
       if (!this.questions.length) {
         if (this.statusElement) {
-          this.statusElement.textContent = "Game content will be added soon.";
+          this.statusElement.textContent = "The game content is not ready yet.";
           this.statusElement.classList.add("is-error");
         }
+        this.prepareIdleState();
         return;
       }
-      this.startOverlay.setVisible(false);
-      this.summaryOverlay.setVisible(false);
       this.score = 0;
       this.currentIndex = -1;
       this.updateScoreText();
-      this.state = "running";
+      this.setTopHudVisible(true);
       this.clearFeedback();
       this.resetTokens();
-      this.showSentenceText("Listen to the model sentence.");
-      if (this.firstSentence) {
-        this.showSentenceText(this.firstSentence.text);
-        this.playSentenceAudio(this.firstSentence, () => {
-          this.time.delayedCall(600, () => this.advanceQuestion());
-        });
-      } else {
-        this.time.delayedCall(400, () => this.advanceQuestion());
+      if (this.previewText) {
+        this.previewText.setText("");
       }
+      this.runState = "running";
+      this.showSentenceText("Listen to the model sentence.");
+      this.updateTimerText(this.defaultTimerLabel);
       if (this.statusElement) {
         this.statusElement.textContent = "Arrange the words before time runs out.";
         this.statusElement.classList.add("is-visible");
         this.statusElement.classList.remove("is-error");
         this.statusElement.classList.remove("is-transparent");
       }
+      if (this.firstSentence) {
+        this.showSentenceText(this.firstSentence.text);
+        this.playSentenceAudio(this.firstSentence, () => {
+          this.time.delayedCall(500, () => this.advanceQuestion());
+        });
+        return;
+      }
+      this.time.delayedCall(300, () => this.advanceQuestion());
     }
 
-    restartGame() {
-      this.startOverlay.setVisible(true);
-      this.summaryOverlay.setVisible(false);
-      this.showSentenceText("Press Start to begin.");
-      this.clearFeedback();
-      this.resetTokens();
-      this.updateTimerText(this.timePerQuestionMs);
-      if (this.statusElement) {
-        this.statusElement.textContent = "Press Start to begin.";
-        this.statusElement.classList.remove("is-error");
-        this.statusElement.classList.add("is-visible");
+    updateQuestionLabel() {
+      if (this.currentIndex < 0) {
+        this.phaseText.setText("Ready to start?");
+        this.phaseText.setColor("#0f172a");
+        return;
       }
+      this.phaseText.setText(
+        `Question ${this.currentIndex + 1} of ${this.totalQuestions}`
+      );
+      this.phaseText.setColor("#1d4ed8");
     }
 
     advanceQuestion() {
-      this.stopTimer();
+      this.stopTimer(true);
       this.clearFeedback();
       this.resetTokens();
       this.currentIndex += 1;
-      if (this.currentIndex >= this.questions.length) {
+      if (this.currentIndex >= this.totalQuestions) {
         this.finishGame();
         return;
       }
+      this.updateQuestionLabel();
       const question = this.questions[this.currentIndex];
-      this.phaseText.setText(
-        `Sentence ${this.currentIndex + 1} of ${this.questions.length}`
-      );
       this.sentenceText.setText("Arrange the words in order.");
       this.assembledWords = [];
       this.awaitingAnswer = true;
       this.createTokens(question);
-      this.updateTimerText(this.timePerQuestionMs);
       this.startTimer();
       if (this.statusElement) {
-        this.statusElement.textContent = `Sentence ${this.currentIndex + 1} of ${
-          this.questions.length
-        }`;
+        this.statusElement.textContent = `Question ${this.currentIndex + 1} of ${this.totalQuestions}`;
         this.statusElement.classList.add("is-transparent");
       }
     }
@@ -699,19 +1015,34 @@ export const createGameScene = (config = {}) => {
         },
       });
     }
-
-    stopTimer() {
+    stopTimer(resetDisplay = true) {
       this.activeTimer?.remove?.();
       this.activeTimer = null;
+      if (resetDisplay) {
+        this.updateTimerText(this.defaultTimerLabel);
+      }
     }
 
-    updateTimerText(ms) {
-      const seconds = Math.max(0, ms) / 1000;
-      this.timerText.setText(`Time: ${seconds.toFixed(1)}s`);
+    updateTimerText(value) {
+      const isNumber = Number.isFinite(value);
+      let text = this.defaultTimerLabel;
+      if (isNumber) {
+        text = `Time: ${(Math.max(0, value) / 1000).toFixed(1)}s`;
+      } else if (typeof value === "string" && value.trim().length) {
+        text = value.trim();
+      }
+      this.timerText.setText(text);
+      if (isNumber && value > 0) {
+        this.timerPanel.update(this.timerPanelActiveStyle);
+        this.timerText.setColor("#1d4ed8");
+      } else {
+        this.timerPanel.update(this.timerPanelBaseStyle);
+        this.timerText.setColor("#1f2937");
+      }
     }
 
     updateScoreText() {
-      this.scoreText.setText(`Score: ${this.score}/${this.questions.length}`);
+      this.scoreText.setText(`Score: ${this.score}/${this.totalQuestions}`);
     }
 
     showSentenceText(text) {
@@ -741,10 +1072,7 @@ export const createGameScene = (config = {}) => {
     }
 
     toggleToken(token) {
-      if (!this.awaitingAnswer) {
-        return;
-      }
-      if (!token) {
+      if (!this.awaitingAnswer || !token) {
         return;
       }
       if (token.state === "bank") {
@@ -756,49 +1084,53 @@ export const createGameScene = (config = {}) => {
       } else if (token.state === "target") {
         token.state = "bank";
         this.arrangedTokens = this.arrangedTokens.filter((t) => t !== token);
-        const idx = this.assembledWords.lastIndexOf(token.word);
-        if (idx >= 0) {
-          this.assembledWords.splice(idx, 1);
+        const index = this.assembledWords.lastIndexOf(token.word);
+        if (index >= 0) {
+          this.assembledWords.splice(index, 1);
         }
         this.bankContainer.add(token.container);
         setTokenStyle(token, "bank");
       }
       this.layoutTokens();
-      this.previewText.setText(joinWordsForDisplay(this.assembledWords));
-      if (this.assembledWords.length === this.questions[this.currentIndex].words.length) {
+      if (this.previewText) {
+        this.previewText.setText(joinWordsForDisplay(this.assembledWords));
+      }
+      const question = this.questions[this.currentIndex];
+      if (
+        question &&
+        this.assembledWords.length === question.words.length &&
+        this.awaitingAnswer
+      ) {
         this.checkAnswer();
       }
     }
 
     layoutTokens() {
-      const arrangeInZone = (tokens, area, parentContainer) => {
-        if (!tokens.length || !parentContainer) {
+      const layoutInto = (tokens, area, parent) => {
+        if (!tokens.length || !parent) {
           return;
         }
-        const maxColumns = Math.min(tokens.length, 5);
-        const spacingX = area.width / maxColumns;
-        const rows = Math.ceil(tokens.length / maxColumns);
+        const columns = Math.min(tokens.length, 5);
+        const spacingX = area.width / columns;
+        const rows = Math.ceil(tokens.length / columns);
         const spacingY =
           rows > 1
             ? Math.min(area.height / rows, TOKEN_BASE_HEIGHT + 20)
             : TOKEN_BASE_HEIGHT + 10;
         tokens.forEach((token, idx) => {
-          const row = Math.floor(idx / maxColumns);
-          const col = idx % maxColumns;
+          const row = Math.floor(idx / columns);
+          const col = idx % columns;
           const x = -area.width / 2 + spacingX / 2 + col * spacingX;
           const y = -area.height / 2 + spacingY / 2 + row * spacingY;
           token.container.setPosition(x, y);
-          parentContainer.bringToTop(token.container);
+          parent.bringToTop(token.container);
         });
       };
 
-      arrangeInZone(this.arrangedTokens, this.targetArea, this.targetContainer);
-      const bankTokens = this.bankTokens.filter(
-        (token) => token.state === "bank"
-      );
-      arrangeInZone(bankTokens, this.bankArea, this.bankContainer);
+      layoutInto(this.arrangedTokens, this.targetArea, this.targetContainer);
+      const bankTokens = this.bankTokens.filter((token) => token.state === "bank");
+      layoutInto(bankTokens, this.bankArea, this.bankContainer);
     }
-
     checkAnswer() {
       if (!this.awaitingAnswer) {
         return;
@@ -814,18 +1146,18 @@ export const createGameScene = (config = {}) => {
         this.score += 1;
         this.updateScoreText();
         this.setTokensFeedback("correct");
-        this.showSentenceText(question.sentence);
-        this.showFeedback("Correct!");
+        this.showFeedback("correct", "Correct!");
         this.playFeedbackSound("correct");
       } else {
         this.setTokensFeedback("incorrect");
-        this.showSentenceText(question.sentence);
-        this.showFeedback("Incorrect.");
+        this.showFeedback("incorrect", "Incorrect");
         this.playFeedbackSound("incorrect");
       }
-      this.previewText.setText(question.sentence);
+      if (this.previewText) {
+        this.previewText.setText(question.sentence);
+      }
       this.playSentenceAudio(question, () => {
-        this.time.delayedCall(800, () => this.advanceQuestion());
+        this.time.delayedCall(1000, () => this.advanceQuestion());
       });
     }
 
@@ -836,12 +1168,13 @@ export const createGameScene = (config = {}) => {
       this.awaitingAnswer = false;
       const question = this.questions[this.currentIndex];
       this.setTokensFeedback("incorrect");
-      this.showSentenceText(question.sentence);
-      this.showFeedback("Time's up!");
-      this.previewText.setText(question.sentence);
+      this.showFeedback("timeout", "Time's up!");
       this.playFeedbackSound("timeout");
+      if (this.previewText) {
+        this.previewText.setText(question.sentence);
+      }
       this.playSentenceAudio(question, () => {
-        this.time.delayedCall(800, () => this.advanceQuestion());
+        this.time.delayedCall(1000, () => this.advanceQuestion());
       });
     }
 
@@ -850,17 +1183,70 @@ export const createGameScene = (config = {}) => {
       this.arrangedTokens.forEach((token) => setTokenStyle(token, styleKey));
     }
 
-    showFeedback(message) {
-      this.feedbackText.setText(message);
-      this.feedbackText.setColor(
-        message.toLowerCase().includes("correct") ? "#0f766e" : "#b45309"
-      );
+    showFeedback(kind, message) {
+      const colorMap = {
+        correct: { border: 0x16a34a, text: "#065f46", texture: "word-game-correct-img" },
+        incorrect: { border: 0xdc2626, text: "#7f1d1d", texture: "word-game-incorrect-img" },
+        timeout: { border: 0xf97316, text: "#b45309", texture: "word-game-timeout-img" },
+      };
+      const style = colorMap[kind] ?? colorMap.incorrect;
+      this.feedbackPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.98,
+        strokeColor: style.border,
+        strokeAlpha: 0.35,
+        lineWidth: 3,
+      });
+      if (style.texture && this.textures.exists(style.texture)) {
+        this.feedbackIcon.setTexture(style.texture);
+        this.feedbackIcon.setVisible(true);
+      } else {
+        this.feedbackIcon.setVisible(false);
+      }
+      this.feedbackLabel.setText(message);
+      this.feedbackLabel.setColor(style.text);
+      this.feedbackBackdrop.setVisible(true);
+      this.tweens.killTweensOf(this.feedbackBackdrop);
+      this.tweens.add({
+        targets: this.feedbackBackdrop,
+        alpha: 1,
+        duration: 200,
+        ease: "Sine.easeOut",
+      });
+      this.tweens.add({
+        targets: this.feedbackGroup,
+        alpha: 1,
+        scale: { from: 0.9, to: 1 },
+        duration: 220,
+        ease: "Sine.easeOut",
+      });
+    }
+
+    hideFeedback() {
+      if (!this.feedbackGroup) {
+        return;
+      }
+      this.feedbackGroup.setAlpha(0);
+      this.feedbackGroup.setScale(1);
+      this.feedbackIcon.setVisible(false);
+      this.feedbackLabel.setText("");
+      if (this.feedbackBackdrop?.visible) {
+        this.tweens.killTweensOf(this.feedbackBackdrop);
+        this.tweens.add({
+          targets: this.feedbackBackdrop,
+          alpha: 0,
+          duration: 200,
+          ease: "Sine.easeInOut",
+          onComplete: () => this.feedbackBackdrop.setVisible(false),
+        });
+      }
     }
 
     clearFeedback() {
-      this.feedbackText.setText("");
-      this.feedbackText.setColor("#0f172a");
-      this.previewText.setText("");
+      this.hideFeedback();
+      if (this.previewText) {
+        this.previewText.setText("");
+      }
     }
 
     playFeedbackSound(type) {
@@ -887,10 +1273,10 @@ export const createGameScene = (config = {}) => {
       this.stopSentenceAudio();
       this.pendingAudioToken += 1;
       const token = this.pendingAudioToken;
-      if (entry.audioKey) {
+      if (entry?.audioKey) {
         const sound = this.sound.get(entry.audioKey) ?? this.sound.add(entry.audioKey);
-        this.activeAudio = sound;
         if (sound) {
+          this.activeAudio = sound;
           sound.once(Phaser.Sound.Events.COMPLETE, () => {
             if (token === this.pendingAudioToken) {
               onComplete?.();
@@ -900,7 +1286,7 @@ export const createGameScene = (config = {}) => {
           return;
         }
       }
-      this.time.delayedCall(600, () => {
+      this.time.delayedCall(500, () => {
         if (token === this.pendingAudioToken) {
           onComplete?.();
         }
@@ -922,17 +1308,29 @@ export const createGameScene = (config = {}) => {
       this.arrangedTokens = [];
       this.assembledWords = [];
     }
-
     finishGame() {
-      this.stopTimer();
+      this.stopTimer(true);
       this.awaitingAnswer = false;
-      this.state = "finished";
-      this.resetTokens();
-      this.clearFeedback();
-      this.showSentenceText("All sentences arranged!");
+      this.runState = "finished";
+      this.hideFeedback();
+      this.showSentenceText("All sentences complete!");
+      if (this.previewText) {
+        this.previewText.setText("");
+      }
+      if (this.statusElement) {
+        this.statusElement.textContent =
+          "All sentences complete! Tap Replay to try again.";
+        this.statusElement.classList.remove("is-transparent");
+        this.statusElement.classList.add("is-visible");
+      }
+      this.time.delayedCall(300, () => this.showSummary());
+      this.setStartButtonState("Start", false, true);
+    }
+
+    showSummary() {
       const percentage =
-        this.questions.length > 0
-          ? Math.round((this.score / this.questions.length) * 100)
+        this.totalQuestions > 0
+          ? Math.round((this.score / this.totalQuestions) * 100)
           : 0;
       this.summaryTitle.setText(
         percentage === 100
@@ -942,17 +1340,133 @@ export const createGameScene = (config = {}) => {
           : "Keep Practicing!"
       );
       this.summaryBody.setText(
-        `You arranged ${this.score} of ${this.questions.length} sentences correctly.\nScore: ${percentage}%`
+        `You arranged ${this.score} of ${this.totalQuestions} sentences correctly.\nYour score: ${percentage}%`
       );
+      this.summaryBackdrop.setVisible(true);
       this.summaryOverlay.setVisible(true);
-      this.startOverlay.setVisible(true);
-      this.startButton.setText("Replay");
-      if (this.statusElement) {
-        this.statusElement.textContent =
-          "Great work! Press Replay to try again.";
-        this.statusElement.classList.remove("is-transparent");
-        this.statusElement.classList.add("is-visible");
+      this.tweens.killTweensOf(this.summaryBackdrop);
+      this.tweens.add({
+        targets: this.summaryBackdrop,
+        alpha: 1,
+        duration: 260,
+        ease: "Sine.easeOut",
+      });
+      this.tweens.killTweensOf(this.summaryOverlay);
+      this.tweens.add({
+        targets: this.summaryOverlay,
+        alpha: 1,
+        scale: { from: 0.9, to: 1 },
+        duration: 320,
+        ease: "Back.easeOut",
+      });
+    }
+
+    handleReplayPressed() {
+      this.hideSummary();
+      this.handleStartPressed(true);
+    }
+
+    requestFullscreen() {
+      if (this.scale.isFullscreen) {
+        return;
       }
+      const target = this.scale.parent || this.game.canvas;
+      try {
+        this.scale.startFullscreen({ target, navigationUI: "hide" });
+      } catch (error) {
+        // ignore inability to enter fullscreen without user gesture
+      }
+    }
+
+    attachScaleListeners() {
+      if (this.scaleListenersAttached) {
+        return;
+      }
+      this.scale.on("enterfullscreen", this.handleEnterFullscreen, this);
+      this.scale.on("leavefullscreen", this.handleLeaveFullscreen, this);
+      this.scaleListenersAttached = true;
+    }
+
+    async lockLandscapeOrientation() {
+      if (!isMobileDevice() || typeof window === "undefined") {
+        return;
+      }
+      const screenRef = window.screen;
+      if (!screenRef) {
+        return;
+      }
+      const orientation = screenRef.orientation;
+      if (orientation?.lock) {
+        try {
+          await orientation.lock("landscape");
+          this.orientationLocked = true;
+          return;
+        } catch (error) {
+          this.orientationLocked = false;
+        }
+      }
+      const legacyLock =
+        screenRef.lockOrientation ||
+        screenRef.mozLockOrientation ||
+        screenRef.msLockOrientation;
+      if (legacyLock) {
+        try {
+          legacyLock.call(screenRef, "landscape");
+          this.orientationLocked = true;
+        } catch (error) {
+          this.orientationLocked = false;
+        }
+      }
+    }
+
+    unlockOrientation() {
+      if (!this.orientationLocked || typeof window === "undefined") {
+        return;
+      }
+      const screenRef = window.screen;
+      if (!screenRef) {
+        return;
+      }
+      const orientation = screenRef.orientation;
+      if (orientation?.unlock) {
+        try {
+          orientation.unlock();
+        } catch (error) {
+          // ignore
+        }
+      }
+      const legacyUnlock =
+        screenRef.unlockOrientation ||
+        screenRef.mozUnlockOrientation ||
+        screenRef.msUnlockOrientation;
+      if (legacyUnlock) {
+        try {
+          legacyUnlock.call(screenRef);
+        } catch (error) {
+          // ignore
+        }
+      }
+      this.orientationLocked = false;
+    }
+
+    handleEnterFullscreen() {
+      this.lockLandscapeOrientation();
+    }
+
+    handleLeaveFullscreen() {
+      this.unlockOrientation();
+    }
+
+    shutdown() {
+      this.stopTimer(false);
+      this.stopSentenceAudio();
+      this.input?.off?.("pointerdown", this.requestFullscreen, this);
+      if (this.scaleListenersAttached) {
+        this.scale.off("enterfullscreen", this.handleEnterFullscreen, this);
+        this.scale.off("leavefullscreen", this.handleLeaveFullscreen, this);
+        this.scaleListenersAttached = false;
+      }
+      this.unlockOrientation();
     }
   };
 };
