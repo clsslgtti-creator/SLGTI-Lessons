@@ -479,6 +479,7 @@ export const createGameScene = (config = {}) => {
       this.feedbackPanel = null;
       this.feedbackIcon = null;
       this.feedbackLabel = null;
+      this.feedbackAnswerText = null;
       this.summaryOverlay = null;
       this.summaryBackdrop = null;
       this.summaryTitle = null;
@@ -487,6 +488,8 @@ export const createGameScene = (config = {}) => {
       this.scaleListenersAttached = false;
       this.activeAudio = null;
       this.pendingAudioToken = 0;
+      this.lastFeedbackDurationMs = 0;
+      this.pendingSentenceEvent = null;
     }
 
     preload() {
@@ -666,25 +669,6 @@ export const createGameScene = (config = {}) => {
       this.scoreBadge.setDepth(3);
       this.topHudElements.push(this.scoreBadge);
 
-      const sentencePanel = createRoundedPanel(this, width * 0.82, 160, 24, {
-        fillColor: 0xffffff,
-        fillAlpha: 0.95,
-        strokeColor: 0x93c5fd,
-        strokeAlpha: 0.6,
-        lineWidth: 4,
-      });
-      sentencePanel.graphics.setPosition(width / 2, 150);
-
-      this.sentenceText = this.add
-        .text(width / 2, 150, "Tap Start to begin.", {
-          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: "30px",
-          color: "#0f172a",
-          align: "center",
-          wordWrap: { width: width * 0.78 },
-        })
-        .setOrigin(0.5);
-
       const targetPanel = createRoundedPanel(this, width * 0.82, 200, 28, {
         fillColor: 0xf8fafc,
         fillAlpha: 0.98,
@@ -693,6 +677,7 @@ export const createGameScene = (config = {}) => {
         lineWidth: 3,
       });
       targetPanel.graphics.setPosition(width / 2, height / 2 - 40);
+      this.targetPanel = targetPanel;
 
       this.targetContainer = this.add.container(width / 2, height / 2 - 40);
       this.targetArea = {
@@ -708,12 +693,14 @@ export const createGameScene = (config = {}) => {
         lineWidth: 3,
       });
       bankPanel.graphics.setPosition(width / 2, height - 140);
+      this.bankPanel = bankPanel;
 
       this.bankContainer = this.add.container(width / 2, height - 140);
       this.bankArea = {
         width: width * 0.76,
         height: 140,
       };
+      this.setWordAreasVisible(false);
 
       this.previewText = this.add
         .text(width / 2, height / 2 + 90, "", {
@@ -736,31 +723,48 @@ export const createGameScene = (config = {}) => {
       this.feedbackBackdrop.setDepth(8);
       this.feedbackBackdrop.setVisible(false);
 
+      const feedbackWidth = Math.min(width * 0.82, 760);
+      const feedbackHeight = 240;
       this.feedbackGroup = this.add.container(width / 2, height / 2 + 120);
       this.feedbackGroup.setAlpha(0);
       this.feedbackGroup.setDepth(9);
-      const feedbackPanel = createRoundedPanel(this, 420, 120, 28);
+      const feedbackPanel = createRoundedPanel(this, feedbackWidth, feedbackHeight, 32);
       feedbackPanel.update({
         fillColor: 0xffffff,
         fillAlpha: 0.98,
         strokeColor: 0x1f2933,
-        strokeAlpha: 0.15,
+        strokeAlpha: 0.2,
         lineWidth: 3,
       });
       this.feedbackPanel = feedbackPanel;
-      this.feedbackIcon = this.add.image(-120, 0, "").setVisible(false);
+      this.feedbackIcon = this.add
+        .image(-feedbackWidth / 2 + 60, -feedbackHeight / 2 + 60, "")
+        .setVisible(false)
+        .setScale(0.9);
       this.feedbackLabel = this.add
-        .text(30, 0, "", {
+        .text(0, -feedbackHeight / 2 + 40, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: 30,
+          fontSize: 32,
           color: "#1f2933",
           fontStyle: "bold",
+          align: "center",
         })
-        .setOrigin(0, 0.5);
+        .setOrigin(0.5);
+      this.feedbackAnswerText = this.add
+        .text(0, -feedbackHeight / 2 + 90, "", {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: 26,
+          color: "#0f172a",
+          align: "center",
+          wordWrap: { width: feedbackWidth - 120 },
+        })
+        .setOrigin(0.5, 0)
+        .setVisible(false);
       this.feedbackGroup.add([
         feedbackPanel.graphics,
         this.feedbackIcon,
         this.feedbackLabel,
+        this.feedbackAnswerText,
       ]);
 
       this.summaryBackdrop = this.add.rectangle(
@@ -816,6 +820,7 @@ export const createGameScene = (config = {}) => {
       this.summaryOverlay.setAlpha(0);
 
       this.createCenterStartButton(width, height);
+      this.registerFeedbackSounds();
       this.attachScaleListeners();
       this.input.on("pointerdown", this.requestFullscreen, this);
 
@@ -830,12 +835,13 @@ export const createGameScene = (config = {}) => {
     prepareIdleState() {
       this.runState = "idle";
       this.stopTimer(true);
+      this.cancelPendingSentencePlayback();
       this.resetTokens();
       this.hideFeedback();
+      this.setWordAreasVisible(false);
       if (this.previewText) {
         this.previewText.setText("");
       }
-      this.showSentenceText("Tap Start to play.");
       this.setTopHudVisible(false);
       this.setStartButtonState("Start", false, true);
       this.hideSummary();
@@ -891,6 +897,60 @@ export const createGameScene = (config = {}) => {
       });
     }
 
+    setWordAreasVisible(isVisible) {
+      [this.targetPanel?.graphics, this.bankPanel?.graphics].forEach(
+        (panel) => {
+          if (panel) {
+            panel.setVisible(isVisible);
+          }
+        }
+      );
+      [this.targetContainer, this.bankContainer].forEach((container) => {
+        if (!container) {
+          return;
+        }
+        container.setVisible(isVisible);
+        container.setActive(isVisible);
+      });
+    }
+
+    cancelPendingSentencePlayback() {
+      if (this.pendingSentenceEvent) {
+        this.pendingSentenceEvent.remove();
+        this.pendingSentenceEvent = null;
+      }
+    }
+
+    queueSentencePlayback(entry, onComplete) {
+      this.cancelPendingSentencePlayback();
+      if (!entry) {
+        onComplete?.();
+        return;
+      }
+      const waitMs = Math.max(0, this.lastFeedbackDurationMs) + 1000;
+      this.pendingSentenceEvent = this.time.delayedCall(waitMs, () => {
+        this.pendingSentenceEvent = null;
+        this.playSentenceAudio(entry, onComplete);
+      });
+    }
+
+    registerFeedbackSounds() {
+      const audioCache = this.cache?.audio;
+      if (!this.sound || !audioCache || typeof audioCache.exists !== "function") {
+        return;
+      }
+      [
+        this.feedbackAssets?.correctAudio ? "word-game-correct" : null,
+        this.feedbackAssets?.incorrectAudio ? "word-game-incorrect" : null,
+        this.feedbackAssets?.timeoutAudio ? "word-game-timeout" : null,
+      ].forEach((key) => {
+        if (!key || !audioCache.exists(key) || this.sound.get(key)) {
+          return;
+        }
+        this.sound.add(key);
+      });
+    }
+
     handleStartPressed(autoStart = false) {
       if (this.runState === "loading") {
         return;
@@ -939,11 +999,12 @@ export const createGameScene = (config = {}) => {
       this.setTopHudVisible(true);
       this.clearFeedback();
       this.resetTokens();
+      this.cancelPendingSentencePlayback();
       if (this.previewText) {
         this.previewText.setText("");
       }
+      this.setWordAreasVisible(!this.firstSentence);
       this.runState = "running";
-      this.showSentenceText("Listen to the model sentence.");
       this.updateTimerText(this.defaultTimerLabel);
       if (this.statusElement) {
         this.statusElement.textContent = "Arrange the words before time runs out.";
@@ -952,12 +1013,18 @@ export const createGameScene = (config = {}) => {
         this.statusElement.classList.remove("is-transparent");
       }
       if (this.firstSentence) {
-        this.showSentenceText(this.firstSentence.text);
+        if (this.previewText) {
+          this.previewText.setText(this.firstSentence.text);
+        }
         this.playSentenceAudio(this.firstSentence, () => {
-          this.time.delayedCall(500, () => this.advanceQuestion());
+          this.time.delayedCall(500, () => {
+            this.setWordAreasVisible(true);
+            this.advanceQuestion();
+          });
         });
         return;
       }
+      this.setWordAreasVisible(true);
       this.time.delayedCall(300, () => this.advanceQuestion());
     }
 
@@ -975,6 +1042,8 @@ export const createGameScene = (config = {}) => {
 
     advanceQuestion() {
       this.stopTimer(true);
+      this.cancelPendingSentencePlayback();
+      this.setWordAreasVisible(true);
       this.clearFeedback();
       this.resetTokens();
       this.currentIndex += 1;
@@ -984,7 +1053,6 @@ export const createGameScene = (config = {}) => {
       }
       this.updateQuestionLabel();
       const question = this.questions[this.currentIndex];
-      this.sentenceText.setText("Arrange the words in order.");
       this.assembledWords = [];
       this.awaitingAnswer = true;
       this.createTokens(question);
@@ -1043,10 +1111,6 @@ export const createGameScene = (config = {}) => {
 
     updateScoreText() {
       this.scoreText.setText(`Score: ${this.score}/${this.totalQuestions}`);
-    }
-
-    showSentenceText(text) {
-      this.sentenceText.setText(text);
     }
 
     createTokens(question) {
@@ -1142,21 +1206,22 @@ export const createGameScene = (config = {}) => {
       const isCorrect =
         assembled.length === question.words.length &&
         assembled.every((word, index) => word === question.words[index]);
+      const detailSentence = question?.sentence ?? "";
       if (isCorrect) {
         this.score += 1;
         this.updateScoreText();
         this.setTokensFeedback("correct");
-        this.showFeedback("correct", "Correct!");
+        this.showFeedback("correct", "Correct!", detailSentence);
         this.playFeedbackSound("correct");
       } else {
         this.setTokensFeedback("incorrect");
-        this.showFeedback("incorrect", "Incorrect");
+        this.showFeedback("incorrect", "Incorrect", detailSentence);
         this.playFeedbackSound("incorrect");
       }
       if (this.previewText) {
-        this.previewText.setText(question.sentence);
+        this.previewText.setText("");
       }
-      this.playSentenceAudio(question, () => {
+      this.queueSentencePlayback(question, () => {
         this.time.delayedCall(1000, () => this.advanceQuestion());
       });
     }
@@ -1168,12 +1233,12 @@ export const createGameScene = (config = {}) => {
       this.awaitingAnswer = false;
       const question = this.questions[this.currentIndex];
       this.setTokensFeedback("incorrect");
-      this.showFeedback("timeout", "Time's up!");
+      this.showFeedback("timeout", "Time's up!", question?.sentence ?? "");
       this.playFeedbackSound("timeout");
       if (this.previewText) {
-        this.previewText.setText(question.sentence);
+        this.previewText.setText("");
       }
-      this.playSentenceAudio(question, () => {
+      this.queueSentencePlayback(question, () => {
         this.time.delayedCall(1000, () => this.advanceQuestion());
       });
     }
@@ -1183,7 +1248,7 @@ export const createGameScene = (config = {}) => {
       this.arrangedTokens.forEach((token) => setTokenStyle(token, styleKey));
     }
 
-    showFeedback(kind, message) {
+    showFeedback(kind, message, detailText = "") {
       const colorMap = {
         correct: { border: 0x16a34a, text: "#065f46", texture: "word-game-correct-img" },
         incorrect: { border: 0xdc2626, text: "#7f1d1d", texture: "word-game-incorrect-img" },
@@ -1205,6 +1270,14 @@ export const createGameScene = (config = {}) => {
       }
       this.feedbackLabel.setText(message);
       this.feedbackLabel.setColor(style.text);
+      if (this.feedbackAnswerText) {
+        const detail =
+          typeof detailText === "string" && detailText.trim().length
+            ? `Correct sentence:\n${detailText.trim()}`
+            : "";
+        this.feedbackAnswerText.setText(detail);
+        this.feedbackAnswerText.setVisible(Boolean(detail));
+      }
       this.feedbackBackdrop.setVisible(true);
       this.tweens.killTweensOf(this.feedbackBackdrop);
       this.tweens.add({
@@ -1230,6 +1303,10 @@ export const createGameScene = (config = {}) => {
       this.feedbackGroup.setScale(1);
       this.feedbackIcon.setVisible(false);
       this.feedbackLabel.setText("");
+      if (this.feedbackAnswerText) {
+        this.feedbackAnswerText.setText("");
+        this.feedbackAnswerText.setVisible(false);
+      }
       if (this.feedbackBackdrop?.visible) {
         this.tweens.killTweensOf(this.feedbackBackdrop);
         this.tweens.add({
@@ -1247,6 +1324,7 @@ export const createGameScene = (config = {}) => {
       if (this.previewText) {
         this.previewText.setText("");
       }
+      this.lastFeedbackDurationMs = 0;
     }
 
     playFeedbackSound(type) {
@@ -1256,17 +1334,43 @@ export const createGameScene = (config = {}) => {
         timeout: "word-game-timeout",
       };
       const key = keyMap[type];
-      if (key && this.sound.get(key)) {
-        this.sound.play(key);
-        return;
-      }
-      if (type === "correct") {
-        tonePlayer.play(620, 200);
-      } else if (type === "incorrect") {
-        tonePlayer.play(320, 320);
+      let durationMs = 0;
+      let usedToneFallback = false;
+      if (key) {
+        const sound = this.sound.get(key);
+        if (sound) {
+          sound.play();
+          const resolvedDuration =
+            sound.totalDuration && sound.totalDuration > 0
+              ? sound.totalDuration
+              : sound.duration && sound.duration > 0
+              ? sound.duration
+              : sound.config?.duration && sound.config.duration > 0
+              ? sound.config.duration
+              : 0;
+          durationMs = Math.round(resolvedDuration * 1000);
+        } else {
+          usedToneFallback = true;
+        }
       } else {
-        tonePlayer.play(260, 420);
+        usedToneFallback = true;
       }
+      if (usedToneFallback) {
+        if (type === "correct") {
+          durationMs = 200;
+          tonePlayer.play(620, durationMs);
+        } else if (type === "incorrect") {
+          durationMs = 320;
+          tonePlayer.play(320, durationMs);
+        } else {
+          durationMs = 420;
+          tonePlayer.play(260, durationMs);
+        }
+      } else if (!durationMs) {
+        durationMs = 1000;
+      }
+      this.lastFeedbackDurationMs = durationMs;
+      return durationMs;
     }
 
     playSentenceAudio(entry, onComplete) {
@@ -1310,10 +1414,10 @@ export const createGameScene = (config = {}) => {
     }
     finishGame() {
       this.stopTimer(true);
+      this.cancelPendingSentencePlayback();
       this.awaitingAnswer = false;
       this.runState = "finished";
       this.hideFeedback();
-      this.showSentenceText("All sentences complete!");
       if (this.previewText) {
         this.previewText.setText("");
       }
@@ -1460,6 +1564,7 @@ export const createGameScene = (config = {}) => {
     shutdown() {
       this.stopTimer(false);
       this.stopSentenceAudio();
+      this.cancelPendingSentencePlayback();
       this.input?.off?.("pointerdown", this.requestFullscreen, this);
       if (this.scaleListenersAttached) {
         this.scale.off("enterfullscreen", this.handleEnterFullscreen, this);
