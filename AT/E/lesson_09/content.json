@@ -1,13 +1,13 @@
 {
   "meta": {
-    "lesson_no": 7,
+    "lesson_no": 9,
     "level": "Elementary",
     "section": "Automobile Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
     "type": "PRONUNCIATION",
-    "focus": "Short /ʌ/",
+    "focus": "Long /uː/",
     "instructions": {
       "activity_1_a": {
         "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
@@ -33,35 +33,35 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "cl'u'tch",
+        "word_text": "t'u'be",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "This cl'u'tch was hard to press.",
+        "sentence_text": "This t'u'be is made of rubber.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "b'u's",
+        "word_text": "f'u'se",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Those b'u'ses were full of passengers last week.",
+        "sentence_text": "The electricians always replace the f'u'ses carefully.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "tr'u'ck",
+        "word_text": "f'u'el",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "There were five men in a large tr'u'ck here yesterday.",
+        "sentence_text": "I regularly check the f'u'el in the tank.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.png"
+        "image": "assets/img/a_1_p_3.jpg"
       },
       {
         "id": "p_4",
-        "word_text": "p'u'mp",
+        "word_text": "cr'u'ise",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Check the water p'u'mps carefully.",
+        "sentence_text": "They often go on cr'u'ise in their car.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.png"
+        "image": "assets/img/a_1_p_4.jpeg"
       }
     ]
   },
@@ -96,121 +96,218 @@
     },
     "tables": [
       [
-        ["I", "wasn’t", "was not"],
-        ["He", null, null],
-        ["She", null, null],
-        ["It", null, null],
-        ["We", "weren’t", "were not"],
-        ["you", null, null],
-        ["They", null, null]
+        ["I", "live"],
+        ["We", null],
+        ["You", null],
+        ["They", null]
+      ],
+      [
+        ["Where do", "I", "live?"],
+        [null, "we", null],
+        [null, "you", null],
+        [null, "they", null]
+      ],
+      [
+        ["What do", "I", "do?"],
+        [null, "we", null],
+        [null, "you", null],
+        [null, "they", null]
       ]
     ],
     "example_dialogues": [
       {
         "id": "e_1",
         "img": "assets/img/a_2_ex_1.png",
-        "text_a": "Was the principal happy with the lecture?",
-        "text_b": "No, he wasn’t. He was unhappy.",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Rohan.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Matara.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Tamil.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Sri Lankan food, I sing Sri Lankan songs, and I watch Sri Lankan TV shows.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_1_b.mp3"
+        "audio_b": "assets/audio/a_2_ex_1_b.mp3",
+        "audio_c": "assets/audio/a_2_ex_1_c.mp3",
+        "audio_d": "assets/audio/a_2_ex_1_d.mp3",
+        "audio_e": "assets/audio/a_2_ex_1_e.mp3",
+        "audio_f": "assets/audio/a_2_ex_1_f.mp3",
+        "audio_g": "assets/audio/a_2_ex_1_g.mp3",
+        "audio_h": "assets/audio/a_2_ex_1_h.mp3"
       },
       {
         "id": "e_2",
         "img": "assets/img/a_2_ex_2.png",
-        "text_a": "Was the mango sweet?",
-        "text_b": "No, it wasn’t. It was sour.",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Gabriel.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Paris.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak French.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat French food, I sing French songs, and I watch French TV shows.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_2_b.mp3"
-      },
-      {
-        "id": "e_3",
-        "img": "assets/img/a_2_ex_3.png",
-        "text_a": "Were the air conditioners dry?",
-        "text_b": "No, they weren’t. They were wet.",
-        "audio_a": "assets/audio/a_2_ex_3_a.mp3",
-        "audio_b": "assets/audio/a_2_ex_3_b.mp3"
+        "audio_b": "assets/audio/a_2_ex_2_b.mp3",
+        "audio_c": "assets/audio/a_2_ex_2_c.mp3",
+        "audio_d": "assets/audio/a_2_ex_2_d.mp3",
+        "audio_e": "assets/audio/a_2_ex_2_e.mp3",
+        "audio_f": "assets/audio/a_2_ex_2_f.mp3",
+        "audio_g": "assets/audio/a_2_ex_2_g.mp3",
+        "audio_h": "assets/audio/a_2_ex_2_h.mp3"
       }
     ],
     "keywords": [
       {
         "id": "k_1",
         "image": "assets/img/a_2_d_1.png",
-        "word": "tired/rested"
+        "word": "Dubai"
       },
       {
         "id": "k_2",
         "image": "assets/img/a_2_d_2.png",
-        "word": "on time/late"
+        "word": "Berlin"
       },
       {
         "id": "k_3",
         "image": "assets/img/a_2_d_3.png",
-        "word": "satisfied/disappointed"
+        "word": "Hanoi"
       },
       {
         "id": "k_4",
         "image": "assets/img/a_2_d_4.jpeg",
-        "word": "cold/hot"
+        "word": "Singapore"
       },
       {
         "id": "k_5",
         "image": "assets/img/a_2_d_5.png",
-        "word": "tasty/awful"
+        "word": "Seoul"
       },
       {
         "id": "k_6",
         "image": "assets/img/a_2_d_6.png",
-        "word": "sad/cheerful"
+        "word": "Canberra"
       }
     ],
     "dialogues": [
       {
         "id": "d_1",
         "img": "assets/img/a_2_d_1.png",
-        "text_a": "Were you tired yesterday morning?",
-        "text_b": "No, I wasn’t. I was rested.",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Rohan.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Matara.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Tamil.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Sri Lankan food, I sing Sri Lankan songs, and I watch Sri Lankan TV shows.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
-        "audio_b": "assets/audio/a_2_d_1_b.mp3"
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "audio_c": "assets/audio/a_2_d_1_c.mp3",
+        "audio_d": "assets/audio/a_2_d_1_d.mp3",
+        "audio_e": "assets/audio/a_2_d_1_e.mp3",
+        "audio_f": "assets/audio/a_2_d_1_f.mp3",
+        "audio_g": "assets/audio/a_2_d_1_g.mp3",
+        "audio_h": "assets/audio/a_2_d_1_h.mp3"
       },
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
-        "text_a": "Were the trainees on time for the school bus?",
-        "text_b": "No, they weren’t. They were late.",
-        "audio_a": "assets/audio/a_2_d_2_a.mp3",
-        "audio_b": "assets/audio/a_2_d_2_b.mp3"
+        "text_a": "What’s your name?",
+        "text_b": "My name is Rohan.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Matara.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Tamil.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Sri Lankan food, I sing Sri Lankan songs, and I watch Sri Lankan TV shows.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "audio_c": "assets/audio/a_2_d_1_c.mp3",
+        "audio_d": "assets/audio/a_2_d_1_d.mp3",
+        "audio_e": "assets/audio/a_2_d_1_e.mp3",
+        "audio_f": "assets/audio/a_2_d_1_f.mp3",
+        "audio_g": "assets/audio/a_2_d_1_g.mp3",
+        "audio_h": "assets/audio/a_2_d_1_h.mp3"
       },
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.png",
-        "text_a": "Was the instructor satisfied with our work yesterday?",
-        "text_b": "No, he wasn’t. He was disappointed.",
-        "audio_a": "assets/audio/a_2_d_3_a.mp3",
-        "audio_b": "assets/audio/a_2_d_3_b.mp3"
+        "text_a": "What’s your name?",
+        "text_b": "My name is Rohan.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Matara.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Tamil.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Sri Lankan food, I sing Sri Lankan songs, and I watch Sri Lankan TV shows.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "audio_c": "assets/audio/a_2_d_1_c.mp3",
+        "audio_d": "assets/audio/a_2_d_1_d.mp3",
+        "audio_e": "assets/audio/a_2_d_1_e.mp3",
+        "audio_f": "assets/audio/a_2_d_1_f.mp3",
+        "audio_g": "assets/audio/a_2_d_1_g.mp3",
+        "audio_h": "assets/audio/a_2_d_1_h.mp3"
       },
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": "Was it cold yesterday?",
-        "text_b": "No, it wasn’t. It was hot.",
-        "audio_a": "assets/audio/a_2_d_4_a.mp3",
-        "audio_b": "assets/audio/a_2_d_4_b.mp3"
+        "text_a": "What’s your name?",
+        "text_b": "My name is Rohan.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Matara.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Tamil.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Sri Lankan food, I sing Sri Lankan songs, and I watch Sri Lankan TV shows.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "audio_c": "assets/audio/a_2_d_1_c.mp3",
+        "audio_d": "assets/audio/a_2_d_1_d.mp3",
+        "audio_e": "assets/audio/a_2_d_1_e.mp3",
+        "audio_f": "assets/audio/a_2_d_1_f.mp3",
+        "audio_g": "assets/audio/a_2_d_1_g.mp3",
+        "audio_h": "assets/audio/a_2_d_1_h.mp3"
       },
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Was the food tasty at the school canteen last week?",
-        "text_b": "No, it wasn’t. It was awful.",
-        "audio_a": "assets/audio/a_2_d_5_a.mp3",
-        "audio_b": "assets/audio/a_2_d_5_b.mp3"
+        "text_a": "What’s your name?",
+        "text_b": "My name is Rohan.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Matara.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Tamil.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Sri Lankan food, I sing Sri Lankan songs, and I watch Sri Lankan TV shows.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "audio_c": "assets/audio/a_2_d_1_c.mp3",
+        "audio_d": "assets/audio/a_2_d_1_d.mp3",
+        "audio_e": "assets/audio/a_2_d_1_e.mp3",
+        "audio_f": "assets/audio/a_2_d_1_f.mp3",
+        "audio_g": "assets/audio/a_2_d_1_g.mp3",
+        "audio_h": "assets/audio/a_2_d_1_h.mp3"
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Were the students sad?",
-        "text_b": "No, they weren’t. They were cheerful.",
-        "audio_a": "assets/audio/a_2_d_6_a.mp3",
-        "audio_b": "assets/audio/a_2_d_6_b.mp3"
+        "text_a": "What’s your name?",
+        "text_b": "My name is Rohan.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Matara.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Tamil.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Sri Lankan food, I sing Sri Lankan songs, and I watch Sri Lankan TV shows.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "audio_c": "assets/audio/a_2_d_1_c.mp3",
+        "audio_d": "assets/audio/a_2_d_1_d.mp3",
+        "audio_e": "assets/audio/a_2_d_1_e.mp3",
+        "audio_f": "assets/audio/a_2_d_1_f.mp3",
+        "audio_g": "assets/audio/a_2_d_1_g.mp3",
+        "audio_h": "assets/audio/a_2_d_1_h.mp3"
       }
     ]
   },
