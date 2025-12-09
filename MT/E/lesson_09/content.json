@@ -1,0 +1,940 @@
+{
+  "meta": {
+    "lesson_no": 9,
+    "level": "Elementary",
+    "section": "Mechanical Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Long /uː/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": [
+      {
+        "id": "p_1",
+        "word_text": "t'u'be",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "This t'u'be is made of rubber.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
+      },
+      {
+        "id": "p_2",
+        "word_text": "f'u'se",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "The electricians always replace the f'u'ses carefully.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "f'u'el",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "I regularly check the f'u'el in the tank.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.jpg"
+      },
+      {
+        "id": "p_4",
+        "word_text": "cr'u'ise",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "They often go on cr'u'ise in their car.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.jpeg"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS-3",
+    "focus": "Simple Present, Nationalities",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the capital cities to the nationalities.\nරාජධානී නගර ජාතිකත්වයන්ට ගැලපෙන්න.\nமாநகரங்களையும் தேசியத்துவங்களையும் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_g.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "tables": [
+      [
+        ["I", "live"],
+        ["We", null],
+        ["You", null],
+        ["They", null]
+      ],
+      [
+        ["Where do", "I", "live?"],
+        [null, "we", null],
+        [null, "you", null],
+        [null, "they", null]
+      ],
+      [
+        ["What do", "I", "do?"],
+        [null, "we", null],
+        [null, "you", null],
+        [null, "they", null]
+      ]
+    ],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Rohan.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Matara.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Tamil.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Sri Lankan food, I sing Sri Lankan songs, and I watch Sri Lankan TV shows.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_ex_1_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_ex_1_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_ex_1_d.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.jpeg",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Gabriel.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Paris.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak French.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat French food, I sing French songs, and I watch French TV shows.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_ex_2_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_ex_2_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_ex_2_d.mp3"
+      }
+    ],
+    "keywords": [
+      {
+        "id": "k_1",
+        "image": "assets/img/a_2_d_1.jpeg",
+        "word": "Dubai"
+      },
+      {
+        "id": "k_2",
+        "image": "assets/img/a_2_d_2.jpeg",
+        "word": "Berlin"
+      },
+      {
+        "id": "k_3",
+        "image": "assets/img/a_2_d_3.png",
+        "word": "Hanoi"
+      },
+      {
+        "id": "k_4",
+        "image": "assets/img/a_2_d_4.png",
+        "word": "Singapore"
+      },
+      {
+        "id": "k_5",
+        "image": "assets/img/a_2_d_5.jpeg",
+        "word": "Seoul"
+      },
+      {
+        "id": "k_6",
+        "image": "assets/img/a_2_d_6.jpeg",
+        "word": "Canberra"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Omar.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Dubai.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Arabic.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Arabic food, I sing Arabic songs, and I watch Arabic TV shows.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_d_1_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_d_1_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_d_1_d.mp3"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.jpeg",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Erik.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Berlin.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak German.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat German food, I sing German songs, and I watch German TV shows.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_d_2_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_d_2_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_d_2_d.mp3"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.png",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Lan.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Hanoi.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Vietnamese.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Vietnamese food, I sing Vietnamese songs, and I watch Vietnamese TV shows.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_d_3_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_d_3_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_d_3_d.mp3"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.png",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Mei Ling.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Singapore.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak English.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Singaporean food, I sing Singaporean songs, and I watch Singaporean TV shows.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_d_4_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_d_4_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_d_4_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_d_4_d.mp3"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.jpeg",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Min Soo.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Seoul.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak Korean.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Korean food, I sing Korean songs, and I watch Korean TV shows.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_d_5_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_d_5_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_d_5_d.mp3"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.jpeg",
+        "text_a": "What’s your name?",
+        "text_b": "My name is Jack.",
+        "text_c": "Where do you live?",
+        "text_d": "I live in Canberra.",
+        "text_e": "What language do you speak?",
+        "text_f": "I speak English.",
+        "text_g": "Tell me, what do you do every day?",
+        "text_h": "I eat Australian food, I sing Australian songs, and I watch Australian TV shows.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_d_6_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_d_6_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_d_6_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_d_6_d.mp3"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "INTERACTIVE-4",
+    "instructions": {
+      "activity_a": {
+        "text": "Put the words in the correct order.\nවචන නිවැරදි අනුපිළිවෙලට තබන්න.\nசொற்களை சரியான வரிசையில் வைக்கவும்.",
+        "audio": "assets/audio/a_3_i_c.mp3"
+      },
+      "activity_b": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-6.jpg",
+        "first_sentance": {
+          "text": "I am an automotive electrician.",
+          "audio": "assets/audio/a_3_ex.mp3"
+        },
+        "content": [
+          {
+            "id": "n_3_a_1",
+            "audio": "assets/audio/a_3_1.mp3",
+            "words": [
+              "i",
+              "carefully",
+              "repair",
+              "the",
+              "wiring",
+              "system",
+              "in",
+              "cars",
+              "."
+            ],
+            "sentence": "I carefully repair the wiring system in cars."
+          },
+          {
+            "id": "n_3_a_2",
+            "audio": "assets/audio/a_3_2.mp3",
+            "words": [
+              "i",
+              "regularly",
+              "check",
+              "the",
+              "headlights",
+              "and",
+              "tail",
+              "lights",
+              "."
+            ],
+            "sentence": "I regularly check the headlights and tail lights."
+          },
+          {
+            "id": "n_3_a_3",
+            "audio": "assets/audio/a_3_3.mp3",
+            "words": [
+              "i",
+              "use",
+              "a",
+              "digital",
+              "multimeter",
+              "to",
+              "test",
+              "batteries",
+              "."
+            ],
+            "sentence": "I use a digital multimeter to test batteries."
+          },
+          {
+            "id": "n_3_a_4",
+            "audio": "assets/audio/a_3_4.mp3",
+            "words": [
+              "i",
+              "replace",
+              "damaged",
+              "fuses",
+              "in",
+              "the",
+              "fuse",
+              "box",
+              "."
+            ],
+            "sentence": "I replace damaged fuses in the fuse box."
+          },
+          {
+            "id": "n_3_a_5",
+            "audio": "assets/audio/a_3_5.mp3",
+            "words": [
+              "i",
+              "fix",
+              "the",
+              "ignition",
+              "system",
+              "of",
+              "the",
+              "vehicle",
+              "."
+            ],
+            "sentence": "I fix the ignition system of the vehicle."
+          },
+          {
+            "id": "n_3_a_6",
+            "audio": "assets/audio/a_3_6.mp3",
+            "words": [
+              "i",
+              "install",
+              "new",
+              "electrical",
+              "parts",
+              "in",
+              "cars",
+              "."
+            ],
+            "sentence": "I install new electrical parts in cars."
+          },
+          {
+            "id": "n_3_a_7",
+            "audio": "assets/audio/a_3_7.mp3",
+            "words": ["i", "connect", "all", "wires", "very", "carefully", "."],
+            "sentence": "I connect all wires very carefully."
+          },
+          {
+            "id": "n_3_a_8",
+            "audio": "assets/audio/a_3_8.mp3",
+            "words": [
+              "i",
+              "maintain",
+              "and",
+              "service",
+              "hybrid",
+              "car",
+              "systems",
+              "."
+            ],
+            "sentence": "I maintain and service hybrid car systems."
+          },
+          {
+            "id": "n_3_a_9",
+            "audio": "assets/audio/a_3_9.mp3",
+            "words": [
+              "i",
+              "repair",
+              "the",
+              "car",
+              "horn",
+              "when",
+              "it",
+              "fails",
+              "."
+            ],
+            "sentence": "I repair the car horn when it fails."
+          },
+          {
+            "id": "n_3_a_10",
+            "audio": "assets/audio/a_3_10.mp3",
+            "words": [
+              "i",
+              "work",
+              "with",
+              "modern",
+              "diagnostic",
+              "tools",
+              "daily",
+              "."
+            ],
+            "sentence": "I work with modern diagnostic tools daily."
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_3_1",
+          "text": "Is there a first aid kit in the room?  Yes, there is.",
+          "audio": "assets/audio/a_3_b_g_1.mp3"
+        },
+        {
+          "id": "n_3_2",
+          "text": "Are there safety helmets on the table? No, there aren’t.",
+          "audio": "assets/audio/a_3_b_g_2.mp3"
+        },
+        {
+          "id": "n_3_3",
+          "text": "Is there a fire extinguisher near the door?  No, there isn’t.",
+          "audio": "assets/audio/a_3_b_g_3.mp3"
+        },
+        {
+          "id": "n_3_4",
+          "text": "Are there any gloves in the drawer?  Yes, there are.",
+          "audio": "assets/audio/a_3_b_g_4.mp3"
+        },
+        {
+          "id": "n_3_5",
+          "text": "Is there a warning sign on the wall? No, there isn’t.",
+          "audio": "assets/audio/a_3_b_g_5.mp3"
+        },
+        {
+          "id": "n_3_6",
+          "text": "Are there any reflective vests in the cupboard?  Yes, there are.",
+          "audio": "assets/audio/a_3_b_g_6.mp3"
+        },
+        {
+          "id": "n_3_7",
+          "text": "Is there a safety harness on the shelf?  Yes, there is.",
+          "audio": "assets/audio/a_3_b_g_7.mp3"
+        },
+        {
+          "id": "n_3_8",
+          "text": "Are there any goggles in the box?  No, there aren’t.",
+          "audio": "assets/audio/a_3_b_g_8.mp3"
+        },
+        {
+          "id": "n_3_9",
+          "text": "Is there a pair of boots under the bench?  Yes, there is.",
+          "audio": "assets/audio/a_3_b_g_9.mp3"
+        },
+        {
+          "id": "n_3_10",
+          "text": "Are there any ear protectors in the bag? No, there aren’t.",
+          "audio": "assets/audio/a_3_b_g_10.mp3"
+        }
+      ]
+    }
+  },
+  "activity_4": {
+    "type": "LISTENING-5",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the recording and match the verbs to the nouns. \nක්‍රියා පදයන් නාම පද සමඟ ගැලපෙන්න.\nவினைச்சொற்களை பெயர்ச்சொல்லுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_4_i_d.mp3"
+      },
+      "activity_b": {
+        "text": "Listen and click on the time phrases you hear. \nඔබට ඇසු කාල ප්‍රකාශන මත සවන් දී ක්ලික් කරන්න.\nநீங்கள் கேட்கும் காலப் பிரிவுகளில் கிளிக் செய்யவும்.",
+        "audio": "assets/audio/a_4_i_e.mp3"
+      },
+      "activity_c": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_e": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_x.mp3",
+        "content": [
+          {
+            "id": "n_4_a_1",
+            "item_a": "follow",
+            "item_b": "a routine"
+          },
+          {
+            "id": "n_4_a_2",
+            "item_a": "study",
+            "item_b": "the training modules"
+          },
+          {
+            "id": "n_4_a_3",
+            "item_a": "observe",
+            "item_b": "simple experiments"
+          },
+          {
+            "id": "n_4_a_4",
+            "item_a": "do",
+            "item_b": "small projects"
+          },
+          {
+            "id": "n_4_a_5",
+            "item_a": "share",
+            "item_b": "ideas"
+          },
+          {
+            "id": "n_4_a_6",
+            "item_a": "learn",
+            "item_b": "safety rules"
+          },
+          {
+            "id": "n_4_a_7",
+            "item_a": "tidy",
+            "item_b": "the workshop"
+          },
+          {
+            "id": "n_4_a_8",
+            "item_a": "leave",
+            "item_b": "the institute"
+          },
+          {
+            "id": "n_4_a_9",
+            "item_a": "build",
+            "item_b": "confidence"
+          },
+          {
+            "id": "n_4_a_10",
+            "item_a": "prepare",
+            "item_b": "in advance"
+          }
+        ]
+      },
+      "activity_b": {
+        "audio": "assets/audio/a_4_x.mp3",
+        "content": [
+          {
+            "id": "n_4_b_1",
+            "options": [
+              "From Monday to Friday",
+              "From April to May",
+              "from ten thirty to eleven o’clock",
+              "From midnight to three am"
+            ],
+            "answer": "From Monday to Friday"
+          },
+          {
+            "id": "n_4_b_2",
+            "options": [
+              "At six am",
+              "At eight o’clock",
+              "At four fifteen",
+              "At ten past one"
+            ],
+            "answer": "At eight o’clock"
+          },
+          {
+            "id": "n_4_b_3",
+            "options": [
+              "In the morning",
+              "In the afternoon",
+              "In the evening",
+              "At night"
+            ],
+            "answer": "In the morning"
+          },
+          {
+            "id": "n_4_b_4",
+            "options": ["At midnight", "At noon", "At Christmas", "At Vesak"],
+            "answer": "At noon"
+          },
+          {
+            "id": "n_4_b_5",
+            "options": [
+              "At the beginning of the day",
+              "In the middle of the project",
+              "At the end of the project",
+              "At the end of the day"
+            ],
+            "answer": "At the end of the day"
+          }
+        ]
+      },
+      "activity_c": [
+        {
+          "id": "t_1_1",
+          "text": "My name is Kamal. I am a trainee at the Sri Lankan–German Training Institute.",
+          "audio": "assets/audio/t_1_1.mp3"
+        },
+        {
+          "id": "t_1_2",
+          "text": "I study the training modules in the morning and in the afternoon.",
+          "audio": "assets/audio/t_1_2.mp3"
+        },
+        {
+          "id": "t_1_3",
+          "text": "From Monday to Friday, I follow a routine with my classmates.",
+          "audio": "assets/audio/t_1_3.mp3"
+        },
+        {
+          "id": "t_1_4",
+          "text": "We start the training at eight o’clock.",
+          "audio": "assets/audio/t_1_4.mp3"
+        },
+        {
+          "id": "t_1_5",
+          "text": "In the morning, I meet my friends and we talk for a few minutes.",
+          "audio": "assets/audio/t_1_5.mp3"
+        },
+        {
+          "id": "t_1_6",
+          "text": "Then we go to the workshop.",
+          "audio": "assets/audio/t_1_6.mp3"
+        },
+        {
+          "id": "t_1_7",
+          "text": "I use different tools, and I practise with equipment.",
+          "audio": "assets/audio/t_1_7.mp3"
+        },
+        {
+          "id": "t_1_8",
+          "text": "Sometimes I measure materials, sometimes I check machines, and sometimes I observe simple experiments.",
+          "audio": "assets/audio/t_1_8.mp3"
+        },
+        {
+          "id": "t_1_9",
+          "text": "We listen to the instructor and we ask questions.",
+          "audio": "assets/audio/t_1_9.mp3"
+        },
+        {
+          "id": "t_1_10",
+          "text": "The teacher explains the lesson step by step.",
+          "audio": "assets/audio/t_1_10.mp3"
+        },
+        {
+          "id": "t_1_11",
+          "text": "Sometimes the instructor gives us a group project, and we must share our ideas and responsibilities.",
+          "audio": "assets/audio/t_1_11.mp3"
+        },
+        {
+          "id": "t_1_12",
+          "text": "We have a tea break from ten thirty to eleven o’clock.",
+          "audio": "assets/audio/t_1_12.mp3"
+        },
+        {
+          "id": "t_1_13",
+          "text": "We sit together, we drink tea, and we eat short eats.",
+          "audio": "assets/audio/t_1_13.mp3"
+        },
+        {
+          "id": "t_1_14",
+          "text": "After the break, I continue my work.",
+          "audio": "assets/audio/t_1_14.mp3"
+        },
+        {
+          "id": "t_1_15",
+          "text": "I read instructions, I do small projects and I write notes in my exercise book.",
+          "audio": "assets/audio/t_1_15.mp3"
+        },
+        {
+          "id": "t_1_16",
+          "text": "We often work in pairs or in groups.",
+          "audio": "assets/audio/t_1_16.mp3"
+        },
+        {
+          "id": "t_1_17",
+          "text": "I also use the computer to practise ICT skills.",
+          "audio": "assets/audio/t_1_17.mp3"
+        },
+        {
+          "id": "t_1_18",
+          "text": "When I practise on the computer, I learn new software that is useful for our future careers.",
+          "audio": "assets/audio/t_1_18.mp3"
+        },
+        {
+          "id": "t_1_19",
+          "text": "At noon we go for lunch.",
+          "audio": "assets/audio/t_1_19.mp3"
+        },
+        {
+          "id": "t_1_20",
+          "text": "In the afternoon, we learn safety rules, practise English sentences, and play a short learning game.",
+          "audio": "assets/audio/t_1_20.mp3"
+        },
+        {
+          "id": "t_1_21",
+          "text": "We do not sleep in class, and we do not waste time.",
+          "audio": "assets/audio/t_1_21.mp3"
+        },
+        {
+          "id": "t_1_22",
+          "text": "Sometimes the teacher asks us to present our work, and this helps us build confidence in speaking English.",
+          "audio": "assets/audio/t_1_22.mp3"
+        },
+        {
+          "id": "t_1_23",
+          "text": "At the end of the day, I clean my tools and I tidy the workshop.",
+          "audio": "assets/audio/t_1_23.mp3"
+        },
+        {
+          "id": "t_1_24",
+          "text": "Before we leave, we discuss the next day’s plan, so everyone knows what to prepare in advance.",
+          "audio": "assets/audio/t_1_24.mp3"
+        },
+        {
+          "id": "t_1_25",
+          "text": "We leave the institute at four fifteen.",
+          "audio": "assets/audio/t_1_25.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "t_1_1",
+          "text": "My name is Kamal. I am a trainee at the Sri Lankan–German Training Institute.",
+          "audio": "assets/audio/t_1_1.mp3"
+        },
+        {
+          "id": "t_1_2",
+          "text": "I study the training modules in the morning and in the afternoon.",
+          "audio": "assets/audio/t_1_2.mp3"
+        },
+        {
+          "id": "t_1_3",
+          "text": "From Monday to Friday, I follow a routine with my classmates.",
+          "audio": "assets/audio/t_1_3.mp3"
+        },
+        {
+          "id": "t_1_5",
+          "text": "In the morning, I meet my friends and we talk for a few minutes.",
+          "audio": "assets/audio/t_1_5.mp3"
+        },
+        {
+          "id": "t_1_7",
+          "text": "I use different tools, and I practise with equipment.",
+          "audio": "assets/audio/t_1_7.mp3"
+        },
+        {
+          "id": "t_1_8",
+          "text": "Sometimes I measure materials, sometimes I check machines, and sometimes I observe simple experiments.",
+          "audio": "assets/audio/t_1_8.mp3"
+        },
+        {
+          "id": "t_1_11",
+          "text": "Sometimes the instructor gives us a group project, and we must share our ideas and responsibilities.",
+          "audio": "assets/audio/t_1_11.mp3"
+        },
+        {
+          "id": "t_1_12",
+          "text": "We have a tea break from ten thirty to eleven o’clock.",
+          "audio": "assets/audio/t_1_12.mp3"
+        },
+        {
+          "id": "t_1_15",
+          "text": "I read instructions, I do small projects and I write notes in my exercise book.",
+          "audio": "assets/audio/t_1_15.mp3"
+        },
+        {
+          "id": "t_1_16",
+          "text": "We often work in pairs or in groups.",
+          "audio": "assets/audio/t_1_16.mp3"
+        },
+        {
+          "id": "t_1_20",
+          "text": "In the afternoon, we learn safety rules, practise English sentences, and play a short learning game.",
+          "audio": "assets/audio/t_1_20.mp3"
+        },
+        {
+          "id": "t_1_23",
+          "text": "At the end of the day, I clean my tools and I tidy the workshop.",
+          "audio": "assets/audio/t_1_23.mp3"
+        },
+        {
+          "id": "t_1_24",
+          "text": "Before we leave, we discuss the next day’s plan, so everyone knows what to prepare in advance.",
+          "audio": "assets/audio/t_1_24.mp3"
+        },
+        {
+          "id": "t_1_25",
+          "text": "We leave the institute at four fifteen.",
+          "audio": "assets/audio/t_1_25.mp3"
+        }
+      ],
+      "activity_e": [
+        {
+          "id": "t_1_1",
+          "text": "My name is Kamal. I am a trainee at the Sri Lankan–German Training Institute.",
+          "audio": "assets/audio/t_1_1.mp3"
+        },
+        {
+          "id": "t_1_2",
+          "text": "I study the training modules in the morning and in the afternoon.",
+          "audio": "assets/audio/t_1_2.mp3"
+        },
+        {
+          "id": "t_1_3",
+          "text": "From Monday to Friday, I follow a routine with my classmates.",
+          "audio": "assets/audio/t_1_3.mp3"
+        },
+        {
+          "id": "t_1_5",
+          "text": "In the morning, I meet my friends and we talk for a few minutes.",
+          "audio": "assets/audio/t_1_5.mp3"
+        },
+        {
+          "id": "t_1_7",
+          "text": "I use different tools, and I practise with equipment.",
+          "audio": "assets/audio/t_1_7.mp3"
+        },
+        {
+          "id": "t_1_8",
+          "text": "Sometimes I measure materials, sometimes I check machines, and sometimes I observe simple experiments.",
+          "audio": "assets/audio/t_1_8.mp3"
+        },
+        {
+          "id": "t_1_11",
+          "text": "Sometimes the instructor gives us a group project, and we must share our ideas and responsibilities.",
+          "audio": "assets/audio/t_1_11.mp3"
+        },
+        {
+          "id": "t_1_12",
+          "text": "We have a tea break from ten thirty to eleven o’clock.",
+          "audio": "assets/audio/t_1_12.mp3"
+        },
+        {
+          "id": "t_1_15",
+          "text": "I read instructions, I do small projects and I write notes in my exercise book.",
+          "audio": "assets/audio/t_1_15.mp3"
+        },
+        {
+          "id": "t_1_16",
+          "text": "We often work in pairs or in groups.",
+          "audio": "assets/audio/t_1_16.mp3"
+        },
+        {
+          "id": "t_1_20",
+          "text": "In the afternoon, we learn safety rules, practise English sentences, and play a short learning game.",
+          "audio": "assets/audio/t_1_20.mp3"
+        },
+        {
+          "id": "t_1_23",
+          "text": "At the end of the day, I clean my tools and I tidy the workshop.",
+          "audio": "assets/audio/t_1_23.mp3"
+        },
+        {
+          "id": "t_1_24",
+          "text": "Before we leave, we discuss the next day’s plan, so everyone knows what to prepare in advance.",
+          "audio": "assets/audio/t_1_24.mp3"
+        },
+        {
+          "id": "t_1_25",
+          "text": "We leave the institute at four fifteen.",
+          "audio": "assets/audio/t_1_25.mp3"
+        }
+      ]
+    }
+  }
+}
