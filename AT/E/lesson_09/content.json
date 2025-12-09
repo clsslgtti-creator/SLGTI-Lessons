@@ -315,8 +315,8 @@
     "type": "INTERACTIVE-4",
     "instructions": {
       "activity_a": {
-        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
-        "audio": "assets/audio/a_3_i_b.mp3"
+        "text": "Put the words in the correct order.\nවචන නිවැරදි අනුපිළිවෙලට තබන්න.\nசொற்களை சரியான வரிசையில் வைக்கவும்.",
+        "audio": "assets/audio/a_3_i_c.mp3"
       },
       "activity_b": {
         "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
@@ -328,138 +328,155 @@
         "bg_image": "assets/img/game/bg-6.jpg",
         "first_sentance": {
           "text": "I am an automotive electrician.",
-          "audio": "assets/audio/a_2_i_b.mp3"
+          "audio": "assets/audio/a_3_ex.mp3"
         },
         "content": [
           {
             "id": "n_3_a_1",
-            "audio": "assets/audio/a_2_i_b.mp3",
+            "audio": "assets/audio/a_3_1.mp3",
             "words": [
+              "i",
+              "carefully",
+              "repair",
               "the",
-              "mechanic",
-              "checks",
-              "the",
-              "brakes",
-              "every",
-              "day",
+              "wiring",
+              "system",
+              "in",
+              "cars",
               "."
             ],
-            "sentence": "The mechanic checks the brakes every day."
+            "sentence": "I carefully repair the wiring system in cars."
           },
           {
             "id": "n_3_a_2",
-            "audio": "assets/audio/a_2_i_b.mp3",
-            "words": ["she", "didn’t", "drive", "the", "bus", "today", "."],
-            "sentence": "She didn’t drive the bus today."
+            "audio": "assets/audio/a_3_2.mp3",
+            "words": [
+              "i",
+              "regularly",
+              "check",
+              "the",
+              "headlights",
+              "and",
+              "tail",
+              "lights",
+              "."
+            ],
+            "sentence": "I regularly check the headlights and tail lights."
           },
           {
             "id": "n_3_a_3",
-            "audio": "assets/audio/a_2_i_b.mp3",
+            "audio": "assets/audio/a_3_3.mp3",
             "words": [
-              "did",
-              "they",
-              "replace",
-              "the",
-              "clutch",
-              "yesterday",
-              "?"
+              "i",
+              "use",
+              "a",
+              "digital",
+              "multimeter",
+              "to",
+              "test",
+              "batteries",
+              "."
             ],
-            "sentence": "Did they replace the clutch yesterday?"
+            "sentence": "I use a digital multimeter to test batteries."
           },
           {
             "id": "n_3_a_4",
-            "audio": "assets/audio/a_2_i_b.mp3",
+            "audio": "assets/audio/a_3_4.mp3",
             "words": [
+              "i",
+              "replace",
+              "damaged",
+              "fuses",
+              "in",
               "the",
-              "trainee",
-              "checks",
-              "the",
-              "tyre",
-              "pressure",
-              "daily",
+              "fuse",
+              "box",
               "."
             ],
-            "sentence": "The trainee checks the tyre pressure daily."
+            "sentence": "I replace damaged fuses in the fuse box."
           },
           {
             "id": "n_3_a_5",
-            "audio": "assets/audio/a_2_i_b.mp3",
-            "words": ["he", "washed", "the", "car", "in", "the", "garage", "."],
-            "sentence": "He washed the car in the garage."
+            "audio": "assets/audio/a_3_5.mp3",
+            "words": [
+              "i",
+              "fix",
+              "the",
+              "ignition",
+              "system",
+              "of",
+              "the",
+              "vehicle",
+              "."
+            ],
+            "sentence": "I fix the ignition system of the vehicle."
           },
           {
             "id": "n_3_a_6",
-            "audio": "assets/audio/a_2_i_b.mp3",
+            "audio": "assets/audio/a_3_6.mp3",
             "words": [
-              "they",
-              "do",
-              "not",
-              "fix",
-              "engines",
-              "at",
-              "night",
+              "i",
+              "install",
+              "new",
+              "electrical",
+              "parts",
+              "in",
+              "cars",
               "."
             ],
-            "sentence": "They do not fix engines at night."
+            "sentence": "I install new electrical parts in cars."
           },
           {
             "id": "n_3_a_7",
-            "audio": "assets/audio/a_2_i_b.mp3",
-            "words": [
-              "did",
-              "the",
-              "worker",
-              "clean",
-              "the",
-              "workshop",
-              "floor",
-              "?"
-            ],
-            "sentence": "Did the worker clean the workshop floor?"
+            "audio": "assets/audio/a_3_7.mp3",
+            "words": ["i", "connect", "all", "wires", "very", "carefully", "."],
+            "sentence": "I connect all wires very carefully."
           },
           {
             "id": "n_3_a_8",
-            "audio": "assets/audio/a_2_i_b.mp3",
+            "audio": "assets/audio/a_3_8.mp3",
             "words": [
-              "the",
-              "supervisor",
-              "inspects",
-              "the",
-              "vehicles",
-              "each",
-              "morning",
+              "i",
+              "maintain",
+              "and",
+              "service",
+              "hybrid",
+              "car",
+              "systems",
               "."
             ],
-            "sentence": "The supervisor inspects the vehicles each morning."
+            "sentence": "I maintain and service hybrid car systems."
           },
           {
             "id": "n_3_a_9",
-            "audio": "assets/audio/a_2_i_b.mp3",
+            "audio": "assets/audio/a_3_9.mp3",
             "words": [
-              "she",
-              "changed",
+              "i",
+              "repair",
               "the",
-              "battery",
-              "last",
-              "monday",
+              "car",
+              "horn",
+              "when",
+              "it",
+              "fails",
               "."
             ],
-            "sentence": "She changed the battery last Monday."
+            "sentence": "I repair the car horn when it fails."
           },
           {
             "id": "n_3_a_10",
-            "audio": "assets/audio/a_2_i_b.mp3",
+            "audio": "assets/audio/a_3_10.mp3",
             "words": [
-              "did",
-              "the",
-              "mechanic",
-              "test",
-              "the",
-              "windscreen",
-              "wipers",
-              "?"
+              "i",
+              "work",
+              "with",
+              "modern",
+              "diagnostic",
+              "tools",
+              "daily",
+              "."
             ],
-            "sentence": "Did the mechanic test the windscreen wipers?"
+            "sentence": "I work with modern diagnostic tools daily."
           }
         ]
       },
