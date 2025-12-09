@@ -546,6 +546,7 @@ const buildAudioMatchingSlide = (data = {}, context = {}) => {
   let playbackController = null;
   let isPlaying = false;
   let autoTriggered = false;
+  let playbackCompleted = false;
 
   const updatePlayButton = () => {
     if (!audioUrl) {
@@ -553,8 +554,13 @@ const buildAudioMatchingSlide = (data = {}, context = {}) => {
       playBtn.textContent = "Audio unavailable";
       return;
     }
-    playBtn.disabled = false;
-    playBtn.textContent = isPlaying ? "Stop Audio" : "Play Audio";
+    if (playbackCompleted) {
+      playBtn.disabled = true;
+      playBtn.textContent = "Playback finished";
+      return;
+    }
+    playBtn.disabled = isPlaying;
+    playBtn.textContent = isPlaying ? "Playing..." : "Play Audio";
   };
 
   updatePlayButton();
@@ -572,6 +578,11 @@ const buildAudioMatchingSlide = (data = {}, context = {}) => {
       status.textContent = "Audio will be added soon.";
       return;
     }
+    if (playbackCompleted) {
+      updatePlayButton();
+      status.textContent = "You can only play the audio once.";
+      return;
+    }
     audioManager.stopAll();
     stopPlayback();
     playbackController = new AbortController();
@@ -586,6 +597,7 @@ const buildAudioMatchingSlide = (data = {}, context = {}) => {
         status.textContent = "Playback stopped.";
       } else {
         status.textContent = "Playback complete.";
+        playbackCompleted = true;
       }
     } catch (error) {
       if (!signal.aborted) {
@@ -600,8 +612,7 @@ const buildAudioMatchingSlide = (data = {}, context = {}) => {
   };
 
   playBtn.addEventListener("click", () => {
-    if (isPlaying) {
-      stopPlayback();
+    if (isPlaying || playbackCompleted) {
       return;
     }
     autoTriggered = true;
@@ -609,7 +620,7 @@ const buildAudioMatchingSlide = (data = {}, context = {}) => {
   });
 
   const triggerAutoPlay = () => {
-    if (autoTriggered || isPlaying) {
+    if (autoTriggered || isPlaying || playbackCompleted) {
       return;
     }
     autoTriggered = true;
@@ -621,6 +632,7 @@ const buildAudioMatchingSlide = (data = {}, context = {}) => {
     audioManager.stopAll();
     isPlaying = false;
     autoTriggered = false;
+    playbackCompleted = false;
     slide._autoTriggered = false;
     status.textContent = "";
     updatePlayButton();
@@ -1070,11 +1082,9 @@ const buildAudioOptionSlide = (data = {}, context = {}) => {
     list.appendChild(empty);
   }
 
+  const MAX_PLAYBACKS = 1;
   let playbackCount = 0;
   let playbackController = null;
-  let secondPlaybackTimer = null;
-  let secondPlaybackCountdownInterval = null;
-  let secondPlaybackRemaining = 0;
   let autoTriggered = false;
   let completionShown = false;
 
@@ -1084,7 +1094,7 @@ const buildAudioOptionSlide = (data = {}, context = {}) => {
       playBtn.textContent = "Audio unavailable";
       return;
     }
-    if (playbackCount >= 2) {
+    if (playbackCount >= MAX_PLAYBACKS) {
       playBtn.disabled = true;
       playBtn.textContent = "Playback finished";
       return;
@@ -1095,46 +1105,7 @@ const buildAudioOptionSlide = (data = {}, context = {}) => {
 
   updateButtonState();
 
-  const clearPlaybackTimers = () => {
-    if (secondPlaybackTimer !== null) {
-      window.clearTimeout(secondPlaybackTimer);
-      secondPlaybackTimer = null;
-    }
-    if (secondPlaybackCountdownInterval !== null) {
-      window.clearInterval(secondPlaybackCountdownInterval);
-      secondPlaybackCountdownInterval = null;
-    }
-    secondPlaybackRemaining = 0;
-  };
-
-  const scheduleSecondPlayback = () => {
-    if (playbackCount < 1 || playbackCount >= 2) {
-      return;
-    }
-    clearPlaybackTimers();
-
-    secondPlaybackRemaining = 20;
-    const updateStatus = () => {
-      status.textContent = `Second playback starts in ${secondPlaybackRemaining}s. Click play to listen sooner.`;
-    };
-
-    updateStatus();
-    playBtn.disabled = false;
-
-    secondPlaybackTimer = window.setTimeout(() => {
-      clearPlaybackTimers();
-      beginPlayback();
-    }, secondPlaybackRemaining * 1000);
-
-    secondPlaybackCountdownInterval = window.setInterval(() => {
-      secondPlaybackRemaining -= 1;
-      if (secondPlaybackRemaining <= 0) {
-        clearPlaybackTimers();
-        return;
-      }
-      updateStatus();
-    }, 1000);
-  };
+  const clearPlaybackTimers = () => {};
 
   const beginPlayback = async () => {
     const audioUrl = trimString(data?.audio);
@@ -1144,8 +1115,8 @@ const buildAudioOptionSlide = (data = {}, context = {}) => {
       return;
     }
 
-    if (playbackCount >= 2) {
-      status.textContent = "You have already listened twice.";
+    if (playbackCount >= MAX_PLAYBACKS) {
+      status.textContent = "You have already listened.";
       updateButtonState();
       return;
     }
@@ -1155,9 +1126,8 @@ const buildAudioOptionSlide = (data = {}, context = {}) => {
     playbackController = new AbortController();
     const { signal } = playbackController;
 
-    const passIndex = playbackCount + 1;
     playBtn.disabled = true;
-    status.textContent = passIndex === 1 ? "Playing..." : "Replaying audio...";
+    status.textContent = "Playing...";
 
     audioManager.stopAll();
 
@@ -1168,10 +1138,8 @@ const buildAudioOptionSlide = (data = {}, context = {}) => {
         return;
       }
       playbackCount += 1;
-      if (playbackCount >= 2) {
-        status.textContent = "You have listened twice.";
-      } else {
-        scheduleSecondPlayback();
+      if (playbackCount >= MAX_PLAYBACKS) {
+        status.textContent = "You have listened.";
       }
     } catch (error) {
       if (!signal.aborted) {
@@ -1246,7 +1214,7 @@ const buildAudioOptionSlide = (data = {}, context = {}) => {
   });
 
   const triggerAutoPlay = () => {
-    if (autoTriggered) {
+    if (autoTriggered || playbackCount >= MAX_PLAYBACKS) {
       return;
     }
     autoTriggered = true;
