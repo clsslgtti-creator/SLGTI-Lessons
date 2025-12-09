@@ -10,7 +10,7 @@ export const DEFAULT_FEEDBACK_ASSETS = {
 
 export const DEFAULT_BACKGROUND_IMAGE = "assets/img/game/bg-2.jpg";
 
-const DEFAULT_TIMER_MS = 20000;
+const DEFAULT_TIMER_MS = 40000;
 const TOKEN_BASE_WIDTH = 130;
 const TOKEN_BASE_HEIGHT = 50;
 
