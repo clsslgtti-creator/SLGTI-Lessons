@@ -327,7 +327,7 @@
       "activity_a": {
         "bg_image": "assets/img/game/bg-6.jpg",
         "first_sentance": {
-          "text": "I am an automotive electrician.",
+          "text": "I am a mobile app developer.",
           "audio": "assets/audio/a_3_ex.mp3"
         },
         "content": [
@@ -336,32 +336,30 @@
             "audio": "assets/audio/a_3_1.mp3",
             "words": [
               "i",
-              "carefully",
-              "repair",
-              "the",
-              "wiring",
-              "system",
-              "in",
-              "cars",
+              "design",
+              "mobile",
+              "apps",
+              "for",
+              "many",
+              "users",
               "."
             ],
-            "sentence": "I carefully repair the wiring system in cars."
+            "sentence": "I design mobile apps for many users."
           },
           {
             "id": "n_3_a_2",
             "audio": "assets/audio/a_3_2.mp3",
             "words": [
               "i",
-              "regularly",
-              "check",
-              "the",
-              "headlights",
-              "and",
-              "tail",
-              "lights",
+              "write",
+              "computer",
+              "programs",
+              "in",
+              "different",
+              "languages",
               "."
             ],
-            "sentence": "I regularly check the headlights and tail lights."
+            "sentence": "I write computer programs in different languages."
           },
           {
             "id": "n_3_a_3",
@@ -369,167 +367,175 @@
             "words": [
               "i",
               "use",
-              "a",
-              "digital",
-              "multimeter",
-              "to",
-              "test",
-              "batteries",
+              "coding",
+              "languages",
+              "like",
+              "javascript",
+              "daily",
               "."
             ],
-            "sentence": "I use a digital multimeter to test batteries."
+            "sentence": "I use coding languages like JavaScript daily."
           },
           {
             "id": "n_3_a_4",
             "audio": "assets/audio/a_3_4.mp3",
             "words": [
               "i",
-              "replace",
-              "damaged",
-              "fuses",
-              "in",
-              "the",
-              "fuse",
-              "box",
+              "test",
+              "new",
+              "apps",
+              "on",
+              "various",
+              "phones",
               "."
             ],
-            "sentence": "I replace damaged fuses in the fuse box."
+            "sentence": "I test new apps on various phones."
           },
           {
             "id": "n_3_a_5",
             "audio": "assets/audio/a_3_5.mp3",
             "words": [
               "i",
-              "fix",
+              "update",
               "the",
-              "ignition",
-              "system",
-              "of",
-              "the",
-              "vehicle",
+              "mobile",
+              "app",
+              "version",
+              "regularly",
               "."
             ],
-            "sentence": "I fix the ignition system of the vehicle."
+            "sentence": "I update the mobile app version regularly."
           },
           {
             "id": "n_3_a_6",
             "audio": "assets/audio/a_3_6.mp3",
             "words": [
               "i",
-              "install",
-              "new",
-              "electrical",
-              "parts",
+              "fix",
+              "software",
+              "bugs",
               "in",
-              "cars",
+              "the",
+              "program",
               "."
             ],
-            "sentence": "I install new electrical parts in cars."
+            "sentence": "I fix software bugs in the program."
           },
           {
             "id": "n_3_a_7",
             "audio": "assets/audio/a_3_7.mp3",
-            "words": ["i", "connect", "all", "wires", "very", "carefully", "."],
-            "sentence": "I connect all wires very carefully."
+            "words": [
+              "i",
+              "add",
+              "colourful",
+              "images",
+              "and",
+              "clear",
+              "icons",
+              "."
+            ],
+            "sentence": "I add colourful images and clear icons."
           },
           {
             "id": "n_3_a_8",
             "audio": "assets/audio/a_3_8.mp3",
             "words": [
               "i",
-              "maintain",
-              "and",
-              "service",
-              "hybrid",
-              "car",
-              "systems",
+              "upload",
+              "apps",
+              "to",
+              "online",
+              "app",
+              "stores",
               "."
             ],
-            "sentence": "I maintain and service hybrid car systems."
+            "sentence": "I upload apps to online app stores."
           },
           {
             "id": "n_3_a_9",
             "audio": "assets/audio/a_3_9.mp3",
             "words": [
               "i",
-              "repair",
-              "the",
-              "car",
-              "horn",
-              "when",
-              "it",
-              "fails",
+              "design",
+              "user-friendly",
+              "menus",
+              "for",
+              "apps",
               "."
             ],
-            "sentence": "I repair the car horn when it fails."
+            "sentence": "I design user-friendly menus for apps."
           },
           {
             "id": "n_3_a_10",
             "audio": "assets/audio/a_3_10.mp3",
             "words": [
               "i",
-              "work",
-              "with",
-              "modern",
-              "diagnostic",
-              "tools",
-              "daily",
+              "create",
+              "educational",
+              "apps",
+              "for",
+              "schools",
               "."
             ],
-            "sentence": "I work with modern diagnostic tools daily."
+            "sentence": "I create educational apps for schools."
           }
         ]
       },
       "activity_b": [
         {
-          "id": "n_3_1",
-          "text": "Is there a first aid kit in the room?  Yes, there is.",
-          "audio": "assets/audio/a_3_b_g_1.mp3"
+          "id": "a_3_0",
+          "text": "I am a mobile app developer.",
+          "audio": "assets/audio/a_3_ex.mp3"
         },
         {
-          "id": "n_3_2",
-          "text": "Are there safety helmets on the table? No, there aren’t.",
-          "audio": "assets/audio/a_3_b_g_2.mp3"
+          "id": "a_3_1",
+          "text": "I design mobile apps for many users.",
+          "audio": "assets/audio/a_3_1.mp3"
         },
         {
-          "id": "n_3_3",
-          "text": "Is there a fire extinguisher near the door?  No, there isn’t.",
-          "audio": "assets/audio/a_3_b_g_3.mp3"
+          "id": "a_3_2",
+          "text": "I write computer programs in different languages.",
+          "audio": "assets/audio/a_3_2.mp3"
         },
         {
-          "id": "n_3_4",
-          "text": "Are there any gloves in the drawer?  Yes, there are.",
-          "audio": "assets/audio/a_3_b_g_4.mp3"
+          "id": "a_3_3",
+          "text": "I use coding languages like JavaScript daily.",
+          "audio": "assets/audio/a_3_3.mp3"
         },
         {
-          "id": "n_3_5",
-          "text": "Is there a warning sign on the wall? No, there isn’t.",
-          "audio": "assets/audio/a_3_b_g_5.mp3"
+          "id": "a_3_4",
+          "text": "I test new apps on various phones.",
+          "audio": "assets/audio/a_3_4.mp3"
         },
         {
-          "id": "n_3_6",
-          "text": "Are there any reflective vests in the cupboard?  Yes, there are.",
-          "audio": "assets/audio/a_3_b_g_6.mp3"
+          "id": "a_3_5",
+          "text": "I update the mobile app version regularly.",
+          "audio": "assets/audio/a_3_5.mp3"
         },
         {
-          "id": "n_3_7",
-          "text": "Is there a safety harness on the shelf?  Yes, there is.",
-          "audio": "assets/audio/a_3_b_g_7.mp3"
+          "id": "a_3_6",
+          "text": "I fix software bugs in the program.",
+          "audio": "assets/audio/a_3_6.mp3"
         },
         {
-          "id": "n_3_8",
-          "text": "Are there any goggles in the box?  No, there aren’t.",
-          "audio": "assets/audio/a_3_b_g_8.mp3"
+          "id": "a_3_7",
+          "text": "I add colourful images and clear icons.",
+          "audio": "assets/audio/a_3_7.mp3"
         },
         {
-          "id": "n_3_9",
-          "text": "Is there a pair of boots under the bench?  Yes, there is.",
-          "audio": "assets/audio/a_3_b_g_9.mp3"
+          "id": "a_3_8",
+          "text": "I upload apps to online app stores.",
+          "audio": "assets/audio/a_3_8.mp3"
         },
         {
-          "id": "n_3_10",
-          "text": "Are there any ear protectors in the bag? No, there aren’t.",
-          "audio": "assets/audio/a_3_b_g_10.mp3"
+          "id": "a_3_9",
+          "text": "I design user-friendly menus for apps.",
+          "audio": "assets/audio/a_3_9.mp3"
+        },
+        {
+          "id": "a_3_10",
+          "text": "I create educational apps for schools.",
+          "audio": "assets/audio/a_3_10.mp3"
         }
       ]
     }

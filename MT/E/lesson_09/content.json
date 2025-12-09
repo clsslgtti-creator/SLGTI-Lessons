@@ -327,7 +327,7 @@
       "activity_a": {
         "bg_image": "assets/img/game/bg-6.jpg",
         "first_sentance": {
-          "text": "I am an automotive electrician.",
+          "text": "I am a CNC machine operator.",
           "audio": "assets/audio/a_3_ex.mp3"
         },
         "content": [
@@ -336,200 +336,208 @@
             "audio": "assets/audio/a_3_1.mp3",
             "words": [
               "i",
-              "carefully",
-              "repair",
+              "set",
+              "up",
               "the",
-              "wiring",
-              "system",
-              "in",
-              "cars",
+              "sharp",
+              "cutting",
+              "tools",
               "."
             ],
-            "sentence": "I carefully repair the wiring system in cars."
+            "sentence": "I set up the sharp cutting tools."
           },
           {
             "id": "n_3_a_2",
             "audio": "assets/audio/a_3_2.mp3",
             "words": [
               "i",
-              "regularly",
-              "check",
+              "program",
               "the",
-              "headlights",
-              "and",
-              "tail",
-              "lights",
+              "cnc",
+              "machine",
+              "using",
+              "a",
+              "computer",
               "."
             ],
-            "sentence": "I regularly check the headlights and tail lights."
+            "sentence": "I program the CNC machine using a computer."
           },
           {
             "id": "n_3_a_3",
             "audio": "assets/audio/a_3_3.mp3",
             "words": [
               "i",
-              "use",
-              "a",
-              "digital",
-              "multimeter",
-              "to",
-              "test",
-              "batteries",
+              "produce",
+              "accurate",
+              "metal",
+              "parts",
+              "for",
+              "engines",
               "."
             ],
-            "sentence": "I use a digital multimeter to test batteries."
+            "sentence": "I produce accurate metal parts for engines."
           },
           {
             "id": "n_3_a_4",
             "audio": "assets/audio/a_3_4.mp3",
             "words": [
               "i",
-              "replace",
-              "damaged",
-              "fuses",
-              "in",
+              "check",
               "the",
-              "fuse",
-              "box",
+              "speed",
+              "of",
+              "the",
+              "machine",
               "."
             ],
-            "sentence": "I replace damaged fuses in the fuse box."
+            "sentence": "I check the speed of the machine."
           },
           {
             "id": "n_3_a_5",
             "audio": "assets/audio/a_3_5.mp3",
             "words": [
               "i",
-              "fix",
-              "the",
-              "ignition",
-              "system",
-              "of",
-              "the",
-              "vehicle",
+              "follow",
+              "detailed",
+              "engineering",
+              "drawings",
+              "carefully",
               "."
             ],
-            "sentence": "I fix the ignition system of the vehicle."
+            "sentence": "I follow detailed engineering drawings carefully."
           },
           {
             "id": "n_3_a_6",
             "audio": "assets/audio/a_3_6.mp3",
             "words": [
               "i",
-              "install",
-              "new",
-              "electrical",
+              "measure",
+              "small",
               "parts",
-              "in",
-              "cars",
+              "with",
+              "digital",
+              "calipers",
               "."
             ],
-            "sentence": "I install new electrical parts in cars."
+            "sentence": "I measure small parts with digital calipers."
           },
           {
             "id": "n_3_a_7",
             "audio": "assets/audio/a_3_7.mp3",
-            "words": ["i", "connect", "all", "wires", "very", "carefully", "."],
-            "sentence": "I connect all wires very carefully."
+            "words": [
+              "i",
+              "replace",
+              "broken",
+              "drill",
+              "bits",
+              "immediately",
+              "."
+            ],
+            "sentence": "I replace broken drill bits immediately."
           },
           {
             "id": "n_3_a_8",
             "audio": "assets/audio/a_3_8.mp3",
             "words": [
               "i",
-              "maintain",
-              "and",
-              "service",
-              "hybrid",
-              "car",
-              "systems",
+              "clean",
+              "the",
+              "cnc",
+              "machine",
+              "after",
+              "work",
               "."
             ],
-            "sentence": "I maintain and service hybrid car systems."
+            "sentence": "I clean the CNC machine after work."
           },
           {
             "id": "n_3_a_9",
             "audio": "assets/audio/a_3_9.mp3",
             "words": [
               "i",
-              "repair",
-              "the",
-              "car",
-              "horn",
-              "when",
-              "it",
-              "fails",
+              "make",
+              "strong",
+              "parts",
+              "for",
+              "large",
+              "engines",
               "."
             ],
-            "sentence": "I repair the car horn when it fails."
+            "sentence": "I make strong parts for large engines."
           },
           {
             "id": "n_3_a_10",
             "audio": "assets/audio/a_3_10.mp3",
             "words": [
               "i",
-              "work",
-              "with",
-              "modern",
-              "diagnostic",
-              "tools",
-              "daily",
+              "check",
+              "the",
+              "size",
+              "and",
+              "shape",
+              "of",
+              "products",
               "."
             ],
-            "sentence": "I work with modern diagnostic tools daily."
+            "sentence": "I check the size and shape of products."
           }
         ]
       },
       "activity_b": [
         {
-          "id": "n_3_1",
-          "text": "Is there a first aid kit in the room?  Yes, there is.",
-          "audio": "assets/audio/a_3_b_g_1.mp3"
+          "id": "a_3_0",
+          "text": "I am a CNC machine operator.",
+          "audio": "assets/audio/a_3_ex.mp3"
         },
         {
-          "id": "n_3_2",
-          "text": "Are there safety helmets on the table? No, there aren’t.",
-          "audio": "assets/audio/a_3_b_g_2.mp3"
+          "id": "a_3_1",
+          "text": "I set up the sharp cutting tools.",
+          "audio": "assets/audio/a_3_1.mp3"
         },
         {
-          "id": "n_3_3",
-          "text": "Is there a fire extinguisher near the door?  No, there isn’t.",
-          "audio": "assets/audio/a_3_b_g_3.mp3"
+          "id": "a_3_2",
+          "text": "I program the CNC machine using a computer.",
+          "audio": "assets/audio/a_3_2.mp3"
         },
         {
-          "id": "n_3_4",
-          "text": "Are there any gloves in the drawer?  Yes, there are.",
-          "audio": "assets/audio/a_3_b_g_4.mp3"
+          "id": "a_3_3",
+          "text": "I produce accurate metal parts for engines.",
+          "audio": "assets/audio/a_3_3.mp3"
         },
         {
-          "id": "n_3_5",
-          "text": "Is there a warning sign on the wall? No, there isn’t.",
-          "audio": "assets/audio/a_3_b_g_5.mp3"
+          "id": "a_3_4",
+          "text": "I check the speed of the machine.",
+          "audio": "assets/audio/a_3_4.mp3"
         },
         {
-          "id": "n_3_6",
-          "text": "Are there any reflective vests in the cupboard?  Yes, there are.",
-          "audio": "assets/audio/a_3_b_g_6.mp3"
+          "id": "a_3_5",
+          "text": "I follow detailed engineering drawings carefully.",
+          "audio": "assets/audio/a_3_5.mp3"
         },
         {
-          "id": "n_3_7",
-          "text": "Is there a safety harness on the shelf?  Yes, there is.",
-          "audio": "assets/audio/a_3_b_g_7.mp3"
+          "id": "a_3_6",
+          "text": "I measure small parts with digital calipers.",
+          "audio": "assets/audio/a_3_6.mp3"
         },
         {
-          "id": "n_3_8",
-          "text": "Are there any goggles in the box?  No, there aren’t.",
-          "audio": "assets/audio/a_3_b_g_8.mp3"
+          "id": "a_3_7",
+          "text": "I replace broken drill bits immediately.",
+          "audio": "assets/audio/a_3_7.mp3"
         },
         {
-          "id": "n_3_9",
-          "text": "Is there a pair of boots under the bench?  Yes, there is.",
-          "audio": "assets/audio/a_3_b_g_9.mp3"
+          "id": "a_3_8",
+          "text": "I clean the CNC machine after work.",
+          "audio": "assets/audio/a_3_8.mp3"
         },
         {
-          "id": "n_3_10",
-          "text": "Are there any ear protectors in the bag? No, there aren’t.",
-          "audio": "assets/audio/a_3_b_g_10.mp3"
+          "id": "a_3_9",
+          "text": "I make strong parts for large engines.",
+          "audio": "assets/audio/a_3_9.mp3"
+        },
+        {
+          "id": "a_3_10",
+          "text": "I check the size and shape of products.",
+          "audio": "assets/audio/a_3_10.mp3"
         }
       ]
     }

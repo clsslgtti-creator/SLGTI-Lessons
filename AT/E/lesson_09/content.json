@@ -482,54 +482,59 @@
       },
       "activity_b": [
         {
-          "id": "n_3_1",
-          "text": "Is there a first aid kit in the room?  Yes, there is.",
-          "audio": "assets/audio/a_3_b_g_1.mp3"
+          "id": "a_3_0",
+          "text": "I am an automotive electrician.",
+          "audio": "assets/audio/a_3_ex.mp3"
         },
         {
-          "id": "n_3_2",
-          "text": "Are there safety helmets on the table? No, there aren’t.",
-          "audio": "assets/audio/a_3_b_g_2.mp3"
+          "id": "a_3_1",
+          "text": "I carefully repair the wiring system in cars.",
+          "audio": "assets/audio/a_3_1.mp3"
         },
         {
-          "id": "n_3_3",
-          "text": "Is there a fire extinguisher near the door?  No, there isn’t.",
-          "audio": "assets/audio/a_3_b_g_3.mp3"
+          "id": "a_3_2",
+          "text": "I regularly check the headlights and tail lights.",
+          "audio": "assets/audio/a_3_2.mp3"
         },
         {
-          "id": "n_3_4",
-          "text": "Are there any gloves in the drawer?  Yes, there are.",
-          "audio": "assets/audio/a_3_b_g_4.mp3"
+          "id": "a_3_3",
+          "text": "I use a digital multimeter to test batteries.",
+          "audio": "assets/audio/a_3_3.mp3"
         },
         {
-          "id": "n_3_5",
-          "text": "Is there a warning sign on the wall? No, there isn’t.",
-          "audio": "assets/audio/a_3_b_g_5.mp3"
+          "id": "a_3_4",
+          "text": "I replace damaged fuses in the fuse box.",
+          "audio": "assets/audio/a_3_4.mp3"
         },
         {
-          "id": "n_3_6",
-          "text": "Are there any reflective vests in the cupboard?  Yes, there are.",
-          "audio": "assets/audio/a_3_b_g_6.mp3"
+          "id": "a_3_5",
+          "text": "I fix the ignition system of the vehicle.",
+          "audio": "assets/audio/a_3_5.mp3"
         },
         {
-          "id": "n_3_7",
-          "text": "Is there a safety harness on the shelf?  Yes, there is.",
-          "audio": "assets/audio/a_3_b_g_7.mp3"
+          "id": "a_3_6",
+          "text": "I install new electrical parts in cars.",
+          "audio": "assets/audio/a_3_6.mp3"
         },
         {
-          "id": "n_3_8",
-          "text": "Are there any goggles in the box?  No, there aren’t.",
-          "audio": "assets/audio/a_3_b_g_8.mp3"
+          "id": "a_3_7",
+          "text": "I connect all wires very carefully.",
+          "audio": "assets/audio/a_3_7.mp3"
         },
         {
-          "id": "n_3_9",
-          "text": "Is there a pair of boots under the bench?  Yes, there is.",
-          "audio": "assets/audio/a_3_b_g_9.mp3"
+          "id": "a_3_8",
+          "text": "I maintain and service hybrid car systems.",
+          "audio": "assets/audio/a_3_8.mp3"
         },
         {
-          "id": "n_3_10",
-          "text": "Are there any ear protectors in the bag? No, there aren’t.",
-          "audio": "assets/audio/a_3_b_g_10.mp3"
+          "id": "a_3_9",
+          "text": "I repair the car horn when it fails.",
+          "audio": "assets/audio/a_3_9.mp3"
+        },
+        {
+          "id": "a_3_10",
+          "text": "I work with modern diagnostic tools daily.",
+          "audio": "assets/audio/a_3_10.mp3"
         }
       ]
     }
