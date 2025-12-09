@@ -421,14 +421,14 @@
     }
   },
   "activity_4": {
-    "type": "LISTENING-4",
+    "type": "LISTENING-5",
     "instructions": {
       "activity_a": {
-        "text": "Watch the Video.\nවීඩියෝව බලන්න.\nவீடியோவைப் பாருங்கள்.",
+        "text": "Listen to the recording and match the verbs to the nouns. \nක්‍රියා පදයන් නාම පද සමඟ ගැලපෙන්න.\nவினைச்சொற்களை பெயர்ச்சொல்லுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_4_i_b.mp3"
       },
       "activity_b": {
-        "text": "Match the words to their definitions.\nපදයන් ඒවායේ අර්ථ සමඟ ගැලපෙන්න.\nசொற்களை அவற்றின் வரையறைகளுடன் பொருத்துங்கள்.",
+        "text": "Listen and click on the time phrases you hear. ",
         "audio": "assets/audio/a_4_i_c.mp3"
       },
       "activity_c": {
@@ -446,50 +446,95 @@
     },
     "content": {
       "activity_a": {
-        "video": "assets/video/video_1.mp4"
+        "audio": "assets/audio/a_2_i_d.mp3",
+        "content": [
+          {
+            "id": "n_4_a_1",
+            "item_a": "Cause",
+            "item_b": "Accidents"
+          },
+          {
+            "id": "n_4_a_2",
+            "item_a": "Lead to",
+            "item_b": "Injuries"
+          },
+          {
+            "id": "n_4_a_3",
+            "item_a": "Result in",
+            "item_b": "Disabilities"
+          },
+          {
+            "id": "n_4_a_4",
+            "item_a": "Create",
+            "item_b": "Hazards"
+          }
+        ]
       },
-      "activity_b": [
-        {
-          "id": "n_4_b_1",
-          "word": "Negligence",
-          "definition": "not doing an important task"
-        },
-        {
-          "id": "n_4_b_1",
-          "word": "Misuse",
-          "definition": "not using equipment the proper way"
-        },
-        {
-          "id": "n_4_b_1",
-          "word": "Cause",
-          "definition": "the reason for a problem or issue"
-        },
-        {
-          "id": "n_4_b_1",
-          "word": "Hazard",
-          "definition": "danger or risk"
-        },
-        {
-          "id": "n_4_b_1",
-          "word": "Disability",
-          "definition": "losing a function you used to have, because of injury"
-        },
-        {
-          "id": "n_4_b_1",
-          "word": "Debris",
-          "definition": "rubble or rubbish scattered all over"
-        },
-        {
-          "id": "n_4_b_1",
-          "word": "Slips",
-          "definition": "to lose your footing and slide on the ground"
-        },
-        {
-          "id": "n_4_b_1",
-          "word": "Trips",
-          "definition": "accidentally fall over an object on the ground"
-        }
-      ],
+      "activity_b": {
+        "audio": "assets/audio/a_4_i_c.mp3",
+        "content": [
+          {
+            "id": "n_4_b_1",
+            "options": [
+              "From Monday to Friday",
+              "Every day",
+              "Last week",
+              "Yesterday"
+            ],
+            "answer": "From Monday to Friday"
+          },
+          {
+            "id": "n_4_b_1",
+            "options": [
+              "From Monday to Friday",
+              "Every day",
+              "Last week",
+              "Yesterday"
+            ],
+            "answer": "From Monday to Friday"
+          },
+          {
+            "id": "n_4_b_1",
+            "options": [
+              "From Monday to Friday",
+              "Every day",
+              "Last week",
+              "Yesterday"
+            ],
+            "answer": "From Monday to Friday"
+          },
+          {
+            "id": "n_4_b_1",
+            "options": [
+              "From Monday to Friday",
+              "Every day",
+              "Last week",
+              "Yesterday"
+            ],
+            "answer": "From Monday to Friday"
+          },
+          {
+            "id": "n_4_b_1",
+            "options": [
+              "From Monday to Friday",
+              "Every day",
+              "Last week",
+              "Yesterday"
+            ],
+            "answer": "From Monday to Friday"
+          },
+          {
+            "id": "n_4_b_1",
+            "options": [
+              "From Monday to Friday",
+              "Every day",
+              "Last week",
+              "Yesterday"
+            ],
+            "answer": "From Monday to Friday"
+          }
+        ]
+      },
       "activity_c": [
         {
           "id": "n_4_1",
