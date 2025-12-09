@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "t'u'be",
+        "word_text": "f'u'se",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "This t'u'be is made of rubber.",
+        "sentence_text": "The f'u'se is on the switchboard.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "f'u'se",
+        "word_text": "t'u'be",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "The electricians always replace the f'u'ses carefully.",
+        "sentence_text": "They never change these fluorescent t'u'bes.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
         "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "f'u'el",
+        "word_text": "bl'u'e",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "I regularly check the f'u'el in the tank.",
+        "sentence_text": "The bl'u'e wires  connect to the plug.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "cr'u'ise",
+        "word_text": "ne'u'tral",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "They often go on cr'u'ise in their car.",
+        "sentence_text": "Be careful with the ne'u'tral line.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.jpeg"
       }

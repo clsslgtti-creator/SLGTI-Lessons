@@ -33,35 +33,35 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "t'u'be",
+        "word_text": "gl'u'e",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "This t'u'be is made of rubber.",
+        "sentence_text": "Please apply the gl'u'e on the tile.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "f'u'se",
+        "word_text": "fl'u'e",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "The electricians always replace the f'u'ses carefully.",
+        "sentence_text": "The smoke always  goes out through the fl'u'e.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.png"
+        "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
-        "word_text": "f'u'el",
+        "word_text": "sm'oo'th",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "I regularly check the f'u'el in the tank.",
+        "sentence_text": "I  know how to make the surface sm'oo'th.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "cr'u'ise",
+        "word_text": "r'oo'f",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "They often go on cr'u'ise in their car.",
+        "sentence_text": "The workers often  repair this  r'oo'f.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpeg"
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
