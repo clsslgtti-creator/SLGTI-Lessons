@@ -979,6 +979,8 @@ const parseActivitySlideId = (slideId) => {
     "listening1-repeat": "b",
     "listening1-read": "c",
     "listening1-type": "d",
+    "listening5-matching": "a",
+    "listening5-options": "b",
     "activity2-listen": "a",
     "activity2-repeat": "b",
     "activity2-match": "c",
@@ -989,7 +991,7 @@ const parseActivitySlideId = (slideId) => {
     game5: "a",
   };
   const rolePattern =
-    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read|listening1-mcq|listening1-repeat|listening1-read|listening1-type|activity2-listen|activity2-repeat|activity2-match|game1|game2|game3|game4|game5)";
+    "(model|pre-listening|listening|listen-repeat|reading|speaking|words-listen|words-repeat|words-read|sentences-listen|sentences-repeat|sentences-read|listening1-mcq|listening1-repeat|listening1-read|listening1-type|listening5-matching|listening5-options|activity2-listen|activity2-repeat|activity2-match|game1|game2|game3|game4|game5)";
   const numberedPattern = new RegExp(
     `^activity-(\\d+)(?:-([a-z]))?-${rolePattern}$`
   );
