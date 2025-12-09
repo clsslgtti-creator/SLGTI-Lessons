@@ -8,6 +8,12 @@ const smoothScrollIntoView = (element) => {
   element.scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
+const LETTER_SUFFIXES = Array.from({ length: 26 }, (_, index) =>
+  String.fromCharCode(97 + index)
+);
+
+const trimString = (value) => (typeof value === 'string' ? value.trim() : '');
+
 const renderEmphasizedText = (element, text) => {
   const normalized = typeof text === 'string' ? text : '';
   const fragment = document.createDocumentFragment();
@@ -37,6 +43,46 @@ const renderEmphasizedText = (element, text) => {
   element.appendChild(fragment);
 };
 
+const collectDialogueEntries = (dialogue = {}) => {
+  const entries = [];
+  LETTER_SUFFIXES.forEach((suffix) => {
+    const text = trimString(dialogue?.[`text_${suffix}`]);
+    if (!text) {
+      return;
+    }
+    const audio = trimString(dialogue?.[`audio_${suffix}`]);
+    entries.push({
+      key: suffix,
+      text,
+      audio,
+      role: entries.length % 2 === 0 ? 'question' : 'answer',
+    });
+  });
+
+  if (!entries.length) {
+    const textA = trimString(dialogue?.text_a);
+    const textB = trimString(dialogue?.text_b);
+    if (textA) {
+      entries.push({
+        key: 'a',
+        text: textA,
+        audio: trimString(dialogue?.audio_a),
+        role: 'question',
+      });
+    }
+    if (textB) {
+      entries.push({
+        key: 'b',
+        text: textB,
+        audio: trimString(dialogue?.audio_b),
+        role: 'answer',
+      });
+    }
+  }
+
+  return entries;
+};
+
 const createDialogueCard = (dialogue, options = {}) => {
   const { showTexts = true, showAnswer = true, classes = [] } = options;
   const wrapper = document.createElement('article');
@@ -52,29 +98,32 @@ const createDialogueCard = (dialogue, options = {}) => {
     wrapper.appendChild(img);
   }
 
-  if (showTexts && (dialogue.text_a || dialogue.text_b)) {
+  const textEntries = collectDialogueEntries(dialogue);
+  if (showTexts && textEntries.length) {
     const texts = document.createElement('div');
     texts.className = 'dialogue-card__texts';
 
-    if (dialogue.text_a) {
-      const question = document.createElement('p');
-      question.className = 'dialogue-card__line dialogue-card__line--question';
-      renderEmphasizedText(question, dialogue.text_a);
-      texts.appendChild(question);
-    }
-
-    if (dialogue.text_b) {
-      const answer = document.createElement('p');
-      answer.className = 'dialogue-card__line dialogue-card__line--answer';
-      renderEmphasizedText(answer, dialogue.text_b);
-      if (!showAnswer) {
-        answer.classList.add('is-hidden');
+    textEntries.forEach((entry) => {
+      const line = document.createElement('p');
+      line.className = 'dialogue-card__line';
+      if (entry.role === 'question') {
+        line.classList.add('dialogue-card__line--question');
+      } else {
+        line.classList.add('dialogue-card__line--answer');
+        if (!showAnswer) {
+          line.classList.add('is-hidden');
+        }
       }
-      texts.appendChild(answer);
-    }
+      line.dataset.dialogueKey = entry.key;
+      renderEmphasizedText(line, entry.text);
+      entry.element = line;
+      texts.appendChild(line);
+    });
 
     wrapper.appendChild(texts);
   }
+
+  wrapper._dialogueEntries = textEntries;
 
   return wrapper;
 };
@@ -84,13 +133,31 @@ const createDialogueSegments = (dialogue, card) => {
     return [];
   }
 
-  const questionEl = card.querySelector('.dialogue-card__line--question');
-  const answerEl = card.querySelector('.dialogue-card__line--answer');
+  const entries =
+    Array.isArray(card._dialogueEntries) && card._dialogueEntries.length
+      ? card._dialogueEntries
+      : collectDialogueEntries(dialogue).map((entry) => {
+          const element = card.querySelector(
+            `.dialogue-card__line[data-dialogue-key="${entry.key}"]`
+          );
+          return {
+            ...entry,
+            element,
+          };
+        });
 
-  return [
-    dialogue.audio_a ? { url: dialogue.audio_a, element: questionEl } : null,
-    dialogue.audio_b ? { url: dialogue.audio_b, element: answerEl } : null,
-  ].filter(Boolean);
+  return entries
+    .map((entry) => {
+      const audio = entry.audio || trimString(dialogue?.[`audio_${entry.key}`]);
+      if (!audio) {
+        return null;
+      }
+      return {
+        url: audio,
+        element: entry.element ?? null,
+      };
+    })
+    .filter(Boolean);
 };
 
 const createDialogueTables = (tablesData = []) => {
@@ -174,8 +241,6 @@ const clearSegmentHighlights = (segments = []) => {
     element?.classList.remove('is-playing');
   });
 };
-
-const trimString = (value) => (typeof value === 'string' ? value.trim() : '');
 
 const normalizeKeyword = (value) => {
   return typeof value === 'string' && value.trim().length
