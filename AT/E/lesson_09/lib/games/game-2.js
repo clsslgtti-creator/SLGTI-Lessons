@@ -12,7 +12,7 @@ export const DEFAULT_BACKGROUND_IMAGE = "assets/img/game/bg-2.jpg";
 
 const DEFAULT_TIMER_MS = 20000;
 const TOKEN_BASE_WIDTH = 130;
-const TOKEN_BASE_HEIGHT = 70;
+const TOKEN_BASE_HEIGHT = 50;
 
 const trimText = (value) =>
   typeof value === "string" ? value.trim() : "";
@@ -480,6 +480,7 @@ export const createGameScene = (config = {}) => {
       this.feedbackIcon = null;
       this.feedbackLabel = null;
       this.feedbackAnswerText = null;
+      this.previewPanel = null;
       this.summaryOverlay = null;
       this.summaryBackdrop = null;
       this.summaryTitle = null;
@@ -676,10 +677,10 @@ export const createGameScene = (config = {}) => {
         strokeAlpha: 0.4,
         lineWidth: 3,
       });
-      targetPanel.graphics.setPosition(width / 2, height / 2 - 40);
+      targetPanel.graphics.setPosition(width / 2, height / 2 - 80);
       this.targetPanel = targetPanel;
 
-      this.targetContainer = this.add.container(width / 2, height / 2 - 40);
+      this.targetContainer = this.add.container(width / 2, height / 2 - 80);
       this.targetArea = {
         width: width * 0.76,
         height: 160,
@@ -692,25 +693,38 @@ export const createGameScene = (config = {}) => {
         strokeAlpha: 0.35,
         lineWidth: 3,
       });
-      bankPanel.graphics.setPosition(width / 2, height - 140);
+      bankPanel.graphics.setPosition(width / 2, height - 130);
       this.bankPanel = bankPanel;
 
-      this.bankContainer = this.add.container(width / 2, height - 140);
+      this.bankContainer = this.add.container(width / 2, height - 130);
       this.bankArea = {
         width: width * 0.76,
         height: 140,
       };
       this.setWordAreasVisible(false);
 
+      this.previewPanel = createRoundedPanel(this, width * 0.82, 80, 26, {
+        fillColor: 0xffffff,
+        fillAlpha: 0.94,
+        strokeColor: 0x93c5fd,
+        strokeAlpha: 0.4,
+        lineWidth: 2,
+      });
+      this.previewPanel.graphics.setPosition(width / 2, height / 2 + 80);
+      this.previewPanel.graphics.setDepth(2);
+      this.gameUiElements.push(this.previewPanel.graphics);
+
       this.previewText = this.add
-        .text(width / 2, height / 2 + 90, "", {
+        .text(width / 2, height / 2 + 80, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
           fontSize: "26px",
           color: "#0f172a",
           align: "center",
           wordWrap: { width: width * 0.78 },
         })
-        .setOrigin(0.5);
+        .setOrigin(0.5)
+        .setDepth(3);
+      this.setPreviewVisible(false);
       this.feedbackBackdrop = this.add.rectangle(
         width / 2,
         height / 2,
@@ -838,6 +852,7 @@ export const createGameScene = (config = {}) => {
       this.cancelPendingSentencePlayback();
       this.resetTokens();
       this.hideFeedback();
+      this.setPreviewVisible(false);
       this.setWordAreasVisible(false);
       if (this.previewText) {
         this.previewText.setText("");
@@ -912,6 +927,16 @@ export const createGameScene = (config = {}) => {
         container.setVisible(isVisible);
         container.setActive(isVisible);
       });
+    }
+
+    setPreviewVisible(isVisible) {
+      if (this.previewPanel?.graphics) {
+        this.previewPanel.graphics.setVisible(isVisible);
+      }
+      if (this.previewText) {
+        this.previewText.setVisible(isVisible);
+        this.previewText.setActive?.(isVisible);
+      }
     }
 
     cancelPendingSentencePlayback() {
@@ -1000,6 +1025,7 @@ export const createGameScene = (config = {}) => {
       this.clearFeedback();
       this.resetTokens();
       this.cancelPendingSentencePlayback();
+      this.setPreviewVisible(true);
       if (this.previewText) {
         this.previewText.setText("");
       }
@@ -1044,6 +1070,7 @@ export const createGameScene = (config = {}) => {
       this.stopTimer(true);
       this.cancelPendingSentencePlayback();
       this.setWordAreasVisible(true);
+      this.setPreviewVisible(true);
       this.clearFeedback();
       this.resetTokens();
       this.currentIndex += 1;
@@ -1179,7 +1206,7 @@ export const createGameScene = (config = {}) => {
         const rows = Math.ceil(tokens.length / columns);
         const spacingY =
           rows > 1
-            ? Math.min(area.height / rows, TOKEN_BASE_HEIGHT + 20)
+            ? Math.min(area.height / rows, TOKEN_BASE_HEIGHT + 30)
             : TOKEN_BASE_HEIGHT + 10;
         tokens.forEach((token, idx) => {
           const row = Math.floor(idx / columns);
@@ -1273,7 +1300,7 @@ export const createGameScene = (config = {}) => {
       if (this.feedbackAnswerText) {
         const detail =
           typeof detailText === "string" && detailText.trim().length
-            ? `Correct sentence:\n${detailText.trim()}`
+            ? `Correct sentence:\n\n${detailText.trim()}`
             : "";
         this.feedbackAnswerText.setText(detail);
         this.feedbackAnswerText.setVisible(Boolean(detail));
@@ -1418,6 +1445,7 @@ export const createGameScene = (config = {}) => {
       this.awaitingAnswer = false;
       this.runState = "finished";
       this.hideFeedback();
+      this.setPreviewVisible(false);
       if (this.previewText) {
         this.previewText.setText("");
       }
