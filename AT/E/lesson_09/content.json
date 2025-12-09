@@ -132,7 +132,7 @@
         "audio_d": "assets/audio/a_2_ex_1_b.mp3",
         "audio_e": "assets/audio/a_2_q_c.mp3",
         "audio_f": "assets/audio/a_2_ex_1_c.mp3",
-        "audio_g": "assets/audio/a_2_q_d_g.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
         "audio_h": "assets/audio/a_2_ex_1_d.mp3"
       },
       {
@@ -152,7 +152,7 @@
         "audio_d": "assets/audio/a_2_ex_2_b.mp3",
         "audio_e": "assets/audio/a_2_q_c.mp3",
         "audio_f": "assets/audio/a_2_ex_2_c.mp3",
-        "audio_g": "assets/audio/a_2_q_d_g.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
         "audio_h": "assets/audio/a_2_ex_2_d.mp3"
       }
     ],
@@ -206,7 +206,7 @@
         "audio_d": "assets/audio/a_2_d_1_b.mp3",
         "audio_e": "assets/audio/a_2_q_c.mp3",
         "audio_f": "assets/audio/a_2_d_1_c.mp3",
-        "audio_g": "assets/audio/a_2_q_d_g.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
         "audio_h": "assets/audio/a_2_d_1_d.mp3"
       },
       {
@@ -226,7 +226,7 @@
         "audio_d": "assets/audio/a_2_d_2_b.mp3",
         "audio_e": "assets/audio/a_2_q_c.mp3",
         "audio_f": "assets/audio/a_2_d_2_c.mp3",
-        "audio_g": "assets/audio/a_2_q_d_g.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
         "audio_h": "assets/audio/a_2_d_2_d.mp3"
       },
       {
@@ -246,7 +246,7 @@
         "audio_d": "assets/audio/a_2_d_3_b.mp3",
         "audio_e": "assets/audio/a_2_q_c.mp3",
         "audio_f": "assets/audio/a_2_d_3_c.mp3",
-        "audio_g": "assets/audio/a_2_q_d_g.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
         "audio_h": "assets/audio/a_2_d_3_d.mp3"
       },
       {
@@ -266,7 +266,7 @@
         "audio_d": "assets/audio/a_2_d_4_b.mp3",
         "audio_e": "assets/audio/a_2_q_c.mp3",
         "audio_f": "assets/audio/a_2_d_4_c.mp3",
-        "audio_g": "assets/audio/a_2_q_d_g.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
         "audio_h": "assets/audio/a_2_d_4_d.mp3"
       },
       {
@@ -286,7 +286,7 @@
         "audio_d": "assets/audio/a_2_d_5_b.mp3",
         "audio_e": "assets/audio/a_2_q_c.mp3",
         "audio_f": "assets/audio/a_2_d_5_c.mp3",
-        "audio_g": "assets/audio/a_2_q_d_g.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
         "audio_h": "assets/audio/a_2_d_5_d.mp3"
       },
       {
@@ -306,7 +306,7 @@
         "audio_d": "assets/audio/a_2_d_6_b.mp3",
         "audio_e": "assets/audio/a_2_q_c.mp3",
         "audio_f": "assets/audio/a_2_d_6_c.mp3",
-        "audio_g": "assets/audio/a_2_q_d_g.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
         "audio_h": "assets/audio/a_2_d_6_d.mp3"
       }
     ]

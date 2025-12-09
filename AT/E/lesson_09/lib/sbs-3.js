@@ -1507,17 +1507,52 @@ const buildSpeakingSlide = (
 
     cardsWrapper.appendChild(card);
 
-    const questionEl = card.querySelector('.dialogue-card__line--question');
-    const answerEl = card.querySelector('.dialogue-card__line--answer');
-    const segments = createDialogueSegments(dialogue, card);
+    const entries =
+      Array.isArray(card._dialogueEntries) && card._dialogueEntries.length
+        ? card._dialogueEntries
+        : collectDialogueEntries(dialogue).map((entry) => {
+            const element = card.querySelector(
+              `.dialogue-card__line[data-dialogue-key="${entry.key}"]`
+            );
+            return {
+              ...entry,
+              element,
+            };
+          });
+
+    entries.forEach((entry) => {
+      if (entry.role === 'answer') {
+        entry.element?.classList.add('is-hidden');
+      }
+    });
+
+    const pairs = [];
+    let pendingPair = null;
+    entries.forEach((entry) => {
+      if (entry.role === 'question') {
+        if (pendingPair && !pendingPair.answer) {
+          pairs.push(pendingPair);
+        }
+        pendingPair = { question: entry };
+        return;
+      }
+      if (!pendingPair) {
+        pendingPair = {};
+      }
+      pendingPair.answer = entry;
+      pairs.push(pendingPair);
+      pendingPair = null;
+    });
+    if (pendingPair) {
+      pairs.push(pendingPair);
+    }
 
     return {
       dialogue,
       card,
-      questionEl,
-      answerEl,
       prompt,
-      segments,
+      entries,
+      pairs,
     };
   });
 
@@ -1554,12 +1589,16 @@ const buildSpeakingSlide = (
     });
 
   const resetCards = () => {
-    cards.forEach(({ card, answerEl, segments }) => {
-      card.classList.remove('is-active', 'show-answer');
-      if (answerEl) {
-        answerEl.classList.add('is-hidden');
-      }
-      clearSegmentHighlights(segments);
+    cards.forEach(({ card, entries }) => {
+      card.classList.remove('is-active');
+      entries.forEach((entry) => {
+        entry.element?.classList.remove('is-playing');
+        if (entry.role === 'answer') {
+          entry.element?.classList.add('is-hidden');
+        } else {
+          entry.element?.classList.remove('is-hidden');
+        }
+      });
     });
   };
 
@@ -1580,65 +1619,81 @@ const buildSpeakingSlide = (
     try {
       for (let index = 0; index < cards.length; index += 1) {
         const item = cards[index];
-        const { dialogue, card, answerEl, questionEl, segments } = item;
+        const { card, pairs } = item;
         card.classList.add('is-active');
         smoothScrollIntoView(card);
-        if (answerEl) {
-          answerEl.classList.add('is-hidden');
+
+        for (let pairIndex = 0; pairIndex < pairs.length; pairIndex += 1) {
+          const pair = pairs[pairIndex];
+          const questionEntry = pair.question;
+          const answerEntry = pair.answer;
+
+          if (questionEntry?.element && questionEntry.audio) {
+            questionEntry.element.classList.add('is-playing');
+          }
+          if (questionEntry?.audio) {
+            try {
+              await audioManager.play(questionEntry.audio, { signal });
+            } finally {
+              questionEntry?.element?.classList.remove('is-playing');
+            }
+          }
+          if (signal.aborted) {
+            break;
+          }
+
+          let waitMs = 2000;
+          if (answerEntry?.audio) {
+            try {
+              const duration = await audioManager.getDuration(answerEntry.audio);
+              if (Number.isFinite(duration)) {
+                waitMs = Math.max(1000, Math.round(duration * 1500));
+              }
+            } catch (error) {
+              console.error(error);
+            }
+          }
+
+          status.textContent = 'Your turn...';
+          await delay(waitMs, { signal });
+          if (signal.aborted) {
+            break;
+          }
+
+          if (answerEntry?.element) {
+            answerEntry.element.classList.remove('is-hidden');
+          }
+
+          if (answerEntry?.audio) {
+            answerEntry.element?.classList.add('is-playing');
+            try {
+              await audioManager.play(answerEntry.audio, { signal });
+            } finally {
+              answerEntry.element?.classList.remove('is-playing');
+            }
+          }
+          if (signal.aborted) {
+            break;
+          }
+
+          const hasMorePairs = pairIndex < pairs.length - 1;
+          const hasMoreCards = index < cards.length - 1;
+          if (hasMorePairs || hasMoreCards) {
+            status.textContent = 'Next up...';
+          }
+
+          await delay(400, { signal });
+          if (signal.aborted) {
+            break;
+          }
         }
 
-        if (questionEl) {
-          questionEl.classList.add('is-playing');
-        }
-        try {
-          await audioManager.play(dialogue.audio_a, { signal });
-        } finally {
-          questionEl?.classList.remove('is-playing');
-        }
         if (signal.aborted) {
-          clearSegmentHighlights(segments);
+          card.classList.remove('is-active');
           break;
         }
 
-        const answerDuration = await audioManager.getDuration(dialogue.audio_b);
-        const waitMs = Math.max(1000, Math.round(answerDuration * 1500));
-        status.textContent = 'Your turn...';
-        await delay(waitMs, { signal });
-        if (signal.aborted) {
-          clearSegmentHighlights(segments);
-          break;
-        }
-
-        if (answerEl) {
-          answerEl.classList.remove('is-hidden');
-          card.classList.add('show-answer');
-        }
-
-        if (answerEl) {
-          answerEl.classList.add('is-playing');
-        }
-        try {
-          await audioManager.play(dialogue.audio_b, { signal });
-        } finally {
-          answerEl?.classList.remove('is-playing');
-        }
-        if (signal.aborted) {
-          clearSegmentHighlights(segments);
-          break;
-        }
-
-        const hasMoreCards = index < cards.length - 1;
-        if (hasMoreCards) {
-          status.textContent = 'Next up...';
-        }
-
-        await delay(400, { signal });
         card.classList.remove('is-active');
-        clearSegmentHighlights(segments);
-        if (signal.aborted) {
-          break;
-        }
-
         await delay(3000, { signal });
         if (signal.aborted) {
           break;
