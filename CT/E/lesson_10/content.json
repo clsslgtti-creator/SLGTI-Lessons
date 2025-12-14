@@ -455,48 +455,52 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What does Ramesh do at the beginning of his workday?",
-            "answer": "He checks the job card and prepares the tools.",
+            "question": "What does Kamal do at the beginning of the day?",
+            "answer": "He checks the duty chart and prepares his tools.",
             "options": [
-              "He checks the job card and prepares the tools.",
-              "He drives the cars to the paint shop.",
-              "He replaces the brake pads."
+              "He checks the duty chart and prepares his tools.",
+              "He paints the finished wall.",
+              "He drives the cement mixer."
             ]
           },
           {
             "id": "l_4_2",
-            "question": "What does he use to tighten the bolts on the wheel hub?",
-            "answer": "A torque wrench.",
-            "options": ["A screwdriver.", "A torque wrench.", "A hammer."]
+            "question": "What tool does he use to measure the height of the wall?",
+            "answer": "A spirit level.",
+            "options": [
+              "A wheelbarrow.",
+              "A spirit level.",
+              "A hammer."
+            ]
           },
           {
             "id": "l_4_3",
-            "question": "What does Ramesh do during every service?",
-            "answer": "He tests the horn, wipers, and indicators.",
+            "question": "What does he often do with the hammer and chisel?",
+            "answer": "He cuts blocks.",
             "options": [
-              "He tests the horn, wipers, and indicators.",
-              "He paints the car body.",
-              "He changes the tires only."
+              "He paints the scaffolding.",
+              "He cuts blocks.",
+              "He mixes water."
             ]
           },
           {
             "id": "l_4_4",
-            "question": "Where does he record the details of the service?",
-            "answer": "In the diagnostic scanner.",
+            "question": "Where does he record the progress of the project?",
+            "answer": "In the site log.",
             "options": [
-              "In the diagnostic scanner.",
-              "In the diagnostic scanner.",
-              "On the workshop wall."
+              "On the wall.",
+              "In the mixing bucket.",
+              "In the site log."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What does Ramesh do before leaving the workshop?",
-            "answer": "He locks the toolbox and switches off the power.",
+            "question": "What does Kamal always do before leaving?",
+            "answer": "He locks the storeroom and hands over the keys.",
             "options": [
-              "He forgets to clean the area.",
-              "He leaves all the tools on the bench.",
-              "He locks the toolbox and switches off the power."
+              "He forgets to clean the site.",
+              "He leaves the bricks in the open.",
+              "He locks the storeroom and hands over the keys."
             ]
           }
         ]
