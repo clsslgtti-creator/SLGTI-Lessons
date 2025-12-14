@@ -455,48 +455,48 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What does Ramesh do at the beginning of his workday?",
-            "answer": "He checks the job card and prepares the tools.",
+            "question": "What does Arun do first?",
+            "answer": "He checks the duty schedule and gathers tools.",
             "options": [
-              "He checks the job card and prepares the tools.",
-              "He drives the cars to the paint shop.",
-              "He replaces the brake pads."
+              "He checks the duty schedule and gathers tools.",
+              "He paints the workshop wall.",
+              "He repairs tyres."
             ]
           },
           {
             "id": "l_4_2",
-            "question": "What does he use to tighten the bolts on the wheel hub?",
-            "answer": "A torque wrench.",
-            "options": ["A screwdriver.", "A torque wrench.", "A hammer."]
+            "question": "What does he often replace?",
+            "answer": "A blown fuse.",
+            "options": ["A socket.", "A blown fuse.", "A transformer."]
           },
           {
             "id": "l_4_3",
-            "question": "What does Ramesh do during every service?",
-            "answer": "He tests the horn, wipers, and indicators.",
+            "question": "What tool does he use to test insulation?",
+            "answer": "He uses a megger.",
             "options": [
-              "He tests the horn, wipers, and indicators.",
-              "He paints the car body.",
-              "He changes the tires only."
+              "He uses a torque wrench.",
+              "He uses a megger.",
+              "He uses a hammer."
             ]
           },
           {
             "id": "l_4_4",
-            "question": "Where does he record the details of the service?",
-            "answer": "In the diagnostic scanner.",
+            "question": "Where does he note the readings?",
+            "answer": "In the logbook.",
             "options": [
-              "In the diagnostic scanner.",
-              "In the diagnostic scanner.",
-              "On the workshop wall."
+              "On the wall chart.",
+              "In the logbook.",
+              "In the toolbox."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What does Ramesh do before leaving the workshop?",
-            "answer": "He locks the toolbox and switches off the power.",
+            "question": "What does he always do before leaving?",
+            "answer": "He switches off the power and cleans the bench.",
             "options": [
-              "He forgets to clean the area.",
-              "He leaves all the tools on the bench.",
-              "He locks the toolbox and switches off the power."
+              "He leaves the power on.",
+              "He forgets the tools.",
+              "He switches off the power and cleans the bench."
             ]
           }
         ]
@@ -504,224 +504,210 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "Ramesh is a vehicle service technician at the training workshop.",
+          "text": "Arun is an electrical trainee at the training workshop.",
           "audio": "assets/audio/n_4_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "He works in the maintenance bay every day.",
+          "text": "He works in the wiring section every day.",
           "audio": "assets/audio/n_4_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "He usually starts work at eight o’clock in the morning.",
+          "text": "He usually starts at eight o’clock sharp.",
           "audio": "assets/audio/n_4_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "He checks the duty schedule, gathers his insulated pliers, and sets up the multimeter.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "He always follows the service checklist carefully.",
+          "text": "He always follows the electrical safety checklist.",
           "audio": "assets/audio/n_4_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Ramesh inspects the car body, the tyres, and the lights.",
+          "text": "Arun inspects the distribution board, the circuit breakers, and the fuses.",
           "audio": "assets/audio/n_4_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He checks the oil level, brake fluid, and coolant.",
+          "text": "He checks the wiring connections and tests the earthing.",
           "audio": "assets/audio/n_4_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "He often replaces a blown fuse or tightens a loose terminal.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "He sometimes installs new sockets and switches when required.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "He never forgets to check the insulation resistance with the megger.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "During every routine, Arun connects the multimeter, records the voltage, and verifies the current flow.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text": "During every service, Ramesh tests the horn, wipers, and indicators.",
+          "text": "He also tests the lighting circuits and ensures the proper function of the switches.",
           "audio": "assets/audio/n_4_12.mp3"
         },
         {
           "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
+          "text": "He explains the readings to his instructor and notes them in the logbook.",
           "audio": "assets/audio/n_4_13.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "At the end of the day, Arun switches off the power supply, stores the tools in the cabinet, and cleans the workbench.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "He always makes sure that the area is safe before leaving.",
           "audio": "assets/audio/n_4_15.mp3"
         },
         {
           "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
+          "text": "Arun enjoys his training because he develops precision and learns responsibility.",
           "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_17",
-          "text": "He checks the waste oil container and makes sure everything is safe and tidy before he leaves.",
-          "audio": "assets/audio/n_4_17.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "n_4_2",
-          "text": "Ramesh works in the maintenance bay every day.",
+          "text": "Arun works in the wiring section every day.",
           "audio": "assets/audio/n_4_2x.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "He checks the duty schedule, gathers his insulated pliers, and sets up the multimeter.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
+          "id": "n_4_6",
+          "text": "Arun inspects the distribution board, the circuit breakers, and the fuses.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "He checks the wiring connections and tests the earthing.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "He often replaces a blown fuse or tightens a loose terminal.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "He sometimes installs new sockets and switches when required.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "He never forgets to check the insulation resistance with the megger.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "During every routine, Arun connects the multimeter, records the voltage, and verifies the current flow.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
-          "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
-          "audio": "assets/audio/n_4_13.mp3"
+          "id": "n_4_12",
+          "text": "He also tests the lighting circuits and ensures the proper function of the switches.",
+          "audio": "assets/audio/n_4_12.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "At the end of the day, Arun switches off the power supply, stores the tools in the cabinet, and cleans the workbench.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "He always makes sure that the area is safe before leaving.",
           "audio": "assets/audio/n_4_15.mp3"
         },
         {
           "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
+          "text": "Arun enjoys his training because he develops precision and learns responsibility.",
           "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ],
       "activity_d": [
         {
           "id": "n_4_2",
-          "text": "Ramesh works in the maintenance bay every day.",
+          "text": "Arun works in the wiring section every day.",
           "audio": "assets/audio/n_4_2x.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "He checks the duty schedule, gathers his insulated pliers, and sets up the multimeter.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
+          "id": "n_4_6",
+          "text": "Arun inspects the distribution board, the circuit breakers, and the fuses.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "He checks the wiring connections and tests the earthing.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "He often replaces a blown fuse or tightens a loose terminal.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "He sometimes installs new sockets and switches when required.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "He never forgets to check the insulation resistance with the megger.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "During every routine, Arun connects the multimeter, records the voltage, and verifies the current flow.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
-          "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
-          "audio": "assets/audio/n_4_13.mp3"
+          "id": "n_4_12",
+          "text": "He also tests the lighting circuits and ensures the proper function of the switches.",
+          "audio": "assets/audio/n_4_12.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "At the end of the day, Arun switches off the power supply, stores the tools in the cabinet, and cleans the workbench.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "He always makes sure that the area is safe before leaving.",
           "audio": "assets/audio/n_4_15.mp3"
         },
         {
           "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
+          "text": "Arun enjoys his training because he develops precision and learns responsibility.",
           "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ]
+      
     }
   }
 }
