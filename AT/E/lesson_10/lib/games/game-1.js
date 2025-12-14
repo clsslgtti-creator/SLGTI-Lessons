@@ -579,7 +579,7 @@ export const createGameScene = (config) => {
       this.updateTimerText("Time: 10.0s");
 
       const sentenceCardWidth = 980;
-      const sentenceCardHeight = 230;
+      const sentenceCardHeight = 280;
       this.sentenceCardWidth = sentenceCardWidth;
       this.sentenceCardHeight = sentenceCardHeight;
       const sentencePanel = createRoundedPanel(
@@ -596,7 +596,7 @@ export const createGameScene = (config) => {
         lineWidth: 4,
       });
       this.sentencePanel = sentencePanel;
-      this.sentenceImageMaxWidth = sentenceCardWidth - 160;
+      this.sentenceImageMaxWidth = 150;
       this.sentenceImageMaxHeight = 150;
       this.sentenceImagePadding = 10;
       this.sentenceTextGap = 24;
@@ -612,9 +612,9 @@ export const createGameScene = (config) => {
           align: "center",
           wordWrap: { width: sentenceCardWidth - 40 },
         })
-        .setOrigin(0.5);
+        .setOrigin(0.5, 0);
 
-      this.sentenceCard = this.add.container(-sentenceCardWidth, height / 2, [
+      this.sentenceCard = this.add.container(-sentenceCardWidth, height / 2 - 50, [
         sentencePanel.graphics,
         this.sentenceImage,
         this.sentenceText,
@@ -1276,7 +1276,7 @@ export const createGameScene = (config) => {
       const visibleCount = Math.max(maxOptions || 0, 2);
       const useCompactLayout = visibleCount >= 3;
       const buttonWidth = useCompactLayout ? 307 : 410;
-      const buttonHeight = 120;
+      const buttonHeight = 150;
       const baseY = height - 140;
 
       this.optionButtonMetrics = {
@@ -1328,7 +1328,7 @@ export const createGameScene = (config) => {
         const text = this.add
           .text(0, 0, "", {
             fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-            fontSize: 32,
+            fontSize: 30,
             color: "#475569",
             align: "center",
             fontStyle: "bold",
