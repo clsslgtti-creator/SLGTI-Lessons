@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": 10,
     "level": "Elementary",
-    "section": "Automobile Technology",
+    "section": "Construction Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -504,222 +504,222 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "Ramesh is a vehicle service technician at the training workshop.",
+          "text": "Kamal is a trainee in the construction workshop.",
           "audio": "assets/audio/n_4_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "He works in the maintenance bay every day.",
+          "text": "He works in the masonry section every day.",
           "audio": "assets/audio/n_4_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "He usually starts work at eight o’clock in the morning.",
+          "text": "He usually begins his tasks at eight o’clock in the morning.",
           "audio": "assets/audio/n_4_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "He checks the duty chart, prepares his trowel and measuring tape, and organizes the wheelbarrow with cement bags.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "He always follows the service checklist carefully.",
+          "text": "He always follows the instructions from his supervisor carefully.",
           "audio": "assets/audio/n_4_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Ramesh inspects the car body, the tyres, and the lights.",
+          "text": "Kamal lays bricks in straight lines and spreads mortar with the trowel.",
           "audio": "assets/audio/n_4_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He checks the oil level, brake fluid, and coolant.",
+          "text": "He measures the height of the wall with a spirit level.",
           "audio": "assets/audio/n_4_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "He often cuts blocks with the hammer and chisel.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "He never forgets to check the alignment, because accuracy is very important.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "He mixes sand, cement, and water in the correct ratio, and he fills the joints properly.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "During each project, Kamal inspects the scaffolding, secures the ladders, and places the safety signs.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text": "During every service, Ramesh tests the horn, wipers, and indicators.",
+          "text": "He usually carries bricks to the site and arranges them neatly near the wall.",
           "audio": "assets/audio/n_4_12.mp3"
         },
         {
           "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
+          "text": "He checks the quality of the materials and rejects any damaged bricks.",
           "audio": "assets/audio/n_4_13.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "He writes the progress in the site log and shows it to his instructor.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "At the end of the day, Kamal cleans the tools and washes the mixing buckets.",
           "audio": "assets/audio/n_4_15.mp3"
         },
         {
           "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
+          "text": "He stacks the leftover bricks in the storage area.",
           "audio": "assets/audio/n_4_16.mp3"
         },
         {
           "id": "n_4_17",
-          "text": "He checks the waste oil container and makes sure everything is safe and tidy before he leaves.",
+          "text": "He always clears the site and removes waste materials.",
           "audio": "assets/audio/n_4_17.mp3"
         },
         {
           "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
+          "text": "He never forgets to lock the storeroom and hand over the keys.",
           "audio": "assets/audio/n_4_18.mp3"
         },
         {
           "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
+          "text": "Kamal enjoys his training because he learns useful skills and feels proud of his work.",
           "audio": "assets/audio/n_4_19.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "n_4_2",
-          "text": "Ramesh works in the maintenance bay every day.",
+          "text": "Kamal works in the masonry section every day.",
           "audio": "assets/audio/n_4_2x.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "He checks the duty chart, prepares his trowel and measuring tape, and organizes the wheelbarrow with cement bags.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
-          "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
-          "audio": "assets/audio/n_4_8.mp3"
+          "id": "n_4_6",
+          "text": "Kamal lays bricks in straight lines and spreads mortar with the trowel.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "He measures the height of the wall with a spirit level.",
+          "audio": "assets/audio/n_4_7.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "He never forgets to check the alignment, because accuracy is very important.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "He mixes sand, cement, and water in the correct ratio, and he fills the joints properly.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "During each project, Kamal inspects the scaffolding, secures the ladders, and places the safety signs.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
+          "id": "n_4_12",
+          "text": "He usually carries bricks to the site and arranges them neatly near the wall.",
+          "audio": "assets/audio/n_4_12.mp3"
+        },
+        {
           "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
+          "text": "He checks the quality of the materials and rejects any damaged bricks.",
           "audio": "assets/audio/n_4_13.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "He writes the progress in the site log and shows it to his instructor.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
-          "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
-          "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
+          "id": "n_4_17",
+          "text": "He always clears the site and removes waste materials.",
+          "audio": "assets/audio/n_4_17.mp3"
         },
         {
           "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
+          "text": "He never forgets to lock the storeroom and hand over the keys.",
           "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ],
       "activity_d": [
         {
           "id": "n_4_2",
-          "text": "Ramesh works in the maintenance bay every day.",
+          "text": "Kamal works in the masonry section every day.",
           "audio": "assets/audio/n_4_2x.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "He checks the duty chart, prepares his trowel and measuring tape, and organizes the wheelbarrow with cement bags.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
-          "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
-          "audio": "assets/audio/n_4_8.mp3"
+          "id": "n_4_6",
+          "text": "Kamal lays bricks in straight lines and spreads mortar with the trowel.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "He measures the height of the wall with a spirit level.",
+          "audio": "assets/audio/n_4_7.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "He never forgets to check the alignment, because accuracy is very important.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "He mixes sand, cement, and water in the correct ratio, and he fills the joints properly.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "During each project, Kamal inspects the scaffolding, secures the ladders, and places the safety signs.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
+          "id": "n_4_12",
+          "text": "He usually carries bricks to the site and arranges them neatly near the wall.",
+          "audio": "assets/audio/n_4_12.mp3"
+        },
+        {
           "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
+          "text": "He checks the quality of the materials and rejects any damaged bricks.",
           "audio": "assets/audio/n_4_13.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "He writes the progress in the site log and shows it to his instructor.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
-          "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
-          "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
+          "id": "n_4_17",
+          "text": "He always clears the site and removes waste materials.",
+          "audio": "assets/audio/n_4_17.mp3"
         },
         {
           "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
+          "text": "He never forgets to lock the storeroom and hand over the keys.",
           "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ]
     }
