@@ -1,0 +1,727 @@
+{
+  "meta": {
+    "lesson_no": 10,
+    "level": "Elementary",
+    "section": "Automobile Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "PRONUNCIATION",
+    "focus": "Long /ɜː/",
+    "instructions": {
+      "activity_1_a": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_b": {
+        "text": "Listen and repeat.\nසවන් දී වචන නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_c": {
+        "text": "Listen.\nසවන් දෙන්න.\nகேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_1_d": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_1_e": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": [
+      {
+        "id": "p_1",
+        "word_text": "t'ur'n",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "He always t'ur'ns the crankshaft slowly.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
+      },
+      {
+        "id": "p_2",
+        "word_text": "b'ur'n",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "He never b'ur'ns the clutch plate.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.jpg"
+      },
+      {
+        "id": "p_3",
+        "word_text": "c'ur've",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "The c'ur've on the road is very sharp.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.jpg"
+      },
+      {
+        "id": "p_4",
+        "word_text": "s'er'vice",
+        "word_audio": "assets/audio/a_1_p_4_a.mp3",
+        "sentence_text": "The car needs a full s'er'vice today.",
+        "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
+        "image": "assets/img/a_1_p_4.png"
+      }
+    ]
+  },
+  "activity_2": {
+    "type": "SBS-3",
+    "focus": "Simple Present - third person singular , Nationalities",
+    "instructions": {
+      "example": {
+        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "audio": "assets/audio/a_2_i_ex.mp3"
+      },
+      "activity_2_a": {
+        "text": "Match the capital cities to the nationalities.\nරාජධානී නගර ජාතිකත්වයන්ට ගැලපෙන්න.\nமாநகரங்களையும் தேசியத்துவங்களையும் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_g.mp3"
+      },
+      "activity_2_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_2_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_2_d": {
+        "text": "Read along.\nපිටපත සමඟ කියවන්න.\nஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      },
+      "activity_2_e": {
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "audio": "assets/audio/a_2_i_e.mp3"
+      }
+    },
+    "tables": [
+      [
+        ["He", "lives"],
+        ["She", null],
+        ["It", null]
+      ],
+      [
+        ["Where does", "He", "live?"],
+        [null, "She", null],
+        [null, "It", null]
+      ],
+      [
+        ["What does", "He", "do?"],
+        [null, "She", null],
+        [null, "It", null]
+      ]
+    ],
+    "example_dialogues": [
+      {
+        "id": "e_1",
+        "img": "assets/img/a_2_ex_1.jpeg",
+        "text_a": "What’s his name?",
+        "text_b": "His name is Nimal.",
+        "text_c": "Where does he live?",
+        "text_d": "He lives in Trinco.",
+        "text_e": "What language does he speak?",
+        "text_f": "He speaks Sinhala.",
+        "text_g": "Tell me, what does he do every day?",
+        "text_h": "He eats Sri Lankan food, he watches Sri Lankan movies, and he listens to Sri Lankan news.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_ex_1_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_ex_1_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_ex_1_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_ex_1_d.mp3"
+      },
+      {
+        "id": "e_2",
+        "img": "assets/img/a_2_ex_2.jpeg",
+        "text_a": "What’s her name?",
+        "text_b": "Her name is Li Hua.",
+        "text_c": "Where does she live?",
+        "text_d": "She lives in Beijing.",
+        "text_e": "What language does she speak?",
+        "text_f": "She speaks Chinese.",
+        "text_g": "Tell me, what does she do every day?",
+        "text_h": "She eats Chinese food, she watches Chinese movies, and she listens to Chinese news.",
+        "audio_a": "assets/audio/a_2_q_ax.mp3",
+        "audio_b": "assets/audio/a_2_ex_2_a.mp3",
+        "audio_c": "assets/audio/a_2_q_bx.mp3",
+        "audio_d": "assets/audio/a_2_ex_2_b.mp3",
+        "audio_e": "assets/audio/a_2_q_cx.mp3",
+        "audio_f": "assets/audio/a_2_ex_2_c.mp3",
+        "audio_g": "assets/audio/a_2_q_dx.mp3",
+        "audio_h": "assets/audio/a_2_ex_2_d.mp3"
+      }
+    ],
+    "keywords": [
+      {
+        "id": "k_1",
+        "image": "assets/img/a_2_k_1.jpeg",
+        "word": "France"
+      },
+      {
+        "id": "k_2",
+        "image": "assets/img/a_2_k_2.jpeg",
+        "word": "Germany"
+      },
+      {
+        "id": "k_3",
+        "image": "assets/img/a_2_k_3.jpeg",
+        "word": "Oman"
+      },
+      {
+        "id": "k_4",
+        "image": "assets/img/a_2_k_4.jpeg",
+        "word": "Russia"
+      },
+      {
+        "id": "k_5",
+        "image": "assets/img/a_2_k_5.jpeg",
+        "word": "Japan"
+      },
+      {
+        "id": "k_6",
+        "image": "assets/img/a_2_k_6.jpeg",
+        "word": "China"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.jpeg",
+        "text_a": "What’s her name?",
+        "text_b": "Her name is Yuki.",
+        "text_c": "Where does she live?",
+        "text_d": "She lives in Tokyo.",
+        "text_e": "What language does she speak?",
+        "text_f": "She speaks Japanese.",
+        "text_g": "Tell me, what does she do every day?",
+        "text_h": "She eats Japanese food, she watches Japanese movies, and she listens to Japanese news.",
+        "audio_a": "assets/audio/a_2_q_ax.mp3",
+        "audio_b": "assets/audio/a_2_d_1_a.mp3",
+        "audio_c": "assets/audio/a_2_q_bx.mp3",
+        "audio_d": "assets/audio/a_2_d_1_b.mp3",
+        "audio_e": "assets/audio/a_2_q_cx.mp3",
+        "audio_f": "assets/audio/a_2_d_1_c.mp3",
+        "audio_g": "assets/audio/a_2_q_dx.mp3",
+        "audio_h": "assets/audio/a_2_d_1_d.mp3"
+      },
+      {
+        "id": "d_2",
+        "img": "assets/img/a_2_d_2.jpeg",
+        "text_a": "What’s his name?",
+        "text_b": "His name is Ivan.",
+        "text_c": "Where does he live?",
+        "text_d": "He lives in Moscow.",
+        "text_e": "What language does he speak?",
+        "text_f": "He speaks Russian.",
+        "text_g": "Tell me, what does he do every day?",
+        "text_h": "He eats Russian food, he watches Russian movies, and he listens to Russian news.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_d_2_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_d_2_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_d_2_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_d_2_d.mp3"
+      },
+      {
+        "id": "d_3",
+        "img": "assets/img/a_2_d_3.jpeg",
+        "text_a": "What’s his name?",
+        "text_b": "His name is Ahmed.",
+        "text_c": "Where does he live?",
+        "text_d": "He lives in Muscat.",
+        "text_e": "What language does he speak?",
+        "text_f": "He speaks Arabic.",
+        "text_g": "Tell me, what does he do every day?",
+        "text_h": "He eats Omani food, he watches Omani movies, and he listens to Omani news.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_d_3_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_d_3_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_d_3_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_d_3_d.mp3"
+      },
+      {
+        "id": "d_4",
+        "img": "assets/img/a_2_d_4.jpeg",
+        "text_a": "What’s her name?",
+        "text_b": "Her name is Ayesha.",
+        "text_c": "Where does she live?",
+        "text_d": "She lives in Islamabad.",
+        "text_e": "What language does she speak?",
+        "text_f": "She speaks Urdu.",
+        "text_g": "Tell me, what does she do every day?",
+        "text_h": "She eats Pakistani  food,  she watches Pakistani movies, and she listens to Pakistani news.",
+        "audio_a": "assets/audio/a_2_q_ax.mp3",
+        "audio_b": "assets/audio/a_2_d_4_a.mp3",
+        "audio_c": "assets/audio/a_2_q_bx.mp3",
+        "audio_d": "assets/audio/a_2_d_4_b.mp3",
+        "audio_e": "assets/audio/a_2_q_cx.mp3",
+        "audio_f": "assets/audio/a_2_d_4_c.mp3",
+        "audio_g": "assets/audio/a_2_q_dx.mp3",
+        "audio_h": "assets/audio/a_2_d_4_d.mp3"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/a_2_d_5.jpeg",
+        "text_a": "What’s his name?",
+        "text_b": "His name is Hans.",
+        "text_c": "Where does he live?",
+        "text_d": "He lives in Berlin.",
+        "text_e": "What language does he speak?",
+        "text_f": "He speaks German.",
+        "text_g": "Tell me, what does he do every day?",
+        "text_h": "He eats German food, he watches German movies, and he listens to German news.",
+        "audio_a": "assets/audio/a_2_q_a.mp3",
+        "audio_b": "assets/audio/a_2_d_5_a.mp3",
+        "audio_c": "assets/audio/a_2_q_b.mp3",
+        "audio_d": "assets/audio/a_2_d_5_b.mp3",
+        "audio_e": "assets/audio/a_2_q_c.mp3",
+        "audio_f": "assets/audio/a_2_d_5_c.mp3",
+        "audio_g": "assets/audio/a_2_q_d.mp3",
+        "audio_h": "assets/audio/a_2_d_5_d.mp3"
+      },
+      {
+        "id": "d_6",
+        "img": "assets/img/a_2_d_6.jpeg",
+        "text_a": "What’s her name?",
+        "text_b": "Her name is Claire.",
+        "text_c": "Where does she live?",
+        "text_d": "She lives in Paris.",
+        "text_e": "What language does she speak?",
+        "text_f": "She speaks French.",
+        "text_g": "Tell me, what does she do every day?",
+        "text_h": "She eats French food, she watches French movies, and she listens to French news.",
+        "audio_a": "assets/audio/a_2_q_ax.mp3",
+        "audio_b": "assets/audio/a_2_d_6_a.mp3",
+        "audio_c": "assets/audio/a_2_q_bx.mp3",
+        "audio_d": "assets/audio/a_2_d_6_b.mp3",
+        "audio_e": "assets/audio/a_2_q_cx.mp3",
+        "audio_f": "assets/audio/a_2_d_6_c.mp3",
+        "audio_g": "assets/audio/a_2_q_dx.mp3",
+        "audio_h": "assets/audio/a_2_d_6_d.mp3"
+      }
+    ]
+  },
+  "activity_3": {
+    "type": "INTERACTIVE-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
+        "audio": "assets/audio/a_3_i_b.mp3"
+      },
+      "activity_b": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "bg_image": "assets/img/game/bg-6.jpg",
+        "examples": [
+          {
+            "id": "e_1",
+            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "audio": "assets/audio/a_3_1.mp3",
+            "options": [
+              "He repairs dents and scratches on cars.",
+              "He makes dents and scratches on cars.",
+              "He calculates dents and scratches on cars."
+            ],
+            "answer": "He repairs dents and scratches on cars.",
+            "image": "assets/img/a_3_1.png"
+          }
+        ],
+        "content": [
+          {
+            "id": "g_b_1",
+            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "options": [
+              "He fixes tiles, fenders, and bumpers.",
+              "He fixes damaged doors, fenders, and bumpers.",
+              "He fixes broken pipes, taps, and valves."
+            ],
+            "answer": "He fixes damaged doors, fenders, and bumpers.",
+            "image": "assets/img/a_3_1.png"
+          },
+          {
+            "id": "g_b_2",
+            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "options": [
+              "He uses special tools to steam metal parts.",
+              "He uses special tools to damage metal parts.",
+              "He uses special tools to fit metal parts together."
+            ],
+            "answer": "He uses special tools to fit metal parts together.",
+            "image": "assets/img/a_3_1.png"
+          },
+          {
+            "id": "g_b_3",
+            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "options": [
+              "He installs and smooths the car body.",
+              "He diagnoses and smooths the car body.",
+              "He sands and smooths the car body."
+            ],
+            "answer": "He sands and smooths the car body.",
+            "image": "assets/img/a_3_1.png"
+          },
+          {
+            "id": "g_b_4",
+            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "options": [
+              "He tunes the engine for painting.",
+              "He prepares the surface for painting.",
+              "He replaces the brake pads for painting."
+            ],
+            "answer": "He prepares the surface for painting.",
+            "image": "assets/img/a_3_1.png"
+          },
+          {
+            "id": "g_b_4",
+            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "options": [
+              "He makes the car look new again.",
+              "He makes the engine look new again.",
+              "He makes the exhaust pipe look new again."
+            ],
+            "answer": "He makes the car look new again.",
+            "image": "assets/img/a_3_1.png"
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_3_1",
+          "text": "He repairs dents and scratches on cars.",
+          "audio": "assets/audio/a_3_b_g_1.mp3"
+        },
+        {
+          "id": "n_3_2",
+          "text": "He fixes damaged doors, fenders, and bumpers.",
+          "audio": "assets/audio/a_3_b_g_2.mp3"
+        },
+        {
+          "id": "n_3_3",
+          "text": "He uses special tools to fit metal parts together.",
+          "audio": "assets/audio/a_3_b_g_3.mp3"
+        },
+        {
+          "id": "n_3_4",
+          "text": "He sands and smooths the car body.",
+          "audio": "assets/audio/a_3_b_g_4.mp3"
+        },
+        {
+          "id": "n_3_5",
+          "text": "He prepares the surface for painting.",
+          "audio": "assets/audio/a_3_b_g_5.mp3"
+        },
+        {
+          "id": "n_3_6",
+          "text": "He makes the car look new again.",
+          "audio": "assets/audio/a_3_b_g_6.mp3"
+        }
+      ]
+    }
+  },
+  "activity_4": {
+    "type": "LISTENING-2",
+    "instructions": {
+      "activity_a": {
+        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the questions before you listen to the recording.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න. රෙකෝඩින් එක අහන්නට පෙර ප්‍රශ්නය කියවීම ඉතාමත් වැදගත්ය.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள். பதிவைக் கேட்பதற்கு முன் கேள்விகளைப் படிப்பது மிகவும் முக்கியம்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "activity_b": {
+        "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
+        "audio": "assets/audio/a_2_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
+      },
+      "activity_d": {
+        "text": "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்.",
+        "audio": "assets/audio/a_2_i_d.mp3"
+      }
+    },
+    "content": {
+      "activity_a": {
+        "audio": "assets/audio/a_4_l_1.mp3",
+        "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What does Ramesh do at the beginning of his workday?",
+            "answer": "He checks the job card and prepares the tools.",
+            "options": [
+              "He checks the job card and prepares the tools.",
+              "He drives the cars to the paint shop.",
+              "He replaces the brake pads."
+            ]
+          },
+          {
+            "id": "l_4_2",
+            "question": "What does he use to tighten the bolts on the wheel hub?",
+            "answer": "A torque wrench.",
+            "options": ["A screwdriver.", "A torque wrench.", "A hammer."]
+          },
+          {
+            "id": "l_4_3",
+            "question": "What does Ramesh do during every service?",
+            "answer": "He tests the horn, wipers, and indicators.",
+            "options": [
+              "He tests the horn, wipers, and indicators.",
+              "He paints the car body.",
+              "He changes the tires only."
+            ]
+          },
+          {
+            "id": "l_4_4",
+            "question": "Where does he record the details of the service?",
+            "answer": "In the diagnostic scanner.",
+            "options": [
+              "In the diagnostic scanner.",
+              "In the diagnostic scanner.",
+              "On the workshop wall."
+            ]
+          },
+          {
+            "id": "l_4_5",
+            "question": "What does Ramesh do before leaving the workshop?",
+            "answer": "He locks the toolbox and switches off the power.",
+            "options": [
+              "He forgets to clean the area.",
+              "He leaves all the tools on the bench.",
+              "He locks the toolbox and switches off the power."
+            ]
+          }
+        ]
+      },
+      "activity_b": [
+        {
+          "id": "n_4_1",
+          "text": "Ramesh is a vehicle service technician at the training workshop.",
+          "audio": "assets/audio/n_4_1.mp3"
+        },
+        {
+          "id": "n_4_2",
+          "text": "He works in the maintenance bay every day.",
+          "audio": "assets/audio/n_4_2.mp3"
+        },
+        {
+          "id": "n_4_3",
+          "text": "He usually starts work at eight o’clock in the morning.",
+          "audio": "assets/audio/n_4_3.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "audio": "assets/audio/n_4_4.mp3"
+        },
+        {
+          "id": "n_4_5",
+          "text": "He always follows the service checklist carefully.",
+          "audio": "assets/audio/n_4_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "Ramesh inspects the car body, the tyres, and the lights.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "He checks the oil level, brake fluid, and coolant.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "He replaces any parts that look damaged or worn out.",
+          "audio": "assets/audio/n_4_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "He also cleans the air filter and checks the fan belt.",
+          "audio": "assets/audio/n_4_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "He often adjusts the battery terminals because they often get loose.",
+          "audio": "assets/audio/n_4_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "audio": "assets/audio/n_4_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "During every service, Ramesh tests the horn, wipers, and indicators.",
+          "audio": "assets/audio/n_4_12.mp3"
+        },
+        {
+          "id": "n_4_13",
+          "text": "He connects the diagnostic scanner to check the sensors.",
+          "audio": "assets/audio/n_4_13.mp3"
+        },
+        {
+          "id": "n_4_14",
+          "text": "He reads the error codes and explains them to his instructor.",
+          "audio": "assets/audio/n_4_14.mp3"
+        },
+        {
+          "id": "n_4_15",
+          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "audio": "assets/audio/n_4_15.mp3"
+        },
+        {
+          "id": "n_4_16",
+          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
+          "audio": "assets/audio/n_4_16.mp3"
+        },
+        {
+          "id": "n_4_17",
+          "text": "He checks the waste oil container and makes sure everything is safe and tidy before he leaves.",
+          "audio": "assets/audio/n_4_17.mp3"
+        },
+        {
+          "id": "n_4_18",
+          "text": "He never forgets to lock the toolbox and switch off the power supply.",
+          "audio": "assets/audio/n_4_18.mp3"
+        },
+        {
+          "id": "n_4_19",
+          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
+          "audio": "assets/audio/n_4_19.mp3"
+        }
+      ],
+      "activity_c": [
+        {
+          "id": "n_4_2",
+          "text": "Ramesh works in the maintenance bay every day.",
+          "audio": "assets/audio/n_4_2x.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "audio": "assets/audio/n_4_4.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "He replaces any parts that look damaged or worn out.",
+          "audio": "assets/audio/n_4_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "He also cleans the air filter and checks the fan belt.",
+          "audio": "assets/audio/n_4_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "He often adjusts the battery terminals because they often get loose.",
+          "audio": "assets/audio/n_4_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "audio": "assets/audio/n_4_11.mp3"
+        },
+        {
+          "id": "n_4_13",
+          "text": "He connects the diagnostic scanner to check the sensors.",
+          "audio": "assets/audio/n_4_13.mp3"
+        },
+        {
+          "id": "n_4_14",
+          "text": "He reads the error codes and explains them to his instructor.",
+          "audio": "assets/audio/n_4_14.mp3"
+        },
+        {
+          "id": "n_4_15",
+          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "audio": "assets/audio/n_4_15.mp3"
+        },
+        {
+          "id": "n_4_16",
+          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
+          "audio": "assets/audio/n_4_16.mp3"
+        },
+        {
+          "id": "n_4_18",
+          "text": "He never forgets to lock the toolbox and switch off the power supply.",
+          "audio": "assets/audio/n_4_18.mp3"
+        },
+        {
+          "id": "n_4_19",
+          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
+          "audio": "assets/audio/n_4_19.mp3"
+        }
+      ],
+      "activity_d": [
+        {
+          "id": "n_4_2",
+          "text": "Ramesh works in the maintenance bay every day.",
+          "audio": "assets/audio/n_4_2x.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "audio": "assets/audio/n_4_4.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "He replaces any parts that look damaged or worn out.",
+          "audio": "assets/audio/n_4_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "He also cleans the air filter and checks the fan belt.",
+          "audio": "assets/audio/n_4_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "He often adjusts the battery terminals because they often get loose.",
+          "audio": "assets/audio/n_4_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "audio": "assets/audio/n_4_11.mp3"
+        },
+        {
+          "id": "n_4_13",
+          "text": "He connects the diagnostic scanner to check the sensors.",
+          "audio": "assets/audio/n_4_13.mp3"
+        },
+        {
+          "id": "n_4_14",
+          "text": "He reads the error codes and explains them to his instructor.",
+          "audio": "assets/audio/n_4_14.mp3"
+        },
+        {
+          "id": "n_4_15",
+          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "audio": "assets/audio/n_4_15.mp3"
+        },
+        {
+          "id": "n_4_16",
+          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
+          "audio": "assets/audio/n_4_16.mp3"
+        },
+        {
+          "id": "n_4_18",
+          "text": "He never forgets to lock the toolbox and switch off the power supply.",
+          "audio": "assets/audio/n_4_18.mp3"
+        },
+        {
+          "id": "n_4_19",
+          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
+          "audio": "assets/audio/n_4_19.mp3"
+        }
+      ]
+    }
+  }
+}
