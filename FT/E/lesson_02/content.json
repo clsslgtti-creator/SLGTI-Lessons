@@ -403,27 +403,27 @@
         },
         {
           "id": "n_4_6",
-          "text": "The dough is about 150 grams. The dough is about 150 grams too much.",
+          "text": "The dough is about 150 grams. The dough is about 50 grams too much.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "The pastry sheet is about 5 centimeters. The pastry sheet is about 5 centimeters too long.",
+          "text": "The pastry sheet is about 6 centimeters long. The pastry sheet is about 2 centimeters too long.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "The baking tray is about 3 centimeters. The baking tray is about 3 centimeters too wide.",
+          "text": "The baking tray is about 8 centimeters wide. The baking tray is about 3 centimeters too wide.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "The mixing bowl is about 2 centimeters. The mixing bowl is about 2 centimeters too deep.",
+          "text": "The mixing bowl is about 12 centimeters deep. The mixing bowl is about 2 centimeters too deep.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "The gas oven is about 20 degrees. The gas oven is about 20 degrees too hot.",
+          "text": "The gas oven is about 170 degrees Celsius. The gas oven is about 20 degrees Celsius too hot.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ],
@@ -453,29 +453,29 @@
           "text": "I am checking the sugar content of the syrup.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
-        {
-          "id": "r_4_6",
-          "text": "The dough is about 150 grams. The dough is about 150 grams too much.",
+         {
+          "id": "n_4_6",
+          "text": "The dough is about 150 grams. The dough is about 50 grams too much.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
-          "id": "r_4_7",
-          "text": "The pastry sheet is about 5 centimeters. The pastry sheet is about 5 centimeters too long.",
+          "id": "n_4_7",
+          "text": "The pastry sheet is about 6 centimeters long. The pastry sheet is about 2 centimeters too long.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "r_4_8",
-          "text": "The baking tray is about 3 centimeters. The baking tray is about 3 centimeters too wide.",
+          "id": "n_4_8",
+          "text": "The baking tray is about 8 centimeters wide. The baking tray is about 3 centimeters too wide.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
-          "id": "r_4_9",
-          "text": "The mixing bowl is about 2 centimeters. The mixing bowl is about 2 centimeters too deep.",
+          "id": "n_4_9",
+          "text": "The mixing bowl is about 12 centimeters deep. The mixing bowl is about 2 centimeters too deep.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
-          "id": "r_4_10",
-          "text": "The gas oven is about 20 degrees. The gas oven is about 20 degrees too hot.",
+          "id": "n_4_10",
+          "text": "The gas oven is about 170 degrees Celsius. The gas oven is about 20 degrees Celsius too hot.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ],
@@ -505,29 +505,29 @@
           "text": "I am checking the sugar content of the syrup.",
           "audio": "assets/audio/a_4_n_5.mp3"
         },
-        {
-          "id": "r_4_6",
-          "text": "The dough is about 150 grams. The dough is about 150 grams too much.",
+         {
+          "id": "n_4_6",
+          "text": "The dough is about 150 grams. The dough is about 50 grams too much.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
-          "id": "r_4_7",
-          "text": "The pastry sheet is about 5 centimeters. The pastry sheet is about 5 centimeters too long.",
+          "id": "n_4_7",
+          "text": "The pastry sheet is about 6 centimeters long. The pastry sheet is about 2 centimeters too long.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
-          "id": "r_4_8",
-          "text": "The baking tray is about 3 centimeters. The baking tray is about 3 centimeters too wide.",
+          "id": "n_4_8",
+          "text": "The baking tray is about 8 centimeters wide. The baking tray is about 3 centimeters too wide.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
-          "id": "r_4_9",
-          "text": "The mixing bowl is about 2 centimeters. The mixing bowl is about 2 centimeters too deep.",
+          "id": "n_4_9",
+          "text": "The mixing bowl is about 12 centimeters deep. The mixing bowl is about 2 centimeters too deep.",
           "audio": "assets/audio/a_4_n_9.mp3"
         },
         {
-          "id": "r_4_10",
-          "text": "The gas oven is about 20 degrees. The gas oven is about 20 degrees too hot.",
+          "id": "n_4_10",
+          "text": "The gas oven is about 170 degrees Celsius. The gas oven is about 20 degrees Celsius too hot.",
           "audio": "assets/audio/a_4_n_10.mp3"
         }
       ]
