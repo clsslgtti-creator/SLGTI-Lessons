@@ -247,8 +247,8 @@
             "id": "g_4",
             "sentence": "The standard depth of tire tread is 3–4 millimeters. The depth of this tire tread is 2 millimeters.\n\n The depth of this tire tread is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
-            "options": ["Too Shallow", "Correct", "Too deep"],
-            "answer": "Too Shallow",
+            "options": ["Too shallow", "Correct", "Too deep"],
+            "answer": "Too shallow",
             "image": "assets/img/a_3_a_g_4.jpeg"
           },
           {
@@ -431,7 +431,7 @@
         },
         {
           "id": "r_4_2",
-          "text": "I am checking the length of the fan belt",
+          "text": "I am checking the length of the fan belt.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {
@@ -483,7 +483,7 @@
         },
         {
           "id": "r_4_2",
-          "text": "I am checking the length of the fan belt",
+          "text": "I am checking the length of the fan belt.",
           "audio": "assets/audio/a_4_n_2.mp3"
         },
         {

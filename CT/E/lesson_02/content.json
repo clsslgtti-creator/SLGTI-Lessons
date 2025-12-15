@@ -247,8 +247,8 @@
             "id": "g_4",
             "sentence": "The correct depth of the foundation is 1.5 meters. This foundation is 1 meter.\n\n This foundation is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
-            "options": ["Too Shallow", "Correct", "Too deep"],
-            "answer": "Too Shallow",
+            "options": ["Too shallow", "Correct", "Too deep"],
+            "answer": "Too shallow",
             "image": "assets/img/a_3_a_g_4.png"
           },
           {
