@@ -605,7 +605,7 @@ const blockGameShellInteraction = (slideElement) => {
 };
 
 
-const INITIAL_INSTRUCTION_DELAY_SECONDS = 5;
+const INITIAL_INSTRUCTION_DELAY_SECONDS = 3;
 let instructionPlayback = null;
 
 const cleanupInstructionController = (
