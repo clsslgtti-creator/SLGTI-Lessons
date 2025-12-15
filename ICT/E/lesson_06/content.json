@@ -33,9 +33,9 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "port",
+        "word_text": "p'o'rt",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "Connect the cable to the USB port.",
+        "sentence_text": "Connect the cable to the USB p'o'rt.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.jpg"
       },

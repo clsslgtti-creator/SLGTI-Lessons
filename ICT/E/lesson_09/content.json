@@ -263,9 +263,9 @@
         "audio_a": "assets/audio/a_2_q_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_a.mp3",
         "audio_c": "assets/audio/a_2_q_b.mp3",
-        "audio_d": "assets/audio/a_2_d_4_b.mp3",
+        "audio_d": "assets/audio/a_2_d_4_c.mp3",
         "audio_e": "assets/audio/a_2_q_c.mp3",
-        "audio_f": "assets/audio/a_2_d_4_c.mp3",
+        "audio_f": "assets/audio/a_2_d_4_b.mp3",
         "audio_g": "assets/audio/a_2_q_d.mp3",
         "audio_h": "assets/audio/a_2_d_4_d.mp3"
       },
