@@ -326,71 +326,71 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the role of an electrician?",
             "audio": "assets/audio/a_3_1.mp3",
             "options": [
-              "He repairs dents and scratches on cars.",
-              "He makes dents and scratches on cars.",
-              "He calculates dents and scratches on cars."
+              "He installs circuit breakers and distribution boards.",
+              "He polishes circuit breakers and distribution boards.",
+              "He ignores circuit breakers and distribution boards."
             ],
-            "answer": "He repairs dents and scratches on cars.",
+            "answer": "He installs circuit breakers and distribution boards.",
             "image": "assets/img/a_3_1.png"
           }
         ],
         "content": [
           {
             "id": "g_b_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the role of an electrician?",
             "options": [
-              "He fixes tiles, fenders, and bumpers.",
-              "He fixes damaged doors, fenders, and bumpers.",
-              "He fixes broken pipes, taps, and valves."
+              "He diagnoses faults in wiring systems.",
+              "He paints faults in wiring systems.",
+              "He hides faults in wiring systems."
             ],
-            "answer": "He fixes damaged doors, fenders, and bumpers.",
+            "answer": "He diagnoses faults in wiring systems.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_2",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the role of an electrician?",
             "options": [
-              "He uses special tools to steam metal parts.",
-              "He uses special tools to damage metal parts.",
-              "He uses special tools to fit metal parts together."
+              "He ensures proper grounding of cables.",
+              "He removes proper grounding of cables.",
+              "He ignores proper grounding of cables."
             ],
-            "answer": "He uses special tools to fit metal parts together.",
+            "answer": "He ensures proper grounding of cables.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_3",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the role of an electrician?",
             "options": [
-              "He installs and smooths the car body.",
-              "He diagnoses and smooths the car body.",
-              "He sands and smooths the car body."
+              "He calibrates electrical panels to maintain voltage levels.",
+              "He damages electrical panels to maintain voltage levels.",
+              "He washes electrical panels to maintain voltage levels."
             ],
-            "answer": "He sands and smooths the car body.",
+            "answer": "He calibrates electrical panels to maintain voltage levels.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the role of an electrician?",
             "options": [
-              "He tunes the engine for painting.",
-              "He prepares the surface for painting.",
-              "He replaces the brake pads for painting."
+              "He replaces worn-out fuses safely.",
+              "He damages worn-out fuses.",
+              "He ignores worn-out fuses completely."
             ],
-            "answer": "He prepares the surface for painting.",
+            "answer": "He replaces worn-out fuses safely.",
             "image": "assets/img/a_3_1.png"
           },
           {
-            "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "id": "g_b_5",
+            "sentence": "Which sentence best describes the role of an electrician?",
             "options": [
-              "He makes the car look new again.",
-              "He makes the engine look new again.",
-              "He makes the exhaust pipe look new again."
+              "He tests insulation with specialized measuring tools.",
+              "He ignores insulation with specialized measuring tools.",
+              "He paints insulation with specialized measuring tools."
             ],
-            "answer": "He makes the car look new again.",
+            "answer": "He tests insulation with specialized measuring tools.",
             "image": "assets/img/a_3_1.png"
           }
         ]
@@ -707,7 +707,6 @@
           "audio": "assets/audio/n_4_16.mp3"
         }
       ]
-      
     }
   }
 }
