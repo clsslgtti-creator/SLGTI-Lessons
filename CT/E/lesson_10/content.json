@@ -326,71 +326,71 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "audio": "assets/audio/a_3_1.mp3",
             "options": [
-              "He repairs dents and scratches on cars.",
-              "He makes dents and scratches on cars.",
-              "He calculates dents and scratches on cars."
+              "He oversees the installation of concrete beams.",
+              "He polishes the concrete beams.",
+              "He washes the concrete beams."
             ],
-            "answer": "He repairs dents and scratches on cars.",
+            "answer": "He oversees the installation of concrete beams.",
             "image": "assets/img/a_3_1.png"
           }
         ],
         "content": [
           {
             "id": "g_b_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "options": [
-              "He fixes tiles, fenders, and bumpers.",
-              "He fixes damaged doors, fenders, and bumpers.",
-              "He fixes broken pipes, taps, and valves."
+              "He negotiates contracts and completes them on time.",
+              "He paints contracts and delivers machinery.",
+              "He dismantles contracts and completes payment."
             ],
-            "answer": "He fixes damaged doors, fenders, and bumpers.",
+            "answer": "He negotiates contracts and completes them on time.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_2",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "options": [
-              "He uses special tools to steam metal parts.",
-              "He uses special tools to damage metal parts.",
-              "He uses special tools to fit metal parts together."
+              "He inspects the alignment of steel frameworks.",
+              "He decorates the alignment of steel frameworks.",
+              "He damages the alignment of steel frameworks."
             ],
-            "answer": "He uses special tools to fit metal parts together.",
+            "answer": "He inspects the alignment of steel frameworks.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_3",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "options": [
-              "He installs and smooths the car body.",
-              "He diagnoses and smooths the car body.",
-              "He sands and smooths the car body."
+              "He orders construction materials.",
+              "He breaks construction materials.",
+              "He hides construction materials."
             ],
-            "answer": "He sands and smooths the car body.",
+            "answer": "He orders construction materials.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "options": [
-              "He tunes the engine for painting.",
-              "He prepares the surface for painting.",
-              "He replaces the brake pads for painting."
+              "He supervises the use of safety harnesses on the site.",
+              "He dismantles the safety harnesses for the workers.",
+              "He ignores the safety harnesses during inspections."
             ],
-            "answer": "He prepares the surface for painting.",
+            "answer": "He supervises the use of safety harnesses on the site.",
             "image": "assets/img/a_3_1.png"
           },
           {
-            "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "id": "g_b_5",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "options": [
-              "He makes the car look new again.",
-              "He makes the engine look new again.",
-              "He makes the exhaust pipe look new again."
+              "He schedules the excavation and foundation work.",
+              "He forgets the excavation and foundation work.",
+              "He decorates the excavation and foundation work."
             ],
-            "answer": "He makes the car look new again.",
+            "answer": "He schedules the excavation and foundation work.",
             "image": "assets/img/a_3_1.png"
           }
         ]
@@ -467,11 +467,7 @@
             "id": "l_4_2",
             "question": "What tool does he use to measure the height of the wall?",
             "answer": "A spirit level.",
-            "options": [
-              "A wheelbarrow.",
-              "A spirit level.",
-              "A hammer."
-            ]
+            "options": ["A wheelbarrow.", "A spirit level.", "A hammer."]
           },
           {
             "id": "l_4_3",
