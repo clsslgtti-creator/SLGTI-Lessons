@@ -398,32 +398,32 @@
       "activity_b": [
         {
           "id": "n_3_1",
-          "text": "He repairs dents and scratches on cars.",
+          "text": "He maintains CNC machines by aligning components.",
           "audio": "assets/audio/a_3_b_g_1.mp3"
         },
         {
           "id": "n_3_2",
-          "text": "He fixes damaged doors, fenders, and bumpers.",
+          "text": "He repairs bearings and replaces worn-out mechanical seals.",
           "audio": "assets/audio/a_3_b_g_2.mp3"
         },
         {
           "id": "n_3_3",
-          "text": "He uses special tools to fit metal parts together.",
+          "text": "He inspects hydraulic systems for leaks and pressure irregularities.",
           "audio": "assets/audio/a_3_b_g_3.mp3"
         },
         {
           "id": "n_3_4",
-          "text": "He sands and smooths the car body.",
+          "text": "He supervises the assembly of gearboxes and drive shafts.",
           "audio": "assets/audio/a_3_b_g_4.mp3"
         },
         {
           "id": "n_3_5",
-          "text": "He prepares the surface for painting.",
+          "text": "He calibrates torque wrenches to maintain tightening of bolts.",
           "audio": "assets/audio/a_3_b_g_5.mp3"
         },
         {
           "id": "n_3_6",
-          "text": "He makes the car look new again.",
+          "text": "He operates a lathe machine to shape metal parts.",
           "audio": "assets/audio/a_3_b_g_6.mp3"
         }
       ]
