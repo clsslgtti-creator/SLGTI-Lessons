@@ -455,48 +455,48 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What does Ramesh do at the beginning of his workday?",
-            "answer": "He checks the job card and prepares the tools.",
+            "question": "What does Nimal do first?",
+            "answer": "He checks the task list and switches on the workstation.",
             "options": [
-              "He checks the job card and prepares the tools.",
-              "He drives the cars to the paint shop.",
-              "He replaces the brake pads."
+              "He checks the task list and switches on the workstation.",
+              "He paints the server room.",
+              "He repairs tyres."
             ]
           },
           {
             "id": "l_4_2",
-            "question": "What does he use to tighten the bolts on the wheel hub?",
-            "answer": "A torque wrench.",
-            "options": ["A screwdriver.", "A torque wrench.", "A hammer."]
+            "question": "What does he sometimes replace?",
+            "answer": "A damaged LAN cable.",
+            "options": ["A broken transformer.", "A damaged LAN cable.", "A mechanical seal."]
           },
           {
             "id": "l_4_3",
-            "question": "What does Ramesh do during every service?",
-            "answer": "He tests the horn, wipers, and indicators.",
+            "question": "What does he never forget?",
+            "answer": "He never forgets to test the firewall settings.",
             "options": [
-              "He tests the horn, wipers, and indicators.",
-              "He paints the car body.",
-              "He changes the tires only."
+              "He never forgets to test the firewall settings.",
+              "He never forgets to test the firewall settings.",
+              "He never forgets to polish the firewall settings."
             ]
           },
           {
             "id": "l_4_4",
-            "question": "Where does he record the details of the service?",
-            "answer": "In the diagnostic scanner.",
+            "question": "What does he usually do with diagnostic tools?",
+            "answer": "He troubleshoots errors.",
             "options": [
-              "In the diagnostic scanner.",
-              "In the diagnostic scanner.",
-              "On the workshop wall."
+              "He decorates them.",
+              "He troubleshoots errors.",
+              "He ignores them."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What does Ramesh do before leaving the workshop?",
-            "answer": "He locks the toolbox and switches off the power.",
+            "question": "What does he always ensure before leaving?",
+            "answer": "The server room is locked.",
             "options": [
-              "He forgets to clean the area.",
-              "He leaves all the tools on the bench.",
-              "He locks the toolbox and switches off the power."
+              "The router is painted.",
+              "The server room is locked.",
+              "The tyres are inflated."
             ]
           }
         ]
@@ -504,222 +504,202 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "Ramesh is a vehicle service technician at the training workshop.",
+          "text": "Nimal is an ICT trainee in the computer lab.",
           "audio": "assets/audio/n_4_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "He works in the maintenance bay every day.",
+          "text": "He works on system maintenance every day.",
           "audio": "assets/audio/n_4_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "He usually starts work at eight o’clock in the morning.",
+          "text": "He usually starts at nine o’clock.",
           "audio": "assets/audio/n_4_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "He checks the daily task list, switches on the workstation, and prepares the network tools.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "He always follows the service checklist carefully.",
+          "text": "He always follows the lab safety rules.",
           "audio": "assets/audio/n_4_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Ramesh inspects the car body, the tyres, and the lights.",
+          "text": "Nimal inspects the cables, routers, and switches.",
           "audio": "assets/audio/n_4_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He checks the oil level, brake fluid, and coolant.",
+          "text": "He often installs software updates and checks the antivirus system.",
           "audio": "assets/audio/n_4_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "He sometimes replaces a damaged LAN cable or resets a router.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "He never forgets to test the firewall settings.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "During every routine, Nimal logs into the server, verifies the backups, and monitors the storage usage.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "He records the results and informs his instructor.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text": "During every service, Ramesh tests the horn, wipers, and indicators.",
+          "text": "He usually troubleshoots system errors with diagnostic tools and documents the solutions.",
           "audio": "assets/audio/n_4_12.mp3"
         },
         {
           "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
+          "text": "At the end of the day, Nimal shuts down the systems, disconnects the test devices, and stores the equipment.",
           "audio": "assets/audio/n_4_13.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "He always ensures that the server room is locked before leaving.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "Nimal enjoys his ICT training because he learns problem-solving and gains technical knowledge.",
           "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_17",
-          "text": "He checks the waste oil container and makes sure everything is safe and tidy before he leaves.",
-          "audio": "assets/audio/n_4_17.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "n_4_2",
-          "text": "Ramesh works in the maintenance bay every day.",
+          "text": "Nimal works on system maintenance every day.",
           "audio": "assets/audio/n_4_2x.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "He checks the daily task list, switches on the workstation, and prepares the network tools.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
+          "id": "n_4_6",
+          "text": "Nimal inspects the cables, routers, and switches.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "He often installs software updates and checks the antivirus system.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "He sometimes replaces a damaged LAN cable or resets a router.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "He never forgets to test the firewall settings.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "During every routine, Nimal logs into the server, verifies the backups, and monitors the storage usage.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "He records the results and informs his instructor.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
+          "id": "n_4_12",
+          "text": "He usually troubleshoots system errors with diagnostic tools and documents the solutions.",
+          "audio": "assets/audio/n_4_12.mp3"
+        },
+        {
           "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
+          "text": "At the end of the day, Nimal shuts down the systems, disconnects the test devices, and stores the equipment.",
           "audio": "assets/audio/n_4_13.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "He always ensures that the server room is locked before leaving.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "Nimal enjoys his ICT training because he learns problem-solving and gains technical knowledge.",
           "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ],
       "activity_d": [
         {
           "id": "n_4_2",
-          "text": "Ramesh works in the maintenance bay every day.",
+          "text": "Nimal works on system maintenance every day.",
           "audio": "assets/audio/n_4_2x.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "He checks the daily task list, switches on the workstation, and prepares the network tools.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
+          "id": "n_4_6",
+          "text": "Nimal inspects the cables, routers, and switches.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "He often installs software updates and checks the antivirus system.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "He sometimes replaces a damaged LAN cable or resets a router.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "He never forgets to test the firewall settings.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "During every routine, Nimal logs into the server, verifies the backups, and monitors the storage usage.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "He records the results and informs his instructor.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
+          "id": "n_4_12",
+          "text": "He usually troubleshoots system errors with diagnostic tools and documents the solutions.",
+          "audio": "assets/audio/n_4_12.mp3"
+        },
+        {
           "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
+          "text": "At the end of the day, Nimal shuts down the systems, disconnects the test devices, and stores the equipment.",
           "audio": "assets/audio/n_4_13.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "He always ensures that the server room is locked before leaving.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "Nimal enjoys his ICT training because he learns problem-solving and gains technical knowledge.",
           "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ]
     }
