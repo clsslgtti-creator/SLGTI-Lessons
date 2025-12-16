@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "t'ur'n",
+        "word_text": "w'or'k",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "He always t'ur'ns the crankshaft slowly.",
+        "sentence_text": "This mason always w'or'ks carefully on the wall.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "b'ur'n",
+        "word_text": "b'ir'd",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "He never b'ur'ns the clutch plate.",
+        "sentence_text": "A small b'ir'd is near the scaffold.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.jpg"
+        "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "c'ur've",
+        "word_text": "b'ur'ner",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "The c'ur've on the road is very sharp.",
+        "sentence_text": "He often uses the gas b'ur'ner to heat the bitumen.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "s'er'vice",
+        "word_text": "c'ur've",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "The car needs a full s'er'vice today.",
+        "sentence_text": "The chief engineer always draws the c'ur've with the red pencil.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
@@ -326,71 +326,71 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "audio": "assets/audio/a_3_1.mp3",
             "options": [
-              "He repairs dents and scratches on cars.",
-              "He makes dents and scratches on cars.",
-              "He calculates dents and scratches on cars."
+              "He oversees the installation of concrete beams.",
+              "He polishes the concrete beams.",
+              "He washes the concrete beams."
             ],
-            "answer": "He repairs dents and scratches on cars.",
+            "answer": "He oversees the installation of concrete beams.",
             "image": "assets/img/a_3_1.png"
           }
         ],
         "content": [
           {
             "id": "g_b_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "options": [
-              "He fixes tiles, fenders, and bumpers.",
-              "He fixes damaged doors, fenders, and bumpers.",
-              "He fixes broken pipes, taps, and valves."
+              "He negotiates contracts and completes them on time.",
+              "He paints contracts and delivers machinery.",
+              "He dismantles contracts and completes payment."
             ],
-            "answer": "He fixes damaged doors, fenders, and bumpers.",
+            "answer": "He negotiates contracts and completes them on time.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_2",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "options": [
-              "He uses special tools to steam metal parts.",
-              "He uses special tools to damage metal parts.",
-              "He uses special tools to fit metal parts together."
+              "He inspects the alignment of steel frameworks.",
+              "He decorates the alignment of steel frameworks.",
+              "He damages the alignment of steel frameworks."
             ],
-            "answer": "He uses special tools to fit metal parts together.",
+            "answer": "He inspects the alignment of steel frameworks.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_3",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "options": [
-              "He installs and smooths the car body.",
-              "He diagnoses and smooths the car body.",
-              "He sands and smooths the car body."
+              "He orders construction materials.",
+              "He breaks construction materials.",
+              "He hides construction materials."
             ],
-            "answer": "He sands and smooths the car body.",
+            "answer": "He orders construction materials.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "options": [
-              "He tunes the engine for painting.",
-              "He prepares the surface for painting.",
-              "He replaces the brake pads for painting."
+              "He supervises the use of safety harnesses on the site.",
+              "He dismantles the safety harnesses for the workers.",
+              "He ignores the safety harnesses during inspections."
             ],
-            "answer": "He prepares the surface for painting.",
+            "answer": "He supervises the use of safety harnesses on the site.",
             "image": "assets/img/a_3_1.png"
           },
           {
-            "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "id": "g_b_5",
+            "sentence": "Which sentence best describes the job of a building contractor?",
             "options": [
-              "He makes the car look new again.",
-              "He makes the engine look new again.",
-              "He makes the exhaust pipe look new again."
+              "He schedules the excavation and foundation work.",
+              "He forgets the excavation and foundation work.",
+              "He decorates the excavation and foundation work."
             ],
-            "answer": "He makes the car look new again.",
+            "answer": "He schedules the excavation and foundation work.",
             "image": "assets/img/a_3_1.png"
           }
         ]
@@ -398,32 +398,32 @@
       "activity_b": [
         {
           "id": "n_3_1",
-          "text": "He repairs dents and scratches on cars.",
+          "text": "He oversees the installation of concrete beams.",
           "audio": "assets/audio/a_3_b_g_1.mp3"
         },
         {
           "id": "n_3_2",
-          "text": "He fixes damaged doors, fenders, and bumpers.",
+          "text": "He schedules the excavation and foundation work.",
           "audio": "assets/audio/a_3_b_g_2.mp3"
         },
         {
           "id": "n_3_3",
-          "text": "He uses special tools to fit metal parts together.",
+          "text": "He supervises the use of safety harnesses on the site.",
           "audio": "assets/audio/a_3_b_g_3.mp3"
         },
         {
           "id": "n_3_4",
-          "text": "He sands and smooths the car body.",
+          "text": "He orders construction materials.",
           "audio": "assets/audio/a_3_b_g_4.mp3"
         },
         {
           "id": "n_3_5",
-          "text": "He prepares the surface for painting.",
+          "text": "He inspects the alignment of steel frameworks.",
           "audio": "assets/audio/a_3_b_g_5.mp3"
         },
         {
           "id": "n_3_6",
-          "text": "He makes the car look new again.",
+          "text": "He negotiates contracts and completes them on time.",
           "audio": "assets/audio/a_3_b_g_6.mp3"
         }
       ]
@@ -467,11 +467,7 @@
             "id": "l_4_2",
             "question": "What tool does he use to measure the height of the wall?",
             "answer": "A spirit level.",
-            "options": [
-              "A wheelbarrow.",
-              "A spirit level.",
-              "A hammer."
-            ]
+            "options": ["A wheelbarrow.", "A spirit level.", "A hammer."]
           },
           {
             "id": "l_4_3",
