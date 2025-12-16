@@ -455,48 +455,52 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What does Ramesh do at the beginning of his workday?",
-            "answer": "He checks the job card and prepares the tools.",
+            "question": "What does Meena prepare before work?",
+            "answer": "She prepares the lathe machine.",
             "options": [
-              "He checks the job card and prepares the tools.",
-              "He drives the cars to the paint shop.",
-              "He replaces the brake pads."
+              "She prepares the scaffolding.",
+              "She prepares the cement mixer.",
+              "She prepares the lathe machine."
             ]
           },
           {
             "id": "l_4_2",
-            "question": "What does he use to tighten the bolts on the wheel hub?",
-            "answer": "A torque wrench.",
-            "options": ["A screwdriver.", "A torque wrench.", "A hammer."]
+            "question": "What does she never forget?",
+            "answer": "To lubricate the moving parts.",
+            "options": [
+              "To lubricate moving parts.",
+              "To lubricate the moving parts.",
+              "To paint the moving parts."
+            ]
           },
           {
             "id": "l_4_3",
-            "question": "What does Ramesh do during every service?",
-            "answer": "He tests the horn, wipers, and indicators.",
+            "question": "What tools does she use to measure accuracy?",
+            "answer": "She uses a vernier caliper and micrometer.",
             "options": [
-              "He tests the horn, wipers, and indicators.",
-              "He paints the car body.",
-              "He changes the tires only."
+              "She uses a hammer and chisel.",
+              "She uses a vernier caliper and micrometer.",
+              "She uses a screwdriver and tester."
             ]
           },
           {
             "id": "l_4_4",
-            "question": "Where does he record the details of the service?",
-            "answer": "In the diagnostic scanner.",
+            "question": "What does she frequently clean?",
+            "answer": "The surface of the machine.",
             "options": [
-              "In the diagnostic scanner.",
-              "In the diagnostic scanner.",
-              "On the workshop wall."
+              "The service log.",
+              "The oil tank.",
+              "The surface of the machine."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What does Ramesh do before leaving the workshop?",
-            "answer": "He locks the toolbox and switches off the power.",
+            "question": "What does she always do before leaving?",
+            "answer": "She switches off the machine, wipes the tools, and stores them.",
             "options": [
-              "He forgets to clean the area.",
-              "He leaves all the tools on the bench.",
-              "He locks the toolbox and switches off the power."
+              "She switches off the machine and stores the tools.",
+              "She switches off the machine, wipes the tools, and stores them.",
+              "She ignores the machine."
             ]
           }
         ]
@@ -504,222 +508,140 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "Ramesh is a vehicle service technician at the training workshop.",
+          "text": "Meena is a mechanical trainee in the workshop.",
           "audio": "assets/audio/n_4_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "He works in the maintenance bay every day.",
+          "text": "She works in the machine section every day.",
           "audio": "assets/audio/n_4_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "He usually starts work at eight o’clock in the morning.",
+          "text": "She usually begins at half past eight.",
           "audio": "assets/audio/n_4_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "She checks the work order, sets up her toolbox, and prepares the lathe machine.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "He always follows the service checklist carefully.",
+          "text": "She always follows the instructor’s safety rules carefully.",
           "audio": "assets/audio/n_4_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Ramesh inspects the car body, the tyres, and the lights.",
+          "text": "Meena inspects the machine parts, the chuck, and the cutting tool.",
           "audio": "assets/audio/n_4_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He checks the oil level, brake fluid, and coolant.",
+          "text": "She often adjusts the feed rate and checks the alignment of the workpiece.",
           "audio": "assets/audio/n_4_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "She sometimes replaces a worn-out bearing or a broken seal.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "She never forgets to lubricate the moving parts with oil.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "During routine practice, Meena measures the dimensions with a vernier caliper and checks the accuracy with a micrometer.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "She records the values and shows them to her supervisor.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text": "During every service, Ramesh tests the horn, wipers, and indicators.",
+          "text": "She frequently cleans the surface of the machine with a brush to remove metal chips.",
           "audio": "assets/audio/n_4_12.mp3"
         },
         {
           "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
+          "text": "At the end of the day, Meena switches off the machine, wipes down the tools, and stores them properly.",
           "audio": "assets/audio/n_4_13.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "She always leaves the section neat and safe.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "Meena enjoys her training because she improves her technical skills and gains confidence.",
           "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_17",
-          "text": "He checks the waste oil container and makes sure everything is safe and tidy before he leaves.",
-          "audio": "assets/audio/n_4_17.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "n_4_2",
-          "text": "Ramesh works in the maintenance bay every day.",
+          "text": "Meena works in the machine section every day.",
           "audio": "assets/audio/n_4_2x.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "She checks the work order, sets up her toolbox, and prepares the lathe machine.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
+          "id": "n_4_6",
+          "text": "Meena inspects the machine parts, the chuck, and the cutting tool.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "She often adjusts the feed rate and checks the alignment of the workpiece.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "She sometimes replaces a worn-out bearing or a broken seal.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "She never forgets to lubricate the moving parts with oil.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "During routine practice, Meena measures the dimensions with a vernier caliper and checks the accuracy with a micrometer.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "She records the values and shows them to her supervisor.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
+          "id": "n_4_12",
+          "text": "She frequently cleans the surface of the machine with a brush to remove metal chips.",
+          "audio": "assets/audio/n_4_12.mp3"
+        },
+        {
           "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
+          "text": "At the end of the day, Meena switches off the machine, wipes down the tools, and stores them properly.",
           "audio": "assets/audio/n_4_13.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "She always leaves the section neat and safe.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "Meena enjoys her training because she improves her technical skills and gains confidence.",
           "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
-        }
-      ],
-      "activity_d": [
-        {
-          "id": "n_4_2",
-          "text": "Ramesh works in the maintenance bay every day.",
-          "audio": "assets/audio/n_4_2x.mp3"
-        },
-        {
-          "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
-          "audio": "assets/audio/n_4_4.mp3"
-        },
-        {
-          "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
-          "audio": "assets/audio/n_4_8.mp3"
-        },
-        {
-          "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
-          "audio": "assets/audio/n_4_9.mp3"
-        },
-        {
-          "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
-          "audio": "assets/audio/n_4_10.mp3"
-        },
-        {
-          "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
-          "audio": "assets/audio/n_4_11.mp3"
-        },
-        {
-          "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
-          "audio": "assets/audio/n_4_13.mp3"
-        },
-        {
-          "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
-          "audio": "assets/audio/n_4_14.mp3"
-        },
-        {
-          "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
-          "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ]
     }
