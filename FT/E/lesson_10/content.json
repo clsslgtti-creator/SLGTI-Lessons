@@ -455,48 +455,52 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What does Ramesh do at the beginning of his workday?",
-            "answer": "He checks the job card and prepares the tools.",
+            "question": "What does Priya prepare at the beginning?",
+            "answer": "She prepares the stainless-steel equipment.",
             "options": [
-              "He checks the job card and prepares the tools.",
-              "He drives the cars to the paint shop.",
-              "He replaces the brake pads."
+              "She prepares the scaffolding.",
+              "She prepares the stainless-steel equipment.",
+              "She prepares the electrical cables."
             ]
           },
           {
             "id": "l_4_2",
-            "question": "What does he use to tighten the bolts on the wheel hub?",
-            "answer": "A torque wrench.",
-            "options": ["A screwdriver.", "A torque wrench.", "A hammer."]
+            "question": "What does she often weigh?",
+            "answer": "He tests the horn, wipers, and indicators.",
+            "options": [
+              "She weighs the cement bags.",
+              "She weighs the bricks.",
+              "She weighs the ingredients on the digital scale."
+            ]
           },
           {
             "id": "l_4_3",
-            "question": "What does Ramesh do during every service?",
-            "answer": "He tests the horn, wipers, and indicators.",
+            "question": "What does she never forget?",
+            "answer": "To label the containers.",
             "options": [
-              "He tests the horn, wipers, and indicators.",
-              "He paints the car body.",
-              "He changes the tires only."
+              "To paint the cupboards.",
+              "To label the containers.",
+              "To ignore the containers."
             ]
           },
           {
             "id": "l_4_4",
-            "question": "Where does he record the details of the service?",
-            "answer": "In the diagnostic scanner.",
+            "question": "What does she frequently supervise?",
+            "answer": "The mixing of ingredients.",
             "options": [
-              "In the diagnostic scanner.",
-              "In the diagnostic scanner.",
-              "On the workshop wall."
+              "The cutting of timber.",
+              "The mixing of ingredients.",
+              "The changing of tyres."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "What does Ramesh do before leaving the workshop?",
-            "answer": "He locks the toolbox and switches off the power.",
+            "question": "What does she always do before leaving?",
+            "answer": "She cleans, sterilizes, and removes waste.",
             "options": [
-              "He forgets to clean the area.",
-              "He leaves all the tools on the bench.",
-              "He locks the toolbox and switches off the power."
+              "She decorates the tools.",
+              "She hides the waste food.",
+              "She cleans, sterilizes, and removes waste."
             ]
           }
         ]
@@ -504,222 +508,192 @@
       "activity_b": [
         {
           "id": "n_4_1",
-          "text": "Ramesh is a vehicle service technician at the training workshop.",
+          "text": "Priya is a food technology trainee in the processing section.",
           "audio": "assets/audio/n_4_1.mp3"
         },
         {
           "id": "n_4_2",
-          "text": "He works in the maintenance bay every day.",
+          "text": "She works in the kitchen laboratory every day.",
           "audio": "assets/audio/n_4_2.mp3"
         },
         {
           "id": "n_4_3",
-          "text": "He usually starts work at eight o’clock in the morning.",
+          "text": "She usually begins at eight o’clock.",
           "audio": "assets/audio/n_4_3.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "She checks the duty list, washes her hands, and prepares the stainless-steel equipment.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
           "id": "n_4_5",
-          "text": "He always follows the service checklist carefully.",
+          "text": "She always follows the hygiene rules carefully.",
           "audio": "assets/audio/n_4_5.mp3"
         },
         {
           "id": "n_4_6",
-          "text": "Ramesh inspects the car body, the tyres, and the lights.",
+          "text": "Priya inspects the storage area, the freezers, and the ovens.",
           "audio": "assets/audio/n_4_6.mp3"
         },
         {
           "id": "n_4_7",
-          "text": "He checks the oil level, brake fluid, and coolant.",
+          "text": "She often weighs ingredients on the digital scale.",
           "audio": "assets/audio/n_4_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "She sometimes adjusts the temperature of the ovens or the pressure in the steam cooker.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "She never forgets to label the containers with the date.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "During every routine, Priya measures the pH level of food samples, checks the moisture content, and records the results.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
           "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
+          "text": "She shows the readings to her instructor.",
           "audio": "assets/audio/n_4_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text": "During every service, Ramesh tests the horn, wipers, and indicators.",
+          "text": "She frequently supervises the mixing of ingredients in the industrial blender.",
           "audio": "assets/audio/n_4_12.mp3"
         },
         {
           "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
+          "text": "At the end of the day, Priya cleans the work surfaces, sterilizes the tools, and stores them in the cabinet.",
           "audio": "assets/audio/n_4_13.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "She always removes waste food and keeps the area tidy.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "Priya enjoys her training because she learns professional standards and feels proud of her work.",
           "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_17",
-          "text": "He checks the waste oil container and makes sure everything is safe and tidy before he leaves.",
-          "audio": "assets/audio/n_4_17.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ],
       "activity_c": [
         {
           "id": "n_4_2",
-          "text": "Ramesh works in the maintenance bay every day.",
+          "text": "Priya works in the kitchen laboratory every day.",
           "audio": "assets/audio/n_4_2x.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "She checks the duty list, washes her hands, and prepares the stainless-steel equipment.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
+          "id": "n_4_5",
+          "text": "She always follows the hygiene rules carefully.",
+          "audio": "assets/audio/n_4_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "Priya inspects the storage area, the freezers, and the ovens.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "She often weighs ingredients on the digital scale.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "She sometimes adjusts the temperature of the ovens or the pressure in the steam cooker.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "She never forgets to label the containers with the date.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "During every routine, Priya measures the pH level of food samples, checks the moisture content, and records the results.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
-          "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
-          "audio": "assets/audio/n_4_11.mp3"
-        },
-        {
-          "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
-          "audio": "assets/audio/n_4_13.mp3"
+          "id": "n_4_12",
+          "text": "She frequently supervises the mixing of ingredients in the industrial blender.",
+          "audio": "assets/audio/n_4_12.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "She always removes waste food and keeps the area tidy.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "Priya enjoys her training because she learns professional standards and feels proud of her work.",
           "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ],
       "activity_d": [
         {
           "id": "n_4_2",
-          "text": "Ramesh works in the maintenance bay every day.",
+          "text": "Priya works in the kitchen laboratory every day.",
           "audio": "assets/audio/n_4_2x.mp3"
         },
         {
           "id": "n_4_4",
-          "text": "He checks the job card, prepares the tools, and opens the service record for each vehicle.",
+          "text": "She checks the duty list, washes her hands, and prepares the stainless-steel equipment.",
           "audio": "assets/audio/n_4_4.mp3"
         },
         {
+          "id": "n_4_5",
+          "text": "She always follows the hygiene rules carefully.",
+          "audio": "assets/audio/n_4_5.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "Priya inspects the storage area, the freezers, and the ovens.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "She often weighs ingredients on the digital scale.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
           "id": "n_4_8",
-          "text": "He replaces any parts that look damaged or worn out.",
+          "text": "She sometimes adjusts the temperature of the ovens or the pressure in the steam cooker.",
           "audio": "assets/audio/n_4_8.mp3"
         },
         {
           "id": "n_4_9",
-          "text": "He also cleans the air filter and checks the fan belt.",
+          "text": "She never forgets to label the containers with the date.",
           "audio": "assets/audio/n_4_9.mp3"
         },
         {
           "id": "n_4_10",
-          "text": "He often adjusts the battery terminals because they often get loose.",
+          "text": "During every routine, Priya measures the pH level of food samples, checks the moisture content, and records the results.",
           "audio": "assets/audio/n_4_10.mp3"
         },
         {
-          "id": "n_4_11",
-          "text": "He uses a torque wrench to tighten the bolts on the wheel hub.",
-          "audio": "assets/audio/n_4_11.mp3"
-        },
-        {
-          "id": "n_4_13",
-          "text": "He connects the diagnostic scanner to check the sensors.",
-          "audio": "assets/audio/n_4_13.mp3"
+          "id": "n_4_12",
+          "text": "She frequently supervises the mixing of ingredients in the industrial blender.",
+          "audio": "assets/audio/n_4_12.mp3"
         },
         {
           "id": "n_4_14",
-          "text": "He reads the error codes and explains them to his instructor.",
+          "text": "She always removes waste food and keeps the area tidy.",
           "audio": "assets/audio/n_4_14.mp3"
         },
         {
           "id": "n_4_15",
-          "text": "He always completes the work on time and writes down all the details in the service log.",
+          "text": "Priya enjoys her training because she learns professional standards and feels proud of her work.",
           "audio": "assets/audio/n_4_15.mp3"
-        },
-        {
-          "id": "n_4_16",
-          "text": "At the end of the day, Ramesh cleans the work area and puts the tools back in their places.",
-          "audio": "assets/audio/n_4_16.mp3"
-        },
-        {
-          "id": "n_4_18",
-          "text": "He never forgets to lock the toolbox and switch off the power supply.",
-          "audio": "assets/audio/n_4_18.mp3"
-        },
-        {
-          "id": "n_4_19",
-          "text": "Ramesh enjoys his job because he learns something new every day and takes pride in his work.",
-          "audio": "assets/audio/n_4_19.mp3"
         }
       ]
     }
