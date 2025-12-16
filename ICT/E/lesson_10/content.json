@@ -326,71 +326,71 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the role of an IT support technician?",
             "audio": "assets/audio/a_3_1.mp3",
             "options": [
-              "He repairs dents and scratches on cars.",
-              "He makes dents and scratches on cars.",
-              "He calculates dents and scratches on cars."
+              "He works on routers and switches to establish a secure network.",
+              "He dismantles routers and switches to establish a secure network.",
+              "He paints routers and switches to establish a secure network."
             ],
-            "answer": "He repairs dents and scratches on cars.",
+            "answer": "He works on routers and switches to establish a secure network.",
             "image": "assets/img/a_3_1.png"
           }
         ],
         "content": [
           {
             "id": "g_b_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the role of an IT support technician?",
             "options": [
-              "He fixes tiles, fenders, and bumpers.",
-              "He fixes damaged doors, fenders, and bumpers.",
-              "He fixes broken pipes, taps, and valves."
+              "He fixes errors using diagnostic software tools.",
+              "He decorates system errors using diagnostic software tools.",
+              "He ignores system errors using diagnostic software tools."
             ],
-            "answer": "He fixes damaged doors, fenders, and bumpers.",
+            "answer": "He fixes errors using diagnostic software tools.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_2",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the role of an IT support technician?",
             "options": [
-              "He uses special tools to steam metal parts.",
-              "He uses special tools to damage metal parts.",
-              "He uses special tools to fit metal parts together."
+              "He installs operating systems and updates security patches.",
+              "He removes operating systems and deletes security patches.",
+              "He hides operating systems and skips security patches."
             ],
-            "answer": "He uses special tools to fit metal parts together.",
+            "answer": "He installs operating systems and updates security patches.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_3",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the role of an IT support technician?",
             "options": [
-              "He installs and smooths the car body.",
-              "He diagnoses and smooths the car body.",
-              "He sands and smooths the car body."
+              "He manages database backups to protect information.",
+              "He damages database backups to protect information.",
+              "He forgets database backups to protect information."
             ],
-            "answer": "He sands and smooths the car body.",
+            "answer": "He manages database backups to protect information.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the role of an IT support technician?",
             "options": [
-              "He tunes the engine for painting.",
-              "He prepares the surface for painting.",
-              "He replaces the brake pads for painting."
+              "He assembles hardware components such as processors and hard drives.",
+              "He destroys hardware components such as processors and hard drives.",
+              "He hides hardware components such as processors and hard drives."
             ],
-            "answer": "He prepares the surface for painting.",
+            "answer": "He assembles hardware components such as processors and hard drives.",
             "image": "assets/img/a_3_1.png"
           },
           {
-            "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "id": "g_b_5",
+            "sentence": "Which sentence best describes the role of an IT support technician?",
             "options": [
-              "He makes the car look new again.",
-              "He makes the engine look new again.",
-              "He makes the exhaust pipe look new again."
+              "He secures networks with firewalls and encryption protocols.",
+              "He paints networks with firewalls and encryption protocols.",
+              "He abandons networks with firewalls and encryption protocols."
             ],
-            "answer": "He makes the car look new again.",
+            "answer": "He secures networks with firewalls and encryption protocols.",
             "image": "assets/img/a_3_1.png"
           }
         ]
@@ -467,7 +467,11 @@
             "id": "l_4_2",
             "question": "What does he sometimes replace?",
             "answer": "A damaged LAN cable.",
-            "options": ["A broken transformer.", "A damaged LAN cable.", "A mechanical seal."]
+            "options": [
+              "A broken transformer.",
+              "A damaged LAN cable.",
+              "A mechanical seal."
+            ]
           },
           {
             "id": "l_4_3",
