@@ -398,32 +398,32 @@
       "activity_b": [
         {
           "id": "n_3_1",
-          "text": "He repairs dents and scratches on cars.",
+          "text": "He oversees the installation of concrete beams.",
           "audio": "assets/audio/a_3_b_g_1.mp3"
         },
         {
           "id": "n_3_2",
-          "text": "He fixes damaged doors, fenders, and bumpers.",
+          "text": "He schedules the excavation and foundation work.",
           "audio": "assets/audio/a_3_b_g_2.mp3"
         },
         {
           "id": "n_3_3",
-          "text": "He uses special tools to fit metal parts together.",
+          "text": "He supervises the use of safety harnesses on the site.",
           "audio": "assets/audio/a_3_b_g_3.mp3"
         },
         {
           "id": "n_3_4",
-          "text": "He sands and smooths the car body.",
+          "text": "He orders construction materials.",
           "audio": "assets/audio/a_3_b_g_4.mp3"
         },
         {
           "id": "n_3_5",
-          "text": "He prepares the surface for painting.",
+          "text": "He inspects the alignment of steel frameworks.",
           "audio": "assets/audio/a_3_b_g_5.mp3"
         },
         {
           "id": "n_3_6",
-          "text": "He makes the car look new again.",
+          "text": "He negotiates contracts and completes them on time.",
           "audio": "assets/audio/a_3_b_g_6.mp3"
         }
       ]
