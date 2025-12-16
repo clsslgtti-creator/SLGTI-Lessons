@@ -398,32 +398,32 @@
       "activity_b": [
         {
           "id": "n_3_1",
-          "text": "He repairs dents and scratches on cars.",
+          "text": "He tests insulation with specialized measuring tools.",
           "audio": "assets/audio/a_3_b_g_1.mp3"
         },
         {
           "id": "n_3_2",
-          "text": "He fixes damaged doors, fenders, and bumpers.",
+          "text": "He replaces worn-out fuses safely.",
           "audio": "assets/audio/a_3_b_g_2.mp3"
         },
         {
           "id": "n_3_3",
-          "text": "He uses special tools to fit metal parts together.",
+          "text": "He calibrates electrical panels to maintain voltage levels.",
           "audio": "assets/audio/a_3_b_g_3.mp3"
         },
         {
           "id": "n_3_4",
-          "text": "He sands and smooths the car body.",
+          "text": "He ensures proper grounding of cables.",
           "audio": "assets/audio/a_3_b_g_4.mp3"
         },
         {
           "id": "n_3_5",
-          "text": "He prepares the surface for painting.",
+          "text": "He diagnoses faults in wiring systems.",
           "audio": "assets/audio/a_3_b_g_5.mp3"
         },
         {
           "id": "n_3_6",
-          "text": "He makes the car look new again.",
+          "text": "He installs circuit breakers and distribution boards.",
           "audio": "assets/audio/a_3_b_g_6.mp3"
         }
       ]
