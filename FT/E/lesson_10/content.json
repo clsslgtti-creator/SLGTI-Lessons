@@ -33,9 +33,9 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "t'ur'n",
+        "word_text": "st'ir'",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "He always t'ur'ns the crankshaft slowly.",
+        "sentence_text": "She never st'ir's the soup with a metal spoon.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
@@ -43,23 +43,23 @@
         "id": "p_2",
         "word_text": "b'ur'n",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "He never b'ur'ns the clutch plate.",
+        "sentence_text": "This careless trainee always b'ur'ns the milk.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.jpg"
+        "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
-        "word_text": "c'ur've",
+        "word_text": "h'er'bs",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "The c'ur've on the road is very sharp.",
+        "sentence_text": "The chef often adds  fresh h'er'bs to the curry.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "s'er'vice",
+        "word_text": "c'ur'd",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "The car needs a full s'er'vice today.",
+        "sentence_text": "The dietician always keeps  c'ur'd in a cool place.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
