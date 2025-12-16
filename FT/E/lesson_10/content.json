@@ -326,71 +326,71 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence describes the job of a food safety inspector?",
             "audio": "assets/audio/a_3_1.mp3",
             "options": [
-              "He repairs dents and scratches on cars.",
-              "He makes dents and scratches on cars.",
-              "He calculates dents and scratches on cars."
+              "He monitors the temperature of industrial ovens.",
+              "He ignores the temperature of industrial ovens.",
+              "He paints the temperature of industrial ovens."
             ],
-            "answer": "He repairs dents and scratches on cars.",
+            "answer": "He monitors the temperature of industrial ovens.",
             "image": "assets/img/a_3_1.png"
           }
         ],
         "content": [
           {
             "id": "g_b_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence describes the job of a food safety inspector?",
             "options": [
-              "He fixes tiles, fenders, and bumpers.",
-              "He fixes damaged doors, fenders, and bumpers.",
-              "He fixes broken pipes, taps, and valves."
+              "He calibrates digital scales to guarantee accuracy.",
+              "He decorates digital scales to guarantee accuracy.",
+              "He hides digital scales to guarantee accuracy."
             ],
-            "answer": "He fixes damaged doors, fenders, and bumpers.",
+            "answer": "He calibrates digital scales to guarantee accuracy.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_2",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence describes the job of a food safety inspector?",
             "options": [
-              "He uses special tools to steam metal parts.",
-              "He uses special tools to damage metal parts.",
-              "He uses special tools to fit metal parts together."
+              "He supervises the sterilization of equipment.",
+              "He forgets the sterilization of equipment.",
+              "He damages the sterilization of equipment."
             ],
-            "answer": "He uses special tools to fit metal parts together.",
+            "answer": "He supervises the sterilization of equipment.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_3",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence describes the job of a food safety inspector?",
             "options": [
-              "He installs and smooths the car body.",
-              "He diagnoses and smooths the car body.",
-              "He sands and smooths the car body."
+              "He inspects hygiene standards in cold storage rooms.",
+              "He ignores hygiene standards in cold storage rooms.",
+              "He polishes hygiene standards in cold storage rooms."
             ],
-            "answer": "He sands and smooths the car body.",
+            "answer": "He inspects hygiene standards in cold storage rooms.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence describes the job of a food safety inspector?",
             "options": [
-              "He tunes the engine for painting.",
-              "He prepares the surface for painting.",
-              "He replaces the brake pads for painting."
+              "He regulates the mixing of spices.",
+              "He destroys the mixing of spices.",
+              "He hides the mixing of spices."
             ],
-            "answer": "He prepares the surface for painting.",
+            "answer": "He regulates the mixing of spices.",
             "image": "assets/img/a_3_1.png"
           },
           {
-            "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "id": "g_b_5",
+            "sentence": "Which sentence describes the job of a food safety inspector?",
             "options": [
-              "He makes the car look new again.",
-              "He makes the engine look new again.",
-              "He makes the exhaust pipe look new again."
+              "He checks the packaging line to maintain food safety.",
+              "He paints the packaging line to maintain food safety.",
+              "He abandons the packaging line to maintain food safety."
             ],
-            "answer": "He makes the car look new again.",
+            "answer": "He checks the packaging line to maintain food safety.",
             "image": "assets/img/a_3_1.png"
           }
         ]
