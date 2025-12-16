@@ -326,71 +326,71 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
             "audio": "assets/audio/a_3_1.mp3",
             "options": [
-              "He repairs dents and scratches on cars.",
-              "He makes dents and scratches on cars.",
-              "He calculates dents and scratches on cars."
+              "He operates a lathe machine to shape metal parts.",
+              "He decorates a lathe machine to shape metal parts.",
+              "He ignores a lathe machine to shape metal parts."
             ],
-            "answer": "He repairs dents and scratches on cars.",
+            "answer": "He operates a lathe machine to shape metal parts.",
             "image": "assets/img/a_3_1.png"
           }
         ],
         "content": [
           {
             "id": "g_b_1",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
             "options": [
-              "He fixes tiles, fenders, and bumpers.",
-              "He fixes damaged doors, fenders, and bumpers.",
-              "He fixes broken pipes, taps, and valves."
+              "He calibrates torque wrenches to maintain tightening of bolts.",
+              "He damages torque wrenches to maintain tightening of bolts.",
+              "He hides torque wrenches to maintain tightening of bolts."
             ],
-            "answer": "He fixes damaged doors, fenders, and bumpers.",
+            "answer": "He calibrates torque wrenches to maintain tightening of bolts.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_2",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
             "options": [
-              "He uses special tools to steam metal parts.",
-              "He uses special tools to damage metal parts.",
-              "He uses special tools to fit metal parts together."
+              "He supervises the assembly of gearboxes and drive shafts.",
+              "He forgets the assembly of gearboxes and drive shafts.",
+              "He polishes the assembly of gearboxes and drive shafts."
             ],
-            "answer": "He uses special tools to fit metal parts together.",
+            "answer": "He supervises the assembly of gearboxes and drive shafts.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_3",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
             "options": [
-              "He installs and smooths the car body.",
-              "He diagnoses and smooths the car body.",
-              "He sands and smooths the car body."
+              "He inspects hydraulic systems for leaks and pressure irregularities.",
+              "He paints hydraulic systems for leaks and pressure irregularities.",
+              "He ignores hydraulic systems for leaks and pressure irregularities."
             ],
-            "answer": "He sands and smooths the car body.",
+            "answer": "He inspects hydraulic systems for leaks and pressure irregularities.",
             "image": "assets/img/a_3_1.png"
           },
           {
             "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
             "options": [
-              "He tunes the engine for painting.",
-              "He prepares the surface for painting.",
-              "He replaces the brake pads for painting."
+              "He repairs bearings and replaces worn-out mechanical seals.",
+              "He burns bearings and replaces worn-out mechanical seals.",
+              "He hides bearings and ignores worn-out mechanical seals."
             ],
-            "answer": "He prepares the surface for painting.",
+            "answer": "He repairs bearings and replaces worn-out mechanical seals.",
             "image": "assets/img/a_3_1.png"
           },
           {
-            "id": "g_b_4",
-            "sentence": "Which sentence best describes the job of a body repair technician?",
+            "id": "g_b_5",
+            "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
             "options": [
-              "He makes the car look new again.",
-              "He makes the engine look new again.",
-              "He makes the exhaust pipe look new again."
+              "He maintains CNC machines by aligning components.",
+              "He destroys CNC machines by aligning components.",
+              "He decorates CNC machines by aligning components."
             ],
-            "answer": "He makes the car look new again.",
+            "answer": "He maintains CNC machines by aligning components.",
             "image": "assets/img/a_3_1.png"
           }
         ]
