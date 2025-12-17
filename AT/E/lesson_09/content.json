@@ -330,7 +330,7 @@
             "id": "n_3_a_1",
             "audio": "assets/audio/a_3_1.mp3",
             "words": [
-              "i",
+              "I",
               "carefully",
               "repair",
               "the",
@@ -346,7 +346,7 @@
             "id": "n_3_a_2",
             "audio": "assets/audio/a_3_2.mp3",
             "words": [
-              "i",
+              "I",
               "regularly",
               "check",
               "the",
@@ -362,7 +362,7 @@
             "id": "n_3_a_3",
             "audio": "assets/audio/a_3_3.mp3",
             "words": [
-              "i",
+              "I",
               "use",
               "a",
               "digital",
@@ -378,7 +378,7 @@
             "id": "n_3_a_4",
             "audio": "assets/audio/a_3_4.mp3",
             "words": [
-              "i",
+              "I",
               "replace",
               "damaged",
               "fuses",
@@ -394,7 +394,7 @@
             "id": "n_3_a_5",
             "audio": "assets/audio/a_3_5.mp3",
             "words": [
-              "i",
+              "I",
               "fix",
               "the",
               "ignition",
@@ -410,7 +410,7 @@
             "id": "n_3_a_6",
             "audio": "assets/audio/a_3_6.mp3",
             "words": [
-              "i",
+              "I",
               "install",
               "new",
               "electrical",
@@ -424,14 +424,14 @@
           {
             "id": "n_3_a_7",
             "audio": "assets/audio/a_3_7.mp3",
-            "words": ["i", "connect", "all", "wires", "very", "carefully", "."],
+            "words": ["I", "connect", "all", "wires", "very", "carefully", "."],
             "sentence": "I connect all wires very carefully."
           },
           {
             "id": "n_3_a_8",
             "audio": "assets/audio/a_3_8.mp3",
             "words": [
-              "i",
+              "I",
               "maintain",
               "and",
               "service",
@@ -446,7 +446,7 @@
             "id": "n_3_a_9",
             "audio": "assets/audio/a_3_9.mp3",
             "words": [
-              "i",
+              "I",
               "repair",
               "the",
               "car",
@@ -462,7 +462,7 @@
             "id": "n_3_a_10",
             "audio": "assets/audio/a_3_10.mp3",
             "words": [
-              "i",
+              "I",
               "work",
               "with",
               "modern",
