@@ -159,33 +159,28 @@
     "keywords": [
       {
         "id": "k_1",
-        "image": "assets/img/a_2_d_1.jpeg",
-        "word": "Dubai"
+        "image": "assets/img/a_2_k_1.jpeg",
+        "word": "France"
       },
       {
         "id": "k_2",
-        "image": "assets/img/a_2_d_2.jpeg",
-        "word": "Berlin"
+        "image": "assets/img/a_2_k_2.jpeg",
+        "word": "Germany"
       },
       {
         "id": "k_3",
-        "image": "assets/img/a_2_d_3.png",
-        "word": "Hanoi"
+        "image": "assets/img/a_2_k_3.jpeg",
+        "word": "Vietnam"
       },
       {
         "id": "k_4",
-        "image": "assets/img/a_2_d_4.png",
-        "word": "Singapore"
+        "image": "assets/img/a_2_k_4.jpeg",
+        "word": "South Korea"
       },
       {
         "id": "k_5",
-        "image": "assets/img/a_2_d_5.jpeg",
-        "word": "Seoul"
-      },
-      {
-        "id": "k_6",
-        "image": "assets/img/a_2_d_6.jpeg",
-        "word": "Canberra"
+        "image": "assets/img/a_2_k_5.jpeg",
+        "word": "Australia"
       }
     ],
     "dialogues": [
@@ -231,7 +226,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.png",
+        "img": "assets/img/a_2_d_3.jpeg",
         "text_a": "What’s your name?",
         "text_b": "My name is Lan.",
         "text_c": "Where do you live?",
@@ -251,7 +246,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.png",
+        "img": "assets/img/a_2_d_4.jpeg",
         "text_a": "What’s your name?",
         "text_b": "My name is Mei Ling.",
         "text_c": "Where do you live?",
