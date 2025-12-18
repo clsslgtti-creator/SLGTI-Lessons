@@ -329,66 +329,26 @@
           {
             "id": "n_3_a_1",
             "audio": "assets/audio/a_3_1.mp3",
-            "words": [
-              "I",
-              "carefully",
-              "repair",
-              "the",
-              "wiring",
-              "system",
-              "in",
-              "cars",
-              "."
-            ],
-            "sentence": "I carefully repair the wiring system in cars."
+            "words": ["I", "repair", "the", "wiring", "systems", "."],
+            "sentence": "I repair the wiring systems."
           },
           {
             "id": "n_3_a_2",
             "audio": "assets/audio/a_3_2.mp3",
-            "words": [
-              "I",
-              "regularly",
-              "check",
-              "the",
-              "headlights",
-              "and",
-              "tail",
-              "lights",
-              "."
-            ],
-            "sentence": "I regularly check the headlights and tail lights."
+            "words": ["I", "check", "the", "headlights", "."],
+            "sentence": "I check the headlights."
           },
           {
             "id": "n_3_a_3",
             "audio": "assets/audio/a_3_3.mp3",
-            "words": [
-              "I",
-              "use",
-              "a",
-              "digital",
-              "multimeter",
-              "to",
-              "test",
-              "batteries",
-              "."
-            ],
-            "sentence": "I use a digital multimeter to test batteries."
+            "words": ["I", "use", "a", "digital", "multimeter", "."],
+            "sentence": "I use a digital multimeter."
           },
           {
             "id": "n_3_a_4",
             "audio": "assets/audio/a_3_4.mp3",
-            "words": [
-              "I",
-              "replace",
-              "damaged",
-              "fuses",
-              "in",
-              "the",
-              "fuse",
-              "box",
-              "."
-            ],
-            "sentence": "I replace damaged fuses in the fuse box."
+            "words": ["I", "replace", "damaged", "fuses", "."],
+            "sentence": "I replace damaged fuses."
           },
           {
             "id": "n_3_a_5",
@@ -411,21 +371,29 @@
             "audio": "assets/audio/a_3_6.mp3",
             "words": [
               "I",
+              "usually",
               "install",
               "new",
               "electrical",
               "parts",
-              "in",
-              "cars",
               "."
             ],
-            "sentence": "I install new electrical parts in cars."
+            "sentence": "I usually install new electrical parts."
           },
           {
             "id": "n_3_a_7",
             "audio": "assets/audio/a_3_7.mp3",
-            "words": ["I", "connect", "all", "wires", "very", "carefully", "."],
-            "sentence": "I connect all wires very carefully."
+            "words": [
+              "I",
+              "connect",
+              "all",
+              "the",
+              "wires",
+              "very",
+              "carefully",
+              "."
+            ],
+            "sentence": "I connect all the wires very carefully."
           },
           {
             "id": "n_3_a_8",
