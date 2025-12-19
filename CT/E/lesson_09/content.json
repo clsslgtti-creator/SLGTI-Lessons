@@ -329,77 +329,32 @@
           {
             "id": "n_3_a_1",
             "audio": "assets/audio/a_3_1.mp3",
-            "words": [
-              "I",
-              "measure",
-              "land",
-              "areas",
-              "on",
-              "building",
-              "sites",
-              "."
-            ],
-            "sentence": "I measure land areas on building sites."
+            "words": ["I", "measure", "land", "areas", "."],
+            "sentence": "I measure land areas."
           },
           {
             "id": "n_3_a_2",
             "audio": "assets/audio/a_3_2.mp3",
-            "words": [
-              "I",
-              "calculate",
-              "the",
-              "total",
-              "building",
-              "material",
-              "costs",
-              "."
-            ],
-            "sentence": "I calculate the total building material costs."
+            "words": ["I", "calculate", "the", "total", "costs", "."],
+            "sentence": "I calculate the total costs."
           },
           {
             "id": "n_3_a_3",
             "audio": "assets/audio/a_3_3.mp3",
-            "words": [
-              "I",
-              "prepare",
-              "detailed",
-              "reports",
-              "for",
-              "the",
-              "project",
-              "."
-            ],
-            "sentence": "I prepare detailed reports for the project."
+            "words": ["I", "prepare", "reports", "for", "the", "project", "."],
+            "sentence": "I prepare reports for the project."
           },
           {
             "id": "n_3_a_4",
             "audio": "assets/audio/a_3_4.mp3",
-            "words": [
-              "I",
-              "check",
-              "bills",
-              "for",
-              "cement",
-              "and",
-              "steel",
-              "."
-            ],
-            "sentence": "I check bills for cement and steel."
+            "words": ["I", "check", "bills", "for", "cement", "."],
+            "sentence": "I check bills for cement."
           },
           {
             "id": "n_3_a_5",
             "audio": "assets/audio/a_3_5.mp3",
-            "words": [
-              "I",
-              "visit",
-              "busy",
-              "building",
-              "sites",
-              "every",
-              "day",
-              "."
-            ],
-            "sentence": "I visit busy building sites every day."
+            "words": ["I", "visit", "busy", "building", "sites", "."],
+            "sentence": "I visit busy building sites."
           },
           {
             "id": "n_3_a_6",
@@ -468,12 +423,11 @@
               "prepare",
               "the",
               "project’s",
-              "final",
               "budget",
               "summary",
               "."
             ],
-            "sentence": "I prepare the project’s final budget summary."
+            "sentence": "I prepare the project’s budget summary."
           }
         ]
       },
@@ -485,27 +439,27 @@
         },
         {
           "id": "a_3_1",
-          "text": "I measure land areas on building sites.",
+          "text": "I measure land areas.",
           "audio": "assets/audio/a_3_1.mp3"
         },
         {
           "id": "a_3_2",
-          "text": "I calculate the total building material costs.",
+          "text": "I calculate the total costs.",
           "audio": "assets/audio/a_3_2.mp3"
         },
         {
           "id": "a_3_3",
-          "text": "I prepare detailed reports for the project.",
+          "text": "I prepare reports for the project.",
           "audio": "assets/audio/a_3_3.mp3"
         },
         {
           "id": "a_3_4",
-          "text": "I check bills for cement and steel.",
+          "text": "I check bills for cement.",
           "audio": "assets/audio/a_3_4.mp3"
         },
         {
           "id": "a_3_5",
-          "text": "I visit busy building sites every day.",
+          "text": "I visit busy building sites.",
           "audio": "assets/audio/a_3_5.mp3"
         },
         {
@@ -530,7 +484,7 @@
         },
         {
           "id": "a_3_10",
-          "text": "I prepare the project’s final budget summary.",
+          "text": "I prepare the project’s budget summary.",
           "audio": "assets/audio/a_3_10.mp3"
         }
       ]
