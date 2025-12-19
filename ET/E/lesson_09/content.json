@@ -329,17 +329,8 @@
           {
             "id": "n_3_a_1",
             "audio": "assets/audio/a_3_1.mp3",
-            "words": [
-              "I",
-              "install",
-              "solar",
-              "panels",
-              "on",
-              "tall",
-              "roofs",
-              "."
-            ],
-            "sentence": "I install solar panels on tall roofs."
+            "words": ["I", "install", "solar", "panels", "on", "roofs", "."],
+            "sentence": "I install solar panels on roofs."
           },
           {
             "id": "n_3_a_2",
@@ -449,16 +440,8 @@
           {
             "id": "n_3_a_9",
             "audio": "assets/audio/a_3_9.mp3",
-            "words": [
-              "I",
-              "maintain",
-              "home",
-              "solar",
-              "systems",
-              "regularly",
-              "."
-            ],
-            "sentence": "I maintain home solar systems regularly."
+            "words": ["I", "maintain", "home", "solar", "systems", "."],
+            "sentence": "I maintain home solar systems."
           },
           {
             "id": "n_3_a_10",
@@ -485,7 +468,7 @@
         },
         {
           "id": "a_3_1",
-          "text": "I install solar panels on tall roofs.",
+          "text": "I install solar panels on roofs.",
           "audio": "assets/audio/a_3_1.mp3"
         },
         {
@@ -525,7 +508,7 @@
         },
         {
           "id": "a_3_9",
-          "text": "I maintain home solar systems regularly.",
+          "text": "I maintain home solar systems.",
           "audio": "assets/audio/a_3_9.mp3"
         },
         {
