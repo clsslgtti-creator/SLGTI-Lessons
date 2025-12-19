@@ -515,11 +515,11 @@
     "type": "LISTENING-5",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the recording and match the verbs to the nouns. \nක්‍රියා පදයන් නාම පද සමඟ ගැලපෙන්න.\nவினைச்சொற்களை பெயர்ச்சொல்லுடன் பொருத்துங்கள்.",
+        "text": "You will hear each recording twice. Listen to the recording and match the verbs to the nouns. \nඔබට ඇසු සටහන් සෑම දෙවරක්ම ඇසුම් ලබා දේ. සටහනට සවන් දී ක්‍රියා පද නාම පද වලට ගැලපෙන්න.\nநீங்கள் கேட்கும் ஒவ்வொரு பதிவையும் இரண்டு முறை கேட்கலாம். பதிவை கேட்டு வினைகள் மற்றும் பெயர்களை பொருத்துங்கள்.",
         "audio": "assets/audio/a_4_i_d.mp3"
       },
       "activity_b": {
-        "text": "Listen and click on the time phrases you hear. \nඔබට ඇසු කාල ප්‍රකාශන මත සවන් දී ක්ලික් කරන්න.\nநீங்கள் கேட்கும் காலப் பிரிவுகளில் கிளிக் செய்யவும்.",
+        "text": "You will hear each recording twice. Listen and click on the time phrases you hear.\nඔබට ඇසු සටහන් සෑම දෙවරක්ම ඇසුම් ලබා දේ. ඔබ ඇසු කාල ප්‍රකාශනවලට සවන් දී ක්ලික් කරන්න.\nநீங்கள் கேட்கும் ஒவ்வொரு பதிவையும் இரண்டு முறை கேட்கலாம். நீங்கள் கேட்கும் கால வாக்கியங்களை கேட்டு கிளிக் செய்யவும்.",
         "audio": "assets/audio/a_4_i_e.mp3"
       },
       "activity_c": {

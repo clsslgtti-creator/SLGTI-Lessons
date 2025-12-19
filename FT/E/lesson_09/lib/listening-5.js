@@ -54,6 +54,14 @@ const normalizeValue = (value) => {
   return trimmed ? trimmed.toLowerCase() : "";
 };
 
+const shuffleArray = (items = []) => {
+  for (let index = items.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [items[index], items[swapIndex]] = [items[swapIndex], items[index]];
+  }
+  return items;
+};
+
 const createStatus = () => {
   const status = document.createElement("p");
   status.className = "playback-status";
@@ -314,6 +322,7 @@ const buildAudioMatchingSlide = (data = {}, context = {}) => {
   };
 
   const cards = items.map((entry) => createCard(entry));
+  shuffleArray(cards);
   cards.forEach((card) => wordsColumn.appendChild(card));
 
   const updateFeedback = (text, variant = "neutral") => {
