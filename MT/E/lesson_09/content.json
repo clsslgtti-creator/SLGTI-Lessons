@@ -329,48 +329,20 @@
           {
             "id": "n_3_a_1",
             "audio": "assets/audio/a_3_1.mp3",
-            "words": [
-              "I",
-              "set",
-              "up",
-              "the",
-              "sharp",
-              "cutting",
-              "tools",
-              "."
-            ],
-            "sentence": "I set up the sharp cutting tools."
+            "words": ["I", "use", "sharp", "tools", "."],
+            "sentence": "I use sharp tools."
           },
           {
             "id": "n_3_a_2",
             "audio": "assets/audio/a_3_2.mp3",
-            "words": [
-              "I",
-              "program",
-              "the",
-              "cnc",
-              "machine",
-              "using",
-              "a",
-              "computer",
-              "."
-            ],
-            "sentence": "I program the CNC machine using a computer."
+            "words": ["I", "program", "the", "cnc", "machine", "."],
+            "sentence": "I program the CNC machine."
           },
           {
             "id": "n_3_a_3",
             "audio": "assets/audio/a_3_3.mp3",
-            "words": [
-              "I",
-              "produce",
-              "accurate",
-              "metal",
-              "parts",
-              "for",
-              "engines",
-              "."
-            ],
-            "sentence": "I produce accurate metal parts for engines."
+            "words": ["I", "produce", "metal", "parts", "for", "engines", "."],
+            "sentence": "I produce metal parts for engines."
           },
           {
             "id": "n_3_a_4",
@@ -396,10 +368,9 @@
               "detailed",
               "engineering",
               "drawings",
-              "carefully",
               "."
             ],
-            "sentence": "I follow detailed engineering drawings carefully."
+            "sentence": "I follow detailed engineering drawings."
           },
           {
             "id": "n_3_a_6",
@@ -419,16 +390,8 @@
           {
             "id": "n_3_a_7",
             "audio": "assets/audio/a_3_7.mp3",
-            "words": [
-              "I",
-              "replace",
-              "broken",
-              "drill",
-              "bits",
-              "immediately",
-              "."
-            ],
-            "sentence": "I replace broken drill bits immediately."
+            "words": ["I", "replace", "broken", "drill", "bits", "."],
+            "sentence": "I replace broken drill bits."
           },
           {
             "id": "n_3_a_8",
@@ -486,17 +449,17 @@
         },
         {
           "id": "a_3_1",
-          "text": "I set up the sharp cutting tools.",
+          "text": "I use sharp tools.",
           "audio": "assets/audio/a_3_1.mp3"
         },
         {
           "id": "a_3_2",
-          "text": "I program the CNC machine using a computer.",
+          "text": "I program the CNC machine.",
           "audio": "assets/audio/a_3_2.mp3"
         },
         {
           "id": "a_3_3",
-          "text": "I produce accurate metal parts for engines.",
+          "text": "I produce metal parts for engines.",
           "audio": "assets/audio/a_3_3.mp3"
         },
         {
@@ -506,7 +469,7 @@
         },
         {
           "id": "a_3_5",
-          "text": "I follow detailed engineering drawings carefully.",
+          "text": "I follow detailed engineering drawings.",
           "audio": "assets/audio/a_3_5.mp3"
         },
         {
@@ -516,7 +479,7 @@
         },
         {
           "id": "a_3_7",
-          "text": "I replace broken drill bits immediately.",
+          "text": "I replace broken drill bits.",
           "audio": "assets/audio/a_3_7.mp3"
         },
         {

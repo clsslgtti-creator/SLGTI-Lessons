@@ -451,22 +451,22 @@
         },
         {
           "id": "a_3_1",
-          "text": "I carefully repair the wiring system in cars.",
+          "text": "I repair the wiring systems.",
           "audio": "assets/audio/a_3_1.mp3"
         },
         {
           "id": "a_3_2",
-          "text": "I regularly check the headlights and tail lights.",
+          "text": "I check the headlights.",
           "audio": "assets/audio/a_3_2.mp3"
         },
         {
           "id": "a_3_3",
-          "text": "I use a digital multimeter to test batteries.",
+          "text": "I use a digital multimeter.",
           "audio": "assets/audio/a_3_3.mp3"
         },
         {
           "id": "a_3_4",
-          "text": "I replace damaged fuses in the fuse box.",
+          "text": "I replace damaged fuses.",
           "audio": "assets/audio/a_3_4.mp3"
         },
         {
@@ -476,12 +476,12 @@
         },
         {
           "id": "a_3_6",
-          "text": "I install new electrical parts in cars.",
+          "text": "I usually install new electrical parts.",
           "audio": "assets/audio/a_3_6.mp3"
         },
         {
           "id": "a_3_7",
-          "text": "I connect all wires very carefully.",
+          "text": "I connect all the wires very carefully.",
           "audio": "assets/audio/a_3_7.mp3"
         },
         {
