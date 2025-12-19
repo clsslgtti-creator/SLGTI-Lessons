@@ -329,33 +329,14 @@
           {
             "id": "n_3_a_1",
             "audio": "assets/audio/a_3_1.mp3",
-            "words": [
-              "I",
-              "test",
-              "food",
-              "samples",
-              "carefully",
-              "in",
-              "a",
-              "lab",
-              "."
-            ],
-            "sentence": "I test food samples carefully in a lab."
+            "words": ["I", "test", "food", "samples", "."],
+            "sentence": "I test food samples."
           },
           {
             "id": "n_3_a_2",
             "audio": "assets/audio/a_3_2.mp3",
-            "words": [
-              "I",
-              "check",
-              "the",
-              "expiry",
-              "date",
-              "on",
-              "products",
-              "."
-            ],
-            "sentence": "I check the expiry date on products."
+            "words": ["I", "check", "the", "expiry", "dates", "."],
+            "sentence": "I check the expiry dates."
           },
           {
             "id": "n_3_a_3",
@@ -406,8 +387,8 @@
           {
             "id": "n_3_a_6",
             "audio": "assets/audio/a_3_6.mp3",
-            "words": ["I", "wear", "gloves", "and", "a", "clean", "mask", "."],
-            "sentence": "I wear gloves and a clean mask."
+            "words": ["I", "always", "wear", "gloves", "."],
+            "sentence": "I always wear gloves."
           },
           {
             "id": "n_3_a_7",
@@ -479,12 +460,12 @@
         },
         {
           "id": "a_3_1",
-          "text": "I test food samples carefully in a lab.",
+          "text": "I test food samples .",
           "audio": "assets/audio/a_3_1.mp3"
         },
         {
           "id": "a_3_2",
-          "text": "I check the expiry date on products.",
+          "text": "I check the expiry dates.",
           "audio": "assets/audio/a_3_2.mp3"
         },
         {
@@ -504,7 +485,7 @@
         },
         {
           "id": "a_3_6",
-          "text": "I wear gloves and a clean mask.",
+          "text": "I always wear gloves.",
           "audio": "assets/audio/a_3_6.mp3"
         },
         {
