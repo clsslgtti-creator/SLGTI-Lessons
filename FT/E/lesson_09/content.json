@@ -159,33 +159,28 @@
     "keywords": [
       {
         "id": "k_1",
-        "image": "assets/img/a_2_d_1.jpeg",
-        "word": "Dubai"
+        "image": "assets/img/a_2_k_1.jpeg",
+        "word": "France"
       },
       {
         "id": "k_2",
-        "image": "assets/img/a_2_d_2.jpeg",
-        "word": "Berlin"
+        "image": "assets/img/a_2_k_2.jpeg",
+        "word": "Germany"
       },
       {
         "id": "k_3",
-        "image": "assets/img/a_2_d_3.png",
-        "word": "Hanoi"
+        "image": "assets/img/a_2_k_3.jpeg",
+        "word": "Vietnam"
       },
       {
         "id": "k_4",
-        "image": "assets/img/a_2_d_4.png",
-        "word": "Singapore"
+        "image": "assets/img/a_2_k_4.jpeg",
+        "word": "South Korea"
       },
       {
         "id": "k_5",
-        "image": "assets/img/a_2_d_5.jpeg",
-        "word": "Seoul"
-      },
-      {
-        "id": "k_6",
-        "image": "assets/img/a_2_d_6.jpeg",
-        "word": "Canberra"
+        "image": "assets/img/a_2_k_5.jpeg",
+        "word": "Australia"
       }
     ],
     "dialogues": [
@@ -231,7 +226,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.png",
+        "img": "assets/img/a_2_d_3.jpeg",
         "text_a": "What’s your name?",
         "text_b": "My name is Lan.",
         "text_c": "Where do you live?",
@@ -251,7 +246,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.png",
+        "img": "assets/img/a_2_d_4.jpeg",
         "text_a": "What’s your name?",
         "text_b": "My name is Mei Ling.",
         "text_c": "Where do you live?",
@@ -315,7 +310,7 @@
     "type": "INTERACTIVE-4",
     "instructions": {
       "activity_a": {
-        "text": "Put the words in the correct order.\nවචන නිවැරදි අනුපිළිවෙලට තබන්න.\nசொற்களை சரியான வரிசையில் வைக்கவும்.",
+        "text": "Put the words in the correct order. The first word in each sentence is in bold.\nවචන නිවැරදි අනුපිළිවෙලට තබන්න. සෑම වාක්‍යයකම පළමු වචනය තද අකුරින් ලියවා ඇත.\nசொற்களை சரியான வரிசையில் வைக்கவும். ஒவ்வொரு வாக்கியத்திலும் முதல் வார்த்தை திட எழுத்தில் உள்ளது.",
         "audio": "assets/audio/a_3_i_c.mp3"
       },
       "activity_b": {
@@ -334,39 +329,20 @@
           {
             "id": "n_3_a_1",
             "audio": "assets/audio/a_3_1.mp3",
-            "words": [
-              "i",
-              "test",
-              "food",
-              "samples",
-              "carefully",
-              "in",
-              "a",
-              "lab",
-              "."
-            ],
-            "sentence": "I test food samples carefully in a lab."
+            "words": ["I", "test", "food", "samples", "."],
+            "sentence": "I test food samples."
           },
           {
             "id": "n_3_a_2",
             "audio": "assets/audio/a_3_2.mp3",
-            "words": [
-              "i",
-              "check",
-              "the",
-              "expiry",
-              "date",
-              "on",
-              "products",
-              "."
-            ],
-            "sentence": "I check the expiry date on products."
+            "words": ["I", "check", "the", "expiry", "dates", "."],
+            "sentence": "I check the expiry dates."
           },
           {
             "id": "n_3_a_3",
             "audio": "assets/audio/a_3_3.mp3",
             "words": [
-              "i",
+              "I",
               "measure",
               "the",
               "weight",
@@ -381,7 +357,7 @@
             "id": "n_3_a_4",
             "audio": "assets/audio/a_3_4.mp3",
             "words": [
-              "i",
+              "I",
               "use",
               "chemical",
               "tests",
@@ -396,7 +372,7 @@
             "id": "n_3_a_5",
             "audio": "assets/audio/a_3_5.mp3",
             "words": [
-              "i",
+              "I",
               "record",
               "my",
               "test",
@@ -411,14 +387,14 @@
           {
             "id": "n_3_a_6",
             "audio": "assets/audio/a_3_6.mp3",
-            "words": ["i", "wear", "gloves", "and", "a", "clean", "mask", "."],
-            "sentence": "I wear gloves and a clean mask."
+            "words": ["I", "always", "wear", "gloves", "."],
+            "sentence": "I always wear gloves."
           },
           {
             "id": "n_3_a_7",
             "audio": "assets/audio/a_3_7.mp3",
             "words": [
-              "i",
+              "I",
               "check",
               "the",
               "quality",
@@ -433,7 +409,7 @@
             "id": "n_3_a_8",
             "audio": "assets/audio/a_3_8.mp3",
             "words": [
-              "i",
+              "I",
               "measure",
               "sugar",
               "levels",
@@ -448,7 +424,7 @@
             "id": "n_3_a_9",
             "audio": "assets/audio/a_3_9.mp3",
             "words": [
-              "i",
+              "I",
               "test",
               "the",
               "colour",
@@ -463,7 +439,7 @@
             "id": "n_3_a_10",
             "audio": "assets/audio/a_3_10.mp3",
             "words": [
-              "i",
+              "I",
               "make",
               "detailed",
               "reports",
@@ -484,12 +460,12 @@
         },
         {
           "id": "a_3_1",
-          "text": "I test food samples carefully in a lab.",
+          "text": "I test food samples.",
           "audio": "assets/audio/a_3_1.mp3"
         },
         {
           "id": "a_3_2",
-          "text": "I check the expiry date on products.",
+          "text": "I check the expiry dates.",
           "audio": "assets/audio/a_3_2.mp3"
         },
         {
@@ -509,7 +485,7 @@
         },
         {
           "id": "a_3_6",
-          "text": "I wear gloves and a clean mask.",
+          "text": "I always wear gloves.",
           "audio": "assets/audio/a_3_6.mp3"
         },
         {
@@ -539,11 +515,11 @@
     "type": "LISTENING-5",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the recording and match the verbs to the nouns. \nක්‍රියා පදයන් නාම පද සමඟ ගැලපෙන්න.\nவினைச்சொற்களை பெயர்ச்சொல்லுடன் பொருத்துங்கள்.",
+        "text": "You will hear each recording twice. Listen to the recording and match the verbs to the nouns. \nඔබට ඇසු සටහන් සෑම දෙවරක්ම ඇසුම් ලබා දේ. සටහනට සවන් දී ක්‍රියා පද නාම පද වලට ගැලපෙන්න.\nநீங்கள் கேட்கும் ஒவ்வொரு பதிவையும் இரண்டு முறை கேட்கலாம். பதிவை கேட்டு வினைகள் மற்றும் பெயர்களை பொருத்துங்கள்.",
         "audio": "assets/audio/a_4_i_d.mp3"
       },
       "activity_b": {
-        "text": "Listen and click on the time phrases you hear. \nඔබට ඇසු කාල ප්‍රකාශන මත සවන් දී ක්ලික් කරන්න.\nநீங்கள் கேட்கும் காலப் பிரிவுகளில் கிளிக் செய்யவும்.",
+        "text": "You will hear each recording twice. Listen and click on the time phrases you hear.\nඔබට ඇසු සටහන් සෑම දෙවරක්ම ඇසුම් ලබා දේ. ඔබ ඇසු කාල ප්‍රකාශනවලට සවන් දී ක්ලික් කරන්න.\nநீங்கள் கேட்கும் ஒவ்வொரு பதிவையும் இரண்டு முறை கேட்கலாம். நீங்கள் கேட்கும் கால வாக்கியங்களை கேட்டு கிளிக் செய்யவும்.",
         "audio": "assets/audio/a_4_i_e.mp3"
       },
       "activity_c": {

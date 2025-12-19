@@ -159,33 +159,28 @@
     "keywords": [
       {
         "id": "k_1",
-        "image": "assets/img/a_2_d_1.jpeg",
-        "word": "Dubai"
+        "image": "assets/img/a_2_k_1.jpeg",
+        "word": "France"
       },
       {
         "id": "k_2",
-        "image": "assets/img/a_2_d_2.jpeg",
-        "word": "Berlin"
+        "image": "assets/img/a_2_k_2.jpeg",
+        "word": "Germany"
       },
       {
         "id": "k_3",
-        "image": "assets/img/a_2_d_3.png",
-        "word": "Hanoi"
+        "image": "assets/img/a_2_k_3.jpeg",
+        "word": "Vietnam"
       },
       {
         "id": "k_4",
-        "image": "assets/img/a_2_d_4.png",
-        "word": "Singapore"
+        "image": "assets/img/a_2_k_4.jpeg",
+        "word": "South Korea"
       },
       {
         "id": "k_5",
-        "image": "assets/img/a_2_d_5.jpeg",
-        "word": "Seoul"
-      },
-      {
-        "id": "k_6",
-        "image": "assets/img/a_2_d_6.jpeg",
-        "word": "Canberra"
+        "image": "assets/img/a_2_k_5.jpeg",
+        "word": "Australia"
       }
     ],
     "dialogues": [
@@ -231,7 +226,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.png",
+        "img": "assets/img/a_2_d_3.jpeg",
         "text_a": "What’s your name?",
         "text_b": "My name is Lan.",
         "text_c": "Where do you live?",
@@ -251,7 +246,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.png",
+        "img": "assets/img/a_2_d_4.jpeg",
         "text_a": "What’s your name?",
         "text_b": "My name is Mei Ling.",
         "text_c": "Where do you live?",
@@ -315,7 +310,7 @@
     "type": "INTERACTIVE-4",
     "instructions": {
       "activity_a": {
-        "text": "Put the words in the correct order.\nවචන නිවැරදි අනුපිළිවෙලට තබන්න.\nசொற்களை சரியான வரிசையில் வைக்கவும்.",
+        "text": "Put the words in the correct order. The first word in each sentence is in bold.\nවචන නිවැරදි අනුපිළිවෙලට තබන්න. සෑම වාක්‍යයකම පළමු වචනය තද අකුරින් ලියවා ඇත.\nசொற்களை சரியான வரிசையில் வைக்கவும். ஒவ்வொரு வாக்கியத்திலும் முதல் வார்த்தை திட எழுத்தில் உள்ளது.",
         "audio": "assets/audio/a_3_i_c.mp3"
       },
       "activity_b": {
@@ -334,72 +329,32 @@
           {
             "id": "n_3_a_1",
             "audio": "assets/audio/a_3_1.mp3",
-            "words": [
-              "i",
-              "carefully",
-              "repair",
-              "the",
-              "wiring",
-              "system",
-              "in",
-              "cars",
-              "."
-            ],
-            "sentence": "I carefully repair the wiring system in cars."
+            "words": ["I", "repair", "the", "wiring", "systems", "."],
+            "sentence": "I repair the wiring systems."
           },
           {
             "id": "n_3_a_2",
             "audio": "assets/audio/a_3_2.mp3",
-            "words": [
-              "i",
-              "regularly",
-              "check",
-              "the",
-              "headlights",
-              "and",
-              "tail",
-              "lights",
-              "."
-            ],
-            "sentence": "I regularly check the headlights and tail lights."
+            "words": ["I", "check", "the", "headlights", "."],
+            "sentence": "I check the headlights."
           },
           {
             "id": "n_3_a_3",
             "audio": "assets/audio/a_3_3.mp3",
-            "words": [
-              "i",
-              "use",
-              "a",
-              "digital",
-              "multimeter",
-              "to",
-              "test",
-              "batteries",
-              "."
-            ],
-            "sentence": "I use a digital multimeter to test batteries."
+            "words": ["I", "use", "a", "digital", "multimeter", "."],
+            "sentence": "I use a digital multimeter."
           },
           {
             "id": "n_3_a_4",
             "audio": "assets/audio/a_3_4.mp3",
-            "words": [
-              "i",
-              "replace",
-              "damaged",
-              "fuses",
-              "in",
-              "the",
-              "fuse",
-              "box",
-              "."
-            ],
-            "sentence": "I replace damaged fuses in the fuse box."
+            "words": ["I", "replace", "damaged", "fuses", "."],
+            "sentence": "I replace damaged fuses."
           },
           {
             "id": "n_3_a_5",
             "audio": "assets/audio/a_3_5.mp3",
             "words": [
-              "i",
+              "I",
               "fix",
               "the",
               "ignition",
@@ -415,28 +370,36 @@
             "id": "n_3_a_6",
             "audio": "assets/audio/a_3_6.mp3",
             "words": [
-              "i",
+              "I",
+              "usually",
               "install",
               "new",
               "electrical",
               "parts",
-              "in",
-              "cars",
               "."
             ],
-            "sentence": "I install new electrical parts in cars."
+            "sentence": "I usually install new electrical parts."
           },
           {
             "id": "n_3_a_7",
             "audio": "assets/audio/a_3_7.mp3",
-            "words": ["i", "connect", "all", "wires", "very", "carefully", "."],
-            "sentence": "I connect all wires very carefully."
+            "words": [
+              "I",
+              "connect",
+              "all",
+              "the",
+              "wires",
+              "very",
+              "carefully",
+              "."
+            ],
+            "sentence": "I connect all the wires very carefully."
           },
           {
             "id": "n_3_a_8",
             "audio": "assets/audio/a_3_8.mp3",
             "words": [
-              "i",
+              "I",
               "maintain",
               "and",
               "service",
@@ -451,7 +414,7 @@
             "id": "n_3_a_9",
             "audio": "assets/audio/a_3_9.mp3",
             "words": [
-              "i",
+              "I",
               "repair",
               "the",
               "car",
@@ -467,7 +430,7 @@
             "id": "n_3_a_10",
             "audio": "assets/audio/a_3_10.mp3",
             "words": [
-              "i",
+              "I",
               "work",
               "with",
               "modern",
@@ -488,22 +451,22 @@
         },
         {
           "id": "a_3_1",
-          "text": "I carefully repair the wiring system in cars.",
+          "text": "I repair the wiring systems.",
           "audio": "assets/audio/a_3_1.mp3"
         },
         {
           "id": "a_3_2",
-          "text": "I regularly check the headlights and tail lights.",
+          "text": "I check the headlights.",
           "audio": "assets/audio/a_3_2.mp3"
         },
         {
           "id": "a_3_3",
-          "text": "I use a digital multimeter to test batteries.",
+          "text": "I use a digital multimeter.",
           "audio": "assets/audio/a_3_3.mp3"
         },
         {
           "id": "a_3_4",
-          "text": "I replace damaged fuses in the fuse box.",
+          "text": "I replace damaged fuses.",
           "audio": "assets/audio/a_3_4.mp3"
         },
         {
@@ -513,12 +476,12 @@
         },
         {
           "id": "a_3_6",
-          "text": "I install new electrical parts in cars.",
+          "text": "I usually install new electrical parts.",
           "audio": "assets/audio/a_3_6.mp3"
         },
         {
           "id": "a_3_7",
-          "text": "I connect all wires very carefully.",
+          "text": "I connect all the wires very carefully.",
           "audio": "assets/audio/a_3_7.mp3"
         },
         {
@@ -543,11 +506,11 @@
     "type": "LISTENING-5",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the recording and match the verbs to the nouns. \nක්‍රියා පදයන් නාම පද සමඟ ගැලපෙන්න.\nவினைச்சொற்களை பெயர்ச்சொல்லுடன் பொருத்துங்கள்.",
+        "text": "You will hear each recording twice. Listen to the recording and match the verbs to the nouns. \nඔබට ඇසු සටහන් සෑම දෙවරක්ම ඇසුම් ලබා දේ. සටහනට සවන් දී ක්‍රියා පද නාම පද වලට ගැලපෙන්න.\nநீங்கள் கேட்கும் ஒவ்வொரு பதிவையும் இரண்டு முறை கேட்கலாம். பதிவை கேட்டு வினைகள் மற்றும் பெயர்களை பொருத்துங்கள்.",
         "audio": "assets/audio/a_4_i_d.mp3"
       },
       "activity_b": {
-        "text": "Listen and click on the time phrases you hear. \nඔබට ඇසු කාල ප්‍රකාශන මත සවන් දී ක්ලික් කරන්න.\nநீங்கள் கேட்கும் காலப் பிரிவுகளில் கிளிக் செய்யவும்.",
+        "text": "You will hear each recording twice. Listen and click on the time phrases you hear.\nඔබට ඇසු සටහන් සෑම දෙවරක්ම ඇසුම් ලබා දේ. ඔබ ඇසු කාල ප්‍රකාශනවලට සවන් දී ක්ලික් කරන්න.\nநீங்கள் கேட்கும் ஒவ்வொரு பதிவையும் இரண்டு முறை கேட்கலாம். நீங்கள் கேட்கும் கால வாக்கியங்களை கேட்டு கிளிக் செய்யவும்.",
         "audio": "assets/audio/a_4_i_e.mp3"
       },
       "activity_c": {

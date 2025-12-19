@@ -1153,10 +1153,24 @@ export const createGameScene = (config = {}) => {
       this.bankTokens = shuffled.map((word, index) =>
         createToken(this, word, index, (token) => this.toggleToken(token))
       );
+      const firstWord = question?.words?.[0] ?? null;
+      let hintApplied = false;
       this.bankTokens.forEach((token) => {
         token.state = "bank";
         this.bankContainer.add(token.container);
         setTokenStyle(token, "bank");
+        const shouldHighlight = Boolean(
+          !hintApplied && firstWord && token.word === firstWord
+        );
+        if (shouldHighlight) {
+          // Bold the true starting word to provide a subtle hint.
+          token.text.setFontStyle("bold");
+          token.isHint = true;
+          hintApplied = true;
+        } else {
+          token.text.setFontStyle("normal");
+          token.isHint = false;
+        }
       });
       this.arrangedTokens = [];
       this.layoutTokens();
