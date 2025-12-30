@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "Does this assembl'e'r always check the gearbox?",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
@@ -61,7 +61,7 @@
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "Does this  driv'e'r usually park the car outside?",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpeg"
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
@@ -74,8 +74,8 @@
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {
-        "text": "Match the capital cities to the nationalities.\nරාජධානී නගර ජාතිකත්වයන්ට ගැලපෙන්න.\nமாநகரங்களையும் தேசியத்துவங்களையும் பொருத்துங்கள்.",
-        "audio": "assets/audio/a_2_i_g.mp3"
+        "text": "Match the words with the pictures.\nපදයන් පින්තූර සමග ගැලපන්න.\nசொற்களைப் படங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_2_i_a.mp3"
       },
       "activity_2_b": {
         "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
@@ -105,7 +105,7 @@
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/a_2_ex_1.jpeg",
+        "img": "assets/img/Monday.png",
         "text_a": "Does Ann prepare Indian dishes on Tuesday?",
         "text_b": "No, she doesn’t.",
         "text_c": "When does she prepare Indian dishes?",
@@ -117,7 +117,7 @@
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpeg",
+        "img": "assets/img/Tuesday.jpeg",
         "text_a": "Does Muhamed prepare Thai dishes on Monday?",
         "text_b": "No, he doesn’t.",
         "text_c": "When does he prepare Thai dishes?",
@@ -129,7 +129,7 @@
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_3.jpeg",
+        "img": "assets/img/Wednesday.jpeg",
         "text_a": "Does Muhamed prepare German dishes on Thursday?",
         "text_b": "No, he doesn’t.",
         "text_c": "When does he prepare German dishes?",
@@ -143,39 +143,39 @@
     "keywords": [
       {
         "id": "k_1",
-        "image": "assets/img/a_2_k_1.jpeg",
+        "image": "assets/img/Monday.png",
         "word": "Tandoori Chicken"
       },
       {
         "id": "k_2",
-        "image": "assets/img/a_2_k_2.jpeg",
+        "image": "assets/img/Wednesday.jpeg",
         "word": "Pork Schnitzel"
       },
       {
         "id": "k_3",
-        "image": "assets/img/a_2_k_3.jpeg",
+        "image": "assets/img/Sunday.jpeg",
         "word": "Pol Sambol"
       },
       {
         "id": "k_4",
-        "image": "assets/img/a_2_k_4.jpeg",
+        "image": "assets/img/Friday.png",
         "word": "Cheese Fondue "
       },
       {
         "id": "k_5",
-        "image": "assets/img/a_2_k_5.jpeg",
+        "image": "assets/img/Thursday.png",
         "word": "Snails"
       },
       {
         "id": "k_6",
-        "image": "assets/img/a_2_k_6.jpeg",
+        "image": "assets/img/Saturday.jpeg",
         "word": "Sushi "
       }
     ],
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/Wednesday.jpeg",
         "text_a": "Does Ann prepare German dishes on Thursday?",
         "text_b": "No, she doesn’t.",
         "text_c": "When does she prepare German dishes?",
@@ -187,7 +187,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/Friday.png",
         "text_a": "Does Ann prepare Swiss dishes on Saturday?",
         "text_b": "No, she doesn’t.",
         "text_c": "When does she prepare Swiss dishes?",
@@ -199,7 +199,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/Sunday.jpeg",
         "text_a": "Does Ann prepare Sri Lankan dishes on Saturday?",
         "text_b": "No, she doesn’t.",
         "text_c": "When does she prepare Sri Lankan dishes?",
@@ -211,7 +211,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.jpeg",
+        "img": "assets/img/Thursday.png",
         "text_a": "Does Muhamed prepare French dishes on Wednesday?",
         "text_b": "No, he doesn’t.",
         "text_c": "When does he prepare French dishes?",
@@ -223,7 +223,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.jpeg",
+        "img": "assets/img/Saturday.jpeg",
         "text_a": "Does Muhamed prepare Japanese dishes on Friday?",
         "text_b": "No, he doesn’t.",
         "text_c": "When does he prepare Japanese dishes?",
@@ -235,7 +235,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpeg",
+        "img": "assets/img/Monday.png",
         "text_a": "Does Muhamed prepare Indian dishes on Friday?",
         "text_b": "No, he doesn’t.",
         "text_c": "When does he prepare Indian dishes?",
@@ -252,7 +252,7 @@
     "instructions": {
       "activity_a": {
         "text": "Choose the correct answer.\n නිවැරදි පිළිතුර තෝරන්න.\n சரியான பதிலைத் தேர்ந்தெடுக்கவும்.",
-        "audio": "assets/audio/a_3_i_b.mp3"
+        "audio": "assets/audio/a_3_i_d.mp3"
       },
       "activity_b": {
         "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
