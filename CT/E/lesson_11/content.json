@@ -265,7 +265,7 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "Does  Arun learn about construction site safety on Monday morning?",
+            "sentence": "Does Arun learn about construction site safety on Monday morning?",
             "audio": "assets/audio/a_3_ex_1.mp3",
             "options": [
               "Yes, he does.",
