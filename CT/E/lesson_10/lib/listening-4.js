@@ -121,7 +121,7 @@ const createSubActivityContext = (base, letter, includeFocus = false) => ({
   activityNumber: base.activityNumber,
   activityFocus: base.activityFocus,
   includeFocus,
-  subActivitySuffix: letter ? `-${letter}` : "",
+  subActivitySuffix: letter ? `${letter}` : "",
   subActivityLetter: letter || "",
 });
 
