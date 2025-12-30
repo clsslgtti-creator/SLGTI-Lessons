@@ -33,33 +33,33 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "mot'o'r",
+        "word_text": "m'a'chine",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "Does this mot'o'r run smoothly?",
+        "sentence_text": "Does this m'a'chine work well?",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "wash'e'r",
+        "word_text": "cutt'e'r",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "The wash'e'r is next to the engine.",
+        "sentence_text": "The cutt'e'r is very sharp.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.png"
+        "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
-        "word_text": "assembl'e'r",
+        "word_text": "work'e'r",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Does this assembl'e'r always check the gearbox?",
+        "sentence_text": "The work'e'r is cleaning the tools.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "driv'e'r",
+        "word_text": "filt'e'r",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Does this  driv'e'r usually park the car outside?",
+        "sentence_text": "Does the instructor always replace the filt'e'r in the pump?",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
