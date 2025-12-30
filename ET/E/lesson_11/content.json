@@ -33,35 +33,35 @@
     "content": [
       {
         "id": "p_1",
-        "word_text": "mot'o'r",
+        "word_text": "work'e'r",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "Does this mot'o'r run smoothly?",
+        "sentence_text": "The work'e'r is mounting a circuit box on the board.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
-        "word_text": "wash'e'r",
+        "word_text": "adapt'e'r",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "The wash'e'r is next to the engine.",
+        "sentence_text": "Use the adapt'e'r for this plug.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.png"
+        "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_3",
-        "word_text": "assembl'e'r",
+        "word_text": "met'e'r",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Does this assembl'e'r always check the gearbox?",
+        "sentence_text": "Does Ravi always check the met'e'r reading?",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
-        "word_text": "driv'e'r",
+        "word_text": "cam'e'ra",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Does this  driv'e'r usually park the car outside?",
+        "sentence_text": "Does this cam'e'ra always help us detect the leaks?",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.png"
+        "image": "assets/img/a_1_p_4.jpeg"
       }
     ]
   },
