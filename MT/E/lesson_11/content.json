@@ -482,33 +482,33 @@
         "content": [
           {
             "id": "n_4_a_1",
-            "item_a": "timetable",
-            "item_b": "a plan that shows the times at which activities or classes happen"
+            "item_a": "lathe machine",
+            "item_b": "a machine used to shape or cut metal"
           },
           {
             "id": "n_4_a_2",
-            "item_a": "occupational safety",
-            "item_b": "the practice of keeping people safe and healthy while they work"
+            "item_a": "vernier caliper",
+            "item_b": "a tool used for measuring small distances accurately"
           },
           {
             "id": "n_4_a_3",
-            "item_a": "communication skills",
-            "item_b": "the ability to speak, listen, and write effectively"
+            "item_a": "machine bay",
+            "item_b": "a section in the workshop where machines are kept"
           },
           {
             "id": "n_4_a_4",
-            "item_a": "practical training",
-            "item_b": "learning by doing tasks in a real or simulated work environment"
+            "item_a": "face shield",
+            "item_b": "a clear cover that protects the face during work"
           },
           {
             "id": "n_4_a_5",
-            "item_a": "evaluation",
-            "item_b": "a test or assessment to check progress or performance"
+            "item_a": "drawing",
+            "item_b": "a technical picture showing machine parts"
           },
           {
             "id": "n_4_a_6",
-            "item_a": "procedures",
-            "item_b": "official or correct ways of doing something, especially at work"
+            "item_a": "workshop",
+            "item_b": "a place where mechanical work is done"
           }
         ]
       },
@@ -517,29 +517,29 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What time does Kamal arrive at the institute?",
+            "question": "What time does Kavindu arrive at the Mechanical Technology section?",
             "answer": "7:45",
-            "options": ["7:45", "8:00", "8:30"]
+            "options": ["8:00", "7:45", "8:30"]
           },
           {
             "id": "l_4_2",
-            "question": "Does Kamal have communication skills on Wednesday morning?",
+            "question": "Does Kavindu have Mechanical Drawing and Measurement on Wednesday morning?",
             "answer": "Yes, he does.",
-            "options": ["Yes, he does.", "No, he doesn't.", "Only on Fridays."]
+            "options": ["Yes, he does.", "No, he doesn’t.", "Only on Fridays."]
           },
           {
             "id": "l_4_3",
             "question": "What does he do on Friday afternoon?",
-            "answer": "He works in the workshop.",
+            "answer": "He works on the Lathe Machine Operation.",
             "options": [
-              "He studies English.",
-              "He works in the workshop.",
-              "He stays in the library."
+              "He studies theory.",
+              "He works on the Lathe Machine Operation.",
+              "He visits the library."
             ]
           },
           {
             "id": "l_4_4",
-            "question": "Does he use the equipment before ten o’clock?",
+            "question": "Does he switch on the machines before the instructor checks them?",
             "answer": "No, he doesn’t.",
             "options": [
               "Yes, he does.",
@@ -549,7 +549,7 @@
           },
           {
             "id": "l_4_5",
-            "question": "Does Kamal leave anything  on the table after lunch?",
+            "question": "Does Kavindu leave anything on the floor after lunch?",
             "answer": "No, he doesn’t.",
             "options": [
               "Yes, he does.",
@@ -562,7 +562,7 @@
       "activity_c": [
         {
           "id": "t_1_1",
-          "text": "Every weekday, Kamal arrives at the TVET institute at around a quarter to eight.",
+          "text": "Every weekday, Kavindu arrives at the Mechanical Technology section at a quarter to eight.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -577,7 +577,7 @@
         },
         {
           "id": "t_1_4",
-          "text": "He always comes early because he likes to start the day on time.",
+          "text": "He always comes early because he wants to check the machines and tools before class.",
           "audio": "assets/audio/t_1_4.mp3"
         },
         {
@@ -587,22 +587,22 @@
         },
         {
           "id": "t_1_6",
-          "text": "He doesn’t talk while the instructor takes attendance and gives short safety reminders.",
+          "text": "He doesn’t talk while the instructor checks attendance and gives safety instructions about workshop machines.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
           "id": "t_1_7",
-          "text": "The timetable shows theory sessions in the morning and practical training in the afternoon.",
+          "text": "The timetable shows theory sessions in the morning and practical sessions in the afternoon.",
           "audio": "assets/audio/t_1_7.mp3"
         },
         {
           "id": "t_1_8",
-          "text": "On Mondays, Kamal studies occupational safety and basic science.",
+          "text": "On Mondays, Kavindu studies Workshop Safety and Machine Tools.",
           "audio": "assets/audio/t_1_8.mp3"
         },
         {
           "id": "t_1_9",
-          "text": "On Wednesday morning, he has communication skills training.",
+          "text": "On Wednesday morning, he learns about Mechanical Drawing and Measurement.",
           "audio": "assets/audio/t_1_9.mp3"
         },
         {
@@ -617,27 +617,27 @@
         },
         {
           "id": "t_1_12",
-          "text": "He likes to improve his speaking and writing.",
+          "text": "He likes drawing machine parts and using vernier calipers for measurement.",
           "audio": "assets/audio/t_1_12.mp3"
         },
         {
           "id": "t_1_13",
-          "text": "On Friday afternoon, he works in the workshop for the weekly evaluation.",
+          "text": "On Friday afternoon, he works on the Lathe Machine Operation.",
           "audio": "assets/audio/t_1_13.mp3"
         },
         {
           "id": "t_1_14",
-          "text": "He doesn’t skip any task because every session matters.",
+          "text": "He doesn’t miss any task because every session helps him become a better technician.",
           "audio": "assets/audio/t_1_14.mp3"
         },
         {
           "id": "t_1_15",
-          "text": "At 8:00 a.m., the first class starts.",
+          "text": "At 8:30 a.m., the first class starts.",
           "audio": "assets/audio/t_1_15.mp3"
         },
         {
           "id": "t_1_16",
-          "text": "Does Kamal go to the workshop first?",
+          "text": "Does Kavindu go to the workshop first?",
           "audio": "assets/audio/t_1_16.mp3"
         },
         {
@@ -652,27 +652,27 @@
         },
         {
           "id": "t_1_19",
-          "text": "He doesn’t use the equipment before ten o’clock.",
+          "text": "He doesn’t switch on the machines before the instructor checks the settings.",
           "audio": "assets/audio/t_1_19.mp3"
         },
         {
           "id": "t_1_20",
-          "text": "His instructor wants him to complete the written exercises first.",
+          "text": "His instructor wants him to complete the theory notes first.",
           "audio": "assets/audio/t_1_20.mp3"
         },
         {
           "id": "t_1_21",
-          "text": "At 10:30, Kamal has a tea break.",
+          "text": "At 10:45, Kavindu has a tea break.",
           "audio": "assets/audio/t_1_21.mp3"
         },
         {
           "id": "t_1_22",
-          "text": "He usually drinks tea in the canteen.",
+          "text": "He usually drinks plain tea in the canteen.",
           "audio": "assets/audio/t_1_22.mp3"
         },
         {
           "id": "t_1_23",
-          "text": "But sometimes he sits under the trees with his friends.",
+          "text": "But sometimes he sits near the machine bay with his friends.",
           "audio": "assets/audio/t_1_23.mp3"
         },
         {
@@ -687,12 +687,12 @@
         },
         {
           "id": "t_1_26",
-          "text": "They have snacks only on Mondays, Wednesdays and Fridays.",
+          "text": "They have snacks only on Mondays, Wednesdays, and Fridays.",
           "audio": "assets/audio/t_1_26.mp3"
         },
         {
           "id": "t_1_27",
-          "text": "After the break, Kamal goes to the training area.",
+          "text": "After the break, Kavindu goes to the mechanical workshop.",
           "audio": "assets/audio/t_1_27.mp3"
         },
         {
@@ -702,22 +702,22 @@
         },
         {
           "id": "t_1_29",
-          "text": "He doesn’t forget to use gloves or goggles.",
+          "text": "He doesn’t forget his gloves, shoes, or face shield.",
           "audio": "assets/audio/t_1_29.mp3"
         },
         {
           "id": "t_1_30",
-          "text": "His instructor walks around and checks his performance.",
+          "text": "His instructor walks around and checks his turning and cutting operations.",
           "audio": "assets/audio/t_1_30.mp3"
         },
         {
           "id": "t_1_31",
-          "text": "He eats lunch at 12:30 and cleans his table.",
+          "text": "He eats lunch at 12:30 and cleans his work area.",
           "audio": "assets/audio/t_1_31.mp3"
         },
         {
           "id": "t_1_32",
-          "text": "He doesn’t leave any waste behind, even if he is in a hurry.",
+          "text": "He doesn’t leave any metal pieces or oil spills behind.",
           "audio": "assets/audio/t_1_32.mp3"
         },
         {
@@ -732,14 +732,14 @@
         },
         {
           "id": "t_1_35",
-          "text": "Yes, he does, but he feels proud too.",
+          "text": "Yes, he does, but he feels proud because he learns something new every day.",
           "audio": "assets/audio/t_1_35.mp3"
         }
       ],
       "activity_d": [
         {
           "id": "t_1_1",
-          "text": "Every weekday, Kamal arrives at the TVET institute at around a quarter to eight.",
+          "text": "Every weekday, Kavindu arrives at the Mechanical Technology section at a quarter to eight.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -754,12 +754,12 @@
         },
         {
           "id": "t_1_6",
-          "text": "He doesn’t talk while the instructor takes attendance and gives short safety reminders.",
+          "text": "He doesn’t talk while the instructor checks attendance and gives safety instructions about workshop machines.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
           "id": "t_1_8",
-          "text": "On Mondays, Kamal studies occupational safety and basic science.",
+          "text": "On Mondays, Kavindu studies Workshop Safety and Machine Tools.",
           "audio": "assets/audio/t_1_8.mp3"
         },
         {
@@ -769,22 +769,22 @@
         },
         {
           "id": "t_1_14",
-          "text": "He doesn’t skip any task because every session matters.",
+          "text": "He doesn’t miss any task because every session helps him become a better technician.",
           "audio": "assets/audio/t_1_14.mp3"
         },
         {
           "id": "t_1_19",
-          "text": "He doesn’t use the equipment before ten o’clock.",
+          "text": "He doesn’t switch on the machines before the instructor checks the settings.",
           "audio": "assets/audio/t_1_19.mp3"
         },
         {
           "id": "t_1_22",
-          "text": "He usually drinks tea in the canteen.",
+          "text": "He usually drinks plain tea in the canteen.",
           "audio": "assets/audio/t_1_22.mp3"
         },
         {
           "id": "t_1_23",
-          "text": "But sometimes he sits under the trees with his friends.",
+          "text": "But sometimes he sits near the machine bay with his friends.",
           "audio": "assets/audio/t_1_23.mp3"
         },
         {
@@ -794,7 +794,7 @@
         },
         {
           "id": "t_1_29",
-          "text": "He doesn’t forget to use gloves or goggles.",
+          "text": "He doesn’t forget his gloves, shoes, or face shield.",
           "audio": "assets/audio/t_1_29.mp3"
         },
         {
@@ -806,7 +806,7 @@
       "activity_e": [
         {
           "id": "t_1_1",
-          "text": "Every weekday, Kamal arrives at the TVET institute at around a quarter to eight.",
+          "text": "Every weekday, Kavindu arrives at the Mechanical Technology section at a quarter to eight.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -821,12 +821,12 @@
         },
         {
           "id": "t_1_6",
-          "text": "He doesn’t talk while the instructor takes attendance and gives short safety reminders.",
+          "text": "He doesn’t talk while the instructor checks attendance and gives safety instructions about workshop machines.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
           "id": "t_1_8",
-          "text": "On Mondays, Kamal studies occupational safety and basic science.",
+          "text": "On Mondays, Kavindu studies Workshop Safety and Machine Tools.",
           "audio": "assets/audio/t_1_8.mp3"
         },
         {
@@ -836,22 +836,22 @@
         },
         {
           "id": "t_1_14",
-          "text": "He doesn’t skip any task because every session matters.",
+          "text": "He doesn’t miss any task because every session helps him become a better technician.",
           "audio": "assets/audio/t_1_14.mp3"
         },
         {
           "id": "t_1_19",
-          "text": "He doesn’t use the equipment before ten o’clock.",
+          "text": "He doesn’t switch on the machines before the instructor checks the settings.",
           "audio": "assets/audio/t_1_19.mp3"
         },
         {
           "id": "t_1_22",
-          "text": "He usually drinks tea in the canteen.",
+          "text": "He usually drinks plain tea in the canteen.",
           "audio": "assets/audio/t_1_22.mp3"
         },
         {
           "id": "t_1_23",
-          "text": "But sometimes he sits under the trees with his friends.",
+          "text": "But sometimes he sits near the machine bay with his friends.",
           "audio": "assets/audio/t_1_23.mp3"
         },
         {
@@ -861,7 +861,7 @@
         },
         {
           "id": "t_1_29",
-          "text": "He doesn’t forget to use gloves or goggles.",
+          "text": "He doesn’t forget his gloves, shoes, or face shield.",
           "audio": "assets/audio/t_1_29.mp3"
         },
         {
