@@ -265,136 +265,136 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "Does Kala  learn about vehicle safety on Monday morning?",
-            "audio": "assets/audio/a_3_ex_1.mp3",
+            "sentence": "Does John learn about food safety on Monday morning?",
+            "audio": "assets/audio/a_3_b_1.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she learns about car maintenance."
+              "Yes, he does.",
+              "No, he doesn’t.",
+              "No, he doesn’t, but he learns about cake making."
             ],
-            "answer": "Yes, she does.",
+            "answer": "Yes, he does.",
             "image": "assets/img/a_3.png"
           }
         ],
         "content": [
           {
             "id": "g_b_1",
-            "sentence": "Does she follow a class on  gearbox overhauling on Tuesday morning?",
+            "sentence": "Does he follow a class on dough and bread on Tuesday morning?",
             "audio": "assets/audio/a_3_b_1.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she follows a class on car repairs."
+              "Yes, he does.",
+              "No, he doesn’t.",
+              "No, he doesn’t, but he follows a class on vegetable processing."
             ],
-            "answer": "No, she doesn’t.",
+            "answer": "Yes, he does.",
             "image": "assets/img/a_3.png"
           },
           {
             "id": "g_b_2",
-            "sentence": "Does Kala have a session on braking systems on Wednesday morning?",
+            "sentence": "Does John have a class on baking cakes and pastries on Wednesday morning?",
             "audio": "assets/audio/a_3_b_2.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she has  a session on vehicle service procedures."
+              "Yes, he does.",
+              "No, he doesn’t, but he has a class on sea food.",
+              "No, he doesn’t, but he has a class on nutrition and diet principles."
             ],
-            "answer": "No, she doesn’t, but she has  a session on vehicle service procedures.",
+            "answer": "No, he doesn’t, but he has a class on nutrition and diet principles.",
             "image": "assets/img/a_3.png"
           },
           {
             "id": "g_b_3",
-            "sentence": "Does she attend an electrical systems  lesson on Thursday morning?",
+            "sentence": "Does he attend a class on jam making on Thursday morning?",
             "audio": "assets/audio/a_3_b_3.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she attends a lesson on  brake systems."
+              "Yes, he does.",
+              "No, he doesn’t.",
+              "No, he doesn’t, but he attends a field trip."
             ],
-            "answer": "No, she doesn’t",
+            "answer": "No, he doesn’t.",
             "image": "assets/img/a_3.png"
           },
           {
             "id": "g_b_4",
-            "sentence": "Does Kala study vehicle body repair on Friday morning?",
+            "sentence": "Does John study beverages on Friday morning?",
             "audio": "assets/audio/a_3_b_4.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she studies automotive electrical systems."
+              "Yes, he does.",
+              "No, he doesn’t.",
+              "No, he doesn’t, but he studies food preservation methods."
             ],
-            "answer": "No, she doesn’t, but she studies automotive electrical systems.",
+            "answer": "No, he doesn’t, but he studies food preservation methods.",
             "image": "assets/img/a_3.png"
           },
           {
             "id": "g_b_5",
-            "sentence": "Does she practise tyre balancing on Monday before lunch?",
+            "sentence": "Does he practice storing seafood and meat on Monday before lunch?",
             "audio": "assets/audio/a_3_b_5.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she practises suspension and steering."
+              "Yes, he does.",
+              "No, he doesn’t.",
+              "No, he doesn’t, but he practices storing pickles."
             ],
-            "answer": "No, she doesn’t.",
+            "answer": "Yes, he does.",
             "image": "assets/img/a_3.png"
           },
           {
             "id": "g_b_6",
-            "sentence": "Does Kala join a session on lubrication systems on Tuesday before lunch?",
+            "sentence": "Does John join a session on spices on Tuesday from 10:45 to 12:30?",
             "audio": "assets/audio/a_3_b_6.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she joins a session on tyre replacement."
+              "Yes, he does.",
+              "No, he doesn’t.",
+              "No, he doesn’t, but he joins a session on fruit and vegetable processing."
             ],
-            "answer": "No, she doesn’t.",
+            "answer": "No, he doesn’t, but he joins a session on fruit and vegetable processing.",
             "image": "assets/img/a_3.png"
           },
           {
             "id": "g_b_7",
-            "sentence": "Does she learn about lubrication  fluids on Wednesday before lunch?",
+            "sentence": "Does he learn food chemistry basics on Wednesday from 10:45 to 12:30?",
             "audio": "assets/audio/a_3_b_7.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she learns about repairs and maintenance."
+              "Yes, he does.",
+              "No, he doesn’t.",
+              "No, he doesn’t, but he learns traffic rules."
             ],
-            "answer": "Yes, she does.",
+            "answer": "Yes, he does.",
             "image": "assets/img/a_3.png"
           },
           {
             "id": "g_b_8",
-            "sentence": "Does Kala take part in car painting practice on Thursday afternoon?",
+            "sentence": "Does John take part in spice roasting and grinding on Thursday afternoon?",
             "audio": "assets/audio/a_3_b_8.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she takes part in steering practice."
+              "Yes, he does.",
+              "No, he doesn’t.",
+              "No, he doesn’t, but he takes part in Beverages & Coconut Products."
             ],
-            "answer": "No, she doesn’t.",
+            "answer": "No, he doesn’t, but he takes part in Beverages & Coconut Products.",
             "image": "assets/img/a_3.png"
           },
           {
             "id": "g_b_9",
-            "sentence": "Does she do brake system maintenance on Friday afternoon?",
+            "sentence": "Does he do quality control and testing on Friday afternoon?",
             "audio": "assets/audio/a_3_b_9.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she does vehicle performance testing."
+              "Yes, he does.",
+              "No, he doesn’t.",
+              "No, he doesn’t, but he does Packaging & Waste Management."
             ],
-            "answer": "No, she doesn’t, but she does vehicle performance testing.",
+            "answer": "No, he doesn’t, but he does Packaging & Waste Management.",
             "image": "assets/img/a_3.png"
           },
           {
             "id": "g_b_10",
-            "sentence": "Does Kala remove and refit wheels on Monday afternoon?",
+            "sentence": "Does John cook and fillet seafood on Monday afternoon?",
             "audio": "assets/audio/a_3_b_10.mp3",
             "options": [
-              "Yes, she does.",
-              "No, she doesn’t.",
-              "No, she doesn’t, but she removes and refits engines."
+              "Yes, he does.",
+              "No, he doesn’t.",
+              "No, he doesn’t, but he cooks pastries."
             ],
-            "answer": "No, she doesn’t.",
+            "answer": "Yes, he does.",
             "image": "assets/img/a_3.png"
           }
         ]
@@ -402,53 +402,53 @@
       "activity_b": [
         {
           "id": "n_3_1",
-          "text": "Does she follow a class on  gearbox overhauling on Tuesday morning?",
-          "audio": "assets/audio/a_3_b_g_1.mp3"
+          "text": "Does he follow a class on dough and bread on Tuesday morning?",
+          "audio": "assets/audio/a_3_b_1.mp3"
         },
         {
           "id": "n_3_2",
-          "text": "Does Kala have a session on braking systems on Wednesday morning?",
-          "audio": "assets/audio/a_3_b_g_2.mp3"
+          "text": "Does John have a class on baking cakes and pastries on Wednesday morning?",
+          "audio": "assets/audio/a_3_b_2.mp3"
         },
         {
           "id": "n_3_3",
-          "text": "Does she attend an electrical systems  lesson on Thursday morning?",
-          "audio": "assets/audio/a_3_b_g_3.mp3"
+          "text": "Does he attend a class on jam making on Thursday morning?",
+          "audio": "assets/audio/a_3_b_3.mp3"
         },
         {
           "id": "n_3_4",
-          "text": "Does Kala study vehicle body repair on Friday morning?",
-          "audio": "assets/audio/a_3_b_g_4.mp3"
+          "text": "Does John study beverages on Friday morning?",
+          "audio": "assets/audio/a_3_b_4.mp3"
         },
         {
           "id": "n_3_5",
-          "text": "Does she practise tyre balancing on Monday before lunch?",
-          "audio": "assets/audio/a_3_b_g_5.mp3"
+          "text": "Does he practice storing seafood and meat on Monday before lunch?",
+          "audio": "assets/audio/a_3_b_5.mp3"
         },
         {
           "id": "n_3_6",
-          "text": "Does Kala join a session on lubrication systems on Tuesday before lunch?",
-          "audio": "assets/audio/a_3_b_g_6.mp3"
+          "text": "Does John join a session on spices on Tuesday from 10:45 to 12:30?",
+          "audio": "assets/audio/a_3_b_6.mp3"
         },
         {
           "id": "n_3_7",
-          "text": "Does she learn about lubrication  fluids on Wednesday before lunch?",
-          "audio": "assets/audio/a_3_b_g_7.mp3"
+          "text": "Does he learn food chemistry basics on Wednesday from 10:45 to 12:30?",
+          "audio": "assets/audio/a_3_b_7.mp3"
         },
         {
           "id": "n_3_8",
-          "text": "Does Kala take part in car painting practice on Thursday afternoon?.",
-          "audio": "assets/audio/a_3_b_g_8.mp3"
+          "text": "Does John take part in spice roasting and grinding on Thursday afternoon?",
+          "audio": "assets/audio/a_3_b_8.mp3"
         },
         {
           "id": "n_3_9",
-          "text": "Does she do brake system maintenance on Friday afternoon?",
-          "audio": "assets/audio/a_3_b_g_9.mp3"
+          "text": "Does he do quality control and testing on Friday afternoon?",
+          "audio": "assets/audio/a_3_b_9.mp3"
         },
         {
           "id": "n_3_10",
-          "text": "Does Kala remove and refit wheels on Monday afternoon?",
-          "audio": "assets/audio/a_3_b_g_10.mp3"
+          "text": "Does John cook and fillet seafood on Monday afternoon?",
+          "audio": "assets/audio/a_3_b_10.mp3"
         }
       ]
     }
