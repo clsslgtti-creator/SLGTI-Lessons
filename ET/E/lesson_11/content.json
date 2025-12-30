@@ -482,33 +482,33 @@
         "content": [
           {
             "id": "n_4_a_1",
-            "item_a": "timetable",
-            "item_b": "a plan that shows the times at which activities or classes happen"
+            "item_a": "multimeter",
+            "item_b": "a tool used to measure voltage, current, and resistance"
           },
           {
             "id": "n_4_a_2",
-            "item_a": "occupational safety",
-            "item_b": "the practice of keeping people safe and healthy while they work"
+            "item_a": "insulated",
+            "item_b": "covered with material that stops electricity from passing through"
           },
           {
             "id": "n_4_a_3",
-            "item_a": "communication skills",
-            "item_b": "the ability to speak, listen, and write effectively"
+            "item_a": "transformer",
+            "item_b": "a machine that changes the voltage of electricity"
           },
           {
             "id": "n_4_a_4",
-            "item_a": "practical training",
-            "item_b": "learning by doing tasks in a real or simulated work environment"
+            "item_a": "circuit",
+            "item_b": "a path through which electricity flows"
           },
           {
             "id": "n_4_a_5",
-            "item_a": "evaluation",
-            "item_b": "a test or assessment to check progress or performance"
+            "item_a": "tester",
+            "item_b": "a small device used to check if current is flowing"
           },
           {
             "id": "n_4_a_6",
-            "item_a": "procedures",
-            "item_b": "official or correct ways of doing something, especially at work"
+            "item_a": "safety manual",
+            "item_b": "a guide with rules to work safely"
           }
         ]
       },
@@ -517,29 +517,29 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What time does Kamal arrive at the institute?",
+            "question": "What time does Ramesh arrive at the Electrical Technology section?",
             "answer": "7:45",
-            "options": ["7:45", "8:00", "8:30"]
+            "options": ["8:00", "7:45", "8:30"]
           },
           {
             "id": "l_4_2",
-            "question": "Does Kamal have communication skills on Wednesday morning?",
+            "question": "Does Ramesh have Electrical Measurements and Instruments on Wednesday morning?",
             "answer": "Yes, he does.",
-            "options": ["Yes, he does.", "No, he doesn't.", "Only on Fridays."]
+            "options": ["Yes, he does.", "No, he doesn’t.", "Only on Fridays."]
           },
           {
             "id": "l_4_3",
             "question": "What does he do on Friday afternoon?",
-            "answer": "He works in the workshop.",
+            "answer": "He works in the wiring workshop.",
             "options": [
-              "He studies English.",
-              "He works in the workshop.",
-              "He stays in the library."
+              "He studies theory.",
+              "He works in the wiring workshop.",
+              "He visits the library."
             ]
           },
           {
             "id": "l_4_4",
-            "question": "Does he use the equipment before ten o’clock?",
+            "question": "Does he connect wires before the instructor gives the demonstration?",
             "answer": "No, he doesn’t.",
             "options": [
               "Yes, he does.",
@@ -549,7 +549,7 @@
           },
           {
             "id": "l_4_5",
-            "question": "Does Kamal leave anything  on the table after lunch?",
+            "question": "Does Ramesh leave anything on the table after lunch?",
             "answer": "No, he doesn’t.",
             "options": [
               "Yes, he does.",
@@ -562,7 +562,7 @@
       "activity_c": [
         {
           "id": "t_1_1",
-          "text": "Every weekday, Kamal arrives at the TVET institute at around a quarter to eight.",
+          "text": "Every weekday, Ramesh arrives at the Electrical Technology section at a quarter to eight.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -577,7 +577,7 @@
         },
         {
           "id": "t_1_4",
-          "text": "He always comes early because he likes to start the day on time.",
+          "text": "He always comes early because he wants to check the wiring tools and safety gear before the class.",
           "audio": "assets/audio/t_1_4.mp3"
         },
         {
@@ -587,22 +587,22 @@
         },
         {
           "id": "t_1_6",
-          "text": "He doesn’t talk while the instructor takes attendance and gives short safety reminders.",
+          "text": "He doesn’t talk while the instructor checks attendance, and reminds everyone about electrical safety.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
           "id": "t_1_7",
-          "text": "The timetable shows theory sessions in the morning and practical training in the afternoon.",
+          "text": "The timetable shows theory sessions in the morning and practical sessions in the afternoon.",
           "audio": "assets/audio/t_1_7.mp3"
         },
         {
           "id": "t_1_8",
-          "text": "On Mondays, Kamal studies occupational safety and basic science.",
+          "text": "On Mondays, Ramesh studies Electrical Safety and Basic Circuits.",
           "audio": "assets/audio/t_1_8.mp3"
         },
         {
           "id": "t_1_9",
-          "text": "On Wednesday morning, he has communication skills training.",
+          "text": "On Wednesday morning, he learns about Electrical Measurements and Instruments.",
           "audio": "assets/audio/t_1_9.mp3"
         },
         {
@@ -617,27 +617,27 @@
         },
         {
           "id": "t_1_12",
-          "text": "He likes to improve his speaking and writing.",
+          "text": "He likes using multimeters and learning how to test voltage and current.",
           "audio": "assets/audio/t_1_12.mp3"
         },
         {
           "id": "t_1_13",
-          "text": "On Friday afternoon, he works in the workshop for the weekly evaluation.",
+          "text": "On Friday afternoon, he works in the wiring workshop for the Final Circuit Testing session.",
           "audio": "assets/audio/t_1_13.mp3"
         },
         {
           "id": "t_1_14",
-          "text": "He doesn’t skip any task because every session matters.",
+          "text": "He doesn’t miss any exercise because every activity helps him improve his skills.",
           "audio": "assets/audio/t_1_14.mp3"
         },
         {
           "id": "t_1_15",
-          "text": "At 8:00 a.m., the first class starts.",
+          "text": "At 8:30 a.m., the first class starts.",
           "audio": "assets/audio/t_1_15.mp3"
         },
         {
           "id": "t_1_16",
-          "text": "Does Kamal go to the workshop first?",
+          "text": "Does Ramesh go to the lab first?",
           "audio": "assets/audio/t_1_16.mp3"
         },
         {
@@ -652,17 +652,17 @@
         },
         {
           "id": "t_1_19",
-          "text": "He doesn’t use the equipment before ten o’clock.",
+          "text": "He doesn’t connect wires before the instructor gives the demonstration.",
           "audio": "assets/audio/t_1_19.mp3"
         },
         {
           "id": "t_1_20",
-          "text": "His instructor wants him to complete the written exercises first.",
+          "text": "His instructor wants him to read the safety manual first.",
           "audio": "assets/audio/t_1_20.mp3"
         },
         {
           "id": "t_1_21",
-          "text": "At 10:30, Kamal has a tea break.",
+          "text": "At 10:45, Ramesh has a tea break.",
           "audio": "assets/audio/t_1_21.mp3"
         },
         {
@@ -672,7 +672,7 @@
         },
         {
           "id": "t_1_23",
-          "text": "But sometimes he sits under the trees with his friends.",
+          "text": "But sometimes he sits outside near the transformer model with his friends.",
           "audio": "assets/audio/t_1_23.mp3"
         },
         {
@@ -687,37 +687,37 @@
         },
         {
           "id": "t_1_26",
-          "text": "They have snacks only on Mondays, Wednesdays and Fridays.",
+          "text": "They have snacks only on Tuesdays, Thursdays, and Fridays.",
           "audio": "assets/audio/t_1_26.mp3"
         },
         {
           "id": "t_1_27",
-          "text": "After the break, Kamal goes to the training area.",
+          "text": "After the break, Ramesh goes to the electrical lab.",
           "audio": "assets/audio/t_1_27.mp3"
         },
         {
           "id": "t_1_28",
-          "text": "He uses different tools and follows safety procedures carefully.",
+          "text": "He uses different tools such as pliers, testers, and multimeters.",
           "audio": "assets/audio/t_1_28.mp3"
         },
         {
           "id": "t_1_29",
-          "text": "He doesn’t forget to use gloves or goggles.",
+          "text": "He doesn’t forget his insulated gloves or shoes.",
           "audio": "assets/audio/t_1_29.mp3"
         },
         {
           "id": "t_1_30",
-          "text": "His instructor walks around and checks his performance.",
+          "text": "His instructor walks around and checks his circuit connections carefully.",
           "audio": "assets/audio/t_1_30.mp3"
         },
         {
           "id": "t_1_31",
-          "text": "He eats lunch at 12:30 and cleans his table.",
+          "text": "He eats lunch at 12:30 and cleans his workbench.",
           "audio": "assets/audio/t_1_31.mp3"
         },
         {
           "id": "t_1_32",
-          "text": "He doesn’t leave any waste behind, even if he is in a hurry.",
+          "text": "He doesn’t leave any pieces of wire or waste behind.",
           "audio": "assets/audio/t_1_32.mp3"
         },
         {
@@ -732,14 +732,14 @@
         },
         {
           "id": "t_1_35",
-          "text": "Yes, he does, but he feels proud too.",
+          "text": "Yes, he does, but he feels proud because he learns something new every day.",
           "audio": "assets/audio/t_1_35.mp3"
         }
       ],
       "activity_d": [
         {
           "id": "t_1_1",
-          "text": "Every weekday, Kamal arrives at the TVET institute at around a quarter to eight.",
+          "text": "Every weekday, Ramesh arrives at the Electrical Technology section at a quarter to eight.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -754,12 +754,12 @@
         },
         {
           "id": "t_1_6",
-          "text": "He doesn’t talk while the instructor takes attendance and gives short safety reminders.",
+          "text": "He doesn’t talk while the instructor checks attendance, and reminds everyone about electrical safety.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
           "id": "t_1_8",
-          "text": "On Mondays, Kamal studies occupational safety and basic science.",
+          "text": "On Mondays, Ramesh studies Electrical Safety and Basic Circuits.",
           "audio": "assets/audio/t_1_8.mp3"
         },
         {
@@ -769,12 +769,12 @@
         },
         {
           "id": "t_1_14",
-          "text": "He doesn’t skip any task because every session matters.",
+          "text": "He doesn’t miss any exercise because every activity helps him improve his skills.",
           "audio": "assets/audio/t_1_14.mp3"
         },
         {
           "id": "t_1_19",
-          "text": "He doesn’t use the equipment before ten o’clock.",
+          "text": "He doesn’t connect wires before the instructor gives the demonstration.",
           "audio": "assets/audio/t_1_19.mp3"
         },
         {
@@ -784,17 +784,17 @@
         },
         {
           "id": "t_1_23",
-          "text": "But sometimes he sits under the trees with his friends.",
+          "text": "But sometimes he sits outside near the transformer model with his friends.",
           "audio": "assets/audio/t_1_23.mp3"
         },
         {
           "id": "t_1_28",
-          "text": "He uses different tools and follows safety procedures carefully.",
+          "text": "He uses different tools such as pliers, testers, and multimeters.",
           "audio": "assets/audio/t_1_28.mp3"
         },
         {
           "id": "t_1_29",
-          "text": "He doesn’t forget to use gloves or goggles.",
+          "text": "He doesn’t forget his insulated gloves or shoes.",
           "audio": "assets/audio/t_1_29.mp3"
         },
         {
@@ -806,7 +806,7 @@
       "activity_e": [
         {
           "id": "t_1_1",
-          "text": "Every weekday, Kamal arrives at the TVET institute at around a quarter to eight.",
+          "text": "Every weekday, Ramesh arrives at the Electrical Technology section at a quarter to eight.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -821,12 +821,12 @@
         },
         {
           "id": "t_1_6",
-          "text": "He doesn’t talk while the instructor takes attendance and gives short safety reminders.",
+          "text": "He doesn’t talk while the instructor checks attendance, and reminds everyone about electrical safety.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
           "id": "t_1_8",
-          "text": "On Mondays, Kamal studies occupational safety and basic science.",
+          "text": "On Mondays, Ramesh studies Electrical Safety and Basic Circuits.",
           "audio": "assets/audio/t_1_8.mp3"
         },
         {
@@ -836,12 +836,12 @@
         },
         {
           "id": "t_1_14",
-          "text": "He doesn’t skip any task because every session matters.",
+          "text": "He doesn’t miss any exercise because every activity helps him improve his skills.",
           "audio": "assets/audio/t_1_14.mp3"
         },
         {
           "id": "t_1_19",
-          "text": "He doesn’t use the equipment before ten o’clock.",
+          "text": "He doesn’t connect wires before the instructor gives the demonstration.",
           "audio": "assets/audio/t_1_19.mp3"
         },
         {
@@ -851,17 +851,17 @@
         },
         {
           "id": "t_1_23",
-          "text": "But sometimes he sits under the trees with his friends.",
+          "text": "But sometimes he sits outside near the transformer model with his friends.",
           "audio": "assets/audio/t_1_23.mp3"
         },
         {
           "id": "t_1_28",
-          "text": "He uses different tools and follows safety procedures carefully.",
+          "text": "He uses different tools such as pliers, testers, and multimeters.",
           "audio": "assets/audio/t_1_28.mp3"
         },
         {
           "id": "t_1_29",
-          "text": "He doesn’t forget to use gloves or goggles.",
+          "text": "He doesn’t forget his insulated gloves or shoes.",
           "audio": "assets/audio/t_1_29.mp3"
         },
         {
