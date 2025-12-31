@@ -482,33 +482,33 @@
         "content": [
           {
             "id": "n_4_a_1",
-            "item_a": "timetable",
-            "item_b": "a plan that shows the times at which activities or classes happen"
+            "item_a": "trowel",
+            "item_b": "a small tool used for spreading cement or plaster"
           },
           {
             "id": "n_4_a_2",
-            "item_a": "occupational safety",
-            "item_b": "the practice of keeping people safe and healthy while they work"
+            "item_a": "masonry",
+            "item_b": "the work of building with bricks or stones"
           },
           {
             "id": "n_4_a_3",
-            "item_a": "communication skills",
-            "item_b": "the ability to speak, listen, and write effectively"
+            "item_a": "helmet",
+            "item_b": "a hard hat worn for protection on a site"
           },
           {
             "id": "n_4_a_4",
-            "item_a": "practical training",
-            "item_b": "learning by doing tasks in a real or simulated work environment"
+            "item_a": "plastering",
+            "item_b": "covering walls with a smooth cement surface"
           },
           {
             "id": "n_4_a_5",
-            "item_a": "evaluation",
-            "item_b": "a test or assessment to check progress or performance"
+            "item_a": "alignment",
+            "item_b": "the correct straight position of a wall or structure"
           },
           {
             "id": "n_4_a_6",
-            "item_a": "procedures",
-            "item_b": "official or correct ways of doing something, especially at work"
+            "item_a": "blueprint",
+            "item_b": "a technical drawing that shows how a building will be made"
           }
         ]
       },
@@ -517,44 +517,48 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "What time does Kamal arrive at the institute?",
+            "question": "What time does Nirmala arrive at the Construction Technology section?",
             "answer": "7:45",
-            "options": ["7:45", "8:00", "8:30"]
+            "options": ["8:00", "7:45", "8:30"]
           },
           {
             "id": "l_4_2",
-            "question": "Does Kamal have communication skills on Wednesday morning?",
-            "answer": "Yes, he does.",
-            "options": ["Yes, he does.", "No, he doesn't.", "Only on Fridays."]
+            "question": "Does Nirmala have Building Materials and Measurements on Wednesday morning?",
+            "answer": "Yes, she does.",
+            "options": [
+              "Yes, she does.",
+              "No, she doesn’t.",
+              "Only on Fridays."
+            ]
           },
           {
             "id": "l_4_3",
-            "question": "What does he do on Friday afternoon?",
-            "answer": "He works in the workshop.",
+            "question": "What does she do on Friday afternoon?",
+            "answer": "She works on Masonry and Plastering.",
             "options": [
-              "He studies English.",
-              "He works in the workshop.",
-              "He stays in the library."
+              "She studies theory.",
+              "She works on Masonry and Plastering.",
+              "She visits the library."
             ]
           },
           {
             "id": "l_4_4",
-            "question": "Does he use the equipment before ten o’clock?",
-            "answer": "No, he doesn’t.",
+            "question": "Does she use the tools before the instructor gives instructions?",
+            "answer": "No, she doesn’t.",
             "options": [
-              "Yes, he does.",
-              "No, he doesn’t.",
-              "Sometimes he does."
+              "Yes, she does.",
+              "No, she doesn’t.",
+              "Sometimes she does."
             ]
           },
           {
             "id": "l_4_5",
-            "question": "Does Kamal leave anything  on the table after lunch?",
-            "answer": "No, he doesn’t.",
+            "question": "Does Nirmala leave anything on the table after lunch?",
+            "answer": "No, she doesn’t.",
             "options": [
-              "Yes, he does.",
-              "No, he doesn’t.",
-              "Only when he is in a hurry."
+              "Yes, she does.",
+              "No, she doesn’t.",
+              "Only when she is in a hurry."
             ]
           }
         ]
@@ -562,122 +566,122 @@
       "activity_c": [
         {
           "id": "t_1_1",
-          "text": "Every weekday, Kamal arrives at the TVET institute at around a quarter to eight.",
+          "text": "Every weekday, Nirmala arrives at the Construction Technology section at a quarter to eight.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
           "id": "t_1_2",
-          "text": "Does he come late?",
+          "text": "Does she come late?",
           "audio": "assets/audio/t_1_2.mp3"
         },
         {
           "id": "t_1_3",
-          "text": "No, he doesn’t.",
+          "text": "No, she doesn’t.",
           "audio": "assets/audio/t_1_3.mp3"
         },
         {
           "id": "t_1_4",
-          "text": "He always comes early because he likes to start the day on time.",
+          "text": "She always comes early because she wants to check the tools and materials before class.",
           "audio": "assets/audio/t_1_4.mp3"
         },
         {
           "id": "t_1_5",
-          "text": "He stands in line with the other trainees for the morning assembly.",
+          "text": "She stands in line with the other trainees for the morning assembly.",
           "audio": "assets/audio/t_1_5.mp3"
         },
         {
           "id": "t_1_6",
-          "text": "He doesn’t talk while the instructor takes attendance and gives short safety reminders.",
+          "text": "She doesn’t talk while the instructor takes attendance, and gives short safety reminders about construction sites.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
           "id": "t_1_7",
-          "text": "The timetable shows theory sessions in the morning and practical training in the afternoon.",
+          "text": "The timetable shows theory sessions in the morning and practical sessions in the afternoon.",
           "audio": "assets/audio/t_1_7.mp3"
         },
         {
           "id": "t_1_8",
-          "text": "On Mondays, Kamal studies occupational safety and basic science.",
+          "text": "On Mondays, Nirmala studies Construction Safety and Site Rules.",
           "audio": "assets/audio/t_1_8.mp3"
         },
         {
           "id": "t_1_9",
-          "text": "On Wednesday morning, he has communication skills training.",
+          "text": "On Wednesday morning, she learns about Building Materials and Measurements.",
           "audio": "assets/audio/t_1_9.mp3"
         },
         {
           "id": "t_1_10",
-          "text": "Does he enjoy it?",
+          "text": "Does she enjoy it?",
           "audio": "assets/audio/t_1_10.mp3"
         },
         {
           "id": "t_1_11",
-          "text": "Yes, he does.",
+          "text": "Yes, she does.",
           "audio": "assets/audio/t_1_11.mp3"
         },
         {
           "id": "t_1_12",
-          "text": "He likes to improve his speaking and writing.",
+          "text": "She likes to measure walls and draw simple building plans.",
           "audio": "assets/audio/t_1_12.mp3"
         },
         {
           "id": "t_1_13",
-          "text": "On Friday afternoon, he works in the workshop for the weekly evaluation.",
+          "text": "On Friday afternoon, she works on the Masonry and Plastering practical.",
           "audio": "assets/audio/t_1_13.mp3"
         },
         {
           "id": "t_1_14",
-          "text": "He doesn’t skip any task because every session matters.",
+          "text": "She doesn’t skip any task because every session helps her improve her skills.",
           "audio": "assets/audio/t_1_14.mp3"
         },
         {
           "id": "t_1_15",
-          "text": "At 8:00 a.m., the first class starts.",
+          "text": "At 8:30 a.m., the first class starts.",
           "audio": "assets/audio/t_1_15.mp3"
         },
         {
           "id": "t_1_16",
-          "text": "Does Kamal go to the workshop first?",
+          "text": "Does Nirmala go to the site first?",
           "audio": "assets/audio/t_1_16.mp3"
         },
         {
           "id": "t_1_17",
-          "text": "No, he doesn’t.",
+          "text": "No, she doesn’t.",
           "audio": "assets/audio/t_1_17.mp3"
         },
         {
           "id": "t_1_18",
-          "text": "He stays in the classroom for theory.",
+          "text": "She stays in the classroom for theory.",
           "audio": "assets/audio/t_1_18.mp3"
         },
         {
           "id": "t_1_19",
-          "text": "He doesn’t use the equipment before ten o’clock.",
+          "text": "She doesn’t use the trowel or hammer before the instructor gives instructions.",
           "audio": "assets/audio/t_1_19.mp3"
         },
         {
           "id": "t_1_20",
-          "text": "His instructor wants him to complete the written exercises first.",
+          "text": "Her instructor wants her to study the drawing and safety notes first.",
           "audio": "assets/audio/t_1_20.mp3"
         },
         {
           "id": "t_1_21",
-          "text": "At 10:30, Kamal has a tea break.",
+          "text": "At 10:45, Nirmala has a tea break.",
           "audio": "assets/audio/t_1_21.mp3"
         },
         {
           "id": "t_1_22",
-          "text": "He usually drinks tea in the canteen.",
+          "text": "She usually drinks plain tea in the canteen.",
           "audio": "assets/audio/t_1_22.mp3"
         },
         {
           "id": "t_1_23",
-          "text": "But sometimes he sits under the trees with his friends.",
+          "text": "But sometimes she sits near the workshop with her friends.",
           "audio": "assets/audio/t_1_23.mp3"
         },
         {
           "id": "t_1_24",
-          "text": "Do they eat snacks every day?",
+          "text": "Do they eat buns every day?",
           "audio": "assets/audio/t_1_24.mp3"
         },
         {
@@ -687,37 +691,37 @@
         },
         {
           "id": "t_1_26",
-          "text": "They have snacks only on Mondays, Wednesdays and Fridays.",
+          "text": "They have buns only on Mondays, Wednesdays, and Fridays.",
           "audio": "assets/audio/t_1_26.mp3"
         },
         {
           "id": "t_1_27",
-          "text": "After the break, Kamal goes to the training area.",
+          "text": "After the break, Nirmala goes to the training site.",
           "audio": "assets/audio/t_1_27.mp3"
         },
         {
           "id": "t_1_28",
-          "text": "He uses different tools and follows safety procedures carefully.",
+          "text": "She uses different tools and follows safety procedures carefully.",
           "audio": "assets/audio/t_1_28.mp3"
         },
         {
           "id": "t_1_29",
-          "text": "He doesn’t forget to use gloves or goggles.",
+          "text": "She doesn’t forget her helmet or gloves.",
           "audio": "assets/audio/t_1_29.mp3"
         },
         {
           "id": "t_1_30",
-          "text": "His instructor walks around and checks his performance.",
+          "text": "Her instructor walks around and checks her wall alignment and plastering work.",
           "audio": "assets/audio/t_1_30.mp3"
         },
         {
           "id": "t_1_31",
-          "text": "He eats lunch at 12:30 and cleans his table.",
+          "text": "She eats lunch at 12:30 and cleans her table.",
           "audio": "assets/audio/t_1_31.mp3"
         },
         {
           "id": "t_1_32",
-          "text": "He doesn’t leave any waste behind, even if he is in a hurry.",
+          "text": "She doesn’t leave any waste behind, even if she is in a hurry.",
           "audio": "assets/audio/t_1_32.mp3"
         },
         {
@@ -727,146 +731,146 @@
         },
         {
           "id": "t_1_34",
-          "text": "Does he feel tired?",
+          "text": "Does she feel tired?",
           "audio": "assets/audio/t_1_34.mp3"
         },
         {
           "id": "t_1_35",
-          "text": "Yes, he does, but he feels proud too.",
+          "text": "Yes, she does, but she feels proud because she learns something new every day.",
           "audio": "assets/audio/t_1_35.mp3"
         }
       ],
       "activity_d": [
         {
           "id": "t_1_1",
-          "text": "Every weekday, Kamal arrives at the TVET institute at around a quarter to eight.",
+          "text": "Every weekday, Nirmala arrives at the Construction Technology section at a quarter to eight.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
           "id": "t_1_2",
-          "text": "Does he come late?",
+          "text": "Does she come late?",
           "audio": "assets/audio/t_1_2.mp3"
         },
         {
           "id": "t_1_5",
-          "text": "He stands in line with the other trainees for the morning assembly.",
+          "text": "She stands in line with the other trainees for the morning assembly.",
           "audio": "assets/audio/t_1_5.mp3"
         },
         {
           "id": "t_1_6",
-          "text": "He doesn’t talk while the instructor takes attendance and gives short safety reminders.",
+          "text": "She doesn’t talk while the instructor takes attendance, and gives short safety reminders about construction sites.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
           "id": "t_1_8",
-          "text": "On Mondays, Kamal studies occupational safety and basic science.",
+          "text": "On Mondays, Nirmala studies Construction Safety and Site Rules.",
           "audio": "assets/audio/t_1_8.mp3"
         },
         {
           "id": "t_1_10",
-          "text": "Does he enjoy it?",
+          "text": "Does she enjoy it?",
           "audio": "assets/audio/t_1_10.mp3"
         },
         {
           "id": "t_1_14",
-          "text": "He doesn’t skip any task because every session matters.",
+          "text": "She doesn’t skip any task because every session helps her improve her skills.",
           "audio": "assets/audio/t_1_14.mp3"
         },
         {
           "id": "t_1_19",
-          "text": "He doesn’t use the equipment before ten o’clock.",
+          "text": "She doesn’t use the trowel or hammer before the instructor gives instructions.",
           "audio": "assets/audio/t_1_19.mp3"
         },
         {
           "id": "t_1_22",
-          "text": "He usually drinks tea in the canteen.",
+          "text": "She usually drinks plain tea in the canteen.",
           "audio": "assets/audio/t_1_22.mp3"
         },
         {
           "id": "t_1_23",
-          "text": "But sometimes he sits under the trees with his friends.",
+          "text": "But sometimes she sits near the workshop with her friends.",
           "audio": "assets/audio/t_1_23.mp3"
         },
         {
           "id": "t_1_28",
-          "text": "He uses different tools and follows safety procedures carefully.",
+          "text": "She uses different tools and follows safety procedures carefully.",
           "audio": "assets/audio/t_1_28.mp3"
         },
         {
           "id": "t_1_29",
-          "text": "He doesn’t forget to use gloves or goggles.",
+          "text": "She doesn’t forget her helmet or gloves.",
           "audio": "assets/audio/t_1_29.mp3"
         },
         {
           "id": "t_1_34",
-          "text": "Does he feel tired?",
+          "text": "Does she feel tired?",
           "audio": "assets/audio/t_1_34.mp3"
         }
       ],
       "activity_e": [
         {
           "id": "t_1_1",
-          "text": "Every weekday, Kamal arrives at the TVET institute at around a quarter to eight.",
+          "text": "Every weekday, Nirmala arrives at the Construction Technology section at a quarter to eight.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
           "id": "t_1_2",
-          "text": "Does he come late?",
+          "text": "Does she come late?",
           "audio": "assets/audio/t_1_2.mp3"
         },
         {
           "id": "t_1_5",
-          "text": "He stands in line with the other trainees for the morning assembly.",
+          "text": "She stands in line with the other trainees for the morning assembly.",
           "audio": "assets/audio/t_1_5.mp3"
         },
         {
           "id": "t_1_6",
-          "text": "He doesn’t talk while the instructor takes attendance and gives short safety reminders.",
+          "text": "She doesn’t talk while the instructor takes attendance, and gives short safety reminders about construction sites.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
           "id": "t_1_8",
-          "text": "On Mondays, Kamal studies occupational safety and basic science.",
+          "text": "On Mondays, Nirmala studies Construction Safety and Site Rules.",
           "audio": "assets/audio/t_1_8.mp3"
         },
         {
           "id": "t_1_10",
-          "text": "Does he enjoy it?",
+          "text": "Does she enjoy it?",
           "audio": "assets/audio/t_1_10.mp3"
         },
         {
           "id": "t_1_14",
-          "text": "He doesn’t skip any task because every session matters.",
+          "text": "She doesn’t skip any task because every session helps her improve her skills.",
           "audio": "assets/audio/t_1_14.mp3"
         },
         {
           "id": "t_1_19",
-          "text": "He doesn’t use the equipment before ten o’clock.",
+          "text": "She doesn’t use the trowel or hammer before the instructor gives instructions.",
           "audio": "assets/audio/t_1_19.mp3"
         },
         {
           "id": "t_1_22",
-          "text": "He usually drinks tea in the canteen.",
+          "text": "She usually drinks plain tea in the canteen.",
           "audio": "assets/audio/t_1_22.mp3"
         },
         {
           "id": "t_1_23",
-          "text": "But sometimes he sits under the trees with his friends.",
+          "text": "But sometimes she sits near the workshop with her friends.",
           "audio": "assets/audio/t_1_23.mp3"
         },
         {
           "id": "t_1_28",
-          "text": "He uses different tools and follows safety procedures carefully.",
+          "text": "She uses different tools and follows safety procedures carefully.",
           "audio": "assets/audio/t_1_28.mp3"
         },
         {
           "id": "t_1_29",
-          "text": "He doesn’t forget to use gloves or goggles.",
+          "text": "She doesn’t forget her helmet or gloves.",
           "audio": "assets/audio/t_1_29.mp3"
         },
         {
           "id": "t_1_34",
-          "text": "Does he feel tired?",
+          "text": "Does she feel tired?",
           "audio": "assets/audio/t_1_34.mp3"
         }
       ]
