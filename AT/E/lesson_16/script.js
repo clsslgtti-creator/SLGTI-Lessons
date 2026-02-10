@@ -1,4 +1,5 @@
 import { buildMcqSlides } from "./lib/mcq.js";
+import { buildMcqTableSlides } from "./lib/mcq-table.js";
 import { buildJumbledSlides } from "./lib/jumbled.js";
 import { buildListeningSlides } from "./lib/listening.js";
 import { buildVideosSlides } from "./lib/videos.js";
@@ -472,9 +473,9 @@ function updateScormScore(snapshot = getAssessmentSnapshot()) {
 }
 
 const activityBuilders = {
-
   VIDEOS: buildVideosSlides,
   MCQ: buildMcqSlides,
+  "MCQ-TABLE": buildMcqTableSlides,
   JUMBLED: buildJumbledSlides,
   LISTENING: buildListeningSlides,
 };
@@ -1426,29 +1427,80 @@ const createLessonEndSlide = (meta = {}) => {
   };
 };
 
-const collectActivityEntries = (lessonData = {}) =>
-  Object.entries(lessonData)
-    .filter(
-      ([key, value]) =>
-        key.startsWith("activity_") && value && typeof value === "object"
-    )
-    .map(([key, value]) => {
-      const rawType = typeof value.type === "string" ? value.type.trim() : "";
-      const focus =
-        typeof value.focus === "string" && value.focus.trim().length
-          ? value.focus.trim()
-          : "";
-      const instructions = value.instructions ?? value.instruction ?? null;
-      return {
-        key,
-        type: rawType,
-        normalizedType: rawType.toUpperCase(),
-        data: value,
-        focus,
-        instructions,
-      };
-    })
-    .sort((a, b) => a.key.localeCompare(b.key, undefined, { numeric: true }));
+const collectActivityEntries = (lessonData = {}) => {
+  const isActivityObject = (value) =>
+    value && typeof value === "object" && !Array.isArray(value);
+  const normalizeFocus = (value) =>
+    typeof value?.focus === "string" && value.focus.trim().length
+      ? value.focus.trim()
+      : "";
+  const normalizeInstructions = (value) =>
+    value?.instructions ?? value?.instruction ?? null;
+  const isSubActivityKey = (key) => typeof key === "string" && /^[a-z]$/i.test(key);
+
+  const entries = [];
+
+  Object.entries(lessonData).forEach(([key, value]) => {
+    if (!key.startsWith("activity_") || !isActivityObject(value)) {
+      return;
+    }
+
+    const parentFocus = normalizeFocus(value);
+    const parentInstructions = normalizeInstructions(value);
+
+    const subActivities = Object.entries(value)
+      .filter(
+        ([subKey, subValue]) =>
+          isSubActivityKey(subKey) && isActivityObject(subValue)
+      )
+      .map(([subKey, subValue]) => {
+        const rawType =
+          typeof subValue.type === "string" ? subValue.type.trim() : "";
+        if (!rawType) {
+          return null;
+        }
+        const focus = normalizeFocus(subValue) || parentFocus;
+        const instructions =
+          normalizeInstructions(subValue) ?? parentInstructions;
+        const normalizedKey = subKey.toLowerCase();
+        return {
+          key: `${key}_${normalizedKey}`,
+          type: rawType,
+          normalizedType: rawType.toUpperCase(),
+          data: subValue,
+          focus,
+          instructions,
+          activitySuffix: subKey.toUpperCase(),
+          sortKey: `${key}_${normalizedKey}`,
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) =>
+        a.sortKey.localeCompare(b.sortKey, undefined, { numeric: true })
+      );
+
+    if (subActivities.length) {
+      entries.push(...subActivities);
+      return;
+    }
+
+    const rawType = typeof value.type === "string" ? value.type.trim() : "";
+    entries.push({
+      key,
+      type: rawType,
+      normalizedType: rawType.toUpperCase(),
+      data: value,
+      focus: parentFocus,
+      instructions: parentInstructions,
+      activitySuffix: "",
+      sortKey: key,
+    });
+  });
+
+  return entries
+    .sort((a, b) => a.sortKey.localeCompare(b.sortKey, undefined, { numeric: true }))
+    .map(({ sortKey, ...entry }) => entry);
+};
 
 let slides = [];
 let currentSlideIndex = 0;
@@ -1541,8 +1593,14 @@ const buildLessonSlides = (lessonData) => {
     lessonData && typeof lessonData.meta === "object" ? lessonData.meta : {};
 
   activityEntries.forEach(
-    ({ key, type, normalizedType, data, focus, instructions }) => {
-      const activityNumber = extractActivityNumber(key);
+    ({ key, type, normalizedType, data, focus, instructions, activitySuffix }) => {
+      const baseActivityNumber = extractActivityNumber(key);
+      const suffix = typeof activitySuffix === "string" ? activitySuffix.trim() : "";
+      const activityNumber = suffix
+        ? baseActivityNumber
+          ? `${baseActivityNumber}${suffix}`
+          : suffix
+        : baseActivityNumber;
       const context = {
         key,
         type,
@@ -1550,11 +1608,12 @@ const buildLessonSlides = (lessonData) => {
         activityNumber,
         focus,
         instructions,
+        activitySuffix: suffix || null,
       };
       const {
         resolve: resolveInstructions,
         isGeneral: instructionsAreGeneral,
-      } = createInstructionResolver(instructions, activityNumber);
+      } = createInstructionResolver(instructions, baseActivityNumber);
       const handler = activityBuilders[normalizedType];
       const assessmentHooks = createActivityAssessmentHooks(key, context);
       const producedSlides = handler

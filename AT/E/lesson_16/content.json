@@ -8,220 +8,252 @@
   "activity_1": {
     "type": "MCQ",
     "instruction": {
-      "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
+      "text": "Choose the correct verb/word to fill in the blank in each sentence. \nපහත වාක්‍යයේ හිස් තැනට නිවැරදි ක්‍රියා පදය/වචනය තෝරන්න.\nஒவ்வொரு வாக்கியத்திலும் வெறுமனே இடத்தை நிரப்ப சரியான வினைச்சொல்/சொல்லை தேர்ந்தெடுக்கவும்.",
       "audio": "assets/audio/a_1_i.mp3"
     },
     "content": [
       {
-        "question": "The safety gloves and boots ______ very heavy.",
-        "options": ["are", "is", "was", "were"],
+        "question": "She ______ have any vehicles to repair these days.",
+        "options": ["don’t", "doesn’t", "deon’t", "didn’t"],
+        "answer": "doesn’t"
+      },
+      {
+        "question": "What ______ they doing in the workshop at the moment?",
+        "options": ["are", "aren’t", "were", "was"],
         "answer": "are"
       },
       {
-        "question": "The welding machines ______ noisy in the workshop yesterday.",
-        "options": ["are", "is", "was", "were"],
-        "answer": "were"
+        "question": "He ______ his service notes in the logbook every evening.",
+        "options": ["write", "wrote", "writes", "rites"],
+        "answer": "writes"
       },
       {
-        "question": "The supervisor ______ meeting the workmen right now.",
-        "options": ["is", "are", "was", "were"],
-        "answer": "is"
+        "question": "They ______ off the engine when they leave the inspection bay.",
+        "options": ["swich", "switches", "swiches", "switch"],
+        "answer": "switch"
       },
       {
-        "question": "The brake pads ______ worn out during the service two days ago.",
-        "options": ["are", "is", "was", "were"],
-        "answer": "were"
+        "question": "He ______ to the service centre yesterday.",
+        "options": ["drive", "drove", "drives", "driven"],
+        "answer": "drove"
       },
       {
-        "question": "The trainees ______ cleaning the measuring tools on the workbench at the moment.",
-        "options": ["are", "is", "was", "were"],
-        "answer": "are"
+        "question": "The mechanic ______ a thin pair of gloves that didn’t protect his hands.",
+        "options": ["wore", "worn", "wear", "wears"],
+        "answer": "wore"
       },
       {
-        "question": "The mechanics ______ very tired last week.",
-        "options": ["is", "are", "was", "were"],
-        "answer": "were"
+        "question": "Meena checks the tire pressure every morning. She ______ checks the tyre pressure before starting to drive.",
+        "options": ["often", "never", "always", "sometimes"],
+        "answer": "always"
       },
       {
-        "question": "The hydraulic lift ______ very useful in the garage.",
-        "options": ["is", "are", "was", "were"],
-        "answer": "is"
+        "question": "He is allergic to engine fumes. He ______ works near running engines.",
+        "options": ["often", "never", "always", "sometimes"],
+        "answer": "never"
       },
       {
-        "question": "They ______ checking the battery water yesterday morning.",
-        "options": ["is", "are", "was", "were"],
-        "answer": "were"
+        "question": "What are you doing?",
+        "options": [
+          "I repair the car battery.",
+          "I repairs the car battery.",
+          "I am repairing the car battery.",
+          "I repaired the car battery."
+        ],
+        "answer": "I am repairing the car battery."
       },
       {
-        "question": "They ______ replacing the fuel pumps at the moment.",
-        "options": ["are", "is", "was", "were"],
-        "answer": "are"
-      },
-      {
-        "question": "The Manager ______ disappointed with the safety report last May.",
-        "options": ["is", "are", "was", "were"],
-        "answer": "was"
+        "question": "Do you always clean the tools in the staff lunchroom sink?",
+        "options": [
+          "No, I usually clean them in the wash bay but today it is overflowing.",
+          "No, I am usually cleaning them in the wash bay but today it is overflowing.",
+          "No, I usually clean in the wash bays but today it is overflowed.",
+          "No, I usually cleans in the wash bay but today it has overflowed."
+        ],
+        "answer": "No, I usually clean them in the wash bay but today it is overflowing."
       }
     ]
   },
   "activity_2": {
-    "type": "MCQ",
-    "instruction": {
-      "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
-      "audio": "assets/audio/a_2_i.mp3"
+    "a": {
+      "type": "MCQ",
+      "instruction": {
+        "text": "Read the following answers and  click on the correct question. \nපහත පිළිතුරු කියවන්න සහ නිවැරදි ප්‍රශ්නය මත ක්ලික් කරන්න.\nபின்வரும் பதில்களை படியுங்கள் மற்றும் சரியான கேள்வியில் கிளிக் செய்யவும்.",
+        "audio": "assets/audio/a_2_a_i.mp3"
+      },
+      "content": [
+        {
+          "question": "His name is Ashok.",
+          "options": [
+            "Whats his name?",
+            "What’s his name?",
+            "What’s your name?"
+          ],
+          "answer": "What’s his name?"
+        },
+        {
+          "question": "He lives in Kandy.",
+          "options": [
+            "Where does he live?",
+            "Where is he live?",
+            "Where he lives?"
+          ],
+          "answer": "Where does he live?"
+        },
+        {
+          "question": "I speak Tamil.",
+          "options": [
+            "What language do he speak?",
+            "What language do you speak?",
+            "What languages does she speaks?"
+          ],
+          "answer": "What language do you speak?"
+        },
+        {
+          "question": "She eats Sri Lankan food, she reads Sri Lankan newspapers and she sings Sri Lankan songs.",
+          "options": [
+            "What does she do every day?",
+            "What she do every day?",
+            "What does you do every days?"
+          ],
+          "answer": "What does she do every day?"
+        },
+        {
+          "question": "I live in Puttalam.",
+          "options": [
+            "Where do he lives?",
+            "Where do you lives?",
+            "Where do you live?"
+          ],
+          "answer": "Where do you live?"
+        }
+      ]
     },
-    "content": [
-      {
-        "question": "Is the mechanic tired or energetic?",
-        "options": [
-          "He is energetic.",
-          "His tired.",
-          "He is tired or energetic.",
-          "Him energetic."
-        ],
-        "answer": "He is energetic."
+    "b": {
+      "type": "MCQ",
+      "instruction": {
+        "text": "Read the following questions and click on the correct answer.\nපහත ප්‍රශ්න කියවන්න සහ නිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nபின்வரும் கேள்விகளை படியுங்கள் மற்றும் சரியான பதிலில் கிளிக் செய்யவும்.",
+        "audio": "assets/audio/a_2_b_i.mp3"
       },
-      {
-        "question": "Were the tools clean yesterday?",
-        "options": [
-          "No, there weren’t. They were dirty.",
-          "Yes, they were. Their were dirty.",
-          "Yes, they was dirty.",
-          "No, they weren’t. They were dirty."
-        ],
-        "answer": "No, there weren’t. They were dirty."
+      "content": [
+        {
+          "question": "What are you doing?",
+          "options": [
+            "I go by car to work.",
+            "Yes, I go by car to work.",
+            "I am going to work by bus."
+          ],
+          "answer": "I am going to work by bus."
+        },
+        {
+          "question": "Why are you going by bus today?",
+          "options": [
+            "Because my car broken down today.",
+            "Because my car broke down this morning.",
+            "Because my car breaks down today."
+          ],
+          "answer": "Because my car broke down this morning."
+        },
+        {
+          "question": "Why are you crying?",
+          "options": [
+            "I am crying because I am sad. She always cry when she’s sad.",
+            "I am crying because I’m sad. I always cry when I’m sad.",
+            "I cried because I’m sad. I am always crying when I’m sad."
+          ],
+          "answer": "I am crying because I’m sad. I always cry when I’m sad."
+        },
+        {
+          "question": "Why are you sitting down?",
+          "options": [
+            "I am sitting down because I’m tired. I always sit down when I’m tired.",
+            "She sits down because she’s tired. She always sits down when she’s tired.",
+            "I sit down because I’m tired. I always sitting down when I’m tired."
+          ],
+          "answer": "I am sitting down because I’m tired. I always sit down when I’m tired."
+        },
+        {
+          "question": "How often do you clean your tools?",
+          "options": [
+            "I am cleaning them twice a week.",
+            "I clean them twice a month.",
+            "I cleans it twice a year."
+          ],
+          "answer": "I clean them twice a month."
+        }
+      ]
+    },
+    "c": {
+      "type": "MCQ-TABLE",
+      "instruction": {
+        "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවන්න සහ ප්‍රශ්න වලට පිළිතුරු දෙන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையை படியுங்கள் மற்றும் கேள்விகளுக்கு பதிலளிக்கவும்.",
+        "audio": "assets/audio/a_2_c_i.mp3"
       },
-      {
-        "question": "Where is Fathima?",
-        "options": [
-          "She’s in the workshop.",
-          "Shi’s in the maintenance yard.",
-          "They are in the office.",
-          "Hers in workshop."
-        ],
-        "answer": "She’s in the workshop."
-      },
-      {
-        "question": "Where is the storeroom?",
-        "options": [
-          "They are behind the factory.",
-          "It’s between the factory and the office.",
-          "Its front of office.",
-          "Its next from factory."
-        ],
-        "answer": "It’s between the factory and the office."
-      },
-      {
-        "question": "Where are the tools?",
-        "options": [
-          "Their next to the cables.",
-          "There are under the cables.",
-          "They’re next to the cables.",
-          "There’s next to cables."
-        ],
-        "answer": "They’re next to the cables."
-      },
-      {
-        "question": "Where are the pliers?",
-        "options": [
-          "They’re on the worktable.",
-          "There are on the worktable.",
-          "It’s on the worktable.",
-          "Its on worktable."
-        ],
-        "answer": "They’re on the worktable."
-      },
-      {
-        "question": "What are you and the inspector doing?",
-        "options": [
-          "We’are checked the safety equipment.",
-          "We’re checking the safety equipment.",
-          "They’re checking the safety equipment.",
-          "He’s checking the safety equipment."
-        ],
-        "answer": "We’re checking the safety equipment."
-      },
-      {
-        "question": "Where is the supervisor?",
-        "options": [
-          "He’s inspecting the storeroom.",
-          "His inspected the storeroom.",
-          "He are inspecting the storeroom.",
-          "Him inspecting storeroom."
-        ],
-        "answer": "He’s inspecting the storeroom."
-      },
-      {
-        "question": "Is there a First aid box?",
-        "options": [
-          "Yes, there isn’t.",
-          "No, there aren’t.",
-          "No, their isn’t.",
-          "Yes, there is."
-        ],
-        "answer": "Yes, there is."
-      },
-      {
-        "question": "Are there any extra safety gloves?",
-        "options": [
-          "No. there isn’t.",
-          "No, there aren’t.",
-          "Yes, there is.",
-          "Yes, their are."
-        ],
-        "answer": "No, there aren’t."
-      },
-      {
-        "question": "Where is the duty chart?",
-        "options": [
-          "He’s behind the desk calendar.",
-          "Its front of desk calendar.",
-          "It’s between desk calendar.",
-          "It’s behind the desk calendar."
-        ],
-        "answer": "It’s behind the desk calendar."
-      },
-      {
-        "question": "Are there any face shields?",
-        "options": [
-          "Yes, their aren’t. There are any face shields.",
-          "No, there isn’t. There are no any face shields.",
-          "Yes, there are. There are some thick face shields on the table.",
-          "No, there aren’t. There are any thick face shields on the table."
-        ],
-        "answer": "Yes, there are. There are some thick face shields on the table."
-      },
-      {
-        "question": "Is there a reflective vest?",
-        "options": [
-          "Yes, there are. Its in the cupboard.",
-          "No, there isn’t. There aren’t any bright reflective vests in the cupboard.",
-          "Yes, there is. There is any bright reflective vest in the cupboard.",
-          "No, there aren’t. There are no any reflective vests in the cupboard."
-        ],
-        "answer": "No, there isn’t. There aren’t any bright reflective vests in the cupboard."
-      },
-      {
-        "question": "Was the digital meter accurate yesterday?",
-        "options": [
-          "No, it wasn’t. It was inaccurate.",
-          "Yes, it is. It was inaccurate.",
-          "No, it isn’t. It is inaccurate.",
-          "No, they wasn’t. It was inaccurate."
-        ],
-        "answer": "No, it wasn’t. It was inaccurate."
-      },
-      {
-        "question": "What are the technicians doing?",
-        "options": [
-          "Theire calibrating instruments.",
-          "Hes calibrating instrument.",
-          "They’re calibrating the measuring instruments.",
-          "We’are calibrating the instruments."
-        ],
-        "answer": "They’re calibrating the measuring instruments."
-      }
-    ]
+      "tables": [
+        [
+          ["", "Monday", "Wednesday ", "Friday"],
+          [
+            "Farah",
+            "applies for internships",
+            "studies her notes",
+            "does practicals"
+          ],
+          [
+            "I",
+            "fill the fuel tank",
+            "arrange the equipment",
+            " visit my grandparents"
+          ]
+        ]
+      ],
+      "content": [
+        {
+          "question": "Does Farah study her notes on Fridays?",
+          "options": [
+            "No, she doesn’t. She studies them on Wednesdays.",
+            "Yes, she studies. She studies it on Wednesdays.",
+            "No, she don’t. She study them on Wednesdays."
+          ],
+          "answer": "No, she doesn’t. She studies them on Wednesdays."
+        },
+        {
+          "question": "Does she apply for internships on Wednesdays?",
+          "options": [
+            "No, she don’t. She applies for them on Fridays.",
+            "No, she doesn’t. She applies for them on Mondays.",
+            "No, she don’t. She apply for them on Mondays."
+          ],
+          "answer": "No, she doesn’t. She applies for them on Mondays."
+        },
+        {
+          "question": "Do you visit your grandparents on Mondays?",
+          "options": [
+            "No, I doesn’t. I visit them on Fridays.",
+            "No, I dont’. I visits them on Fridays.",
+            "No, I don’t. I visit them on Fridays."
+          ],
+          "answer": "No, I don’t. I visit them on Fridays."
+        },
+        {
+          "question": "Do you fill the fuel tank on Fridays?",
+          "options": [
+            "No, I don’t. I fill it on Mondays.",
+            "No, I fills it on Mondays.",
+            "No, I doesn’t. I fill them on Mondays."
+          ],
+          "answer": "No, I don’t. I fill it on Mondays."
+        },
+        {
+          "question": "When do you arrange the equipment?",
+          "options": [
+            "I arrange it on Wednesdays.",
+            "No, I don’t. I arrange it on Wednesdays.",
+            "Yes, I do. I arrange it on Wednesdays."
+          ],
+          "answer": "I arrange it on Wednesdays."
+        }
+      ]
+    }
   },
   "activity_3": {
     "type": "JUMBLED",
