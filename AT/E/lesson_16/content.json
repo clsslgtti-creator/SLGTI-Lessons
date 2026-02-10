@@ -256,252 +256,199 @@
     }
   },
   "activity_3": {
-    "type": "JUMBLED",
+    "type": "MCQ-TABLE",
     "instruction": {
-      "text": "Rearrange these sentences in the correct order. The first word of each sentence starts with a capital letter.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න. සෑම වාක්‍යයකම පළමු වචනය විශාල අකුරින් ආරම්භ වේ.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும். ஒவ்வொரு வாக்கியத்தின் முதல் வார்த்தையும் பெரிய எழுத்தில் தொடங்குகிறது.",
-      "audio": "assets/audio/a_3_i.mp3"
+      "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවන්න සහ ප්‍රශ්න වලට පිළිතුරු දෙන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையை படியுங்கள் மற்றும் கேள்விகளுக்கு பதிலளிக்கவும்.",
+      "audio": "assets/audio/a_2_c_i.mp3"
     },
+    "tables": [
+      [
+        ["", "Monday", "Thursday ", "Friday", "Weekends"],
+        [
+          "Ashok",
+          "cooks Italian food",
+          "cooks Indian food",
+          "cooks Sri Lankan food",
+          "cooks western food "
+        ],
+        ["Devi", "plays tennis", "goes to the gym", "does yoga", "plays golf"],
+        [
+          "Yusuf",
+          "paints houses",
+          "fixes broken locks and taps",
+          "does plastering and grouting",
+          "does gardening"
+        ]
+      ]
+    ],
     "content": [
       {
-        "words": [
-          "The",
-          "mechanic",
-          "checks",
-          "the",
-          "brakes",
-          "every",
-          "day",
-          "."
-        ],
-        "sentence": "The mechanic checks the brakes every day."
+        "question": "Ashok cooks western food at the weekend.",
+        "options": ["true", "false"],
+        "answer": "true"
       },
       {
-        "words": [
-          "She",
-          "was",
-          "happy",
-          "about",
-          "her",
-          "performance",
-          "yesterday",
-          "."
-        ],
-        "sentence": "She was happy about her performance yesterday."
+        "question": "Devi doesn’t go to the gym on Fridays.",
+        "options": ["true", "false"],
+        "answer": "true"
       },
       {
-        "words": ["There", "are", "many", "windows", "in", "my", "office", "."],
-        "sentence": "There are many windows in my office."
+        "question": "Yusuf paints houses on Fridays.",
+        "options": ["true", "false"],
+        "answer": "false"
       },
       {
-        "words": [
-          "The",
-          "trainee",
-          "is",
-          "checking",
-          "the",
-          "engine",
-          "right",
-          "now",
-          "."
-        ],
-        "sentence": "The trainee is checking the engine right now."
+        "question": "Devi plays golf on Mondays.",
+        "options": ["true", "false"],
+        "answer": "false"
       },
       {
-        "words": ["Are", "there", "tools", "in", "the", "garage", "?"],
-        "sentence": "Are there tools in the garage?"
+        "question": "Ashok doesn’t cook Indian food on Mondays.",
+        "options": ["true", "false"],
+        "answer": "true"
       },
       {
-        "words": ["They", "do", "not", "fix", "engines", "at", "night", "."],
-        "sentence": "They do not fix engines at night."
+        "question": "Ashok cooks Sri Lankan food on Fridays.",
+        "options": ["true", "false"],
+        "answer": "true"
       },
       {
-        "words": [
-          "The",
-          "worker",
-          "cleans",
-          "the",
-          "factory",
-          "floor",
-          "every",
-          "day",
-          "."
-        ],
-        "sentence": "The worker cleans the factory floor every day."
+        "question": "Yusuf does athletics on Fridays.",
+        "options": ["true", "false"],
+        "answer": "false"
       },
       {
-        "words": [
-          "The",
-          "supervisor",
-          "inspects",
-          "the",
-          "vehicles",
-          "every",
-          "morning",
-          "."
-        ],
-        "sentence": "The supervisor inspects the vehicles every morning."
+        "question": "Ashok doesn’t cook Italian food on Thursdays.",
+        "options": ["true", "false"],
+        "answer": "true"
       },
       {
-        "words": [
-          "There",
-          "is",
-          "a",
-          "new",
-          "battery",
-          "in",
-          "the",
-          "car",
-          "."
-        ],
-        "sentence": "There is a new battery in the car."
+        "question": "Yusuf doesn’t do gardening on weekdays.",
+        "options": ["true", "false"],
+        "answer": "true"
       },
       {
-        "words": [
-          "The",
-          "mechanic",
-          "was",
-          "late",
-          "for",
-          "work",
-          "yesterday",
-          "."
-        ],
-        "sentence": "The mechanic was late for work yesterday."
+        "question": "Yusuf fixes broken taps on Mondays.",
+        "options": ["true", "false"],
+        "answer": "false"
+      },
+      {
+        "question": "Devi goes to the gym on Thursdays.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Devi does athletics on Fridays.",
+        "options": ["true", "false"],
+        "answer": "false"
+      },
+      {
+        "question": "Ashok doesn’t cook Indian food at the weekend.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Devi plays tennis on Mondays.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Yusuf does plastering and grouting on Fridays.",
+        "options": ["true", "false"],
+        "answer": "true"
       }
     ]
   },
   "activity_4": {
-    "type": "LISTENING",
-    "instruction": {
-      "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
-      "audio": "assets/audio/a_4_i.mp3"
+    "a": {
+      "type": "MATCHING-WORDS",
+      "instruction": {
+        "text": "Listen to the audio which will be played twice and match the frequency adverbs to the phrases. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න සහ සංඛ්‍යාත්මක ක්‍රියා විශේෂණ පදයන් වාක්‍ය කොටස් සමඟ ගැලපෙන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும் மற்றும் அடிக்கடி、副詞களை வாக்கிய பகுதிகளுடன் பொருத்தவும்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "audio": "assets/audio/a_4_q.mp3",
+      "content": [
+        {
+          "id": "n_4_a_1",
+          "item_a": "often",
+          "item_b": "find small problems during routine checks"
+        },
+        {
+          "id": "n_4_a_2",
+          "item_a": "always",
+          "item_b": "wear safety gloves and boots"
+        },
+        {
+          "id": "n_4_a_3",
+          "item_a": "never",
+          "item_b": "ignore safety rules"
+        },
+        {
+          "id": "n_4_a_4",
+          "item_a": "usually",
+          "item_b": "follow the standard service procedure"
+        },
+        {
+          "id": "n_4_a_5",
+          "item_a": "rarely",
+          "item_b": "complain after a service by us"
+        }
+      ]
     },
-    "audio": "assets/audio/a_4_q.mp3",
-    "content": [
-      {
-        "question": "Where were Kamal and Ramesh yesterday morning?",
-        "options": [
-          "In a Colombo market",
-          "In the Kurunegala workshop",
-          "At a Galle Face exhibition",
-          "In a Jaffna training hall"
-        ],
-        "answer": "In the Kurunegala workshop"
+    "b": {
+      "type": "LISTENING",
+      "instruction": {
+        "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
+        "audio": "assets/audio/a_4_i.mp3"
       },
-      {
-        "question": "What kind of vehicle was noisy?",
-        "options": [
-          "The hybrid car",
-          "The diesel van",
-          "The electric scooter",
-          "The petrol motorbike"
-        ],
-        "answer": "The diesel van"
-      },
-      {
-        "question": "What problem did the hybrid car have yesterday?",
-        "options": [
-          "Its engine oil was leaking.",
-          "Its battery was not charging.",
-          "Its brake pads were broken.",
-          "Its tyres were flat."
-        ],
-        "answer": "Its battery was not charging."
-      },
-      {
-        "question": "Who repaired the flat tyre?",
-        "options": ["Kamal", "Ramesh", "Anura", "The instructor"],
-        "answer": "Anura"
-      },
-      {
-        "question": "Why is Kamal confident?",
-        "options": [
-          "He is going to Galle Face.",
-          "He has presented before.",
-          "He is going with Ramesh.",
-          "He has checked the brakepads."
-        ],
-        "answer": "He has presented before."
-      },
-      {
-        "question": "What was wrong with the old pressure gauge?",
-        "options": [
-          "It was broken yesterday.",
-          "It was not accurate last week.",
-          "It was missing today.",
-          "It was very expensive."
-        ],
-        "answer": "It was not accurate last week."
-      },
-      {
-        "question": "What are the trainees learning right now?",
-        "options": [
-          "How to repair a hybrid battery",
-          "How to use a hydraulic lift",
-          "How to replace brake pads",
-          "How to change engine oil"
-        ],
-        "answer": "How to use a hydraulic lift"
-      },
-      {
-        "question": "Why is the instructor not happy?",
-        "options": [
-          "The gauge was inaccurate.",
-          "Only one student wore a reflective vest.",
-          "Kamal spoke too loudly.",
-          "The hybrid car was noisy."
-        ],
-        "answer": "Only one student wore a reflective vest."
-      },
-      {
-        "question": "What will happen tomorrow?",
-        "options": [
-          "The group will repair a van in Kurunegala.",
-          "The group will travel to Galle Face for an exhibition.",
-          "Ramesh will repair a tyre in Colombo.",
-          "Kamal will buy a new hydraulic lift."
-        ],
-        "answer": "The group will travel to Galle Face for an exhibition."
-      },
-      {
-        "question": "Why is Ramesh nervous?",
-        "options": [
-          "He has never driven a hybrid car.",
-          "He has never spoken at a public event.",
-          "He has never repaired an engine.",
-          "He has never visited Colombo."
-        ],
-        "answer": "He has never spoken at a public event."
-      },
-      {
-        "question": "Where did the car with the flat tyre come from?",
-        "options": ["Kurunegala", "Colombo", "Jaffna"],
-        "answer": "Colombo"
-      },
-      {
-        "question": "Where was the small fair in 2023?",
-        "options": ["Colombo", "Kurunegala", "Jaffna"],
-        "answer": "Jaffna"
-      },
-      {
-        "question": "What are they demonstrating on the vehicles tomorrow?",
-        "options": [
-          "How to check food quality",
-          "How to check brake pads",
-          "How to check roof lights"
-        ],
-        "answer": "How to check brake pads"
-      },
-      {
-        "question": "Which tool was replaced?",
-        "options": ["Digital pressure gauge", "Engine lift", "Car battery"],
-        "answer": "Digital pressure gauge"
-      },
-      {
-        "question": "What are they not supposed to do with the hydraulic lift?",
-        "options": ["Drive under it", "Stand under it", "Sit beside it"],
-        "answer": "Stand under it"
-      }
-    ]
+      "audio": "assets/audio/a_4_q.mp3",
+      "content": [
+        {
+          "question": "Why does the instructor insist on wearing safety gloves and safety shoes in the workshop?",
+          "options": [
+            "They reduce the risk of slipping on oily floors.",
+            "They reduce the risk of injury from tools and vehicle parts.",
+            "They reduce the risk of accidents and injuries from falling debris."
+          ],
+          "answer": "They reduce the risk of injury from tools and vehicle parts."
+        },
+        {
+          "question": "Why did they have to replace the oil filter?",
+          "options": [
+            "The filter was dirty and clogging up.",
+            "It was dirty and loose.",
+            "The oil was leaking and the filter was loose."
+          ],
+          "answer": "It was dirty and loose."
+        },
+        {
+          "question": "Why did the trainees inform the customer before replacing the oil filter?",
+          "options": [
+            "Because the worksheet requires clear explanation.",
+            "Because clear explanation helps the customer understand the repair.",
+            "Because the repair cannot be done without customer supervision."
+          ],
+          "answer": "Because clear explanation helps the customer understand the repair."
+        },
+        {
+          "question": "What does the test drive help the trainees confirm after the repair?",
+          "options": [
+            "That the customer is satisfied with the service.",
+            "That braking response, noise, and pedal feel are normal.",
+            "That braking response is good and the vehicle looks clean after service."
+          ],
+          "answer": "That braking response, noise, and pedal feel are normal."
+        },
+        {
+          "question": "Why is filling in the job card important after completing the work?",
+          "options": [
+            "It listed complaints, repairs, and results in the past.",
+            "It records costs, total hours of repair and consent forms by customers.",
+            "It records complaints, repairs, and results for future reference."
+          ],
+          "answer": "It records complaints, repairs, and results for future reference."
+        }
+      ]
+    }
   }
 }

@@ -154,7 +154,7 @@ export const buildListeningSlides = (
   const submitBtn = document.createElement("button");
   submitBtn.type = "button";
   submitBtn.className = "primary-btn";
-  submitBtn.textContent = "Submit Answers";
+  submitBtn.textContent = "Submit";
   actions.appendChild(submitBtn);
 
   const resultEl = document.createElement("p");
@@ -247,7 +247,7 @@ export const buildListeningSlides = (
   registerActivity({ total: questionEntries.length });
 
   const refreshAnswerInteractivity = () => {
-    const disableBase = instructionsLocked || submissionLocked;
+    const disableBase = instructionsLocked || submissionLocked || isPlaying;
     questionEntries.forEach((entry) => {
       const entryDisabled = disableBase || entry.locked;
       entry.buttons.forEach((button) => {
@@ -256,7 +256,7 @@ export const buildListeningSlides = (
     });
     const noQuestions = !questionEntries.length;
     submitBtn.disabled =
-      instructionsLocked || submissionLocked || noQuestions;
+      instructionsLocked || submissionLocked || isPlaying || noQuestions;
   };
 
   if (!questionEntries.length) {
@@ -309,12 +309,14 @@ export const buildListeningSlides = (
   const handleAudioError = () => {
     statusEl.textContent = "Unable to play audio.";
     playBtn.disabled = true;
+    refreshAnswerInteractivity();
   };
 
   const handleAudioEnded = () => {
     isPlaying = false;
     playCount = Math.min(maxPlays, playCount + 1);
     updatePlaybackStatus();
+    refreshAnswerInteractivity();
   };
 
   if (audioElement) {
@@ -343,6 +345,7 @@ export const buildListeningSlides = (
     }
     isPlaying = true;
     updatePlaybackStatus();
+    refreshAnswerInteractivity();
   };
 
   playBtn.addEventListener("click", () => beginPlayback());
@@ -484,6 +487,7 @@ export const buildListeningSlides = (
     }
     isPlaying = false;
     updatePlaybackStatus();
+    refreshAnswerInteractivity();
   };
 
   const slideId = context.key

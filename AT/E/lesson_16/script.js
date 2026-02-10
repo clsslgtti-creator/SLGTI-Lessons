@@ -3,6 +3,7 @@ import { buildMcqTableSlides } from "./lib/mcq-table.js";
 import { buildJumbledSlides } from "./lib/jumbled.js";
 import { buildListeningSlides } from "./lib/listening.js";
 import { buildVideosSlides } from "./lib/videos.js";
+import { buildMatchingWordsSlides } from "./lib/matching-words.js";
 
 const slidesContainer = document.getElementById("slides");
 const progressIndicator = document.getElementById("progressIndicator");
@@ -476,6 +477,7 @@ const activityBuilders = {
   VIDEOS: buildVideosSlides,
   MCQ: buildMcqSlides,
   "MCQ-TABLE": buildMcqTableSlides,
+  "MATCHING-WORDS": buildMatchingWordsSlides,
   JUMBLED: buildJumbledSlides,
   LISTENING: buildListeningSlides,
 };
