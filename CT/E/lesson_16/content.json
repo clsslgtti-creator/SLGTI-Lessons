@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": "16 - Test",
     "level": "Elementary",
-    "section": "Automobile Technology",
+    "section": "Construction Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -13,61 +13,61 @@
     },
     "content": [
       {
-        "question": "She ______ have any vehicles to repair these days.",
+        "question": "She ______ have any bricklaying work these days.",
         "options": ["don’t", "doesn’t", "deon’t", "didn’t"],
         "answer": "doesn’t"
       },
       {
-        "question": "What ______ they doing in the workshop at the moment?",
+        "question": "What ______ they doing at the site at the moment?",
         "options": ["are", "aren’t", "were", "was"],
         "answer": "are"
       },
       {
-        "question": "He ______ his service notes in the logbook every evening.",
+        "question": "He ______ his measurements in the site notebook every evening.",
         "options": ["write", "wrote", "writes", "rites"],
         "answer": "writes"
       },
       {
-        "question": "They ______ off the engine when they leave the inspection bay.",
+        "question": "They ______ off the generator when they leave the site office.",
         "options": ["swich", "switches", "swiches", "switch"],
         "answer": "switch"
       },
       {
-        "question": "He ______ to the service centre yesterday.",
+        "question": "He ______ to the construction site yesterday.",
         "options": ["drive", "drove", "drives", "driven"],
         "answer": "drove"
       },
       {
-        "question": "The mechanic ______ a thin pair of gloves that didn’t protect his hands.",
+        "question": "The mason ______ a thin pair of gloves that didn’t protect his hands.",
         "options": ["wore", "worn", "wear", "wears"],
         "answer": "wore"
       },
       {
-        "question": "Meena checks the tire pressure every morning. She ______ checks the tyre pressure before starting to drive.",
+        "question": "Meena checks the concrete mix every morning. She ______ checks the concrete before pouring.",
         "options": ["often", "never", "always", "sometimes"],
         "answer": "always"
       },
       {
-        "question": "He is allergic to engine fumes. He ______ works near running engines.",
+        "question": "He is allergic to dust. He ______ works near the cutting area.",
         "options": ["often", "never", "always", "sometimes"],
         "answer": "never"
       },
       {
         "question": "What are you doing?",
         "options": [
-          "I repair the car battery.",
-          "I repairs the car battery.",
-          "I am repairing the car battery.",
-          "I repaired the car battery."
+          "I mix the cement /water mixture.",
+          "I mixes the cement /water mixture.",
+          "I am mixing the cement / water mixture.",
+          "I mixed the cement /water mixture."
         ],
-        "answer": "I am repairing the car battery."
+        "answer": "I am mixing the cement / water mixture."
       },
       {
-        "question": "Do you always clean the tools in the staff lunchroom sink?",
+        "question": "Do you always clean the tools in the staff lunch room sink?",
         "options": [
           "No, I usually clean them in the wash bay but today it is overflowing.",
           "No, I am usually cleaning them in the wash bay but today it is overflowing.",
-          "No, I usually clean in the wash bays but today it is overflowed.",
+          "No, I usually clean in the wash bays but today it is overflow.",
           "No, I usually cleans in the wash bay but today it has overflowed."
         ],
         "answer": "No, I usually clean them in the wash bay but today it is overflowing."

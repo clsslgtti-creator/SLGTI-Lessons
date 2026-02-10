@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": "16 - Test",
     "level": "Elementary",
-    "section": "Automobile Technology",
+    "section": "Food Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -13,64 +13,64 @@
     },
     "content": [
       {
-        "question": "She ______ have any vehicles to repair these days.",
+        "question": "She ______ have any cooking duties these days.",
         "options": ["don’t", "doesn’t", "deon’t", "didn’t"],
         "answer": "doesn’t"
       },
       {
-        "question": "What ______ they doing in the workshop at the moment?",
+        "question": "What ______ they doing in the kitchen at the moment?",
         "options": ["are", "aren’t", "were", "was"],
         "answer": "are"
       },
       {
-        "question": "He ______ his service notes in the logbook every evening.",
+        "question": "He ______ his temperature checks in the logbook every evening.",
         "options": ["write", "wrote", "writes", "rites"],
         "answer": "writes"
       },
       {
-        "question": "They ______ off the engine when they leave the inspection bay.",
+        "question": "They ______ off the industrial oven when they leave the bakery room.",
         "options": ["swich", "switches", "swiches", "switch"],
         "answer": "switch"
       },
       {
-        "question": "He ______ to the service centre yesterday.",
+        "question": "He ______ to the food processing unit yesterday.",
         "options": ["drive", "drove", "drives", "driven"],
         "answer": "drove"
       },
       {
-        "question": "The mechanic ______ a thin pair of gloves that didn’t protect his hands.",
+        "question": "The worker ______ a thin pair of gloves that didn’t protect his hands.",
         "options": ["wore", "worn", "wear", "wears"],
         "answer": "wore"
       },
       {
-        "question": "Meena checks the tire pressure every morning. She ______ checks the tyre pressure before starting to drive.",
+        "question": "Meena checks the dough every morning. She ______ checks the mixture before baking.",
         "options": ["often", "never", "always", "sometimes"],
         "answer": "always"
       },
       {
-        "question": "He is allergic to engine fumes. He ______ works near running engines.",
+        "question": "He is allergic to strong spices. He ______ works near the spice-mixing area.",
         "options": ["often", "never", "always", "sometimes"],
         "answer": "never"
       },
       {
         "question": "What are you doing?",
         "options": [
-          "I repair the car battery.",
-          "I repairs the car battery.",
-          "I am repairing the car battery.",
-          "I repaired the car battery."
+          "I heat the milk for the next batch.",
+          "I heats the milk for the next batch.",
+          "I am heating the milk for the next batch.",
+          "I heated the milk for the next batch."
         ],
-        "answer": "I am repairing the car battery."
+        "answer": "I am heating the milk for the next batch."
       },
       {
-        "question": "Do you always clean the tools in the staff lunchroom sink?",
+        "question": "Do you always clean the mixing bowls in the wash area?",
         "options": [
-          "No, I usually clean them in the wash bay but today it is overflowing.",
-          "No, I am usually cleaning them in the wash bay but today it is overflowing.",
-          "No, I usually clean in the wash bays but today it is overflowed.",
-          "No, I usually cleans in the wash bay but today it has overflowed."
+          "No, I usually clean them in the industrial kitchen sink, but today it was overflowing.",
+          "No, I am usually cleaning them in the industrial kitchen sink, but today it is overflowing.",
+          "No, I usually clean in the industrial kitchen sink, but today it is overflow.",
+          "No, I usually cleans in the industrial kitchen sink, but today it has been overflowed."
         ],
-        "answer": "No, I usually clean them in the wash bay but today it is overflowing."
+        "answer": "No, I usually clean them in the industrial kitchen sink, but today it was overflowing."
       }
     ]
   },

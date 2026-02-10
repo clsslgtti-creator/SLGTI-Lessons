@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": "16 - Test",
     "level": "Elementary",
-    "section": "Automobile Technology",
+    "section": "Mechanical Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -13,7 +13,7 @@
     },
     "content": [
       {
-        "question": "She ______ have any vehicles to repair these days.",
+        "question": "She ______ have any machine repair work these days.",
         "options": ["don’t", "doesn’t", "deon’t", "didn’t"],
         "answer": "doesn’t"
       },
@@ -23,54 +23,54 @@
         "answer": "are"
       },
       {
-        "question": "He ______ his service notes in the logbook every evening.",
+        "question": "He ______ his machine readings in the maintenance book every evening.",
         "options": ["write", "wrote", "writes", "rites"],
         "answer": "writes"
       },
       {
-        "question": "They ______ off the engine when they leave the inspection bay.",
+        "question": "They ______ off the lathe machine when they leave the bay.",
         "options": ["swich", "switches", "swiches", "switch"],
         "answer": "switch"
       },
       {
-        "question": "He ______ to the service centre yesterday.",
+        "question": "He ______ to the mechanical lab yesterday.",
         "options": ["drive", "drove", "drives", "driven"],
         "answer": "drove"
       },
       {
-        "question": "The mechanic ______ a thin pair of gloves that didn’t protect his hands.",
+        "question": "The technician ______ a thin pair of gloves that didn’t protect his hands.",
         "options": ["wore", "worn", "wear", "wears"],
         "answer": "wore"
       },
       {
-        "question": "Meena checks the tire pressure every morning. She ______ checks the tyre pressure before starting to drive.",
+        "question": "Meena checks the hydraulic press every morning before use. She ______ checks before using it.",
         "options": ["often", "never", "always", "sometimes"],
         "answer": "always"
       },
       {
-        "question": "He is allergic to engine fumes. He ______ works near running engines.",
+        "question": "He is allergic to metal dust. He ______ works near the grinding area.",
         "options": ["often", "never", "always", "sometimes"],
         "answer": "never"
       },
       {
         "question": "What are you doing?",
         "options": [
-          "I repair the car battery.",
-          "I repairs the car battery.",
-          "I am repairing the car battery.",
-          "I repaired the car battery."
+          "I heat the metal block.",
+          "I heats the metal block.",
+          "I am heating the metal block.",
+          "I heated the metal block."
         ],
-        "answer": "I am repairing the car battery."
+        "answer": "I am heating the metal block."
       },
       {
-        "question": "Do you always clean the tools in the staff lunchroom sink?",
+        "question": "Do you always clean the hand tools in the staff lunchroom sink?",
         "options": [
-          "No, I usually clean them in the wash bay but today it is overflowing.",
-          "No, I am usually cleaning them in the wash bay but today it is overflowing.",
-          "No, I usually clean in the wash bays but today it is overflowed.",
-          "No, I usually cleans in the wash bay but today it has overflowed."
+          "No, I usually clean them in the service area but today it isn’t available.",
+          "No, I am usually cleaning them in the service area but today it isn’t available.",
+          "No, I usually clean in the service areas but today it hasn’t been available.",
+          "No, I usually cleans in the service area but today it hasn’t been available."
         ],
-        "answer": "No, I usually clean them in the wash bay but today it is overflowing."
+        "answer": "No, I usually clean them in the service area but today it isn’t available."
       }
     ]
   },

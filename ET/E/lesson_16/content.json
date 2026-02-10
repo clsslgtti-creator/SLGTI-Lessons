@@ -2,7 +2,7 @@
   "meta": {
     "lesson_no": "16 - Test",
     "level": "Elementary",
-    "section": "Automobile Technology",
+    "section": "Electrical Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
@@ -13,64 +13,64 @@
     },
     "content": [
       {
-        "question": "She ______ have any vehicles to repair these days.",
+        "question": "She ______ have any wiring jobs these days.",
         "options": ["don’t", "doesn’t", "deon’t", "didn’t"],
         "answer": "doesn’t"
       },
       {
-        "question": "What ______ they doing in the workshop at the moment?",
+        "question": "What ______ they doing in the electrical room at the moment?",
         "options": ["are", "aren’t", "were", "was"],
         "answer": "are"
       },
       {
-        "question": "He ______ his service notes in the logbook every evening.",
+        "question": "He ______ his voltage readings in the logbook every evening.",
         "options": ["write", "wrote", "writes", "rites"],
         "answer": "writes"
       },
       {
-        "question": "They ______ off the engine when they leave the inspection bay.",
+        "question": "They ______ off the main power when they leave the workshop.",
         "options": ["swich", "switches", "swiches", "switch"],
         "answer": "switch"
       },
       {
-        "question": "He ______ to the service centre yesterday.",
+        "question": "He ______ to the transformer site yesterday.",
         "options": ["drive", "drove", "drives", "driven"],
         "answer": "drove"
       },
       {
-        "question": "The mechanic ______ a thin pair of gloves that didn’t protect his hands.",
+        "question": "The electrician ______ a thin pair of gloves that didn’t protect his hands.",
         "options": ["wore", "worn", "wear", "wears"],
         "answer": "wore"
       },
       {
-        "question": "Meena checks the tire pressure every morning. She ______ checks the tyre pressure before starting to drive.",
+        "question": "Meena checks the circuit breakers every morning. She ______ checks the breakers before switching them on.",
         "options": ["often", "never", "always", "sometimes"],
         "answer": "always"
       },
       {
-        "question": "He is allergic to engine fumes. He ______ works near running engines.",
+        "question": "He is allergic to insulation dust. He ______ works near old wiring.",
         "options": ["often", "never", "always", "sometimes"],
         "answer": "never"
       },
       {
         "question": "What are you doing?",
         "options": [
-          "I repair the car battery.",
-          "I repairs the car battery.",
-          "I am repairing the car battery.",
-          "I repaired the car battery."
+          "I uncoil the wires.",
+          "I uncoils the wires.",
+          "I am uncoiling the wires.",
+          "I uncoiled the wires."
         ],
-        "answer": "I am repairing the car battery."
+        "answer": "I am uncoiling the wires."
       },
       {
-        "question": "Do you always clean the tools in the staff lunchroom sink?",
+        "question": "Do you always test the digital hand tools in the garage after repairs?",
         "options": [
-          "No, I usually clean them in the wash bay but today it is overflowing.",
-          "No, I am usually cleaning them in the wash bay but today it is overflowing.",
-          "No, I usually clean in the wash bays but today it is overflowed.",
-          "No, I usually cleans in the wash bay but today it has overflowed."
+          "No, I usually test it in the lab, but today it isn’t available.",
+          "No, I am usually testing it in the lab but today it is available.",
+          "No, I usually test in the labs but today it hasn’t available.",
+          "No, I usually tests in the lab but today it hasn’t been available."
         ],
-        "answer": "No, I usually clean them in the wash bay but today it is overflowing."
+        "answer": "No, I usually test it in the lab, but today it isn’t available."
       }
     ]
   },
