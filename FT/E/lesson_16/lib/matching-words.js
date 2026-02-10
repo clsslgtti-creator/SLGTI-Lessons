@@ -79,6 +79,19 @@ export const buildMatchingWordsSlides = (
 ) => {
   const items = normalizePairs(activityData?.content);
   const audioUrl = trimString(activityData?.audio);
+  const registerActivity =
+    typeof assessment?.registerActivity === "function"
+      ? assessment.registerActivity
+      : () => {};
+  const submitResult =
+    typeof assessment?.submitResult === "function"
+      ? assessment.submitResult
+      : () => {};
+  const getSavedState =
+    typeof assessment?.getState === "function"
+      ? assessment.getState
+      : () => null;
+  const savedState = getSavedState() || null;
 
   const slide = document.createElement("section");
   slide.className =
@@ -136,6 +149,8 @@ export const buildMatchingWordsSlides = (
   actions.appendChild(resultEl);
 
   slide.appendChild(actions);
+
+  registerActivity({ total: items.length });
 
   if (!items.length) {
     const emptyState = document.createElement("p");
@@ -210,7 +225,7 @@ export const buildMatchingWordsSlides = (
   };
 
   let evaluationShown = false;
-  let answersChecked = false;
+  let answersChecked = Boolean(savedState?.submitted);
   let instructionsLocked = false;
   let interactionsReady = false;
 
@@ -362,6 +377,16 @@ export const buildMatchingWordsSlides = (
         "negative"
       );
     }
+
+    const detail = {
+      placements: dropzones.reduce((acc, zone) => {
+        const cardEl = placements.get(zone.dataset.zoneId);
+        acc[zone.dataset.zoneId] = cardEl?.dataset?.itemId ?? null;
+        return acc;
+      }, {}),
+    };
+
+    return { correctCount, detail };
   };
 
   const checkAnswers = () => {
@@ -383,7 +408,13 @@ export const buildMatchingWordsSlides = (
     }
     answersChecked = true;
     submitBtn.textContent = "Submitted";
-    evaluatePlacements();
+    const { correctCount, detail } = evaluatePlacements();
+    submitResult({
+      total: dropzones.length,
+      correct: correctCount,
+      detail,
+      timestamp: new Date().toISOString(),
+    });
     setInteractionsEnabled(false);
     updatePlaybackStatus();
     updateButtonState();
@@ -581,6 +612,22 @@ export const buildMatchingWordsSlides = (
   clearEvaluationState();
   updatePlaybackStatus();
 
+  if (savedState?.submitted) {
+    submitBtn.textContent = "Submitted";
+    const savedTotal = Number.isFinite(savedState.total)
+      ? savedState.total
+      : dropzones.length;
+    const savedCorrect = Number.isFinite(savedState.correct)
+      ? savedState.correct
+      : 0;
+    resultMessage(
+      resultEl,
+      savedCorrect,
+      savedTotal,
+      savedTotal && savedCorrect === savedTotal ? "success" : "neutral"
+    );
+  }
+
   playBtn.addEventListener("click", () => {
     if (isPlaying || playbackCount >= 2) {
       return;
@@ -607,6 +654,9 @@ export const buildMatchingWordsSlides = (
 
   const onEnter = () => {
     setupInteractions();
+    if (answersChecked) {
+      setInteractionsEnabled(false);
+    }
   };
 
   const onLeave = () => {
@@ -633,7 +683,7 @@ export const buildMatchingWordsSlides = (
       autoPlay: {
         button: playBtn,
         trigger: () => {
-          if (autoTriggered || isPlaying || playbackCount >= 2) {
+          if (answersChecked || autoTriggered || isPlaying || playbackCount >= 2) {
             return;
           }
           autoTriggered = true;
