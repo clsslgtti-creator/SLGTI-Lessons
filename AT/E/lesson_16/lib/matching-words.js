@@ -368,6 +368,11 @@ export const buildMatchingWordsSlides = (
     if (answersChecked || isPlaying) {
       return;
     }
+    if (playbackCount < 1) {
+      resultEl.textContent = "Please listen to the audio at least once.";
+      resultEl.classList.add("assessment-result--error");
+      return;
+    }
     const incomplete = dropzones.some(
       (zone) => !placements.has(zone.dataset.zoneId)
     );
@@ -469,6 +474,7 @@ export const buildMatchingWordsSlides = (
 
   let playbackCount = 0;
   let isPlaying = false;
+  let autoTriggered = false;
 
   const audioElement = audioUrl ? new Audio(audioUrl) : null;
 
@@ -566,6 +572,7 @@ export const buildMatchingWordsSlides = (
     submitBtn.disabled =
       answersChecked ||
       isPlaying ||
+      playbackCount < 1 ||
       instructionsLocked ||
       !items.length;
   };
@@ -578,6 +585,8 @@ export const buildMatchingWordsSlides = (
     if (isPlaying || playbackCount >= 2) {
       return;
     }
+    autoTriggered = true;
+    slide._autoTriggered = true;
     beginPlayback();
   });
 
@@ -607,6 +616,8 @@ export const buildMatchingWordsSlides = (
     }
     playbackCount = 0;
     isPlaying = false;
+    autoTriggered = false;
+    slide._autoTriggered = false;
     status.textContent = "";
     answersChecked = false;
     updateButtonState();
@@ -619,6 +630,18 @@ export const buildMatchingWordsSlides = (
     {
       id: context.key ? `${context.key}-matching` : "activity-matching",
       element: slide,
+      autoPlay: {
+        button: playBtn,
+        trigger: () => {
+          if (autoTriggered || isPlaying || playbackCount >= 2) {
+            return;
+          }
+          autoTriggered = true;
+          slide._autoTriggered = true;
+          beginPlayback();
+        },
+        status,
+      },
       onEnter,
       onLeave,
     },

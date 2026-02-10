@@ -1547,7 +1547,7 @@ const showSlide = (nextIndex) => {
   // window.scrollTo({ top: 0, behavior: "smooth" });
   nextSlide.element.scrollIntoView({ behavior: "smooth", block: "start" });
 
-  progressIndicator.textContent = `Slide ${currentSlideIndex + 1} of ${
+  progressIndicator.textContent = `Page ${currentSlideIndex + 1} of ${
     slides.length
   }`;
   prevBtn.disabled = currentSlideIndex === 0;

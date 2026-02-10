@@ -256,7 +256,11 @@ export const buildListeningSlides = (
     });
     const noQuestions = !questionEntries.length;
     submitBtn.disabled =
-      instructionsLocked || submissionLocked || isPlaying || noQuestions;
+      instructionsLocked ||
+      submissionLocked ||
+      isPlaying ||
+      playCount < 1 ||
+      noQuestions;
   };
 
   if (!questionEntries.length) {
@@ -272,6 +276,7 @@ export const buildListeningSlides = (
     ? Math.max(0, Math.min(maxPlays, savedDetail.playbackCount))
     : 0;
   let isPlaying = false;
+  let autoTriggered = false;
 
   const updatePlaybackStatus = () => {
     if (instructionsLocked) {
@@ -348,7 +353,14 @@ export const buildListeningSlides = (
     refreshAnswerInteractivity();
   };
 
-  playBtn.addEventListener("click", () => beginPlayback());
+  playBtn.addEventListener("click", () => {
+    if (isPlaying || playCount >= maxPlays) {
+      return;
+    }
+    autoTriggered = true;
+    slide._autoTriggered = true;
+    beginPlayback();
+  });
 
   const lockEntry = (entry, isCorrect) => {
     entry.locked = true;
@@ -380,6 +392,11 @@ export const buildListeningSlides = (
 
   const evaluate = () => {
     if (!questionEntries.length) {
+      return;
+    }
+    if (playCount < 1) {
+      resultEl.textContent = "Please listen to the audio at least once.";
+      resultEl.classList.add("assessment-result--error");
       return;
     }
     const unanswered = questionEntries.filter(
@@ -486,6 +503,8 @@ export const buildListeningSlides = (
       audioElement.currentTime = 0;
     }
     isPlaying = false;
+    autoTriggered = false;
+    slide._autoTriggered = false;
     updatePlaybackStatus();
     refreshAnswerInteractivity();
   };
@@ -498,6 +517,18 @@ export const buildListeningSlides = (
     {
       id: slideId,
       element: slide,
+      autoPlay: {
+        button: playBtn,
+        trigger: () => {
+          if (autoTriggered || isPlaying || playCount >= maxPlays) {
+            return;
+          }
+          autoTriggered = true;
+          slide._autoTriggered = true;
+          beginPlayback();
+        },
+        status: statusEl,
+      },
       onLeave,
     },
   ];

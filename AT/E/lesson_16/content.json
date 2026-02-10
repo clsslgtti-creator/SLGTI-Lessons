@@ -363,7 +363,7 @@
     "a": {
       "type": "MATCHING-WORDS",
       "instruction": {
-        "text": "Listen to the audio which will be played twice and match the frequency adverbs to the phrases. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න සහ සංඛ්‍යාත්මක ක්‍රියා විශේෂණ පදයන් වාක්‍ය කොටස් සමඟ ගැලපෙන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும் மற்றும் அடிக்கடி、副詞களை வாக்கிய பகுதிகளுடன் பொருத்தவும்.",
+        "text": "Listen to the audio which will be played twice and match the frequency adverbs to the phrases. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න සහ සංඛ්‍යාත්මක ක්‍රියා විශේෂණ පදයන් වාක්‍ය කොටස් සමඟ ගැලපෙන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும் மற்றும் அடிக்கடி、சொற்களை வாக்கிய பகுதிகளுடன் பொருத்தவும்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "audio": "assets/audio/a_4_q.mp3",
