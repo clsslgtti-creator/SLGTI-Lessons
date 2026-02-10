@@ -1069,6 +1069,19 @@ const handleInstructionForSlide = (slideObj) => {
     return;
   }
 
+  const activityKey = slideObj.element?.dataset?.activityKey;
+  if (activityKey) {
+    const activityState = getActivityAssessment(activityKey);
+    if (activityState?.submitted) {
+      if (slideObj._instructionLockActive) {
+        setSlideInstructionLock(slideObj, false);
+        slideObj._instructionLockActive = false;
+      }
+      slideObj._instructionComplete = true;
+      return;
+    }
+  }
+
   const audioUrl = slideObj.instructionAudio;
   const hasAutoPlay = Boolean(slideObj.autoPlay?.trigger);
   const shouldGateInteractions = Boolean(audioUrl);
