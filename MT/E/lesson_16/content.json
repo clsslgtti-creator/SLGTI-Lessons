@@ -1,0 +1,454 @@
+{
+  "meta": {
+    "lesson_no": "16 - Test",
+    "level": "Elementary",
+    "section": "Mechanical Technology",
+    "prepared_by": "Colombo Language School"
+  },
+  "activity_1": {
+    "type": "MCQ",
+    "instruction": {
+      "text": "Choose the correct verb/word to fill in the blank in each sentence. \nපහත වාක්‍යයේ හිස් තැනට නිවැරදි ක්‍රියා පදය/වචනය තෝරන්න.\nஒவ்வொரு வாக்கியத்திலும் வெறுமனே இடத்தை நிரப்ப சரியான வினைச்சொல்/சொல்லை தேர்ந்தெடுக்கவும்.",
+      "audio": "assets/audio/a_1_i.mp3"
+    },
+    "content": [
+      {
+        "question": "She ______ have any machine repair work these days.",
+        "options": ["don’t", "doesn’t", "deon’t", "didn’t"],
+        "answer": "doesn’t"
+      },
+      {
+        "question": "What ______ they doing in the workshop at the moment?",
+        "options": ["are", "aren’t", "were", "was"],
+        "answer": "are"
+      },
+      {
+        "question": "He ______ his machine readings in the maintenance book every evening.",
+        "options": ["write", "wrote", "writes", "rites"],
+        "answer": "writes"
+      },
+      {
+        "question": "They ______ off the lathe machine when they leave the bay.",
+        "options": ["swich", "switches", "swiches", "switch"],
+        "answer": "switch"
+      },
+      {
+        "question": "He ______ to the mechanical lab yesterday.",
+        "options": ["drive", "drove", "drives", "driven"],
+        "answer": "drove"
+      },
+      {
+        "question": "The technician ______ a thin pair of gloves that didn’t protect his hands.",
+        "options": ["wore", "worn", "wear", "wears"],
+        "answer": "wore"
+      },
+      {
+        "question": "Meena checks the hydraulic press every morning before use. She ______ checks before using it.",
+        "options": ["often", "never", "always", "sometimes"],
+        "answer": "always"
+      },
+      {
+        "question": "He is allergic to metal dust. He ______ works near the grinding area.",
+        "options": ["often", "never", "always", "sometimes"],
+        "answer": "never"
+      },
+      {
+        "question": "What are you doing?",
+        "options": [
+          "I heat the metal block.",
+          "I heats the metal block.",
+          "I am heating the metal block.",
+          "I heated the metal block."
+        ],
+        "answer": "I am heating the metal block."
+      },
+      {
+        "question": "Do you always clean the hand tools in the staff lunchroom sink?",
+        "options": [
+          "No, I usually clean them in the service area but today it isn’t available.",
+          "No, I am usually cleaning them in the service area but today it isn’t available.",
+          "No, I usually clean in the service areas but today it hasn’t been available.",
+          "No, I usually cleans in the service area but today it hasn’t been available."
+        ],
+        "answer": "No, I usually clean them in the service area but today it isn’t available."
+      }
+    ]
+  },
+  "activity_2": {
+    "a": {
+      "type": "MCQ",
+      "instruction": {
+        "text": "Read the following answers and  click on the correct question. \nපහත පිළිතුරු කියවන්න සහ නිවැරදි ප්‍රශ්නය මත ක්ලික් කරන්න.\nபின்வரும் பதில்களை படியுங்கள் மற்றும் சரியான கேள்வியில் கிளிக் செய்யவும்.",
+        "audio": "assets/audio/a_2_a_i.mp3"
+      },
+      "content": [
+        {
+          "question": "His name is Ashok.",
+          "options": [
+            "Whats his name?",
+            "What’s his name?",
+            "What’s your name?"
+          ],
+          "answer": "What’s his name?"
+        },
+        {
+          "question": "He lives in Kandy.",
+          "options": [
+            "Where does he live?",
+            "Where is he live?",
+            "Where he lives?"
+          ],
+          "answer": "Where does he live?"
+        },
+        {
+          "question": "I speak Tamil.",
+          "options": [
+            "What language do he speak?",
+            "What language do you speak?",
+            "What languages does she speaks?"
+          ],
+          "answer": "What language do you speak?"
+        },
+        {
+          "question": "She eats Sri Lankan food, she reads Sri Lankan newspapers and she sings Sri Lankan songs.",
+          "options": [
+            "What does she do every day?",
+            "What she do every day?",
+            "What does you do every days?"
+          ],
+          "answer": "What does she do every day?"
+        },
+        {
+          "question": "I live in Puttalam.",
+          "options": [
+            "Where do he lives?",
+            "Where do you lives?",
+            "Where do you live?"
+          ],
+          "answer": "Where do you live?"
+        }
+      ]
+    },
+    "b": {
+      "type": "MCQ",
+      "instruction": {
+        "text": "Read the following questions and click on the correct answer.\nපහත ප්‍රශ්න කියවන්න සහ නිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nபின்வரும் கேள்விகளை படியுங்கள் மற்றும் சரியான பதிலில் கிளிக் செய்யவும்.",
+        "audio": "assets/audio/a_2_b_i.mp3"
+      },
+      "content": [
+        {
+          "question": "What are you doing?",
+          "options": [
+            "I go by car to work.",
+            "Yes, I go by car to work.",
+            "I am going to work by bus."
+          ],
+          "answer": "I am going to work by bus."
+        },
+        {
+          "question": "Why are you going by bus today?",
+          "options": [
+            "Because my car broken down today.",
+            "Because my car broke down this morning.",
+            "Because my car breaks down today."
+          ],
+          "answer": "Because my car broke down this morning."
+        },
+        {
+          "question": "Why are you crying?",
+          "options": [
+            "I am crying because I am sad. She always cry when she’s sad.",
+            "I am crying because I’m sad. I always cry when I’m sad.",
+            "I cried because I’m sad. I am always crying when I’m sad."
+          ],
+          "answer": "I am crying because I’m sad. I always cry when I’m sad."
+        },
+        {
+          "question": "Why are you sitting down?",
+          "options": [
+            "I am sitting down because I’m tired. I always sit down when I’m tired.",
+            "She sits down because she’s tired. She always sits down when she’s tired.",
+            "I sit down because I’m tired. I always sitting down when I’m tired."
+          ],
+          "answer": "I am sitting down because I’m tired. I always sit down when I’m tired."
+        },
+        {
+          "question": "How often do you clean your tools?",
+          "options": [
+            "I am cleaning them twice a week.",
+            "I clean them twice a month.",
+            "I cleans it twice a year."
+          ],
+          "answer": "I clean them twice a month."
+        }
+      ]
+    },
+    "c": {
+      "type": "MCQ-TABLE",
+      "instruction": {
+        "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවන්න සහ ප්‍රශ්න වලට පිළිතුරු දෙන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையை படியுங்கள் மற்றும் கேள்விகளுக்கு பதிலளிக்கவும்.",
+        "audio": "assets/audio/a_2_c_i.mp3"
+      },
+      "tables": [
+        [
+          ["", "Monday", "Wednesday ", "Friday"],
+          [
+            "Farah",
+            "applies for internships",
+            "studies her notes",
+            "does practicals"
+          ],
+          [
+            "I",
+            "fill the fuel tank",
+            "arrange the equipment",
+            " visit my grandparents"
+          ]
+        ]
+      ],
+      "content": [
+        {
+          "question": "Does Farah study her notes on Fridays?",
+          "options": [
+            "No, she doesn’t. She studies them on Wednesdays.",
+            "Yes, she studies. She studies it on Wednesdays.",
+            "No, she don’t. She study them on Wednesdays."
+          ],
+          "answer": "No, she doesn’t. She studies them on Wednesdays."
+        },
+        {
+          "question": "Does she apply for internships on Wednesdays?",
+          "options": [
+            "No, she don’t. She applies for them on Fridays.",
+            "No, she doesn’t. She applies for them on Mondays.",
+            "No, she don’t. She apply for them on Mondays."
+          ],
+          "answer": "No, she doesn’t. She applies for them on Mondays."
+        },
+        {
+          "question": "Do you visit your grandparents on Mondays?",
+          "options": [
+            "No, I doesn’t. I visit them on Fridays.",
+            "No, I dont’. I visits them on Fridays.",
+            "No, I don’t. I visit them on Fridays."
+          ],
+          "answer": "No, I don’t. I visit them on Fridays."
+        },
+        {
+          "question": "Do you fill the fuel tank on Fridays?",
+          "options": [
+            "No, I don’t. I fill it on Mondays.",
+            "No, I fills it on Mondays.",
+            "No, I doesn’t. I fill them on Mondays."
+          ],
+          "answer": "No, I don’t. I fill it on Mondays."
+        },
+        {
+          "question": "When do you arrange the equipment?",
+          "options": [
+            "I arrange it on Wednesdays.",
+            "No, I don’t. I arrange it on Wednesdays.",
+            "Yes, I do. I arrange it on Wednesdays."
+          ],
+          "answer": "I arrange it on Wednesdays."
+        }
+      ]
+    }
+  },
+  "activity_3": {
+    "type": "MCQ-TABLE",
+    "instruction": {
+      "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවන්න සහ ප්‍රශ්න වලට පිළිතුරු දෙන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையை படியுங்கள் மற்றும் கேள்விகளுக்கு பதிலளிக்கவும்.",
+      "audio": "assets/audio/a_2_c_i.mp3"
+    },
+    "tables": [
+      [
+        ["", "Monday", "Thursday ", "Friday", "Weekends"],
+        [
+          "Ashok",
+          "cooks Italian food",
+          "cooks Indian food",
+          "cooks Sri Lankan food",
+          "cooks western food "
+        ],
+        ["Devi", "plays tennis", "goes to the gym", "does yoga", "plays golf"],
+        [
+          "Yusuf",
+          "paints houses",
+          "fixes broken locks and taps",
+          "does plastering and grouting",
+          "does gardening"
+        ]
+      ]
+    ],
+    "content": [
+      {
+        "question": "Ashok cooks western food at the weekend.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Devi doesn’t go to the gym on Fridays.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Yusuf paints houses on Fridays.",
+        "options": ["true", "false"],
+        "answer": "false"
+      },
+      {
+        "question": "Devi plays golf on Mondays.",
+        "options": ["true", "false"],
+        "answer": "false"
+      },
+      {
+        "question": "Ashok doesn’t cook Indian food on Mondays.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Ashok cooks Sri Lankan food on Fridays.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Yusuf does athletics on Fridays.",
+        "options": ["true", "false"],
+        "answer": "false"
+      },
+      {
+        "question": "Ashok doesn’t cook Italian food on Thursdays.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Yusuf doesn’t do gardening on weekdays.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Yusuf fixes broken taps on Mondays.",
+        "options": ["true", "false"],
+        "answer": "false"
+      },
+      {
+        "question": "Devi goes to the gym on Thursdays.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Devi does athletics on Fridays.",
+        "options": ["true", "false"],
+        "answer": "false"
+      },
+      {
+        "question": "Ashok doesn’t cook Indian food at the weekend.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Devi plays tennis on Mondays.",
+        "options": ["true", "false"],
+        "answer": "true"
+      },
+      {
+        "question": "Yusuf does plastering and grouting on Fridays.",
+        "options": ["true", "false"],
+        "answer": "true"
+      }
+    ]
+  },
+  "activity_4": {
+    "a": {
+      "type": "MATCHING-WORDS",
+      "instruction": {
+        "text": "Listen to the audio which will be played twice and match the frequency adverbs to the phrases. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න සහ සංඛ්‍යාත්මක ක්‍රියා විශේෂණ පදයන් වාක්‍ය කොටස් සමඟ ගැලපෙන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும் மற்றும் அடிக்கடி、சொற்களை வாக்கிய பகுதிகளுடன் பொருத்தவும்.",
+        "audio": "assets/audio/a_4_i_a.mp3"
+      },
+      "audio": "assets/audio/a_4_q.mp3",
+      "content": [
+        {
+          "id": "n_4_a_1",
+          "item_a": "often",
+          "item_b": "find small problems during routine checks"
+        },
+        {
+          "id": "n_4_a_2",
+          "item_a": "always",
+          "item_b": "wear safety gloves and boots"
+        },
+        {
+          "id": "n_4_a_3",
+          "item_a": "never",
+          "item_b": "ignore safety rules"
+        },
+        {
+          "id": "n_4_a_4",
+          "item_a": "usually",
+          "item_b": "follow the standard service procedure"
+        },
+        {
+          "id": "n_4_a_5",
+          "item_a": "rarely",
+          "item_b": "complain after a service by us"
+        }
+      ]
+    },
+    "b": {
+      "type": "LISTENING",
+      "instruction": {
+        "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
+        "audio": "assets/audio/a_4_i.mp3"
+      },
+      "audio": "assets/audio/a_4_q.mp3",
+      "content": [
+        {
+          "question": "Why does the instructor insist on wearing safety gloves and safety shoes in the workshop?",
+          "options": [
+            "They reduce the risk of slipping on oily floors.",
+            "They reduce the risk of injury from tools and vehicle parts.",
+            "They reduce the risk of accidents and injuries from falling debris."
+          ],
+          "answer": "They reduce the risk of injury from tools and vehicle parts."
+        },
+        {
+          "question": "Why did they have to replace the oil filter?",
+          "options": [
+            "The filter was dirty and clogging up.",
+            "It was dirty and loose.",
+            "The oil was leaking and the filter was loose."
+          ],
+          "answer": "It was dirty and loose."
+        },
+        {
+          "question": "Why did the trainees inform the customer before replacing the oil filter?",
+          "options": [
+            "Because the worksheet requires clear explanation.",
+            "Because clear explanation helps the customer understand the repair.",
+            "Because the repair cannot be done without customer supervision."
+          ],
+          "answer": "Because clear explanation helps the customer understand the repair."
+        },
+        {
+          "question": "What does the test drive help the trainees confirm after the repair?",
+          "options": [
+            "That the customer is satisfied with the service.",
+            "That braking response, noise, and pedal feel are normal.",
+            "That braking response is good and the vehicle looks clean after service."
+          ],
+          "answer": "That braking response, noise, and pedal feel are normal."
+        },
+        {
+          "question": "Why is filling in the job card important after completing the work?",
+          "options": [
+            "It listed complaints, repairs, and results in the past.",
+            "It records costs, total hours of repair and consent forms by customers.",
+            "It records complaints, repairs, and results for future reference."
+          ],
+          "answer": "It records complaints, repairs, and results for future reference."
+        }
+      ]
+    }
+  }
+}

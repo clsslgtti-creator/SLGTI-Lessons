@@ -144,7 +144,7 @@
       },
       {
         "id": "k_2",
-        "image": "assets/img/a_2_d_2.png",
+        "image": "assets/img/a_2_d_2.jpeg",
         "word": "engine oil"
       },
       {
@@ -179,7 +179,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.png",
+        "img": "assets/img/a_2_d_2.jpeg",
         "text_a": "How often do you drain and refill the engine oil?",
         "text_b": "We do it every month.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
