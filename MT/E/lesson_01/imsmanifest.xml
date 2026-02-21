@@ -32,8 +32,6 @@
   <resources>
     <resource identifier="RES-LESSON-01" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="index.html" />
-      <file href="assets/audio/a_1_i_a.mp3" />
-      <file href="assets/audio/a_1_i_b.mp3" />
       <file href="assets/audio/a_1_p_1_a.mp3" />
       <file href="assets/audio/a_1_p_1_b.mp3" />
       <file href="assets/audio/a_1_p_2_a.mp3" />
@@ -137,10 +135,8 @@
       <file href="assets/audio/a_4_w_7.mp3" />
       <file href="assets/audio/a_4_w_8.mp3" />
       <file href="assets/audio/a_4_w_9.mp3" />
-      <file href="assets/audio/game/correct.wav" />
-      <file href="assets/audio/game/incorrect.wav" />
-      <file href="assets/audio/game/timeout.wav" />
-      <file href="assets/img/a_1_p.jpeg" />
+      <file href="assets/audio/a_5_i_a.mp3" />
+      <file href="assets/audio/a_5_i_b.mp3" />
       <file href="assets/img/a_1_p_1.jpeg" />
       <file href="assets/img/a_1_p_2.png" />
       <file href="assets/img/a_1_p_3.jpeg" />
@@ -154,12 +150,8 @@
       <file href="assets/img/a_2_ex_1.jpeg" />
       <file href="assets/img/a_2_ex_2.jpeg" />
       <file href="assets/img/a_2_ex_3.jpeg" />
-      <file href="assets/img/game/bg.jpg" />
-      <file href="assets/img/game/correct.png" />
-      <file href="assets/img/game/incorrect.png" />
-      <file href="assets/img/game/timeout.png" />
-      <file href="assets/img/game/timer.png" />
-      <file href="assets/img/logo.png" />
+      <file href="assets/videos/1B.mp4" />
+      <file href="assets/videos/2A.mp4" />
       <file href="content.json" />
       <file href="lib/activity-2.js" />
       <file href="lib/audio-manager.js" />
