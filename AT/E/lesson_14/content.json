@@ -221,7 +221,7 @@
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Why are you using the torque wrench?",
+        "text_a": "Why are you using the wrench?",
         "text_b": "I’m using it because it gives the correct pressure.",
         "text_c": "I always use it when fixing cylinder heads.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
