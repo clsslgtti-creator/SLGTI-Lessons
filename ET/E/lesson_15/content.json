@@ -51,7 +51,7 @@
         "id": "p_3",
         "word_text": "'o'hm",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "They always record the reading in 'o'hm.",
+        "sentence_text": "They always record the reading in 'o'hms.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
@@ -339,7 +339,7 @@
           {
             "id": "g_b_2",
             "sentence": "The trainees __________ cable clips for the instructor.",
-            "options": ["mounting", "is mounting", "are mounting", "mount"],
+            "options": ["mounting", "is mount", "are mounting", "mount"],
             "answer": "mount",
             "image": "assets/img/a_3_1.png"
           },
