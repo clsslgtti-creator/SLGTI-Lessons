@@ -639,12 +639,12 @@
         },
         {
           "id": "t_3_21",
-          "text": "My uncle from next door is already discussing politics with the vegetable seller. ****",
+          "text": "My uncle from next door is already discussing politics with the vegetable seller.",
           "audio": "assets/audio/t_3_21.mp3"
         },
         {
           "id": "t_3_22",
-          "text": "They’ve been shouting for twenty minutes. ****",
+          "text": "They’ve been shouting for twenty minutes.",
           "audio": "assets/audio/t_3_22.mp3"
         },
         {
@@ -880,18 +880,22 @@
           "Read along."
         ],
         "audio": "assets/audio/a_5_i_b.mp3"
+      },
+      "instrction_c": {
+        "text": "Watch the video.\nවීඩියෝව බලන්න.\nவீடியோவைப் பாருங்கள்.",
+        "audio": "assets/audio/a_5_i_c.mp3"
       }
     },
     "content": [
       {
         "id": "v_1",
         "audio": "assets/videos/1B.mp4",
-        "instrction": "instrction_b"
+        "instrction": "instrction_c"
       },
       {
         "id": "v_2",
         "audio": "assets/videos/2B.mp4",
-        "instrction": "instrction_b"
+        "instrction": "instrction_c"
       }
     ]
   }

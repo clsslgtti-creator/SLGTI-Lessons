@@ -67,7 +67,7 @@
   },
   "activity_2": {
     "type": "SBS-2",
-    "focus": "Focus Contrast between the Simple Present Tense and the Present Continuous Tense",
+    "focus": "Contrast between the Simple Present Tense and the Present Continuous Tense",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
@@ -158,12 +158,12 @@
       },
       {
         "id": "k_5",
-        "image": "assets/img/a_2_d_5.jpeg",
+        "image": "assets/img/a_2_d_5.png",
         "word": "cleaning the keyboard"
       },
       {
         "id": "k_6",
-        "image": "assets/img/a_2_d_6.png",
+        "image": "assets/img/a_2_d_6.jpeg",
         "word": "saving the file on the drive"
       }
     ],
@@ -210,7 +210,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.jpeg",
+        "img": "assets/img/a_2_d_5.png",
         "text_a": "Why are you cleaning the keyboard?",
         "text_b": "I’m cleaning it because it’s full of dust.",
         "text_c": "I always clean it after lab sessions.",
@@ -220,7 +220,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.png",
+        "img": "assets/img/a_2_d_6.jpeg",
         "text_a": "Why are you saving the file on the drive?",
         "text_b": "I’m saving it because I need a backup.",
         "text_c": "I always save it before shutting down.",
@@ -413,7 +413,7 @@
             "question": "Why is he testing the Wi-Fi connection?",
             "answer": "Because it was unstable yesterday",
             "options": [
-              "Because it was unstable yesterday",
+              "Because it was stable yesterday",
               "Because it was unstable yesterday",
               "Because the router is new"
             ]

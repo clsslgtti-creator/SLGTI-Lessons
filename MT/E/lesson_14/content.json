@@ -67,7 +67,7 @@
   },
   "activity_2": {
     "type": "SBS-2",
-    "focus": "Focus Contrast between the Simple Present Tense and the Present Continuous Tense",
+    "focus": "Contrast between the Simple Present Tense and the Present Continuous Tense",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
@@ -138,7 +138,7 @@
     "keywords": [
       {
         "id": "k_1",
-        "image": "assets/img/a_2_d_1.jpeg",
+        "image": "assets/img/a_2_d_1.png",
         "word": "oiling the lathe machine"
       },
       {
@@ -170,7 +170,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Why are you oiling the lathe machine?",
         "text_b": "I’m oiling it because the parts are dry.",
         "text_c": "I always oil it before turning metal.",

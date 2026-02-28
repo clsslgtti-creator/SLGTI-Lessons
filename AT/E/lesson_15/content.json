@@ -45,7 +45,7 @@
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
         "sentence_text": "He never parks new vehicles on the r'oa'd.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.png"
+        "image": "assets/img/a_1_p_2x.png"
       },
       {
         "id": "p_3",
@@ -323,7 +323,7 @@
           {
             "id": "e_1",
             "sentence": "Amal __________ the spark plugs every day.",
-            "options": ["is tighten", "is tighten", "tightens", "tighten"],
+            "options": ["are tighten", "is tighten", "tightens", "tighten"],
             "answer": "tightens",
             "image": "assets/img/a_3_1.png"
           }
@@ -649,12 +649,12 @@
         },
         {
           "id": "t_3_21",
-          "text": "My uncle from next door is already discussing politics with the vegetable seller. ****",
+          "text": "My uncle from next door is already discussing politics with the vegetable seller.",
           "audio": "assets/audio/t_3_21.mp3"
         },
         {
           "id": "t_3_22",
-          "text": "They’ve been shouting for twenty minutes. ****",
+          "text": "They’ve been shouting for twenty minutes.",
           "audio": "assets/audio/t_3_22.mp3"
         },
         {
@@ -890,18 +890,22 @@
           "Read along."
         ],
         "audio": "assets/audio/a_5_i_b.mp3"
+      },
+      "instrction_c": {
+        "text": "Watch the video.\nවීඩියෝව බලන්න.\nவீடியோவைப் பாருங்கள்.",
+        "audio": "assets/audio/a_5_i_c.mp3"
       }
     },
     "content": [
       {
         "id": "v_1",
         "audio": "assets/videos/1B.mp4",
-        "instrction": "instrction_b"
+        "instrction": "instrction_c"
       },
       {
         "id": "v_2",
         "audio": "assets/videos/2B.mp4",
-        "instrction": "instrction_b"
+        "instrction": "instrction_c"
       }
     ]
   }

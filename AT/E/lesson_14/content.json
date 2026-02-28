@@ -67,7 +67,7 @@
   },
   "activity_2": {
     "type": "SBS-2",
-    "focus": "Focus Contrast between the Simple Present Tense and the Present Continuous Tense",
+    "focus": "Contrast between the Simple Present Tense and the Present Continuous Tense",
     "instructions": {
       "example": {
         "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
@@ -221,7 +221,7 @@
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Why are you using the torque wrench?",
+        "text_a": "Why are you using the wrench?",
         "text_b": "I’m using it because it gives the correct pressure.",
         "text_c": "I always use it when fixing cylinder heads.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
@@ -380,7 +380,7 @@
         "Questions": [
           {
             "id": "l_4_1",
-            "question": "Why is Nimal starting work earlier today?",
+            "question": "Why is John starting work earlier today?",
             "answer": "Because new trainees are visiting",
             "options": [
               "Because he came late yesterday",
@@ -401,21 +401,21 @@
           {
             "id": "l_4_3",
             "question": "Why is he sharing tools today?",
-            "answer": "Because Nimal’s toolbox is being repaired",
+            "answer": "Because John’s toolbox is being repaired",
             "options": [
-              "Because Amal’s toolbox is being repaired",
-              "Because Nimal’s toolbox is being repaired",
+              "Because Robert’s toolbox is being repaired",
+              "Because John’s toolbox is being repaired",
               "Because the instructor told him to"
             ]
           },
           {
             "id": "l_4_4",
-            "question": "Why is Nimal inspecting the cooling fan?",
+            "question": "Why is John inspecting the cooling fan?",
             "answer": "Because it is making a strange noise",
             "options": [
               "Because it is part of his routine",
               "Because it is making a strange noise",
-              "Because Amal is making a strange noise"
+              "Because Robert is making a strange noise"
             ]
           },
           {
@@ -433,7 +433,7 @@
       "activity_b": [
         {
           "id": "t_1_1",
-          "text": "Nimal works at a mechanical workshop in Kurunegala.",
+          "text": "John works at a mechanical workshop in Kurunegala.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -448,7 +448,7 @@
         },
         {
           "id": "t_1_4",
-          "text": "He normally uses his own spanner set, but today he is sharing tools with his friend Amal because his toolbox is being repaired.",
+          "text": "He normally uses his own spanner set, but today he is sharing tools with his friend Robert because his toolbox is being repaired.",
           "audio": "assets/audio/t_1_4.mp3"
         },
         {
@@ -458,7 +458,7 @@
         },
         {
           "id": "t_1_6",
-          "text": "Most days, Nimal repairs motorcycles and changes oil filters, but this week he is tuning a small petrol engine from a three-wheeler for a customer who needs it urgently.",
+          "text": "Most days, John repairs motorcycles and changes oil filters, but this week he is tuning a small petrol engine from a three-wheeler for a customer who needs it urgently.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
@@ -473,7 +473,7 @@
         },
         {
           "id": "t_1_9",
-          "text": "At the end of the day, Nimal always cleans his tools and locks his toolbox, but this afternoon he is cleaning the workshop floor because there has been an oil spill near the service bay.",
+          "text": "At the end of the day, John always cleans his tools and locks his toolbox, but this afternoon he is cleaning the workshop floor because there has been an oil spill near the service bay.",
           "audio": "assets/audio/t_1_9.mp3"
         },
         {
@@ -485,7 +485,7 @@
       "activity_c": [
         {
           "id": "t_1_1",
-          "text": "Nimal works at a mechanical workshop in Kurunegala.",
+          "text": "John works at a mechanical workshop in Kurunegala.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -500,7 +500,7 @@
         },
         {
           "id": "t_1_4",
-          "text": "He normally uses his own spanner set, but today he is sharing tools with his friend Amal because his toolbox is being repaired.",
+          "text": "He normally uses his own spanner set, but today he is sharing tools with his friend Robert because his toolbox is being repaired.",
           "audio": "assets/audio/t_1_4.mp3"
         },
         {
@@ -510,7 +510,7 @@
         },
         {
           "id": "t_1_6",
-          "text": "Most days, Nimal repairs motorcycles and changes oil filters, but this week he is tuning a small petrol engine from a three-wheeler for a customer who needs it urgently.",
+          "text": "Most days, John repairs motorcycles and changes oil filters, but this week he is tuning a small petrol engine from a three-wheeler for a customer who needs it urgently.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
@@ -525,7 +525,7 @@
         },
         {
           "id": "t_1_9",
-          "text": "At the end of the day, Nimal always cleans his tools and locks his toolbox, but this afternoon he is cleaning the workshop floor because there has been an oil spill near the service bay.",
+          "text": "At the end of the day, John always cleans his tools and locks his toolbox, but this afternoon he is cleaning the workshop floor because there has been an oil spill near the service bay.",
           "audio": "assets/audio/t_1_9.mp3"
         },
         {
@@ -537,7 +537,7 @@
       "activity_d": [
         {
           "id": "t_1_1",
-          "text": "Nimal works at a mechanical workshop in Kurunegala.",
+          "text": "John works at a mechanical workshop in Kurunegala.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -552,7 +552,7 @@
         },
         {
           "id": "t_1_4",
-          "text": "He normally uses his own spanner set, but today he is sharing tools with his friend Amal because his toolbox is being repaired.",
+          "text": "He normally uses his own spanner set, but today he is sharing tools with his friend Robert because his toolbox is being repaired.",
           "audio": "assets/audio/t_1_4.mp3"
         },
         {
@@ -562,7 +562,7 @@
         },
         {
           "id": "t_1_6",
-          "text": "Most days, Nimal repairs motorcycles and changes oil filters, but this week he is tuning a small petrol engine from a three-wheeler for a customer who needs it urgently.",
+          "text": "Most days, John repairs motorcycles and changes oil filters, but this week he is tuning a small petrol engine from a three-wheeler for a customer who needs it urgently.",
           "audio": "assets/audio/t_1_6.mp3"
         },
         {
@@ -577,7 +577,7 @@
         },
         {
           "id": "t_1_9",
-          "text": "At the end of the day, Nimal always cleans his tools and locks his toolbox, but this afternoon he is cleaning the workshop floor because there has been an oil spill near the service bay.",
+          "text": "At the end of the day, John always cleans his tools and locks his toolbox, but this afternoon he is cleaning the workshop floor because there has been an oil spill near the service bay.",
           "audio": "assets/audio/t_1_9.mp3"
         },
         {

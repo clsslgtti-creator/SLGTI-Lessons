@@ -54,6 +54,15 @@ const normalizeValue = (value) => {
   return trimmed ? trimmed.toLowerCase() : "";
 };
 
+const shuffleArray = (list = []) => {
+  const items = Array.isArray(list) ? [...list] : [];
+  for (let i = items.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+  return items;
+};
+
 const createStatus = () => {
   const status = document.createElement("p");
   status.className = "playback-status";
@@ -231,7 +240,10 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
     const optionGroup = document.createElement("div");
     optionGroup.className = "listening-option-group";
 
-    const buttons = question.options.map((option) => {
+    const shuffledOptions = shuffleArray(question.options);
+
+
+    const buttons = shuffledOptions.map((option) => {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "listening-option";
@@ -965,3 +977,7 @@ export const buildListeningTwoSlides = (activityData = {}, context = {}) => {
 
   return slides;
 };
+
+
+
+
