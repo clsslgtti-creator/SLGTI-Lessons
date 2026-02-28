@@ -880,18 +880,22 @@
           "Read along."
         ],
         "audio": "assets/audio/a_5_i_b.mp3"
+      },
+      "instrction_c": {
+        "text": "Watch the video.\nවීඩියෝව බලන්න.\nவீடியோவைப் பாருங்கள்.",
+        "audio": "assets/audio/a_5_i_c.mp3"
       }
     },
     "content": [
       {
         "id": "v_1",
         "audio": "assets/videos/1B.mp4",
-        "instrction": "instrction_b"
+        "instrction": "instrction_c"
       },
       {
         "id": "v_2",
         "audio": "assets/videos/2B.mp4",
-        "instrction": "instrction_b"
+        "instrction": "instrction_c"
       }
     ]
   }
