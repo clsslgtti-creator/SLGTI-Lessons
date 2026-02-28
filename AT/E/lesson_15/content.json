@@ -323,7 +323,7 @@
           {
             "id": "e_1",
             "sentence": "Amal __________ the spark plugs every day.",
-            "options": ["is tighten", "is tighten", "tightens", "tighten"],
+            "options": ["are tighten", "is tighten", "tightens", "tighten"],
             "answer": "tightens",
             "image": "assets/img/a_3_1.png"
           }
