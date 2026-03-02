@@ -152,7 +152,7 @@
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
         "text_a": "Where is the dough mixer?",
-        "text_b": "It is on the middle shelf",
+        "text_b": "It is on the middle shelf.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "keyword": "middle shelf"
@@ -161,7 +161,7 @@
         "id": "d_5",
         "img": "assets/img/a_2_d_5.jpeg",
         "text_a": "Where is the caramelized sugar?",
-        "text_b": " It is on the oilpaper.",
+        "text_b": "It is on the oilpaper.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
         "keyword": "oil paper"
@@ -169,7 +169,7 @@
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.jpeg",
-        "text_a": "Where are the lined  baking trays?",
+        "text_a": "Where are the lined baking trays?",
         "text_b": "They are on the electric oven.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
