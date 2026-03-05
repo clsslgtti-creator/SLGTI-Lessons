@@ -153,7 +153,7 @@
       {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.jpeg",
-        "text_a": "Where is the adjustable torque wrench?",
+        "text_a": "Where is the adjustable wrench?",
         "text_b": "It is in the grey cotton bag.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
@@ -349,7 +349,7 @@
           },
           {
             "id": "l_4_3",
-            "question": "What is the thickness of the brake pad?",
+            "question": "What should be the thickness of the brake pad?",
             "answer": "10 millimeters",
             "options": ["12 millimeters", "10 millimeters", "8 millimeters"]
           },
