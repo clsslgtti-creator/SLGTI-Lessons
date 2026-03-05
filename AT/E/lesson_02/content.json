@@ -180,7 +180,7 @@
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": " Where is the speedometer?",
+        "text_a": "Where is the speedometer?",
         "text_b": "It is in the bottom drawer.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
