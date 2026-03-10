@@ -70,7 +70,7 @@
     "focus": "Adjectives and prepositions",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "text": "Listen to the model dialogues.\nආදර්ශ සංවාද අසන්න.\nமாதிரி உரையாடல்களை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {
@@ -502,12 +502,6 @@
             "options": ["Oval mirror", "Oval serving tray", "Oval bowl"]
           },
           {
-            "id": "l_4_4",
-            "question": "What was the cubical item the customer wanted to buy?",
-            "answer": "Cubical gift box",
-            "options": ["Cubical stool", "Cubical gift box", "Cubical speaker"]
-          },
-          {
             "id": "l_4_5",
             "question": "What did the shopkeeper say about the square plastic containers?",
             "answer": "They are in limited stock",
@@ -516,6 +510,12 @@
               "They are out of stock",
               "They are in limited stock"
             ]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What was the cubical item the customer wanted to buy?",
+            "answer": "Cubical gift box",
+            "options": ["Cubical stool", "Cubical gift box", "Cubical speaker"]
           }
         ]
       },

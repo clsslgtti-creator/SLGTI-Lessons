@@ -70,7 +70,7 @@
     "focus": "Present Continuous Tense",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "text": "Listen to the model dialogues.\nආදර්ශ සංවාද අසන්න.\nமாதிரி உரையாடல்களை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_a": {
@@ -159,7 +159,7 @@
       {
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
-        "text_a": " What are the workmen doing?",
+        "text_a": "What are the workmen doing?",
         "text_b": "They are unloading bricks from the truck. ",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
@@ -168,8 +168,8 @@
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": " What is she wearing?",
-        "text_b": " She is wearing a yellow helmet with the company logo. ",
+        "text_a": "What is she doing?",
+        "text_b": "She is calculating the cost of the plumbing work.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
         "keyword": "yellow helmet"

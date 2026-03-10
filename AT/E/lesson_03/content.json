@@ -70,7 +70,7 @@
     "focus": "Present Continuous Tense",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "text": "Listen to the model dialogues.\nආදර්ශ සංවාද අසන්න.\nமாதிரி உரையாடல்களை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_a": {
@@ -177,7 +177,7 @@
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.jpeg",
-        "text_a": " What are they doing?",
+        "text_a": "What are they doing?",
         "text_b": "They are testing the wheel alignment.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",

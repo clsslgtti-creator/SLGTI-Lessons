@@ -32,14 +32,6 @@
     },
     "content": [
       {
-        "id": "p_1",
-        "word_text": "j'a'r",
-        "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The j'a'r is full of rice.",
-        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.png"
-      },
-      {
         "id": "p_2",
         "word_text": "c'a'rt",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
@@ -62,6 +54,14 @@
         "sentence_text": "The bakery uses a l'a'rge oven.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
+      },
+      {
+        "id": "p_1",
+        "word_text": "j'a'r",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "The j'a'r is full of rice.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
       }
     ]
   },
@@ -70,7 +70,7 @@
     "focus": "Adjectives and prepositions",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "text": "Listen to the model dialogues.\nආදර්ශ සංවාද අසන්න.\nமாதிரி உரையாடல்களை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {

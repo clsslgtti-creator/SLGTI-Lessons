@@ -40,14 +40,6 @@
         "image": "assets/img/a_1_p_1.png"
       },
       {
-        "id": "p_2",
-        "word_text": "sp'a'rk",
-        "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "The wire made a small sp'a'rk.",
-        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.jpeg"
-      },
-      {
         "id": "p_3",
         "word_text": "'a'rc",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
@@ -62,6 +54,14 @@
         "sentence_text": "This p'a'rt is important for safety.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
+      },
+      {
+        "id": "p_2",
+        "word_text": "sp'a'rk",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "The wire made a small sp'a'rk.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.jpeg"
       }
     ]
   },
@@ -70,7 +70,7 @@
     "focus": "Adjectives and prepositions",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogue.\nආදර්ශ සංවාදයට සවන් දෙන්න.\nமாதிரி உரையாடலை கேளுங்கள்.",
+        "text": "Listen to the model dialogues.\nආදර්ශ සංවාද අසන්න.\nமாதிரி உரையாடல்களை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {
