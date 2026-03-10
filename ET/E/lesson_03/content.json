@@ -151,7 +151,7 @@
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
         "text_a": "What are you and the trainees doing?",
-        "text_b": " We are arranging the pliers on the workbench",
+        "text_b": "We are arranging the pliers on the workbench.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
         "keyword": "pliers"
@@ -160,7 +160,7 @@
         "id": "d_4",
         "img": "assets/img/a_2_d_4.jpeg",
         "text_a": "What is she doing?",
-        "text_b": "She is testing the control panel for faults. ",
+        "text_b": "She is testing the control panel for faults.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_d_4_b.mp3",
         "keyword": "control panel"
@@ -169,7 +169,7 @@
         "id": "d_5",
         "img": "assets/img/a_2_d_5.jpeg",
         "text_a": "What is  the electrician doing?",
-        "text_b": "He is fixing the fluorescent tube on the ceiling ",
+        "text_b": "He is fixing the fluorescent tube on the ceiling.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3",
         "keyword": "fluorescent tube"
@@ -178,7 +178,7 @@
         "id": "d_6",
         "img": "assets/img/a_2_d_6.jpeg",
         "text_a": "What is the faulty fan doing now?",
-        "text_b": " It is revolving very slowly.",
+        "text_b": "It is revolving very slowly.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3",
         "keyword": "fan"
@@ -351,13 +351,13 @@
         "audio": "assets/audio/a_4_l_1.mp3",
         "Questions": [
           {
-            "id": "l_4_1",
-            "question": "What is Sunil doing?",
-            "answer": "He is rewinding a motor.",
+            "id": "l_4_5",
+            "question": "What has the inspector done?",
+            "answer": "Shown them the safety and hygiene equipment.",
             "options": [
-              "He is rewinding a motor.",
-              "He is repairing an alternator.",
-              "He is installing a transformer."
+              "Shown them how to install a transformer.",
+              "Shown them the safety and hygiene equipment.",
+              "Shown them the control panel networks."
             ]
           },
           {
@@ -387,13 +387,13 @@
             ]
           },
           {
-            "id": "l_4_5",
-            "question": "What has the inspector done?",
-            "answer": "Shown them the safety and hygiene equipment.",
+            "id": "l_4_1",
+            "question": "What is Sunil doing?",
+            "answer": "He is rewinding a motor.",
             "options": [
-              "Shown them how to install a transformer.",
-              "Shown them the safety and hygiene equipment.",
-              "Shown them the control panel networks."
+              "He is rewinding a motor.",
+              "He is repairing an alternator.",
+              "He is installing a transformer."
             ]
           }
         ]
