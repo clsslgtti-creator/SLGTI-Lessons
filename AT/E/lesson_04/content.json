@@ -40,20 +40,20 @@
         "image": "assets/img/a_1_p_1.png"
       },
       {
-        "id": "p_2",
-        "word_text": "p'a'rk",
-        "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "P'a'rk the vehicle in the shade.",
-        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.jpeg"
-      },
-      {
         "id": "p_3",
         "word_text": "p'a'rt",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "This p'a'rt is on the table.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
+      },
+      {
+        "id": "p_2",
+        "word_text": "p'a'rk",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "P'a'rk the vehicle in the shade.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.jpeg"
       },
       {
         "id": "p_4",

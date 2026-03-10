@@ -502,12 +502,6 @@
             "options": ["Oval mirror", "Oval serving tray", "Oval bowl"]
           },
           {
-            "id": "l_4_4",
-            "question": "What was the cubical item the customer wanted to buy?",
-            "answer": "Cubical gift box",
-            "options": ["Cubical stool", "Cubical gift box", "Cubical speaker"]
-          },
-          {
             "id": "l_4_5",
             "question": "What did the shopkeeper say about the square plastic containers?",
             "answer": "They are in limited stock",
@@ -516,6 +510,12 @@
               "They are out of stock",
               "They are in limited stock"
             ]
+          },
+          {
+            "id": "l_4_4",
+            "question": "What was the cubical item the customer wanted to buy?",
+            "answer": "Cubical gift box",
+            "options": ["Cubical stool", "Cubical gift box", "Cubical speaker"]
           }
         ]
       },
