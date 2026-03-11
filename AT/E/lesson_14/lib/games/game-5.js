@@ -10,6 +10,27 @@ const WORDS_VALUE_COLOR = "#0f172a";
 const QUESTION_VALUE_COLOR = "#102663ff";
 const ANSWER_VALUE_COLOR = "#065f46";
 
+const formatLocalizedInstruction = (english, sinhala, tamil) =>
+  [english, sinhala, tamil].join("\n");
+
+const WORDS_STAGE_INSTRUCTION = formatLocalizedInstruction(
+  "Use these words to make a yes/no question. You have 10 seconds.",
+  "මෙම වචන භාවිතයෙන් ඔව්/නැහැ ප්‍රශ්නයක් සාදන්න. ඔබට තත්පර 10 ක් ඇත.",
+  "இந்த வார்த்தைகளைப் பயன்படுத்தி ஆம்/இல்லை கேள்வியை உருவாக்குங்கள். உங்களுக்கு 10 வினாடிகள் உள்ளன."
+);
+
+const QUESTION_STAGE_INSTRUCTION = formatLocalizedInstruction(
+  "Check your question, then answer it aloud before time is up.",
+  "ඔබේ ප්‍රශ්නය පරීක්ෂා කර, කාලය අවසන් වීමට පෙර මුඛවදනෙන් පිළිතුර කියන්න.",
+  "உங்கள் கேள்வியைச் சரிபார்த்து, நேரம் முடிவதற்குள் சத்தமாக பதிலளிக்கவும்."
+);
+
+const ANSWER_STAGE_INSTRUCTION = formatLocalizedInstruction(
+  "Compare your answer with the model one.",
+  "ඔබගේ පිළිතුර මොඩලය සමඟ සැසඳා බලන්න.",
+  "உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்."
+);
+
 const trimText = (value) => (typeof value === "string" ? value.trim() : "");
 
 const clampDuration = (value, fallback) => {
@@ -498,7 +519,7 @@ export const createPracticeGameScene = (config = {}) => {
         .setDepth(2);
 
       const instructionWidth = 980;
-      const instructionHeight = 90;
+      const instructionHeight = 110;
       const instructionPanel = createRoundedPanel(
         this,
         instructionWidth,
@@ -512,12 +533,16 @@ export const createPracticeGameScene = (config = {}) => {
         strokeAlpha: 0.35,
         lineWidth: 3,
       });
+      const instructionTextStyle = {
+        fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+        fontSize: 20,
+        color: PRIMARY_TEXT,
+        align: "center",
+        lineSpacing: 6,
+        wordWrap: { width: instructionWidth - 80 },
+      };
       this.instructionText = this.add
-        .text(0, 0, "Press Start to begin.", {
-          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: 28,
-          color: PRIMARY_TEXT,
-        })
+        .text(0, 0, "Press Start to begin.", instructionTextStyle)
         .setOrigin(0.5);
       this.instructionContainer = this.add
         .container(width / 2, height - instructionHeight / 2 - 20, [
@@ -751,9 +776,7 @@ export const createPracticeGameScene = (config = {}) => {
         this.prepareCardSections(entry);
       };
       this.transitionCardContent(updateCard);
-      this.instructionText.setText(
-        "Use these words to make a yes/no question. You have 10 seconds."
-      );
+      this.instructionText.setText(WORDS_STAGE_INSTRUCTION);
       this.stagePhase = "words";
       this.emitRoundUpdate({ ...context, phase: "words" });
 
@@ -768,9 +791,7 @@ export const createPracticeGameScene = (config = {}) => {
         "question",
         entry.question || "Listen to the modeled question."
       );
-      this.instructionText.setText(
-        "Check your question, then answer it aloud before time is up."
-      );
+      this.instructionText.setText(QUESTION_STAGE_INSTRUCTION);
       this.emitRoundUpdate({ ...context, phase: "question" });
       this.playEntryAudio(entry, "question");
       this.startStageTimer(this.timings.responseMs, () => {
@@ -784,7 +805,7 @@ export const createPracticeGameScene = (config = {}) => {
         "answer",
         entry.answer || "Think of a suitable short answer."
       );
-      this.instructionText.setText("Compare your answer with the model one.");
+      this.instructionText.setText(ANSWER_STAGE_INSTRUCTION);
       this.emitRoundUpdate({ ...context, phase: "answer" });
       this.playEntryAudio(entry, "answer");
       this.startStageTimer(this.timings.revealMs, () => {
