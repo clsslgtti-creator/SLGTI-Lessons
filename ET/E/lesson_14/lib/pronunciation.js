@@ -1,4 +1,8 @@
-import { audioManager, computeSegmentGapMs } from "./audio-manager.js";
+import {
+  audioManager,
+  computeSegmentGapMs,
+  getBetweenItemGapMs,
+} from "./audio-manager.js";
 
 const smoothScrollIntoView = (element) => {
   if (!element) {
@@ -122,6 +126,7 @@ const createPronunciationSlide = ({
   type,
   mode,
   repeatPauseMs,
+  betweenItemsMs,
 } = {}) => {
   const slideRoleClass =
     mode === "listen"
@@ -299,15 +304,19 @@ const createPronunciationSlide = ({
       const gapMs = computeSegmentGapMs(mode, durationSeconds, {
         repeatPauseMs: mode === "listen-repeat" ? repeatPauseMs : null,
       });
+      const betweenItemsGapMs = getBetweenItemGapMs(mode, {
+        betweenItemsMs,
+      });
+      const waitGapMs = Math.max(gapMs, betweenItemsGapMs);
 
       if (mode === "listen-repeat") {
         status.textContent = "Your turn...";
-      } else if (gapMs > 0) {
+      } else if (waitGapMs > 0) {
         status.textContent = "Next up...";
       }
 
-      if (gapMs > 0) {
-        await waitMs(gapMs, { signal });
+      if (waitGapMs > 0) {
+        await waitMs(waitGapMs, { signal });
       }
     } catch (error) {
       console.error(error);
@@ -469,6 +478,7 @@ export const buildPronunciationSlides = (activityData = {}, context = {}) => {
       letter: "c",
       type: "sentence",
       mode: "listen",
+      betweenItemsMs: 2000,
     },
     {
       role: "sentences-repeat",
