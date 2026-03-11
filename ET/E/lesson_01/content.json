@@ -37,7 +37,7 @@
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "Turn on the sw'i'tch.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
@@ -45,7 +45,7 @@
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
         "sentence_text": "Use the wire str'i'pper carefully.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.jpeg"
+        "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "The circu'i't is open.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpeg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
@@ -61,7 +61,7 @@
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "Adjust the d'i'mmer for more light.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpeg"
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
@@ -97,7 +97,7 @@
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/a_2_ex_1.jpeg",
+        "img": "assets/img/a_2_ex_1.png",
         "text_a": "Where is the steel ruler?",
         "text_b": "It is on the shelf.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
@@ -105,7 +105,7 @@
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpeg",
+        "img": "assets/img/a_2_ex_2.png",
         "text_a": "Where is the workshop key?",
         "text_b": "It is on the wall.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
@@ -113,7 +113,7 @@
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_3.jpeg",
+        "img": "assets/img/a_2_ex_3.png",
         "text_a": "Where are the plastic files?",
         "text_b": "They are on the desk.",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
@@ -123,7 +123,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Where are the insulated pliers?",
         "text_b": "They are on the wooden bench.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -132,7 +132,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": "Where is the digital multimeter?",
         "text_b": "It is on the black desk.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -141,7 +141,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "Where are the copper wires?",
         "text_b": "They are on the plastic box.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
@@ -150,7 +150,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.jpeg",
+        "img": "assets/img/a_2_d_4.png",
         "text_a": "Where are the new fuses?",
         "text_b": "They are on the bottom shelf.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
@@ -159,7 +159,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.jpeg",
+        "img": "assets/img/a_2_d_5.png",
         "text_a": "Where is the soldering iron?",
         "text_b": "It is on the tool cart.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
@@ -168,7 +168,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpeg",
+        "img": "assets/img/a_2_d_6.png",
         "text_a": "Where is the large transformer?",
         "text_b": "It is on the concrete floor.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",

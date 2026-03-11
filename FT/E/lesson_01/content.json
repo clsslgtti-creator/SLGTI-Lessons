@@ -37,7 +37,7 @@
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "Keep the f'i'sh cold.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
@@ -45,7 +45,7 @@
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
         "sentence_text": "The m'i'lk is fresh.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.jpeg"
+        "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "Add ch'i'lli to the curry.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpeg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
@@ -97,7 +97,7 @@
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/a_2_ex_1.jpeg",
+        "img": "assets/img/a_2_ex_1.png",
         "text_a": "Where is the steel ruler?",
         "text_b": "It is on the shelf.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
@@ -105,7 +105,7 @@
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpeg",
+        "img": "assets/img/a_2_ex_2.png",
         "text_a": "Where is the workshop key?",
         "text_b": "It is on the wall.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
@@ -113,7 +113,7 @@
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_3.jpeg",
+        "img": "assets/img/a_2_ex_3.png",
         "text_a": "Where are the plastic files?",
         "text_b": "They are on the desk.",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
@@ -123,7 +123,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "Where are the cake ingredients?",
         "text_b": "They are on the wooden table.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -132,7 +132,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": "Where are the plastic aprons?",
         "text_b": "They are on the blue wall.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -141,7 +141,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "Where is the brownie recipe?",
         "text_b": "It is on the kitchen counter.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
@@ -150,7 +150,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.jpeg",
+        "img": "assets/img/a_2_d_4.png",
         "text_a": "Where is the dough mixer?",
         "text_b": "It is on the middle shelf.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
@@ -159,7 +159,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.jpeg",
+        "img": "assets/img/a_2_d_5.png",
         "text_a": "Where is the caramelized sugar?",
         "text_b": "It is on the oilpaper.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
@@ -168,7 +168,7 @@
       },
       {
         "id": "d_6",
-        "img": "assets/img/a_2_d_6.jpeg",
+        "img": "assets/img/a_2_d_6.png",
         "text_a": "Where are the lined baking trays?",
         "text_b": "They are on the electric oven.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
