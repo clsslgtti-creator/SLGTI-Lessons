@@ -97,7 +97,7 @@
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/a_2_ex_1.jpeg",
+        "img": "assets/img/a_2_ex_1.png",
         "text_a": "What are you doing?",
         "text_b": "I am cleaning my workstation.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
@@ -105,7 +105,7 @@
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpeg",
+        "img": "assets/img/a_2_ex_2.png",
         "text_a": "What are Mary and Ravi doing?",
         "text_b": "They are talking.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
@@ -121,7 +121,7 @@
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_4.jpeg",
+        "img": "assets/img/a_2_ex_4.png",
         "text_a": "What is John doing?",
         "text_b": "He is arranging the tools.",
         "audio_a": "assets/audio/a_2_ex_4_a.mp3",
@@ -131,7 +131,7 @@
     "dialogues": [
       {
         "id": "d_1",
-        "img": "assets/img/a_2_d_1.jpeg",
+        "img": "assets/img/a_2_d_1.png",
         "text_a": "What is the mechanic doing?",
         "text_b": "He is adjusting a loose screw.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
@@ -140,7 +140,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": "What are you doing?",
         "text_b": " I am tightening a bolt.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -149,7 +149,7 @@
       },
       {
         "id": "d_3",
-        "img": "assets/img/a_2_d_3.jpeg",
+        "img": "assets/img/a_2_d_3.png",
         "text_a": "What is the CAD machine doing now?",
         "text_b": "It is drawing an apartment block.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
@@ -167,7 +167,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.jpeg",
+        "img": "assets/img/a_2_d_5.png",
         "text_a": "What is she doing?",
         "text_b": "She is changing a car tyre.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",

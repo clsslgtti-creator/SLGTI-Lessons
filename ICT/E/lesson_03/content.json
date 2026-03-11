@@ -37,7 +37,7 @@
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "He is opening the 'a'pp now.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.jpeg"
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_2",
@@ -45,7 +45,7 @@
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
         "sentence_text": "Use the sc'a'nner for the file.",
         "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.jpeg"
+        "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",
@@ -53,7 +53,7 @@
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
         "sentence_text": "The t'a'blet is on the desk.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.jpeg"
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_4",
@@ -61,7 +61,7 @@
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "They are b'a'cking up the data.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
-        "image": "assets/img/a_1_p_4.jpeg"
+        "image": "assets/img/a_1_p_4.png"
       }
     ]
   },
@@ -97,7 +97,7 @@
     "example_dialogues": [
       {
         "id": "e_1",
-        "img": "assets/img/a_2_ex_1.jpeg",
+        "img": "assets/img/a_2_ex_1.png",
         "text_a": "What are you doing?",
         "text_b": "I am cleaning my workstation.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
@@ -105,7 +105,7 @@
       },
       {
         "id": "e_2",
-        "img": "assets/img/a_2_ex_2.jpeg",
+        "img": "assets/img/a_2_ex_2.png",
         "text_a": "What are Mary and Ravi doing?",
         "text_b": "They are talking.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
@@ -121,7 +121,7 @@
       },
       {
         "id": "e_3",
-        "img": "assets/img/a_2_ex_4.jpeg",
+        "img": "assets/img/a_2_ex_4.png",
         "text_a": "What is John doing?",
         "text_b": "He is arranging the tools.",
         "audio_a": "assets/audio/a_2_ex_4_a.mp3",
@@ -140,7 +140,7 @@
       },
       {
         "id": "d_2",
-        "img": "assets/img/a_2_d_2.jpeg",
+        "img": "assets/img/a_2_d_2.png",
         "text_a": "What are you doing?",
         "text_b": "I am scanning documents.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
@@ -167,7 +167,7 @@
       },
       {
         "id": "d_5",
-        "img": "assets/img/a_2_d_5.jpeg",
+        "img": "assets/img/a_2_d_5.png",
         "text_a": "What are you and the technician doing?",
         "text_b": "We are connecting HP printers to the computers.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
