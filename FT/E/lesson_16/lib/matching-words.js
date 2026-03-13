@@ -290,7 +290,7 @@ export const buildMatchingWordsSlides = (
 
   const clearEvaluationState = () => {
     evaluationShown = false;
-    updateFeedback("Drag each word to the matching definition.", "neutral");
+    updateFeedback("", "neutral");
     dropzones.forEach((zone) =>
       zone.classList.remove("is-correct", "is-incorrect")
     );
@@ -314,6 +314,7 @@ export const buildMatchingWordsSlides = (
   };
 
   const resetMatching = () => {
+    clearSecondPlaybackTimers();
     placements.clear();
     answersChecked = false;
     evaluationShown = false;
@@ -393,8 +394,8 @@ export const buildMatchingWordsSlides = (
     if (answersChecked || isPlaying) {
       return;
     }
-    if (playbackCount < 1) {
-      resultEl.textContent = "Please listen to the audio at least once.";
+    if (playbackCount < 2) {
+      resultEl.textContent = "Please listen to the audio twice before submitting.";
       resultEl.classList.add("assessment-result--error");
       return;
     }
@@ -506,6 +507,11 @@ export const buildMatchingWordsSlides = (
   let playbackCount = 0;
   let isPlaying = false;
   let autoTriggered = false;
+  const secondPlaybackDelaySeconds = 15;
+  let secondPlaybackTimer = null;
+  let secondPlaybackCountdownInterval = null;
+  let secondPlaybackRemaining = 0;
+  let secondPlaybackCountdownActive = false;
 
   const audioElement = audioUrl ? new Audio(audioUrl) : null;
 
@@ -515,9 +521,64 @@ export const buildMatchingWordsSlides = (
     updateButtonState();
   };
 
+  const clearSecondPlaybackTimers = () => {
+    if (secondPlaybackTimer !== null) {
+      window.clearTimeout(secondPlaybackTimer);
+      secondPlaybackTimer = null;
+    }
+    if (secondPlaybackCountdownInterval !== null) {
+      window.clearInterval(secondPlaybackCountdownInterval);
+      secondPlaybackCountdownInterval = null;
+    }
+    secondPlaybackRemaining = 0;
+    secondPlaybackCountdownActive = false;
+  };
+
+  const scheduleSecondPlayback = () => {
+    if (
+      secondPlaybackCountdownActive ||
+      !audioElement ||
+      instructionsLocked ||
+      answersChecked ||
+      isPlaying ||
+      playbackCount < 1 ||
+      playbackCount >= 2
+    ) {
+      return;
+    }
+
+    clearSecondPlaybackTimers();
+    secondPlaybackRemaining = secondPlaybackDelaySeconds;
+    secondPlaybackCountdownActive = true;
+
+    const renderCountdown = () => {
+      status.textContent = `Second recording starts in ${secondPlaybackRemaining}s. Click Start to listen sooner.`;
+    };
+
+    renderCountdown();
+    playBtn.disabled = false;
+
+    secondPlaybackTimer = window.setTimeout(() => {
+      clearSecondPlaybackTimers();
+      beginPlayback();
+    }, secondPlaybackDelaySeconds * 1000);
+
+    secondPlaybackCountdownInterval = window.setInterval(() => {
+      secondPlaybackRemaining -= 1;
+      if (secondPlaybackRemaining <= 0) {
+        clearSecondPlaybackTimers();
+        return;
+      }
+      renderCountdown();
+    }, 1000);
+  };
+
   const handleAudioEnded = () => {
     isPlaying = false;
     playbackCount = Math.min(2, playbackCount + 1);
+    if (playbackCount < 2) {
+      scheduleSecondPlayback();
+    }
     updatePlaybackStatus();
     updateButtonState();
   };
@@ -537,6 +598,7 @@ export const buildMatchingWordsSlides = (
       return;
     }
 
+    clearSecondPlaybackTimers();
     try {
       audioElement.currentTime = 0;
     } catch {
@@ -564,6 +626,14 @@ export const buildMatchingWordsSlides = (
     }
     if (answersChecked) {
       status.textContent = "Responses submitted.";
+      return;
+    }
+    if (
+      secondPlaybackCountdownActive &&
+      !isPlaying &&
+      playbackCount < 2
+    ) {
+      status.textContent = `Second recording starts in ${secondPlaybackRemaining}s. Click Start to listen sooner.`;
       return;
     }
     if (isPlaying || isStarting) {
@@ -603,7 +673,7 @@ export const buildMatchingWordsSlides = (
     submitBtn.disabled =
       answersChecked ||
       isPlaying ||
-      playbackCount < 1 ||
+      playbackCount < 2 ||
       instructionsLocked ||
       !items.length;
   };
@@ -660,6 +730,7 @@ export const buildMatchingWordsSlides = (
   };
 
   const onLeave = () => {
+    clearSecondPlaybackTimers();
     if (audioElement) {
       audioElement.pause();
       audioElement.currentTime = 0;
@@ -694,6 +765,7 @@ export const buildMatchingWordsSlides = (
       },
       onEnter,
       onLeave,
+      instructionCountdownSeconds: 15,
     },
   ];
 };

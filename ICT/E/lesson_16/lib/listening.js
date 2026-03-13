@@ -120,6 +120,11 @@ export const buildListeningSlides = (
   const questions = normalizeQuestions(activityData?.content);
   const audioSrc = normalizeText(activityData?.audio);
   const maxPlays = 2;
+  const secondPlaybackDelaySeconds = 15;
+  let secondPlaybackTimer = null;
+  let secondPlaybackCountdownInterval = null;
+  let secondPlaybackRemaining = 0;
+  let secondPlaybackCountdownActive = false;
 
   const slide = document.createElement("section");
   slide.className = "slide slide--assessment slide--listening-mcq";
@@ -247,7 +252,7 @@ export const buildListeningSlides = (
   registerActivity({ total: questionEntries.length });
 
   const refreshAnswerInteractivity = () => {
-    const disableBase = instructionsLocked || submissionLocked || isPlaying;
+    const disableBase = instructionsLocked || submissionLocked;
     questionEntries.forEach((entry) => {
       const entryDisabled = disableBase || entry.locked;
       entry.buttons.forEach((button) => {
@@ -259,7 +264,7 @@ export const buildListeningSlides = (
       instructionsLocked ||
       submissionLocked ||
       isPlaying ||
-      playCount < 1 ||
+      playCount < maxPlays ||
       noQuestions;
   };
 
@@ -294,6 +299,15 @@ export const buildListeningSlides = (
       playBtn.disabled = true;
       return;
     }
+    if (
+      secondPlaybackCountdownActive &&
+      !isPlaying &&
+      playCount < maxPlays
+    ) {
+      statusEl.textContent = `Second recording starts in ${secondPlaybackRemaining}s. Click Play to listen sooner.`;
+      playBtn.disabled = false;
+      return;
+    }
     if (isPlaying) {
       statusEl.textContent = `Playing (${playCount + 1} / ${maxPlays})...`;
       playBtn.disabled = true;
@@ -317,9 +331,63 @@ export const buildListeningSlides = (
     refreshAnswerInteractivity();
   };
 
+  const clearSecondPlaybackTimers = () => {
+    if (secondPlaybackTimer !== null) {
+      window.clearTimeout(secondPlaybackTimer);
+      secondPlaybackTimer = null;
+    }
+    if (secondPlaybackCountdownInterval !== null) {
+      window.clearInterval(secondPlaybackCountdownInterval);
+      secondPlaybackCountdownInterval = null;
+    }
+    secondPlaybackRemaining = 0;
+    secondPlaybackCountdownActive = false;
+  };
+
+  const scheduleSecondPlayback = () => {
+    if (
+      secondPlaybackCountdownActive ||
+      !audioElement ||
+      instructionsLocked ||
+      submissionLocked ||
+      playCount < 1 ||
+      playCount >= maxPlays
+    ) {
+      return;
+    }
+
+    clearSecondPlaybackTimers();
+    secondPlaybackRemaining = secondPlaybackDelaySeconds;
+    secondPlaybackCountdownActive = true;
+
+    const renderCountdown = () => {
+      statusEl.textContent = `Second recording starts in ${secondPlaybackRemaining}s. Click Play to listen sooner.`;
+    };
+
+    renderCountdown();
+    playBtn.disabled = false;
+
+    secondPlaybackTimer = window.setTimeout(() => {
+      clearSecondPlaybackTimers();
+      beginPlayback();
+    }, secondPlaybackDelaySeconds * 1000);
+
+    secondPlaybackCountdownInterval = window.setInterval(() => {
+      secondPlaybackRemaining -= 1;
+      if (secondPlaybackRemaining <= 0) {
+        clearSecondPlaybackTimers();
+        return;
+      }
+      renderCountdown();
+    }, 1000);
+  };
+
   const handleAudioEnded = () => {
     isPlaying = false;
     playCount = Math.min(maxPlays, playCount + 1);
+    if (playCount < maxPlays) {
+      scheduleSecondPlayback();
+    }
     updatePlaybackStatus();
     refreshAnswerInteractivity();
   };
@@ -339,6 +407,7 @@ export const buildListeningSlides = (
       updatePlaybackStatus();
       return;
     }
+    clearSecondPlaybackTimers();
     try {
       audioElement.currentTime = 0;
     } catch {
@@ -394,8 +463,8 @@ export const buildListeningSlides = (
     if (!questionEntries.length) {
       return;
     }
-    if (playCount < 1) {
-      resultEl.textContent = "Please listen to the audio at least once.";
+    if (playCount < maxPlays) {
+      resultEl.textContent = "Please listen to the audio twice before submitting.";
       resultEl.classList.add("assessment-result--error");
       return;
     }
@@ -498,6 +567,7 @@ export const buildListeningSlides = (
   updatePlaybackStatus();
 
   const onLeave = () => {
+    clearSecondPlaybackTimers();
     if (audioElement) {
       audioElement.pause();
       audioElement.currentTime = 0;
@@ -530,6 +600,7 @@ export const buildListeningSlides = (
         status: statusEl,
       },
       onLeave,
+      instructionCountdownSeconds: 15,
     },
   ];
 };
