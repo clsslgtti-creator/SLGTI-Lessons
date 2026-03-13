@@ -8,7 +8,7 @@
   "activity_1": {
     "type": "MCQ",
     "instruction": {
-      "text": "Choose the correct verb/word to fill in the blank in each sentence. \nපහත වාක්‍යයේ හිස් තැනට නිවැරදි ක්‍රියා පදය/වචනය තෝරන්න.\nஒவ்வொரு வாக்கியத்திலும் வெறுமனே இடத்தை நிரப்ப சரியான வினைச்சொல்/சொல்லை தேர்ந்தெடுக்கவும்.",
+      "text": "Choose the correct verb/word to fill in the blank in each sentence. \nසෑම වාක්‍යයකම හිස්තැන පිරවීම සඳහා නිවැරදි ක්‍රියා පදය/වචනය තෝරන්න.\nஒவ்வொரு வாக்கியத்திலும் வெற்றிடத்தை நிரப்ப சரியான வினைச்சொல்/சொல்லை தேர்ந்தெடுக்கவும்.",
       "audio": "assets/audio/a_1_i.mp3"
     },
     "content": [
@@ -78,7 +78,7 @@
     "a": {
       "type": "MCQ",
       "instruction": {
-        "text": "Read the following answers and  click on the correct question. \nපහත පිළිතුරු කියවන්න සහ නිවැරදි ප්‍රශ්නය මත ක්ලික් කරන්න.\nபின்வரும் பதில்களை படியுங்கள் மற்றும் சரியான கேள்வியில் கிளிக் செய்யவும்.",
+        "text": "Read the following answers and  click on the correct question. \nපහත සඳහන් පිළිතුරු කියවා නිවැරදි ප්‍රශ්නය ක්ලික් කරන්න.\nபின்வரும் பதில்களைப் படித்து சரியான கேள்வியைக் கிளிக் செய்யவும்.",
         "audio": "assets/audio/a_2_a_i.mp3"
       },
       "content": [
@@ -132,7 +132,7 @@
     "b": {
       "type": "MCQ",
       "instruction": {
-        "text": "Read the following questions and click on the correct answer.\nපහත ප්‍රශ්න කියවන්න සහ නිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nபின்வரும் கேள்விகளை படியுங்கள் மற்றும் சரியான பதிலில் கிளிக் செய்யவும்.",
+        "text": "Read the following questions and click on the correct answer.\nපහත සඳහන් ප්‍රශ්න කියවා නිවැරදි පිළිතුර ක්ලික් කරන්න.\nபின்வரும் கேள்விகளைப் படித்து சரியான பதிலைக் கிளிக் செய்யவும்.",
         "audio": "assets/audio/a_2_b_i.mp3"
       },
       "content": [
@@ -186,7 +186,7 @@
     "c": {
       "type": "MCQ-TABLE",
       "instruction": {
-        "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවන්න සහ ප්‍රශ්න වලට පිළිතුරු දෙන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையை படியுங்கள் மற்றும் கேள்விகளுக்கு பதிலளிக்கவும்.",
+        "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවා ප්‍රශ්නවලට පිළිතුරු සපයන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையைப் படித்து கேள்விகளுக்கு பதிலளிக்கவும்.",
         "audio": "assets/audio/a_2_c_i.mp3"
       },
       "tables": [
@@ -258,7 +258,7 @@
   "activity_3": {
     "type": "MCQ-TABLE",
     "instruction": {
-      "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවන්න සහ ප්‍රශ්න වලට පිළිතුරු දෙන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையை படியுங்கள் மற்றும் கேள்விகளுக்கு பதிலளிக்கவும்.",
+      "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවා ප්‍රශ්නවලට පිළිතුරු සපයන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையைப் படித்து கேள்விகளுக்கு பதிலளிக்கவும்.",
       "audio": "assets/audio/a_2_c_i.mp3"
     },
     "tables": [
@@ -363,7 +363,7 @@
     "a": {
       "type": "MATCHING-WORDS",
       "instruction": {
-        "text": "Listen to the audio which will be played twice and match the frequency adverbs to the phrases. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න සහ සංඛ්‍යාත්මක ක්‍රියා විශේෂණ පදයන් වාක්‍ය කොටස් සමඟ ගැලපෙන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும் மற்றும் அடிக்கடி、சொற்களை வாக்கிய பகுதிகளுடன் பொருத்தவும்.",
+        "text": "Listen to the audio which will be played twice and match the frequency adverbs to the phrases. \nදෙවරක් වාදනය වන දෙබසට සවන් දී ක්‍රියා විශේෂණ වාක්‍ය ඛණ්ඩවලට ගලපන්න.\nஇருமுறை ஒலிக்கப்படும் ஒலிப்பதிவைக் கேட்டு, நிகழ்வெண் வினையுரிச்சொற்களை (frequency adverbs) அதற்கேற்ற சொற்றொடர்களுடன் பொருத்துக.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "audio": "assets/audio/a_4_q.mp3",
