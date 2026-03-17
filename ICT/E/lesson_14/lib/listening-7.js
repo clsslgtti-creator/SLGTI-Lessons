@@ -241,6 +241,11 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
   buildHeading(slide, `${activityLabel}${subActivitySuffix}`);
   ensureInstructionAnchor(slide);
   maybeInsertFocus(slide, activityFocus, includeFocus);
+  const instructionEl = slide.querySelector(".slide__instruction");
+  if (instructionEl) {
+    instructionEl.textContent =
+      "Listen to the audio twice, choose your answers, then check them.";
+  }
 
   const controls = document.createElement("div");
   controls.className = "slide__controls";
@@ -300,7 +305,7 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
       card,
       buttons,
       feedback,
-      completed: false,
+      selectedNormalized: "",
     };
   });
 
@@ -311,27 +316,50 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
     list.appendChild(empty);
   }
 
+  const actions = document.createElement("div");
+  actions.className = "listening-mcq-actions";
+  const checkBtn = document.createElement("button");
+  checkBtn.type = "button";
+  checkBtn.className = "primary-btn listening-check-btn";
+  checkBtn.textContent = "Submit";
+  checkBtn.disabled = true;
+  const checkHint = document.createElement("span");
+  checkHint.className = "listening-check-hint";
+  checkHint.textContent =
+    "Please listen to the recording twice to submit the answers.";
+  const scoreEl = document.createElement("p");
+  scoreEl.className = "listening-score";
+  scoreEl.textContent = "";
+  actions.append(checkBtn, checkHint, scoreEl);
+  slide.appendChild(actions);
+
   let playbackCount = 0;
   let playbackController = null;
   let secondPlaybackTimer = null;
   let secondPlaybackCountdownInterval = null;
   let secondPlaybackRemaining = 0;
   let autoTriggered = false;
-  let completionShown = false;
+  let isPlaying = false;
+  let answersChecked = false;
 
   const updateButtonState = () => {
     if (!data?.audio) {
       playBtn.disabled = true;
       playBtn.textContent = "Audio unavailable";
-      return;
-    }
-    if (playbackCount >= 2) {
+    } else if (isPlaying) {
+      playBtn.disabled = true;
+      playBtn.textContent =
+        playbackCount > 0 ? "Replaying audio..." : "Playing...";
+    } else if (playbackCount >= 2) {
       playBtn.disabled = true;
       playBtn.textContent = "Playback finished";
-      return;
+    } else {
+      playBtn.disabled = false;
+      playBtn.textContent = "Start";
     }
-    playBtn.disabled = false;
-    playBtn.textContent = "Start";
+
+    checkBtn.disabled =
+      answersChecked || isPlaying || playbackCount < 2 || !entries.length;
   };
 
   updateButtonState();
@@ -397,8 +425,9 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
     const { signal } = playbackController;
 
     const passIndex = playbackCount + 1;
-    playBtn.disabled = true;
+    isPlaying = true;
     status.textContent = passIndex === 1 ? "Playing..." : "Replaying audio...";
+    updateButtonState();
 
     audioManager.stopAll();
 
@@ -410,7 +439,7 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
       }
       playbackCount += 1;
       if (playbackCount >= 2) {
-        status.textContent = "You have listened twice.";
+        status.textContent = "You have listened twice. Check your answers.";
       } else {
         scheduleSecondPlayback();
       }
@@ -421,72 +450,104 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
       }
     } finally {
       playbackController = null;
+      isPlaying = false;
       updateButtonState();
     }
   };
 
-  const evaluateQuestion = (entry, selectedNormalized) => {
-    if (entry.completed) {
+  const checkAnswers = () => {
+    if (answersChecked || playbackCount < 2 || isPlaying) {
       return;
     }
-    entry.completed = true;
+    answersChecked = true;
+    let correctCount = 0;
 
-    entry.buttons.forEach((button) => {
-      button.disabled = true;
+    entries.forEach((entry) => {
+      const selectedNormalized = entry.selectedNormalized;
+      const isCorrect =
+        selectedNormalized &&
+        selectedNormalized === entry.question.answerNormalized;
+      if (isCorrect) {
+        correctCount += 1;
+      }
+
+      entry.buttons.forEach((button) => {
+        button.disabled = true;
+      });
+
+      const selectedButton = entry.buttons.find(
+        (button) => button.dataset.optionNormalized === selectedNormalized
+      );
+      const correctButton = entry.buttons.find(
+        (button) =>
+          button.dataset.optionNormalized === entry.question.answerNormalized
+      );
+
+      if (selectedButton) {
+        selectedButton.classList.add("is-selected");
+        selectedButton.classList.add(
+          isCorrect ? "is-correct" : "is-incorrect"
+        );
+      }
+
+      correctButton?.classList.add("is-correct");
+      entry.card.classList.add(isCorrect ? "is-correct" : "is-incorrect");
+
+      entry.feedback.classList.remove(
+        "listening-feedback--positive",
+        "listening-feedback--negative",
+        "listening-feedback--neutral"
+      );
+
+      if (!selectedNormalized) {
+        entry.feedback.textContent = `No answer selected. Correct answer: ${entry.question.answer}`;
+        entry.feedback.classList.add("listening-feedback--neutral");
+      } else if (isCorrect) {
+        entry.feedback.textContent = "Correct!";
+        entry.feedback.classList.add("listening-feedback--positive");
+      } else {
+        entry.feedback.textContent = `Incorrect. Correct answer: ${entry.question.answer}`;
+        entry.feedback.classList.add("listening-feedback--negative");
+      }
     });
 
-    const isCorrect =
-      selectedNormalized === entry.question.answerNormalized;
-
-    const selectedButton = entry.buttons.find(
-      (button) => button.dataset.optionNormalized === selectedNormalized
-    );
-    const correctButton = entry.buttons.find(
-      (button) =>
-        button.dataset.optionNormalized === entry.question.answerNormalized
-    );
-
-    if (selectedButton) {
-      selectedButton.classList.add("is-selected");
-      selectedButton.classList.add(
-        isCorrect ? "is-correct" : "is-incorrect"
-      );
-    }
-
-    correctButton?.classList.add("is-correct");
-
-    entry.feedback.textContent = isCorrect
-      ? "Correct!"
-      : `Incorrect. Correct answer: ${entry.question.answer}`;
-    entry.feedback.classList.add(
-      isCorrect
-        ? "listening-feedback--positive"
-        : "listening-feedback--negative"
-    );
-
-    entry.card.classList.add(isCorrect ? "is-correct" : "is-incorrect");
-
-    const answeredCount = entries.filter((item) => item.completed).length;
-    if (!completionShown && answeredCount === entries.length) {
-      completionShown = true;
+    if (entries.length) {
+      scoreEl.textContent = `Score: ${correctCount} / ${entries.length}`;
+      status.textContent = `You answered ${correctCount} of ${entries.length} correctly.`;
       showCompletionModal({
-        title: "Great Work!",
-        message: "You completed all of the questions.",
+        title: "Results",
+        message: `You answered ${correctCount} out of ${entries.length} correctly.`,
       });
     }
+
+    updateButtonState();
   };
 
   entries.forEach((entry) => {
     entry.buttons.forEach((button) => {
       button.addEventListener("click", () => {
+        if (answersChecked) {
+          return;
+        }
         const normalized = button.dataset.optionNormalized || "";
-        evaluateQuestion(entry, normalized);
+        entry.selectedNormalized = normalized;
+        entry.buttons.forEach((btn) =>
+          btn.classList.remove("is-selected", "is-correct", "is-incorrect")
+        );
+        button.classList.add("is-selected");
+        entry.card.classList.remove("is-correct", "is-incorrect");
+        entry.feedback.textContent = "";
+        entry.feedback.className = "listening-feedback";
       });
     });
   });
 
   playBtn.addEventListener("click", () => {
     beginPlayback();
+  });
+
+  checkBtn.addEventListener("click", () => {
+    checkAnswers();
   });
 
   const triggerAutoPlay = () => {
@@ -507,9 +568,11 @@ const buildComprehensionSlide = (data = {}, context = {}) => {
     autoTriggered = false;
     slide._autoTriggered = false;
     status.textContent = "";
-    completionShown = false;
+    isPlaying = false;
+    answersChecked = false;
+    scoreEl.textContent = "";
     entries.forEach((entry) => {
-      entry.completed = false;
+      entry.selectedNormalized = "";
       entry.feedback.textContent = "";
       entry.feedback.className = "listening-feedback";
       entry.buttons.forEach((button) => {
@@ -550,6 +613,7 @@ const buildMcqSlide = (questions = [], context = {}) => {
     subActivitySuffix = "",
     activityNumber = null,
   } = context;
+  const betweenQuestionPauseMs = 5000;
 
   const sanitizedQuestions = (Array.isArray(questions) ? questions : [])
     .map((item, index) => {
@@ -568,7 +632,7 @@ const buildMcqSlide = (questions = [], context = {}) => {
         audio: audioUrl,
         answer,
         answerNormalized: normalizeValue(answer),
-        options: options.slice(0, 2),
+        options,
       };
     })
     .filter(Boolean);
@@ -863,6 +927,14 @@ const buildMcqSlide = (questions = [], context = {}) => {
           break;
         }
         entry.card.classList.remove("is-active");
+
+        if (index < entries.length - 1) {
+          status.textContent = "Get ready for the next question...";
+          await waitMs(betweenQuestionPauseMs, { signal });
+          if (signal.aborted) {
+            break;
+          }
+        }
       }
     } catch (error) {
       if (!signal.aborted) {
