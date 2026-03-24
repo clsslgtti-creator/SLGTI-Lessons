@@ -90,7 +90,7 @@
         "audio": "assets/audio/a_2_i_d.mp3"
       },
       "activity_2_e": {
-                "text": "Read the answer and use the pause to ask the correct question. Then compare your response with the model question.\n පිළිතුර කියවා නිවැරදි ප්‍රශ්නය ඇසීමට විරාමය භාවිතා කරන්න. ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\n பதிலைக் கவனமாக வாசித்து, இடைவெளியில் சரியான கேள்வியை கேளுங்கள். பின்னர் உங்கள் கேள்வியை மாதிரி கேள்வியுடன் ஒப்பிடவும்.",
+        "text": "Read the answer and use the pause to ask the correct question. Then compare your response with the model question.\n පිළිතුර කියවා නිවැරදි ප්‍රශ්නය ඇසීමට විරාමය භාවිතා කරන්න. ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\n பதிலைக் கவனமாக வாசித்து, இடைவெளியில் சரியான கேள்வியை கேளுங்கள். பின்னர் உங்கள் கேள்வியை மாதிரி கேள்வியுடன் ஒப்பிடவும்.",
         "audio": "assets/audio/a_2_i_f.mp3"
       }
     },
@@ -257,7 +257,7 @@
           },
           {
             "id": "g_b_2",
-            "sentence": "Are there safety helmets on the table?",
+            "sentence": "Are there any safety helmets on the table?",
             "audio": "assets/audio/a_3_b_2.mp3",
             "options": ["Yes, there are.", "No, there aren’t."],
             "answer": "No, there aren’t.",
@@ -273,7 +273,7 @@
           },
           {
             "id": "g_b_4",
-            "sentence": "Are there gloves in the drawer?",
+            "sentence": "Are there any gloves in the drawer?",
             "audio": "assets/audio/a_3_b_4.mp3",
             "options": ["Yes, there are.", "No, there aren’t."],
             "answer": "Yes, there are.",
@@ -289,7 +289,7 @@
           },
           {
             "id": "g_b_6",
-            "sentence": "Are there reflective vests in the cupboard?",
+            "sentence": "Are there any reflective vests in the cupboard?",
             "audio": "assets/audio/a_3_b_6.mp3",
             "options": ["Yes, there are.", "No, there aren’t."],
             "answer": "Yes, there are.",
@@ -305,7 +305,7 @@
           },
           {
             "id": "g_b_8",
-            "sentence": "Are there goggles in the box?",
+            "sentence": "Are there any goggles in the box?",
             "audio": "assets/audio/a_3_b_8.mp3",
             "options": ["Yes, there are.", "No, there aren’t."],
             "answer": "No, there aren’t.",
@@ -321,7 +321,7 @@
           },
           {
             "id": "g_b_10",
-            "sentence": "Are there ear protectors in the bag?",
+            "sentence": "Are there any ear protectors in the bag?",
             "audio": "assets/audio/a_3_b_10.mp3",
             "options": ["Yes, there are.", "No, there aren’t."],
             "answer": "No, there aren’t.",
@@ -337,7 +337,7 @@
         },
         {
           "id": "n_3_2",
-          "text": "Are there safety helmets on the table? No, there aren’t.",
+          "text": "Are there any safety helmets on the table? No, there aren’t.",
           "audio": "assets/audio/a_3_b_g_2.mp3"
         },
         {
@@ -441,7 +441,11 @@
             "id": "l_4_4",
             "question": "What routine in the food laboratory reduces risks?",
             "answer": "Washing hands and wearing gloves",
-            "options": ["Writing notes in a book", "Eating food during work", "Washing hands and wearing gloves"]
+            "options": [
+              "Writing notes in a book",
+              "Eating food during work",
+              "Washing hands and wearing gloves"
+            ]
           },
           {
             "id": "l_4_5",
@@ -634,18 +638,22 @@
           "Read along."
         ],
         "audio": "assets/audio/a_5_i_b.mp3"
+      },
+      "instrction_c": {
+        "text": "Watch the video.\nවීඩියෝව බලන්න.\nவீடியோவைப் பாருங்கள்.",
+        "audio": "assets/audio/a_5_i_c.mp3"
       }
     },
     "content": [
       {
         "id": "v_1",
         "audio": "assets/videos/1B.mp4",
-        "instrction": "instrction_b"
+        "instrction": "instrction_c"
       },
       {
         "id": "v_2",
         "audio": "assets/videos/2B.mp4",
-        "instrction": "instrction_b"
+        "instrction": "instrction_c"
       }
     ]
   }
