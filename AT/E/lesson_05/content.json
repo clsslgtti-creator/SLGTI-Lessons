@@ -48,20 +48,20 @@
         "image": "assets/img/a_1_p_3.png"
       },
       {
+        "id": "p_1",
+        "word_text": "r'o'd",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "The r'o'd is in front of the engine.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
+      },
+      {
         "id": "p_4",
         "word_text": "st'o'p",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "Do not forget to st'o'p the bus.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
-      },
-      {
-        "id": "p_1",
-        "word_text": "r'o'd",
-        "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "The r'o'd is in front of the  engine.",
-        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.png"
       }
     ]
   },
