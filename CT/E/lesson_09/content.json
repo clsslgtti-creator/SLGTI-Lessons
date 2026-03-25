@@ -48,20 +48,20 @@
         "image": "assets/img/a_1_p_2.jpeg"
       },
       {
-        "id": "p_3",
-        "word_text": "sm'oo'th",
-        "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "I  know how to make the surface sm'oo'th.",
-        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.png"
-      },
-      {
         "id": "p_4",
         "word_text": "r'oo'f",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
         "sentence_text": "The workers often  repair this  r'oo'f.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "sm'oo'th",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "I  know how to make the surface sm'oo'th.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.png"
       }
     ]
   },
