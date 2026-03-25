@@ -643,6 +643,68 @@
           "text": "Meena enjoys her training because she improves her technical skills and gains confidence.",
           "audio": "assets/audio/n_4_15.mp3"
         }
+      ],
+      "activity_d": [
+        {
+          "id": "n_4_2",
+          "text": "Meena works in the machine section every day.",
+          "audio": "assets/audio/n_4_2x.mp3"
+        },
+        {
+          "id": "n_4_4",
+          "text": "She checks the work order, sets up her toolbox, and prepares the lathe machine.",
+          "audio": "assets/audio/n_4_4.mp3"
+        },
+        {
+          "id": "n_4_6",
+          "text": "Meena inspects the machine parts, the chuck, and the cutting tool.",
+          "audio": "assets/audio/n_4_6.mp3"
+        },
+        {
+          "id": "n_4_7",
+          "text": "She often adjusts the feed rate and checks the alignment of the workpiece.",
+          "audio": "assets/audio/n_4_7.mp3"
+        },
+        {
+          "id": "n_4_8",
+          "text": "She sometimes replaces a worn-out bearing or a broken seal.",
+          "audio": "assets/audio/n_4_8.mp3"
+        },
+        {
+          "id": "n_4_9",
+          "text": "She never forgets to lubricate the moving parts with oil.",
+          "audio": "assets/audio/n_4_9.mp3"
+        },
+        {
+          "id": "n_4_10",
+          "text": "During routine practice, Meena measures the dimensions with a vernier caliper and checks the accuracy with a micrometer.",
+          "audio": "assets/audio/n_4_10.mp3"
+        },
+        {
+          "id": "n_4_11",
+          "text": "She records the values and shows them to her supervisor.",
+          "audio": "assets/audio/n_4_11.mp3"
+        },
+        {
+          "id": "n_4_12",
+          "text": "She frequently cleans the surface of the machine with a brush to remove metal chips.",
+          "audio": "assets/audio/n_4_12.mp3"
+        },
+        {
+          "id": "n_4_13",
+          "text": "At the end of the day, Meena switches off the machine, wipes down the tools, and stores them properly.",
+          "audio": "assets/audio/n_4_13.mp3"
+        },
+        {
+          "id": "n_4_14",
+          "text": "She always leaves the section neat and safe.",
+          "audio": "assets/audio/n_4_14.mp3"
+        },
+        {
+          "id": "n_4_15",
+          "text": "Meena enjoys her training because she improves her technical skills and gains confidence.",
+          "audio": "assets/audio/n_4_15.mp3"
+        }
       ]
     }
   },

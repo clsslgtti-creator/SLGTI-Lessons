@@ -5,11 +5,60 @@ import {
   normalizeExamples,
   normalizeQuestions,
 } from "./games/game-1.js";
+import { audioManager, computeSegmentGapMs } from "./audio-manager.js";
 
 const GAME_INSTRUCTION_TEXT =
   "Press Start to play. Listen to each sentence and choose the correct answer before time runs out.";
 
 const trimText = (value) => (typeof value === "string" ? value.trim() : "");
+
+const smoothScrollIntoView = (element) => {
+  if (!element) {
+    return;
+  }
+  element.scrollIntoView({ behavior: "smooth", block: "center" });
+};
+
+const waitMs = (duration, { signal } = {}) =>
+  new Promise((resolve) => {
+    if (!Number.isFinite(duration) || duration <= 0) {
+      resolve();
+      return;
+    }
+
+    let timeoutId = null;
+
+    const cleanup = () => {
+      if (timeoutId !== null) {
+        window.clearTimeout(timeoutId);
+        timeoutId = null;
+      }
+      signal?.removeEventListener("abort", onAbort);
+    };
+
+    const onAbort = () => {
+      cleanup();
+      resolve();
+    };
+
+    if (signal?.aborted) {
+      onAbort();
+      return;
+    }
+
+    signal?.addEventListener("abort", onAbort, { once: true });
+    timeoutId = window.setTimeout(() => {
+      cleanup();
+      resolve();
+    }, duration);
+  });
+
+const createPlaybackStatus = () => {
+  const status = document.createElement("p");
+  status.className = "playback-status";
+  status.textContent = "";
+  return status;
+};
 
 const deriveSubActivityLetter = (key, index = 0) => {
   if (typeof key === "string") {
@@ -55,7 +104,24 @@ const insertFocusElement = (titleEl, focusText) => {
   titleEl.insertAdjacentElement("afterend", focusEl);
 };
 
+const clearEntryHighlights = (items = []) => {
+  items.forEach(({ card, line }) => {
+    card?.classList.remove("is-active");
+    line?.classList.remove("is-playing");
+  });
+};
+
 const cloneFeedbackAssets = () => ({ ...DEFAULT_FEEDBACK_ASSETS });
+
+const getRepeatPauseMs = (activityData, fallback = 1500) => {
+  const raw =
+    activityData?.listen_repeat_pause_ms ?? activityData?.repeat_pause_ms;
+  const parsed = Number(raw);
+  if (!Number.isFinite(parsed)) {
+    return fallback;
+  }
+  return Math.max(500, parsed);
+};
 
 const normalizeSentenceGroups = (input) => {
   if (!input) {
@@ -77,6 +143,24 @@ const normalizeSentenceGroups = (input) => {
       return trimmed ? [trimmed] : [];
     })
     .filter((group) => group.length);
+};
+
+const normalizeListenRepeatItems = (raw = []) => {
+  if (!Array.isArray(raw)) {
+    return [];
+  }
+
+  return raw
+    .map((entry, index) => {
+      const id = trimText(entry?.id) || `line_${index + 1}`;
+      const text = trimText(entry?.text);
+      const audio = trimText(entry?.audio);
+      if (!text || !audio) {
+        return null;
+      }
+      return { id, text, audio };
+    })
+    .filter(Boolean);
 };
 
 const createSentenceListSlide = (groups = [], context = {}) => {
@@ -287,6 +371,296 @@ const createGameSlide = (gameConfig = {}, context = {}) => {
   };
 };
 
+const createListenRepeatSlide = (
+  items = [],
+  {
+    slideId,
+    activityLabel = "Activity",
+    focusText = "",
+    includeFocus = false,
+    repeatPauseMs = 1500,
+  } = {}
+) => {
+  const resolvedSlideId = slideId || "interactive-listen-repeat";
+  const autoDelayMs = 5000;
+  const slide = document.createElement("section");
+  slide.className =
+    "slide slide--listen-repeat listening-slide listening-slide--repeat";
+  if (resolvedSlideId) {
+    slide.id = resolvedSlideId;
+  }
+
+  const title = document.createElement("h2");
+  title.textContent = trimText(activityLabel) || "Activity";
+  slide.appendChild(title);
+
+  if (includeFocus && focusText) {
+    insertFocusElement(title, focusText);
+  }
+
+  const instruction = document.createElement("p");
+  instruction.className = "slide__instruction";
+  instruction.textContent = "Listen and repeat each sentence.";
+  slide.appendChild(instruction);
+
+  const controls = document.createElement("div");
+  controls.className = "slide__controls";
+  const startBtn = document.createElement("button");
+  startBtn.type = "button";
+  startBtn.className = "primary-btn";
+  startBtn.textContent = "Start";
+  const status = createPlaybackStatus();
+  controls.append(startBtn, status);
+  slide.appendChild(controls);
+
+  const list = document.createElement("div");
+  list.className = "dialogue-grid listening-read-grid";
+  slide.appendChild(list);
+
+  const entries = items.map((entry, index) => {
+    const card = document.createElement("article");
+    card.className =
+      "dialogue-card dialogue-card--reading listening-read-card";
+
+    const cardTitle = document.createElement("h3");
+    cardTitle.className = "dialogue-card__title";
+    cardTitle.textContent = `Line ${index + 1}`;
+    card.appendChild(cardTitle);
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "dialogue-card__texts";
+
+    const line = document.createElement("p");
+    line.className = "dialogue-card__line";
+    line.textContent = entry.text;
+    wrapper.appendChild(line);
+
+    card.appendChild(wrapper);
+    list.appendChild(card);
+
+    return {
+      entry,
+      card,
+      line,
+    };
+  });
+
+  if (!entries.length) {
+    const empty = document.createElement("p");
+    empty.className = "empty-state";
+    empty.textContent = "Audio will be added soon.";
+    list.appendChild(empty);
+  }
+
+  let sequenceAbort = null;
+  let autoTriggered = false;
+  let pendingAutoStart = null;
+  let pauseRequested = false;
+
+  const playbackState = {
+    mode: "idle",
+    resumeIndex: 0,
+  };
+
+  const updateButtonLabel = () => {
+    if (playbackState.mode === "playing") {
+      startBtn.textContent = "Pause";
+      return;
+    }
+    if (playbackState.mode === "paused") {
+      startBtn.textContent = "Resume";
+      return;
+    }
+    startBtn.textContent = "Start";
+  };
+
+  const setPlaybackMode = (mode, { resumeIndex } = {}) => {
+    playbackState.mode = mode;
+    if (Number.isInteger(resumeIndex)) {
+      playbackState.resumeIndex = Math.max(0, resumeIndex);
+    }
+    updateButtonLabel();
+  };
+
+  const resetPlaybackState = () => {
+    setPlaybackMode("idle", { resumeIndex: 0 });
+    autoTriggered = false;
+    slide._autoTriggered = false;
+    startBtn.disabled = false;
+  };
+
+  updateButtonLabel();
+
+  const clearAutoStart = () => {
+    if (pendingAutoStart !== null) {
+      window.clearTimeout(pendingAutoStart);
+      pendingAutoStart = null;
+    }
+  };
+
+  const resetEntries = () => {
+    clearEntryHighlights(entries);
+  };
+
+  const runSequence = async (fromIndex = 0) => {
+    if (!entries.length) {
+      status.textContent = "Audio will be added soon.";
+      resetPlaybackState();
+      return;
+    }
+
+    pauseRequested = false;
+
+    sequenceAbort?.abort();
+    sequenceAbort = new AbortController();
+    const { signal } = sequenceAbort;
+
+    audioManager.stopAll();
+    resetEntries();
+    setPlaybackMode("playing", { resumeIndex: fromIndex });
+    status.textContent = fromIndex === 0 ? "Starting..." : "Resuming...";
+
+    let completed = false;
+
+    try {
+      for (let index = fromIndex; index < entries.length; index += 1) {
+        playbackState.resumeIndex = index;
+        const item = entries[index];
+        item.card?.classList.add("is-active");
+        item.line?.classList.add("is-playing");
+        status.textContent = "Listening...";
+        smoothScrollIntoView(item.card ?? item.line);
+
+        try {
+          await audioManager.play(item.entry.audio, { signal });
+        } catch (error) {
+          if (!signal.aborted) {
+            console.error(error);
+            status.textContent = "Unable to play audio.";
+          }
+        }
+
+        if (signal.aborted) {
+          break;
+        }
+
+        playbackState.resumeIndex = index + 1;
+
+        let gapMs = 0;
+        try {
+          const duration = await audioManager.getDuration(item.entry.audio);
+          gapMs = computeSegmentGapMs("listen-repeat", duration, {
+            repeatPauseMs,
+          });
+        } catch (error) {
+          console.error(error);
+        }
+
+        if (signal.aborted) {
+          break;
+        }
+
+        if (gapMs > 0) {
+          status.textContent = "Your turn...";
+          await waitMs(gapMs, { signal });
+        }
+
+        item.card?.classList.remove("is-active");
+        item.line?.classList.remove("is-playing");
+
+        if (signal.aborted) {
+          break;
+        }
+      }
+
+      if (!signal.aborted) {
+        completed = true;
+        status.textContent = "Playback complete.";
+      }
+    } finally {
+      const aborted = sequenceAbort?.signal?.aborted ?? false;
+      sequenceAbort = null;
+
+      if (aborted && pauseRequested) {
+        setPlaybackMode("paused", { resumeIndex: playbackState.resumeIndex });
+        status.textContent = "Paused.";
+      } else if (completed) {
+        resetPlaybackState();
+        resetEntries();
+      } else if (aborted) {
+        status.textContent = "Playback stopped.";
+        resetPlaybackState();
+        resetEntries();
+      } else {
+        resetPlaybackState();
+      }
+
+      pauseRequested = false;
+    }
+  };
+
+  const startSequence = (fromIndex = 0) => {
+    clearAutoStart();
+    autoTriggered = true;
+    slide._autoTriggered = true;
+    runSequence(fromIndex);
+  };
+
+  const triggerAutoPlay = () => {
+    if (
+      autoTriggered ||
+      playbackState.mode === "playing" ||
+      playbackState.mode === "paused"
+    ) {
+      return;
+    }
+    autoTriggered = true;
+    slide._autoTriggered = true;
+    clearAutoStart();
+    pendingAutoStart = window.setTimeout(() => {
+      pendingAutoStart = null;
+      runSequence();
+    }, Math.max(0, autoDelayMs));
+  };
+
+  startBtn.addEventListener("click", () => {
+    if (playbackState.mode === "playing") {
+      pauseRequested = true;
+      sequenceAbort?.abort();
+      return;
+    }
+
+    if (playbackState.mode === "paused") {
+      startSequence(playbackState.resumeIndex);
+      return;
+    }
+
+    startSequence();
+  });
+
+  const onLeave = () => {
+    clearAutoStart();
+    pauseRequested = false;
+    sequenceAbort?.abort();
+    sequenceAbort = null;
+    audioManager.stopAll();
+    resetEntries();
+    resetPlaybackState();
+    status.textContent = "";
+  };
+
+  return {
+    id: resolvedSlideId,
+    element: slide,
+    autoPlay: {
+      button: startBtn,
+      trigger: triggerAutoPlay,
+      status,
+    },
+    onLeave,
+  };
+};
+
 const collectInteractiveActivities = (activityData = {}) => {
   const content = activityData?.content;
   const baseOptions = activityData?.options;
@@ -326,57 +700,48 @@ const collectInteractiveActivities = (activityData = {}) => {
         : defaultBackground,
   });
 
+  const appendActivity = (key, letter, value) => {
+    const listenRepeatItems = normalizeListenRepeatItems(value);
+    if (listenRepeatItems.length) {
+      activities.push({
+        key,
+        letter,
+        kind: "listen-repeat",
+        data: { items: listenRepeatItems },
+      });
+      return;
+    }
+
+    const sentenceGroups = normalizeSentenceGroups(value);
+    if (sentenceGroups.length) {
+      activities.push({
+        key,
+        letter,
+        kind: "sentences",
+        data: { groups: sentenceGroups },
+      });
+      return;
+    }
+
+    if (value) {
+      activities.push({
+        key,
+        letter,
+        kind: "game",
+        data: createGameData(value),
+      });
+    }
+  };
+
   if (content && typeof content === "object" && !Array.isArray(content)) {
     Object.entries(content).forEach(([key, value], index) => {
-      const letter = deriveSubActivityLetter(key, index);
-      const sentenceGroups = normalizeSentenceGroups(value);
-      if (sentenceGroups.length) {
-        activities.push({
-          key,
-          letter,
-          kind: "sentences",
-          data: { groups: sentenceGroups },
-        });
-        return;
-      }
-
-      if (value) {
-        activities.push({
-          key,
-          letter,
-          kind: "game",
-          data: createGameData(value),
-        });
-      }
+      appendActivity(key, deriveSubActivityLetter(key, index), value);
     });
     return activities;
   }
 
   if (Array.isArray(content)) {
-    const sentenceGroups = normalizeSentenceGroups(content);
-    if (sentenceGroups.length) {
-      activities.push({
-        key: "activity_a",
-        letter: "a",
-        kind: "sentences",
-        data: { groups: sentenceGroups },
-      });
-      return activities;
-    }
-
-    if (content.length) {
-      activities.push({
-        key: "activity_a",
-        letter: "a",
-        kind: "game",
-        data: {
-          options: baseOptions,
-          examples: baseExamples,
-          content,
-          bg_image: defaultBackground,
-        },
-      });
-    }
+    appendActivity("activity_a", "a", content);
     return activities;
   }
 
@@ -387,6 +752,7 @@ export const buildInteractive3Slides = (activityData = {}, context = {}) => {
   const { activityNumber, focus } = context;
   const focusText = trimText(focus);
   const activities = collectInteractiveActivities(activityData);
+  const repeatPauseMs = getRepeatPauseMs(activityData);
 
   if (!activities.length) {
     return [
@@ -403,12 +769,15 @@ export const buildInteractive3Slides = (activityData = {}, context = {}) => {
   }
 
   return activities.map((activity, index) => {
+    const role =
+      activity.kind === "sentences"
+        ? "reading"
+        : activity.kind === "listen-repeat"
+        ? "listen-repeat"
+        : "game1";
+
     const commonContext = {
-      slideId: buildSlideId(
-        activityNumber,
-        activity.letter,
-        activity.kind === "sentences" ? "reading" : "game1"
-      ),
+      slideId: buildSlideId(activityNumber, activity.letter, role),
       activityLabel: formatActivityLabel(activityNumber, activity.letter),
       focusText,
       includeFocus: Boolean(focusText) && index === 0,
@@ -416,6 +785,13 @@ export const buildInteractive3Slides = (activityData = {}, context = {}) => {
 
     if (activity.kind === "sentences") {
       return createSentenceListSlide(activity.data?.groups ?? [], commonContext);
+    }
+
+    if (activity.kind === "listen-repeat") {
+      return createListenRepeatSlide(activity.data?.items ?? [], {
+        ...commonContext,
+        repeatPauseMs,
+      });
     }
 
     return createGameSlide(activity.data, commonContext);

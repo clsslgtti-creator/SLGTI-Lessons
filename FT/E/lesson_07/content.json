@@ -224,6 +224,10 @@
       "activity_b": {
         "text": "Choose the correct form of the verb 'to be'. Use the past tense only when the time markers clearly indicate that the action happened in the past.\nක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. කාල සලකුණු පැහැදිලිව ක්‍රියාව භූත කාලයේ සිදු වූ බව පෙන්වන්නේ නම් පමණක් භූත කාලය භාවිතා කරන්න.\nவினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். நேர குறியீடுகள் நடவடிக்கை கடந்த காலத்தில் நடந்தது என்பதை தெளிவாகக் காட்டும் போது மட்டுமே கடந்த காலத்தைப் பயன்படுத்தவும்.",
         "audio": "assets/audio/a_3_i_b.mp3"
+      },
+      "activity_c": {
+        "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
+        "audio": "assets/audio/a_2_i_c.mp3"
       }
     },
     "content": {
@@ -309,7 +313,59 @@
             "answer": "was"
           }
         ]
-      }
+      },
+      "activity_c": [
+        {
+          "id": "g_b_1",
+          "text": "The safety officer is always responsible for checking all warning signs at SLGTI.",
+          "audio": "assets/audio/g_b_1.mp3"
+        },
+        {
+          "id": "g_b_2",
+          "text": "The trainees were very attentive during the inspection yesterday morning.",
+          "audio": "assets/audio/g_b_2.mp3"
+        },
+        {
+          "id": "g_b_3",
+          "text": "The technical instructors are usually very strict about protective clothing.",
+          "audio": "assets/audio/g_b_3.mp3"
+        },
+        {
+          "id": "g_b_4",
+          "text": "The technical officer was in the restricted zone two days ago.",
+          "audio": "assets/audio/g_b_4.mp3"
+        },
+        {
+          "id": "g_b_5",
+          "text": "The trainees in all 6 sections are always very careful when handling flammable substances.",
+          "audio": "assets/audio/g_b_5.mp3"
+        },
+        {
+          "id": "g_b_6",
+          "text": "The maintenance workers are busy because the alarm system was faulty last night.",
+          "audio": "assets/audio/g_b_6.mp3"
+        },
+        {
+          "id": "g_b_7",
+          "text": "The storekeeper is responsible for keeping all safety equipment in order.",
+          "audio": "assets/audio/g_b_7.mp3"
+        },
+        {
+          "id": "g_b_8",
+          "text": "The heads of departments were satisfied with the installation of the new warning systems last May.",
+          "audio": "assets/audio/g_b_8.mp3"
+        },
+        {
+          "id": "g_b_9",
+          "text": "The demonstrators were in the workshop when the emergency signal was first tested in 2023.",
+          "audio": "assets/audio/g_b_9.mp3"
+        },
+        {
+          "id": "g_b_10",
+          "text": "The Principal was disappointed because the procedures were not followed correctly during tests three weeks ago.",
+          "audio": "assets/audio/g_b_10.mp3"
+        }
+      ]
     }
   },
   "activity_4": {

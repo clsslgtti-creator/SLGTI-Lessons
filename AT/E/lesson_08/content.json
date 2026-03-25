@@ -1,11 +1,12 @@
 {
   "meta": {
-    "lesson_no": "8 - Test",
+    "lesson_no": "8 - Assessment No. 1 ",
     "level": "Elementary",
     "section": "Automobile Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
+    "marks_for_each_q": 2,
     "type": "MCQ",
     "instruction": {
       "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
@@ -65,6 +66,7 @@
     ]
   },
   "activity_2": {
+    "marks_for_each_q": 2,
     "type": "MCQ",
     "instruction": {
       "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
@@ -224,6 +226,7 @@
     ]
   },
   "activity_3": {
+    "marks_for_each_q": 2,
     "type": "JUMBLED",
     "instruction": {
       "text": "Rearrange these sentences in the correct order. The first word of each sentence starts with a capital letter.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න. සෑම වාක්‍යයකම පළමු වචනය විශාල අකුරින් ආරම්භ වේ.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும். ஒவ்வொரு வாக்கியத்தின் முதல் வார்த்தையும் பெரிய எழுத்தில் தொடங்குகிறது.",
@@ -339,6 +342,7 @@
     ]
   },
   "activity_4": {
+    "marks_for_each_q": 2,
     "type": "LISTENING",
     "instruction": {
       "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
@@ -346,26 +350,6 @@
     },
     "audio": "assets/audio/a_4_q.mp3",
     "content": [
-      {
-        "question": "Where were Kamal and Ramesh yesterday morning?",
-        "options": [
-          "In a Colombo market",
-          "In the Kurunegala workshop",
-          "At a Galle Face exhibition",
-          "In a Jaffna training hall"
-        ],
-        "answer": "In the Kurunegala workshop"
-      },
-      {
-        "question": "What kind of vehicle was noisy?",
-        "options": [
-          "The hybrid car",
-          "The diesel van",
-          "The electric scooter",
-          "The petrol motorbike"
-        ],
-        "answer": "The diesel van"
-      },
       {
         "question": "What problem did the hybrid car have yesterday?",
         "options": [
@@ -375,21 +359,6 @@
           "Its tyres were flat."
         ],
         "answer": "Its battery was not charging."
-      },
-      {
-        "question": "Who repaired the flat tyre?",
-        "options": ["Kamal", "Ramesh", "Anura", "The instructor"],
-        "answer": "Anura"
-      },
-      {
-        "question": "Why is Kamal confident?",
-        "options": [
-          "He is going to Galle Face.",
-          "He has presented before.",
-          "He is going with Ramesh.",
-          "He has checked the brakepads."
-        ],
-        "answer": "He has presented before."
       },
       {
         "question": "What was wrong with the old pressure gauge?",
@@ -402,16 +371,6 @@
         "answer": "It was not accurate last week."
       },
       {
-        "question": "What are the trainees learning right now?",
-        "options": [
-          "How to repair a hybrid battery",
-          "How to use a hydraulic lift",
-          "How to replace brake pads",
-          "How to change engine oil"
-        ],
-        "answer": "How to use a hydraulic lift"
-      },
-      {
         "question": "Why is the instructor not happy?",
         "options": [
           "The gauge was inaccurate.",
@@ -420,16 +379,6 @@
           "The hybrid car was noisy."
         ],
         "answer": "Only one student wore a reflective vest."
-      },
-      {
-        "question": "What will happen tomorrow?",
-        "options": [
-          "The group will repair a van in Kurunegala.",
-          "The group will travel to Galle Face for an exhibition.",
-          "Ramesh will repair a tyre in Colombo.",
-          "Kamal will buy a new hydraulic lift."
-        ],
-        "answer": "The group will travel to Galle Face for an exhibition."
       },
       {
         "question": "Why is Ramesh nervous?",
@@ -442,33 +391,14 @@
         "answer": "He has never spoken at a public event."
       },
       {
-        "question": "Where did the car with the flat tyre come from?",
-        "options": ["Kurunegala", "Colombo", "Jaffna"],
-        "answer": "Colombo"
-      },
-      {
-        "question": "Where was the small fair in 2023?",
-        "options": ["Colombo", "Kurunegala", "Jaffna"],
-        "answer": "Jaffna"
-      },
-      {
-        "question": "What are they demonstrating on the vehicles tomorrow?",
+        "question": "Why is Kamal confident?",
         "options": [
-          "How to check food quality",
-          "How to check brake pads",
-          "How to check roof lights"
+          "He is going to Galle Face.",
+          "He has presented before.",
+          "He is going with Ramesh.",
+          "He has checked the brakepads."
         ],
-        "answer": "How to check brake pads"
-      },
-      {
-        "question": "Which tool was replaced?",
-        "options": ["Digital pressure gauge", "Engine lift", "Car battery"],
-        "answer": "Digital pressure gauge"
-      },
-      {
-        "question": "What are they not supposed to do with the hydraulic lift?",
-        "options": ["Drive under it", "Stand under it", "Sit beside it"],
-        "answer": "Stand under it"
+        "answer": "He has presented before."
       }
     ]
   }

@@ -1,11 +1,12 @@
 {
   "meta": {
-    "lesson_no": "8 - Test",
+    "lesson_no": "8 - Assessment No. 1 ",
     "level": "Elementary",
     "section": "Electrical Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
+    "marks_for_each_q": 2,
     "type": "MCQ",
     "instruction": {
       "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
@@ -65,6 +66,7 @@
     ]
   },
   "activity_2": {
+    "marks_for_each_q": 2,
     "type": "MCQ",
     "instruction": {
       "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
@@ -224,6 +226,7 @@
     ]
   },
   "activity_3": {
+    "marks_for_each_q": 2,
     "type": "JUMBLED",
     "instruction": {
       "text": "Rearrange these sentences in the correct order. The first word of each sentence starts with a capital letter.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න. සෑම වාක්‍යයකම පළමු වචනය විශාල අකුරින් ආරම්භ වේ.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும். ஒவ்வொரு வாக்கியத்தின் முதல் வார்த்தையும் பெரிய எழுத்தில் தொடங்குகிறது.",
@@ -340,6 +343,7 @@
     ]
   },
   "activity_4": {
+    "marks_for_each_q": 2,
     "type": "LISTENING",
     "instruction": {
       "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
@@ -347,26 +351,6 @@
     },
     "audio": "assets/audio/a_4_q.mp3",
     "content": [
-      {
-        "question": "Where were Kumar and Rohan yesterday?",
-        "options": [
-          "At the Jaffna lab",
-          "At the Negombo electrical lab",
-          "At a Colombo fair",
-          "In Kurunegala"
-        ],
-        "answer": "At the Negombo electrical lab"
-      },
-      {
-        "question": "What device did they test?",
-        "options": [
-          "A fuse holder",
-          "The circuit breaker",
-          "A switch",
-          "A battery"
-        ],
-        "answer": "The circuit breaker"
-      },
       {
         "question": "What instrument showed wrong values?",
         "options": [
@@ -398,16 +382,6 @@
         "answer": "He will stop the practice session."
       },
       {
-        "question": "What are trainees installing now?",
-        "options": [
-          "Solar panels",
-          "Fluorescent lamps",
-          "Air conditioners",
-          "Motors"
-        ],
-        "answer": "Fluorescent lamps"
-      },
-      {
         "question": "What is the problem with the lamps now?",
         "options": [
           "Broken tubes",
@@ -418,90 +392,14 @@
         "answer": "Some are not connected"
       },
       {
-        "question": "Where will they go tomorrow?",
-        "options": [
-          "To the Kurunegala show",
-          "To the exhibition in Colombo",
-          "To Galle Face",
-          "To Jaffna"
-        ],
-        "answer": "To the exhibition in Colombo"
-      },
-      {
-        "question": "What will they demonstrate tomorrow?",
-        "options": [
-          "How to repair cars",
-          "How to test transformers",
-          "How to repair laptops",
-          "How to repair electric fans"
-        ],
-        "answer": "How to test transformers"
-      },
-      {
         "question": "Why is Rohan nervous?",
         "options": [
           "He has never travelled to Colombo.",
           "He has never used a microphone.",
-          "He doesn’t know to test transformers.",
+          "He doesn’t know how to test transformers.",
           "He doesn’t know to check fuses."
         ],
         "answer": "He has never used a microphone."
-      },
-      {
-        "question": "Who presented in 2023?",
-        "options": ["Asma", "Rohan", "Kumar"],
-        "answer": "Kumar"
-      },
-      {
-        "question": "Who connected the cables?",
-        "options": ["Asma", "Rohan", "Kumar"],
-        "answer": "Asma"
-      },
-      {
-        "question": "What device was accurate?",
-        "options": ["Voltage meter", "Circuit breaker", "Control panel"],
-        "answer": "Circuit breaker"
-      },
-      {
-        "question": "What are they installing?",
-        "options": ["Fluorescent lamps", "Cables", "Switches"],
-        "answer": "Fluorescent lamps"
-      },
-      {
-        "question": "Where was the 2023 presentation?",
-        "options": ["Colombo", "Matara", "Kurunegala"],
-        "answer": "Kurunegala"
-      }
-    ]
-  },
-  "activity_5": {
-    "type": "VIDEOS",
-    "instrctions": {
-      "instrction_a": {
-        "text": "Watch this video to help you better understand today’s lesson.\nඅද පාඩම හොඳින් අවබෝධ කර ගැනීමට මෙම වීඩියෝව බලන්න.\nஇன்றைய பாடத்தை நன்றாக புரிந்துகொள்ள இந்த வீடியோவைப் பாருங்கள்.",
-        "audio": "assets/audio/a_5_i_a.mp3"
-      },
-      "instruction_b": {
-        "text": "These steps will help you to learn English from this video.\nමෙම පියවරන් ඔබට මෙම වීඩියෝවෙන් ඉංග්‍රීසි ඉගෙන ගැනීමට උදව් කරනු ඇත.\nஇந்த வீடியோவிலிருந்து ஆங்கிலம் கற்க இந்த படிகள் உங்களுக்கு உதவும்.",
-        "steps": [
-          "Watch the video 2 times.\nවීඩියෝව වර දෙකක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
-          "Explain any new words using Google Translator.\nGoogle පරිවර්තකය භාවිතයෙන් නව වචන කිහිපයක් විස්තර කරන්න.\nGoogle மொழிபெயர்ப்பாளரைப் பயன்படுத்தி சில புதிய வார்த்தைகளை விளக்குங்கள்.",
-          "Listen and repeat.\nසවන් දී නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
-          "Read along."
-        ],
-        "audio": "assets/audio/a_5_i_b.mp3"
-      }
-    },
-    "content": [
-      {
-        "id": "v_1",
-        "audio": "assets/videos/1B.mp4",
-        "instrction": "instrction_b"
-      },
-      {
-        "id": "v_2",
-        "audio": "assets/videos/2A.mp4",
-        "instrction": "instrction_a"
       }
     ]
   }

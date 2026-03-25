@@ -1,11 +1,12 @@
 {
   "meta": {
-    "lesson_no": "8 - Test",
+    "lesson_no": "8 - Assessment No. 1 ",
     "level": "Elementary",
     "section": "Mechanical Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
+    "marks_for_each_q": 2,
     "type": "MCQ",
     "instruction": {
       "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
@@ -65,6 +66,7 @@
     ]
   },
   "activity_2": {
+    "marks_for_each_q": 2,
     "type": "MCQ",
     "instruction": {
       "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
@@ -224,6 +226,7 @@
     ]
   },
   "activity_3": {
+    "marks_for_each_q": 2,
     "type": "JUMBLED",
     "instruction": {
       "text": "Rearrange these sentences in the correct order. The first word of each sentence starts with a capital letter.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න. සෑම වාක්‍යයකම පළමු වචනය විශාල අකුරින් ආරම්භ වේ.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும். ஒவ்வொரு வாக்கியத்தின் முதல் வார்த்தையும் பெரிய எழுத்தில் தொடங்குகிறது.",
@@ -359,6 +362,7 @@
     ]
   },
   "activity_4": {
+    "marks_for_each_q": 2,
     "type": "LISTENING",
     "instruction": {
       "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
@@ -366,21 +370,6 @@
     },
     "audio": "assets/audio/a_4_q.mp3",
     "content": [
-      {
-        "question": "Where were Thilak and Roshan yesterday?",
-        "options": [
-          "In Colombo",
-          "At the Kandy workshop",
-          "In Jaffna",
-          "In Galle"
-        ],
-        "answer": "At the Kandy workshop"
-      },
-      {
-        "question": "What machine did they align?",
-        "options": ["An engine", "A gearbox", "A drill", "A motorbike"],
-        "answer": "A gearbox"
-      },
       {
         "question": "What problem did the lathe have?",
         "options": [
@@ -412,21 +401,6 @@
         "answer": "The machine could damage the bearings."
       },
       {
-        "question": "What protection did Suresh forget?",
-        "options": ["Gloves", "Ear protectors", "Helmet", "Apron"],
-        "answer": "Ear protectors"
-      },
-      {
-        "question": "What are trainees adjusting now?",
-        "options": [
-          "The gearbox",
-          "The hydraulic press",
-          "The lathe machine",
-          "The bearings"
-        ],
-        "answer": "The hydraulic press"
-      },
-      {
         "question": "What did one student do wrong?",
         "options": [
           "Did not use the safety lever",
@@ -437,16 +411,6 @@
         "answer": "Did not use the safety lever"
       },
       {
-        "question": "Where will they go tomorrow?",
-        "options": [
-          "To the Colombo engineering fair",
-          "To the Kandy workshop",
-          "To the Anuradhapura fair",
-          "To Jaffna"
-        ],
-        "answer": "To the Colombo engineering fair"
-      },
-      {
         "question": "Why is Thilak nervous?",
         "options": [
           "He has never been to Colombo.",
@@ -455,31 +419,6 @@
           "He doesn’t like travelling."
         ],
         "answer": "He has never spoken to engineers outside his district."
-      },
-      {
-        "question": "Who worked on a project in 2023?",
-        "options": ["Roshan", "Suresh", "Thilak"],
-        "answer": "Roshan"
-      },
-      {
-        "question": "Who scolded Suresh?",
-        "options": ["The engineer", "The instructor", "Roshan"],
-        "answer": "The instructor"
-      },
-      {
-        "question": "What machine was noisy?",
-        "options": ["The gearbox", "The lathe", "The grinding machine"],
-        "answer": "The lathe"
-      },
-      {
-        "question": "What did they align?",
-        "options": ["The gearbox", "The lathe", "The grinding machine"],
-        "answer": "The gearbox"
-      },
-      {
-        "question": "Where was the 2023 project?",
-        "options": ["Colombo", "Kandy", "Anuradhapura"],
-        "answer": "Anuradhapura"
       }
     ]
   }

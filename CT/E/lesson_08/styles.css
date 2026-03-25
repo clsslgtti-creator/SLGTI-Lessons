@@ -90,6 +90,8 @@ body {
   font-weight: 700;
 
   letter-spacing: 0.03em;
+
+  color: #cc2f2f;
 }
 
 .lesson-focus {
@@ -476,6 +478,16 @@ body {
   font-size: clamp(1.1rem, 2.4vw, 1.25rem);
 
   font-weight: 600;
+}
+
+.assessment-marks-summary {
+  margin: 0 0 0.85rem;
+
+  color: #3a4756;
+
+  font-size: clamp(1rem, 2vw, 1.1rem);
+
+  font-weight: 700;
 }
 
 .slide__controls {

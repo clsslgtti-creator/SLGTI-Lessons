@@ -1,11 +1,12 @@
 {
   "meta": {
-    "lesson_no": "8 - Test",
+    "lesson_no": "8 - Assessment No. 1 ",
     "level": "Elementary",
     "section": "Information and Communication Technology",
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
+    "marks_for_each_q": 2,
     "type": "MCQ",
     "instruction": {
       "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
@@ -65,6 +66,7 @@
     ]
   },
   "activity_2": {
+    "marks_for_each_q": 2,
     "type": "MCQ",
     "instruction": {
       "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
@@ -224,6 +226,7 @@
     ]
   },
   "activity_3": {
+    "marks_for_each_q": 2,
     "type": "JUMBLED",
     "instruction": {
       "text": "Rearrange these sentences in the correct order. The first word of each sentence starts with a capital letter.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න. සෑම වාක්‍යයකම පළමු වචනය විශාල අකුරින් ආරම්භ වේ.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும். ஒவ்வொரு வாக்கியத்தின் முதல் வார்த்தையும் பெரிய எழுத்தில் தொடங்குகிறது.",
@@ -350,6 +353,7 @@
     ]
   },
   "activity_4": {
+    "marks_for_each_q": 2,
     "type": "LISTENING",
     "instruction": {
       "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
@@ -357,36 +361,6 @@
     },
     "audio": "assets/audio/a_4_q.mp3",
     "content": [
-      {
-        "question": "Where were Sajith and Anusha yesterday?",
-        "options": [
-          "At the Galle IT Expo",
-          "At the Colombo ICT lab",
-          "At the Jaffna training centre",
-          "At the Kandy fair"
-        ],
-        "answer": "At the Colombo ICT lab"
-      },
-      {
-        "question": "What were they installing?",
-        "options": [
-          "A wireless router",
-          "Network cables",
-          "Laptop software",
-          "Projector lamps"
-        ],
-        "answer": "Network cables"
-      },
-      {
-        "question": "What problem did one server have?",
-        "options": [
-          "It was too noisy.",
-          "It was not working.",
-          "It was overheated.",
-          "It was too old."
-        ],
-        "answer": "It was not working."
-      },
       {
         "question": "Why could some students not connect to the router?",
         "options": [
@@ -408,16 +382,6 @@
         "answer": "Restore the backup"
       },
       {
-        "question": "What are the trainees doing right now?",
-        "options": [
-          "Installing cables",
-          "Configuring a wireless router",
-          "Repairing the server tower",
-          "Writing reports"
-        ],
-        "answer": "Configuring a wireless router"
-      },
-      {
         "question": "What did the instructor remind them about?",
         "options": [
           "Not to forget to wear helmets",
@@ -428,22 +392,12 @@
         "answer": "Not to use wrong passwords"
       },
       {
-        "question": "Where will the group go tomorrow?",
-        "options": [
-          "To the Kandy IT Expo",
-          "To the Galle Face IT Expo",
-          "To the Jaffna Tech Fair",
-          "To Kurunegala"
-        ],
-        "answer": "To the Galle Face IT Expo"
-      },
-      {
         "question": "Why is Anusha nervous?",
         "options": [
           "She hasn’t been to Galle Face.",
           "She has never spoken to a big audience.",
           "She has never travelled.",
-          "She doesn’t know to set up a firewall."
+          "She doesn’t know how to set up a firewall."
         ],
         "answer": "She has never spoken to a big audience."
       },
@@ -456,35 +410,6 @@
           "Network cables"
         ],
         "answer": "The projector display"
-      },
-      {
-        "question": "Who presented in 2023?",
-        "options": ["Sajith", "Ramesh", "Anusha"],
-        "answer": "Sajith"
-      },
-      {
-        "question": "What was Ramesh repairing?",
-        "options": ["A server", "A projector", "A laptop"],
-        "answer": "A projector"
-      },
-      {
-        "question": "Which device crashed last week?",
-        "options": ["A server", "The Firewall", "The projector"],
-        "answer": "A server"
-      },
-      {
-        "question": "Where was the past presentation?",
-        "options": ["Colombo", "Matara", "Kandy"],
-        "answer": "Kandy"
-      },
-      {
-        "question": "What will they demonstrate besides the firewall?",
-        "options": [
-          "Cloud backup",
-          "How to restore backup",
-          "How to configure a wireless router"
-        ],
-        "answer": "Cloud backup"
       }
     ]
   }
