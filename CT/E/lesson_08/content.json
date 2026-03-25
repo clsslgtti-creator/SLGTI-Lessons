@@ -6,6 +6,7 @@
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
+    "marks_for_each_q": 2,
     "type": "MCQ",
     "instruction": {
       "text": "Choose the correct form of the verb ‘to be’ in each sentence. The Tenses used are  Simple Past, Simple Present and Present Continuous. Time markers are used for Past Tense.\nසෑම වාක්‍යයකම ක්‍රියා පදය 'to be' හි නිවැරදි ආකාරය තෝරන්න. භාවිතා කරන කාලයන් වන්නේ සාමාන්‍ය භූත, සාමාන්‍ය වර්තමාන සහ වර්තමාන අඛණ්ඩයයි. භූත කාලයට කාල සලකුණු භාවිතා කර ඇත.\nஒவ்வொரு வாக்கியத்திலும் வினைச்சொல் 'to be' இன் சரியான வடிவத்தைத் தேர்ந்தெடுக்கவும். பயன்படுத்தப்படும் காலங்கள் சாதாரண கடந்த காலம், சாதாரண நிகழ்காலம் மற்றும் நிகழ்கால தொடர்ச்சியாகும். கடந்த காலத்திற்கு நேர குறியீடுகள் பயன்படுத்தப்படுகின்றன.",
@@ -65,6 +66,7 @@
     ]
   },
   "activity_2": {
+    "marks_for_each_q": 2,
     "type": "MCQ",
     "instruction": {
       "text": "Click on the correct answer.\nනිවැරදි පිළිතුර මත ක්ලික් කරන්න.\nசரியான பதிலில் கிளிக் செய்யவும்.",
@@ -224,6 +226,7 @@
     ]
   },
   "activity_3": {
+    "marks_for_each_q": 2,
     "type": "JUMBLED",
     "instruction": {
       "text": "Rearrange these sentences in the correct order. The first word of each sentence starts with a capital letter.\nමෙම වාක්‍යයන් නිවැරදි අනුපිළිවෙලට නැවත සකසන්න. සෑම වාක්‍යයකම පළමු වචනය විශාල අකුරින් ආරම්භ වේ.\nஇந்த வாக்கியங்களை சரியான வரிசையில் மறுசீரமைக்கவும். ஒவ்வொரு வாக்கியத்தின் முதல் வார்த்தையும் பெரிய எழுத்தில் தொடங்குகிறது.",
@@ -357,6 +360,7 @@
     ]
   },
   "activity_4": {
+    "marks_for_each_q": 2,
     "type": "LISTENING",
     "instruction": {
       "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
@@ -364,21 +368,6 @@
     },
     "audio": "assets/audio/a_4_q.mp3",
     "content": [
-      {
-        "question": "Where were Mahesh and Pradeep yesterday?",
-        "options": [
-          "At a Colombo housing site",
-          "At a Galle construction site",
-          "At a Jaffna bridge site",
-          "In Kurunegala"
-        ],
-        "answer": "At a Galle construction site"
-      },
-      {
-        "question": "What tool did they use?",
-        "options": ["A measuring tape", "A theodolite", "A hammer", "A level"],
-        "answer": "A theodolite"
-      },
       {
         "question": "What was wrong with the cement?",
         "options": ["Too dry", "Too wet", "Missing sand", "Mixed with oil"],
@@ -405,11 +394,6 @@
         "answer": "The workers will not be allowed to climb."
       },
       {
-        "question": "What safety item did Anura forget?",
-        "options": ["A helmet", "Boots", "Goggles", "Gloves"],
-        "answer": "Goggles"
-      },
-      {
         "question": "What is wrong with the concrete blocks?",
         "options": [
           "They are too dry.",
@@ -420,16 +404,6 @@
         "answer": "Some are uneven."
       },
       {
-        "question": "Where will they go tomorrow?",
-        "options": [
-          "To the Trincomalee project",
-          "To the Colombo housing project",
-          "To Jaffna for training",
-          "To the Galle market"
-        ],
-        "answer": "To the Colombo housing project"
-      },
-      {
         "question": "Why is Pradeep nervous?",
         "options": [
           "He hasn’t done a project before.",
@@ -438,44 +412,6 @@
           "He has never designed a housing project."
         ],
         "answer": "It’s his first project outside Galle."
-      },
-      {
-        "question": "Who worked in Trincomalee?",
-        "options": ["Mahesh", "Pradeep", "Anura", "Instructor"],
-        "answer": "Mahesh"
-      },
-      {
-        "question": "When was the Trincomalee project?",
-        "options": ["2023", "Five years ago", "Last year"],
-        "answer": "2023"
-      },
-      {
-        "question": "What was too wet?",
-        "options": [
-          "The concrete blocks",
-          "The cement",
-          "The drilling machine"
-        ],
-        "answer": "The cement"
-      },
-      {
-        "question": "What tool measures lines?",
-        "options": ["Multimeter", "Drilling machine", "Theodolite"],
-        "answer": "Theodolite"
-      },
-      {
-        "question": "What were they building with the concrete blocks?",
-        "options": ["A wall", "The foundation", "The kitchen"],
-        "answer": "A wall"
-      },
-      {
-        "question": "What protective items did Anura wear?",
-        "options": [
-          "Gloves and face shield",
-          "Helmet and boots",
-          "Reflective vest"
-        ],
-        "answer": "Helmet and boots"
       }
     ]
   }
