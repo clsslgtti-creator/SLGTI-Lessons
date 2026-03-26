@@ -746,6 +746,8 @@ const createGameScene = (config) => {
         this.options
       );
       this.enableOptionButtons(false);
+      this.createBottomHint(width, height);
+      this.setBottomHint("");
 
       this.createCenterStartButton(width, height);
       // this.createBottomBar(width, height);
@@ -822,6 +824,56 @@ const createGameScene = (config) => {
 
       this.attachScaleListeners();
       this.updateFullscreenLabel();
+    }
+
+    createBottomHint(width, height) {
+      const hintWidth = clamp(width * 0.74, 520, 720);
+      const hintHeight = clamp(height * 0.058, 36, 48);
+      const hintY = height - clamp(height * 0.04, 28, 40);
+
+      const hintPanel = createRoundedPanel(
+        this,
+        hintWidth,
+        hintHeight,
+        hintHeight / 2
+      );
+      hintPanel.update({
+        fillColor: 0xffffff,
+        fillAlpha: 0.92,
+        strokeColor: 0x93c5fd,
+        strokeAlpha: 0.3,
+        lineWidth: 2,
+      });
+
+      this.bottomHintText = this.add
+        .text(0, 0, "", {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: clamp(width * 0.0145, 13, 18),
+          color: "#1d4ed8",
+          align: "center",
+          fontStyle: "bold",
+        })
+        .setOrigin(0.5);
+
+      this.bottomHint = this.add.container(width / 2, hintY, [
+        hintPanel.graphics,
+        this.bottomHintText,
+      ]);
+      this.bottomHint.setDepth(4);
+      this.bottomHint.setVisible(false);
+      if (Array.isArray(this.gameUiElements)) {
+        this.gameUiElements.push(this.bottomHint);
+      }
+    }
+
+    setBottomHint(text) {
+      if (!this.bottomHint || !this.bottomHintText) {
+        return;
+      }
+      const message =
+        typeof text === "string" ? text.trim() : "";
+      this.bottomHintText.setText(message);
+      this.bottomHint.setVisible(Boolean(message));
     }
 
     attachScaleListeners() {
@@ -1089,6 +1141,7 @@ const createGameScene = (config) => {
       this.timerEvent?.remove();
       this.timerEvent = null;
       this.hideFeedback();
+      this.setBottomHint("");
       this.countdownOverlay.setVisible(false);
       this.countdownOverlay.setAlpha(0);
       this.summaryBackdrop.setVisible(false);
@@ -1128,6 +1181,7 @@ const createGameScene = (config) => {
       this.timerEvent = null;
       this.updateTimerText("Time: 10.0s");
       this.hideFeedback();
+      this.setBottomHint("");
       this.summaryBackdrop.setVisible(false);
       this.summaryBackdrop.setAlpha(0);
       this.summaryOverlay.setVisible(false);
@@ -1378,6 +1432,19 @@ const createGameScene = (config) => {
       this.enableOptionButtons(false);
       this.awaitingAnswer = false;
       this.updateTimerText("");
+      this.setBottomHint(
+        isExample
+          ? ""
+          : "Please wait till the button turns blue and then click on the correct one."
+      );
+      if (statusElement) {
+        statusElement.textContent = isExample
+          ? "Listen to the example."
+          : "Please wait till the button turns blue and then click on the correct one.";
+        statusElement.classList.remove("is-error");
+        statusElement.classList.remove("is-transparent");
+        statusElement.classList.add("is-visible");
+      }
 
       this.tweens.add({
         targets: this.sentenceCard,
@@ -1395,6 +1462,13 @@ const createGameScene = (config) => {
             }
             this.awaitingAnswer = true;
             this.enableOptionButtons(true);
+            this.setBottomHint("");
+            if (statusElement) {
+              statusElement.textContent = "Choose the correct answer.";
+              statusElement.classList.remove("is-error");
+              statusElement.classList.remove("is-transparent");
+              statusElement.classList.add("is-visible");
+            }
             this.startResponseTimer();
           };
 
@@ -1548,6 +1622,7 @@ const createGameScene = (config) => {
       this.timerEvent?.remove();
       this.timerEvent = null;
       this.updateTimerText("Time: 10.0s");
+      this.setBottomHint("");
 
       const current = this.questions[this.questionIndex];
       const isCorrect =
@@ -1591,6 +1666,7 @@ const createGameScene = (config) => {
       this.awaitingAnswer = false;
       this.enableOptionButtons(false);
       this.stopSentenceAudio();
+      this.setBottomHint("");
       this.playFeedbackSound("timeout");
       const current = this.questions[this.questionIndex];
       this.showFeedback("timeout", "Time's up!");
@@ -1739,6 +1815,7 @@ const createGameScene = (config) => {
     }
 
     showCountdown(onComplete) {
+      this.setBottomHint("");
       if (statusElement) {
         statusElement.textContent = "Get ready...";
         statusElement.classList.remove("is-transparent");
@@ -1790,6 +1867,7 @@ const createGameScene = (config) => {
       this.timerEvent = null;
       this.updateTimerText("Time: 10.0s");
       this.hideFeedback();
+      this.setBottomHint("");
       if (statusElement) {
         statusElement.textContent =
           "All sentences complete! Tap Replay to try again or Exit to finish.";
@@ -1855,6 +1933,7 @@ const createGameScene = (config) => {
 
     restartGame(autoStart = false) {
       this.sound.stopAll();
+      this.setBottomHint("");
       if (statusElement) {
         statusElement.textContent = "Preparing game...";
         statusElement.classList.remove("is-error");
@@ -1869,6 +1948,7 @@ const createGameScene = (config) => {
     exitToIdleState() {
       this.sound.stopAll();
       this.stopSentenceAudio();
+      this.setBottomHint("");
       this.timerEvent?.remove();
       this.timerEvent = null;
       this.summaryBackdrop.setVisible(false);
