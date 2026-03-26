@@ -60,6 +60,21 @@ const getRepeatPauseMs = (activityData, fallback = 1500) => {
 const normalizeString = (value) =>
   typeof value === "string" ? value.trim() : "";
 
+const normalizeNumericAnswer = (value) => {
+  const trimmed = normalizeString(value);
+  if (!trimmed) {
+    return "";
+  }
+  const normalizedCommaSpacing = trimmed.replace(/\s*,\s*/g, ",");
+  if (/^\d+$/.test(normalizedCommaSpacing)) {
+    return normalizedCommaSpacing;
+  }
+  if (/^\d{1,3}(,\d{3})+$/.test(normalizedCommaSpacing)) {
+    return normalizedCommaSpacing.replace(/,/g, "");
+  }
+  return null;
+};
+
 const buildHeading = (slide, headingText) => {
   const heading = document.createElement("h2");
   heading.textContent = headingText;
@@ -1005,8 +1020,9 @@ const buildTypingSlide = (items = [], context = {}) => {
   slide.appendChild(list);
 
   const instructionEl = slide.querySelector(".slide__instruction");
-  if (instructionEl) {
-    instructionEl.textContent = "";
+  const fallbackInstructionText = "Play each audio and type the number you hear.";
+  if (instructionEl && !normalizeString(instructionEl.textContent)) {
+    instructionEl.textContent = fallbackInstructionText;
   }
 
   const entries = sanitizedItems.map((item, index) => {
@@ -1073,9 +1089,6 @@ const buildTypingSlide = (items = [], context = {}) => {
       input.disabled = false;
       checkBtn.disabled = false;
     });
-    if (instructionEl) {
-      instructionEl.textContent = "Play each audio and type the number you hear.";
-    }
   };
 
   const disableControls = () => {
@@ -1084,9 +1097,6 @@ const buildTypingSlide = (items = [], context = {}) => {
       input.disabled = true;
       checkBtn.disabled = true;
     });
-    if (instructionEl) {
-      instructionEl.textContent = "";
-    }
   };
 
   entries.forEach((entry) => {
@@ -1133,7 +1143,11 @@ const buildTypingSlide = (items = [], context = {}) => {
         entry.feedback.classList.add("is-warning");
         return;
       }
-      const isCorrect = attempt.toLowerCase() === entry.item.answer.toLowerCase();
+      const normalizedAttempt = normalizeNumericAnswer(attempt);
+      const normalizedAnswer = normalizeNumericAnswer(entry.item.answer);
+      const isCorrect =
+        normalizedAttempt !== null &&
+        normalizedAttempt === normalizedAnswer;
       entry.feedback.classList.remove("is-warning", "is-neutral");
       if (isCorrect) {
         entry.feedback.textContent = "Correct!";
@@ -1185,9 +1199,6 @@ const buildTypingSlide = (items = [], context = {}) => {
     completedAttempts.clear();
     completionShown = false;
     disableControls();
-    if (instructionEl) {
-      instructionEl.textContent = "";
-    }
     slide._autoTriggered = false;
   };
 
