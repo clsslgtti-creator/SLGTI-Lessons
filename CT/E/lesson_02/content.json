@@ -285,7 +285,7 @@
           },
           {
             "id": "g_9",
-            "sentence": "The acceptable slump for concrete is 75–100 millimeters. This slump is 120 millimeters.\n\n This slump is ………………….",
+            "sentence": "The acceptable slump for concrete is 75–100 millimetres. This slump is 120 millimetres.\n\n This slump is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
             "options": ["Too high", "Correct", "Too low"],
             "answer": "Too high",

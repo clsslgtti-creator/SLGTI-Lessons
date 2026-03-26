@@ -269,7 +269,7 @@
           },
           {
             "id": "g_7",
-            "sentence": "The correct cable size for this circuit is 6 square millimeters. The cable in this circuit is 4 square millimeters.\n\n The cable in this circuit is ………………….",
+            "sentence": "The correct cable size for this circuit is 6 square millimetres. The cable in this circuit is 4 square millimetres.\n\n The cable in this circuit is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
             "options": ["Too small", "Correct", "Too large"],
             "answer": "Too small",

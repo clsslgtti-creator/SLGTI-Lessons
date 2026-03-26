@@ -211,7 +211,7 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "The correct clearance between piston and cylinder is 0.02–0.04 millimeters. The clearance in this engine is 0.07 millimeters.\n\n The clearance in this engine is ………………….",
+            "sentence": "The correct clearance between piston and cylinder is 0.02–0.04 millimetres. The clearance in this engine is 0.07 millimetres.\n\n The clearance in this engine is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
             "options": ["Too wide", "Correct", "Too narrow"],
             "answer": "Too wide",
@@ -229,7 +229,7 @@
           },
           {
             "id": "g_2",
-            "sentence": "The standard thickness of the brake pad is 10–12 millimeters. The thickness of this brake pad is 8 millimeters.\n\n The thickness of this brake pad is ………………….",
+            "sentence": "The standard thickness of the brake pad is 10–12 millimetres. The thickness of this brake pad is 8 millimetres.\n\n The thickness of this brake pad is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
             "options": ["Too thin", "Correct", "Too thick"],
             "answer": "Too thin",
@@ -245,7 +245,7 @@
           },
           {
             "id": "g_4",
-            "sentence": "The standard diameter of the drill bit for this task is 8 millimeters. The diameter of this drill bit is 6 millimeters.\n\n The diameter of this drill bit is ………………….",
+            "sentence": "The standard diameter of the drill bit for this task is 8 millimetres. The diameter of this drill bit is 6 millimetres.\n\n The diameter of this drill bit is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
             "options": ["Too small", "Correct", "Too large"],
             "answer": "Too small",
@@ -269,7 +269,7 @@
           },
           {
             "id": "g_7",
-            "sentence": "The recommended length of the connecting rod is 145–150 millimeters. The length of this connecting rod is 152 millimeters.\n\n The length of this connecting rod is ………………….",
+            "sentence": "The recommended length of the connecting rod is 145–150 millimetres. The length of this connecting rod is 152 millimetres.\n\n The length of this connecting rod is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
             "options": ["Too long", "Correct", "Too short"],
             "answer": "Too long",
@@ -293,7 +293,7 @@
           },
           {
             "id": "g_10",
-            "sentence": "The acceptable vibration level of the machine is below 3 millimeters per second. The vibration level of this machine is 5 millimeters per second.\n\n The vibration level of this machine is ………………….",
+            "sentence": "The acceptable vibration level of the machine is below 3 millimetres per second. The vibration level of this machine is 5 millimetres per second.\n\n The vibration level of this machine is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
             "options": ["Too high", "Correct", "Too low"],
             "answer": "Too high",
@@ -350,8 +350,8 @@
           {
             "id": "l_4_3",
             "question": "What should be the thickness of the brake pad?",
-            "answer": "10 millimeters",
-            "options": ["12 millimeters", "10 millimeters", "8 millimeters"]
+            "answer": "10 millimetres",
+            "options": ["12 millimetres", "10 millimetres", "8 millimetres"]
           },
           {
             "id": "l_4_4",
@@ -404,12 +404,12 @@
         },
         {
           "id": "n_4_7",
-          "text": "The brake pad is about 10 millimeters. The brake pad is about 2 millimeters too thin.",
+          "text": "The brake pad is about 10 millimetres. The brake pad is about 2 millimetres too thin.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "n_4_8",
-          "text": "The connecting rod is about 150 millimeters. The connecting rod is about 2 millimeters too long.",
+          "text": "The connecting rod is about 150 millimetres. The connecting rod is about 2 millimetres too long.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
@@ -424,12 +424,12 @@
         },
         {
           "id": "n_4_11",
-          "text": "The piston rod is about 145 millimeters. The piston rod is about 3 millimeters too long.",
+          "text": "The piston rod is about 145 millimetres. The piston rod is about 3 millimetres too long.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "n_4_12",
-          "text": "The clearance is about 0.25 millimeters. The clearance is about 0.05 millimeters too wide.",
+          "text": "The clearance is about 0.25 millimetres. The clearance is about 0.05 millimetres too wide.",
           "audio": "assets/audio/a_4_n_12.mp3"
         }
       ],
@@ -466,12 +466,12 @@
         },
         {
           "id": "r_4_7",
-          "text": "The brake pad is about 10 millimeters. The brake pad is about 2 millimeters too thin.",
+          "text": "The brake pad is about 10 millimetres. The brake pad is about 2 millimetres too thin.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "r_4_8",
-          "text": "The connecting rod is about 150 millimeters. The connecting rod is about 2 millimeters too long.",
+          "text": "The connecting rod is about 150 millimetres. The connecting rod is about 2 millimetres too long.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
@@ -486,12 +486,12 @@
         },
         {
           "id": "r_4_11",
-          "text": "The piston rod is about 145 millimeters. The piston rod is about 3 millimeters too long.",
+          "text": "The piston rod is about 145 millimetres. The piston rod is about 3 millimetres too long.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "r_4_12",
-          "text": "The clearance is about 0.25 millimeters. The clearance is about 0.05 millimeters too wide.",
+          "text": "The clearance is about 0.25 millimetres. The clearance is about 0.05 millimetres too wide.",
           "audio": "assets/audio/a_4_n_12.mp3"
         }
       ],
@@ -528,12 +528,12 @@
         },
         {
           "id": "r_4_7",
-          "text": "The brake pad is about 10 millimeters. The brake pad is about 2 millimeters too thin.",
+          "text": "The brake pad is about 10 millimetres. The brake pad is about 2 millimetres too thin.",
           "audio": "assets/audio/a_4_n_7.mp3"
         },
         {
           "id": "r_4_8",
-          "text": "The connecting rod is about 150 millimeters. The connecting rod is about 2 millimeters too long.",
+          "text": "The connecting rod is about 150 millimetres. The connecting rod is about 2 millimetres too long.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
@@ -548,12 +548,12 @@
         },
         {
           "id": "r_4_11",
-          "text": "The piston rod is about 145 millimeters. The piston rod is about 3 millimeters too long.",
+          "text": "The piston rod is about 145 millimetres. The piston rod is about 3 millimetres too long.",
           "audio": "assets/audio/a_4_n_11.mp3"
         },
         {
           "id": "r_4_12",
-          "text": "The clearance is about 0.25 millimeters. The clearance is about 0.05 millimeters too wide.",
+          "text": "The clearance is about 0.25 millimetres. The clearance is about 0.05 millimetres too wide.",
           "audio": "assets/audio/a_4_n_12.mp3"
         }
       ]
