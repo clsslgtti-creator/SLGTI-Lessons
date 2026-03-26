@@ -60,6 +60,21 @@ const getRepeatPauseMs = (activityData, fallback = 1500) => {
 const normalizeString = (value) =>
   typeof value === "string" ? value.trim() : "";
 
+const normalizeNumericAnswer = (value) => {
+  const trimmed = normalizeString(value);
+  if (!trimmed) {
+    return "";
+  }
+  const normalizedCommaSpacing = trimmed.replace(/\s*,\s*/g, ",");
+  if (/^\d+$/.test(normalizedCommaSpacing)) {
+    return normalizedCommaSpacing;
+  }
+  if (/^\d{1,3}(,\d{3})+$/.test(normalizedCommaSpacing)) {
+    return normalizedCommaSpacing.replace(/,/g, "");
+  }
+  return null;
+};
+
 const buildHeading = (slide, headingText) => {
   const heading = document.createElement("h2");
   heading.textContent = headingText;
@@ -1128,7 +1143,11 @@ const buildTypingSlide = (items = [], context = {}) => {
         entry.feedback.classList.add("is-warning");
         return;
       }
-      const isCorrect = attempt.toLowerCase() === entry.item.answer.toLowerCase();
+      const normalizedAttempt = normalizeNumericAnswer(attempt);
+      const normalizedAnswer = normalizeNumericAnswer(entry.item.answer);
+      const isCorrect =
+        normalizedAttempt !== null &&
+        normalizedAttempt === normalizedAnswer;
       entry.feedback.classList.remove("is-warning", "is-neutral");
       if (isCorrect) {
         entry.feedback.textContent = "Correct!";
