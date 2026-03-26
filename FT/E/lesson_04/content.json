@@ -96,7 +96,7 @@
     },
     "tables": [
       [
-        ["I am", "am", "tall"],
+        ["I am", "I'm", "tall"],
         ["He is", "He's", null],
         ["She is", "She's", null],
         ["It is", "It's", null],
