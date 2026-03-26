@@ -1005,8 +1005,9 @@ const buildTypingSlide = (items = [], context = {}) => {
   slide.appendChild(list);
 
   const instructionEl = slide.querySelector(".slide__instruction");
-  if (instructionEl) {
-    instructionEl.textContent = "";
+  const fallbackInstructionText = "Play each audio and type the number you hear.";
+  if (instructionEl && !normalizeString(instructionEl.textContent)) {
+    instructionEl.textContent = fallbackInstructionText;
   }
 
   const entries = sanitizedItems.map((item, index) => {
@@ -1073,9 +1074,6 @@ const buildTypingSlide = (items = [], context = {}) => {
       input.disabled = false;
       checkBtn.disabled = false;
     });
-    if (instructionEl) {
-      instructionEl.textContent = "Play each audio and type the number you hear.";
-    }
   };
 
   const disableControls = () => {
@@ -1084,9 +1082,6 @@ const buildTypingSlide = (items = [], context = {}) => {
       input.disabled = true;
       checkBtn.disabled = true;
     });
-    if (instructionEl) {
-      instructionEl.textContent = "";
-    }
   };
 
   entries.forEach((entry) => {
@@ -1185,9 +1180,6 @@ const buildTypingSlide = (items = [], context = {}) => {
     completedAttempts.clear();
     completionShown = false;
     disableControls();
-    if (instructionEl) {
-      instructionEl.textContent = "";
-    }
     slide._autoTriggered = false;
   };
 
