@@ -222,18 +222,6 @@
         "audio_d": "assets/audio/a_2_d_4_d.mp3"
       },
       {
-        "id": "d_5",
-        "img": "assets/img/Wednesday-2.png",
-        "text_a": "Do you and your friend play cricket on Friday?",
-        "text_b": "No, we don’t.",
-        "text_c": "When do you and your friend play cricket?",
-        "text_d": "We play cricket on Wednesday.",
-        "audio_a": "assets/audio/a_2_d_5_a.mp3",
-        "audio_b": "assets/audio/a_2_no_we.mp3",
-        "audio_c": "assets/audio/a_2_d_5_c.mp3",
-        "audio_d": "assets/audio/a_2_d_5_d.mp3"
-      },
-      {
         "id": "d_6",
         "img": "assets/img/Friday.jpeg",
         "text_a": "Do you and your friend spend time together on Thursday?",
@@ -244,6 +232,18 @@
         "audio_b": "assets/audio/a_2_no_we.mp3",
         "audio_c": "assets/audio/a_2_d_6_c.mp3",
         "audio_d": "assets/audio/a_2_d_6_d.mp3"
+      },
+      {
+        "id": "d_5",
+        "img": "assets/img/Wednesday-2.png",
+        "text_a": "Do you and your friend play cricket on Friday?",
+        "text_b": "No, we don’t.",
+        "text_c": "When do you and your friend play cricket?",
+        "text_d": "We play cricket on Wednesday.",
+        "audio_a": "assets/audio/a_2_d_5_a.mp3",
+        "audio_b": "assets/audio/a_2_no_we.mp3",
+        "audio_c": "assets/audio/a_2_d_5_c.mp3",
+        "audio_d": "assets/audio/a_2_d_5_d.mp3"
       }
     ]
   },
