@@ -183,8 +183,8 @@
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.png",
-        "text_a": "Is the engine block clean or dirty?",
-        "text_b": "It is dirty.",
+        "text_a": "Is the motor hot or cold?",
+        "text_b": "It is hot.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3"
       },
@@ -199,16 +199,16 @@
       {
         "id": "d_5",
         "img": "assets/img/a_2_d_5.png",
-        "text_a": "Is the instructor kind or strict? ",
-        "text_b": "He is strict.",
+        "text_a": "Is the mechanic experienced or inexperienced?",
+        "text_b": "He is experienced.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_d_5_b.mp3"
       },
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Is the mechanic tired or energetic?",
-        "text_b": "He is energetic.",
+        "text_a": "Is the tractor tire wide or narrow?",
+        "text_b": "It is wide.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3"
       }
