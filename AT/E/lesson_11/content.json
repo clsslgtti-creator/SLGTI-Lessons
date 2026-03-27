@@ -174,16 +174,16 @@
     ],
     "dialogues": [
       {
-        "id": "d_1",
-        "img": "assets/img/Wednesday.jpeg",
-        "text_a": "Does Ann prepare German dishes on Thursday?",
+        "id": "d_3",
+        "img": "assets/img/Sunday.jpeg",
+        "text_a": "Does Ann prepare Sri Lankan dishes on Saturday?",
         "text_b": "No, she doesn’t.",
-        "text_c": "When does she prepare German dishes?",
-        "text_d": "She prepares German dishes on Wednesday.",
-        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "text_c": "When does she prepare Sri Lankan dishes?",
+        "text_d": "She prepares Sri Lankan dishes on Sunday.",
+        "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_no_she.mp3",
-        "audio_c": "assets/audio/a_2_d_1_c.mp3",
-        "audio_d": "assets/audio/a_2_d_1_d.mp3"
+        "audio_c": "assets/audio/a_2_d_3_c.mp3",
+        "audio_d": "assets/audio/a_2_d_3_d.mp3"
       },
       {
         "id": "d_2",
@@ -198,16 +198,16 @@
         "audio_d": "assets/audio/a_2_d_2_d.mp3"
       },
       {
-        "id": "d_3",
-        "img": "assets/img/Sunday.jpeg",
-        "text_a": "Does Ann prepare Sri Lankan dishes on Saturday?",
+        "id": "d_1",
+        "img": "assets/img/Wednesday.jpeg",
+        "text_a": "Does Ann prepare German dishes on Thursday?",
         "text_b": "No, she doesn’t.",
-        "text_c": "When does she prepare Sri Lankan dishes?",
-        "text_d": "She prepares Sri Lankan dishes on Sunday.",
-        "audio_a": "assets/audio/a_2_d_3_a.mp3",
+        "text_c": "When does she prepare German dishes?",
+        "text_d": "She prepares German dishes on Wednesday.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_no_she.mp3",
-        "audio_c": "assets/audio/a_2_d_3_c.mp3",
-        "audio_d": "assets/audio/a_2_d_3_d.mp3"
+        "audio_c": "assets/audio/a_2_d_1_c.mp3",
+        "audio_d": "assets/audio/a_2_d_1_d.mp3"
       },
       {
         "id": "d_4",
