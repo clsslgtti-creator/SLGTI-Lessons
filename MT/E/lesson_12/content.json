@@ -559,56 +559,6 @@
           "id": "t_2_14",
           "text": "I will now outline the role of a caretaker, a position vital for safety and daily operations.",
           "audio": "assets/audio/t_2_14.mp3"
-        },
-        {
-          "id": "t_2_15",
-          "text": "A caretaker usually opens and secures buildings and maintains clean surroundings.",
-          "audio": "assets/audio/t_2_15.mp3"
-        },
-        {
-          "id": "t_2_16",
-          "text": "This role often checks utilities, monitors facilities, and ensures safe access for staff and trainees.",
-          "audio": "assets/audio/t_2_16.mp3"
-        },
-        {
-          "id": "t_2_17",
-          "text": "The caretaker always follows safety routines and regularly inspects common areas.",
-          "audio": "assets/audio/t_2_17.mp3"
-        },
-        {
-          "id": "t_2_18",
-          "text": "This role does not handle office duties and does not repair specialised machines.",
-          "audio": "assets/audio/t_2_18.mp3"
-        },
-        {
-          "id": "t_2_19",
-          "text": "The caretaker never leaves premises unsecured after working hours.",
-          "audio": "assets/audio/t_2_19.mp3"
-        },
-        {
-          "id": "t_2_20",
-          "text": "Does the caretaker work every day?",
-          "audio": "assets/audio/t_2_20.mp3"
-        },
-        {
-          "id": "t_2_21",
-          "text": "Yes.",
-          "audio": "assets/audio/t_2_21.mp3"
-        },
-        {
-          "id": "t_2_22",
-          "text": "Does this role work only indoors?",
-          "audio": "assets/audio/t_2_22.mp3"
-        },
-        {
-          "id": "t_2_23",
-          "text": "No.",
-          "audio": "assets/audio/t_2_23.mp3"
-        },
-        {
-          "id": "t_2_24",
-          "text": "The caretaker often works outdoors and usually completes final security checks before closing.",
-          "audio": "assets/audio/t_2_24.mp3"
         }
       ],
       "activity_d": [
@@ -641,31 +591,6 @@
           "id": "t_2_12",
           "text": "The administrative assistant usually supports all departments and often communicates with external offices.",
           "audio": "assets/audio/t_2_12.mp3"
-        },
-        {
-          "id": "t_2_15",
-          "text": "A caretaker usually opens and secures buildings and maintains clean surroundings.",
-          "audio": "assets/audio/t_2_15.mp3"
-        },
-        {
-          "id": "t_2_16",
-          "text": "This role often checks utilities, monitors facilities, and ensures safe access for staff and trainees.",
-          "audio": "assets/audio/t_2_16.mp3"
-        },
-        {
-          "id": "t_2_17",
-          "text": "The caretaker always follows safety routines and regularly inspects common areas.",
-          "audio": "assets/audio/t_2_17.mp3"
-        },
-        {
-          "id": "t_2_19",
-          "text": "The caretaker never leaves premises unsecured after working hours.",
-          "audio": "assets/audio/t_2_19.mp3"
-        },
-        {
-          "id": "t_2_24",
-          "text": "The caretaker often works outdoors and usually completes final security checks before closing.",
-          "audio": "assets/audio/t_2_24.mp3"
         }
       ],
       "activity_e": [
@@ -698,31 +623,6 @@
           "id": "t_2_12",
           "text": "The administrative assistant usually supports all departments and often communicates with external offices.",
           "audio": "assets/audio/t_2_12.mp3"
-        },
-        {
-          "id": "t_2_15",
-          "text": "A caretaker usually opens and secures buildings and maintains clean surroundings.",
-          "audio": "assets/audio/t_2_15.mp3"
-        },
-        {
-          "id": "t_2_16",
-          "text": "This role often checks utilities, monitors facilities, and ensures safe access for staff and trainees.",
-          "audio": "assets/audio/t_2_16.mp3"
-        },
-        {
-          "id": "t_2_17",
-          "text": "The caretaker always follows safety routines and regularly inspects common areas.",
-          "audio": "assets/audio/t_2_17.mp3"
-        },
-        {
-          "id": "t_2_19",
-          "text": "The caretaker never leaves premises unsecured after working hours.",
-          "audio": "assets/audio/t_2_19.mp3"
-        },
-        {
-          "id": "t_2_24",
-          "text": "The caretaker often works outdoors and usually completes final security checks before closing.",
-          "audio": "assets/audio/t_2_24.mp3"
         }
       ]
     }
