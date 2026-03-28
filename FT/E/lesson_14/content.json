@@ -410,12 +410,12 @@
           },
           {
             "id": "l_4_4",
-            "question": "Why is he checking expiry dates?",
-            "answer": "Because he always labels food samples",
+            "question": "What does he always label?",
+            "answer": "Food samples",
             "options": [
-              "Because he is preparing a new recipe",
-              "Because he always labels food samples",
-              "Because the instructor warned about spoiled ingredients"
+              "Jars",
+              "Food samples",
+              "Spoiled ingredients"
             ]
           },
           {
