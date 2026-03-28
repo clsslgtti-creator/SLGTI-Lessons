@@ -193,7 +193,7 @@
         "img": "assets/img/a_2_d_3.png",
         "text_a": "Why are you measuring the shaft?",
         "text_b": "I’m measuring it because it must fit exactly.",
-        "text_c": "I always measure it with the vernier caliper.",
+        "text_c": "I always measure it before fitting.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_d_3_b.mp3",
         "audio_c": "assets/audio/a_2_d_3_c.mp3"
@@ -421,10 +421,10 @@
           {
             "id": "l_4_5",
             "question": "Why is he greasing the lathe machine this afternoon?",
-            "answer": "Because it has been making noise",
+            "answer": "Because it has been stiff to use",
             "options": [
               "Because it looks dirty",
-              "Because it has been making noise",
+              "Because it has been stiff to use",
               "Because the instructor has been making noise"
             ]
           }
@@ -619,6 +619,10 @@
           "Read along."
         ],
         "audio": "assets/audio/a_5_i_b.mp3"
+      },
+      "instrction_c": {
+        "text": "Watch the video.\nවීඩියෝව බලන්න.\nவீடியோவைப் பாருங்கள்.",
+        "audio": "assets/audio/a_5_i_c.mp3"
       }
     },
     "content": [
@@ -630,7 +634,7 @@
       {
         "id": "v_2",
         "audio": "assets/videos/2B.mp4",
-        "instrction": "instrction_b"
+        "instrction": "instrction_c"
       }
     ]
   }
