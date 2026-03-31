@@ -64,7 +64,22 @@ const createHeading = (context = {}) => {
   return "Activity";
 };
 
-const resultMessage = (element, correct, total) => {
+const getMarksPerQuestion = (context = {}) => {
+  const parsed = Number(context?.marksPerQuestion);
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    return 1;
+  }
+  return parsed;
+};
+
+const createMarksSummaryText = (total, marksPerQuestion) => {
+  if (!Number.isInteger(total) || total <= 0) {
+    return "";
+  }
+  return `${total} x ${marksPerQuestion} = ${total * marksPerQuestion} marks`;
+};
+
+const resultMessage = (element, correct, total, marksPerQuestion = 1) => {
   if (!element) {
     return;
   }
@@ -72,7 +87,9 @@ const resultMessage = (element, correct, total) => {
     element.textContent = "";
     return;
   }
-  element.textContent = `Score: ${correct} / ${total}`;
+  element.textContent = `Score: ${correct * marksPerQuestion} / ${
+    total * marksPerQuestion
+  } marks`;
   element.classList.toggle("assessment-result--success", correct === total);
   element.classList.toggle("assessment-result--error", correct !== total);
 };
@@ -118,12 +135,24 @@ export const buildJumbledSlides = (
   assessment = {}
 ) => {
   const sentences = normalizeSentences(activityData?.content);
+  const marksPerQuestion = getMarksPerQuestion(context);
   const slide = document.createElement("section");
   slide.className = "slide slide--assessment slide--jumbled";
 
   const heading = document.createElement("h2");
   heading.textContent = createHeading(context);
   slide.appendChild(heading);
+
+  const marksSummary = createMarksSummaryText(
+    sentences.length,
+    marksPerQuestion
+  );
+  if (marksSummary) {
+    const marksEl = document.createElement("p");
+    marksEl.className = "assessment-marks-summary";
+    marksEl.textContent = `(${marksSummary})`;
+    slide.appendChild(marksEl);
+  }
 
   const grid = document.createElement("div");
   grid.className = "jumbled-grid";
@@ -326,7 +355,10 @@ export const buildJumbledSlides = (
     return entry;
   });
 
-  registerActivity({ total: questionEntries.length });
+  registerActivity({
+    total: questionEntries.length,
+    marksPerQuestion,
+  });
 
   if (!questionEntries.length) {
     const empty = document.createElement("p");
@@ -401,10 +433,16 @@ export const buildJumbledSlides = (
     submitResult({
       total: questionEntries.length,
       correct: correctCount,
+      marksPerQuestion,
       detail,
       timestamp: new Date().toISOString(),
     });
-    resultMessage(resultEl, correctCount, questionEntries.length);
+    resultMessage(
+      resultEl,
+      correctCount,
+      questionEntries.length,
+      marksPerQuestion
+    );
   };
 
   const applySavedState = () => {
@@ -435,7 +473,12 @@ export const buildJumbledSlides = (
     submissionLocked = true;
     refreshInteractivity();
     submitBtn.textContent = "Submitted";
-    resultMessage(resultEl, correctCount, questionEntries.length);
+    resultMessage(
+      resultEl,
+      correctCount,
+      questionEntries.length,
+      marksPerQuestion
+    );
   };
 
   const refreshInteractivity = () => {

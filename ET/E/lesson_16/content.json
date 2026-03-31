@@ -6,6 +6,7 @@
     "prepared_by": "Colombo Language School"
   },
   "activity_1": {
+    "marks_for_each_q": 1,
     "type": "MCQ",
     "instruction": {
       "text": "Choose the correct verb/word to fill in the blank in each sentence. \nසෑම වාක්‍යයකම හිස්තැන පිරවීම සඳහා නිවැරදි ක්‍රියා පදය/වචනය තෝරන්න.\nஒவ்வொரு வாக்கியத்திலும் வெற்றிடத்தை நிரப்ப சரியான வினைச்சொல்/சொல்லை தேர்ந்தெடுக்கவும்.",
@@ -76,6 +77,7 @@
   },
   "activity_2": {
     "a": {
+      "marks_for_each_q": 1,
       "type": "MCQ",
       "instruction": {
         "text": "Read the following answers and  click on the correct question. \nපහත සඳහන් පිළිතුරු කියවා නිවැරදි ප්‍රශ්නය ක්ලික් කරන්න.\nபின்வரும் பதில்களைப் படித்து சரியான கேள்வியைக் கிளிக் செய்யவும்.",
@@ -130,6 +132,7 @@
       ]
     },
     "b": {
+      "marks_for_each_q": 1,
       "type": "MCQ",
       "instruction": {
         "text": "Read the following questions and click on the correct answer.\nපහත සඳහන් ප්‍රශ්න කියවා නිවැරදි පිළිතුර ක්ලික් කරන්න.\nபின்வரும் கேள்விகளைப் படித்து சரியான பதிலைக் கிளிக் செய்யவும்.",
@@ -184,6 +187,7 @@
       ]
     },
     "c": {
+      "marks_for_each_q": 1,
       "type": "MCQ-TABLE",
       "instruction": {
         "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවා ප්‍රශ්නවලට පිළිතුරු සපයන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையைப் படித்து கேள்விகளுக்கு பதிலளிக்கவும்.",
@@ -256,6 +260,7 @@
     }
   },
   "activity_3": {
+    "marks_for_each_q": 1,
     "type": "MCQ-TABLE",
     "instruction": {
       "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවා ප්‍රශ්නවලට පිළිතුරු සපයන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையைப் படித்து கேள்விகளுக்கு பதிலளிக்கவும்.",
@@ -361,6 +366,7 @@
   },
   "activity_4": {
     "a": {
+      "marks_for_each_q": 1,
       "type": "MATCHING-WORDS",
       "instruction": {
         "text": "Listen to the audio which will be played twice and match the frequency adverbs to the phrases. \nදෙවරක් වාදනය වන දෙබසට සවන් දී ක්‍රියා විශේෂණ වාක්‍ය ඛණ්ඩවලට ගලපන්න.\nஇருமுறை ஒலிக்கப்படும் ஒலிப்பதிவைக் கேட்டு, நிகழ்வெண் வினையுரிச்சொற்களை (frequency adverbs) அதற்கேற்ற சொற்றொடர்களுடன் பொருத்துக.",
@@ -396,6 +402,7 @@
       ]
     },
     "b": {
+      "marks_for_each_q": 1,
       "type": "LISTENING",
       "instruction": {
         "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
