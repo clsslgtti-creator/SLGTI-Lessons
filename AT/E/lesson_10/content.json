@@ -341,6 +341,7 @@
           {
             "id": "g_b_1",
             "sentence": "Which sentence best describes the job of a body repair technician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He fixes tiles, fenders, and bumpers.",
               "He fixes damaged doors, fenders, and bumpers.",
@@ -352,6 +353,7 @@
           {
             "id": "g_b_2",
             "sentence": "Which sentence best describes the job of a body repair technician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He uses special tools to steam metal parts.",
               "He uses special tools to damage metal parts.",
@@ -363,6 +365,7 @@
           {
             "id": "g_b_3",
             "sentence": "Which sentence best describes the job of a body repair technician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He installs and smooths the car body.",
               "He diagnoses and smooths the car body.",
@@ -374,6 +377,7 @@
           {
             "id": "g_b_4",
             "sentence": "Which sentence best describes the job of a body repair technician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He tunes the engine for painting.",
               "He prepares the surface for painting.",
@@ -385,6 +389,7 @@
           {
             "id": "g_b_4",
             "sentence": "Which sentence best describes the job of a body repair technician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He makes the car look new again.",
               "He makes the engine look new again.",

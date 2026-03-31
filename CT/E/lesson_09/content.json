@@ -384,7 +384,8 @@
               "sand",
               "."
             ],
-            "sentence": "I record prices of cement and sand."
+            "sentence": "I record prices of cement and sand.",
+            "alternative_answers": ["I record prices of sand and cement."]
           },
           {
             "id": "n_3_a_8",

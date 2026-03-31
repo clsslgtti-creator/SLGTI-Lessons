@@ -341,6 +341,7 @@
           {
             "id": "g_b_1",
             "sentence": "Which sentence best describes the role of an electrician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He diagnoses faults in wiring systems.",
               "He paints faults in wiring systems.",
@@ -352,6 +353,7 @@
           {
             "id": "g_b_2",
             "sentence": "Which sentence best describes the role of an electrician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He ensures proper grounding of cables.",
               "He removes proper grounding of cables.",
@@ -363,6 +365,7 @@
           {
             "id": "g_b_3",
             "sentence": "Which sentence best describes the role of an electrician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He calibrates electrical panels to maintain voltage levels.",
               "He damages electrical panels to maintain voltage levels.",
@@ -374,6 +377,7 @@
           {
             "id": "g_b_4",
             "sentence": "Which sentence best describes the role of an electrician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He replaces worn-out fuses safely.",
               "He damages worn-out fuses.",
@@ -385,6 +389,7 @@
           {
             "id": "g_b_5",
             "sentence": "Which sentence best describes the role of an electrician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He tests insulation with specialized measuring tools.",
               "He ignores insulation with specialized measuring tools.",

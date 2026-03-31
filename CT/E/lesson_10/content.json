@@ -341,6 +341,7 @@
           {
             "id": "g_b_1",
             "sentence": "Which sentence best describes the job of a building contractor?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He negotiates contracts and completes them on time.",
               "He paints contracts and delivers machinery.",
@@ -352,6 +353,7 @@
           {
             "id": "g_b_2",
             "sentence": "Which sentence best describes the job of a building contractor?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He inspects the alignment of steel frameworks.",
               "He decorates the alignment of steel frameworks.",
@@ -363,6 +365,7 @@
           {
             "id": "g_b_3",
             "sentence": "Which sentence best describes the job of a building contractor?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He orders construction materials.",
               "He breaks construction materials.",
@@ -374,6 +377,7 @@
           {
             "id": "g_b_4",
             "sentence": "Which sentence best describes the job of a building contractor?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He supervises the use of safety harnesses on the site.",
               "He dismantles the safety harnesses for the workers.",
@@ -385,6 +389,7 @@
           {
             "id": "g_b_5",
             "sentence": "Which sentence best describes the job of a building contractor?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He schedules the excavation and foundation work.",
               "He forgets the excavation and foundation work.",

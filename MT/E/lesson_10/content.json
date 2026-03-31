@@ -341,6 +341,7 @@
           {
             "id": "g_b_1",
             "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He calibrates torque wrenches to maintain tightening of bolts.",
               "He damages torque wrenches to maintain tightening of bolts.",
@@ -352,6 +353,7 @@
           {
             "id": "g_b_2",
             "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He supervises the assembly of gearboxes and drive shafts.",
               "He forgets the assembly of gearboxes and drive shafts.",
@@ -363,6 +365,7 @@
           {
             "id": "g_b_3",
             "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He inspects hydraulic systems for leaks and pressure irregularities.",
               "He paints hydraulic systems for leaks and pressure irregularities.",
@@ -374,6 +377,7 @@
           {
             "id": "g_b_4",
             "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He repairs bearings and replaces worn-out mechanical seals.",
               "He burns bearings and replaces worn-out mechanical seals.",
@@ -385,6 +389,7 @@
           {
             "id": "g_b_5",
             "sentence": "Which sentence best describes the job of a foreman of an industrial factory complex?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He maintains CNC machines by aligning components.",
               "He destroys CNC machines by aligning components.",
