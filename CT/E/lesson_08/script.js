@@ -1492,15 +1492,15 @@ const createLessonEndSlide = (meta = {}) => {
 
   const updateSummary = (snapshot) => {
     if (!snapshot || snapshot.totalPossibleMarks <= 0) {
-      scoreLabel.textContent = "Total Marks: Pending";
-      detailLabel.textContent = "Submit the activities to view your score.";
+      scoreLabel.textContent = "Percentage: Pending";
+      detailLabel.textContent = "Marks will appear after you submit the activities.";
       return;
     }
     const percentageText = formatPercentage(
       snapshot.percentageScore ?? snapshot.scaledScore
     );
-    scoreLabel.innerHTML = `Total Marks: <strong>${snapshot.totalEarnedMarks} / ${snapshot.totalPossibleMarks}</strong>`;
-    detailLabel.textContent = `Percentage: ${percentageText}% (${snapshot.totalCorrect} / ${snapshot.totalPossible} questions correct).`;
+    scoreLabel.innerHTML = `Percentage: <strong>${percentageText}%</strong>`;
+    detailLabel.textContent = `Marks: ${snapshot.totalEarnedMarks} / ${snapshot.totalPossibleMarks} (${snapshot.totalCorrect} / ${snapshot.totalPossible} questions correct).`;
   };
 
   subscribeToAssessment(updateSummary);
