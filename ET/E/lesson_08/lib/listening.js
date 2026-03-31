@@ -44,16 +44,7 @@ const normalizeQuestions = (raw = []) =>
     .filter(Boolean);
 
 const getQuestionOrder = (questions, savedOrder) => {
-  const savedIds = Array.isArray(savedOrder) ? savedOrder : [];
-  if (savedIds.length === questions.length) {
-    const ordered = savedIds
-      .map((id) => questions.find((question) => question.id === id))
-      .filter(Boolean);
-    if (ordered.length === questions.length) {
-      return ordered;
-    }
-  }
-  return shuffleArray(questions);
+  return Array.isArray(questions) ? questions.slice() : [];
 };
 
 const getOptionOrder = (question, savedDetail) => {

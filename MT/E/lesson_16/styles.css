@@ -769,6 +769,19 @@ body {
   justify-content: center;
 }
 
+.slide--mcq-table-sticky {
+  overflow: visible;
+}
+
+.slide--mcq-table-sticky .dialogue-table-group--sticky {
+  position: sticky;
+  top: clamp(0.75rem, 2vw, 1.25rem);
+  z-index: 3;
+  align-self: flex-start;
+  padding: 0.35rem 0;
+  background: var(--color-surface);
+}
+
 .dialogue-table-group--single {
   justify-items: center;
 }
