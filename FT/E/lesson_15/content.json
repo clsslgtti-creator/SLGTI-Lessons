@@ -515,16 +515,6 @@
             ]
           },
           {
-            "id": "l_4_4",
-            "question": "How does Ruwan feel about the situation at the end?",
-            "answer": "He feels relaxed and calm",
-            "options": [
-              "He is annoyed",
-              "He feels relaxed and calm",
-              "He wants to buy a new stove immediately"
-            ]
-          },
-          {
             "id": "l_4_5",
             "question": "What does Anusha say about the weather?",
             "answer": "It is nice and better than standing in the rain",
@@ -532,6 +522,16 @@
               "It is raining heavily",
               "It is nice but she has to stand in the rain",
               "It is nice and better than standing in the rain"
+            ]
+          },
+          {
+            "id": "l_4_4",
+            "question": "How does Ruwan feel about the situation at the end?",
+            "answer": "He feels relaxed and calm",
+            "options": [
+              "He is annoyed",
+              "He feels relaxed and calm",
+              "He wants to buy a new stove immediately"
             ]
           }
         ]
