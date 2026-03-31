@@ -34,14 +34,14 @@
         "answer": "switch"
       },
       {
-        "question": "He ______ to the transformer site yesterday.",
+        "question": "He ______ to the transformer site on Tuesdays.",
         "options": ["drive", "drove", "drives", "driven"],
-        "answer": "drove"
+        "answer": "drives"
       },
       {
-        "question": "The electrician ______ a thin pair of gloves that didn’t protect his hands.",
-        "options": ["wore", "worn", "wear", "wears"],
-        "answer": "wore"
+        "question": "The worker on duty today ______ gloves that don't  protect his hands properly.",
+        "options": ["wore", "is wearing", "wear", "wears"],
+        "answer": "is wearing"
       },
       {
         "question": "Meena checks the circuit breakers every morning. She ______ checks the breakers before switching them on.",

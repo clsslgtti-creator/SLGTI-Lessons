@@ -220,7 +220,7 @@ export const buildMcqTableSlides = (
   const tables = Array.isArray(activityData?.tables) ? activityData.tables : [];
   const marksPerQuestion = getMarksPerQuestion(context);
   const slide = document.createElement("section");
-  slide.className = "slide slide--assessment slide--mcq";
+  slide.className = "slide slide--assessment slide--mcq slide--mcq-table-sticky";
 
   const heading = document.createElement("h2");
   heading.textContent = createHeading(context);
@@ -239,6 +239,7 @@ export const buildMcqTableSlides = (
 
   const tablesContainer = createDialogueTables(tables);
   if (tablesContainer) {
+    tablesContainer.classList.add("dialogue-table-group--sticky");
     slide.appendChild(tablesContainer);
   }
 

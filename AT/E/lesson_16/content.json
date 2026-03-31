@@ -34,14 +34,14 @@
         "answer": "switch"
       },
       {
-        "question": "He ______ to the service centre yesterday.",
+        "question": "He ______ to the service centre on Mondays.",
         "options": ["drive", "drove", "drives", "driven"],
-        "answer": "drove"
+        "answer": "drives"
       },
       {
-        "question": "The mechanic ______ a thin pair of gloves that didn’t protect his hands.",
-        "options": ["wore", "worn", "wear", "wears"],
-        "answer": "wore"
+        "question": "The worker on duty today ______ gloves that don't protect his hands properly.",
+        "options": ["wore", "is wearing", "wear", "wears"],
+        "answer": "is wearing"
       },
       {
         "question": "Meena checks the tire pressure every morning. She ______ checks the tyre pressure before starting to drive.",
@@ -87,7 +87,7 @@
         {
           "question": "His name is Ashok.",
           "options": [
-            "Whats his name?",
+            "Whats his names?",
             "What’s his name?",
             "What’s your name?"
           ],

@@ -59,7 +59,7 @@
         "id": "p_4",
         "word_text": "l'u'nch",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "Yesterday all men were at  the office for l'u'nch sharp at 1 p.m. ",
+        "sentence_text": "Yesterday all the men were at  the office for l'u'nch sharp at 1 p.m.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
       }
@@ -245,8 +245,8 @@
           "Two weeks ago",
           "Two years ago",
           "Before I was born",
-          "On the 25th May 2023",
-          "On the 7th July 1564"
+          "On the 25th of May 2023",
+          "On the 7th of July 1564"
         ]
       ],
       "activity_b": {
@@ -429,12 +429,12 @@
         },
         {
           "id": "n_4_b_1",
-          "word": "Slips",
+          "word": "Slip",
           "definition": "to lose your footing and slide on the ground"
         },
         {
           "id": "n_4_b_1",
-          "word": "Trips",
+          "word": "Trip",
           "definition": "accidentally fall over an object on the ground"
         }
       ],
