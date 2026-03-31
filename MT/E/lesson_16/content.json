@@ -34,14 +34,14 @@
         "answer": "switch"
       },
       {
-        "question": "He ______ to the mechanical lab yesterday.",
+        "question": "He ______ to the mechanical lab on Tuesdays.",
         "options": ["drive", "drove", "drives", "driven"],
-        "answer": "drove"
+        "answer": "drives"
       },
       {
-        "question": "The technician ______ a thin pair of gloves that didn’t protect his hands.",
-        "options": ["wore", "worn", "wear", "wears"],
-        "answer": "wore"
+        "question": "The worker on duty today ______ gloves that don't protect his hands properly.",
+        "options": ["wore", "is wearing", "wear", "wears"],
+        "answer": "is wearing"
       },
       {
         "question": "Meena checks the hydraulic press every morning before use. She ______ checks before using it.",

@@ -34,14 +34,14 @@
         "answer": "switch"
       },
       {
-        "question": "He ______ to the food processing unit yesterday.",
+        "question": "He ______ to the food processing unit on Tuesdays.",
         "options": ["drive", "drove", "drives", "driven"],
-        "answer": "drove"
+        "answer": "drives"
       },
       {
-        "question": "The worker ______ a thin pair of gloves that didn’t protect his hands.",
-        "options": ["wore", "worn", "wear", "wears"],
-        "answer": "wore"
+        "question": "The worker on duty today ______ gloves that don't protect his hands properly.",
+        "options": ["wore", "is wearing", "wear", "wears"],
+        "answer": "is wearing"
       },
       {
         "question": "Meena checks the dough every morning. She ______ checks the mixture before baking.",
