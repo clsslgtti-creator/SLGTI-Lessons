@@ -31,6 +31,53 @@ const joinWordsForDisplay = (words = []) =>
     return `${acc} ${word}`;
   }, "");
 
+const splitSentenceIntoWords = (text = "") =>
+  trimText(text)
+    .replace(/([.,!?;:])/g, " $1 ")
+    .split(/\s+/)
+    .map((word) => trimText(word))
+    .filter(Boolean);
+
+const normalizeSentenceAnswer = (value) =>
+  trimText(value)
+    .replace(/\s+/g, " ")
+    .replace(/\s+([.,!?;:])/g, "$1")
+    .toLowerCase();
+
+const collectAcceptedSentences = (entry) => {
+  const accepted = [];
+  const seen = new Set();
+
+  const addSentence = (value) => {
+    const sentence = trimText(value);
+    const normalized = normalizeSentenceAnswer(sentence);
+    if (!normalized || seen.has(normalized)) {
+      return;
+    }
+    seen.add(normalized);
+    accepted.push(sentence);
+  };
+
+  addSentence(entry?.sentence);
+  if (Array.isArray(entry?.alternative_answers)) {
+    entry.alternative_answers.forEach(addSentence);
+  }
+
+  return accepted;
+};
+
+const buildAcceptedSentenceDetail = (sentences = []) => {
+  if (!Array.isArray(sentences) || !sentences.length) {
+    return "";
+  }
+  if (sentences.length === 1) {
+    return `Correct sentence:\n\n${sentences[0]}`;
+  }
+  return `Accepted sentences:\n\n${sentences
+    .map((sentence) => `- ${sentence}`)
+    .join("\n")}`;
+};
+
 const shuffleArray = (list = []) => {
   const copy = Array.isArray(list) ? [...list] : [];
   for (let i = copy.length - 1; i > 0; i -= 1) {
@@ -378,7 +425,8 @@ export const normalizeWordEntries = (raw = []) => {
   }
   return raw
     .map((entry, index) => {
-      const sentence = trimText(entry?.sentence);
+      const acceptedSentences = collectAcceptedSentences(entry);
+      const sentence = acceptedSentences[0] ?? "";
       const words = Array.isArray(entry?.words)
         ? entry.words.map((word) => trimText(word)).filter(Boolean)
         : [];
@@ -393,6 +441,8 @@ export const normalizeWordEntries = (raw = []) => {
       return {
         id,
         sentence,
+        acceptedSentences,
+        acceptedSentenceKeys: acceptedSentences.map(normalizeSentenceAnswer),
         words,
         audio,
         audioKey: audio ? `arrange_sentence_${id}` : null,
@@ -415,6 +465,7 @@ export const normalizeFirstSentence = (entry) => {
       : null;
   return {
     text,
+    words: splitSentenceIntoWords(text),
     audio,
     audioKey: audio ? "arrange_intro_sentence" : null,
   };
@@ -481,6 +532,7 @@ export const createGameScene = (config = {}) => {
       this.feedbackLabel = null;
       this.feedbackAnswerText = null;
       this.previewPanel = null;
+      this.exampleSentenceText = null;
       this.summaryOverlay = null;
       this.summaryBackdrop = null;
       this.summaryTitle = null;
@@ -685,6 +737,18 @@ export const createGameScene = (config = {}) => {
         width: width * 0.76,
         height: 160,
       };
+      this.exampleSentenceText = this.add
+        .text(0, 0, "", {
+          fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
+          fontSize: "30px",
+          color: "#0f172a",
+          align: "center",
+          wordWrap: { width: this.targetArea.width - 40 },
+          fontStyle: "bold",
+        })
+        .setOrigin(0.5)
+        .setVisible(false);
+      this.targetContainer.add(this.exampleSentenceText);
 
       const bankPanel = createRoundedPanel(this, width * 0.82, 180, 26, {
         fillColor: 0xffffff,
@@ -939,6 +1003,44 @@ export const createGameScene = (config = {}) => {
       }
     }
 
+    showFirstSentenceExample(entry) {
+      if (!entry) {
+        return;
+      }
+      const words = Array.isArray(entry.words) ? [...entry.words] : [];
+      const scrambled = shuffleArray(words);
+      let attempts = 0;
+      while (
+        words.length > 1 &&
+        JSON.stringify(scrambled) === JSON.stringify(words) &&
+        attempts < 5
+      ) {
+        attempts += 1;
+        scrambled.splice(0, scrambled.length, ...shuffleArray(words));
+      }
+
+      this.resetTokens();
+      this.setPreviewVisible(false);
+      this.setWordAreasVisible(true);
+
+      if (this.exampleSentenceText) {
+        this.exampleSentenceText.setText(entry.text || "");
+        this.exampleSentenceText.setVisible(true);
+      }
+
+      this.bankTokens = scrambled.map((word, index) => {
+        const token = createToken(this, word, index, null);
+        token.state = "bank";
+        token.container.disableInteractive();
+        token.text.setFontStyle("normal");
+        setTokenStyle(token, "bank");
+        this.bankContainer.add(token.container);
+        return token;
+      });
+      this.arrangedTokens = [];
+      this.layoutTokens();
+    }
+
     cancelPendingSentencePlayback() {
       if (this.pendingSentenceEvent) {
         this.pendingSentenceEvent.remove();
@@ -1025,11 +1127,11 @@ export const createGameScene = (config = {}) => {
       this.clearFeedback();
       this.resetTokens();
       this.cancelPendingSentencePlayback();
-      this.setPreviewVisible(true);
+      this.setPreviewVisible(!this.firstSentence);
       if (this.previewText) {
         this.previewText.setText("");
       }
-      this.setWordAreasVisible(!this.firstSentence);
+      this.setWordAreasVisible(false);
       this.runState = "running";
       this.updateTimerText(this.defaultTimerLabel);
       if (this.statusElement) {
@@ -1039,12 +1141,9 @@ export const createGameScene = (config = {}) => {
         this.statusElement.classList.remove("is-transparent");
       }
       if (this.firstSentence) {
-        if (this.previewText) {
-          this.previewText.setText(this.firstSentence.text);
-        }
+        this.showFirstSentenceExample(this.firstSentence);
         this.playSentenceAudio(this.firstSentence, () => {
           this.time.delayedCall(500, () => {
-            this.setWordAreasVisible(true);
             this.advanceQuestion();
           });
         });
@@ -1244,10 +1343,15 @@ export const createGameScene = (config = {}) => {
       this.stopTimer();
       const question = this.questions[this.currentIndex];
       const assembled = [...this.assembledWords];
-      const isCorrect =
-        assembled.length === question.words.length &&
-        assembled.every((word, index) => word === question.words[index]);
-      const detailSentence = question?.sentence ?? "";
+      const assembledSentence = joinWordsForDisplay(assembled);
+      const normalizedAssembled = normalizeSentenceAnswer(assembledSentence);
+      const acceptedSentenceKeys = Array.isArray(question?.acceptedSentenceKeys)
+        ? question.acceptedSentenceKeys
+        : [normalizeSentenceAnswer(question?.sentence)];
+      const isCorrect = acceptedSentenceKeys.includes(normalizedAssembled);
+      const detailSentence = buildAcceptedSentenceDetail(
+        question?.acceptedSentences ?? [question?.sentence].filter(Boolean)
+      );
       if (isCorrect) {
         this.score += 1;
         this.updateScoreText();
@@ -1314,7 +1418,7 @@ export const createGameScene = (config = {}) => {
       if (this.feedbackAnswerText) {
         const detail =
           typeof detailText === "string" && detailText.trim().length
-            ? `Correct sentence:\n\n${detailText.trim()}`
+            ? detailText.trim()
             : "";
         this.feedbackAnswerText.setText(detail);
         this.feedbackAnswerText.setVisible(Boolean(detail));
@@ -1452,6 +1556,10 @@ export const createGameScene = (config = {}) => {
       this.bankTokens = [];
       this.arrangedTokens = [];
       this.assembledWords = [];
+      if (this.exampleSentenceText) {
+        this.exampleSentenceText.setText("");
+        this.exampleSentenceText.setVisible(false);
+      }
     }
     finishGame() {
       this.stopTimer(true);

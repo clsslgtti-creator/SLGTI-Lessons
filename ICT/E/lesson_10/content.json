@@ -341,6 +341,7 @@
           {
             "id": "g_b_1",
             "sentence": "Which sentence best describes the role of an IT support technician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He fixes errors using diagnostic software tools.",
               "He decorates system errors using diagnostic software tools.",
@@ -352,6 +353,7 @@
           {
             "id": "g_b_2",
             "sentence": "Which sentence best describes the role of an IT support technician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He installs operating systems and updates security patches.",
               "He removes operating systems and deletes security patches.",
@@ -363,6 +365,7 @@
           {
             "id": "g_b_3",
             "sentence": "Which sentence best describes the role of an IT support technician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He manages database backups to protect information.",
               "He damages database backups to protect information.",
@@ -374,6 +377,7 @@
           {
             "id": "g_b_4",
             "sentence": "Which sentence best describes the role of an IT support technician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He assembles hardware components such as processors and hard drives.",
               "He destroys hardware components such as processors and hard drives.",
@@ -385,6 +389,7 @@
           {
             "id": "g_b_5",
             "sentence": "Which sentence best describes the role of an IT support technician?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He secures networks with firewalls and encryption protocols.",
               "He paints networks with firewalls and encryption protocols.",

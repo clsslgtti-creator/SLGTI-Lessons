@@ -341,6 +341,7 @@
           {
             "id": "g_b_1",
             "sentence": "Which sentence describes the job of a food safety inspector?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He calibrates digital scales to guarantee accuracy.",
               "He decorates digital scales to guarantee accuracy.",
@@ -352,6 +353,7 @@
           {
             "id": "g_b_2",
             "sentence": "Which sentence describes the job of a food safety inspector?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He supervises the sterilization of equipment.",
               "He forgets the sterilization of equipment.",
@@ -363,6 +365,7 @@
           {
             "id": "g_b_3",
             "sentence": "Which sentence describes the job of a food safety inspector?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He inspects hygiene standards in cold storage rooms.",
               "He ignores hygiene standards in cold storage rooms.",
@@ -374,6 +377,7 @@
           {
             "id": "g_b_4",
             "sentence": "Which sentence describes the job of a food safety inspector?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He regulates the mixing of spices.",
               "He destroys the mixing of spices.",
@@ -385,6 +389,7 @@
           {
             "id": "g_b_5",
             "sentence": "Which sentence describes the job of a food safety inspector?",
+            "audio": "assets/audio/a_3_1.mp3",
             "options": [
               "He checks the packaging line to maintain food safety.",
               "He paints the packaging line to maintain food safety.",
