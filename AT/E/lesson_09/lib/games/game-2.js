@@ -38,6 +38,8 @@ const splitSentenceIntoWords = (text = "") =>
     .map((word) => trimText(word))
     .filter(Boolean);
 
+const normalizeWordToken = (word) => trimText(word).toLowerCase();
+
 const normalizeSentenceAnswer = (value) =>
   trimText(value)
     .replace(/\s+/g, " ")
@@ -59,6 +61,9 @@ const collectAcceptedSentences = (entry) => {
   };
 
   addSentence(entry?.sentence);
+  if (Array.isArray(entry?.acceptedSentences)) {
+    entry.acceptedSentences.forEach(addSentence);
+  }
   if (Array.isArray(entry?.alternative_answers)) {
     entry.alternative_answers.forEach(addSentence);
   }
@@ -443,6 +448,9 @@ export const normalizeWordEntries = (raw = []) => {
         sentence,
         acceptedSentences,
         acceptedSentenceKeys: acceptedSentences.map(normalizeSentenceAnswer),
+        acceptedWordOrders: acceptedSentences.map((item) =>
+          splitSentenceIntoWords(item).map(normalizeWordToken)
+        ),
         words,
         audio,
         audioKey: audio ? `arrange_sentence_${id}` : null,
@@ -1343,12 +1351,21 @@ export const createGameScene = (config = {}) => {
       this.stopTimer();
       const question = this.questions[this.currentIndex];
       const assembled = [...this.assembledWords];
-      const assembledSentence = joinWordsForDisplay(assembled);
-      const normalizedAssembled = normalizeSentenceAnswer(assembledSentence);
-      const acceptedSentenceKeys = Array.isArray(question?.acceptedSentenceKeys)
-        ? question.acceptedSentenceKeys
-        : [normalizeSentenceAnswer(question?.sentence)];
-      const isCorrect = acceptedSentenceKeys.includes(normalizedAssembled);
+      const normalizedAssembledWords = assembled.map(normalizeWordToken);
+      const acceptedWordOrders = Array.isArray(question?.acceptedWordOrders)
+        ? question.acceptedWordOrders
+        : [
+            splitSentenceIntoWords(question?.sentence ?? "").map(
+              normalizeWordToken
+            ),
+          ];
+      const isCorrect = acceptedWordOrders.some(
+        (acceptedWords) =>
+          acceptedWords.length === normalizedAssembledWords.length &&
+          acceptedWords.every(
+            (word, index) => word === normalizedAssembledWords[index]
+          )
+      );
       const detailSentence = buildAcceptedSentenceDetail(
         question?.acceptedSentences ?? [question?.sentence].filter(Boolean)
       );
