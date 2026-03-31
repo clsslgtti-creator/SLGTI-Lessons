@@ -126,11 +126,28 @@ const createHeading = (context = {}) => {
   return "Activity";
 };
 
-const createResultText = (correct, total) => {
+const getMarksPerQuestion = (context = {}) => {
+  const parsed = Number(context?.marksPerQuestion);
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    return 1;
+  }
+  return parsed;
+};
+
+const createMarksSummaryText = (total, marksPerQuestion) => {
   if (!Number.isInteger(total) || total <= 0) {
     return "";
   }
-  return `Score: ${correct} / ${total}`;
+  return `${total} x ${marksPerQuestion} = ${total * marksPerQuestion} marks`;
+};
+
+const createResultText = (correct, total, marksPerQuestion = 1) => {
+  if (!Number.isInteger(total) || total <= 0) {
+    return "";
+  }
+  return `Score: ${correct * marksPerQuestion} / ${
+    total * marksPerQuestion
+  } marks`;
 };
 
 const getOptionOrder = (question, savedDetail) => {
@@ -175,8 +192,14 @@ const createOptionButton = (label) => {
   return button;
 };
 
-const resultMessage = (element, correct, total, tone = "neutral") => {
-  element.textContent = createResultText(correct, total);
+const resultMessage = (
+  element,
+  correct,
+  total,
+  marksPerQuestion = 1,
+  tone = "neutral"
+) => {
+  element.textContent = createResultText(correct, total, marksPerQuestion);
   element.classList.remove(
     "assessment-result--error",
     "assessment-result--success"
@@ -195,12 +218,24 @@ export const buildMcqTableSlides = (
 ) => {
   const questions = normalizeQuestions(activityData?.content);
   const tables = Array.isArray(activityData?.tables) ? activityData.tables : [];
+  const marksPerQuestion = getMarksPerQuestion(context);
   const slide = document.createElement("section");
   slide.className = "slide slide--assessment slide--mcq";
 
   const heading = document.createElement("h2");
   heading.textContent = createHeading(context);
   slide.appendChild(heading);
+
+  const marksSummary = createMarksSummaryText(
+    questions.length,
+    marksPerQuestion
+  );
+  if (marksSummary) {
+    const marksEl = document.createElement("p");
+    marksEl.className = "assessment-marks-summary";
+    marksEl.textContent = `(${marksSummary})`;
+    slide.appendChild(marksEl);
+  }
 
   const tablesContainer = createDialogueTables(tables);
   if (tablesContainer) {
@@ -306,7 +341,10 @@ export const buildMcqTableSlides = (
     return entry;
   });
 
-  registerActivity({ total: questionEntries.length });
+  registerActivity({
+    total: questionEntries.length,
+    marksPerQuestion,
+  });
 
   const refreshInteractivity = () => {
     const shouldDisableButtons = instructionsLocked || submissionLocked;
@@ -327,7 +365,7 @@ export const buildMcqTableSlides = (
     empty.textContent = "Questions will be available soon.";
     grid.appendChild(empty);
     submitBtn.disabled = true;
-    resultMessage(resultEl, 0, 0);
+    resultMessage(resultEl, 0, 0, marksPerQuestion);
   }
 
   const lockEntry = (entry, isCorrect) => {
@@ -405,6 +443,7 @@ export const buildMcqTableSlides = (
     submitResult({
       total: questionEntries.length,
       correct: correctCount,
+      marksPerQuestion,
       detail,
       timestamp: new Date().toISOString(),
     });
@@ -413,6 +452,7 @@ export const buildMcqTableSlides = (
       resultEl,
       correctCount,
       questionEntries.length,
+      marksPerQuestion,
       correctCount === questionEntries.length ? "success" : "neutral"
     );
   };
@@ -446,7 +486,12 @@ export const buildMcqTableSlides = (
     submissionLocked = true;
     refreshInteractivity();
     submitBtn.textContent = "Submitted";
-    resultMessage(resultEl, correctCount, questionEntries.length);
+    resultMessage(
+      resultEl,
+      correctCount,
+      questionEntries.length,
+      marksPerQuestion
+    );
   };
 
   if (savedState?.submitted) {

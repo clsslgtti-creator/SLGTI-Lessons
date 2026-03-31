@@ -49,18 +49,41 @@ const createHeading = (context = {}) => {
   return "Activity";
 };
 
-const createResultText = (correct, total) => {
+const getMarksPerQuestion = (context = {}) => {
+  const parsed = Number(context?.marksPerQuestion);
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    return 1;
+  }
+  return parsed;
+};
+
+const createMarksSummaryText = (total, marksPerQuestion) => {
   if (!Number.isInteger(total) || total <= 0) {
     return "";
   }
-  return `Score: ${correct} / ${total}`;
+  return `${total} x ${marksPerQuestion} = ${total * marksPerQuestion} marks`;
 };
 
-const resultMessage = (element, correct, total, tone = "neutral") => {
+const createResultText = (correct, total, marksPerQuestion = 1) => {
+  if (!Number.isInteger(total) || total <= 0) {
+    return "";
+  }
+  return `Score: ${correct * marksPerQuestion} / ${
+    total * marksPerQuestion
+  } marks`;
+};
+
+const resultMessage = (
+  element,
+  correct,
+  total,
+  marksPerQuestion = 1,
+  tone = "neutral"
+) => {
   if (!element) {
     return;
   }
-  element.textContent = createResultText(correct, total);
+  element.textContent = createResultText(correct, total, marksPerQuestion);
   element.classList.remove(
     "assessment-result--error",
     "assessment-result--success"
@@ -79,6 +102,7 @@ export const buildMatchingWordsSlides = (
 ) => {
   const items = normalizePairs(activityData?.content);
   const audioUrl = trimString(activityData?.audio);
+  const marksPerQuestion = getMarksPerQuestion(context);
   const registerActivity =
     typeof assessment?.registerActivity === "function"
       ? assessment.registerActivity
@@ -100,6 +124,14 @@ export const buildMatchingWordsSlides = (
   const heading = document.createElement("h2");
   heading.textContent = createHeading(context);
   slide.appendChild(heading);
+
+  const marksSummary = createMarksSummaryText(items.length, marksPerQuestion);
+  if (marksSummary) {
+    const marksEl = document.createElement("p");
+    marksEl.className = "assessment-marks-summary";
+    marksEl.textContent = `(${marksSummary})`;
+    slide.appendChild(marksEl);
+  }
 
   const controls = document.createElement("div");
   controls.className = "slide__controls";
@@ -150,7 +182,10 @@ export const buildMatchingWordsSlides = (
 
   slide.appendChild(actions);
 
-  registerActivity({ total: items.length });
+  registerActivity({
+    total: items.length,
+    marksPerQuestion,
+  });
 
   if (!items.length) {
     const emptyState = document.createElement("p");
@@ -367,6 +402,7 @@ export const buildMatchingWordsSlides = (
       resultEl,
       correctCount,
       dropzones.length,
+      marksPerQuestion,
       correctCount === dropzones.length ? "success" : "neutral"
     );
 
@@ -413,6 +449,7 @@ export const buildMatchingWordsSlides = (
     submitResult({
       total: dropzones.length,
       correct: correctCount,
+      marksPerQuestion,
       detail,
       timestamp: new Date().toISOString(),
     });
@@ -694,6 +731,7 @@ export const buildMatchingWordsSlides = (
       resultEl,
       savedCorrect,
       savedTotal,
+      marksPerQuestion,
       savedTotal && savedCorrect === savedTotal ? "success" : "neutral"
     );
   }

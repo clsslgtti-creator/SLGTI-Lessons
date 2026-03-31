@@ -11,7 +11,26 @@ const prevBtn = document.getElementById("prevSlide");
 const nextBtn = document.getElementById("nextSlide");
 const lessonMetaEl = document.getElementById("lessonMeta");
 
-const ASSESSMENT_MAX_SCORE = 50;
+const ASSESSMENT_MAX_SCORE = 100;
+
+const normalizeMarkValue = (value, fallback = 1) => {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    return fallback;
+  }
+  return parsed;
+};
+
+const clampQuestionCount = (value) =>
+  Number.isFinite(value) ? Math.max(0, Math.floor(value)) : 0;
+
+const formatPercentage = (value) => {
+  if (!Number.isFinite(value)) {
+    return "0";
+  }
+  const rounded = Math.round(value * 100) / 100;
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(2);
+};
 
 const deepClone = (value) => {
   if (value === null || value === undefined) {
@@ -29,6 +48,8 @@ const assessmentState = {
   activities: {},
   totalPossible: 0,
   totalCorrect: 0,
+  totalPossibleMarks: 0,
+  totalEarnedMarks: 0,
 };
 
 const assessmentListeners = new Set();
@@ -36,42 +57,75 @@ const assessmentListeners = new Set();
 const recalcAssessmentTotals = () => {
   let possible = 0;
   let correct = 0;
+  let possibleMarks = 0;
+  let earnedMarks = 0;
   Object.values(assessmentState.activities).forEach((activity) => {
-    const total = Number.isFinite(activity.total) ? Math.max(0, activity.total) : 0;
-    const earned = Number.isFinite(activity.correct) ? Math.max(0, activity.correct) : 0;
+    const total = clampQuestionCount(activity.total);
+    const earned = clampQuestionCount(activity.correct);
+    const marksPerQuestion = normalizeMarkValue(activity.marksPerQuestion, 1);
+    const activityPossibleMarks = Number.isFinite(activity.possibleMarks)
+      ? Math.max(0, activity.possibleMarks)
+      : total * marksPerQuestion;
+    const activityEarnedMarks = Number.isFinite(activity.earnedMarks)
+      ? Math.max(0, Math.min(activityPossibleMarks, activity.earnedMarks))
+      : Math.min(total, earned) * marksPerQuestion;
     possible += total;
     correct += Math.min(total, earned);
+    possibleMarks += activityPossibleMarks;
+    earnedMarks += activityEarnedMarks;
   });
   assessmentState.totalPossible = possible;
   assessmentState.totalCorrect = Math.min(possible, correct);
+  assessmentState.totalPossibleMarks = possibleMarks;
+  assessmentState.totalEarnedMarks = Math.min(possibleMarks, earnedMarks);
 };
 
-const computeScaledScore = () => {
-  if (!assessmentState.totalPossible || assessmentState.totalPossible <= 0) {
+const computePercentageScore = () => {
+  if (
+    !Number.isFinite(assessmentState.totalPossibleMarks) ||
+    assessmentState.totalPossibleMarks <= 0
+  ) {
     return 0;
   }
-  const ratio = assessmentState.totalCorrect / assessmentState.totalPossible;
-  return Math.round(ratio * assessmentState.maxScore);
+  const ratio =
+    assessmentState.totalEarnedMarks / assessmentState.totalPossibleMarks;
+  return ratio * assessmentState.maxScore;
 };
 
 const getAssessmentSnapshot = () => {
   const activities = {};
   Object.entries(assessmentState.activities).forEach(([key, value]) => {
+    const total = clampQuestionCount(value.total);
+    const correct = clampQuestionCount(value.correct);
+    const marksPerQuestion = normalizeMarkValue(value.marksPerQuestion, 1);
+    const possibleMarks = Number.isFinite(value.possibleMarks)
+      ? Math.max(0, value.possibleMarks)
+      : total * marksPerQuestion;
+    const earnedMarks = Number.isFinite(value.earnedMarks)
+      ? Math.max(0, Math.min(possibleMarks, value.earnedMarks))
+      : Math.min(total, correct) * marksPerQuestion;
     activities[key] = {
       type: value.type || "UNKNOWN",
       label: value.label || key,
-      total: Number.isFinite(value.total) ? Math.max(0, value.total) : 0,
-      correct: Number.isFinite(value.correct) ? Math.max(0, value.correct) : 0,
+      total,
+      correct: Math.min(total, correct),
+      marksPerQuestion,
+      possibleMarks,
+      earnedMarks,
       submitted: Boolean(value.submitted),
       detail: value.detail ? deepClone(value.detail) : null,
       timestamp: value.timestamp || null,
     };
   });
+  const percentageScore = computePercentageScore();
   return {
     maxScore: assessmentState.maxScore,
     totalPossible: assessmentState.totalPossible,
     totalCorrect: assessmentState.totalCorrect,
-    scaledScore: computeScaledScore(),
+    totalPossibleMarks: assessmentState.totalPossibleMarks,
+    totalEarnedMarks: assessmentState.totalEarnedMarks,
+    percentageScore,
+    scaledScore: percentageScore,
     activities,
   };
 };
@@ -115,18 +169,27 @@ const registerAssessmentActivity = (activityKey, definition = {}) => {
   }
   const existing = assessmentState.activities[activityKey];
   const totalFromDefinition = Number.isFinite(definition.total)
-    ? Math.max(0, Math.floor(definition.total))
+    ? clampQuestionCount(definition.total)
     : undefined;
+  const marksPerQuestion =
+    definition.marksPerQuestion !== undefined
+      ? normalizeMarkValue(definition.marksPerQuestion, 1)
+      : normalizeMarkValue(existing?.marksPerQuestion, 1);
+  const resolvedTotal =
+    totalFromDefinition !== undefined
+      ? totalFromDefinition
+      : clampQuestionCount(existing?.total);
+  const resolvedCorrect = Number.isFinite(existing?.correct)
+    ? Math.min(resolvedTotal, clampQuestionCount(existing.correct))
+    : 0;
   const next = {
     type: definition.type || existing?.type || "UNKNOWN",
     label: definition.label || existing?.label || activityKey,
-    total:
-      totalFromDefinition !== undefined
-        ? totalFromDefinition
-        : Number.isFinite(existing?.total)
-        ? existing.total
-        : 0,
-    correct: Number.isFinite(existing?.correct) ? existing.correct : 0,
+    total: resolvedTotal,
+    correct: resolvedCorrect,
+    marksPerQuestion,
+    possibleMarks: resolvedTotal * marksPerQuestion,
+    earnedMarks: resolvedCorrect * marksPerQuestion,
     submitted: Boolean(existing?.submitted),
     detail: existing?.detail ? deepClone(existing.detail) : null,
     timestamp: existing?.timestamp || null,
@@ -141,20 +204,25 @@ const recordAssessmentResult = (activityKey, result = {}) => {
   }
   const existing = assessmentState.activities[activityKey];
   const total = Number.isFinite(result.total)
-    ? Math.max(0, Math.floor(result.total))
-    : Number.isFinite(existing?.total)
-    ? existing.total
-    : 0;
+    ? clampQuestionCount(result.total)
+    : clampQuestionCount(existing?.total);
   const correct = Number.isFinite(result.correct)
-    ? Math.max(0, Math.min(total, Math.floor(result.correct)))
-    : Number.isFinite(existing?.correct)
-    ? Math.min(total, existing.correct)
-    : 0;
+    ? Math.max(0, Math.min(total, clampQuestionCount(result.correct)))
+    : Math.min(total, clampQuestionCount(existing?.correct));
+  const marksPerQuestion =
+    result.marksPerQuestion !== undefined
+      ? normalizeMarkValue(result.marksPerQuestion, 1)
+      : normalizeMarkValue(existing?.marksPerQuestion, 1);
+  const possibleMarks = total * marksPerQuestion;
+  const earnedMarks = correct * marksPerQuestion;
   assessmentState.activities[activityKey] = {
     type: result.type || existing?.type || "UNKNOWN",
     label: result.label || existing?.label || activityKey,
     total,
     correct,
+    marksPerQuestion,
+    possibleMarks,
+    earnedMarks,
     submitted: result.submitted !== undefined ? Boolean(result.submitted) : true,
     detail: result.detail ? deepClone(result.detail) : null,
     timestamp: result.timestamp || new Date().toISOString(),
@@ -175,11 +243,21 @@ const applyAssessmentSnapshot = (snapshot) => {
     if (!key || !value) {
       return;
     }
+    const total = clampQuestionCount(value.total);
+    const correct = Math.min(total, clampQuestionCount(value.correct));
+    const marksPerQuestion = normalizeMarkValue(value.marksPerQuestion, 1);
     assessmentState.activities[key] = {
       type: value.type || "UNKNOWN",
       label: value.label || key,
-      total: Number.isFinite(value.total) ? Math.max(0, Math.floor(value.total)) : 0,
-      correct: Number.isFinite(value.correct) ? Math.max(0, Math.floor(value.correct)) : 0,
+      total,
+      correct,
+      marksPerQuestion,
+      possibleMarks: Number.isFinite(value.possibleMarks)
+        ? Math.max(0, value.possibleMarks)
+        : total * marksPerQuestion,
+      earnedMarks: Number.isFinite(value.earnedMarks)
+        ? Math.max(0, Math.min(total * marksPerQuestion, value.earnedMarks))
+        : correct * marksPerQuestion,
       submitted: Boolean(value.submitted),
       detail: value.detail ? deepClone(value.detail) : null,
       timestamp: value.timestamp || null,
@@ -202,12 +280,15 @@ const createActivityAssessmentHooks = (activityKey, context = {}) => {
       registerAssessmentActivity(activityKey, {
         type: resolvedType,
         label: definition.label || resolvedLabel,
+        marksPerQuestion:
+          definition.marksPerQuestion ?? context.marksPerQuestion,
         ...definition,
       }),
     submitResult: (result = {}) =>
       recordAssessmentResult(activityKey, {
         type: resolvedType,
         label: result.label || resolvedLabel,
+        marksPerQuestion: result.marksPerQuestion ?? context.marksPerQuestion,
         ...result,
       }),
     getState: () => getActivityAssessment(activityKey),
@@ -456,8 +537,8 @@ function updateScormScore(snapshot = getAssessmentSnapshot()) {
   if (!ensureScormConnection() || !scormState.api) {
     return;
   }
-  const rawScore = Number.isFinite(snapshot?.scaledScore)
-    ? Math.max(0, Math.min(ASSESSMENT_MAX_SCORE, snapshot.scaledScore))
+  const rawScore = Number.isFinite(snapshot?.percentageScore)
+    ? Math.max(0, Math.min(ASSESSMENT_MAX_SCORE, snapshot.percentageScore))
     : 0;
   if (scormState.lastRecordedScore === rawScore) {
     return;
@@ -741,10 +822,13 @@ const applyInstructionsToSlide = (slideElement, texts) => {
   }
 
   const anchor =
+    slideElement.querySelector(".assessment-marks-summary") ??
     slideElement.querySelector(".activity-focus") ??
     slideElement.querySelector("h2") ??
     slideElement.firstElementChild;
-  const existing = slideElement.querySelector(".slide__instruction");
+  const existing = slideElement.querySelector(
+    ".activity-instructions.slide__instruction"
+  );
 
   if (normalized.length === 1) {
     const text = normalized[0];
@@ -1423,13 +1507,17 @@ const createLessonEndSlide = (meta = {}) => {
   container?.appendChild(scoreSummary);
 
   const updateSummary = (snapshot) => {
-    if (!snapshot || snapshot.totalPossible <= 0) {
-      scoreLabel.textContent = "Total Score: Pending";
-      detailLabel.textContent = "Submit the activities to view your score.";
+    if (!snapshot || snapshot.totalPossibleMarks <= 0) {
+      scoreLabel.textContent = "Percentage: Pending";
+      detailLabel.textContent =
+        "Marks will appear after you submit the activities.";
       return;
     }
-    scoreLabel.innerHTML = `Total Score: <strong>${snapshot.scaledScore} / ${snapshot.maxScore}</strong>`;
-    detailLabel.textContent = `You answered ${snapshot.totalCorrect} of ${snapshot.totalPossible} questions correctly.`;
+    const percentageText = formatPercentage(
+      snapshot.percentageScore ?? snapshot.scaledScore
+    );
+    scoreLabel.innerHTML = `Percentage: <strong>${percentageText}%</strong>`;
+    detailLabel.textContent = `Marks: ${snapshot.totalEarnedMarks} / ${snapshot.totalPossibleMarks} (${snapshot.totalCorrect} / ${snapshot.totalPossible} questions correct).`;
   };
 
   subscribeToAssessment(updateSummary);
@@ -1462,6 +1550,7 @@ const collectActivityEntries = (lessonData = {}) => {
 
     const parentFocus = normalizeFocus(value);
     const parentInstructions = normalizeInstructions(value);
+    const parentMarksPerQuestion = normalizeMarkValue(value?.marks_for_each_q, 1);
 
     const subActivities = Object.entries(value)
       .filter(
@@ -1485,6 +1574,10 @@ const collectActivityEntries = (lessonData = {}) => {
           data: subValue,
           focus,
           instructions,
+          marksPerQuestion: normalizeMarkValue(
+            subValue?.marks_for_each_q,
+            parentMarksPerQuestion
+          ),
           activitySuffix: subKey.toUpperCase(),
           sortKey: `${key}_${normalizedKey}`,
         };
@@ -1507,6 +1600,7 @@ const collectActivityEntries = (lessonData = {}) => {
       data: value,
       focus: parentFocus,
       instructions: parentInstructions,
+      marksPerQuestion: parentMarksPerQuestion,
       activitySuffix: "",
       sortKey: key,
     });
@@ -1608,7 +1702,16 @@ const buildLessonSlides = (lessonData) => {
     lessonData && typeof lessonData.meta === "object" ? lessonData.meta : {};
 
   activityEntries.forEach(
-    ({ key, type, normalizedType, data, focus, instructions, activitySuffix }) => {
+    ({
+      key,
+      type,
+      normalizedType,
+      data,
+      focus,
+      instructions,
+      activitySuffix,
+      marksPerQuestion,
+    }) => {
       const baseActivityNumber = extractActivityNumber(key);
       const suffix = typeof activitySuffix === "string" ? activitySuffix.trim() : "";
       const activityNumber = suffix
@@ -1624,6 +1727,7 @@ const buildLessonSlides = (lessonData) => {
         focus,
         instructions,
         activitySuffix: suffix || null,
+        marksPerQuestion,
       };
       const {
         resolve: resolveInstructions,
