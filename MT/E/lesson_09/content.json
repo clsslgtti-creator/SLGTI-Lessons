@@ -74,7 +74,7 @@
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {
-        "text": "Match the capital cities to the nationalities.\nරාජධානී නගර ජාතිකත්වයන්ට ගැලපෙන්න.\nமாநகரங்களையும் தேசியத்துவங்களையும் பொருத்துங்கள்.",
+        "text": "Match the capital cities to the countries.\nඅගනුවර සහ රටවල් ගලපන්න.\n தலைநகரங்களை நாடுகளுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_2_i_g.mp3"
       },
       "activity_2_b": {
@@ -417,11 +417,11 @@
               "strong",
               "parts",
               "for",
-              "large",
+              "diesel",
               "engines",
               "."
             ],
-            "sentence": "I make strong parts for large engines."
+            "sentence": "I make strong parts for diesel engines."
           },
           {
             "id": "n_3_a_10",
@@ -504,11 +504,11 @@
     "type": "LISTENING-5",
     "instructions": {
       "activity_a": {
-        "text": "You will hear each recording twice. Listen to the recording and match the verbs to the nouns. \nඔබට ඇසු සටහන් සෑම දෙවරක්ම ඇසුම් ලබා දේ. සටහනට සවන් දී ක්‍රියා පද නාම පද වලට ගැලපෙන්න.\nநீங்கள் கேட்கும் ஒவ்வொரு பதிவையும் இரண்டு முறை கேட்கலாம். பதிவை கேட்டு வினைகள் மற்றும் பெயர்களை பொருத்துங்கள்.",
+        "text": "You will hear the recording twice. Listen to the recording and match the verbs to the nouns.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. පටිගත කිරීමට සවන් දී ක්‍රියා පද නාම පද සමඟ ගලපන්න.\nபதிவை இருமுறை கேட்பீர்கள். கேட்டு வினைச்சொற்களை பெயர்ச்சொற்களுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_4_i_d.mp3"
       },
       "activity_b": {
-        "text": "You will hear each recording twice. Listen and click on the time phrases you hear.\nඔබට ඇසු සටහන් සෑම දෙවරක්ම ඇසුම් ලබා දේ. ඔබ ඇසු කාල ප්‍රකාශනවලට සවන් දී ක්ලික් කරන්න.\nநீங்கள் கேட்கும் ஒவ்வொரு பதிவையும் இரண்டு முறை கேட்கலாம். நீங்கள் கேட்கும் கால வாக்கியங்களை கேட்டு கிளிக் செய்யவும்.",
+        "text": "You will hear the recording twice. Listen and click on the time phrases you hear.\n ඔබට පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. පටිගත කිරීමට සවන් දී ඔබට ඇසෙන වේලා වාක්‍ය ඛණ්ඩ මත ක්ලික් කරන්න.\nபதிவை இருமுறை கேட்பீர்கள். கேட்டு நீங்கள் கேட்கும் நேர சொற்றொடர்களைக் கிளிக் செய்யவும்.",
         "audio": "assets/audio/a_4_i_e.mp3"
       },
       "activity_c": {
@@ -530,13 +530,13 @@
         "content": [
           {
             "id": "n_4_a_1",
-            "item_a": "follow",
-            "item_b": "a routine"
+            "item_a": "study",
+            "item_b": "the training modules"
           },
           {
             "id": "n_4_a_2",
-            "item_a": "study",
-            "item_b": "the training modules"
+            "item_a": "follow",
+            "item_b": "a routine"
           },
           {
             "id": "n_4_a_3",
@@ -545,13 +545,13 @@
           },
           {
             "id": "n_4_a_4",
-            "item_a": "do",
-            "item_b": "small projects"
+            "item_a": "share",
+            "item_b": "ideas"
           },
           {
             "id": "n_4_a_5",
-            "item_a": "share",
-            "item_b": "ideas"
+            "item_a": "do",
+            "item_b": "small projects"
           },
           {
             "id": "n_4_a_6",
@@ -560,23 +560,23 @@
           },
           {
             "id": "n_4_a_7",
-            "item_a": "tidy",
-            "item_b": "the workshop"
-          },
-          {
-            "id": "n_4_a_8",
-            "item_a": "leave",
-            "item_b": "the institute"
-          },
-          {
-            "id": "n_4_a_9",
             "item_a": "build",
             "item_b": "confidence"
           },
           {
-            "id": "n_4_a_10",
+            "id": "n_4_a_8",
+            "item_a": "tidy",
+            "item_b": "the workshop"
+          },
+          {
+            "id": "n_4_a_9",
             "item_a": "prepare",
             "item_b": "in advance"
+          },
+          {
+            "id": "n_4_a_10",
+            "item_a": "leave",
+            "item_b": "the institute"
           }
         ]
       },
@@ -633,7 +633,7 @@
       "activity_c": [
         {
           "id": "t_1_1",
-          "text": "My name is Kamal. I am a trainee at the Sri Lankan–German Training Institute.",
+          "text": "My name is Kamal. I am a trainee at the Sri Lanka German Training Institute.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -760,7 +760,7 @@
       "activity_d": [
         {
           "id": "t_1_1",
-          "text": "My name is Kamal. I am a trainee at the Sri Lankan–German Training Institute.",
+          "text": "My name is Kamal. I am a trainee at the Sri Lanka German Training Institute.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {
@@ -832,7 +832,7 @@
       "activity_e": [
         {
           "id": "t_1_1",
-          "text": "My name is Kamal. I am a trainee at the Sri Lankan–German Training Institute.",
+          "text": "My name is Kamal. I am a trainee at the Sri Lanka German Training Institute.",
           "audio": "assets/audio/t_1_1.mp3"
         },
         {

@@ -169,9 +169,9 @@
           "No, there isn’t.",
           "No, there aren’t.",
           "Yes, there is.",
-          "Yes, there are mice."
+          "Yes, there are young mice."
         ],
-        "answer": "Yes, there are mice."
+        "answer": "No, there aren’t."
       },
       {
         "question": "Where is the server tower?",
