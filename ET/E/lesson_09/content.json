@@ -549,13 +549,13 @@
         "content": [
           {
             "id": "n_4_a_1",
-            "item_a": "follow",
-            "item_b": "a routine"
+            "item_a": "study",
+            "item_b": "the training modules"
           },
           {
             "id": "n_4_a_2",
-            "item_a": "study",
-            "item_b": "the training modules"
+            "item_a": "follow",
+            "item_b": "a routine"
           },
           {
             "id": "n_4_a_3",
@@ -564,13 +564,13 @@
           },
           {
             "id": "n_4_a_4",
-            "item_a": "do",
-            "item_b": "small projects"
+            "item_a": "share",
+            "item_b": "ideas"
           },
           {
             "id": "n_4_a_5",
-            "item_a": "share",
-            "item_b": "ideas"
+            "item_a": "do",
+            "item_b": "small projects"
           },
           {
             "id": "n_4_a_6",
@@ -579,23 +579,23 @@
           },
           {
             "id": "n_4_a_7",
-            "item_a": "tidy",
-            "item_b": "the workshop"
-          },
-          {
-            "id": "n_4_a_8",
-            "item_a": "leave",
-            "item_b": "the institute"
-          },
-          {
-            "id": "n_4_a_9",
             "item_a": "build",
             "item_b": "confidence"
           },
           {
-            "id": "n_4_a_10",
+            "id": "n_4_a_8",
+            "item_a": "tidy",
+            "item_b": "the workshop"
+          },
+          {
+            "id": "n_4_a_9",
             "item_a": "prepare",
             "item_b": "in advance"
+          },
+          {
+            "id": "n_4_a_10",
+            "item_a": "leave",
+            "item_b": "the institute"
           }
         ]
       },
