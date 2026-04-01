@@ -278,8 +278,8 @@
         "sentence": "The trainee is checking the engine right now."
       },
       {
-        "words": ["Are", "there", "tools", "in", "the", "garage", "?"],
-        "sentence": "Are there tools in the garage?"
+        "words": ["Are", "there", "any", "tools", "in", "the", "garage", "?"],
+        "sentence": "Are there any tools in the garage?"
       },
       {
         "words": ["They", "do", "not", "fix", "engines", "at", "night", "."],
@@ -297,7 +297,8 @@
           "day",
           "."
         ],
-        "sentence": "The worker cleans the factory floor every day."
+        "sentence": "The worker cleans the factory floor every day.",
+        "alternative_answers": ["The factory worker cleans the floor every day."]
       },
       {
         "words": [
