@@ -59,7 +59,7 @@
         "id": "p_4",
         "word_text": "cr'u'ise",
         "word_audio": "assets/audio/a_1_p_4_a.mp3",
-        "sentence_text": "They often go on cr'u'ise in their car.",
+        "sentence_text": "They often go on cr'u'ise control in their car.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.jpeg"
       }
@@ -408,7 +408,8 @@
               "systems",
               "."
             ],
-            "sentence": "I maintain and service hybrid car systems."
+            "sentence": "I maintain and service hybrid car systems.",
+            "alternative_answers": ["I service and maintain hybrid car systems."]
           },
           {
             "id": "n_3_a_9",
