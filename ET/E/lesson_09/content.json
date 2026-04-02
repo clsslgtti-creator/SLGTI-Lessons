@@ -74,7 +74,7 @@
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {
-        "text": "Match the capital cities to the countries.\nඅගනුවර සහ රටවල් ගලපන්න.\n தலைநகரங்களை நாடுகளுடன் பொருத்துங்கள்.",
+        "text": "Match the capital cities to the countries.\nඅගනුවරවල් ජාතිකත්වයන්ට ගලපන්න.\n தலைநகரங்களை நாடுகளுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_2_i_g.mp3"
       },
       "activity_2_b": {
@@ -310,7 +310,7 @@
     "type": "INTERACTIVE-4",
     "instructions": {
       "activity_a": {
-        "text": "Put the words in the correct order. The first word in each sentence is in bold.\nවචන නිවැරදි අනුපිළිවෙලට තබන්න. සෑම වාක්‍යයකම පළමු වචනය තද අකුරින් ලියවා ඇත.\nசொற்களை சரியான வரிசையில் வைக்கவும். ஒவ்வொரு வாக்கியத்திலும் முதல் வார்த்தை திட எழுத்தில் உள்ளது.",
+        "text": "Put the words in the correct order. The first word in each sentence is in bold.\nවචන නිවැරදි අනුපිළිවෙලට සකසන්න. සෑම වාක්‍යයකම පළමු වචනය තද අකුරින් පෙන්වනු ඇත.\nசொற்களைச் சரியான வரிசையில் வரிசைப்படுத்தவும். ஒவ்வொரு வாக்கியத்தின் முதல் சொல்லும் தடித்த எழுத்துக்களில் (bold) கொடுக்கப்பட்டுள்ளது.",
         "audio": "assets/audio/a_3_i_c.mp3"
       },
       "activity_b": {
@@ -523,11 +523,11 @@
     "type": "LISTENING-5",
     "instructions": {
       "activity_a": {
-        "text": "You will hear the recording twice. Listen to the recording and match the verbs to the nouns.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. පටිගත කිරීමට සවන් දී ක්‍රියා පද නාම පද සමඟ ගලපන්න.\nபதிவை இருமுறை கேட்பீர்கள். கேட்டு வினைச்சொற்களை பெயர்ச்சொற்களுடன் பொருத்துங்கள்.",
+        "text": "You will hear the recording twice. Listen to the recording and match the verbs to the nouns.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. පටිගත කිරීමට සවන් දී ක්‍රියා පද නාම පද සමඟ ගලපන්න.\nபதிவை நீங்கள் இரண்டு முறை கேட்பீர்கள். பதிவைக் கேட்டு, வினைச்சொற்களை (verbs) பெயர்ச்சொற்களுடன் (nouns) பொருத்துக.",
         "audio": "assets/audio/a_4_i_d.mp3"
       },
       "activity_b": {
-        "text": "You will hear the recording twice. Listen and click on the time phrases you hear.\n ඔබට පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. පටිගත කිරීමට සවන් දී ඔබට ඇසෙන වේලා වාක්‍ය ඛණ්ඩ මත ක්ලික් කරන්න.\nபதிவை இருமுறை கேட்பீர்கள். கேட்டு நீங்கள் கேட்கும் நேர சொற்றொடர்களைக் கிளிக் செய்யவும்.",
+        "text": "You will hear the recording twice. Listen and click on the time phrases you hear.\n ඔබට පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. පටිගත කිරීමට සවන් දී ඔබට ඇසෙන වේලා වාක්‍ය ඛණ්ඩ මත ක්ලික් කරන්න.\nபதிவை நீங்கள் இரண்டு முறை கேட்பீர்கள். அதைக் கேட்டு, நீங்கள் கேட்கும் காலத் தொடர்களை (time phrases) கிளிக் செய்யவும்.",
         "audio": "assets/audio/a_4_i_e.mp3"
       },
       "activity_c": {
