@@ -356,7 +356,7 @@
     "marks_for_each_q": 2,
     "type": "LISTENING",
     "instruction": {
-      "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nදෙවරක් වාදනය වන ශ්‍රව්‍යය අසා බලන්න. පසුව නිවැරදි පිළිතුර මත ක්ලික් කරන්න. ප්‍රශ්න පළමුව කියවන්න.\nஇருமுறை ஒலிக்கப்படும் ஆடியோவை கேட்கவும். பின்னர் சரியான பதிலில் கிளிக் செய்யவும். முதலில் கேள்விகளைப் படியுங்கள்.",
+      "text": "Listen to the audio which will be played twice. Then click on the correct answer. Read the questions first. \nපළමුව ප්‍රශ්න කියවන්න. පසුව දෙවරක් වාදනය වන දෙබසට සවන් දෙන්න. ඉන්පසු නිවැරදි පිළිතුර ක්ලික් කරන්න.\nபதிவை இரண்டு முறை கேட்பீர்கள், கவனமாகக் கேளுங்கள். பிறகு சரியான பதிலைக் கிளிக் செய்யவும். முதலில் கேள்விகளை வாசிக்கவும்.",
       "audio": "assets/audio/a_4_i.mp3"
     },
     "audio": "assets/audio/a_4_q.mp3",
