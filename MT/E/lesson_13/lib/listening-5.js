@@ -1168,7 +1168,7 @@ const buildAudioOptionSlide = (data = {}, context = {}) => {
   const checkHint = document.createElement("span");
   checkHint.className = "listening-check-hint";
   checkHint.textContent =
-    "Please listen to the recording twice to submit the answers.";
+    " ";
   const scoreEl = document.createElement("p");
   scoreEl.className = "listening-score";
   scoreEl.textContent = "";

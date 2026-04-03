@@ -596,9 +596,9 @@ export const createGameScene = (config) => {
         lineWidth: 4,
       });
       this.sentencePanel = sentencePanel;
-      this.sentenceImageMaxWidth = 800;
-      this.sentenceImageMaxHeight = 1200;
-      this.sentenceImagePadding = 10;
+      this.sentenceImageMaxWidth = 780;
+      this.sentenceImageMaxHeight = 1000;
+      this.sentenceImagePadding = 2;
       this.sentenceTextGap = 24;
       this.sentenceImage = this.add.image(0, -30, "");
       this.sentenceImage.setVisible(false);
@@ -607,7 +607,7 @@ export const createGameScene = (config) => {
       this.sentenceText = this.add
         .text(0, 0, "", {
           fontFamily: 'Segoe UI, "Helvetica Neue", Arial, sans-serif',
-          fontSize: 30,
+          fontSize: 26,
           color: "#111827",
           align: "center",
           wordWrap: { width: sentenceCardWidth - 40 },

@@ -70,11 +70,11 @@
     "focus": "Simple Present, Nationalities",
     "instructions": {
       "example": {
-        "text": "Listen to the model dialogues.\nආදර්ශ සංවාද අසන්න.\nமாதிரி உரையாடல்களை கேளுங்கள்.",
+        "text": "Listen to the model dialogues.\n ආදර්ශ සංවාදවලට සවන් දෙන්න.\nமாதிரி உரையாடல்களை கேளுங்கள்.",
         "audio": "assets/audio/a_2_i_ex.mp3"
       },
       "activity_2_a": {
-        "text": "Match the capital cities to the countries.\nඅගනුවර සහ රටවල් ගලපන්න.\n தலைநகரங்களை நாடுகளுடன் பொருத்துங்கள்.",
+        "text": "Match the capital cities to the countries.\nඅගනුවරවල් ජාතිකත්වයන්ට ගලපන්න.\n தலைநகரங்களை நாடுகளுடன் பொருத்துங்கள்.",
         "audio": "assets/audio/a_2_i_g.mp3"
       },
       "activity_2_b": {
@@ -90,7 +90,7 @@
         "audio": "assets/audio/a_2_i_d.mp3"
       },
       "activity_2_e": {
-        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கேட்டு, இடைவெளியைப் பயன்படுத்தி பதிலளியுங்கள். பின்னர் உங்கள் பதிலை மாதிரி பதிலுடன் ஒப்பிடுங்கள்.",
+        "text": "Listen to each question, use the pause to answer it, then compare your response with the model answer.\nසෑම ප්‍රශ්නයකටම සවන් දෙන්න, පිළිතුරු දීමට විරාමය භාවිතා කරන්න, ඉන්පසු ඔබේ පිළිතුර ආදර්ශ පිළිතුර සමඟ සසඳන්න.\nஒவ்வொரு கேள்வியையும் கவனமாகக் கேட்டு, இடைநிறுத்தத்தின் போது பதிலளிக்கவும், அதன் பிறகு உங்கள் பதிலை மாதிரிப் பதிலுடன் ஒப்பிட்டுப் பார்க்கவும்.",
         "audio": "assets/audio/a_2_i_e.mp3"
       }
     },
@@ -246,7 +246,7 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/a_2_d_4.jpeg",
+        "img": "assets/img/a_2_d_4.png",
         "text_a": "What’s your name?",
         "text_b": "My name is Mei Ling.",
         "text_c": "Where do you live?",
@@ -310,7 +310,7 @@
     "type": "INTERACTIVE-4",
     "instructions": {
       "activity_a": {
-        "text": "Put the words in the correct order. The first word in each sentence is in bold.\nවචන නිවැරදි අනුපිළිවෙලට තබන්න. සෑම වාක්‍යයකම පළමු වචනය තද අකුරින් ලියවා ඇත.\nசொற்களை சரியான வரிசையில் வைக்கவும். ஒவ்வொரு வாக்கியத்திலும் முதல் வார்த்தை திட எழுத்தில் உள்ளது.",
+        "text": "Put the words in the correct order. The first word in each sentence is in bold.\nවචන නිවැරදි අනුපිළිවෙලට සකසන්න. සෑම වාක්‍යයකම පළමු වචනය තද අකුරින් පෙන්වනු ඇත.\nசொற்களைச் சரியான வரிசையில் வரிசைப்படுத்தவும். ஒவ்வொரு வாக்கியத்தின் முதல் சொல்லும் தடித்த எழுத்துக்களில் (bold) கொடுக்கப்பட்டுள்ளது.",
         "audio": "assets/audio/a_3_i_c.mp3"
       },
       "activity_b": {
@@ -509,11 +509,11 @@
     "type": "LISTENING-5",
     "instructions": {
       "activity_a": {
-        "text": "You will hear the recording twice. Listen to the recording and match the verbs to the nouns.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. පටිගත කිරීමට සවන් දී ක්‍රියා පද නාම පද සමඟ ගලපන්න.\nபதிவை இருமுறை கேட்பீர்கள். கேட்டு வினைச்சொற்களை பெயர்ச்சொற்களுடன் பொருத்துங்கள்.",
+        "text": "You will hear the recording twice. Listen to the recording and match the verbs to the nouns.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. පටිගත කිරීමට සවන් දී ක්‍රියා පද නාම පද සමඟ ගලපන්න.\nபதிவை நீங்கள் இரண்டு முறை கேட்பீர்கள். பதிவைக் கேட்டு, வினைச்சொற்களை (verbs) பெயர்ச்சொற்களுடன் (nouns) பொருத்துக.",
         "audio": "assets/audio/a_4_i_d.mp3"
       },
       "activity_b": {
-        "text": "You will hear the recording twice. Listen and click on the time phrases you hear.\n ඔබට පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. පටිගත කිරීමට සවන් දී ඔබට ඇසෙන වේලා වාක්‍ය ඛණ්ඩ මත ක්ලික් කරන්න.\nபதிவை இருமுறை கேட்பீர்கள். கேட்டு நீங்கள் கேட்கும் நேர சொற்றொடர்களைக் கிளிக் செய்யவும்.",
+        "text": "You will hear the recording twice. Listen and click on the time phrases you hear.\n ඔබට පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. පටිගත කිරීමට සවන් දී ඔබට ඇසෙන වේලා වාක්‍ය ඛණ්ඩ මත ක්ලික් කරන්න.\nபதிவை நீங்கள் இரண்டு முறை கேட்பீர்கள். அதைக் கேட்டு, நீங்கள் கேட்கும் காலத் தொடர்களை (time phrases) கிளிக் செய்யவும்.",
         "audio": "assets/audio/a_4_i_e.mp3"
       },
       "activity_c": {
@@ -916,12 +916,12 @@
         "audio": "assets/audio/a_5_i_a.mp3"
       },
       "instruction_b": {
-        "text": "These steps will help you to learn English from this video.\nමෙම පියවරන් ඔබට මෙම වීඩියෝවෙන් ඉංග්‍රීසි ඉගෙන ගැනීමට උදව් කරනු ඇත.\nஇந்த வீடியோவிலிருந்து ஆங்கிலம் கற்க இந்த படிகள் உங்களுக்கு உதவும்.",
+        "text": "These steps will help you to learn English from this video.\nමෙම වීඩියෝවෙන් ඉංග්‍රීසි ඉගෙන ගැනීමට මෙම පියවර ඔබට උපකාරී වනු ඇත.\nஇந்த வீடியோவிலிருந்து ஆங்கிலம் கற்க இந்த படிகள் உங்களுக்கு உதவும்.",
         "steps": [
-          "Watch the video 2 times.\nවීඩියෝව වර දෙකක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
-          "Explain any new words using Google Translator.\nGoogle පරිවර්තකය භාවිතයෙන් නව වචන කිහිපයක් විස්තර කරන්න.\nGoogle மொழிபெயர்ப்பாளரைப் பயன்படுத்தி சில புதிய வார்த்தைகளை விளக்குங்கள்.",
+          "Watch the video 2 times.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
+          "Learn new words using Google Translate.\nGoogle පරිවර්තකය භාවිතයෙන් නව වචන ඉගෙන ගන්න.\nகூகுள் ட்ரான்ஸ்லேட் பயன்படுத்தி புதிய சொற்களைக் கற்றுக்கொள்ளுங்கள்.",
           "Listen and repeat.\nසවන් දී නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
-          "Read along."
+          "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்."
         ],
         "audio": "assets/audio/a_5_i_b.mp3"
       }

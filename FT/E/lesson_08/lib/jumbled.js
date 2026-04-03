@@ -24,6 +24,28 @@ const tokenizeSentence = (sentence) => {
   return matches ? matches : [];
 };
 
+const dedupeTokenSequences = (sequences = []) => {
+  const seen = new Set();
+  return sequences.filter((tokens) => {
+    const signature = tokens.join("\u0000");
+    if (seen.has(signature)) {
+      return false;
+    }
+    seen.add(signature);
+    return true;
+  });
+};
+
+const tokensToSentence = (tokens = []) =>
+  tokens.join(" ").replace(/\s+([.?])/g, "$1").trim();
+
+const findMatchingAnswer = (arrangedTokens = [], acceptedAnswers = []) =>
+  acceptedAnswers.find(
+    (candidate) =>
+      candidate.length === arrangedTokens.length &&
+      candidate.every((token, index) => token === arrangedTokens[index])
+  ) ?? null;
+
 const normalizeWordList = (input) => {
   if (!Array.isArray(input)) {
     return null;
@@ -49,10 +71,18 @@ const normalizeSentences = (raw = []) =>
       if (tokens.length < 2) {
         return null;
       }
+      const alternativeAnswers = (Array.isArray(entry?.alternative_answers)
+        ? entry.alternative_answers
+        : []
+      )
+        .map((alternative) => tokenizeSentence(alternative))
+        .filter((alternativeTokens) => alternativeTokens.length === tokens.length);
+      const acceptedAnswers = dedupeTokenSequences([tokens, ...alternativeAnswers]);
       return {
         id: normalizeId(entry?.id, index, "jumbled"),
         tokens,
         display: sentence,
+        acceptedAnswers,
       };
     })
     .filter(Boolean);
@@ -379,9 +409,13 @@ export const buildJumbledSlides = (
       entry.target.querySelectorAll(".jumbled-token")
     ).map((el) => el.dataset.tokenId);
     const isComplete = arranged.length === entry.answerIds.length;
-    const isCorrect =
-      isComplete &&
-      arranged.every((tokenId, index) => tokenId === entry.answerIds[index]);
+    const arrangedTokens = arranged
+      .map((tokenId) => entry.tokens.get(tokenId)?.text)
+      .filter((token) => typeof token === "string");
+    const matchedAnswer = isComplete
+      ? findMatchingAnswer(arrangedTokens, entry.question.acceptedAnswers)
+      : null;
+    const isCorrect = Boolean(matchedAnswer);
     entry.locked = true;
     entry.card.classList.toggle("is-correct", isCorrect);
     entry.card.classList.toggle("is-incorrect", !isCorrect);
@@ -390,7 +424,9 @@ export const buildJumbledSlides = (
       token.element.classList.add("is-locked");
     });
     const sentenceText =
-      typeof entry.question.display === "string"
+      matchedAnswer?.length
+        ? tokensToSentence(matchedAnswer)
+        : typeof entry.question.display === "string"
         ? entry.question.display
         : "";
     entry.feedback.textContent = isCorrect
