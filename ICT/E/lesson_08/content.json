@@ -272,7 +272,8 @@
           "this",
           "."
         ],
-        "sentence": "There is new software available online for this."
+        "sentence": "There is new software available online for this.",
+        "alternative_answers": ["There is new online software available for this."]
       },
       {
         "words": [
