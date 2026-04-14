@@ -352,11 +352,6 @@
           "audio": "assets/audio/a_3_e_3.mp3"
         },
         {
-          "id": "n_3_e_4",
-          "text": "He doesn’t switch off the main power before connecting new wires.",
-          "audio": "assets/audio/a_3_e_4.mp3"
-        },
-        {
           "id": "n_3_e_5",
           "text": "He reads circuit diagrams and follows electrical blueprints carefully.",
           "audio": "assets/audio/a_3_e_5.mp3"
@@ -375,11 +370,6 @@
           "id": "n_3_e_8",
           "text": "He connects lighting fixtures, switches, and sockets correctly.",
           "audio": "assets/audio/a_3_e_8.mp3"
-        },
-        {
-          "id": "n_3_e_9",
-          "text": "He does not wear insulated gloves or safety boots while repairing circuits.",
-          "audio": "assets/audio/a_3_e_9.mp3"
         },
         {
           "id": "n_3_e_10",

@@ -352,11 +352,6 @@
           "audio": "assets/audio/a_3_b_3.mp3"
         },
         {
-          "id": "n_3_4",
-          "text": "He doesn’t tighten the wheel nuts after changing the tyre.",
-          "audio": "assets/audio/a_3_b_4.mp3"
-        },
-        {
           "id": "n_3_5",
           "text": "He uses diagnostic equipment to scan the vehicle’s electronic system.",
           "audio": "assets/audio/a_3_b_5.mp3"
@@ -375,11 +370,6 @@
           "id": "n_3_8",
           "text": "He cleans the fuel injectors to improve engine performance.",
           "audio": "assets/audio/a_3_b_8.mp3"
-        },
-        {
-          "id": "n_3_9",
-          "text": "He does not test-drive the vehicle after completing the repair.",
-          "audio": "assets/audio/a_3_b_9.mp3"
         },
         {
           "id": "n_3_10",

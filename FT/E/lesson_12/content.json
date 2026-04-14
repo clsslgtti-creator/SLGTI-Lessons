@@ -352,11 +352,6 @@
           "audio": "assets/audio/a_3_f_3.mp3"
         },
         {
-          "id": "n_3_f_4",
-          "text": "He throws waste materials into ordinary bins without checking.",
-          "audio": "assets/audio/a_3_f_4.mp3"
-        },
-        {
           "id": "n_3_f_5",
           "text": "He does not ignore safety rules when handling chemicals.",
           "audio": "assets/audio/a_3_f_5.mp3"
@@ -375,11 +370,6 @@
           "id": "n_3_f_8",
           "text": "He cleans and sterilizes glassware and instruments after use.",
           "audio": "assets/audio/a_3_f_8.mp3"
-        },
-        {
-          "id": "n_3_f_9",
-          "text": "He does not check the expiry dates of samples before testing.",
-          "audio": "assets/audio/a_3_f_9.mp3"
         },
         {
           "id": "n_3_f_10",

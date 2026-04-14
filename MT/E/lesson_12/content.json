@@ -352,11 +352,6 @@
           "audio": "assets/audio/a_3_m_3.mp3"
         },
         {
-          "id": "n_3_m_4",
-          "text": "He doesn’t lock out the power supply before maintenance.",
-          "audio": "assets/audio/a_3_m_4.mp3"
-        },
-        {
           "id": "n_3_m_5",
           "text": "He uses measuring tools such as micrometers and vernier callipers.",
           "audio": "assets/audio/a_3_m_5.mp3"
@@ -375,11 +370,6 @@
           "id": "n_3_m_8",
           "text": "He checks alignment and adjusts belts, pulleys, and bearings.",
           "audio": "assets/audio/a_3_m_8.mp3"
-        },
-        {
-          "id": "n_3_m_9",
-          "text": "He does not record the completed jobs or report faults to the manager.",
-          "audio": "assets/audio/a_3_m_9.mp3"
         },
         {
           "id": "n_3_m_10",

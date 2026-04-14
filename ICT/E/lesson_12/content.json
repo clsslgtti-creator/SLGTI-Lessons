@@ -352,11 +352,6 @@
           "audio": "assets/audio/a_3_i_3.mp3"
         },
         {
-          "id": "n_3_i_4",
-          "text": "He doesn’t log error reports after solving technical issues.",
-          "audio": "assets/audio/a_3_i_4.mp3"
-        },
-        {
           "id": "n_3_i_5",
           "text": "He uses diagnostic software to detect hardware and software faults.",
           "audio": "assets/audio/a_3_i_5.mp3"
@@ -375,11 +370,6 @@
           "id": "n_3_i_8",
           "text": "He runs security scans and installs antivirus updates regularly.",
           "audio": "assets/audio/a_3_i_8.mp3"
-        },
-        {
-          "id": "n_3_i_9",
-          "text": "He does not check the power supply before opening a computer case.",
-          "audio": "assets/audio/a_3_i_9.mp3"
         },
         {
           "id": "n_3_i_10",
