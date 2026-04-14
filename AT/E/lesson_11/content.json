@@ -303,14 +303,14 @@
           },
           {
             "id": "g_b_3",
-            "sentence": "Does she attend an electrical systems  lesson on Thursday morning?",
+            "sentence": "Does she attend an electrical systems lesson on Thursday morning?",
             "audio": "assets/audio/a_3_b_3.mp3",
             "options": [
               "Yes, she does.",
               "No, she doesn’t.",
               "No, she doesn’t, but she attends a lesson on  brake systems."
             ],
-            "answer": "No, she doesn’t",
+            "answer": "No, she doesn’t.",
             "image": "assets/img/a_3.png"
           },
           {
