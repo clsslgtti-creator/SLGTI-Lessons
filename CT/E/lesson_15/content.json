@@ -338,7 +338,7 @@
           },
           {
             "id": "g_b_2",
-            "sentence": "The trainees __________ measuring tape for the supervisor.",
+            "sentence": "The trainees __________ plans and drawings for the supervisor.",
             "options": ["preparing", "is prepare", "are prepares", "prepare"],
             "answer": "prepare",
             "image": "assets/img/a_3_1.png"
@@ -419,7 +419,7 @@
         },
         {
           "id": "n_3_3",
-          "text": "The trainees prepare measuring tape for the supervisor.",
+          "text": "The trainees prepare plans and drawings for the supervisor.",
           "audio": "assets/audio/a_3_b_g_3.mp3"
         },
         {
