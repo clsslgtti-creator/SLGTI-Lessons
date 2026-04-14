@@ -308,7 +308,7 @@
             "options": [
               "Yes, he does.",
               "No, he doesn’t.",
-              "No, he doesn’t, but he attends a lesson on web design."
+              "No, he doesn’t, but he attends a lesson on programming fundamentals."
             ],
             "answer": "No, he doesn’t.",
             "image": "assets/img/a_3.png"

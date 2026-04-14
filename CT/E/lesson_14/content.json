@@ -51,7 +51,7 @@
         "id": "p_3",
         "word_text": "sh'ow'er",
         "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Rainwater runs off after the sh'ow'er.",
+        "sentence_text": "Rainwater drains away after a sh'ow'er.",
         "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
         "image": "assets/img/a_1_p_3.png"
       },
@@ -191,7 +191,7 @@
       {
         "id": "d_3",
         "img": "assets/img/a_2_d_3.jpeg",
-        "text_a": "Why are you mixing the cement now?",
+        "text_a": "Why are you mixing the cement?",
         "text_b": "We’re mixing it because we need mortar.",
         "text_c": "We always mix it before laying bricks.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",

@@ -106,10 +106,10 @@
       {
         "id": "e_1",
         "img": "assets/img/Monday.png",
-        "text_a": "Do you ride a motorbike on Tuesday?",
+        "text_a": "Do you ride a motorbike on Tuesdays?",
         "text_b": "No, I don’t.",
         "text_c": "When do you ride a motorbike?",
-        "text_d": "I ride a motorbike on Monday.",
+        "text_d": "I ride a motorbike on Mondays.",
         "audio_a": "assets/audio/a_2_ex_1_a.mp3",
         "audio_b": "assets/audio/a_2_no_i.mp3",
         "audio_c": "assets/audio/a_2_ex_1_c.mp3",
@@ -118,10 +118,10 @@
       {
         "id": "e_2",
         "img": "assets/img/Wednesday.png",
-        "text_a": "Do you play cricket on Thursday?",
+        "text_a": "Do you play cricket on Thursdays?",
         "text_b": "No, I don’t.",
         "text_c": "When do you play cricket?",
-        "text_d": "I play cricket  on Wednesday.",
+        "text_d": "I play cricket  on Wednesdays.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
         "audio_b": "assets/audio/a_2_no_i.mp3",
         "audio_c": "assets/audio/a_2_ex_2_c.mp3",
@@ -130,10 +130,10 @@
       {
         "id": "e_3",
         "img": "assets/img/Saturday.jpeg",
-        "text_a": "Do you and your friend visit elderly relatives on Sunday?",
+        "text_a": "Do you and your friend visit elderly relatives on Sundays?",
         "text_b": "No, we don’t.",
         "text_c": "When do you visit your elderly relatives?",
-        "text_d": "We visit our elderly relatives on Saturday.",
+        "text_d": "We visit our elderly relatives on Saturdays.",
         "audio_a": "assets/audio/a_2_ex_3_a.mp3",
         "audio_b": "assets/audio/a_2_no_we.mp3",
         "audio_c": "assets/audio/a_2_ex_3_c.mp3",
@@ -176,10 +176,10 @@
       {
         "id": "d_1",
         "img": "assets/img/Tuesday.jpeg",
-        "text_a": "Do you use social media on Wednesday?",
+        "text_a": "Do you use social media on Wednesdays?",
         "text_b": "No, I don’t.",
         "text_c": "When do you use social media?",
-        "text_d": "I use social media on Tuesday.",
+        "text_d": "I use social media on Tuesdays.",
         "audio_a": "assets/audio/a_2_d_1_a.mp3",
         "audio_b": "assets/audio/a_2_no_i_f.mp3",
         "audio_c": "assets/audio/a_2_d_1_c.mp3",
@@ -188,10 +188,10 @@
       {
         "id": "d_2",
         "img": "assets/img/Thursday.jpeg",
-        "text_a": "Do you buy groceries on Friday?",
+        "text_a": "Do you buy groceries on Fridays?",
         "text_b": "No, I don’t.",
         "text_c": "When do you buy groceries?",
-        "text_d": "I buy groceries on Thursday.",
+        "text_d": "I buy groceries on Thursdays.",
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_no_i_f.mp3",
         "audio_c": "assets/audio/a_2_d_2_c.mp3",
@@ -200,10 +200,10 @@
       {
         "id": "d_3",
         "img": "assets/img/Friday.jpeg",
-        "text_a": "Do you spend time with friends on Saturday?",
+        "text_a": "Do you spend time with friends on Saturdays?",
         "text_b": "No, I don’t.",
         "text_c": "When do you spend time with friends?",
-        "text_d": "I spend time with friends on Friday.",
+        "text_d": "I spend time with friends on Fridays.",
         "audio_a": "assets/audio/a_2_d_3_a.mp3",
         "audio_b": "assets/audio/a_2_no_i.mp3",
         "audio_c": "assets/audio/a_2_d_3_c.mp3",
@@ -211,11 +211,11 @@
       },
       {
         "id": "d_4",
-        "img": "assets/img/Wednesday.png",
-        "text_a": "Do you play cricket on Monday?",
+        "img": "assets/img/Wednesday-y.png",
+        "text_a": "Do you play volleyball on Mondays?",
         "text_b": "No, I don’t.",
-        "text_c": "When do you play cricket?",
-        "text_d": "I play cricket on Wednesday.",
+        "text_c": "When do you play volleyball?",
+        "text_d": "I play volleyball on Wednesdays.",
         "audio_a": "assets/audio/a_2_d_4_a.mp3",
         "audio_b": "assets/audio/a_2_no_i.mp3",
         "audio_c": "assets/audio/a_2_d_4_c.mp3",
@@ -224,10 +224,10 @@
       {
         "id": "d_6",
         "img": "assets/img/Friday.jpeg",
-        "text_a": "Do you and your friend spend time together on Thursday?",
+        "text_a": "Do you and your friend spend time together on Thursdays?",
         "text_b": "No, we don’t.",
         "text_c": "When do you and your friend spend time together?",
-        "text_d": "We spend time together on Friday.",
+        "text_d": "We spend time together on Fridays.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_no_we.mp3",
         "audio_c": "assets/audio/a_2_d_6_c.mp3",
@@ -236,10 +236,10 @@
       {
         "id": "d_5",
         "img": "assets/img/Wednesday-2.png",
-        "text_a": "Do you and your friend play cricket on Friday?",
+        "text_a": "Do you and your friend play cricket on Fridays?",
         "text_b": "No, we don’t.",
         "text_c": "When do you and your friend play cricket?",
-        "text_d": "We play cricket on Wednesday.",
+        "text_d": "We play cricket on Wednesdays.",
         "audio_a": "assets/audio/a_2_d_5_a.mp3",
         "audio_b": "assets/audio/a_2_no_we.mp3",
         "audio_c": "assets/audio/a_2_d_5_c.mp3",
@@ -352,11 +352,6 @@
           "audio": "assets/audio/a_3_e_3.mp3"
         },
         {
-          "id": "n_3_e_4",
-          "text": "He doesn’t switch off the main power before connecting new wires.",
-          "audio": "assets/audio/a_3_e_4.mp3"
-        },
-        {
           "id": "n_3_e_5",
           "text": "He reads circuit diagrams and follows electrical blueprints carefully.",
           "audio": "assets/audio/a_3_e_5.mp3"
@@ -375,11 +370,6 @@
           "id": "n_3_e_8",
           "text": "He connects lighting fixtures, switches, and sockets correctly.",
           "audio": "assets/audio/a_3_e_8.mp3"
-        },
-        {
-          "id": "n_3_e_9",
-          "text": "He does not wear insulated gloves or safety boots while repairing circuits.",
-          "audio": "assets/audio/a_3_e_9.mp3"
         },
         {
           "id": "n_3_e_10",
@@ -552,7 +542,7 @@
         },
         {
           "id": "t_2_13",
-          "text": "This position plays a key role to ensure the smooth running of the institution.in smooth institutional management.",
+          "text": "This position plays a key role to ensure the smooth running of the institution.",
           "audio": "assets/audio/t_2_13.mp3"
         }
       ],
