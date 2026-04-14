@@ -265,7 +265,7 @@
         "content": [
           {
             "id": "g_f_1",
-            "sentence": "What does a food laboratory assistant do?\n\nA Food Laboratory Assistant tests food samples for quality and safety.",
+            "sentence": "What does a food laboratory assistant do?\n\nA food laboratory assistant tests food samples for quality and safety.",
             "audio": "assets/audio/g_a_3_f_1.mp3",
             "options": ["True", "False"],
             "answer": "True"
@@ -314,7 +314,7 @@
           },
           {
             "id": "g_f_8",
-            "sentence": "What does a food laboratory assistant do?\n\nHe cleans and sterilizes glassware and instruments after use.",
+            "sentence": "What does a food laboratory assistant do?\n\nHe cleans and sterilises glassware and instruments after use.",
             "audio": "assets/audio/g_a_3_f_8.mp3",
             "options": ["True", "False"],
             "answer": "True"
@@ -338,7 +338,7 @@
       "activity_b": [
         {
           "id": "n_3_f_1",
-          "text": "A Food Laboratory Assistant tests food samples for quality and safety.",
+          "text": "A food laboratory assistant tests food samples for quality and safety.",
           "audio": "assets/audio/a_3_f_1.mp3"
         },
         {
@@ -368,7 +368,7 @@
         },
         {
           "id": "n_3_f_8",
-          "text": "He cleans and sterilizes glassware and instruments after use.",
+          "text": "He cleans and sterilises glassware and instruments after use.",
           "audio": "assets/audio/a_3_f_8.mp3"
         },
         {
