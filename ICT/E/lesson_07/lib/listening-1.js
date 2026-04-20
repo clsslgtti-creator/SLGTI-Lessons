@@ -880,7 +880,7 @@ const buildReadAlongSlide = (groups = [], context = {}) => {
             continue;
           }
           element?.classList.add("is-playing");
-          status.textContent = "Listening...";
+          status.textContent = "Read along...";
           try {
             await audioManager.play(audio, { signal });
           } catch (error) {
@@ -897,7 +897,7 @@ const buildReadAlongSlide = (groups = [], context = {}) => {
           const gapMs = computeSegmentGapMs("read", duration);
           status.textContent = "Read along...";
           await waitMs(gapMs, { signal });
-          status.textContent = "Listening...";
+          status.textContent = "...";
         }
 
         if (signal.aborted) {
