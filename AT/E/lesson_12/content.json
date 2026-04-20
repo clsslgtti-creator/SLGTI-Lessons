@@ -383,11 +383,11 @@
     "type": "LISTENING-8",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the recording and match the verbs to the nouns.\nරෙකෝඩින් එක සවන් දී ක්‍රියා පදයන් නාම පදයන්ට ගැලපෙන්න.\nபதிவைக் கேட்டு வினைகள் மற்றும் பெயர்ச்சொற்களை பொருத்துங்கள்.",
+        "text": "Listen to the recording and match the verbs to the nouns.\nපටිගත කිරීමට සවන් දී ක්‍රියා පද නාම පද සමඟ ගලපන්න.\nபதிவைக் கேட்டு, வினைச்சொற்களை பெயர்ச்சொற்களுடன் பொருத்துக.",
         "audio": "assets/audio/a_4_i_i.mp3"
       },
       "activity_b": {
-        "text": "Listen to the audio which will be played twice and match  the correct frequency verb with the collocation/phrase. \nදෙවරක් වාදනය වන ශ්‍රව්‍යයට සවන් දී නිවැරදි සංඛ්‍යාත්මක ක්‍රියා පදය සමඟ එකතු කරන්න.\nஇருமுறை ஒலிப்பதிவைக் கேட்டு சரியான அடிக்கடி வினையை இணைக்கவும்.",
+        "text": "Listen to the audio which will be played twice and match  the correct frequency verb with the collocation/phrase. \nදෙවරක් වාදනය වන පටිගත කිරීමට සවන් දී නිවැරදි සංඛ්‍යාත ක්‍රියා පදය සහයෝගිතා පදය / වාක්‍ය ඛණ්ඩය සමඟ ගළපන්න.\nபதிவை இரண்டு முறை கேட்பீர்கள், அதைக் கேட்டு சரியான நிகழ்வெண் வினைச்சொல்லை அதற்கான சொற்கூட்டுடன்/சொற்றொடருடன் பொருத்துக.",
         "audio": "assets/audio/a_4_i_j.mp3"
       },
       "activity_c": {

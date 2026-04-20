@@ -880,7 +880,7 @@ const createSequencedTextSlide = (
         const item = entries[index];
         item.card?.classList.add("is-active");
         item.line.classList.add("is-playing");
-        status.textContent = "Listening...";
+        status.textContent = isReadMode ? "Read along..." : "Listening...";
         smoothScrollIntoView(item.card ?? item.line);
 
         try {
@@ -924,7 +924,7 @@ const createSequencedTextSlide = (
             status.textContent = "Read along...";
             await waitMs(gapMs, { signal });
             if (!signal.aborted) {
-              status.textContent = "Listening...";
+              status.textContent = "...";
             }
           } else if (index < entries.length - 1) {
             status.textContent = "Next up...";

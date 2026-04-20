@@ -1267,7 +1267,7 @@ const createSequencedTextSlide = (
 
           const element = segment.element ?? item.line;
           element?.classList.add("is-playing");
-          status.textContent = "Listening...";
+          status.textContent = isReadMode ? "Read along..." : "Listening...";
 
           try {
             await audioManager.play(segment.audio, { signal });
@@ -1316,7 +1316,7 @@ const createSequencedTextSlide = (
               status.textContent = "Read along...";
               await waitMs(gapMs, { signal });
               if (!signal.aborted) {
-                status.textContent = "Listening...";
+                status.textContent = "...";
               }
             } else if (!isLastSegment || index < entries.length - 1) {
               status.textContent = "Next up...";

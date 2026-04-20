@@ -760,7 +760,7 @@ const startInstructionCountdown = (controller) => {
 
   const { slide: slideObj, indicator } = controller;
 
-  if (!slideObj.autoPlay?.trigger || slideObj._autoTriggered) {
+  if (!slideObj.autoPlay?.trigger || slideObj._instructionAutoPlayHandled) {
     slideObj._instructionComplete = true;
     const activeController = instructionPlayback;
     instructionPlayback = null;
@@ -794,8 +794,8 @@ const startInstructionCountdown = (controller) => {
     instructionPlayback = null;
     cleanupInstructionController(activeController, { preserveContent: true });
 
-    if (slideObj.autoPlay && !slideObj._autoTriggered) {
-      slideObj._autoTriggered = true;
+    if (slideObj.autoPlay && !slideObj._instructionAutoPlayHandled) {
+      slideObj._instructionAutoPlayHandled = true;
       slideObj.autoPlay.trigger?.();
     }
 
@@ -857,7 +857,7 @@ const handleInstructionForSlide = (slideObj) => {
 
   const setInstructionComplete = () => {
     slideObj._instructionComplete = true;
-    slideObj._autoTriggered = true;
+    slideObj._instructionAutoPlayHandled = true;
     stopInstructionPlayback({ preserveContent: true });
   };
 
