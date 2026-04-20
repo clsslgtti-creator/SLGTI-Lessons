@@ -420,7 +420,7 @@
           },
           {
             "id": "l_4_5",
-            "question": "Why is he sanitizing the oven this afternoon?",
+            "question": "Why is he sanitising the oven this afternoon?",
             "answer": "Because it was used for meat preparation yesterday",
             "options": [
               "Because it was used for meat preparation",
@@ -473,7 +473,7 @@
         },
         {
           "id": "t_1_9",
-          "text": "At the end of the day, he always cleans the worktable, but this afternoon he is sanitizing the oven because it was used for meat preparation yesterday.",
+          "text": "At the end of the day, he always cleans the worktable, but this afternoon he is sanitising the oven because it was used for meat preparation yesterday.",
           "audio": "assets/audio/t_1_9.mp3"
         }
       ],
@@ -520,7 +520,7 @@
         },
         {
           "id": "t_1_9",
-          "text": "At the end of the day, he always cleans the worktable, but this afternoon he is sanitizing the oven because it was used for meat preparation yesterday.",
+          "text": "At the end of the day, he always cleans the worktable, but this afternoon he is sanitising the oven because it was used for meat preparation yesterday.",
           "audio": "assets/audio/t_1_9.mp3"
         }
       ],
@@ -567,7 +567,7 @@
         },
         {
           "id": "t_1_9",
-          "text": "At the end of the day, he always cleans the worktable, but this afternoon he is sanitizing the oven because it was used for meat preparation yesterday.",
+          "text": "At the end of the day, he always cleans the worktable, but this afternoon he is sanitising the oven because it was used for meat preparation yesterday.",
           "audio": "assets/audio/t_1_9.mp3"
         }
       ]
