@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   color-scheme: light;
 
   --color-bg: #f3f6fb;
@@ -632,7 +632,7 @@ body {
 }
 
 .dialogue-table-group--single {
-  justify-items: center;
+  justify-items: stretch;
 }
 
 .dialogue-table-group--multi {
@@ -660,8 +660,8 @@ body {
 }
 
 .dialogue-table-group--single .dialogue-table {
-  width: min(100%, 600px);
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
 .dialogue-table td {
