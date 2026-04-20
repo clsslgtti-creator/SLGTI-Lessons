@@ -11,6 +11,9 @@ const normalizeId = (raw, index, prefix) => {
 
 const normalizeAnswer = (value) => normalizeText(value).toLowerCase();
 
+const normalizeShuffleOptions = (value, fallback = true) =>
+  typeof value === "boolean" ? value : fallback;
+
 const shuffleArray = (items = []) => {
   const clone = items.slice();
   for (let i = clone.length - 1; i > 0; i -= 1) {
@@ -96,7 +99,7 @@ const createDialogueTables = (tablesData = []) => {
   return wrapper;
 };
 
-const normalizeQuestions = (raw = []) =>
+const normalizeQuestions = (raw = [], activityShuffleOptions = true) =>
   (Array.isArray(raw) ? raw : [])
     .map((entry, index) => {
       const prompt = normalizeText(entry?.question);
@@ -115,6 +118,10 @@ const normalizeQuestions = (raw = []) =>
         answer,
         answerNormalized: normalizeAnswer(answer),
         options,
+        shuffleOptions: normalizeShuffleOptions(
+          entry?.shuffleOptions,
+          normalizeShuffleOptions(activityShuffleOptions, true)
+        ),
       };
     })
     .filter(Boolean);
@@ -151,6 +158,9 @@ const createResultText = (correct, total, marksPerQuestion = 1) => {
 };
 
 const getOptionOrder = (question, savedDetail) => {
+  if (!question.shuffleOptions) {
+    return question.options.slice();
+  }
   const savedOrder = Array.isArray(savedDetail?.[question.id])
     ? savedDetail[question.id].map((value) => normalizeText(value))
     : null;
@@ -216,7 +226,10 @@ export const buildMcqTableSlides = (
   context = {},
   assessment = {}
 ) => {
-  const questions = normalizeQuestions(activityData?.content);
+  const questions = normalizeQuestions(
+    activityData?.content,
+    activityData?.shuffleOptions
+  );
   const tables = Array.isArray(activityData?.tables) ? activityData.tables : [];
   const marksPerQuestion = getMarksPerQuestion(context);
   const slide = document.createElement("section");

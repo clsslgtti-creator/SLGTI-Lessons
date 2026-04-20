@@ -262,6 +262,7 @@
   "activity_3": {
     "marks_for_each_q": 1,
     "type": "MCQ-TABLE",
+    "shuffleOptions": false,
     "instruction": {
       "text": "Read the schedule of activities given below and answer the questions. \nපහත දක්වා ඇති ක්‍රියාකාරකම් කාලසටහන කියවා ප්‍රශ්නවලට පිළිතුරු සපයන්න.\nகீழே கொடுக்கப்பட்டுள்ள செயல்பாடுகளின் அட்டவணையைப் படித்து கேள்விகளுக்கு பதிலளிக்கவும்.",
       "audio": "assets/audio/a_2_c_i.mp3"
