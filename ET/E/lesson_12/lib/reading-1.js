@@ -296,7 +296,7 @@ const buildMatchingSlide = (data = {}, context = {}) => {
 
   const clearEvaluationState = () => {
     evaluationShown = false;
-    updateFeedback("Drag each word to the matching definition.", "neutral");
+    updateFeedback(" ", "neutral");
     dropzones.forEach((zone) =>
       zone.classList.remove("is-correct", "is-incorrect")
     );
