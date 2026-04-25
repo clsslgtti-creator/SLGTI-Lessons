@@ -207,7 +207,7 @@
       {
         "id": "d_6",
         "img": "assets/img/a_2_d_6.png",
-        "text_a": "Is the tractor tire wide or narrow?",
+        "text_a": "Is the tractor tyre wide or narrow?",
         "text_b": "It is wide.",
         "audio_a": "assets/audio/a_2_d_6_a.mp3",
         "audio_b": "assets/audio/a_2_d_6_b.mp3"
