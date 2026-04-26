@@ -275,7 +275,7 @@ const buildListeningSlide = (entries = [], context = {}) => {
   slide.appendChild(grid);
 
   const items = entries.map((entry, index) => {
-    const cardTitle = entry.title || `Set ${index + 1}`;
+    const cardTitle = entry.title || `${index + 1}.`;
     const { card, lineElements } = createSentenceCard(entry, {
       title: cardTitle,
       classes: ["dialogue-card--listening"],
@@ -566,7 +566,7 @@ const buildListenRepeatSlide = (
   slide.appendChild(grid);
 
   const items = entries.map((entry, index) => {
-    const cardTitle = entry.title || `Set ${index + 1}`;
+    const cardTitle = entry.title || `${index + 1}.`;
     const { card, lineElements } = createSentenceCard(entry, {
       title: cardTitle,
       classes: ["dialogue-card--listen-repeat"],

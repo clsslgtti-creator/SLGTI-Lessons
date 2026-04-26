@@ -130,7 +130,7 @@ const buildMcqSlide = (questions = [], context = {}) => {
 
     const title = document.createElement("h3");
     title.className = "dialogue-card__title";
-    title.textContent = `Question ${index + 1}`;
+    title.textContent = `${index + 1}.`;
     card.appendChild(title);
 
     const optionGroup = document.createElement("div");
@@ -501,7 +501,7 @@ const buildListenRepeatSlide = (
 
     const title = document.createElement("h3");
     title.className = "dialogue-card__title";
-    title.textContent = `Pair ${index + 1}`;
+    title.textContent = `${index + 1}.`;
     card.appendChild(title);
 
     const textsWrapper = document.createElement("div");
@@ -814,7 +814,7 @@ const buildReadAlongSlide = (groups = [], context = {}) => {
 
     const title = document.createElement("h3");
     title.className = "dialogue-card__title";
-    title.textContent = `Set ${index + 1}`;
+    title.textContent = `${index + 1}.`;
     card.appendChild(title);
 
     const wrapper = document.createElement("div");
@@ -1018,7 +1018,7 @@ const buildTypingSlide = (items = [], context = {}) => {
     header.className = "listening-typing-header";
     const title = document.createElement("h3");
     title.className = "listening-typing-title";
-    title.textContent = `Question ${index + 1}`;
+    title.textContent = `${index + 1}.`;
     header.appendChild(title);
 
     const playBtn = document.createElement("button");
