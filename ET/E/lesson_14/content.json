@@ -400,12 +400,12 @@
           },
           {
             "id": "l_4_3",
-            "question": "Why is he sharing tools with Nalin?",
+            "question": "Why is he sharing tools with his classmate?",
             "answer": "Because his tool bag is being checked for safety",
             "options": [
-              "Because Nalin lost his screwdriver",
+              "Because his classmate lost his screwdriver",
               "Because his tool bag is being checked for safety",
-              "Because Nalin’s tool bag is being checked for safety"
+              "Because his classmate’s tool bag is being checked for safety"
             ]
           },
           {
@@ -448,7 +448,7 @@
         },
         {
           "id": "t_1_4",
-          "text": "He normally uses his own pliers and screwdriver set, but today he is sharing tools with his classmate Nalin because his tool bag is being checked for safety.",
+          "text": "He normally uses his own pliers and screwdriver set, but today he is sharing tools with his classmate because his tool bag is being checked for safety.",
           "audio": "assets/audio/t_1_4.mp3"
         },
         {
@@ -495,7 +495,7 @@
         },
         {
           "id": "t_1_4",
-          "text": "He normally uses his own pliers and screwdriver set, but today he is sharing tools with his classmate Nalin because his tool bag is being checked for safety.",
+          "text": "He normally uses his own pliers and screwdriver set, but today he is sharing tools with his classmate because his tool bag is being checked for safety.",
           "audio": "assets/audio/t_1_4.mp3"
         },
         {
@@ -542,7 +542,7 @@
         },
         {
           "id": "t_1_4",
-          "text": "He normally uses his own pliers and screwdriver set, but today he is sharing tools with his classmate Nalin because his tool bag is being checked for safety.",
+          "text": "He normally uses his own pliers and screwdriver set, but today he is sharing tools with his classmate because his tool bag is being checked for safety.",
           "audio": "assets/audio/t_1_4.mp3"
         },
         {
