@@ -401,11 +401,11 @@
           {
             "id": "l_4_3",
             "question": "Why is he borrowing gloves today?",
-            "answer": "Because his uniform is being washed",
+            "answer": "Because his gloves are being washed",
             "options": [
               "Because he forgot them at home",
-              "Because his uniform is being washed",
-              "Because the instructor’s uniform is being washed"
+              "Because his gloves are being washed",
+              "Because the instructor’s gloves are being washed"
             ]
           },
           {
@@ -448,7 +448,7 @@
         },
         {
           "id": "t_1_4",
-          "text": "He normally uses his own apron and gloves, but today he is borrowing a spare pair because his uniform is being washed.",
+          "text": "He normally uses his own apron and gloves, but today he is borrowing a spare pair because his gloves are being washed.",
           "audio": "assets/audio/t_1_4.mp3"
         },
         {
