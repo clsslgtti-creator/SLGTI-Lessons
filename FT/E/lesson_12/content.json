@@ -279,7 +279,7 @@
           },
           {
             "id": "g_f_3",
-            "sentence": "What does a food laboratory assistant do?\n\nHe uses laboratory equipment like balances, pH meters, and microscopes.",
+            "sentence": "What does a food laboratory assistant do?\n\nHe uses laboratory equipment like balances, pH metres, and microscopes.",
             "audio": "assets/audio/g_a_3_f_3.mp3",
             "options": ["True", "False"],
             "answer": "True"
@@ -348,7 +348,7 @@
         },
         {
           "id": "n_3_f_3",
-          "text": "He uses laboratory equipment like balances, pH meters, and microscopes.",
+          "text": "He uses laboratory equipment like balances, pH metres, and microscopes.",
           "audio": "assets/audio/a_3_f_3.mp3"
         },
         {

@@ -277,7 +277,7 @@
           },
           {
             "id": "g_8",
-            "sentence": "The correct conductor length for this connection is 2 meters. The conductor in this connection is 2.5 meters.\n\n The conductor in this connection is ………………….",
+            "sentence": "The correct conductor length for this connection is 2 metres. The conductor in this connection is 2.5 metres.\n\n The conductor in this connection is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
             "options": ["Too long", "Correct", "Too short"],
             "answer": "Too long",
@@ -391,7 +391,7 @@
         },
         {
           "id": "n_4_6",
-          "text": "The conductor is 2.5 meters. The conductor is 0.5 meters too long.",
+          "text": "The conductor is 2.5 metres. The conductor is 0.5 metres too long.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -411,7 +411,7 @@
         },
         {
           "id": "n_4_10",
-          "text": "The extension cable is about 20 meters. The extension cable is about 5 meters too long.",
+          "text": "The extension cable is about 20 metres. The extension cable is about 5 metres too long.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
@@ -453,7 +453,7 @@
         },
         {
           "id": "r_4_6",
-          "text": "The conductor is 2.5 meters. The conductor is 0.5 meters too long.",
+          "text": "The conductor is 2.5 metres. The conductor is 0.5 metres too long.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -473,7 +473,7 @@
         },
         {
           "id": "r_4_10",
-          "text": "The extension cable is about 20 meters. The extension cable is about 5 meters too long.",
+          "text": "The extension cable is about 20 metres. The extension cable is about 5 metres too long.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {
@@ -515,7 +515,7 @@
         },
         {
           "id": "r_4_6",
-          "text": "The conductor is 2.5 meters. The conductor is 0.5 meters too long.",
+          "text": "The conductor is 2.5 metres. The conductor is 0.5 metres too long.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -535,7 +535,7 @@
         },
         {
           "id": "r_4_10",
-          "text": "The extension cable is about 20 meters. The extension cable is about 5 meters too long.",
+          "text": "The extension cable is about 20 metres. The extension cable is about 5 metres too long.",
           "audio": "assets/audio/a_4_n_10.mp3"
         },
         {

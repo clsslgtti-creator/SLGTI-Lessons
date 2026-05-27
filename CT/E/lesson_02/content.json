@@ -221,7 +221,7 @@
         "content": [
           {
             "id": "g_1",
-            "sentence": "The correct height of bamboo scaffolding is 6 meters. This scaffolding is 7.5 meters.\n\nThis scaffolding is ………………….",
+            "sentence": "The correct height of bamboo scaffolding is 6 metres. This scaffolding is 7.5 metres.\n\nThis scaffolding is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
             "options": ["Too high", "Correct", "Too low"],
             "answer": "Too high",
@@ -245,7 +245,7 @@
           },
           {
             "id": "g_4",
-            "sentence": "The correct depth of the foundation is 1.5 meters. This foundation is 1 meter.\n\n This foundation is ………………….",
+            "sentence": "The correct depth of the foundation is 1.5 metres. This foundation is 1 metre.\n\n This foundation is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
             "options": ["Too shallow", "Correct", "Too deep"],
             "answer": "Too shallow",
@@ -277,7 +277,7 @@
           },
           {
             "id": "g_8",
-            "sentence": "The correct length of steel reinforcement is 10 meters. This steel bar is 11 meters.\n\nThis steel bar is ………………….",
+            "sentence": "The correct length of steel reinforcement is 10 metres. This steel bar is 11 metres.\n\nThis steel bar is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
             "options": ["Too long", "Correct", "Too short"],
             "answer": "Too long",
@@ -330,14 +330,14 @@
           {
             "id": "l_4_1",
             "question": "What is the height of the scaffolding?",
-            "answer": "6 meters",
-            "options": ["5 meters", "6 meters", "7 meters"]
+            "answer": "6 metres",
+            "options": ["5 metres", "6 metres", "7 metres"]
           },
           {
             "id": "l_4_2",
             "question": "What is the correct height range?",
-            "answer": "5.5–6 meters",
-            "options": ["4–5 meters", "5.5–6 meters", "6.5–7 meters"]
+            "answer": "5.5–6 metres",
+            "options": ["4–5 metres", "5.5–6 metres", "6.5–7 metres"]
           },
           {
             "id": "l_4_3",
@@ -391,7 +391,7 @@
         },
         {
           "id": "n_4_6",
-          "text": "The bamboo scaffolding is 4 meters high. The scaffolding is 50 cm too high.",
+          "text": "The bamboo scaffolding is 4 metres high. The scaffolding is 50 cm too high.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -401,7 +401,7 @@
         },
         {
           "id": "n_4_8",
-          "text": "The steel bar is 11 meters. The steel bar is 1 meter too long.",
+          "text": "The steel bar is 11 metres. The steel bar is 1 metre too long.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
@@ -443,7 +443,7 @@
         },
         {
           "id": "r_4_6",
-          "text": "The bamboo scaffolding is 4 meters high. The scaffolding is 50 cm too high.",
+          "text": "The bamboo scaffolding is 4 metres high. The scaffolding is 50 cm too high.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -453,7 +453,7 @@
         },
         {
           "id": "r_4_8",
-          "text": "The steel bar is 11 meters. The steel bar is 1 meter too long.",
+          "text": "The steel bar is 11 metres. The steel bar is 1 metre too long.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
@@ -495,7 +495,7 @@
         },
         {
           "id": "r_4_6",
-          "text": "The bamboo scaffolding is 4 meters high. The scaffolding is 50 cm too high.",
+          "text": "The bamboo scaffolding is 4 metres high. The scaffolding is 50 cm too high.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -505,7 +505,7 @@
         },
         {
           "id": "r_4_8",
-          "text": "The steel bar is 11 meters. The steel bar is 1 meter too long.",
+          "text": "The steel bar is 11 metres. The steel bar is 1 metre too long.",
           "audio": "assets/audio/a_4_n_8.mp3"
         },
         {
