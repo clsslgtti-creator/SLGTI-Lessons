@@ -381,7 +381,7 @@
             "question": "What are the instructors doing?",
             "answer": "They are watching and giving advice.",
             "options": [
-              "They are calibrating meters.",
+              "They are calibrating metres.",
               "They are repairing the alternator.",
               "They are watching and giving advice."
             ]
@@ -389,9 +389,9 @@
           {
             "id": "l_4_5",
             "question": "What are Nimal and Ravi doing in the corner of the workshop?",
-            "answer": "They are calibrating meters.",
+            "answer": "They are calibrating metres.",
             "options": [
-              "They are calibrating meters.",
+              "They are calibrating metres.",
               "They are installing a battery.",
               "They are cleaning the tools."
             ]
@@ -461,7 +461,7 @@
         },
         {
           "id": "n_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating metres for the diagnostic test.",
           "audio": "assets/audio/a_4_n_13.mp3"
         },
         {
@@ -538,7 +538,7 @@
         },
         {
           "id": "r_4_13",
-          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating meters for the diagnostic test.",
+          "text": "In the far corner of the workshop, Nimal and Ravi are calibrating metres for the diagnostic test.",
           "audio": "assets/audio/a_4_n_13.mp3"
         },
         {

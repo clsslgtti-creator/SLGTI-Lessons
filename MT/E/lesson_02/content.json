@@ -221,7 +221,7 @@
         "content": [
           {
             "id": "g_1",
-            "sentence": "The correct torque for tightening this bolt is 50–55 Newton meters. The torque on this bolt is 45 Newton meters.\n\n The torque on this bolt is ………………….",
+            "sentence": "The correct torque for tightening this bolt is 50–55 Newton metres. The torque on this bolt is 45 Newton metres.\n\n The torque on this bolt is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
             "options": ["Too loose", "Correct", "Too tight"],
             "answer": "Too loose",
@@ -330,21 +330,21 @@
           {
             "id": "l_4_1",
             "question": "What is the torque on the main bolt?",
-            "answer": "50 Newton meters",
+            "answer": "50 Newton metres",
             "options": [
-              "45 Newton meters",
-              "50 Newton meters",
-              "55 Newton meters"
+              "45 Newton metres",
+              "50 Newton metres",
+              "55 Newton metres"
             ]
           },
           {
             "id": "l_4_2",
             "question": "What is the correct torque range for the bolt?",
-            "answer": "50–55 Newton meters",
+            "answer": "50–55 Newton metres",
             "options": [
-              "40–45 Newton meters",
-              "50–55 Newton meters",
-              "60–65 Newton meters"
+              "40–45 Newton metres",
+              "50–55 Newton metres",
+              "60–65 Newton metres"
             ]
           },
           {
@@ -399,7 +399,7 @@
         },
         {
           "id": "n_4_6",
-          "text": "The bolt is about 50 Newton meters. The bolt is about 5 Newton meters too loose.",
+          "text": "The bolt is about 50 Newton metres. The bolt is about 5 Newton metres too loose.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -461,7 +461,7 @@
         },
         {
           "id": "r_4_6",
-          "text": "The bolt is about 50 Newton meters. The bolt is about 5 Newton meters too loose.",
+          "text": "The bolt is about 50 Newton metres. The bolt is about 5 Newton metres too loose.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -523,7 +523,7 @@
         },
         {
           "id": "r_4_6",
-          "text": "The bolt is about 50 Newton meters. The bolt is about 5 Newton meters too loose.",
+          "text": "The bolt is about 50 Newton metres. The bolt is about 5 Newton metres too loose.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {

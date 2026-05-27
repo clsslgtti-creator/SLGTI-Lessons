@@ -368,7 +368,7 @@
           },
           {
             "id": "l_4_3",
-            "question": "Where are the students calibrating digital meters?",
+            "question": "Where are the students calibrating digital metres?",
             "answer": "By the window.",
             "options": [
               "By the window.",
@@ -426,7 +426,7 @@
         },
         {
           "id": "n_4_6",
-          "text": "Two students are calibrating digital meters near the window.",
+          "text": "Two students are calibrating digital metres near the window.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
@@ -483,7 +483,7 @@
         },
         {
           "id": "r_4_6",
-          "text": "Two students are calibrating digital meters near the window.",
+          "text": "Two students are calibrating digital metres near the window.",
           "audio": "assets/audio/a_4_n_6.mp3"
         },
         {
