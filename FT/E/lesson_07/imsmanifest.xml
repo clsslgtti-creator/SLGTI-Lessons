@@ -1,36 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest
-  identifier="MANIFEST-AT-E-LESSON-01"
-  version="1.0"
-  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
-  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
-  xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
-    http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
-    http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd"
->
+<?xml version='1.0' encoding='UTF-8'?>
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="MANIFEST-FT-E-LESSON-07" version="1.0" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd     http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd     http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
   <metadata>
     <schema>ADL SCORM</schema>
     <schemaversion>1.2</schemaversion>
     <imsmd:lom>
       <imsmd:general>
         <imsmd:title>
-          <imsmd:langstring xml:lang="en">Lesson 01</imsmd:langstring>
+          <imsmd:langstring xml:lang="en">Lesson 07</imsmd:langstring>
         </imsmd:title>
       </imsmd:general>
     </imsmd:lom>
   </metadata>
-  <organizations default="ORG-LESSON-01">
-    <organization identifier="ORG-LESSON-01" structure="hierarchical">
+  <organizations default="ORG-LESSON-07">
+    <organization identifier="ORG-LESSON-07" structure="hierarchical">
       <title>Lesson 01</title>
-      <item identifier="ITEM-LESSON-01" identifierref="RES-LESSON-01" isvisible="true">
-        <title>Lesson 01</title>
+      <item identifier="ITEM-LESSON-07" identifierref="RES-LESSON-07" isvisible="true">
+        <title>Lesson 07</title>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="RES-LESSON-01" type="webcontent" adlcp:scormtype="sco" href="index.html">
+    <resource identifier="RES-LESSON-07" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="index.html" />
       <file href="assets/audio/a_1_p_1_a.mp3" />
       <file href="assets/audio/a_1_p_1_b.mp3" />
@@ -115,6 +105,6 @@
       <file href="lib/sbs.js" />
       <file href="script.js" />
       <file href="styles.css" />
-    </resource>
+    <file href="assets/audio/g_b_1.mp3" /><file href="assets/audio/g_b_10.mp3" /><file href="assets/audio/g_b_2.mp3" /><file href="assets/audio/g_b_3.mp3" /><file href="assets/audio/g_b_4.mp3" /><file href="assets/audio/g_b_5.mp3" /><file href="assets/audio/g_b_6.mp3" /><file href="assets/audio/g_b_7.mp3" /><file href="assets/audio/g_b_8.mp3" /><file href="assets/audio/g_b_9.mp3" /><file href="assets/videos/video_1.mp4" /></resource>
   </resources>
 </manifest>
