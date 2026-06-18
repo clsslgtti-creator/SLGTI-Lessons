@@ -117,7 +117,7 @@
       {
         "id": "e_2",
         "img": "assets/img/a_2_ex_2.png",
-        "text_a": "Is the instructor kind or strict?",
+        "text_a": "Is the instructor lenient or strict?",
         "text_b": "He is strict.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
         "audio_b": "assets/audio/a_2_ex_2_b.mp3"
