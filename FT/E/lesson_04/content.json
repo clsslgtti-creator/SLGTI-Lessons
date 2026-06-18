@@ -117,7 +117,7 @@
       {
         "id": "e_2",
         "img": "assets/img/a_2_ex_2.png",
-        "text_a": "Is the instructor kind or strict?",
+        "text_a": "Is the instructor lenient or strict?",
         "text_b": "He is strict.",
         "audio_a": "assets/audio/a_2_ex_2_a.mp3",
         "audio_b": "assets/audio/a_2_ex_2_b.mp3"
@@ -274,7 +274,7 @@
             "sentence": "Is the hopper pan conical?",
             "audio": "assets/audio/a_3_b_g_1.mp3",
             "options": ["Yes, it is.", "No, it isn't."],
-            "answer": "Yes, it is.",
+            "answer": "No, it isn't.",
             "image": "assets/img/a_3_b_g_1.png"
           },
           {
@@ -414,7 +414,7 @@
             "id": "g_c_6",
             "words": "hopper pan / conical?",
             "txt_question": "Is the hopper pan conical?",
-            "txt_answer": "Yes, it is. It is conical.",
+            "txt_answer": "No, it isn't. It is semi-spherical.",
             "audio_question": "assets/audio/a_3_c_g_q_6.mp3",
             "audio_answer": "assets/audio/a_3_c_g_a_6.mp3",
             "image": "assets/img/a_3_b_g_1.png"
