@@ -32,12 +32,12 @@
     },
     "content": [
       {
-        "id": "p_1",
-        "word_text": "sw'i'tch",
-        "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "Turn on the sw'i'tch.",
-        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.png"
+        "id": "p_3",
+        "word_text": "circu'i't",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "The circu'i't is open.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.png"
       },
       {
         "id": "p_2",
@@ -48,13 +48,13 @@
         "image": "assets/img/a_1_p_2.png"
       },
       {
-        "id": "p_3",
-        "word_text": "circu'i't",
-        "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "The circu'i't is open.",
-        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.png"
-      },
+        "id": "p_1",
+        "word_text": "sw'i'tch",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "Turn on the sw'i'tch.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
+      },      
       {
         "id": "p_4",
         "word_text": "d'i'mmer",
@@ -122,15 +122,6 @@
     ],
     "dialogues": [
       {
-        "id": "d_1",
-        "img": "assets/img/a_2_d_1.png",
-        "text_a": "Where are the insulated pliers?",
-        "text_b": "They are on the wooden bench.",
-        "audio_a": "assets/audio/a_2_d_1_a.mp3",
-        "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "wooden bench"
-      },
-      {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
         "text_a": "Where is the digital multimeter?",
@@ -138,6 +129,15 @@
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "keyword": "black desk"
+      },
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.png",
+        "text_a": "Where are the insulated pliers?",
+        "text_b": "They are on the wooden bench.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "wooden bench"
       },
       {
         "id": "d_3",
