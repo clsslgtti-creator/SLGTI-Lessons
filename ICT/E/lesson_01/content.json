@@ -32,20 +32,20 @@
     },
     "content": [
       {
-        "id": "p_2",
-        "word_text": "pr'i'nt",
-        "word_audio": "assets/audio/a_1_p_2_a.mp3",
-        "sentence_text": "Pr'i'nt the page now.",
-        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
-        "image": "assets/img/a_1_p_2.png"
-      },
-      {
         "id": "p_1",
         "word_text": "d'i'sk",
         "word_audio": "assets/audio/a_1_p_1_a.mp3",
         "sentence_text": "Save it on the d'i'sk.",
         "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
         "image": "assets/img/a_1_p_1.png"
+      },
+      {
+        "id": "p_2",
+        "word_text": "pr'i'nt",
+        "word_audio": "assets/audio/a_1_p_2_a.mp3",
+        "sentence_text": "Pr'i'nt the page now.",
+        "sentence_audio": "assets/audio/a_1_p_2_b.mp3",
+        "image": "assets/img/a_1_p_2.png"
       },
       {
         "id": "p_3",

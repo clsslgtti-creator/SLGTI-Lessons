@@ -122,15 +122,6 @@
     ],
     "dialogues": [
       {
-        "id": "d_1",
-        "img": "assets/img/a_2_d_1.png",
-        "text_a": "Where are the stainless steel spanners?",
-        "text_b": "They are on the plywood rack.",
-        "audio_a": "assets/audio/a_2_d_1_a.mp3",
-        "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "Plywood Rack"
-      },
-      {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
         "text_a": "Where is the gearbox?",
@@ -138,6 +129,15 @@
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "keyword": "wooden pallet"
+      },
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.png",
+        "text_a": "Where are the stainless steel spanners?",
+        "text_b": "They are on the plywood rack.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "Plywood Rack"
       },
       {
         "id": "d_3",
