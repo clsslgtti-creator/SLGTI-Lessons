@@ -245,7 +245,7 @@
           },
           {
             "id": "g_4",
-            "sentence": "The correct fuse rating for this circuit is 5 amperes. The fuse in this circuit is 8 amperes.\n\nThe fuse in this circuit is ………………….",
+            "sentence": "The correct fuse rating for this circuit is 5 amperes. The fuse in this circuit is 8 amperes.\n\nThe fuse rating is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
             "options": ["too low", "correct", "too high"],
             "answer": "too high",
