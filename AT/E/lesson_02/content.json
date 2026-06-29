@@ -213,8 +213,8 @@
             "id": "e_1",
             "sentence": "The correct tyre pressure is 32 PSI. This tyre has 38 PSI.\n\nThe pressure is ……………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
-            "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high",
+            "options": ["too high", "correct", "too low"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_ex_1.jpeg"
           }
         ],
@@ -223,80 +223,80 @@
             "id": "g_1",
             "sentence": "The normal range of the car engine temperature is 85–95 degrees Celsius. The temperature of this engine is 100 degrees Celsius.\n\nThe temperature of this engine is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_1.jpeg"
           },
           {
             "id": "g_2",
             "sentence": "The correct weight of the car battery is 12 kilograms. The weight of this battery is 12.5 kilograms.\n\nThe weight of this battery is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
-            "options": ["Too heavy", "Correct", "Too light"],
-            "answer": "Too heavy",
+            "options": ["too heavy", "correct", "too light"],
+            "answer": "too heavy",
             "image": "assets/img/a_3_a_g_2.jpeg"
           },
           {
             "id": "g_3",
             "sentence": "The acceptable tyre pressure is 30–32 PSI. The tyre pressure in this wheel is 28 PSI.\n\nThe tyre pressure in this wheel is ………………….",
             "audio": "assets/audio/a_3_g_3.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too low",
             "image": "assets/img/a_3_a_g_3.jpeg"
           },
           {
             "id": "g_4",
-            "sentence": "The standard depth of tyre tread is 3–4 millimetres. The depth of this tyre tread is 2 millimetres.\n\n The depth of this tyre tread is ………………….",
+            "sentence": "The standard depth of tyre tread is 3–4 millimetres. The depth of this tyre tread is 2 millimetres.\n\n This tyre tread is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
-            "options": ["Too shallow", "Correct", "Too deep"],
-            "answer": "Too shallow",
+            "options": ["too shallow", "correct", "too deep"],
+            "answer": "too shallow",
             "image": "assets/img/a_3_a_g_4.jpeg"
           },
           {
             "id": "g_5",
-            "sentence": "The correct length of a fan belt is 90–95 centimeters. The length of this fan belt is 100 centimeters.\n\n The length of this fan belt is ………………….",
+            "sentence": "The correct length of a fan belt is 90–95 centimeters. The length of this fan belt is 100 centimeters.\n\n This fan belt is ………………….",
             "audio": "assets/audio/a_3_g_5.mp3",
-            "options": ["Too short", "Correct", "Too long"],
-            "answer": "Too long",
+            "options": ["too short", "correct", "too long"],
+            "answer": "too long",
             "image": "assets/img/a_3_a_g_5.jpeg"
           },
           {
             "id": "g_6",
-            "sentence": "The standard width of a brake pad is 8–9 centimeters. The width of this brake pad is 7 centimeters.\n\n The width of this brake pad is ………………….",
+            "sentence": "The standard width of a brake pad is 8–9 centimeters. The width of this brake pad is 7 centimeters.\n\n This brake pad is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
-            "options": ["Too narrow", "Correct", "Too wide"],
-            "answer": "Too narrow",
+            "options": ["too narrow", "correct", "too wide"],
+            "answer": "too narrow",
             "image": "assets/img/a_3_a_g_6.png"
           },
           {
             "id": "g_7",
             "sentence": "The correct oil content of the gearbox is 1.5–1.8 liters. The oil content of this gearbox is 2 liters.\n\n The oil content of this gearbox is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_7.png"
           },
           {
             "id": "g_8",
             "sentence": "The safe tyre pressure for a van is 34–36 PSI. The tyre pressure of this van is 36 PSI. \n\n The tyre pressure of this van is  ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Correct",
+            "options": ["too low", "correct", "too high"],
+            "answer": "correct",
             "image": "assets/img/a_3_a_g_8.png"
           },
           {
             "id": "g_9",
             "sentence": "The recommended alignment angle is 0–2 degrees. The alignment angle of this wheel is 3 degrees.\n\n The alignment angle of this wheel is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_9.png"
           },
           {
             "id": "g_10",
             "sentence": "The correct charging voltage of a car alternator is 13–14.5 volts. The charging voltage of this car alternator is 12 volts.\n\n The charging voltage of this car alternator is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too low",
             "image": "assets/img/a_3_a_g_10.jpeg"
           }
         ]
