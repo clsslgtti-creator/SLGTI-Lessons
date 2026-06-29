@@ -257,7 +257,7 @@
             "audio": "assets/audio/a_3_g_5.mp3",
             "options": ["too low", "correct", "too high"],
             "answer": "too high",
-            "image": "assets/img/a_3_a_g_5.jpeg"
+            "image": "assets/img/a_3_a_g_5.png"
           },
           {
             "id": "g_6",
@@ -439,7 +439,7 @@
         },
         {
           "id": "n_4_14",
-          "text": "The router capacity is about 200 users. The router capacity is about 50 users, which is too low.",
+          "text": "The required router capacity is about 200 users. This router has a capacity of about 50 users, which is too low.  ",
           "audio": "assets/audio/a_4_n_14.mp3"
         }
       ],
@@ -511,7 +511,7 @@
         },
         {
           "id": "n_4_14",
-          "text": "The router capacity is about 200 users. The router capacity is about 50 users, which is too low.",
+          "text": "The required router capacity is about 200 users. This router has a capacity of about 50 users, which is too low.  ",
           "audio": "assets/audio/a_4_n_14.mp3"
         }
       ],
@@ -583,7 +583,7 @@
         },
         {
           "id": "n_4_14",
-          "text": "The router capacity is about 200 users. The router capacity is about 50 users, which is too low.",
+          "text": "The required router capacity is about 200 users. This router has a capacity of about 50 users, which is too low.  ",
           "audio": "assets/audio/a_4_n_14.mp3"
         }
       ]
