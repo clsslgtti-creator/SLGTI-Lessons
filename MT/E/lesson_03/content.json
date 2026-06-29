@@ -130,15 +130,6 @@
     ],
     "dialogues": [
       {
-        "id": "d_1",
-        "img": "assets/img/a_2_d_1.png",
-        "text_a": "What is the mechanic doing?",
-        "text_b": "He is adjusting a loose screw.",
-        "audio_a": "assets/audio/a_2_d_1_a.mp3",
-        "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "loose screw"
-      },
-      {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
         "text_a": "What are you doing?",
@@ -146,6 +137,15 @@
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "keyword": "bolt"
+      },
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.png",
+        "text_a": "What is the mechanic doing?",
+        "text_b": "He is adjusting a loose screw.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "loose screw"
       },
       {
         "id": "d_3",
@@ -403,9 +403,14 @@
         ]
       },
       "activity_b": [
+         {
+          "id": "n_4_0",
+          "text": "It is ten to nine.",
+          "audio": "assets/audio/a_4_n_0.mp3"
+        },
         {
           "id": "n_4_1",
-          "text": "It is ten to nine. In the mechanical workshop, the trainees are practicing their skills.",
+          "text": "In the mechanical workshop, the trainees are practicing their skills.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {

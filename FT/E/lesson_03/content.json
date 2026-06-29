@@ -130,15 +130,6 @@
     ],
     "dialogues": [
       {
-        "id": "d_1",
-        "img": "assets/img/a_2_d_1.png",
-        "text_a": "What is your sister doing?",
-        "text_b": "She is cutting the ripe mangoes for juice.",
-        "audio_a": "assets/audio/a_2_d_1_a.mp3",
-        "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "ripe mangoes"
-      },
-      {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
         "text_a": "What are you doing?",
@@ -146,6 +137,15 @@
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "keyword": "bread dough"
+      },
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.png",
+        "text_a": "What is your sister doing?",
+        "text_b": "She is cutting the ripe mangoes for juice.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "ripe mangoes"
       },
       {
         "id": "d_3",
@@ -351,6 +351,16 @@
         "audio": "assets/audio/a_4_l_1.mp3",
         "Questions": [
           {
+            "id": "l_4_1",
+            "question": "What is Kamal doing?",
+            "answer": "Mixing flour and water.",
+            "options": [
+              "Mixing flour and water.",
+              "Checking the dough.",
+              "Sealing bottles."
+            ]
+          },
+          {
             "id": "l_4_5",
             "question": "What have they been advised about?",
             "answer": "Safety and hygiene.",
@@ -380,16 +390,6 @@
               "The menu and recipes.",
               "The sanitizer.",
               "The vegetables."
-            ]
-          },
-          {
-            "id": "l_4_1",
-            "question": "What is Kamal doing?",
-            "answer": "Mixing flour and water.",
-            "options": [
-              "Mixing flour and water.",
-              "Checking the dough.",
-              "Sealing bottles."
             ]
           }
         ]

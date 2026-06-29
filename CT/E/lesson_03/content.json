@@ -351,16 +351,6 @@
         "audio": "assets/audio/a_4_l_1.mp3",
         "Questions": [
           {
-            "id": "l_4_1",
-            "question": "What are two masons doing?",
-            "answer": "They are laying bricks.",
-            "options": [
-              "They are laying bricks.",
-              "They are mixing the cement.",
-              "They are carrying slabs."
-            ]
-          },
-          {
             "id": "l_4_2",
             "question": "Why are they so busy?",
             "answer": "The deadline to finish the project is nearing.",
@@ -368,6 +358,16 @@
               "The safety inspectors are at the site.",
               "The site engineer is writing notes.",
               "The deadline to finish the project is nearing."
+            ]
+          },
+          {
+            "id": "l_4_1",
+            "question": "What are two masons doing?",
+            "answer": "They are laying bricks.",
+            "options": [
+              "They are laying bricks.",
+              "They are mixing the cement.",
+              "They are carrying slabs."
             ]
           },
           {

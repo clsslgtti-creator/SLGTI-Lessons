@@ -130,15 +130,6 @@
     ],
     "dialogues": [
       {
-        "id": "d_1",
-        "img": "assets/img/a_2_d_1.png",
-        "text_a": "What is the technician doing?",
-        "text_b": " He is resetting old routers.",
-        "audio_a": "assets/audio/a_2_d_1_a.mp3",
-        "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "old routers"
-      },
-      {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
         "text_a": "What are you doing?",
@@ -146,6 +137,15 @@
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "keyword": "documents"
+      },
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.png",
+        "text_a": "What is the technician doing?",
+        "text_b": " He is resetting old routers.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "old routers"
       },
       {
         "id": "d_3",
@@ -371,16 +371,6 @@
             ]
           },
           {
-            "id": "l_4_3",
-            "question": "What are Anjali and Mohamad  doing in the back of the lab?",
-            "answer": "Recording system errors for troubleshooting.",
-            "options": [
-              "Recording system errors for troubleshooting.",
-              "Repairing faulty cables.",
-              "Calibrating the network switch."
-            ]
-          },
-          {
             "id": "l_4_4",
             "question": "What is Shenali working on?",
             "answer": "Setting up a firewall on a virtual machine.",
@@ -388,6 +378,16 @@
               "Setting up a firewall on a virtual machine.",
               "Configuring a router for internet access.",
               "Updating the picture generating software on a laptop."
+            ]
+          },
+          {
+            "id": "l_4_3",
+            "question": "What are Anjali and Mohamad  doing in the back of the lab?",
+            "answer": "Recording system errors for troubleshooting.",
+            "options": [
+              "Recording system errors for troubleshooting.",
+              "Repairing faulty cables.",
+              "Calibrating the network switch."
             ]
           },
           {

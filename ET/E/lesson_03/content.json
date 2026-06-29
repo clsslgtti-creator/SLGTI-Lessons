@@ -130,15 +130,6 @@
     ],
     "dialogues": [
       {
-        "id": "d_1",
-        "img": "assets/img/a_2_d_1.png",
-        "text_a": "What are you and the inspector doing?",
-        "text_b": "We are inspecting the transformer coils.",
-        "audio_a": "assets/audio/a_2_d_1_a.mp3",
-        "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "transformer coils"
-      },
-      {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
         "text_a": "What are you doing?",
@@ -146,6 +137,15 @@
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "keyword": "multimeter"
+      },
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.png",
+        "text_a": "What are you and the inspector doing?",
+        "text_b": "We are inspecting the transformer coils.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "transformer coils"
       },
       {
         "id": "d_3",
@@ -361,6 +361,16 @@
             ]
           },
           {
+            "id": "l_4_1",
+            "question": "What is Sunil doing?",
+            "answer": "He is rewinding a motor.",
+            "options": [
+              "He is rewinding a motor.",
+              "He is repairing an alternator.",
+              "He is installing a transformer."
+            ]
+          },
+          {
             "id": "l_4_2",
             "question": "Who is repairing a faulty alternator?",
             "answer": "Priya.",
@@ -384,16 +394,6 @@
               "Rewinding a motor.",
               "Installing a transformer.",
               "Replacing wires."
-            ]
-          },
-          {
-            "id": "l_4_1",
-            "question": "What is Sunil doing?",
-            "answer": "He is rewinding a motor.",
-            "options": [
-              "He is rewinding a motor.",
-              "He is repairing an alternator.",
-              "He is installing a transformer."
             ]
           }
         ]
