@@ -348,8 +348,8 @@
           {
             "id": "l_4_4",
             "question": "What is the correct reading of the insulation resistance?",
-            "answer": "1 megaohms",
-            "options": ["0.5 megaohms", "1 megaohms", "2 megaohms"]
+            "answer": "1 megaohm",
+            "options": ["0.5 megaohms", "1 megaohm", "2 megaohms"]
           },
           {
             "id": "l_4_5",

@@ -233,7 +233,7 @@
             "audio": "assets/audio/a_3_g_2.mp3",
             "options": ["too heavy", "correct", "too light"],
             "answer": "too heavy",
-            "image": "assets/img/a_3_a_g_1.png"
+            "image": "assets/img/a_3_a_g_2.png"
           },
           {
             "id": "g_3",
@@ -241,7 +241,7 @@
             "audio": "assets/audio/a_3_g_3.mp3",
             "options": ["too low", "correct", "too high"],
             "answer": "too high",
-            "image": "assets/img/a_3_a_g_1.png"
+            "image": "assets/img/a_3_a_g_3.png"
           },
           {
             "id": "g_4",
@@ -249,7 +249,7 @@
             "audio": "assets/audio/a_3_g_4.mp3",
             "options": ["too low", "correct", "too high"],
             "answer": "too high",
-            "image": "assets/img/a_3_a_g_1.png"
+            "image": "assets/img/a_3_a_g_4.png"
           },
           {
             "id": "g_5",
@@ -257,7 +257,7 @@
             "audio": "assets/audio/a_3_g_5.mp3",
             "options": ["too long", "correct", "too short"],
             "answer": "too long",
-            "image": "assets/img/a_3_a_g_1.png"
+            "image": "assets/img/a_3_a_g_5.png"
           },
           {
             "id": "g_6",
@@ -265,7 +265,7 @@
             "audio": "assets/audio/a_3_g_6.mp3",
             "options": ["too cold", "correct", "too warm"],
             "answer": "too warm",
-            "image": "assets/img/a_3_a_g_1.png"
+            "image": "assets/img/a_3_a_g_6.png"
           },
           {
             "id": "g_7",
@@ -273,7 +273,7 @@
             "audio": "assets/audio/a_3_g_7.mp3",
             "options": ["too deep", "correct", "too shallow"],
             "answer": "too deep",
-            "image": "assets/img/a_3_a_g_1.png"
+            "image": "assets/img/a_3_a_g_7.png"
           },
           {
             "id": "g_8",
@@ -281,7 +281,7 @@
             "audio": "assets/audio/a_3_g_8.mp3",
             "options": ["too heavy", "correct", "too light"],
             "answer": "too heavy",
-            "image": "assets/img/a_3_a_g_1.png"
+            "image": "assets/img/a_3_a_g_8.png"
           },
           {
             "id": "g_9",
@@ -289,7 +289,7 @@
             "audio": "assets/audio/a_3_g_9.mp3",
             "options": ["too low", "correct", "too high"],
             "answer": "too high",
-            "image": "assets/img/a_3_a_g_1.png"
+            "image": "assets/img/a_3_a_g_9.png"
           },
           {
             "id": "g_10",
@@ -297,7 +297,7 @@
             "audio": "assets/audio/a_3_g_10.mp3",
             "options": ["too high", "correct", "too low"],
             "answer": "too high",
-            "image": "assets/img/a_3_a_g_1.png"
+            "image": "assets/img/a_3_a_g_10.png"
           }
         ]
       }
