@@ -189,20 +189,20 @@
     "type": "ACTIVITY-2",
     "instructions": {
       "activity_a": {
+        "text": "Match the times with the clocks.\nවේලාවන් ඔරලෝසු සමඟ ගළපන්න.\nநேரங்களை மணிக்கடிகாரங்களுடன் பொருத்துங்கள்.",
+        "audio": "assets/audio/a_3_i_c.mp3"
+      },
+      "activity_b": {
         "text": "Listen.\nகேளுங்கள்.\nසවන් දෙන්න.",
         "audio": "assets/audio/a_2_i_b.mp3"
       },
-      "activity_b": {
+      "activity_c": {
         "text": "Listen and repeat.\nසවන් දී වාක්‍ය නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
         "audio": "assets/audio/a_2_i_c.mp3"
-      },
-      "activity_c": {
-        "text": "Match the times with the clocks.\nවේලාවන් ඔරලෝසු සමඟ ගළපන්න.\nநேரங்களை மணிக்கடிகாரங்களுடன் பொருத்துங்கள்.",
-        "audio": "assets/audio/a_3_i_c.mp3"
       }
     },
     "content": {
-      "activity_a": [
+      "activity_c": [
         {
           "id": "a_3_a_1",
           "text_a": "It is ten past four. ( 4:10)",
@@ -296,7 +296,7 @@
           "audio_c": "assets/audio/a_3_t_5_c.mp3"
         }
       ],
-      "activity_c": [
+      "activity_a": [
         {
           "id": "c_1",
           "img": "assets/img/a_3_c_1.png",

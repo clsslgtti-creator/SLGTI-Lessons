@@ -1,11 +1,71 @@
 import { audioManager, computeSegmentGapMs } from "./audio-manager.js";
 import { showCompletionModal } from "./completion-modal.js";
+import {
+  createMatchingGameScene,
+  normalizeMatchingPairs,
+  DEFAULT_FEEDBACK_ASSETS as MATCHING_FEEDBACK_ASSETS,
+} from "./games/game-4.js";
 
 const smoothScrollIntoView = (element) => {
   if (!element) {
     return;
   }
   element.scrollIntoView({ behavior: "smooth", block: "center" });
+};
+
+const getPhaser = () => window?.Phaser ?? globalThis?.Phaser ?? null;
+
+let phaserLoadPromise = null;
+
+const ensurePhaser = async () => {
+  const existing = getPhaser();
+  if (existing) {
+    return existing;
+  }
+
+  if (!phaserLoadPromise) {
+    phaserLoadPromise = new Promise((resolve, reject) => {
+      const scriptUrl = new URL("./phaser.min.js", import.meta.url).href;
+      const currentScript = Array.from(document.scripts).find((script) =>
+        script.src?.includes("/phaser.min.js")
+      );
+
+      if (currentScript) {
+        const handleLoad = () => resolve(getPhaser());
+        const handleError = () =>
+          reject(new Error("Unable to load Phaser library."));
+        currentScript.addEventListener("load", handleLoad, { once: true });
+        currentScript.addEventListener("error", handleError, { once: true });
+        window.setTimeout(() => {
+          const PhaserLib = getPhaser();
+          if (PhaserLib) {
+            resolve(PhaserLib);
+          }
+        }, 0);
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = scriptUrl;
+      script.async = true;
+      script.onload = () => {
+        const PhaserLib = getPhaser();
+        if (PhaserLib) {
+          resolve(PhaserLib);
+          return;
+        }
+        reject(new Error("Phaser library loaded but global is unavailable."));
+      };
+      script.onerror = () =>
+        reject(new Error("Unable to load Phaser library."));
+      document.head.appendChild(script);
+    }).catch((error) => {
+      phaserLoadPromise = null;
+      throw error;
+    });
+  }
+
+  return phaserLoadPromise;
 };
 
 const waitMs = (duration, { signal } = {}) =>
@@ -827,45 +887,20 @@ const buildListenRepeatSlide = (
   };
 };
 
-const normalizeMatchingItems = (raw = []) => {
-  if (!Array.isArray(raw)) {
-    return [];
-  }
-
-  const seen = new Set();
-  return raw
-    .map((entry, index) => {
-      const label =
-        trimString(entry?.keyword) ||
-        trimString(entry?.label) ||
-        trimString(entry?.text);
-      const normalizedKeyword = normalizeKeyword(label);
-      const image = trimString(entry?.img ?? entry?.image ?? "");
-      if (!label || !normalizedKeyword || !image) {
-        return null;
-      }
-      if (seen.has(normalizedKeyword)) {
-        return null;
-      }
-      seen.add(normalizedKeyword);
-      return {
-        id: trimString(entry?.id) || `match_${index + 1}`,
-        label,
-        normalizedKeyword,
-        image,
-      };
-    })
-    .filter(Boolean);
-};
-
-const shuffle = (array) => {
-  const copy = [...array];
-  for (let i = copy.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
-};
+const normalizeMatchingItems = (raw = []) =>
+  normalizeMatchingPairs(
+    Array.isArray(raw)
+      ? raw.map((entry, index) => ({
+          id: trimString(entry?.id) || `match_${index + 1}`,
+          keyword:
+            trimString(entry?.keyword) ||
+            trimString(entry?.label) ||
+            trimString(entry?.text) ||
+            `Match ${index + 1}`,
+          image: trimString(entry?.img ?? entry?.image ?? ""),
+        }))
+      : []
+  );
 
 const buildMatchingSlide = (items = [], context = {}) => {
   const {
@@ -878,209 +913,118 @@ const buildMatchingSlide = (items = [], context = {}) => {
   } = context;
 
   const slide = document.createElement("section");
-  slide.className = "slide slide--pre-listening";
+  slide.className = "slide game-slide";
   slide.innerHTML = `
     <h2>${activityLabel}${subActivitySuffix}</h2>
-    <p class="slide__instruction">Match each description with the correct picture.</p>
+    <p class="slide__instruction">Match the times with the clocks.</p>
   `;
 
   maybeInsertFocus(slide, activityFocus, includeFocus);
 
-  const layout = document.createElement("div");
-  layout.className = "pre-listening-layout";
-  slide.appendChild(layout);
+  const wrapper = document.createElement("div");
+  wrapper.className = "game1-shell game4-shell";
 
-  const gallery = document.createElement("div");
-  gallery.className = "pre-listening-gallery";
-  layout.appendChild(gallery);
+  const stage = document.createElement("div");
+  stage.className = "game1-stage game4-stage";
+  const stageId = `game4-stage-${Math.random().toString(36).slice(2, 8)}`;
+  stage.id = stageId;
 
-  const dropzonesWrapper = document.createElement("div");
-  dropzonesWrapper.className = "pre-listening-dropzones";
-  layout.appendChild(dropzonesWrapper);
+  const status = document.createElement("p");
+  status.className = "game1-status game4-status is-visible";
+  status.textContent = "Loading game...";
 
-  const cards = [];
-  const dropzones = [];
+  wrapper.append(stage, status);
+  slide.appendChild(wrapper);
 
-  const shuffledCards = shuffle(items);
-
-  shuffledCards.forEach((item) => {
-    const card = document.createElement("div");
-    card.className = "pre-listening-card";
-    card.dataset.keyword = item.normalizedKeyword;
-    card.dataset.label = item.label;
-
-    const imgWrapper = document.createElement("div");
-    imgWrapper.className = "pre-listening-card__media";
-    const img = document.createElement("img");
-    img.src = item.image;
-    img.alt = item.label ? `Match: ${item.label}` : "Matching item";
-    img.loading = "lazy";
-    imgWrapper.appendChild(img);
-    card.appendChild(imgWrapper);
-
-    const caption = document.createElement("span");
-    caption.className = "pre-listening-card__caption";
-    caption.textContent = "";
-    card.appendChild(caption);
-
-    gallery.appendChild(card);
-    cards.push(card);
-  });
-
-  const shuffledDropzones = shuffle(items);
-
-  shuffledDropzones.forEach((item) => {
-    const dropzone = document.createElement("div");
-    dropzone.className = "pre-listening-dropzone";
-    dropzone.dataset.keyword = item.normalizedKeyword;
-
-    const label = document.createElement("span");
-    label.className = "pre-listening-dropzone__label";
-    label.textContent = item.label;
-    dropzone.appendChild(label);
-
-    const body = document.createElement("div");
-    body.className = "pre-listening-dropzone__body";
-    dropzone.appendChild(body);
-
-    dropzonesWrapper.appendChild(dropzone);
-    dropzones.push(dropzone);
-  });
-
-  if (!cards.length || !dropzones.length) {
-    const empty = document.createElement("p");
-    empty.className = "empty-state";
-    empty.textContent = "Matching activity will appear once content is available.";
-    layout.appendChild(empty);
+  if (!items.length) {
+    status.textContent = "The matching content is not ready yet.";
+    return {
+      id: activityNumber
+        ? `activity-${activityNumber}${subActivityLetter ? `-${subActivityLetter}` : ""}-activity2-match`
+        : "activity-2-match",
+      element: slide,
+      onEnter: () => {},
+      onLeave: () => {},
+    };
   }
 
-  const resetMatching = () => {
-    const $ = window.jQuery;
-    if (!$) {
+  let gameInstance = null;
+
+  const startGame = async () => {
+    let PhaserLib = null;
+    try {
+      PhaserLib = await ensurePhaser();
+    } catch (error) {
+      console.error(error);
+      status.textContent =
+        "Phaser library is missing. Please reload the lesson.";
+      status.classList.add("is-error");
       return;
     }
 
-    cards.forEach((card) => {
-      const $card = $(card);
-      $card.removeClass("is-correct is-incorrect is-active");
-      $card.css({ top: "", left: "", position: "relative" });
-      $card.find(".pre-listening-card__caption")
-        .text("")
-        .removeClass("is-visible");
-      gallery.appendChild(card);
-      if ($card.data("uiDraggable")) {
-        $card.draggable("enable");
-        $card.draggable("option", "revert", "invalid");
-      }
+    if (gameInstance) {
+      gameInstance.destroy(true);
+      gameInstance = null;
+      stage.innerHTML = "";
+    }
+
+    status.textContent = "Loading game...";
+    status.classList.remove("is-error");
+    status.classList.remove("is-transparent");
+    status.classList.add("is-visible");
+
+    const GameScene = createMatchingGameScene({
+      pairs: items,
+      feedbackAssets: { ...MATCHING_FEEDBACK_ASSETS },
+      statusElement: status,
+      onRoundUpdate: (info = {}) => {
+        const completedMatches = info.completedMatches ?? 0;
+        const total = info.total ?? items.length;
+        if (info.completed) {
+          status.textContent = `Matches complete - ${
+            info.correctMatches ?? completedMatches
+          }/${info.total ?? total} correct`;
+          status.classList.remove("is-transparent");
+        } else {
+          status.textContent = `Match progress: ${completedMatches}/${total}`;
+          status.classList.add("is-transparent");
+        }
+        status.classList.add("is-visible");
+      },
     });
 
-    dropzones.forEach((zone) => {
-      const $zone = $(zone);
-      $zone.removeClass("is-correct is-incorrect is-hover");
-      $zone.find(".pre-listening-dropzone__label").removeClass("is-hidden");
-      $zone.find(".pre-listening-dropzone__body").empty();
-      $zone.data("complete", false);
-      if ($zone.data("uiDroppable")) {
-        $zone.droppable("enable");
-      }
+    gameInstance = new PhaserLib.Game({
+      type: PhaserLib.AUTO,
+      parent: stageId,
+      backgroundColor: "#f3f6fb",
+      scale: {
+        mode: PhaserLib.Scale.FIT,
+        autoCenter: PhaserLib.Scale.CENTER_BOTH,
+        width: 1280,
+        height: 720,
+        fullscreenTarget: stage,
+        expandParent: true,
+      },
+      scene: GameScene,
     });
+    if (gameInstance?.scale) {
+      gameInstance.scale.fullscreenTarget = stage;
+    }
   };
 
-  let initialized = false;
-
-  const setupInteractions = () => {
-    const $ = window.jQuery;
-    if (!$ || !$.fn?.draggable || !$.fn?.droppable) {
-      console.warn(
-        "jQuery UI is required for the Activity 2 matching task."
-      );
-      return;
+  const destroyGame = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
     }
-
-    $(cards).draggable({
-      revert: "invalid",
-      containment: slide,
-      zIndex: 100,
-      start() {
-        $(this).removeClass("is-incorrect");
-        $(this).addClass("is-active");
-      },
-      stop() {
-        $(this).removeClass("is-active");
-      },
-    });
-
-    $(dropzones).droppable({
-      accept: ".pre-listening-card",
-      tolerance: "intersect",
-      over() {
-        $(this).addClass("is-hover");
-      },
-      out() {
-        $(this).removeClass("is-hover");
-      },
-      drop(event, ui) {
-        const $zone = $(this);
-        const $card = ui.draggable;
-        const expected = $zone.data("keyword");
-        const actual = $card.data("keyword");
-
-        $zone.removeClass("is-hover");
-
-        if ($zone.data("complete")) {
-          $card.draggable("option", "revert", true);
-          window.setTimeout(
-            () => $card.draggable("option", "revert", "invalid"),
-            0
-          );
-          return;
-        }
-
-        if (expected === actual) {
-          $zone.data("complete", true);
-          $zone.addClass("is-correct");
-          $zone.find(".pre-listening-dropzone__label").addClass("is-hidden");
-
-          $card.addClass("is-correct");
-          $card.draggable("disable");
-          $card.removeClass("is-active");
-          $card.css({ top: "", left: "", position: "relative" });
-          $card.appendTo($zone.find(".pre-listening-dropzone__body"));
-
-          const baseLabel = $card.data("label");
-          if (baseLabel) {
-            $card
-              .find(".pre-listening-card__caption")
-              .text(baseLabel)
-              .addClass("is-visible");
-          }
-
-          $zone.droppable("disable");
-
-          const allComplete = dropzones.every(
-            (zoneEl) => $(zoneEl).data("complete") === true
-          );
-
-          if (allComplete) {
-            showCompletionModal({
-              title: "Great Work!",
-              message: "You matched all of the items correctly.",
-            });
-          }
-        } else {
-          $card.addClass("is-incorrect");
-          $zone.addClass("is-incorrect");
-          $card.draggable("option", "revert", true);
-          window.setTimeout(() => {
-            $card.draggable("option", "revert", "invalid");
-            $card.removeClass("is-incorrect");
-            $zone.removeClass("is-incorrect");
-          }, 600);
-        }
-      },
-    });
-
-    initialized = true;
+    if (gameInstance) {
+      gameInstance.destroy(true);
+      gameInstance = null;
+      stage.innerHTML = "";
+    }
+    status.textContent = "Game paused. Reopen this slide to play again.";
+    status.classList.remove("is-transparent");
+    status.classList.remove("is-error");
+    status.classList.add("is-visible");
   };
 
   const suffixSegment = subActivityLetter ? `-${subActivityLetter}` : "";
@@ -1090,17 +1034,8 @@ const buildMatchingSlide = (items = [], context = {}) => {
       ? `activity-${activityNumber}${suffixSegment}-activity2-match`
       : "activity-2-match",
     element: slide,
-    onEnter: () => {
-      if (!cards.length || !dropzones.length) {
-        return;
-      }
-      if (!initialized) {
-        setupInteractions();
-      }
-    },
-    onLeave: () => {
-      resetMatching();
-    },
+    onEnter: startGame,
+    onLeave: destroyGame,
   };
 };
 
@@ -1130,13 +1065,13 @@ export const buildActivityTwoSlides = (activityData = {}, context = {}) => {
     : "Activity";
   const activityFocus = trimString(rawFocus);
 
-  const sentenceActivityA = normalizeSentenceEntries(
+  const matchingItems = normalizeMatchingItems(
     activityData?.content?.activity_a
   );
-  const sentenceActivityB = normalizeSentenceEntries(
+  const sentenceActivityA = normalizeSentenceEntries(
     activityData?.content?.activity_b
   );
-  const matchingItems = normalizeMatchingItems(
+  const sentenceActivityB = normalizeSentenceEntries(
     activityData?.content?.activity_c
   );
 
@@ -1148,19 +1083,19 @@ export const buildActivityTwoSlides = (activityData = {}, context = {}) => {
 
   const repeatPauseMs = getRepeatPauseMs(activityData);
 
-  const listeningContext = createSubActivityContext(
+  const matchingContext = createSubActivityContext(
     baseContext,
     "a",
     Boolean(activityFocus)
   );
-  const listenRepeatContext = createSubActivityContext(baseContext, "b");
-  const matchingContext = createSubActivityContext(baseContext, "c");
+  const listeningContext = createSubActivityContext(baseContext, "b");
+  const listenRepeatContext = createSubActivityContext(baseContext, "c");
 
   return [
+    buildMatchingSlide(matchingItems, matchingContext),
     buildListeningSlide(sentenceActivityA, listeningContext),
     buildListenRepeatSlide(sentenceActivityB, listenRepeatContext, {
       repeatPauseMs,
     }),
-    buildMatchingSlide(matchingItems, matchingContext),
   ];
 };
