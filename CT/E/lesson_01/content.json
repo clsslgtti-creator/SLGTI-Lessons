@@ -32,14 +32,6 @@
     },
     "content": [
       {
-        "id": "p_1",
-        "word_text": "br'i'ck",
-        "word_audio": "assets/audio/a_1_p_1_a.mp3",
-        "sentence_text": "Lay the br'i'cks straight.",
-        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
-        "image": "assets/img/a_1_p_1.png"
-      },
-      {
         "id": "p_2",
         "word_text": "m'i'xing",
         "word_audio": "assets/audio/a_1_p_2_a.mp3",
@@ -48,12 +40,12 @@
         "image": "assets/img/a_1_p_2.png"
       },
       {
-        "id": "p_3",
-        "word_text": "dr'i'll",
-        "word_audio": "assets/audio/a_1_p_3_a.mp3",
-        "sentence_text": "Use the dr'i'll on the wall.",
-        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
-        "image": "assets/img/a_1_p_3.png"
+        "id": "p_1",
+        "word_text": "br'i'ck",
+        "word_audio": "assets/audio/a_1_p_1_a.mp3",
+        "sentence_text": "Lay the br'i'cks straight.",
+        "sentence_audio": "assets/audio/a_1_p_1_b.mp3",
+        "image": "assets/img/a_1_p_1.png"
       },
       {
         "id": "p_4",
@@ -62,6 +54,14 @@
         "sentence_text": "The pipe needs a new f'i'tting.",
         "sentence_audio": "assets/audio/a_1_p_4_b.mp3",
         "image": "assets/img/a_1_p_4.png"
+      },
+      {
+        "id": "p_3",
+        "word_text": "dr'i'll",
+        "word_audio": "assets/audio/a_1_p_3_a.mp3",
+        "sentence_text": "Use the dr'i'll on the wall.",
+        "sentence_audio": "assets/audio/a_1_p_3_b.mp3",
+        "image": "assets/img/a_1_p_3.png"
       }
     ]
   },
@@ -294,7 +294,7 @@
         {
           "id": "l_4_2",
           "question_audio": "assets/audio/a_4_l_2.mp3",
-          "answer": "230",
+          "answer": "213",
           "options": ["230", "213"]
         },
         {
@@ -324,8 +324,8 @@
         {
           "id": "l_4_7",
           "question_audio": "assets/audio/a_4_l_7.mp3",
-          "answer": "2013",
-          "options": ["2030", "2013"]
+          "answer": "2040",
+          "options": ["2040", "2014"]
         },
         {
           "id": "l_4_8",
@@ -538,7 +538,7 @@
       "instruction_b": {
         "text": "These steps will help you to learn English from this video.\nමෙම වීඩියෝවෙන් ඉංග්‍රීසි ඉගෙන ගැනීමට මෙම පියවර ඔබට උපකාරී වනු ඇත.\nஇந்த வீடியோவிலிருந்து ஆங்கிலம் கற்க இந்த படிகள் உங்களுக்கு உதவும்.",
         "steps": [
-          "Watch the video 2 times.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
+          "Watch the video twice.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
           "Learn new words using Google Translate.\nGoogle පරිවර්තකය භාවිතයෙන් නව වචන ඉගෙන ගන්න.\nகூகுள் ட்ரான்ஸ்லேட் பயன்படுத்தி புதிய சொற்களைக் கற்றுக்கொள்ளுங்கள்.",
           "Listen and repeat.\nසවන් දී නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
           "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்."

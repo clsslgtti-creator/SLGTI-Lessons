@@ -607,6 +607,7 @@ const blockGameShellInteraction = (slideElement) => {
 
 
 const INITIAL_INSTRUCTION_DELAY_SECONDS = 3;
+const POST_INSTRUCTION_AUTOPLAY_DELAY_SECONDS = 15;
 let instructionPlayback = null;
 
 const cleanupInstructionController = (
@@ -721,7 +722,7 @@ const startInstructionCountdown = (controller) => {
 
   controller.restoreButton?.({ restoreText: true });
 
-  let remaining = 3;
+  let remaining = POST_INSTRUCTION_AUTOPLAY_DELAY_SECONDS;
   indicator?.update(`Starts in ${remaining}s`);
 
   controller.countdownInterval = window.setInterval(() => {
@@ -844,7 +845,9 @@ const handleInstructionForSlide = (slideObj) => {
     if (!instructionPlayback || instructionPlayback.slide !== slideObj) {
       return;
     }
-    indicator?.update("Starts in 3s");
+    indicator?.update(
+      `Starts in ${POST_INSTRUCTION_AUTOPLAY_DELAY_SECONDS}s`
+    );
     startInstructionCountdown(controller);
   };
 
@@ -886,7 +889,9 @@ const handleInstructionForSlide = (slideObj) => {
       return;
     }
 
-    indicator?.update("Starts in 3s");
+    indicator?.update(
+      `Starts in ${POST_INSTRUCTION_AUTOPLAY_DELAY_SECONDS}s`
+    );
     beginAutoPlaybackCountdown();
   };
 

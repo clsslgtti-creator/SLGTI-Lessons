@@ -213,90 +213,90 @@
             "id": "e_1",
             "sentence": "The correct baking time for small bread rolls is 15–18 minutes. The baking time for these rolls is 22 minutes.\n\nThe baking time for these rolls is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
-            "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long",
+            "options": ["too long", "correct", "too short"],
+            "answer": "too long",
             "image": "assets/img/a_3_a_ex_1.png"
           }
         ],
         "content": [
           {
             "id": "g_1",
-            "sentence": "The range of the oven temperature for baking buns is 180–190 degrees Celsius. The temperature in this oven is 160 degrees Celsius.\n\nThe temperature in this oven is ………………….",
+            "sentence": "The range of the oven temperature for baking buns is 180–190 degrees Celsius. This oven temperature is 160 degrees Celsius.\n\nThis oven temperature is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too low",
             "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_2",
-            "sentence": "The correct weight of the dough for a batch is 2 kilograms. The weight of this dough is 2.3 kilograms.\n\nThe weight of this dough is ………………….",
+            "sentence": "The correct weight of the dough for a batch is 2 kilograms. The weight of this dough is 2.3 kilograms.\n\nThis dough is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
-            "options": ["Too heavy", "Correct", "Too light"],
-            "answer": "Too heavy",
+            "options": ["too heavy", "correct", "too light"],
+            "answer": "too heavy",
             "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_3",
             "sentence": "The acceptable sugar content in syrup is 10–12 percent. The sugar content in this syrup is 14 percent.\n\nThe sugar content in this syrup is ………………….",
             "audio": "assets/audio/a_3_g_3.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_4",
             "sentence": "The standard moisture level of flour is 12–14 percent. The moisture level of this flour is 18 percent.\n\nThe moisture level of this flour is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_5",
             "sentence": "The ideal fermentation time for bread dough is 2–3 hours. The fermentation time for this dough is 4 hours.\n\n The fermentation time for this dough is ………………….",
             "audio": "assets/audio/a_3_g_5.mp3",
-            "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long",
+            "options": ["too long", "correct", "too short"],
+            "answer": "too long",
             "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_6",
             "sentence": "The safe cold storage temperature for dairy products is 2–4 degrees Celsius. This cold storage room temperature is 6 degrees Celsius.\n\n This cold storage room temperature is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
-            "options": ["Too cold", "Correct", "Too warm"],
-            "answer": "Too warm",
+            "options": ["too cold", "correct", "too warm"],
+            "answer": "too warm",
             "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_7",
             "sentence": "The recommended depth of batter in the tray is 2 centimeters. The batter in this tray is 3.5 centimeters deep.\n\n The batter in this tray is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
-            "options": ["Too deep", "Correct", "Too shallow"],
-            "answer": "Too deep",
+            "options": ["too deep", "correct", "too shallow"],
+            "answer": "too deep",
             "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_8",
             "sentence": "The standard weight of a pastry sheet is 500 grams. The pastry sheet in this batch is 650 grams.\n\n The pastry sheet in this batch is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
-            "options": ["Too heavy", "Correct", "Too light"],
-            "answer": "Too heavy",
+            "options": ["too heavy", "correct", "too light"],
+            "answer": "too heavy",
             "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_9",
             "sentence": "The correct oil content in fried snacks is 8–10 percent. The oil content in these snacks is 13 percent.\n\n The oil content in these snacks is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_10",
             "sentence": "The acceptable moisture level for bread dough is between 60% and 65%. The moisture level of this  bread dough is 70 %.\n\n The moisture level of this bread dough is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
-            "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high",
+            "options": ["too high", "correct", "too low"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_1.png"
           }
         ]
@@ -543,7 +543,7 @@
       "instruction_b": {
         "text": "These steps will help you to learn English from this video.\nමෙම වීඩියෝවෙන් ඉංග්‍රීසි ඉගෙන ගැනීමට මෙම පියවර ඔබට උපකාරී වනු ඇත.\nஇந்த வீடியோவிலிருந்து ஆங்கிலம் கற்க இந்த படிகள் உங்களுக்கு உதவும்.",
         "steps": [
-          "Watch the video 2 times.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
+          "Watch the video twice.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
           "Learn new words using Google Translate.\nGoogle පරිවර්තකය භාවිතයෙන් නව වචන ඉගෙන ගන්න.\nகூகுள் ட்ரான்ஸ்லேட் பயன்படுத்தி புதிய சொற்களைக் கற்றுக்கொள்ளுங்கள்.",
           "Listen and repeat.\nසවන් දී නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
           "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்."
@@ -555,7 +555,7 @@
       {
         "id": "v_1",
         "audio": "assets/videos/1A.mp4",
-        "instrction": "instrction_a"
+        "instrction": "instrction_b"
       },
       {
         "id": "v_2",

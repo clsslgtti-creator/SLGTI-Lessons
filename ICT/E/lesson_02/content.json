@@ -211,10 +211,10 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "The correct network speed for the local server is 800–900 Mbps. The network speed in this server is 950 Mbps.\n\n The network speed in this server is ………………….",
+            "sentence": "The correct network speed for the local server is 800–900 Mbps. The network speed of this server is 950 Mbps.\n\n The network speed of this server is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
-            "options": ["Too fast", "Correct", "Too slow"],
-            "answer": "Too fast",
+            "options": ["too fast", "correct", "too slow"],
+            "answer": "too fast",
             "image": "assets/img/a_3_a_ex_1.jpeg"
           }
         ],
@@ -223,80 +223,80 @@
             "id": "g_1",
             "sentence": "The safe operating temperature of the server room is 20–25 degrees Celsius. The temperature in this server room is 28 degrees Celsius.\n\n The temperature in this server room is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_1.jpeg"
           },
           {
             "id": "g_2",
             "sentence": "The correct voltage for the power supply unit is 230 volts. The voltage in this PSU is 240 volts.\n\n The voltage in this PSU is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
-            "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high",
+            "options": ["too high", "correct", "too low"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_2.png"
           },
           {
             "id": "g_3",
             "sentence": "The acceptable latency for network connections is 10–20 milliseconds. The latency in this connection is 8 milliseconds.\n\n The latency in this connection is ………………….",
             "audio": "assets/audio/a_3_g_3.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too low",
             "image": "assets/img/a_3_a_g_3.jpeg"
           },
           {
             "id": "g_4",
             "sentence": "The standard backup frequency for the database is once every 24 hours. The current backup interval is once every 48 hours.\n\n The backup interval is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
-            "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long",
+            "options": ["too long", "correct", "too short"],
+            "answer": "too long",
             "image": "assets/img/a_3_a_g_4.png"
           },
           {
             "id": "g_5",
             "sentence": "The ideal CPU utilization for this server is 40–60 percent. The CPU utilization of this server is 75 percent.\n\n The CPU utilization of this server is ………………….",
             "audio": "assets/audio/a_3_g_5.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_5.jpeg"
           },
           {
             "id": "g_6",
             "sentence": "The safe humidity level for ICT equipment is 40–50 percent. The humidity in the server room is 30 percent.\n\n The humidity in the server room is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too low",
             "image": "assets/img/a_3_a_g_6.png"
           },
           {
             "id": "g_7",
-            "sentence": "The recommended length of a patch cable is less than 100 centimeters. The length of this patch cable is 120 centimeters.\n\n The length of this patch cable is ………………….",
+            "sentence": "The recommended length of a patch cable is less than 100 centimeters. The length of this patch cable is 120 centimeters.\n\n This patch cable is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
-            "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long",
+            "options": ["too long", "correct", "too short"],
+            "answer": "too long",
             "image": "assets/img/a_3_a_g_7.jpeg"
           },
           {
             "id": "g_8",
             "sentence": "The standard capacity of the UPS for this lab is 5 kilovolt-amperes (kVA). The UPS in this lab is 4 kVA.\n\n The UPS in this lab is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
-            "options": ["Too strong", "Correct", "Too weak"],
-            "answer": "Too weak",
+            "options": ["too strong", "correct", "too weak"],
+            "answer": "too weak",
             "image": "assets/img/a_3_a_g_8.jpeg"
           },
           {
             "id": "g_9",
             "sentence": "The correct disk usage level for safe operation is below 80 percent. The disk usage on this server is 90 percent.\n\n The disk usage on this server is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_9.png"
           },
           {
             "id": "g_10",
             "sentence": "The acceptable packet loss rate is below 1 percent. The packet loss rate in this network is 2 percent.\n\n The packet loss rate in this network is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
-            "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high",
+            "options": ["too high", "correct", "too low"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_10.png"
           }
         ]
@@ -599,7 +599,7 @@
       "instruction_b": {
         "text": "These steps will help you to learn English from this video.\nමෙම වීඩියෝවෙන් ඉංග්‍රීසි ඉගෙන ගැනීමට මෙම පියවර ඔබට උපකාරී වනු ඇත.\nஇந்த வீடியோவிலிருந்து ஆங்கிலம் கற்க இந்த படிகள் உங்களுக்கு உதவும்.",
         "steps": [
-          "Watch the video 2 times.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
+          "Watch the video twice.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
           "Learn new words using Google Translate.\nGoogle පරිවර්තකය භාවිතයෙන් නව වචන ඉගෙන ගන්න.\nகூகுள் ட்ரான்ஸ்லேட் பயன்படுத்தி புதிய சொற்களைக் கற்றுக்கொள்ளுங்கள்.",
           "Listen and repeat.\nසවන් දී නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
           "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்."
@@ -611,7 +611,7 @@
       {
         "id": "v_1",
         "audio": "assets/videos/1A.mp4",
-        "instrction": "instrction_a"
+        "instrction": "instrction_b"
       },
       {
         "id": "v_2",

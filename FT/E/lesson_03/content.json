@@ -130,15 +130,6 @@
     ],
     "dialogues": [
       {
-        "id": "d_1",
-        "img": "assets/img/a_2_d_1.png",
-        "text_a": "What is your sister doing?",
-        "text_b": "She is cutting the ripe mangoes for juice.",
-        "audio_a": "assets/audio/a_2_d_1_a.mp3",
-        "audio_b": "assets/audio/a_2_d_1_b.mp3",
-        "keyword": "ripe mangoes"
-      },
-      {
         "id": "d_2",
         "img": "assets/img/a_2_d_2.png",
         "text_a": "What are you doing?",
@@ -146,6 +137,15 @@
         "audio_a": "assets/audio/a_2_d_2_a.mp3",
         "audio_b": "assets/audio/a_2_d_2_b.mp3",
         "keyword": "bread dough"
+      },
+      {
+        "id": "d_1",
+        "img": "assets/img/a_2_d_1.png",
+        "text_a": "What is your sister doing?",
+        "text_b": "She is cutting the ripe mangoes for juice.",
+        "audio_a": "assets/audio/a_2_d_1_a.mp3",
+        "audio_b": "assets/audio/a_2_d_1_b.mp3",
+        "keyword": "ripe mangoes"
       },
       {
         "id": "d_3",
@@ -334,7 +334,7 @@
     "type": "LISTENING-2",
     "instructions": {
       "activity_a": {
-        "text": "Listen to the audio which will be played twice and click on the correct answer.\nඔබට සෑම පටිගත කිරීමක්ම දෙවරක් ඇසෙනු ඇත. නිවැරදි පිළිතුර ක්ලික් කරන්න.\nஒவ்வொரு ஒலிப்பதிவையும் நீங்கள் இருமுறை கேட்கலாம். கேட்ட எண்களை குறித்து எழுதுங்கள்.",
+        "text": "Listen to the audio which will be played twice and click on the correct answer. It is very important that you read the questions before you listen to the recording.\nදෙවරක් වාදනය වන පටිගත කිරීමට සවන් දී නිවැරදි පිළිතුර මත ක්ලික් කරන්න. පටිගත කිරීමට සවන් දීමට පෙර, ප්‍රශ්න කියවීම ඉතා වැදගත් වේ.\nபதிவை இரண்டு முறை கேட்பீர்கள், அதைக் கேட்டு சரியான பதிலைக் கிளிக் செய்யவும். நீங்கள் பதிவைக் கேட்பதற்கு முன்னதாகவே கேள்விகளை வாசிப்பது மிகவும் அவசியமாகும்.",
         "audio": "assets/audio/a_4_i_a.mp3"
       },
       "activity_b": {
@@ -350,6 +350,16 @@
       "activity_a": {
         "audio": "assets/audio/a_4_l_1.mp3",
         "Questions": [
+          {
+            "id": "l_4_1",
+            "question": "What is Kamal doing?",
+            "answer": "Mixing flour and water.",
+            "options": [
+              "Mixing flour and water.",
+              "Checking the dough.",
+              "Sealing bottles."
+            ]
+          },
           {
             "id": "l_4_5",
             "question": "What have they been advised about?",
@@ -380,16 +390,6 @@
               "The menu and recipes.",
               "The sanitizer.",
               "The vegetables."
-            ]
-          },
-          {
-            "id": "l_4_1",
-            "question": "What is Kamal doing?",
-            "answer": "Mixing flour and water.",
-            "options": [
-              "Mixing flour and water.",
-              "Checking the dough.",
-              "Sealing bottles."
             ]
           }
         ]
@@ -530,7 +530,7 @@
       "instruction_b": {
         "text": "These steps will help you to learn English from this video.\nමෙම වීඩියෝවෙන් ඉංග්‍රීසි ඉගෙන ගැනීමට මෙම පියවර ඔබට උපකාරී වනු ඇත.\nஇந்த வீடியோவிலிருந்து ஆங்கிலம் கற்க இந்த படிகள் உங்களுக்கு உதவும்.",
         "steps": [
-          "Watch the video 2 times.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
+          "Watch the video twice.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
           "Learn new words using Google Translate.\nGoogle පරිවර්තකය භාවිතයෙන් නව වචන ඉගෙන ගන්න.\nகூகுள் ட்ரான்ஸ்லேட் பயன்படுத்தி புதிய சொற்களைக் கற்றுக்கொள்ளுங்கள்.",
           "Listen and repeat.\nසවන් දී නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
           "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்."

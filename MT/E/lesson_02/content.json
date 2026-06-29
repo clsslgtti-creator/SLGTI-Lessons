@@ -213,8 +213,8 @@
             "id": "e_1",
             "sentence": "The correct clearance between piston and cylinder is 0.02–0.04 millimetres. The clearance in this engine is 0.07 millimetres.\n\n The clearance in this engine is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
-            "options": ["Too wide", "Correct", "Too narrow"],
-            "answer": "Too wide",
+            "options": ["too wide", "correct", "too narrow"],
+            "answer": "too wide",
             "image": "assets/img/a_3_a_ex_1.png"
           }
         ],
@@ -223,80 +223,80 @@
             "id": "g_1",
             "sentence": "The correct torque for tightening this bolt is 50–55 Newton metres. The torque on this bolt is 45 Newton metres.\n\n The torque on this bolt is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
-            "options": ["Too loose", "Correct", "Too tight"],
-            "answer": "Too loose",
+            "options": ["too loose", "correct", "too tight"],
+            "answer": "too loose",
             "image": "assets/img/a_3_a_g_1.jpeg"
           },
           {
             "id": "g_2",
-            "sentence": "The standard thickness of the brake pad is 10–12 millimetres. The thickness of this brake pad is 8 millimetres.\n\n The thickness of this brake pad is ………………….",
+            "sentence": "The standard thickness of the brake pad is 10–12 millimetres. The thickness of this brake pad is 8 millimetres.\n\n This brake pad is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
-            "options": ["Too thin", "Correct", "Too thick"],
-            "answer": "Too thin",
+            "options": ["too thin", "correct", "too thick"],
+            "answer": "too thin",
             "image": "assets/img/a_3_a_g_2.png"
           },
           {
             "id": "g_3",
             "sentence": "The acceptable oil pressure in the hydraulic system is 120–140 bar. The oil pressure in this system is 150 bar.\n\n The oil pressure in this system is ………………….",
             "audio": "assets/audio/a_3_g_3.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_3.png"
           },
           {
             "id": "g_4",
             "sentence": "The standard diameter of the drill bit for this task is 8 millimetres. The diameter of this drill bit is 6 millimetres.\n\n The diameter of this drill bit is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
-            "options": ["Too small", "Correct", "Too large"],
-            "answer": "Too small",
+            "options": ["too small", "correct", "too large"],
+            "answer": "too small",
             "image": "assets/img/a_3_a_g_4.png"
           },
           {
             "id": "g_5",
             "sentence": "The ideal running speed of the lathe machine is 1200–1400 revolutions per minute. The running speed of this lathe is 1000 revolutions per minute.\n\n The running speed of this lathe is ………………….",
             "audio": "assets/audio/a_3_g_5.mp3",
-            "options": ["Too slow", "Correct", "Too fast"],
-            "answer": "Too slow",
+            "options": ["too slow", "correct", "too fast"],
+            "answer": "too slow",
             "image": "assets/img/a_3_a_g_5.png"
           },
           {
             "id": "g_6",
             "sentence": "The safe pressure for compressed air lines is 6–8 bar. The pressure in this air line is 10 bar.\n\n The pressure in this air line is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too high",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_6.jpeg"
           },
           {
             "id": "g_7",
             "sentence": "The recommended length of the connecting rod is 145–150 millimetres. The length of this connecting rod is 152 millimetres.\n\n The length of this connecting rod is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
-            "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long",
+            "options": ["too long", "correct", "too short"],
+            "answer": "too long",
             "image": "assets/img/a_3_a_g_7.png"
           },
           {
             "id": "g_8",
             "sentence": "The standard weight of the flywheel is 15 kilograms. The flywheel in this machine is 13 kilograms.\n\n The flywheel in this machine is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
-            "options": ["Too heavy", "Correct", "Too light"],
-            "answer": "Too light",
+            "options": ["too heavy", "correct", "too light"],
+            "answer": "too light",
             "image": "assets/img/a_3_a_g_8.jpeg"
           },
           {
             "id": "g_9",
             "sentence": "The correct coolant temperature for this engine is 80–90 degrees Celsius. The coolant temperature in this engine is 70 degrees Celsius.\n\n The coolant temperature in this engine is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
-            "options": ["Too low", "Correct", "Too high"],
-            "answer": "Too low",
+            "options": ["too low", "correct", "too high"],
+            "answer": "too low",
             "image": "assets/img/a_3_a_g_9.jpeg"
           },
           {
             "id": "g_10",
             "sentence": "The acceptable vibration level of the machine is below 3 millimetres per second. The vibration level of this machine is 5 millimetres per second.\n\n The vibration level of this machine is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
-            "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high",
+            "options": ["too high", "correct", "too low"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_10.png"
           }
         ]
@@ -569,7 +569,7 @@
       "instruction_b": {
         "text": "These steps will help you to learn English from this video.\nමෙම වීඩියෝවෙන් ඉංග්‍රීසි ඉගෙන ගැනීමට මෙම පියවර ඔබට උපකාරී වනු ඇත.\nஇந்த வீடியோவிலிருந்து ஆங்கிலம் கற்க இந்த படிகள் உங்களுக்கு உதவும்.",
         "steps": [
-          "Watch the video 2 times.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
+          "Watch the video twice.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
           "Learn new words using Google Translate.\nGoogle පරිවර්තකය භාවිතයෙන් නව වචන ඉගෙන ගන්න.\nகூகுள் ட்ரான்ஸ்லேட் பயன்படுத்தி புதிய சொற்களைக் கற்றுக்கொள்ளுங்கள்.",
           "Listen and repeat.\nසවන් දී නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
           "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்."
@@ -581,7 +581,7 @@
       {
         "id": "v_1",
         "audio": "assets/videos/1A.mp4",
-        "instrction": "instrction_a"
+        "instrction": "instrction_b"
       },
       {
         "id": "v_2",

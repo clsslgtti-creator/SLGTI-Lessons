@@ -211,10 +211,10 @@
         "examples": [
           {
             "id": "e_1",
-            "sentence": "The correct thickness of a concrete slab is 15 cm. This slab is 12 cm thick.\n\n The thickness is ………………….",
+            "sentence": "The correct thickness of a concrete slab is 15 cm. This slab is 12 cm thick.\n\n The slab is ………………….",
             "audio": "assets/audio/a_3_ex_1.mp3",
-            "options": ["Too thick", "Correct", "Too thin"],
-            "answer": "Too thin",
+            "options": ["too thick", "correct", "too thin"],
+            "answer": "too thin",
             "image": "assets/img/a_3_a_ex_1.png"
           }
         ],
@@ -223,80 +223,80 @@
             "id": "g_1",
             "sentence": "The correct height of bamboo scaffolding is 6 metres. This scaffolding is 7.5 metres.\n\nThis scaffolding is ………………….",
             "audio": "assets/audio/a_3_g_1.mp3",
-            "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high",
+            "options": ["too high", "correct", "too low"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_1.png"
           },
           {
             "id": "g_2",
             "sentence": "The correct weight of a cement bag is 50 kilograms. This cement bag is 55 kilograms.\n\nThis cement bag is ………………….",
             "audio": "assets/audio/a_3_g_2.mp3",
-            "options": ["Too heavy", "Correct", "Too light"],
-            "answer": "Too heavy",
+            "options": ["too heavy", "correct", "too light"],
+            "answer": "too heavy",
             "image": "assets/img/a_3_a_g_2.jpeg"
           },
           {
             "id": "g_3",
             "sentence": "The acceptable sand–cement ratio is 1:3. The ratio used here is 1:5.\n\n This ratio is ………………….",
             "audio": "assets/audio/a_3_g_3.mp3",
-            "options": ["Too weak", "Correct", "Too strong"],
-            "answer": "Too weak",
+            "options": ["too weak", "correct", "too strong"],
+            "answer": "too weak",
             "image": "assets/img/a_3_a_g_3.png"
           },
           {
             "id": "g_4",
             "sentence": "The correct depth of the foundation is 1.5 metres. This foundation is 1 metre.\n\n This foundation is ………………….",
             "audio": "assets/audio/a_3_g_4.mp3",
-            "options": ["Too shallow", "Correct", "Too deep"],
-            "answer": "Too shallow",
+            "options": ["too shallow", "correct", "too deep"],
+            "answer": "too shallow",
             "image": "assets/img/a_3_a_g_4.png"
           },
           {
             "id": "g_5",
             "sentence": "The standard curing time for concrete is 28 days. The curing time here is 20 days.\n\nThis curing time is ………………….",
             "audio": "assets/audio/a_3_g_5.mp3",
-            "options": ["Too short", "Correct", "Too long"],
-            "answer": "Too short",
+            "options": ["too short", "correct", "too long"],
+            "answer": "too short",
             "image": "assets/img/a_3_a_g_5.png"
           },
           {
             "id": "g_6",
             "sentence": "The safe load for scaffolding is 200 kilograms. This load is 250 kilograms.\n\nThis load is ………………….",
             "audio": "assets/audio/a_3_g_6.mp3",
-            "options": ["Too heavy", "Correct", "Too light"],
-            "answer": "Too heavy",
+            "options": ["too heavy", "correct", "too light"],
+            "answer": "too heavy",
             "image": "assets/img/a_3_a_g_6.png"
           },
           {
             "id": "g_7",
             "sentence": "The recommended thickness of a brick wall is 23 centimeters. This wall is 18 centimeters.\n\nThis wall is ………………….",
             "audio": "assets/audio/a_3_g_7.mp3",
-            "options": ["Too thin", "Correct", "Too thick"],
-            "answer": "Too thin",
+            "options": ["too thin", "correct", "too thick"],
+            "answer": "too thin",
             "image": "assets/img/a_3_a_g_7.png"
           },
           {
             "id": "g_8",
             "sentence": "The correct length of steel reinforcement is 10 metres. This steel bar is 11 metres.\n\nThis steel bar is ………………….",
             "audio": "assets/audio/a_3_g_8.mp3",
-            "options": ["Too long", "Correct", "Too short"],
-            "answer": "Too long",
+            "options": ["too long", "correct", "too short"],
+            "answer": "too long",
             "image": "assets/img/a_3_a_g_8.png"
           },
           {
             "id": "g_9",
             "sentence": "The acceptable slump for concrete is 75–100 millimetres. This slump is 120 millimetres.\n\n This slump is ………………….",
             "audio": "assets/audio/a_3_g_9.mp3",
-            "options": ["Too high", "Correct", "Too low"],
-            "answer": "Too high",
+            "options": ["too high", "correct", "too low"],
+            "answer": "too high",
             "image": "assets/img/a_3_a_g_9.png"
           },
           {
             "id": "g_10",
             "sentence": "The standard width of a doorway is 90 centimeters. This doorway is 80 centimeters.\n\n This doorway is ………………….",
             "audio": "assets/audio/a_3_g_10.mp3",
-            "options": ["Too narrow", "Correct", "Too wide"],
-            "answer": "Too narrow",
+            "options": ["too narrow", "correct", "too wide"],
+            "answer": "too narrow",
             "image": "assets/img/a_3_a_g_10.png"
           }
         ]
@@ -531,7 +531,7 @@
       "instruction_b": {
         "text": "These steps will help you to learn English from this video.\nමෙම වීඩියෝවෙන් ඉංග්‍රීසි ඉගෙන ගැනීමට මෙම පියවර ඔබට උපකාරී වනු ඇත.\nஇந்த வீடியோவிலிருந்து ஆங்கிலம் கற்க இந்த படிகள் உங்களுக்கு உதவும்.",
         "steps": [
-          "Watch the video 2 times.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
+          "Watch the video twice.\nමේ වීඩියෝ එක දෙවරක් බලන්න.\nவீடியோவை இரண்டு முறைப் பாருங்கள்.",
           "Learn new words using Google Translate.\nGoogle පරිවර්තකය භාවිතයෙන් නව වචන ඉගෙන ගන්න.\nகூகுள் ட்ரான்ஸ்லேட் பயன்படுத்தி புதிய சொற்களைக் கற்றுக்கொள்ளுங்கள்.",
           "Listen and repeat.\nසවන් දී නැවත කියන්න.\nகேட்டு மீண்டும் சொல்லுங்கள்.",
           "Read along. පිටපත සමඟ කියවන්න. ஒரே நேரத்தில் வாசியுங்கள்."
@@ -543,7 +543,7 @@
       {
         "id": "v_1",
         "audio": "assets/videos/1A.mp4",
-        "instrction": "instrction_a"
+        "instrction": "instrction_b"
       },
       {
         "id": "v_2",
