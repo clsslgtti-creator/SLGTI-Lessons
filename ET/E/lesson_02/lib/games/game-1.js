@@ -136,6 +136,15 @@ export const normalizeQuestions = (rawQuestions = [], fallbackOptions) => {
     .filter(Boolean);
 };
 
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 export const DEFAULT_FEEDBACK_ASSETS = {
   correctAudio: "assets/audio/game/correct.wav",
   incorrectAudio: "assets/audio/game/incorrect.wav",
@@ -1592,9 +1601,10 @@ export const createGameScene = (config) => {
         Array.isArray(entry?.options) && entry.options.length
           ? entry.options
           : this.fallbackOptions;
+      const shuffledOptions = shuffleArray(optionLabels);
       this.configureOptionButtons(
-        optionLabels,
-        Array.isArray(optionLabels) && optionLabels.length > 0
+        shuffledOptions,
+        Array.isArray(shuffledOptions) && shuffledOptions.length > 0
       );
 
       this.phaseText.setText(
