@@ -351,16 +351,6 @@
         "audio": "assets/audio/a_4_l_1.mp3",
         "Questions": [
           {
-            "id": "l_4_1",
-            "question": "What is Kamal doing?",
-            "answer": "Mixing flour and water.",
-            "options": [
-              "Mixing flour and water.",
-              "Checking the dough.",
-              "Sealing bottles."
-            ]
-          },
-          {
             "id": "l_4_5",
             "question": "What have they been advised about?",
             "answer": "Safety and hygiene.",
@@ -368,6 +358,16 @@
               "Menus and recipes.",
               "Safety and hygiene.",
               "Bags of flour."
+            ]
+          },
+          {
+            "id": "l_4_1",
+            "question": "What is Kamal doing?",
+            "answer": "Mixing flour and water.",
+            "options": [
+              "Mixing flour and water.",
+              "Checking the dough.",
+              "Sealing bottles."
             ]
           },
           {
