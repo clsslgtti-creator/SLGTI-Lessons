@@ -1581,7 +1581,7 @@ const buildSpeakingSlide = (
         }
 
         const waitSource = dialogue.audio_a;
-        let waitMs = 1500;
+        let waitMs = 3000;
         if (waitSource) {
           try {
             const questionDuration = await audioManager.getDuration(waitSource);
