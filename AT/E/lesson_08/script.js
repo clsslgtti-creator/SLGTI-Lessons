@@ -289,6 +289,14 @@ const createActivityAssessmentHooks = (activityKey, context = {}) => {
         marksPerQuestion: result.marksPerQuestion ?? context.marksPerQuestion,
         ...result,
       }),
+    saveState: (result = {}) =>
+      recordAssessmentResult(activityKey, {
+        type: resolvedType,
+        label: result.label || resolvedLabel,
+        marksPerQuestion: result.marksPerQuestion ?? context.marksPerQuestion,
+        submitted: false,
+        ...result,
+      }),
     getState: () => getActivityAssessment(activityKey),
   };
 };
@@ -1148,6 +1156,19 @@ const startInstructionCountdown = (controller) => {
 const handleInstructionForSlide = (slideObj) => {
   if (!slideObj || slideObj._instructionComplete) {
     return;
+  }
+
+  const activityKey = slideObj.element?.dataset?.activityKey;
+  if (activityKey) {
+    const activityState = getActivityAssessment(activityKey);
+    if (activityState?.submitted) {
+      if (slideObj._instructionLockActive) {
+        setSlideInstructionLock(slideObj, false);
+        slideObj._instructionLockActive = false;
+      }
+      slideObj._instructionComplete = true;
+      return;
+    }
   }
 
   const audioUrl = slideObj.instructionAudio;
