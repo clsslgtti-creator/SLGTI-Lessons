@@ -403,11 +403,6 @@
         ]
       },
       "activity_b": [
-         {
-          "id": "n_4_0",
-          "text": "It is ten to nine.",
-          "audio": "assets/audio/a_4_n_0.mp3"
-        },
         {
           "id": "n_4_1",
           "text": "In the mechanical workshop, the trainees are practicing their skills.",
@@ -477,7 +472,7 @@
       "activity_c": [
         {
           "id": "r_4_1",
-          "text": "It is ten to nine. In the mechanical workshop, the trainees are practicing their skills.",
+          "text": "In the mechanical workshop, the trainees are practicing their skills.",
           "audio": "assets/audio/a_4_n_1.mp3"
         },
         {
