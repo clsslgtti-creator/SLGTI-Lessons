@@ -400,11 +400,6 @@
       },
       "activity_b": [
         {
-          "id": "n_4_1",
-          "text": "It is ten to nine.",
-          "audio": "assets/audio/a_4_n_1.mp3"
-        },
-        {
           "id": "n_4_2",
           "text": "In the electrical lab, the trainees are practicing today.",
           "audio": "assets/audio/a_4_n_2.mp3"
@@ -456,11 +451,6 @@
         }
       ],
       "activity_c": [
-        {
-          "id": "r_4_1",
-          "text": "It is ten to nine.",
-          "audio": "assets/audio/a_4_n_1.mp3"
-        },
         {
           "id": "r_4_2",
           "text": "In the electrical lab, the trainees are practicing today.",
