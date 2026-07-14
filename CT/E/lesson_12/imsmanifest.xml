@@ -21,7 +21,6 @@
   </organizations>
   <resources>
     <resource identifier="RES-LESSON-12" type="webcontent" adlcp:scormtype="sco" href="index.html">
-      <file href="index.html" />
       <file href="assets/audio/a_1_p_1_a.mp3" />
       <file href="assets/audio/a_1_p_1_b.mp3" />
       <file href="assets/audio/a_1_p_2_a.mp3" />
@@ -70,18 +69,17 @@
       <file href="assets/audio/a_3_c_10.mp3" />
       <file href="assets/audio/a_3_c_2.mp3" />
       <file href="assets/audio/a_3_c_3.mp3" />
-      <file href="assets/audio/a_3_c_4.mp3" />
       <file href="assets/audio/a_3_c_5.mp3" />
       <file href="assets/audio/a_3_c_6.mp3" />
       <file href="assets/audio/a_3_c_7.mp3" />
       <file href="assets/audio/a_3_c_8.mp3" />
-      <file href="assets/audio/a_3_c_9.mp3" />
       <file href="assets/audio/a_3_i_d.mp3" />
       <file href="assets/audio/a_4_i_i.mp3" />
       <file href="assets/audio/a_4_i_j.mp3" />
       <file href="assets/audio/a_4_l_1.mp3" />
       <file href="assets/audio/a_5_i_a.mp3" />
       <file href="assets/audio/a_5_i_b.mp3" />
+      <file href="assets/audio/a_5_i_c.mp3" />
       <file href="assets/audio/g_a_3_c_1.mp3" />
       <file href="assets/audio/g_a_3_c_10.mp3" />
       <file href="assets/audio/g_a_3_c_2.mp3" />
@@ -97,18 +95,7 @@
       <file href="assets/audio/t_2_11.mp3" />
       <file href="assets/audio/t_2_12.mp3" />
       <file href="assets/audio/t_2_13.mp3" />
-      <file href="assets/audio/t_2_14.mp3" />
-      <file href="assets/audio/t_2_15.mp3" />
-      <file href="assets/audio/t_2_16.mp3" />
-      <file href="assets/audio/t_2_17.mp3" />
-      <file href="assets/audio/t_2_18.mp3" />
-      <file href="assets/audio/t_2_19.mp3" />
       <file href="assets/audio/t_2_2.mp3" />
-      <file href="assets/audio/t_2_20.mp3" />
-      <file href="assets/audio/t_2_21.mp3" />
-      <file href="assets/audio/t_2_22.mp3" />
-      <file href="assets/audio/t_2_23.mp3" />
-      <file href="assets/audio/t_2_24.mp3" />
       <file href="assets/audio/t_2_3.mp3" />
       <file href="assets/audio/t_2_4.mp3" />
       <file href="assets/audio/t_2_5.mp3" />
@@ -122,30 +109,49 @@
       <file href="assets/img/Thursday.jpeg" />
       <file href="assets/img/Tuesday.jpeg" />
       <file href="assets/img/Wednesday-2.png" />
+      <file href="assets/img/Wednesday-y.png" />
       <file href="assets/img/Wednesday.png" />
       <file href="assets/img/a_1_p_1.png" />
       <file href="assets/img/a_1_p_2.png" />
       <file href="assets/img/a_1_p_3.png" />
       <file href="assets/img/a_1_p_4.png" />
       <file href="assets/img/game/bg-6.jpg" />
+      <file href="assets/img/logo.png" />
       <file href="assets/videos/1B.mp4" />
       <file href="assets/videos/2B.mp4" />
       <file href="content.json" />
+      <file href="index.html" />
       <file href="lib/activity-2.js" />
       <file href="lib/audio-manager.js" />
       <file href="lib/completion-modal.js" />
-      <file href="lib/game-1.js" />
+      <file href="lib/games/game-1.js" />
+      <file href="lib/games/game-2.js" />
+      <file href="lib/games/game-4.js" />
+      <file href="lib/games/game-5.js" />
+      <file href="lib/interactive-1.js" />
+      <file href="lib/interactive-2.js" />
+      <file href="lib/interactive-3.js" />
+      <file href="lib/interactive-4.js" />
       <file href="lib/jquery-3.7.1.min.js" />
       <file href="lib/jquery-ui.min.js" />
       <file href="lib/jquery.ui.touch-punch.min.js" />
       <file href="lib/listening-1.js" />
       <file href="lib/listening-2.js" />
+      <file href="lib/listening-3.js" />
+      <file href="lib/listening-4.js" />
+      <file href="lib/listening-5.js" />
+      <file href="lib/listening-6.js" />
+      <file href="lib/listening-8.js" />
       <file href="lib/phaser.min.js" />
       <file href="lib/pipwerks-scorm.js" />
       <file href="lib/pronunciation.js" />
-      <file href="lib/sbs.js" />
+      <file href="lib/reading-1.js" />
+      <file href="lib/sbs-1.js" />
+      <file href="lib/sbs-2.js" />
+      <file href="lib/sbs-3.js" />
+      <file href="lib/videos.js" />
       <file href="script.js" />
       <file href="styles.css" />
-    <file href="assets/audio/a_5_i_c.mp3" /><file href="assets/img/Wednesday-y.png" /></resource>
+    </resource>
   </resources>
 </manifest>

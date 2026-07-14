@@ -21,7 +21,6 @@
   </organizations>
   <resources>
     <resource identifier="RES-LESSON-06" type="webcontent" adlcp:scormtype="sco" href="index.html">
-      <file href="index.html" />
       <file href="assets/audio/a_1_p_1_a.mp3" />
       <file href="assets/audio/a_1_p_1_b.mp3" />
       <file href="assets/audio/a_1_p_2_a.mp3" />
@@ -98,6 +97,7 @@
       <file href="assets/audio/a_4_l_1.mp3" />
       <file href="assets/audio/a_5_i_a.mp3" />
       <file href="assets/audio/a_5_i_b.mp3" />
+      <file href="assets/audio/a_5_i_c.mp3" />
       <file href="assets/audio/n_4_1.mp3" />
       <file href="assets/audio/n_4_10.mp3" />
       <file href="assets/audio/n_4_11.mp3" />
@@ -138,24 +138,34 @@
       <file href="assets/img/a_3_b_g_8.png" />
       <file href="assets/img/a_3_b_g_9.png" />
       <file href="assets/img/game/bg-6.jpg" />
+      <file href="assets/img/logo.png" />
       <file href="assets/videos/1B.mp4" />
       <file href="assets/videos/2B.mp4" />
       <file href="content.json" />
+      <file href="index.html" />
       <file href="lib/activity-2.js" />
       <file href="lib/audio-manager.js" />
       <file href="lib/completion-modal.js" />
-      <file href="lib/game-1.js" />
+      <file href="lib/games/game-1.js" />
+      <file href="lib/games/game-4.js" />
+      <file href="lib/games/game-5.js" />
+      <file href="lib/interactive-1.js" />
+      <file href="lib/interactive-2.js" />
       <file href="lib/jquery-3.7.1.min.js" />
       <file href="lib/jquery-ui.min.js" />
       <file href="lib/jquery.ui.touch-punch.min.js" />
       <file href="lib/listening-1.js" />
       <file href="lib/listening-2.js" />
+      <file href="lib/listening-3.js" />
       <file href="lib/phaser.min.js" />
       <file href="lib/pipwerks-scorm.js" />
       <file href="lib/pronunciation.js" />
-      <file href="lib/sbs.js" />
+      <file href="lib/sbs-1.js" />
+      <file href="lib/sbs-2.js" />
+      <file href="lib/sbs-3.js" />
+      <file href="lib/videos.js" />
       <file href="script.js" />
       <file href="styles.css" />
-    <file href="assets/audio/a_5_i_c.mp3" /></resource>
+    </resource>
   </resources>
 </manifest>
