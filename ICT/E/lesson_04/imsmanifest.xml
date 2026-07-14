@@ -21,7 +21,6 @@
   </organizations>
   <resources>
     <resource identifier="RES-LESSON-04" type="webcontent" adlcp:scormtype="sco" href="index.html">
-      <file href="index.html" />
       <file href="assets/audio/a_1_p_1_a.mp3" />
       <file href="assets/audio/a_1_p_1_b.mp3" />
       <file href="assets/audio/a_1_p_2_a.mp3" />
@@ -141,13 +140,18 @@
       <file href="assets/img/game/bg-1.jpg" />
       <file href="assets/img/game/bg-11.jpg" />
       <file href="assets/img/game/bg-5.jpg" />
+      <file href="assets/img/logo.png" />
       <file href="assets/videos/1B.mp4" />
       <file href="assets/videos/2A.mp4" />
       <file href="content.json" />
+      <file href="index.html" />
       <file href="lib/activity-2.js" />
       <file href="lib/audio-manager.js" />
       <file href="lib/completion-modal.js" />
-      <file href="lib/game-1.js" />
+      <file href="lib/games/game-1.js" />
+      <file href="lib/games/game-4.js" />
+      <file href="lib/games/game-5.js" />
+      <file href="lib/interactive-1.js" />
       <file href="lib/jquery-3.7.1.min.js" />
       <file href="lib/jquery-ui.min.js" />
       <file href="lib/jquery.ui.touch-punch.min.js" />
@@ -156,7 +160,9 @@
       <file href="lib/phaser.min.js" />
       <file href="lib/pipwerks-scorm.js" />
       <file href="lib/pronunciation.js" />
-      <file href="lib/sbs.js" />
+      <file href="lib/sbs-1.js" />
+      <file href="lib/sbs-3.js" />
+      <file href="lib/videos.js" />
       <file href="script.js" />
       <file href="styles.css" />
     </resource>
