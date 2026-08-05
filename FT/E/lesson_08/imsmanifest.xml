@@ -29,6 +29,8 @@
       <file href="assets/img/logo.png" />
       <file href="content.json" />
       <file href="index.html" />
+      <file href="lib/phaser.min.js" />
+      <file href="lib/pipwerks-scorm.js" />
       <file href="lib/jumbled.js" />
       <file href="lib/listening.js" />
       <file href="lib/mcq.js" />
